@@ -1,0 +1,26 @@
+.expertise {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background: var(--expertise-color);
+  border: 2px solid var(--clr-el-02db);
+  box-sizing: border-box;
+  top: 0px;
+  right: 0px;
+
+  &.beginner {
+    --expertise-color: var(--clr-exp-beginner);
+  }
+
+  &.intermediate {
+    --expertise-color: var(--clr-exp-intermediate);
+  }
+
+  &.advanced {
+    --expertise-color: var(--clr-exp-advanced);
+  }
+
+  &.article {
+    --expertise-color: var(--clr-exp-blog);
+  }
+}

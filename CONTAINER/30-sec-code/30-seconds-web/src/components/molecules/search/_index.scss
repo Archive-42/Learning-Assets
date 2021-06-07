@@ -1,0 +1,117 @@
+// Style for placeholder text
+@mixin placeholder-styles {
+  font-family: 'Inter', Helvetica, sans-serif;
+}
+.search-box::-webkit-input-placeholder {
+  @include placeholder-styles;
+}
+.search-box:-ms-input-placeholder {
+  @include placeholder-styles;
+}
+.search-box:-moz-placeholder {
+  @include placeholder-styles;
+}
+.search-box::-moz-placeholder {
+  @include placeholder-styles;
+}
+
+.search-wrapper {
+  position: relative;
+  width: calc(100% - 76px - 64px - 44px);
+  background: var(--clr-search-bg);
+  color: var(--clr-txt-100);
+  transition: 0.3s ease all;
+
+  @media screen and (min-width: $layout-medium-breakpoint) {
+    width: 320px;
+  }
+
+  &:not(:focus-within) .search-autocomplete-list {
+    display: none;
+  }
+
+  &::before {
+    font-size: 20px;
+    line-height: 44px;
+    margin-left: 0.5rem;
+    color: inherit;
+  }
+
+  &:focus-within {
+    color: var(--clr-txt-200);
+  }
+}
+
+[type="search"].search-box {
+  width: calc(100% - 36px);
+  background: transparent;
+  vertical-align: top;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
+  font-size: var(--font-md);
+  font-weight: 400;
+  height: 44px;
+
+  &, &::placeholder {
+    color: inherit;
+  }
+}
+
+a.search-btn[aria-hidden="true"] {
+  display: none;
+}
+
+.search-autocomplete-list {
+  position: absolute;
+  width: calc(100% - 1.75rem);
+  margin: 0 0.5rem;
+  top: 42px;
+  list-style: none;
+  border-radius: var(--br-none) var(--br-none) var(--br-md) var(--br-md);
+  overflow: hidden;
+  z-index: 100;
+
+  @media screen and (min-width: $layout-medium-breakpoint) {
+    margin: 0;
+    width: calc(100% - 1.25rem);
+  }
+
+  > li {
+    height: 42px;
+    margin-left: -1.25rem;
+    border-top: 1px solid var(--clr-search-results-border);
+    border-bottom: none;
+
+    &:last-child {
+      border-radius: var(--br-none) var(--br-none) var(--br-md) var(--br-md);
+    }
+
+    a {
+      padding: 0.5rem 0.75rem;
+      height: 42px;
+      box-sizing: border-box;
+      align-items: baseline;
+
+      .result-title {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-right: 0.5rem;
+      }
+
+      .result-tag {
+        flex: 1 0 auto;
+      }
+
+      &:hover, &:focus, &.selected {
+        animation: none;
+
+        .result-title, .result-tag {
+          color: var(--clr-link);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.breadcrumbs {
+  margin: 1rem 1rem 0;
+
+  ol {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.breadcrumb-item {
+  position: relative;
+  margin: 0 1rem 0 0;
+
+  // Breadcrumb link
+  a {
+
+    &, &:link, &:visited {
+      color: var(--clr-txt-150);
+    }
+  }
+
+  &:not(:last-of-type) {
+
+    &:before {
+      color: var(--clr-txt-050);
+      position: absolute;
+      right: -0.75rem;
+      content: "/";
+    }
+  }
+
+  // Current page
+  &:last-of-type {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    a {
+      &, &:link, &:visited {
+        color: var(--clr-txt-050);
+        pointer-events: none;
+      }
+    }
+  }
+}

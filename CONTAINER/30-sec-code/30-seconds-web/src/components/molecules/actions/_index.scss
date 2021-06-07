@@ -1,0 +1,23 @@
+.card-actions {
+  margin: 1rem 0 -1rem;
+  justify-content: space-around;
+
+  .btn-form, .btn {
+    flex: 1 0 auto;
+    text-align: center;
+  }
+
+  .btn {
+    position: relative;
+    margin: 0;
+    padding: 0.25rem;
+
+    &:before {
+      font-size: 24px;
+      vertical-align: bottom;
+      width: 100%;
+      transition: opacity 0.3s ease;
+      margin-right: 1rem;
+    }
+  }
+}

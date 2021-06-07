@@ -1,0 +1,36 @@
+{
+  "rootDir": "../../",
+  "transform": {
+    "^.+\\.(js|jsx)?$": "babel-jest",
+    "^.+\\.(css|less|scss)$": "jest-transform-stub"
+  },
+  "testEnvironment": "jest-environment-jsdom-fourteen",
+  "moduleFileExtensions": ["js", "jsx", "json"],
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ],
+  "testPathIgnorePatterns": [
+    "content/sources",
+    ".cache",
+    "public"
+  ],
+  "coveragePathIgnorePatterns": [
+    "/node_modules/",
+    "/src/test/",
+    "/src/lang/",
+    "/src/scripts/",
+    "/src/settings/"
+  ],
+  "globals": {
+    "__PATH_PREFIX__": "",
+    "__BASE_PATH__": ""
+  },
+  "testURL": "https://localhost",
+  "testMatch": [
+    "**/?(*.)+(test).[jt]s?(x)"
+  ],
+  "setupFiles": [
+    "./src/test/mocks.js"
+  ]
+}

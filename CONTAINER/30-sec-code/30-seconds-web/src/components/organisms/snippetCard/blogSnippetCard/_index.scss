@@ -1,0 +1,68 @@
+.snippet-card.blog-card {
+
+  .card-meta-info {
+    margin: 0 0 1rem;
+
+    a {
+      &, &:link, &:visited {
+        color: var(--clr-txt-050);
+      }
+    }
+  }
+
+  ol.blog-list {
+    list-style: none;
+    counter-reset: list-item-counter;
+
+    li {
+      counter-increment: list-item-counter;
+      position: relative;
+
+      &:before {
+        content: counter(list-item-counter) ". ";
+        position: absolute;
+        top: 0;
+        left: -1.5rem;
+        width: 1.5rem;
+        text-align: right;
+      }
+    }
+
+    .blog-list-item {
+      margin-bottom: 1.5rem;
+
+      &:before {
+        font-weight: 600;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.5;
+      }
+
+      > p {
+        font-size: var(--font-sm);
+        line-height: 2rem;
+
+        @media screen and (min-width: $layout-medium-breakpoint) {
+          font-size: var(--font-md);
+        }
+
+        &:first-child:not(:last-child) {
+          line-height: 1.5;
+          font-weight: 600;
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+    }
+  }
+
+  pre {
+    margin: 1rem 0 0;
+  }
+
+  .card-description {
+
+    li:not(.blog-list-item) > p {
+      line-height: 2;
+      margin: 0;
+    }
+  }
+}

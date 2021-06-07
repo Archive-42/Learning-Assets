@@ -1,0 +1,24 @@
+{
+  "name": "docker-node-sample",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "2.6.9",
+
+    "ejs": "2.7.4",
+    "ejs-locals": "^1.0.2",
+    "express": "4.17.1",
+    "mongoose": "^4.10.8",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

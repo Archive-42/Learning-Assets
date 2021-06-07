@@ -1,0 +1,137 @@
+HTTrack3.49-2 launched on Fri, 12 Mar 2021 17:11:54 at https://thimbleby.gitlab.io/algorithm-wiki-site/
+(httrack https://thimbleby.gitlab.io/algorithm-wiki-site/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:11:56	Warning: 	Found for https://thimbleby.gitlab.io/robots.txt
+17:11:56	Warning: 	File has moved from https://thimbleby.gitlab.io/robots.txt to https://projects.gitlab.io/auth?domain=https://thimbleby.gitlab.io&state=-mmcjOPqS_u8X9mmklx8Pw==
+17:12:41	Warning: 	Found for thimbleby.gitlab.io/robots.txt
+17:12:41	Warning: 	File has moved from thimbleby.gitlab.io/robots.txt to https://projects.gitlab.io/auth?domain=http://thimbleby.gitlab.io&state=KtqXt09b-jY7cufsRUuIKA==
+17:12:41	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/interpreter/
+17:12:41	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/interpreter/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/interpreter/
+17:12:41	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/interpreter/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/interpreter/
+17:12:41	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/linked-list/
+17:12:41	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/linked-list/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/linked-list/
+17:12:41	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/linked-list/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/linked-list/
+17:12:41	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/stack/
+17:12:41	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/stack/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/stack/
+17:12:41	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/stack/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/stack/
+17:12:41	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/queue/
+17:12:41	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/queue/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/queue/
+17:12:41	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/queue/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/queue/
+17:12:41	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/hash-table/
+17:12:41	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/hash-table/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/hash-table/
+17:12:41	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/hash-table/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/hash-table/
+17:12:41	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/linear-search/
+17:12:41	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/linear-search/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/linear-search/
+17:12:41	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/linear-search/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/linear-search/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary-search/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary-search/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary-search/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary-search/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary-search/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/bubble_sort/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/bubble_sort/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/bubble_sort/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/bubble_sort/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/bubble_sort/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/cocktail_sort/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/cocktail_sort/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/cocktail_sort/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/cocktail_sort/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/cocktail_sort/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/insertion_sort/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/insertion_sort/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/insertion_sort/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/insertion_sort/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/insertion_sort/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/selection_sort/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/selection_sort/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/selection_sort/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/selection_sort/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/selection_sort/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/shell_sort/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/shell_sort/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/shell_sort/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/shell_sort/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/shell_sort/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/quick_sort/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/quick_sort/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/quick_sort/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/quick_sort/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/quick_sort/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/merge_sort/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/merge_sort/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/merge_sort/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/merge_sort/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/merge_sort/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/bogosort/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/bogosort/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/bogosort/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/bogosort/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/bogosort/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/bucket_sort/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/bucket_sort/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/bucket_sort/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/bucket_sort/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/bucket_sort/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_search_tree/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_search_tree/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_search_tree/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_search_tree/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_search_tree/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/b-tree/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/b-tree/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/b-tree/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/b-tree/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/b-tree/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/depth-first_search/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/depth-first_search/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/depth-first_search/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/depth-first_search/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/depth-first_search/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/iterative_deepening_depth-first_search/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/iterative_deepening_depth-first_search/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/iterative_deepening_depth-first_search/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/iterative_deepening_depth-first_search/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/iterative_deepening_depth-first_search/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/breadth-first_search/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/breadth-first_search/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/breadth-first_search/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/breadth-first_search/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/breadth-first_search/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/lowest_common_ancestor/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/lowest_common_ancestor/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/lowest_common_ancestor/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/lowest_common_ancestor/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/lowest_common_ancestor/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search/
+17:12:42	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search_with_alpha-beta_pruning/
+17:12:42	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search_with_alpha-beta_pruning/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search_with_alpha-beta_pruning/
+17:12:42	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search_with_alpha-beta_pruning/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/minimax_search_with_alpha-beta_pruning/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/Kruskals_algorithm/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/Kruskals_algorithm/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/Kruskals_algorithm/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/Kruskals_algorithm/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/Kruskals_algorithm/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/Dijkstras_algorithm/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/Dijkstras_algorithm/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/Dijkstras_algorithm/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/Dijkstras_algorithm/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/Dijkstras_algorithm/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/greatest_common_divisor/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/greatest_common_divisor/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/greatest_common_divisor/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/greatest_common_divisor/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/greatest_common_divisor/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/factorial/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/factorial/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/factorial/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/factorial/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/factorial/
+17:12:43	Error: 	"Not Found" (404) at link https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/fibonacci (from https://thimbleby.gitlab.io/algorithm-wiki-site/)
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/n-queens/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/n-queens/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/n-queens/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/n-queens/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/n-queens/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/fisher-yates_shuffle/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/fisher-yates_shuffle/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/fisher-yates_shuffle/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/fisher-yates_shuffle/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/fisher-yates_shuffle/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_to_decimal/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_to_decimal/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_to_decimal/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_to_decimal/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/binary_to_decimal/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/is_sorted/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/is_sorted/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/is_sorted/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/is_sorted/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/is_sorted/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_an_array/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_an_array/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_an_array/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_an_array/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_an_array/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_a_string/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_a_string/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_a_string/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_a_string/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/reversing_a_string/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/fowler-noll-vo_hash_function/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/fowler-noll-vo_hash_function/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/fowler-noll-vo_hash_function/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/fowler-noll-vo_hash_function/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/fowler-noll-vo_hash_function/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/making_change/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/making_change/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/making_change/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/making_change/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/making_change/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/continuation_passing_style/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/continuation_passing_style/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/continuation_passing_style/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/continuation_passing_style/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/continuation_passing_style/
+17:12:43	Error: 	"Not Found" (404) at link https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/creating_a_vizualization (from https://thimbleby.gitlab.io/algorithm-wiki-site/)
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/todo/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/todo/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/todo/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/todo/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/todo/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/style_guide/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/style_guide/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/style_guide/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/style_guide/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/style_guide/
+17:12:43	Warning: 	Moved Permanently for thimbleby.gitlab.io/algorithm-wiki-site/wiki/similar_sites/
+17:12:43	Warning: 	Redirected link is identical because of 'URL Hack' option: thimbleby.gitlab.io/algorithm-wiki-site/wiki/similar_sites/ and https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/similar_sites/
+17:12:43	Warning: 	File has moved from thimbleby.gitlab.io/algorithm-wiki-site/wiki/similar_sites/ to https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/similar_sites/
+
+HTTrack Website Copier/3.49-2 mirror complete in 49 seconds : 47 links scanned, 3 files written (17490 bytes overall) [51426 bytes received at 1049 bytes/sec]
+(2 errors, 124 warnings, 0 messages)
