@@ -1,7 +1,8 @@
 export const texts = {
-  words: 'lorem ipsum dolor sit amet consectetur adipiscing nullam eu eleifend turpis quis pellentesque enim praesent gravida dui facilisis convallis risus neque euismod nec ornare libero mauris vitae integer elit diam lobortis tellus ut volutpat interdum'.split(
-    ' '
-  ),
+  words:
+    'lorem ipsum dolor sit amet consectetur adipiscing nullam eu eleifend turpis quis pellentesque enim praesent gravida dui facilisis convallis risus neque euismod nec ornare libero mauris vitae integer elit diam lobortis tellus ut volutpat interdum'.split(
+      ' '
+    ),
   short: [
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet massa vitae arcu volutpat tincidunt.',
     'Quisque facilisis dictum convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.',

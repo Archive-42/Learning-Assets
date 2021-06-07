@@ -1,6 +1,7 @@
 # Binary Tree and Binary Search Tree
 
 ### Code Examples
+
 - [Binary Tree Structure](./tree.module.js)
 - [Import Module](./index.js)
 
@@ -11,6 +12,7 @@
 common operations you can perform on graphs:
 
 **Additions**
+
 - `insert`: insert a node to tree, if the node is lower than the root it place it to left otherwise to the right
 
 **Removals**
@@ -31,11 +33,9 @@ common operations you can perform on graphs:
 
 ![](https://blog.penjee.com/wp-content/uploads/2015/11/binary-search-tree-sorted-array-animation.gif)
 
-
 **Display**
 
 - `show`: displays the node data
-
 
 ### Example Use Cases:
 
@@ -43,4 +43,4 @@ common operations you can perform on graphs:
 - Binary Space Partition - Used in almost every 3D video game to determine what objects need to be rendered.
 - Binary Trees - Used in almost every high-bandwidth router for storing router-tables.
 - Hash Trees - used in p2p programs and specialized image-signatures in which a hash needs to be verified, but the whole file is not available.
-- Heaps - Used in implementing efficient priority-queues, which in turn are used for scheduling processes in many operating systems, Quality-of-Service in routers, and A* (path-finding algorithm used in AI applications, including robotics and video games). Also used in heap-sort.
+- Heaps - Used in implementing efficient priority-queues, which in turn are used for scheduling processes in many operating systems, Quality-of-Service in routers, and A\* (path-finding algorithm used in AI applications, including robotics and video games). Also used in heap-sort.

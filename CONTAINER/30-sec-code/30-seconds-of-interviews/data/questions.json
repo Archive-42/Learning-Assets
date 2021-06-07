@@ -14,9 +14,7 @@
       "[WAI-ARIA Spec](https://www.w3.org/TR/wai-aria/)",
       "[ARIA Serious? Eric Eggert presentation](https://youtu.be/4bH57rWPnYo)"
     ],
-    "tags": [
-      "accessibility"
-    ],
+    "tags": ["accessibility"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -35,9 +33,7 @@
     "links": [
       "[Accessibility APIs](https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/)"
     ],
-    "tags": [
-      "accessibility"
-    ],
+    "tags": ["accessibility"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -54,9 +50,7 @@
     "links": [
       "[A good basis for accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML)"
     ],
-    "tags": [
-      "html"
-    ],
+    "tags": ["html"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -74,9 +68,7 @@
     "links": [
       "[async vs defer attributes](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)"
     ],
-    "tags": [
-      "html"
-    ],
+    "tags": ["html"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -89,9 +81,7 @@
     "answer": "We must have all ingredients of the recipe available, and in quantities that are more than or equal to the number of units required. If just one of the ingredients is not available or lower than needed, we cannot make a single batch.\n\nUse `Object.keys()` to return the ingredients of the recipe as an array, then use `Array.prototype.map()` to map each ingredient to the ratio of available units to the amount required by the recipe. If one of the ingredients required by the recipe is not available at all, the ratio will evaluate to `NaN`, so the logical OR operator can be used to fallback to `0` in this case.\n\nUse the spread `...` operator to feed the array of all the ingredient ratios into `Math.min()` to determine the lowest ratio. Passing this entire result into `Math.floor()` rounds down to return the maximum number of whole batches.\n\n```js\nconst batches = (recipe, available) =>\n  Math.floor(\n    Math.min(...Object.keys(recipe).map(k => available[k] / recipe[k] || 0))\n  )\n```",
     "goodToHear": [],
     "links": [],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [
       "```js\n/**\nIt accepts two objects as arguments: the first object is the recipe\nfor the food, while the second object is the available ingredients.\nEach ingredient's value is a number representing how many units there are.\n\n`batches(recipe, available)`\n*/\n\n// 0 batches can be made\nbatches(\n  { milk: 100, butter: 50, flour: 5 },\n  { milk: 132, butter: 48, flour: 51 }\n)\nbatches(\n  { milk: 100, flour: 4, sugar: 10, butter: 5 },\n  { milk: 1288, flour: 9, sugar: 95 }\n)\n\n// 1 batch can be made\nbatches(\n  { milk: 100, butter: 50, cheese: 10 },\n  { milk: 198, butter: 52, cheese: 10 }\n)\n\n// 2 batches can be made\nbatches(\n  { milk: 2, sugar: 40, butter: 20 },\n  { milk: 5, sugar: 120, butter: 500 }\n)\n```"
@@ -104,15 +94,11 @@
     "name": "bem.md",
     "question": "What is CSS BEM?",
     "answer": "The BEM methodology is a naming convention for CSS classes in order to keep CSS more maintainable by defining namespaces to solve scoping issues. BEM stands for Block Element Modifier which is an explanation for its structure. A Block is a standalone component that is reusable across projects and acts as a \"namespace\" for sub components (Elements). Modifiers are used as flags when a Block or Element is in a certain state or is different in structure or style.\n\n```css\n/* block component */\n.block {\n}\n\n/* element */\n.block__element {\n}\n\n/* modifier */\n.block__element--modifier {\n}\n```\n\nHere is an example with the class names on markup:\n\n```html\n<nav class=\"navbar\">\n  <a href=\"/\" class=\"navbar__link navbar__link--active\"></a>\n  <a href=\"/\" class=\"navbar__link\"></a>\n  <a href=\"/\" class=\"navbar__link\"></a>\n</nav>\n```\n\nIn this case, `navbar` is the Block, `navbar__link` is an Element that makes no sense outside of the `navbar` component, and `navbar__link--active` is a Modifier that indicates a different state for the `navbar__link` Element.\n\nSince Modifiers are verbose, many opt to use `is-*` flags instead as modifiers.\n\n```html\n<a href=\"/\" class=\"navbar__link is-active\"></a>\n```\n\nThese must be chained to the Element and never alone however, or there will be scope issues.\n\n```css\n.navbar__link.is-active {\n}\n```",
-    "goodToHear": [
-      "Alternative solutions to scope issues like CSS-in-JS"
-    ],
+    "goodToHear": ["Alternative solutions to scope issues like CSS-in-JS"],
     "links": [
       "[Writing clean and maintainable CSS](https://hackernoon.com/writing-clean-and-maintainable-css-using-bem-methodology-1dcbf810a664)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -132,9 +118,7 @@
     "links": [
       "[Big O Notation in JavaScript](https://medium.com/cesars-tech-insights/big-o-notation-javascript-25c79f50b19b)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -152,9 +136,7 @@
     "answer": "Return a function that accepts an arbitrary number of arguments by gathering them with the rest `...` operator. From that function, return the result of calling the `fn` with `Function.prototype.apply` to apply the context and the array of arguments to the function.\n\n```js\nconst bind = (fn, context) => (...args) => fn.apply(context, args)\n```",
     "goodToHear": [],
     "links": [],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [
       "```js\nfunction example() {\n  console.log(this)\n}\nconst boundExample = bind(example, { a: true })\nboundExample.call({ b: true }) // logs { a: true }\n```"
@@ -171,9 +153,7 @@
     "links": [
       "[Strategies for cache-busting CSS](https://css-tricks.com/strategies-for-cache-busting-css/)"
     ],
-    "tags": [
-      "html"
-    ],
+    "tags": ["html"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -189,10 +169,7 @@
       "[Avoiding Callback Hell in Node.js](http://stackabuse.com/avoiding-callback-hell-in-node-js/)",
       "[Asynchronous JavaScript: From Callback Hell to Async and Await](https://blog.hellojs.org/asynchronous-javascript-from-callback-hell-to-async-and-await-9b9ceb63c8e8)"
     ],
-    "tags": [
-      "node",
-      "javascript"
-    ],
+    "tags": ["node", "javascript"],
     "expertise": 2,
     "questionCodeBlocks": [
       "```js\ngetData(function(a) {\n  getMoreData(a, function(b) {\n    getMoreData(b, function(c) {\n      getMoreData(c, function(d) {\n        getMoreData(d, function(e) {\n          // ...\n        })\n      })\n    })\n  })\n})\n```"
@@ -212,10 +189,7 @@
     "links": [
       "[React docs on `setState`](https://reactjs.org/docs/react-component.html#setstate)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -226,16 +200,11 @@
     "name": "callback-refs-vs-finddomnode.md",
     "question": "Which is the preferred option between callback refs and findDOMNode()?",
     "answer": "Callback refs are preferred over the `findDOMNode()` API, due to the fact that `findDOMNode()` prevents certain improvements in React in the future.\n\n```js\n// Legacy approach using findDOMNode()\nclass MyComponent extends Component {\n  componentDidMount() {\n    findDOMNode(this).scrollIntoView()\n  }\n\n  render() {\n    return <div />\n  }\n}\n\n// Recommended approach using callback refs\nclass MyComponent extends Component {\n  componentDidMount() {\n    this.node.scrollIntoView()\n  }\n\n  render() {\n    return <div ref={node => (this.node = node)} />\n  }\n}\n```",
-    "goodToHear": [
-      "Callback refs are preferred over `findDOMNode()`."
-    ],
+    "goodToHear": ["Callback refs are preferred over `findDOMNode()`."],
     "links": [
       "[React docs on Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html#exposing-dom-refs-to-parent-components)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -253,9 +222,7 @@
     "links": [
       "[MDN docs for callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -274,10 +241,7 @@
     "links": [
       "[React docs on Children](https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -290,9 +254,7 @@
     "answer": "React's philosophy in the beginning was to align with the browser DOM API rather than HTML, since that more closely represents how elements are created. Setting a `class` on an element meant using the `className` API:\n\n```js\nconst element = document.createElement(\"div\")\nelement.className = \"hello\"\n```\n\nAdditionally, before ES5, reserved words could not be used in objects:\n\n```js\nconst element = {\n  attributes: {\n    class: \"hello\"\n  }\n}\n```\n\nIn IE8, this will throw an error.\n\nIn modern environments, destructuring will throw an error if trying to assign to a variable:\n\n```js\nconst { class } = this.props // Error\nconst { className } = this.props // All good\nconst { class: className } = this.props // All good, but cumbersome!\n```\n\nHowever, `class` _can_ be used as a prop without problems, as seen in other libraries like Preact. React currently allows you to use `class`, but will throw a warning and convert it to `className` under the hood. There is currently an open thread (as of January 2019) discussing changing `className` to `class` to reduce confusion.",
     "goodToHear": [],
     "links": [],
-    "tags": [
-      "react"
-    ],
+    "tags": ["react"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -313,9 +275,7 @@
       "[MDN docs for Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)",
       "[Clone an object in vanilla JS](http://voidcanvas.com/clone-an-object-in-vanilla-js-in-depth/)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -336,9 +296,7 @@
       "[What is a closure](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)",
       "[I never understood JavaScript closures](https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -355,9 +313,7 @@
       "[Object Equality in JavaScript](http://adripofjavascript.com/blog/drips/object-equality-in-javascript.html)",
       "[Deep comparison between two values](https://30secondsofcode.org/object#equals)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -372,13 +328,8 @@
       "Context provides a way to pass data through a tree of React components, without having to manually pass props.",
       "Context is designed to share data that is considered _global_ for a tree of React components."
     ],
-    "links": [
-      "[React docs on Context](https://reactjs.org/docs/context.html)"
-    ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "links": ["[React docs on Context](https://reactjs.org/docs/context.html)"],
+    "tags": ["react", "javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -396,9 +347,7 @@
     "links": [
       "[MDN docs for CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -415,9 +364,7 @@
       "[W3School's CSS Box Model Page](https://www.w3schools.com/Css/css_boxmodel.asp)",
       "[Mozilla's Intro to the CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -433,9 +380,7 @@
     "links": [
       "[CSS Preprocessors](https://medium.com/@garyfagan/css-preprocessors-6f226fa16f27)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -449,9 +394,7 @@
       "[W3School's CSS Combinators Page](https://www.w3schools.com/css/css_combinators.asp)",
       "[Mozilla's Combinators and groups of selectors page](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -470,9 +413,7 @@
     "links": [
       "[CSS Specificity](https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -490,10 +431,7 @@
     "links": [
       "[MDN docs for DOM](https://developer.mozilla.org/en-US/docs/DOM)"
     ],
-    "tags": [
-      "html",
-      "javascript"
-    ],
+    "tags": ["html", "javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -510,9 +448,7 @@
     "links": [
       "[MDN docs for comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -529,10 +465,7 @@
       "[React docs on Rendering Elements](https://reactjs.org/docs/rendering-elements.html)",
       "[React docs on Components and Props](https://reactjs.org/docs/components-and-props.html)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -543,15 +476,11 @@
     "name": "em-rem-difference.md",
     "question": "What is the difference between `em` and `rem` units?",
     "answer": "Both `em` and `rem` units are based on the `font-size` CSS property. The only difference is where they inherit their values from.\n\n* `em` units inherit their value from the `font-size` of the parent element\n* `rem` units inherit their value from the `font-size` of the root element (`html`)\n\nIn most browsers, the `font-size` of the root element is set to `16px` by default.",
-    "goodToHear": [
-      "Benefits of using `em` and `rem` units"
-    ],
+    "goodToHear": ["Benefits of using `em` and `rem` units"],
     "links": [
       "[CSS units for font-size: px | em | rem](https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -563,12 +492,8 @@
     "goodToHear": [
       "Error boundaries only catch errors in the components below them in the tree. An error boundary can’t catch an error within itself."
     ],
-    "links": [
-      "https://reactjs.org/docs/error-boundaries.html"
-    ],
-    "tags": [
-      "react"
-    ],
+    "links": ["https://reactjs.org/docs/error-boundaries.html"],
+    "tags": ["react"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -579,15 +504,9 @@
     "name": "event-delegation.md",
     "question": "What is event delegation and why is it useful? Can you show an example of how to use it?",
     "answer": "Event delegation is a technique of delegating events to a single common ancestor. Due to event bubbling, events \"bubble\" up the DOM tree by executing any handlers progressively on each ancestor element up to the root that may be listening to it.\n\nDOM events provide useful information about the element that initiated the event via `Event.target`. This allows the parent element to handle behavior as though the target element was listening to the event, rather than all children of the parent or the parent itself.\n\nThis provides two main benefits:\n\n* It increases performance and reduces memory consumption by only needing to register a single event listener to handle potentially thousands of elements.\n* If elements are dynamically added to the parent, there is no need to register new event listeners for them.\n\nInstead of:\n\n```js\ndocument.querySelectorAll(\"button\").forEach(button => {\n  button.addEventListener(\"click\", handleButtonClick)\n})\n```\n\nEvent delegation involves using a condition to ensure the child target matches our desired element:\n\n```js\ndocument.addEventListener(\"click\", e => {\n  if (e.target.closest(\"button\")) {\n    handleButtonClick()\n  }\n})\n```",
-    "goodToHear": [
-      "The difference between event bubbling and capturing"
-    ],
-    "links": [
-      "[Event Delegation](https://davidwalsh.name/event-delegate)"
-    ],
-    "tags": [
-      "javascript"
-    ],
+    "goodToHear": ["The difference between event bubbling and capturing"],
+    "links": ["[Event Delegation](https://davidwalsh.name/event-delegate)"],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -608,9 +527,7 @@
       "[MDN docs on Events and Handlers](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers)",
       "[Understanding Node.js event-driven architecture](https://medium.freecodecamp.org/understanding-node-js-event-driven-architecture-223292fcbc2d)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -622,15 +539,11 @@
     "name": "expression-vs-statement.md",
     "question": "What is the difference between an expression and a statement in JavaScript?",
     "answer": "There are two main syntactic categories in JavaScript: expressions and statements. A third one is both together, referred to as an expression statement. They are roughly summarized as:\n\n* **Expression**: produces a value\n* **Statement**: performs an action\n* **Expression statement**: produces a value and performs an action\n\nA general rule of thumb:\n\n> If you can print it or assign it to a variable, it’s an expression. If you can’t, it’s a statement.\n\n##### Statements\n\n```js\nlet x = 0\n\nfunction declaration() {}\n\nif (true) {\n}\n```\n\nStatements appear as instructions that do something but don't produce values.\n\n```js\n// Assign `x` to the absolute value of `y`.\nvar x\nif (y >= 0) {\n  x = y\n} else {\n  x = -y\n}\n```\n\nThe only expression in the above code is `y >= 0` which produces a value, either `true` or `false`. A value is not produced by other parts of the code.\n\n##### Expressions\n\nExpressions produce a value. They can be passed around to functions because the interpreter replaces them with the value they resolve to.\n\n```js\n5 + 5 // => 10\n\nlastCharacter(\"input\") // => \"t\"\n\ntrue === true // => true\n```\n\n##### Expression statements\n\nThere is an equivalent version of the set of statements used before as an expression using the conditional operator:\n\n```js\n// Assign `x` as the absolute value of `y`.\nvar x = y >= 0 ? y : -y\n```\n\nThis is both an expression and a statement, because we are declaring a variable `x` (statement) as an evaluation (expression).",
-    "goodToHear": [
-      "Function declarations vs function expressions"
-    ],
+    "goodToHear": ["Function declarations vs function expressions"],
     "links": [
       "[What is the difference between a statement and an expression?](https://stackoverflow.com/questions/12703214/javascript-difference-between-a-statement-and-an-expression)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -649,9 +562,7 @@
       "[Truthy on MDN](https://developer.mozilla.org/en/docs/Glossary/Truthy)",
       "[Falsy on MDN](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -667,9 +578,7 @@
     "links": [
       "[Similar problem](https://github.com/Chalarangelo/30-seconds-of-code/blob/master/snippets_archive/fibonacciUntilNum.md)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -685,9 +594,7 @@
       "[MDN docs for basic concepts of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)",
       "[A complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 0,
     "questionCodeBlocks": [
       "```html\n<div class=\"row\">\n  <div class=\"col-2\"></div>\n  <div class=\"col-7\"></div>\n  <div class=\"col-3\"></div>\n</div>\n```"
@@ -700,16 +607,12 @@
     "name": "floating-point.md",
     "question": "What does `0.1 + 0.2 === 0.3` evaluate to?",
     "answer": "It evaluates to `false` because JavaScript uses the IEEE 754 standard for Math and it makes use of 64-bit floating numbers. This causes precision errors when doing decimal calculations, in short, due to computers working in Base 2 while decimal is Base 10.\n\n```js\n0.1 + 0.2 // 0.30000000000000004\n```\n\nA solution to this problem would be to use a function that determines if two numbers are approximately equal by defining an error margin (epsilon) value that the difference between two values should be less than.\n\n```js\nconst approxEqual = (n1, n2, epsilon = 0.0001) => Math.abs(n1 - n2) < epsilon\napproxEqual(0.1 + 0.2, 0.3) // true\n```",
-    "goodToHear": [
-      "A simple solution to this problem"
-    ],
+    "goodToHear": ["A simple solution to this problem"],
     "links": [
       "[A simple helper function to check equality](https://github.com/Chalarangelo/30-seconds-of-code#approximatelyequal)",
       "[Fix \"0.1 + 0.2 = 0.300000004\" in JavaScript](http://blog.blakesimpson.co.uk/read/61-fix-0-1-0-2-0-300000004-in-javascript)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -725,9 +628,7 @@
     "links": [
       "[:focus-visible](https://css-tricks.com/focus-visible-and-backwards-compatibility/)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -745,9 +646,7 @@
       "[MDN docs for map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)",
       "[JavaScript — Map vs. ForEach](https://codeburst.io/javascript-map-vs-foreach-f38111822c0f)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -762,10 +661,7 @@
     "links": [
       "[React docs on Fragments](https://reactjs.org/docs/fragments.html)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -786,9 +682,7 @@
       "[Javascript and Functional Programming: An Introduction](https://hackernoon.com/javascript-and-functional-programming-an-introduction-286aa625e26d)",
       "[Master the JavaScript Interview: What is Functional Programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -801,9 +695,7 @@
       "They can be used for state abstraction and manipulation, props manipulation, render high jacking, etc."
     ],
     "links": [],
-    "tags": [
-      "react"
-    ],
+    "tags": ["react"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -821,9 +713,7 @@
     "links": [
       "[MDN docs for hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [
       "```js\nvar foo = 1\nvar foobar = function() {\n  console.log(foo)\n  var foo = 2\n}\nfoobar()\n```"
@@ -842,9 +732,7 @@
       "[MDN docs for hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)",
       "[Understanding Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -864,9 +752,7 @@
     "links": [
       "[StackOverflow Using header or footer tag twice](https://stackoverflow.com/questions/4837269/html5-using-header-or-footer-tag-twice?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)"
     ],
-    "tags": [
-      "html"
-    ],
+    "tags": ["html"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -880,12 +766,8 @@
       "However, invalid documents may contain anything, so it's impossible for the specification to handle all possibilities comprehensively.",
       "Thus, many decisions about how to handle malformed documents are left up to the browser."
     ],
-    "links": [
-      "[HTML 5.2 WWW Specifications](https://www.w3.org/TR/html52/)"
-    ],
-    "tags": [
-      "html"
-    ],
+    "links": ["[HTML 5.2 WWW Specifications](https://www.w3.org/TR/html52/)"],
+    "tags": ["html"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -894,17 +776,11 @@
     "name": "html-vs-react-event-handling.md",
     "question": "What is the difference between HTML and React event handling?",
     "answer": "In HTML, the attribute name is in all lowercase and is given a string invoking a function defined somewhere:\n\n```html\n<button onclick=\"handleClick()\"></button>\n```\n\nIn React, the attribute name is camelCase and are passed the function reference inside curly braces:\n\n```js\n<button onClick={handleClick} />\n```\n\nIn HTML, `false` can be returned to prevent default behavior, whereas in React `preventDefault` has to be called explicitly.\n\n```html\n<a href=\"#\" onclick=\"console.log('The link was clicked.'); return false\" />\n```\n\n```js\nfunction handleClick(e) {\n  e.preventDefault()\n  console.log(\"The link was clicked.\")\n}\n```",
-    "goodToHear": [
-      "HTML uses lowercase, React uses camelCase."
-    ],
+    "goodToHear": ["HTML uses lowercase, React uses camelCase."],
     "links": [
       "[React docs on Handling Events](https://reactjs.org/docs/handling-events.html)"
     ],
-    "tags": [
-      "react",
-      "javascript",
-      "html"
-    ],
+    "tags": ["react", "javascript", "html"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -925,9 +801,7 @@
     "links": [
       "[W3Schools docs for HTML and XHTML](https://www.w3schools.com/html/html_xhtml.asp)"
     ],
-    "tags": [
-      "html"
-    ],
+    "tags": ["html"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -936,15 +810,11 @@
     "name": "html5-semantic-elements-usage.md",
     "question": "Briefly describe the correct usage of the following HTML5 semantic elements: `<header>`, `<article>`,`<section>`, `<footer>`",
     "answer": "* `<header>` is used to contain introductory and navigational information about a section of the page. This can include the section heading, the author’s name, time and date of publication, table of contents, or other navigational information.\n\n* `<article>` is meant to house a self-contained composition that can logically be independently recreated outside of the page without losing its meaning. Individual blog posts or news stories are good examples.\n\n* `<section>` is a flexible container for holding content that shares a common informational theme or purpose.\n\n* `<footer>` is used to hold information that should appear at the end of a section of content and contain additional information about the section. Author’s name, copyright information, and related links are typical examples of such content.",
-    "goodToHear": [
-      "Other semantic elements are `<form>` and `<table>`"
-    ],
+    "goodToHear": ["Other semantic elements are `<form>` and `<table>`"],
     "links": [
       "[HTML 5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)"
     ],
-    "tags": [
-      "html"
-    ],
+    "tags": ["html"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -961,9 +831,7 @@
     "links": [
       "[W3Schools HTML5 Webstorage](https://www.w3schools.com/html/html5_webstorage.asp)"
     ],
-    "tags": [
-      "html"
-    ],
+    "tags": ["html"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -979,9 +847,7 @@
     "links": [
       "[MDN docs for closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -999,9 +865,7 @@
     "links": [
       "[Declarative vs Imperative Programming](https://codeburst.io/declarative-vs-imperative-programming-a8a7c93d9ad2)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1017,10 +881,7 @@
     "links": [
       "[React docs on Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1040,10 +901,7 @@
     "links": [
       "[React docs on Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1062,9 +920,7 @@
       "[ARIA Landmark Roles](https://www.washington.edu/accessibility/web/landmarks/)",
       "[Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)"
     ],
-    "tags": [
-      "accessibility"
-    ],
+    "tags": ["accessibility"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1083,9 +939,7 @@
     "links": [
       "[Mozilla Docs Closures & Lexical Scoping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1096,9 +950,7 @@
     "answer": "`getDerivedStateFromProps`: Executed before rendering on the initial mount and all component updates. Used to update the state based on changes in props over time. Has rare use cases, like tracking component animations during the lifecycle. There are only few cases where this makes sense to use over other lifecycle methods. It expects to return an object that will be the the new state, or null to update nothing. This method does not have access to the component instance either.\n\n`componentDidMount`: Executed after first rendering and here all AJAX requests, DOM or state updates, and set up eventListeners should occur.\n\n`shouldComponentUpdate`: Determines if the component will be updated or not. By default, it returns true. If you are sure that the component doesn't need to render after state or props are updated, you can return a false value. It is a great place to improve performance as it allows you to prevent a rerender if component receives new prop.\n\n`getSnapshotBeforeUpdate`: Invoked right after a component render happens because of an update, before `componentDidUpdate`. Any value returned from this method will be passed to `componentDidUpdate`.\n\n`componentDidUpdate`: Mostly it is used to update the DOM in response to prop or state changes.\n\n`componentWillUnmount`: It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.\n\n`componentDidCatch`: Used in error boundaries, which are components that implement this method. It allows the component to catch JavaScript errors anywhere in the _child_ component tree (below this component), log errors, and display a UI with error information.",
     "goodToHear": [],
     "links": [],
-    "tags": [
-      "react"
-    ],
+    "tags": ["react"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1109,9 +961,7 @@
     "answer": "There are four different phases of component’s lifecycle:\n\n**Initialization**: In this phase, the component prepares setting up the initial state and default props.\n\n**Mounting**: The react component is ready to mount to the DOM. This phase covers the `getDerivedStateFromProps` and `componentDidMount` lifecycle methods.\n\n**Updating**: In this phase, the component gets updated in two ways, sending the new props and updating the state. This phase covers the `getDerivedStateFromProps`, `shouldComponentUpdate`, `getSnapshotBeforeUpdate` and `componentDidUpdate` lifecycle methods.\n\n**Unmounting**: In this last phase, the component is not needed and gets unmounted from the browser DOM. This phase includes the `componentWillUnmount` lifecycle method.\n\n**Error Handling**: In this phase, the component is called whenever there's an error during rendering, in a lifecycle method, or in the constructor for any child component. This phase includes the `componentDidCatch` lifecycle method.\n\n<img alt=\"lifecycle phases\" src=\"https://pbs.twimg.com/media/DZ-97vzW4AAbcZj.jpg:large\" style=\"width: 100%\"/>",
     "goodToHear": [],
     "links": [],
-    "tags": [
-      "react"
-    ],
+    "tags": ["react"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1122,9 +972,7 @@
     "answer": "When several components need to share the same data, then it is recommended to lift the shared state up to their closest common ancestor. For example, if two child components share the same data, it is recommended to move the shared state to parent instead of maintaining the local state in both child components.",
     "goodToHear": [],
     "links": [],
-    "tags": [
-      "react"
-    ],
+    "tags": ["react"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1137,13 +985,9 @@
       "Short, one-line functional solutions to problems should be preferred provided they are efficient"
     ],
     "links": [],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
-    "questionCodeBlocks": [
-      "```js\nmask(\"123456789\") // \"#####6789\"\n```"
-    ],
+    "questionCodeBlocks": ["```js\nmask(\"123456789\") // \"#####6789\"\n```"],
     "answerCodeBlocks": [
       "```js\nconst mask = (str, maskChar = \"#\") =>\n  str.slice(-4).padStart(str.length, maskChar)\n```"
     ]
@@ -1157,9 +1001,7 @@
       "[MDN docs for `@media` rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)",
       "[MDN docs for using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1176,9 +1018,7 @@
     "links": [
       "[Implementing memoization in JavaScript](https://www.sitepoint.com/implementing-memoization-in-javascript/)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1196,10 +1036,7 @@
       "[React docs on Handling Events](https://reactjs.org/docs/handling-events.html)",
       "[React docs on Passing Functions to Components](https://reactjs.org/docs/faq-functions.html#how-do-i-bind-a-function-to-a-component-instance)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1218,9 +1055,7 @@
     "links": [
       "[MIME Type MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1229,15 +1064,11 @@
     "name": "mutable-vs-immutable.md",
     "question": "Contrast mutable and immutable values, and mutating vs non-mutating methods.",
     "answer": "The two terms can be contrasted as:\n\n* Mutable: subject to change\n* Immutable: cannot change\n\nIn JavaScript, objects are mutable while primitive values are immutable. This means operations performed on objects can change the original reference in some way, while operations performed on a primitive value cannot change the original value.\n\nAll `String.prototype` methods do not have an effect on the original string and return a new string. On the other hand, while some methods of `Array.prototype` do not mutate the original array reference and produce a fresh array, some cause mutations.\n\n```js\nconst myString = \"hello!\"\nmyString.replace(\"!\", \"\") // returns a new string, cannot mutate the original value\n\nconst originalArray = [1, 2, 3]\noriginalArray.push(4) // mutates originalArray, now [1, 2, 3, 4]\noriginalArray.concat(4) // returns a new array, does not mutate the original\n```",
-    "goodToHear": [
-      "List of mutating and non-mutating array methods"
-    ],
+    "goodToHear": ["List of mutating and non-mutating array methods"],
     "links": [
       "[Mutating vs non-mutating array methods](https://lorenstewart.me/2017/01/22/javascript-array-methods-mutating-vs-non-mutating/)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1255,9 +1086,7 @@
     "links": [
       "[MDN docs for `NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1273,10 +1102,7 @@
       "[The Node.js Way Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)",
       "[What are the error conventions?](https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions)"
     ],
-    "tags": [
-      "node",
-      "javascript"
-    ],
+    "tags": ["node", "javascript"],
     "expertise": 1,
     "questionCodeBlocks": [
       "```js\nfs.readFile(filePath, function(err, data) {\n  if (err) {\n    // handle the error, the return is important here\n    // so execution stops here\n    return console.log(err)\n  }\n  // use the data object\n  console.log(data)\n})\n```"
@@ -1295,10 +1121,7 @@
     "links": [
       "[Node.js docs on event loop, timers and process.nextTick()](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)"
     ],
-    "tags": [
-      "node",
-      "javascript"
-    ],
+    "tags": ["node", "javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1316,9 +1139,7 @@
       "[MDN docs for null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)",
       "[MDN docs for undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1332,9 +1153,7 @@
       "Factory functions offer private properties and methods through a closure but increase memory usage as a tradeoff, while classes do not have private properties or methods but reduce memory impact by reusing a single prototype object."
     ],
     "links": [],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1354,9 +1173,7 @@
       "`myFunction.length` describes the arity of a function (how many parameters it has, regardless of how many arguments it is supplied)."
     ],
     "links": [],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1367,15 +1184,11 @@
     "name": "pass-by-value-reference.md",
     "question": "Does JavaScript pass by value or by reference?",
     "answer": "JavaScript always passes by value. However, with objects, the value is a reference to the object.",
-    "goodToHear": [
-      "Difference between pass-by-value and pass-by-reference"
-    ],
+    "goodToHear": ["Difference between pass-by-value and pass-by-reference"],
     "links": [
       "[JavaScript Value vs Reference](https://medium.com/dailyjs/back-to-roots-javascript-value-vs-reference-8fb69d587a18)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1388,10 +1201,7 @@
     "links": [
       "[React docs on Handling Events](https://reactjs.org/docs/handling-events.html)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1408,9 +1218,7 @@
     "links": [
       "[What is function composition?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [
       "```js\nconst square = v => v * v\nconst double = v => v * 2\nconst addOne = v => v + 1\nconst res = pipe(square, double, addOne)\nres(3) // 19; addOne(double(square(3)))\n```"
@@ -1424,18 +1232,11 @@
     "question": "What are portals in React?",
     "answer": "Portal are the recommended way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.\n\n```js\nReactDOM.createPortal(child, container)\n```\n\nThe first argument (`child`) is any renderable React child, such as an element, string, or fragment. The second argument (`container`) is a DOM element.",
     "goodToHear": [],
-    "links": [
-      "[React docs on Portals](https://reactjs.org/docs/portals.html)"
-    ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "links": ["[React docs on Portals](https://reactjs.org/docs/portals.html)"],
+    "tags": ["react", "javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
-    "answerCodeBlocks": [
-      "```js\nReactDOM.createPortal(child, container)\n```"
-    ]
+    "answerCodeBlocks": ["```js\nReactDOM.createPortal(child, container)\n```"]
   },
   {
     "name": "postfix-vs-prefix-increment.md",
@@ -1443,9 +1244,7 @@
     "answer": "Both increment the variable value by 1. The difference is what they evaluate to.\n\nThe postfix increment operator evaluates to the value _before_ it was incremented.\n\n```js\nlet i = 0\ni++ // 0\n// i === 1\n```\n\nThe prefix increment operator evaluates to the value _after_ it was incremented.\n\n```js\nlet i = 0\n++i // 1\n// i === 1\n```",
     "goodToHear": [],
     "links": [],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1461,9 +1260,7 @@
     "links": [
       "[Official Web Docs Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1478,9 +1275,7 @@
     "links": [
       "[Master the JavaScript Interview: What is a Promise?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e772618)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1496,9 +1291,7 @@
       "Using `propTypes` is not mandatory. However, it is a good practice and can reduce bugs."
     ],
     "links": [],
-    "tags": [
-      "react"
-    ],
+    "tags": ["react"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1513,9 +1306,7 @@
     "links": [
       "[MDN docs for inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1532,9 +1323,7 @@
     "links": [
       "[Pure functions in JavaScript](http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1548,9 +1337,7 @@
     "answer": "Comments must be wrapped inside curly braces `{}` and use the `/* */` syntax.\n\n```jsx\nconst tree = (\n  <div>\n    {/* Comment */}\n    <p>Text</p>\n  </div>\n)\n```\n\n<!-- tags: (react) -->\n\n<!-- expertise: (0) -->",
     "goodToHear": [],
     "links": [],
-    "tags": [
-      "react"
-    ],
+    "tags": ["react"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1568,9 +1355,7 @@
     "links": [
       "[In plain English, what is recursion?](https://softwareengineering.stackexchange.com/questions/25052/in-plain-english-what-is-recursion)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1589,9 +1374,7 @@
     "links": [
       "[JavaScript Value vs Reference](https://medium.com/dailyjs/back-to-roots-javascript-value-vs-reference-8fb69d587a18)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [
       "```js\nconst a = [1, 2, 3]\nconst b = [1, 2, 3]\nconst c = \"1,2,3\"\n\nconsole.log(a == c)\nconsole.log(a == b)\n```"
@@ -1610,10 +1393,7 @@
     "links": [
       "[React docs on Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1632,9 +1412,7 @@
       "[Open external anchors using rel=\"noopener\"](https://developers.google.com/web/tools/lighthouse/audits/noopener)",
       "[About rel=\"noopener\"](https://mathiasbynens.github.io/rel-noopener/)"
     ],
-    "tags": [
-      "html"
-    ],
+    "tags": ["html"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1643,15 +1421,11 @@
     "name": "rest.md",
     "question": "What is REST?",
     "answer": "REST (REpresentational State Transfer) is a software design pattern for network architecture. A RESTful web application exposes data in the form of information about its resources.\n\nGenerally, this concept is used in web applications to manage state. With most applications, there is a common theme of reading, creating, updating, and destroying data. Data is modularized into separate tables like `posts`, `users`, `comments`, and a RESTful API exposes access to this data with:\n\n* An identifier for the resource. This is known as the endpoint or URL for the resource.\n* The operation the server should perform on that resource in the form of an HTTP method or verb. The common HTTP methods are GET, POST, PUT, and DELETE.\n\nHere is an example of the URL and HTTP method with a `posts` resource:\n\n* Reading: `/posts/` => GET\n* Creating: `/posts/new` => POST\n* Updating: `/posts/:id` => PUT\n* Destroying: `/posts/:id` => DELETE",
-    "goodToHear": [
-      "Alternatives to this pattern like GraphQL"
-    ],
+    "goodToHear": ["Alternatives to this pattern like GraphQL"],
     "links": [
       "  ](https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f)"
     ],
-    "tags": [
-      "node"
-    ],
+    "tags": ["node"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1666,9 +1440,7 @@
     "links": [
       "[Automatic semicolon insertion in JavaScript](http://2ality.com/2011/05/semicolon-insertion.html)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [
       "```js\nfunction greet() {\n  return\n  {\n    message: \"hello\"\n  }\n}\n```"
@@ -1684,9 +1456,7 @@
       "If you don't use semicolons, tools like Prettier will insert semicolons for you in the places where they are required on save in a text editor to prevent errors."
     ],
     "links": [],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1704,9 +1474,7 @@
     "links": [
       "[JavaScript: What is short-circuit evaluation?](https://codeburst.io/javascript-what-is-short-circuit-evaluation-ff22b2f5608c)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1728,9 +1496,7 @@
     "links": [
       "[CSS Sprites explained by CSS Tricks](https://css-tricks.com/css-sprites/)"
     ],
-    "tags": [
-      "css"
-    ],
+    "tags": ["css"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1747,10 +1513,7 @@
     "links": [
       "[React docs on State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1769,10 +1532,7 @@
     "links": [
       "[React docs on State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)"
     ],
-    "tags": [
-      "react",
-      "javascript"
-    ],
+    "tags": ["react", "javascript"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1787,9 +1547,7 @@
     "links": [
       "[Classes on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1806,9 +1564,7 @@
       "Functions like `alert` block the main thread so that no user input is registered until the user closes it."
     ],
     "links": [],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1826,9 +1582,7 @@
     "links": [
       "[`this` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1847,13 +1601,9 @@
     "links": [
       "[MDN docs for typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
-    "questionCodeBlocks": [
-      "```js\ntypeof typeof 0\n```"
-    ],
+    "questionCodeBlocks": ["```js\ntypeof typeof 0\n```"],
     "answerCodeBlocks": []
   },
   {
@@ -1869,9 +1619,7 @@
       "[MDN docs for data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)",
       "[Understanding Data Types in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-javascript)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1887,9 +1635,7 @@
     "links": [
       "[Virtual DOM in Hyperapp](https://github.com/hyperapp/hyperapp#view)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1906,9 +1652,7 @@
     "links": [
       "[MDN docs for strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1923,12 +1667,8 @@
       "Show a common issue with using `var` and how `let` can solve it, as well as a solution that keeps `var`.",
       "`var` should be avoided whenever possible and prefer `const` as the default declaration statement for all variables unless they will be reassigned later, then use `let` if so."
     ],
-    "links": [
-      "[`let` vs `const`](https://wesbos.com/let-vs-const/)"
-    ],
-    "tags": [
-      "javascript"
-    ],
+    "links": ["[`let` vs `const`](https://wesbos.com/let-vs-const/)"],
+    "tags": ["javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1941,15 +1681,11 @@
     "name": "virtual-dom.md",
     "question": "What is a virtual DOM and why is it used in libraries/frameworks?",
     "answer": "The virtual DOM (VDOM) is a representation of the real DOM in the form of plain JavaScript objects. These objects have properties to describe the real DOM nodes they represent: the node name, its attributes, and child nodes.\n\n```html\n<div class=\"counter\">\n  <h1>0</h1>\n  <button>-</button>\n  <button>+</button>\n</div>\n```\n\nThe above markup's virtual DOM representation might look like this:\n\n```js\n{\n  nodeName: \"div\",\n  attributes: { class: \"counter\" },\n  children: [\n    {\n      nodeName: \"h1\",\n      attributes: {},\n      children: [0]\n    },\n    {\n      nodeName: \"button\",\n      attributes: {},\n      children: [\"-\"]\n    },\n    {\n      nodeName: \"button\",\n      attributes: {},\n      children: [\"+\"]\n    }\n  ]\n}\n```\n\nThe library/framework uses the virtual DOM as a means to improve performance. When the state of an application changes, the real DOM needs to be updated to reflect it. However, changing real DOM nodes is costly compared to recalculating the virtual DOM. The previous virtual DOM can be compared to the new virtual DOM very quickly in comparison.\n\nOnce the changes between the old VDOM and new VDOM have been calculated by the diffing engine of the framework, the real DOM can be patched efficiently in the least time possible to match the new state of the application.",
-    "goodToHear": [
-      "Why accessing the DOM can be so costly."
-    ],
+    "goodToHear": ["Why accessing the DOM can be so costly."],
     "links": [
       "[The difference between Virtual DOM and DOM](http://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/)"
     ],
-    "tags": [
-      "javascript"
-    ],
+    "tags": ["javascript"],
     "expertise": 2,
     "questionCodeBlocks": [],
     "answerCodeBlocks": [
@@ -1970,9 +1706,7 @@
       "[Web Content Accessibility Guidelines (WCAG) Overview](https://www.w3.org/WAI/standards-guidelines/wcag/)",
       "[How to Meet WCAG](https://www.w3.org/WAI/WCAG21/quickref/)"
     ],
-    "tags": [
-      "accessibility"
-    ],
+    "tags": ["accessibility"],
     "expertise": 0,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []
@@ -1988,10 +1722,7 @@
     "links": [
       "[Cross-Site Scripting Attack (XSS)](https://www.acunetix.com/websitesecurity/cross-site-scripting/)"
     ],
-    "tags": [
-      "security",
-      "javascript"
-    ],
+    "tags": ["security", "javascript"],
     "expertise": 1,
     "questionCodeBlocks": [],
     "answerCodeBlocks": []

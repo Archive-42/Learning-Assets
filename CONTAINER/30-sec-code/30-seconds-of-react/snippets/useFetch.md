@@ -33,8 +33,8 @@ const useFetch = (url, options) => {
 ```
 
 ```jsx
-const ImageFetch = props => {
-  const res = useFetch('https://dog.ceo/api/breeds/image/random', {});
+const ImageFetch = (props) => {
+  const res = useFetch("https://dog.ceo/api/breeds/image/random", {});
   if (!res.response) {
     return <div>Loading...</div>;
   }
@@ -46,5 +46,5 @@ const ImageFetch = props => {
   );
 };
 
-ReactDOM.render(<ImageFetch />, document.getElementById('root'));
+ReactDOM.render(<ImageFetch />, document.getElementById("root"));
 ```

@@ -16,13 +16,13 @@ _Margin_: The transparent outer-most layer that surrounds the border. It separat
 
 #### Good to hear
 
-* This is a very common question asked during front-end interviews and while it may seem easy, it is critical you know it well!
-* Shows a solid understanding of spacing and the DOM
+- This is a very common question asked during front-end interviews and while it may seem easy, it is critical you know it well!
+- Shows a solid understanding of spacing and the DOM
 
 ##### Additional links
 
-* [W3School's CSS Box Model Page](https://www.w3schools.com/Css/css_boxmodel.asp)
-* [Mozilla's Intro to the CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [W3School's CSS Box Model Page](https://www.w3schools.com/Css/css_boxmodel.asp)
+- [Mozilla's Intro to the CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 
 <!-- tags: (css) -->
 

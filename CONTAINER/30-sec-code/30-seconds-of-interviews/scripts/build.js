@@ -20,17 +20,11 @@ const detailsTOC = (title, questionsArray) =>
     .collapsible(
       title,
       lists
-        .ul(questionsArray, question =>
+        .ul(questionsArray, (question) =>
           misc.link(
-            question.question
-              .replace("\n", "")
-              .split("```")[0]
-              .trim(),
+            question.question.replace("\n", "").split("```")[0].trim(),
             misc.anchor(
-              question.question
-                .replace("\n", "")
-                .split("```")[0]
-                .trim()
+              question.question.replace("\n", "").split("```")[0].trim()
             )
           )
         )
@@ -71,8 +65,8 @@ try {
   const questionsInTag = {}
 
   // put questions into respective tag-keyed arrays
-  questions.forEach(question => {
-    question.tags.forEach(tag => {
+  questions.forEach((question) => {
+    question.tags.forEach((tag) => {
       if (Object.keys(questionsInTag).includes(tag)) {
         questionsInTag[tag].push(question)
       } else {
@@ -85,17 +79,16 @@ try {
 
   // sort questionsInTag by size
   const tags = Object.keys(questionsInTag)
-  tags.sort(
-    (tag1, tag2) =>
-      questionsInTag[tag1].length === questionsInTag[tag2].length
-        ? 0
-        : questionsInTag[tag1].length < questionsInTag[tag2].length
-          ? 1
-          : -1
+  tags.sort((tag1, tag2) =>
+    questionsInTag[tag1].length === questionsInTag[tag2].length
+      ? 0
+      : questionsInTag[tag1].length < questionsInTag[tag2].length
+      ? 1
+      : -1
   )
 
   // write Table of Contents
-  tags.forEach(tagKey => {
+  tags.forEach((tagKey) => {
     const taggedQuestions = questionsInTag[tagKey]
     output += headers.h3(TAG_NAMES[tagKey])
     output += detailsTOC("View contents", taggedQuestions)
@@ -105,12 +98,12 @@ try {
   output += misc.hr()
 
   // write actual questions
-  tags.forEach(tagKey => {
+  tags.forEach((tagKey) => {
     output += headers.h2(TAG_NAMES[tagKey])
     const taggedQuestions = questionsInTag[tagKey]
     // sort questions by expertise
     taggedQuestions.sort((q1, q2) => q1.expertise - q2.expertise)
-    taggedQuestions.forEach(question => {
+    taggedQuestions.forEach((question) => {
       output += headers.h3(question.question).trim()
       output += detailsQuestion("View answer", question)
       output += `\n<br>${misc.link(

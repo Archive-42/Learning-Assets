@@ -6,12 +6,12 @@ CSS preprocessors add useful functionality that native CSS does not have, and ge
 
 #### Good to hear
 
-* They allow us to write more maintainable and scalable CSS
-* Some disadvantages of using CSS preprocessors (setup, re-compilation time can be slow etc.)
+- They allow us to write more maintainable and scalable CSS
+- Some disadvantages of using CSS preprocessors (setup, re-compilation time can be slow etc.)
 
 ##### Additional links
 
-* [CSS Preprocessors](https://medium.com/@garyfagan/css-preprocessors-6f226fa16f27)
+- [CSS Preprocessors](https://medium.com/@garyfagan/css-preprocessors-6f226fa16f27)
 
 <!-- tags: (css) -->
 

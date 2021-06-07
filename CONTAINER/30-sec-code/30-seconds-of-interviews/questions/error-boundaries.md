@@ -18,13 +18,12 @@ class ErrorBoundary extends React.Component {
     // You can also log the error to an error reporting service
     logErrorToMyService(error, info)
   }
-  
+
   // use getDerivedStateFromError to update state
   static getDerivedStateFromError(error) {
     // Display fallback UI
-     return { hasError: true };
+    return { hasError: true }
   }
-
 
   render() {
     if (this.state.hasError) {
@@ -38,9 +37,10 @@ class ErrorBoundary extends React.Component {
 
 #### Good to hear
 
-* Error boundaries only catch errors in the components below them in the tree. An error boundary can’t catch an error within itself.
+- Error boundaries only catch errors in the components below them in the tree. An error boundary can’t catch an error within itself.
 
 ##### Additional links
+
 https://reactjs.org/docs/error-boundaries.html
 
 <!-- tags: (react) -->

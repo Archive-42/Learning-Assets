@@ -31,7 +31,7 @@ const useInterval = (callback, delay) => {
 ```
 
 ```jsx
-const Timer = props => {
+const Timer = (props) => {
   const [seconds, setSeconds] = React.useState(0);
   useInterval(() => {
     setSeconds(seconds + 1);
@@ -40,5 +40,5 @@ const Timer = props => {
   return <p>{seconds}</p>;
 };
 
-ReactDOM.render(<Timer />, document.getElementById('root'));
+ReactDOM.render(<Timer />, document.getElementById("root"));
 ```

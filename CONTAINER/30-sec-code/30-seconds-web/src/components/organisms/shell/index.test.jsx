@@ -38,8 +38,9 @@ describe('<Shell />', () => {
 
   describe('when in production without cookies enabled', () => {
     beforeEach(() => {
-      wrapper = renderWithContext(<Shell isSettings>{innerText}</Shell>)
-        .container;
+      wrapper = renderWithContext(
+        <Shell isSettings>{innerText}</Shell>
+      ).container;
     });
 
     it('should render a CookieConsentPopup', () => {

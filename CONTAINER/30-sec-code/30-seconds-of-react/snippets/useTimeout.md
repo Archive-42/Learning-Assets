@@ -31,7 +31,7 @@ const useTimeout = (callback, delay) => {
 ```
 
 ```jsx
-const OneSecondTimer = props => {
+const OneSecondTimer = (props) => {
   const [seconds, setSeconds] = React.useState(0);
   useTimeout(() => {
     setSeconds(seconds + 1);
@@ -40,5 +40,5 @@ const OneSecondTimer = props => {
   return <p>{seconds}</p>;
 };
 
-ReactDOM.render(<OneSecondTimer />, document.getElementById('root'));
+ReactDOM.render(<OneSecondTimer />, document.getElementById("root"));
 ```

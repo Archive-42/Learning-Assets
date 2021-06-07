@@ -3,12 +3,15 @@
 <!-- If you need to display some code, keep it short. It goes here: -->
 
 ```html
+
 ```
 
 ```css
+
 ```
 
 ```js
+
 ```
 
 #### Answer
@@ -18,12 +21,15 @@
 <!-- If you need to display some code, keep it short. It goes here: -->
 
 ```html
+
 ```
 
 ```css
+
 ```
 
 ```js
+
 ```
 
 #### Good to hear
@@ -34,7 +40,7 @@
 
 <!-- Whenever possible, link a more detailed explanation. -->
 
-* [Short title](https://yourLinkGoes.here/)
+- [Short title](https://yourLinkGoes.here/)
 
 <!-- tags: (separate each by a comma) -->
 

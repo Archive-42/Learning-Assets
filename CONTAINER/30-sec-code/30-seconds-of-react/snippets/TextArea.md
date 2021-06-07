@@ -32,8 +32,8 @@ const TextArea = ({
 ReactDOM.render(
   <TextArea
     placeholder="Insert some text here..."
-    onValueChange={val => console.log(val)}
+    onValueChange={(val) => console.log(val)}
   />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

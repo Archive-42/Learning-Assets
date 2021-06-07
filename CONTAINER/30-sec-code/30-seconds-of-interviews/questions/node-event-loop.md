@@ -6,13 +6,13 @@ The event loop handles all async callbacks. Callbacks are queued in a loop, whil
 
 #### Good to hear
 
-* The event loop allows Node.js to perform non-blocking I/O operations, despite the fact that JavaScript is single-threaded
+- The event loop allows Node.js to perform non-blocking I/O operations, despite the fact that JavaScript is single-threaded
 
 ##### Additional links
 
 <!-- Whenever possible, link a more detailed explanation. -->
 
-* [Node.js docs on event loop, timers and process.nextTick()](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+- [Node.js docs on event loop, timers and process.nextTick()](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
 
 <!-- tags: (node,javascript) -->
 

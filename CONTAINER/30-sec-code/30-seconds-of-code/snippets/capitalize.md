@@ -12,10 +12,10 @@ Capitalizes the first letter of a string.
 ```js
 const capitalize = ([first, ...rest], lowerRest = false) =>
   first.toUpperCase() +
-  (lowerRest ? rest.join('').toLowerCase() : rest.join(''));
+  (lowerRest ? rest.join("").toLowerCase() : rest.join(""));
 ```
 
 ```js
-capitalize('fooBar'); // 'FooBar'
-capitalize('fooBar', true); // 'Foobar'
+capitalize("fooBar"); // 'FooBar'
+capitalize("fooBar", true); // 'Foobar'
 ```

@@ -19,16 +19,16 @@ Note: both attributes must only be used if the script has a `src` attribute (i.e
 
 #### Good to hear
 
-* Placing a `defer` script in the `<head>` allows the browser to download the script while the page is still parsing, and is therefore a better option than placing the script before the end of the body.
-* If the scripts rely on each other, use `defer`.
-* If the script is independent, use `async`.
-* Use `defer` if the DOM must be ready and the contents are not placed within a `DOMContentLoaded` listener.
+- Placing a `defer` script in the `<head>` allows the browser to download the script while the page is still parsing, and is therefore a better option than placing the script before the end of the body.
+- If the scripts rely on each other, use `defer`.
+- If the script is independent, use `async`.
+- Use `defer` if the DOM must be ready and the contents are not placed within a `DOMContentLoaded` listener.
 
 ##### Additional links
 
 <!-- Whenever possible, link a more detailed explanation. -->
 
-* [async vs defer attributes](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
+- [async vs defer attributes](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 
 <!-- tags: (html) -->
 

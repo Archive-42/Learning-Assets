@@ -9,12 +9,12 @@ export default function Template(props) {
   let { markdownRemark, allMarkdownRemark } = props.data; // data.markdownRemark holds our post data
 
   const sections = allMarkdownRemark.edges
-    .map(lesson => lesson.node.frontmatter)
+    .map((lesson) => lesson.node.frontmatter)
     .sort(sortFn);
 
   const { frontmatter, html } = markdownRemark;
 
-  const index = sections.findIndex(el => el.path === frontmatter.path);
+  const index = sections.findIndex((el) => el.path === frontmatter.path);
 
   const prevLink =
     index > 0 ? (

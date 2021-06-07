@@ -43,7 +43,7 @@ Another common use case is only evaluating an expression if the first operand is
 
 ```js
 // Instead of:
-addEventListener("click", e => {
+addEventListener("click", (e) => {
   if (e.target.closest("button")) {
     handleButtonClick(e)
   }
@@ -52,7 +52,7 @@ addEventListener("click", e => {
 // You can take advantage of short-circuit evaluation:
 addEventListener(
   "click",
-  e => e.target.closest("button") && handleButtonClick(e)
+  (e) => e.target.closest("button") && handleButtonClick(e)
 )
 ```
 
@@ -60,11 +60,11 @@ In the above case, if `e.target` is not or does not contain an element matching 
 
 #### Good to hear
 
-* Logical operations do not produce a boolean unless the operand(s) evaluate to a boolean.
+- Logical operations do not produce a boolean unless the operand(s) evaluate to a boolean.
 
 ##### Additional links
 
-* [JavaScript: What is short-circuit evaluation?](https://codeburst.io/javascript-what-is-short-circuit-evaluation-ff22b2f5608c)
+- [JavaScript: What is short-circuit evaluation?](https://codeburst.io/javascript-what-is-short-circuit-evaluation-ff22b2f5608c)
 
 <!-- Whenever possible, link a more detailed explanation. -->
 

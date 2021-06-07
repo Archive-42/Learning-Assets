@@ -3,7 +3,7 @@ title: max_n
 tags: list,math,beginner
 ---
 
-Returns the `n` maximum elements from the provided list. 
+Returns the `n` maximum elements from the provided list.
 
 - Use `sorted()` to sort the list.
 - Use slice notation to get the specified number of elements.

@@ -17,11 +17,11 @@ new Promise((resolve, reject) => {
 
 #### Good to hear
 
-* Take a look into the other questions regarding `Promise`s!
+- Take a look into the other questions regarding `Promise`s!
 
 ##### Additional links
 
-* [Master the JavaScript Interview: What is a Promise?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e772618)
+- [Master the JavaScript Interview: What is a Promise?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e772618)
 
 <!-- tags: (javascript) -->
 

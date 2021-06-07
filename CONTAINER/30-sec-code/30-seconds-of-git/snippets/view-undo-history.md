@@ -8,7 +8,7 @@ View git's reference logs. This is especially useful for finding references that
 - Use `git reflog` to display the git reference log.
 
 - View your "undo" history
-Because sometimes git log doesn't cut it, especially for commands that don't show up in your commit history.
+  Because sometimes git log doesn't cut it, especially for commands that don't show up in your commit history.
 
 reflog is basically your safety net after running "scary" commands like git rebase. You'll be able to see not only the commits you made, but each of the actions that led you there.
 

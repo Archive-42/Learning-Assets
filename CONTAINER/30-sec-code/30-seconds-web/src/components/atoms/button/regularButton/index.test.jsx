@@ -6,8 +6,9 @@ describe('<Button />', () => {
   const innerText = 'Click me!';
 
   beforeEach(() => {
-    wrapper = render(<Button className='secondary'>{innerText}</Button>)
-      .container;
+    wrapper = render(
+      <Button className='secondary'>{innerText}</Button>
+    ).container;
   });
 
   afterEach(cleanup);

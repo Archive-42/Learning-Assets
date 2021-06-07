@@ -14,6 +14,6 @@ document.addEventListener("touchstart", function x() {
   document.removeEventListener("touchstart", x)
 })
 
-onUserInputChange(type => {
+onUserInputChange((type) => {
   html[type === "touch" ? "add" : "remove"]("browser-touch")
 })

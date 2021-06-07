@@ -14,8 +14,8 @@ Additionally, before ES5, reserved words could not be used in objects:
 ```js
 const element = {
   attributes: {
-    class: "hello"
-  }
+    class: "hello",
+  },
 }
 ```
 

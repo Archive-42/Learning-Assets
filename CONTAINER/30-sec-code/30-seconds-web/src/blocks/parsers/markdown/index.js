@@ -34,7 +34,8 @@ const blogTransformers = [
   // Convert blog post code to the appropriate elements
   {
     blogType: 'any',
-    matcher: /<pre class="language-([^"]+)" data-code-language="([^"]*)">([\s\S]*?)<\/pre>/g,
+    matcher:
+      /<pre class="language-([^"]+)" data-code-language="([^"]*)">([\s\S]*?)<\/pre>/g,
     replacer:
       '<pre class="language-$1 notranslate" data-code-language="$2">$3</pre>',
   },

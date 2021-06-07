@@ -6,11 +6,13 @@
 a {
   text-decoration: none;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: var(--clr-link);
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     animation-name: animated-underline;
     animation-iteration-count: 1;
     animation-duration: 0.3s;
@@ -18,7 +20,6 @@ a {
     animation-fill-mode: forwards;
   }
 }
-
 
 @keyframes animated-underline {
   0% {

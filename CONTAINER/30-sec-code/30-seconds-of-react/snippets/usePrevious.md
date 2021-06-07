@@ -10,7 +10,7 @@ Stores the previous state or props.
 - Use the `useEffect()` hook to remember the latest `value`.
 
 ```jsx
-const usePrevious = value => {
+const usePrevious = (value) => {
   const ref = React.useRef();
   React.useEffect(() => {
     ref.current = value;
@@ -34,5 +34,5 @@ const Counter = () => {
   );
 };
 
-ReactDOM.render(<Counter />, document.getElementById('root'));
+ReactDOM.render(<Counter />, document.getElementById("root"));
 ```

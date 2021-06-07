@@ -15,16 +15,16 @@ Renders a textarea component with a word limit.
 const LimitedWordTextarea = ({ rows, cols, value, limit }) => {
   const [{ content, wordCount }, setContent] = React.useState({
     content: value,
-    wordCount: 0
+    wordCount: 0,
   });
 
   const setFormattedContent = React.useCallback(
-    text => {
-      let words = text.split(' ').filter(Boolean);
+    (text) => {
+      let words = text.split(" ").filter(Boolean);
       if (words.length > limit) {
         setContent({
-          content: words.slice(0, limit).join(' '),
-          wordCount: limit
+          content: words.slice(0, limit).join(" "),
+          wordCount: limit,
         });
       } else {
         setContent({ content: text, wordCount: words.length });
@@ -42,7 +42,7 @@ const LimitedWordTextarea = ({ rows, cols, value, limit }) => {
       <textarea
         rows={rows}
         cols={cols}
-        onChange={event => setFormattedContent(event.target.value)}
+        onChange={(event) => setFormattedContent(event.target.value)}
         value={content}
       />
       <p>
@@ -56,6 +56,6 @@ const LimitedWordTextarea = ({ rows, cols, value, limit }) => {
 ```jsx
 ReactDOM.render(
   <LimitedWordTextarea limit={5} value="Hello there!" />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

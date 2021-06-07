@@ -10,14 +10,14 @@ However, there are some cases where they are required. They are not required at 
 
 ```js
 const previousLine = 3
-;[1, 2, previousLine].map(n => n * 2)
+;[1, 2, previousLine].map((n) => n * 2)
 ```
 
 2.  The line starts with `(`
 
 ```js
 const previousLine = 3
-;(function() {
+;(function () {
   // ...
 })()
 ```
@@ -26,8 +26,8 @@ In the above cases, the interpreter does not insert a semicolon after `3`, and t
 
 #### Good to hear
 
-* Semicolons are usually optional in JavaScript but have edge cases where they are required.
-* If you don't use semicolons, tools like Prettier will insert semicolons for you in the places where they are required on save in a text editor to prevent errors.
+- Semicolons are usually optional in JavaScript but have edge cases where they are required.
+- If you don't use semicolons, tools like Prettier will insert semicolons for you in the places where they are required on save in a text editor to prevent errors.
 
 ##### Additional links
 

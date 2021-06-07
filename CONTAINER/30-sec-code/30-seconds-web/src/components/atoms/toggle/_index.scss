@@ -19,7 +19,7 @@
   border-radius: var(--br-round);
   vertical-align: text-bottom;
   box-sizing: border-box;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   outline: transparent;
   cursor: pointer;
 
@@ -32,7 +32,7 @@
     top: -2px;
     left: -8px;
     border-radius: var(--br-round);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
   }
 

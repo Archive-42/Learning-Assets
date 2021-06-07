@@ -3,18 +3,19 @@
 ## Advanced JavaScript
 
 ## Array Methods and Callbacks
-*Note*: Please add the LIVE server extension to your visual studio code and use it for this project. https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer - you will not be able to view this data in the browser or see your console logs without it. 
+
+_Note_: Please add the LIVE server extension to your visual studio code and use it for this project. https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer - you will not be able to view this data in the browser or see your console logs without it.
 
 ## Objectives
 
 - Array Methods - demonstrate ability to use `.forEach()` `.map()` `.reduce()` `.filter()` and describe their use cases
 - Callbacks - demonstrate the proper use a of a callback function by passing a function to another function as a parameter
-  
+
 ## Introduction
 
 In this challenge, you will work with a data set summarizing every World Cup game from 1930 to 2014. As web developers, you will often work with JSON data to interact with servers, summarize data, get images to your page, and more. It is crucial that you cultivate a thorough understanding of data structures and methods early in your career.
 
-The data set you are given (loaded in at the top of `index.js`) contains a report for every game played at every stage in the FIFA World Cup tournament since 1930. Each report is an object with many keys, including `Year`,`Stage`, `Stadium`,  `Home Team Name`,`Home Team Goals`, `Away Team Name`, and `Away Team Goals`. There is a plethora of other data in this set as well, but we won't spend time working with it. You can read more about the data [here](https://www.kaggle.com/abecklas/fifa-world-cup) or look at the sample object below if you are interested!
+The data set you are given (loaded in at the top of `index.js`) contains a report for every game played at every stage in the FIFA World Cup tournament since 1930. Each report is an object with many keys, including `Year`,`Stage`, `Stadium`, `Home Team Name`,`Home Team Goals`, `Away Team Name`, and `Away Team Goals`. There is a plethora of other data in this set as well, but we won't spend time working with it. You can read more about the data [here](https://www.kaggle.com/abecklas/fifa-world-cup) or look at the sample object below if you are interested!
 
 Your goal today will be to manipulate the data using array methods and callbacks to create interesting statistics.
 
@@ -81,11 +82,11 @@ Your data lives in a file called `fifa.js`. In order to work with and use your d
 
 **What about ties?**
 
-In some cases, when the outcome of a game was decided by penalty kicks, the home team and away team will have the same number of goals scored. You can ignore ties for the purpose of these tasks, but you can also look to the "Win conditions" key  and splice out the winning team as a stretch goal. (See example below)
+In some cases, when the outcome of a game was decided by penalty kicks, the home team and away team will have the same number of goals scored. You can ignore ties for the purpose of these tasks, but you can also look to the "Win conditions" key and splice out the winning team as a stretch goal. (See example below)
 
 ```
 Win conditions": "France win on penalties (3 - 4)",
-````
+```
 
 ## Resources
 

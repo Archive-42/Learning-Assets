@@ -10,8 +10,9 @@ describe('<CssSnippetCard />', () => {
   let wrapper, card, tagList, snippetPreview, codeBlocks;
 
   beforeEach(() => {
-    wrapper = renderWithContext(<CssSnippetCard snippet={fullCssSnippet} />)
-      .container;
+    wrapper = renderWithContext(
+      <CssSnippetCard snippet={fullCssSnippet} />
+    ).container;
     card = wrapper.querySelector('.card');
     tagList = wrapper.querySelector('.card-subtitle');
     snippetPreview = wrapper.querySelector('.snippet-preview');

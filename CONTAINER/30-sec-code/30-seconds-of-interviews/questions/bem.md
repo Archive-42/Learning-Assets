@@ -45,11 +45,11 @@ These must be chained to the Element and never alone however, or there will be s
 
 #### Good to hear
 
-* Alternative solutions to scope issues like CSS-in-JS
+- Alternative solutions to scope issues like CSS-in-JS
 
 ##### Additional links
 
-* [Writing clean and maintainable CSS](https://hackernoon.com/writing-clean-and-maintainable-css-using-bem-methodology-1dcbf810a664)
+- [Writing clean and maintainable CSS](https://hackernoon.com/writing-clean-and-maintainable-css-using-bem-methodology-1dcbf810a664)
 
 <!-- tags: (css) -->
 

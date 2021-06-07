@@ -24,9 +24,7 @@ const Search = ({ isMainSearch = false }) => {
     dispatch,
   ] = useSearch();
   const [value, setValue] = useState('');
-  const [searchIndexInitialized, setSearchIndexInitialized] = useState(
-    false
-  );
+  const [searchIndexInitialized, setSearchIndexInitialized] = useState(false);
   const [selectedResult, setSelectedResult] = useState(-1);
 
   const hasResults = value.trim().length > 1 && searchResults.length !== 0;

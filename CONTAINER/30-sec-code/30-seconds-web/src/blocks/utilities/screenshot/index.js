@@ -71,10 +71,8 @@ export class Screenshot {
         card.prepend(logo);
 
         // Add wrapper around the card
-        const {
-          width: cardWidth,
-          height: cardHeight,
-        } = card.getBoundingClientRect();
+        const { width: cardWidth, height: cardHeight } =
+          card.getBoundingClientRect();
         const wrapperSize = Math.max(cardWidth, cardHeight, 900);
         const wrapper = document.createElement('div');
         card.parentNode.insertBefore(wrapper, card);

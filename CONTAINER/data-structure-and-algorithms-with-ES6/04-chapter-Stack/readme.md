@@ -1,6 +1,7 @@
 # Stacks with ES6
 
 ### Code Examples
+
 - [Stack Data Structure](./stack.module.js)
 - [Import Module](./index.js)
 
@@ -11,6 +12,7 @@ Pattern type: Last item In is the First item Out (LIFO)
 ![](https://cdn-images-1.medium.com/max/800/0*S3Kr9Cpm16ZmCEad.png)
 
 common operations you can perform on graphs:
+
 - `push`: adds a new element to the stack
 - `pop`: remove the last item pushed from the stack
 - `peek`: returns the last item pushed to stack
@@ -19,12 +21,12 @@ common operations you can perform on graphs:
 - `getStack`: returns the data of the stack
 
 ### Example use case
+
 - Using the back and forward buttons in your browser
 - dfs search algorithm for graphs search
 - balanced arithmetic operations
 - convert infix to postfix arithmetic operations
 - JS engine uses a stack data structure to execute the algorithms
-
 
 ### Resources
 

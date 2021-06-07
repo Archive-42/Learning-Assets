@@ -14,7 +14,7 @@ The best solution is an upcoming pseudo-selector `:focus-visible` which can be p
 
 ##### Additional links
 
-* [:focus-visible](https://css-tricks.com/focus-visible-and-backwards-compatibility/)
+- [:focus-visible](https://css-tricks.com/focus-visible-and-backwards-compatibility/)
 
 <!-- tags: (css) -->
 

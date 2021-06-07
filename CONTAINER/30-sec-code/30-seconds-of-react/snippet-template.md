@@ -10,15 +10,15 @@ Explain briefly what the snippet does.
 - Try to explain everything briefly but clearly.
 
 ```jsx
-const ComponentName = props => {
+const ComponentName = (props) => {
   const [state, setState] = React.useState(null);
   React.useEffect(() => {
     setState(0);
   });
   return <div>{props}</div>;
-}
+};
 ```
 
 ```jsx
-ReactDOM.render(<ComponentName />, document.getElementById('root'));
+ReactDOM.render(<ComponentName />, document.getElementById("root"));
 ```

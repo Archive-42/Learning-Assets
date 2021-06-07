@@ -13,7 +13,7 @@ const TAG_NAMES = {
   security: "Security",
   node: "Node",
   react: "React",
-  accessibility: "Accessibility"
+  accessibility: "Accessibility",
 }
 
 const attempt = (task, cb) => {
@@ -30,7 +30,7 @@ const readQuestions = () =>
   attempt("read questions", () =>
     fs
       .readdirSync(QUESTIONS_PATH)
-      .filter(f => !f.includes("eslint"))
+      .filter((f) => !f.includes("eslint"))
       .sort((a, b) => (a.toLowerCase() < b.toLowerCase() ? -1 : 1))
       .reduce((acc, name) => {
         acc[name] = fs
@@ -40,11 +40,11 @@ const readQuestions = () =>
       }, {})
   )
 
-const capitalize = ([ first, ...rest ], lowerRest = false) =>
+const capitalize = ([first, ...rest], lowerRest = false) =>
   first.toUpperCase() +
   (lowerRest ? rest.join("").toLowerCase() : rest.join(""))
 
-const getCodeBlocks = str => {
+const getCodeBlocks = (str) => {
   const regex = /```[.\S\s]*?```/g
   const results = []
   let m = null
@@ -52,7 +52,7 @@ const getCodeBlocks = str => {
     if (m.index === regex.lastIndex) {
       regex.lastIndex += 1
     }
-    m.forEach(match => results.push(match))
+    m.forEach((match) => results.push(match))
   }
   return results
 }
@@ -90,5 +90,5 @@ module.exports = {
   QUESTIONS_PATH,
   TAG_NAMES,
   getSection,
-  getFirstSection
+  getFirstSection,
 }

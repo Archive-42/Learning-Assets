@@ -2,15 +2,15 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   extends: ["airbnb-base", "prettier"],
   plugins: ["import", "react", "markdown"],
   parserOptions: {
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   rules: {
     "linebreak-style": "off",
@@ -26,17 +26,17 @@ module.exports = {
       "error",
       "always",
       {
-        singleValue: false
-      }
+        singleValue: false,
+      },
     ],
     "object-curly-spacing": [
       "error",
       "always",
       {
         arraysInObjects: false,
-        objectsInObjects: false
-      }
+        objectsInObjects: false,
+      },
     ],
-    "no-param-reassign": ["error", { props: false }]
-  }
+    "no-param-reassign": ["error", { props: false }],
+  },
 }

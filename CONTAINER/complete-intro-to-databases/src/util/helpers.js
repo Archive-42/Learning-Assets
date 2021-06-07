@@ -11,7 +11,7 @@ function splitSections(str) {
   return [numbersRegex.exec(str)[0], lettersRegex.exec(str)[0]];
 }
 
-const getCharScore = str =>
+const getCharScore = (str) =>
   str
     .split("")
     .map((char, index) => char.charCodeAt(0) * 10 ** index)

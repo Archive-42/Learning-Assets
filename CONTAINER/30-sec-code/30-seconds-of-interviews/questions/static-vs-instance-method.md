@@ -21,11 +21,11 @@ Array.push(arr, 4)
 
 #### Good to hear
 
-* How to create static and instance methods with ES2015 class syntax
+- How to create static and instance methods with ES2015 class syntax
 
 ##### Additional links
 
-* [Classes on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Classes on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
 <!-- tags: (javascript) -->
 

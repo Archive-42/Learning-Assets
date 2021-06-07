@@ -22,8 +22,9 @@ const ListingAnchors = ({ items = [] }) => {
     if (typeof document !== 'undefined') {
       // Wrap in try-catch to be able to test in Jest/Enzyme
       try {
-        const listItem = document.querySelector('.listing-anchors .selected')
-          .parentNode;
+        const listItem = document.querySelector(
+          '.listing-anchors .selected'
+        ).parentNode;
         const container = listItem.offsetParent;
         if (
           container.scrollLeft + container.clientWidth <

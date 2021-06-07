@@ -56,7 +56,7 @@ Creates a list with floating headings for each section.
 }
 
 .floating-stack {
-  background: #455A64;
+  background: #455a64;
   color: #fff;
   height: 80vh;
   width: 320px;

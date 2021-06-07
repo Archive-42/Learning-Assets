@@ -4,12 +4,8 @@
     "target": "es6",
     "moduleResolution": "node"
   },
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"],
   "typeAcquisition": {
-    "include": [
-      "jest"
-  ]
+    "include": ["jest"]
   }
 }

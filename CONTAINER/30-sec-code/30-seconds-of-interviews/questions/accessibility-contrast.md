@@ -6,14 +6,14 @@
 
 #### Good to hear
 
-* At least 4.5:1 contrast ratio between foreground text and background
-* Benefits people with low vision or color deficiencies
+- At least 4.5:1 contrast ratio between foreground text and background
+- Benefits people with low vision or color deficiencies
 
 ##### Additional links
 
-* [Understanding SC 1.4.3](https://www.alaskawebdev.com/contact)
-* [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
-* [Contrast Ratio checker](https://contrast-ratio.com/#)
+- [Understanding SC 1.4.3](https://www.alaskawebdev.com/contact)
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [Contrast Ratio checker](https://contrast-ratio.com/#)
 
 <!-- tags: (accessibility) -->
 

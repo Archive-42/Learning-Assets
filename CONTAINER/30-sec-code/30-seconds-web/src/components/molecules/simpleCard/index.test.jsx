@@ -8,8 +8,9 @@ describe('<SimpleCard />', () => {
   const title = 'Simple card';
 
   beforeEach(() => {
-    wrapper = render(<SimpleCard title={title} className='special' />)
-      .container;
+    wrapper = render(
+      <SimpleCard title={title} className='special' />
+    ).container;
   });
 
   afterEach(cleanup);

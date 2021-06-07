@@ -14,7 +14,7 @@ const LimitedTextarea = ({ rows, cols, value, limit }) => {
   const [content, setContent] = React.useState(value.slice(0, limit));
 
   const setFormattedContent = React.useCallback(
-    text => {
+    (text) => {
       setContent(text.slice(0, limit));
     },
     [limit, setContent]
@@ -25,7 +25,7 @@ const LimitedTextarea = ({ rows, cols, value, limit }) => {
       <textarea
         rows={rows}
         cols={cols}
-        onChange={event => setFormattedContent(event.target.value)}
+        onChange={(event) => setFormattedContent(event.target.value)}
         value={content}
       />
       <p>
@@ -39,6 +39,6 @@ const LimitedTextarea = ({ rows, cols, value, limit }) => {
 ```jsx
 ReactDOM.render(
   <LimitedTextarea limit={32} value="Hello!" />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

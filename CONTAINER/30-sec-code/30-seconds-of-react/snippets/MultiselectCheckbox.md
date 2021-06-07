@@ -13,14 +13,14 @@ Renders a checkbox list that uses a callback function to pass its selected value
 const MultiselectCheckbox = ({ options, onChange }) => {
   const [data, setData] = React.useState(options);
 
-  const toggle = index => {
+  const toggle = (index) => {
     const newData = [...data];
     newData.splice(index, 1, {
       label: data[index].label,
-      checked: !data[index].checked
+      checked: !data[index].checked,
     });
     setData(newData);
-    onChange(newData.filter(x => x.checked));
+    onChange(newData.filter((x) => x.checked));
   };
 
   return (
@@ -42,15 +42,15 @@ const MultiselectCheckbox = ({ options, onChange }) => {
 ```
 
 ```jsx
-const options = [{ label: 'Item One' }, { label: 'Item Two' }];
+const options = [{ label: "Item One" }, { label: "Item Two" }];
 
 ReactDOM.render(
   <MultiselectCheckbox
     options={options}
-    onChange={data => {
+    onChange={(data) => {
       console.log(data);
     }}
   />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

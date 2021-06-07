@@ -75,8 +75,9 @@ describe('<Shelf />', () => {
 
   describe('with empty list', () => {
     beforeEach(() => {
-      wrapper = render(<Shelf shelf={{ ...snippetShelf, shelfData: [] }} />)
-        .container;
+      wrapper = render(
+        <Shelf shelf={{ ...snippetShelf, shelfData: [] }} />
+      ).container;
     });
 
     it('should not render', () => {

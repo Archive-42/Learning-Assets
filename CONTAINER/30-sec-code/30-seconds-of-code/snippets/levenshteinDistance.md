@@ -34,5 +34,5 @@ const levenshteinDistance = (s, t) => {
 ```
 
 ```js
-levenshteinDistance('duck', 'dark'); // 2
+levenshteinDistance("duck", "dark"); // 2
 ```

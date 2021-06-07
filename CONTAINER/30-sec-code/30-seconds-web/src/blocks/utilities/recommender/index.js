@@ -27,13 +27,13 @@ export class Recommender {
     const isBlog = snippet.config.isBlog;
 
     // Determine relevant attributes for the snippet
-    const language = (isBlog
-      ? Tag.determineLanguage(snippet.tags.all).long
-      : snippet.config.language.long
+    const language = (
+      isBlog
+        ? Tag.determineLanguage(snippet.tags.all).long
+        : snippet.config.language.long
     ).toLowerCase();
-    const primaryTag = (isBlog
-      ? Tag.stripLanguage(snippet.tags.all)[0]
-      : snippet.tags.primary
+    const primaryTag = (
+      isBlog ? Tag.stripLanguage(snippet.tags.all)[0] : snippet.tags.primary
     ).toLowerCase();
     const searchTokens = snippet.searchTokens.split(' ');
 

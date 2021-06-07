@@ -1,4 +1,5 @@
-.btn, a.btn {
+.btn,
+a.btn {
   display: inline-block;
   padding: 0.625rem 0.875rem;
   margin-top: 0.75rem;
@@ -11,7 +12,8 @@
   transition: 0.3s ease all;
   box-shadow: var(--shd-el-02dp);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     box-shadow: var(--shd-el-04dp);
     animation: none;
     outline: none;
@@ -24,7 +26,7 @@
   &.active {
     animation-name: active;
     animation-duration: 0.5s;
-    animation-timing-function: cubic-bezier(.4,0,.2,1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition: background 0.25s ease;
 
     &:before {
@@ -39,15 +41,16 @@
   &.no-shd {
     box-shadow: none;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       box-shadow: none;
     }
   }
 
   // Utility for btn elements that display a link color on hover
   &.link-btn {
-
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: var(--clr-link);
     }
   }
@@ -59,26 +62,28 @@
     text-transform: uppercase;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
-    opacity: .87;
+    opacity: 0.87;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       opacity: 1;
     }
   }
 }
 
 @keyframes active {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   20% {
     transform: scale(1.15) rotate(3deg);
   }
   40% {
-    transform: scale(.94);
+    transform: scale(0.94);
   }
   60% {
-    transform: scale(.98) rotate(-3deg);
+    transform: scale(0.98) rotate(-3deg);
   }
   80% {
     transform: scale(1.08);
@@ -88,10 +93,12 @@
 }
 
 @keyframes active-before {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
   }
-  30%, 75% {
-    opacity: 1.0;
+  30%,
+  75% {
+    opacity: 1;
   }
 }

@@ -1,6 +1,7 @@
 # Graph Data Structure
 
 ### Code Examples
+
 - [Graph Data Structure](./graph.module.js)
 - [Graph Search Algorithms](./graph.search.js)
 - [Import Module](./index.js)
@@ -40,7 +41,6 @@ common operations you can perform on graphs:
 
 ![](https://i2.wp.com/codingsec.net/wp-content/uploads/2016/03/dfs-bfs-codingsec.gif)
 
-
 **Display**
 
 - `showGraph`: displays the complete graph
@@ -66,7 +66,7 @@ In addition to this, graphs can be weighted or unweighted. All this means is tha
 - Linguistics − The parsing tree of a language and grammar of a language uses graphs.
 
 - General − Routes between the cities can be represented using graphs. Depicting hierarchical ordered information such as family tree can be used as a special type of graph called tree.
-Graphs are used to model many different types of real-world systems.
+  Graphs are used to model many different types of real-world systems.
 
 Another example of a real word system that can be modeled by a graph is a consumer market, where vertices represent both institutions (vendors) and consumers.
 

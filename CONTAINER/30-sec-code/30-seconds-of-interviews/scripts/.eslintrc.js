@@ -1,6 +1,6 @@
 module.exports = {
-  "rules": {
+  rules: {
     "no-console": "off",
     "no-useless-escape": "off",
-  }
+  },
 }

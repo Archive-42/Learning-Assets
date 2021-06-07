@@ -2,7 +2,7 @@
 
 ```js
 var foo = 1
-var foobar = function() {
+var foobar = function () {
   console.log(foo)
   var foo = 2
 }
@@ -15,12 +15,12 @@ Due to hoisting, the local variable `foo` is declared before the `console.log` m
 
 #### Good to hear
 
-* Hoisting is JavaScript’s default behavior of moving declarations to the top
-* Mention of `strict` mode
+- Hoisting is JavaScript’s default behavior of moving declarations to the top
+- Mention of `strict` mode
 
 ##### Additional links
 
-* [MDN docs for hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
+- [MDN docs for hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 
 <!-- tags: (javascript) -->
 

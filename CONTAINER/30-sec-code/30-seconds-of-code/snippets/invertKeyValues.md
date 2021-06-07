@@ -3,7 +3,7 @@ title: invertKeyValues
 tags: object,advanced
 ---
 
-Inverts the key-value pairs of an object, without mutating it. 
+Inverts the key-value pairs of an object, without mutating it.
 
 - Use `Object.keys()` and `Array.prototype.reduce()` to invert the key-value pairs of an object and apply the function provided (if any).
 - Omit the second argument, `fn`, to get the inverted keys without applying a function to them.
@@ -21,6 +21,6 @@ const invertKeyValues = (obj, fn) =>
 
 ```js
 invertKeyValues({ a: 1, b: 2, c: 1 }); // { 1: [ 'a', 'c' ], 2: [ 'b' ] }
-invertKeyValues({ a: 1, b: 2, c: 1 }, value => 'group' + value);
+invertKeyValues({ a: 1, b: 2, c: 1 }, (value) => "group" + value);
 // { group1: [ 'a', 'c' ], group2: [ 'b' ] }
 ```

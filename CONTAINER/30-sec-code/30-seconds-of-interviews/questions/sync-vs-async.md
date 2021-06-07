@@ -10,8 +10,8 @@ In JavaScript, all code is synchronous due to the single-threaded nature of it. 
 
 #### Good to hear
 
-* JavaScript has a concurrency model based on an "event loop".
-* Functions like `alert` block the main thread so that no user input is registered until the user closes it.
+- JavaScript has a concurrency model based on an "event loop".
+- Functions like `alert` block the main thread so that no user input is registered until the user closes it.
 
 ##### Additional links
 

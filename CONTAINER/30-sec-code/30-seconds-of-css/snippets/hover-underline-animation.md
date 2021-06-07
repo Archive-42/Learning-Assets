@@ -23,7 +23,7 @@ Creates an animated underline effect when the text is hovered over.
 }
 
 .hover-underline-animation:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);

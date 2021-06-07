@@ -38,15 +38,15 @@ Renders a tabbed menu and view component.
 ```
 
 ```jsx
-const TabItem = props => <div {...props} />;
+const TabItem = (props) => <div {...props} />;
 
 const Tabs = ({ defaultIndex = 0, onTabClick, children }) => {
   const [bindIndex, setBindIndex] = React.useState(defaultIndex);
-  const changeTab = newIndex => {
-    if (typeof onItemClick === 'function') onItemClick(itemIndex);
+  const changeTab = (newIndex) => {
+    if (typeof onItemClick === "function") onItemClick(itemIndex);
     setBindIndex(newIndex);
   };
-  const items = children.filter(item => item.type.name === 'TabItem');
+  const items = children.filter((item) => item.type.name === "TabItem");
 
   return (
     <div className="wrapper">
@@ -55,7 +55,7 @@ const Tabs = ({ defaultIndex = 0, onTabClick, children }) => {
           <button
             key={`tab-btn-${index}`}
             onClick={() => changeTab(index)}
-            className={bindIndex === index ? 'focus' : ''}
+            className={bindIndex === index ? "focus" : ""}
           >
             {label}
           </button>
@@ -66,7 +66,7 @@ const Tabs = ({ defaultIndex = 0, onTabClick, children }) => {
           <div
             {...props}
             className={`tab-content ${
-              bindIndex === props.index ? 'selected' : ''
+              bindIndex === props.index ? "selected" : ""
             }`}
             key={`tab-content-${props.index}`}
           />
@@ -87,6 +87,6 @@ ReactDOM.render(
       Dolor sit amet
     </TabItem>
   </Tabs>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

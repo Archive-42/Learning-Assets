@@ -15,15 +15,15 @@ Properties set as `this` do not refer to the object.
 ```js
 var myObject = {
   property: this,
-  regularFunction: function() {
+  regularFunction: function () {
     return this
   },
   arrowFunction: () => {
     return this
   },
-  iife: (function() {
+  iife: (function () {
     return this
-  })()
+  })(),
 }
 myObject.regularFunction() // myObject
 myObject["regularFunction"]() // my Object
@@ -40,7 +40,7 @@ regularFunction() // NOT myObject; lexical `this`
 `this` refers to the element listening to the event.
 
 ```js
-document.body.addEventListener("click", function() {
+document.body.addEventListener("click", function () {
   console.log(this) // document.body
 })
 ```
@@ -63,7 +63,7 @@ const myExample = new Example()
 With `call()` and `apply()`, `this` refers to the object passed as the first argument.
 
 ```js
-var myFunction = function() {
+var myFunction = function () {
   return this
 }
 myFunction.call({ customThis: true }) // { customThis: true }
@@ -77,28 +77,28 @@ Because `this` can change depending on the scope, it can have unexpected values 
 var obj = {
   arr: [1, 2, 3],
   doubleArr() {
-    return this.arr.map(function(value) {
+    return this.arr.map(function (value) {
       // this is now this.arr
       return this.double(value)
     })
   },
   double() {
     return value * 2
-  }
+  },
 }
 obj.doubleArr() // Uncaught TypeError: this.double is not a function
 ```
 
 #### Good to hear
 
-* In non-strict mode, global `this` is the global object (`window` in browsers), while in strict mode global `this` is `undefined`.
-* `Function.prototype.call` and `Function.prototype.apply` set the `this` context of an executing function as the first argument, with `call` accepting a variadic number of arguments thereafter, and `apply` accepting an array as the second argument which are fed to the function in a variadic manner.
-* `Function.prototype.bind` returns a new function that enforces the `this` context as the first argument which cannot be changed by other functions.
-* If a function requires its `this` context to be changed based on how it is called, you must use the `function` keyword. Use arrow functions when you want `this` to be the surrounding (lexical) context.
+- In non-strict mode, global `this` is the global object (`window` in browsers), while in strict mode global `this` is `undefined`.
+- `Function.prototype.call` and `Function.prototype.apply` set the `this` context of an executing function as the first argument, with `call` accepting a variadic number of arguments thereafter, and `apply` accepting an array as the second argument which are fed to the function in a variadic manner.
+- `Function.prototype.bind` returns a new function that enforces the `this` context as the first argument which cannot be changed by other functions.
+- If a function requires its `this` context to be changed based on how it is called, you must use the `function` keyword. Use arrow functions when you want `this` to be the surrounding (lexical) context.
 
 ##### Additional links
 
-* [`this` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [`this` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
 <!-- tags: (javascript) -->
 

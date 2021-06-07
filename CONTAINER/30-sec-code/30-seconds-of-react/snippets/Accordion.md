@@ -36,7 +36,7 @@ const AccordionItem = ({ label, isCollapsed, handleClick, children }) => {
         {label}
       </button>
       <div
-        className={`accordion-item ${isCollapsed ? 'collapsed' : 'expanded'}`}
+        className={`accordion-item ${isCollapsed ? "collapsed" : "expanded"}`}
         aria-expanded={isCollapsed}
       >
         {children}
@@ -48,11 +48,11 @@ const AccordionItem = ({ label, isCollapsed, handleClick, children }) => {
 const Accordion = ({ defaultIndex, onItemClick, children }) => {
   const [bindIndex, setBindIndex] = React.useState(defaultIndex);
 
-  const changeItem = itemIndex => {
-    if (typeof onItemClick === 'function') onItemClick(itemIndex);
+  const changeItem = (itemIndex) => {
+    if (typeof onItemClick === "function") onItemClick(itemIndex);
     if (itemIndex !== bindIndex) setBindIndex(itemIndex);
   };
-  const items = children.filter(item => item.type.name === 'AccordionItem');
+  const items = children.filter((item) => item.type.name === "AccordionItem");
 
   return (
     <>
@@ -79,6 +79,6 @@ ReactDOM.render(
       Dolor sit amet
     </AccordionItem>
   </Accordion>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

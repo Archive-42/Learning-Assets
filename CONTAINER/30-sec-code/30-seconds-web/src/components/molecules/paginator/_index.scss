@@ -2,7 +2,8 @@
   margin: 1.75rem 1.25rem 1.5rem;
   align-items: baseline;
 
-  .btn, a.btn {
+  .btn,
+  a.btn {
     margin: 0.25rem 0;
     padding: 0.625rem 0;
     box-sizing: border-box;
@@ -18,7 +19,8 @@
       color: var(--clr-txt-200);
     }
 
-    &.previous-page, &.next-page {
+    &.previous-page,
+    &.next-page {
       color: var(--clr-link);
       position: relative;
       margin: 0.625rem 1rem;
@@ -35,7 +37,8 @@
         }
       }
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         transform: scale(1.05);
         transform-origin: center;
       }

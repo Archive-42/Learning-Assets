@@ -17,5 +17,5 @@ const dropWhile = (arr, func) => {
 ```
 
 ```js
-dropWhile([1, 2, 3, 4], n => n >= 3); // [3, 4]
+dropWhile([1, 2, 3, 4], (n) => n >= 3); // [3, 4]
 ```

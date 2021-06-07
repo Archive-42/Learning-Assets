@@ -76,7 +76,7 @@ const RippleButton = ({ children, onClick }) => {
   return (
     <button
       className="ripple-button"
-      onClick={e => {
+      onClick={(e) => {
         const rect = e.target.getBoundingClientRect();
         setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
         onClick && onClick(e);
@@ -87,11 +87,11 @@ const RippleButton = ({ children, onClick }) => {
           className="ripple"
           style={{
             left: coords.x,
-            top: coords.y
+            top: coords.y,
           }}
         />
       ) : (
-        ''
+        ""
       )}
       <span className="content">{children}</span>
     </button>
@@ -101,7 +101,7 @@ const RippleButton = ({ children, onClick }) => {
 
 ```jsx
 ReactDOM.render(
-  <RippleButton onClick={e => console.log(e)}>Click me</RippleButton>,
-  document.getElementById('root')
+  <RippleButton onClick={(e) => console.log(e)}>Click me</RippleButton>,
+  document.getElementById("root")
 );
 ```

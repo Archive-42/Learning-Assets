@@ -14,8 +14,8 @@ Depending on where you live/work, there may be regulations requiring websites to
 
 ##### Additional links
 
-* [Web Content Accessibility Guidelines (WCAG) Overview](https://www.w3.org/WAI/standards-guidelines/wcag/)
-* [How to Meet WCAG](https://www.w3.org/WAI/WCAG21/quickref/)
+- [Web Content Accessibility Guidelines (WCAG) Overview](https://www.w3.org/WAI/standards-guidelines/wcag/)
+- [How to Meet WCAG](https://www.w3.org/WAI/WCAG21/quickref/)
 
 <!-- tags: (accessibility) -->
 

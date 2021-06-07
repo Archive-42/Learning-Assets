@@ -1,17 +1,17 @@
-require('dotenv').config();
-const cors = require('cors');
-const express = require('express');
+require("dotenv").config();
+const cors = require("cors");
+const express = require("express");
 const app = express();
 
 app.use(cors({ optionsSuccessStatus: 200 }));
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-app.route('/').get((req, res) => {
+app.route("/").get((req, res) => {
   res.sendFile(`${process.cwd()}/views/index.html`);
 });
 
-app.route(['/api/timestamp/:date?', '/api/:date?']).get((req, res) => {
+app.route(["/api/timestamp/:date?", "/api/:date?"]).get((req, res) => {
   let date = null;
   // parse the date string
   if (req.params.date !== undefined) {
@@ -33,8 +33,8 @@ app.route(['/api/timestamp/:date?', '/api/:date?']).get((req, res) => {
   // Initialize the response object, if Date is invalid
   // this one will be returned
   const response =
-    date == 'Invalid Date'
-      ? { error: 'Invalid Date' }
+    date == "Invalid Date"
+      ? { error: "Invalid Date" }
       : { unix: date.getTime(), utc: date.toUTCString() };
 
   res.json(response);
@@ -42,7 +42,7 @@ app.route(['/api/timestamp/:date?', '/api/:date?']).get((req, res) => {
 
 // 404 Not Found Middleware
 app.use((req, res, next) => {
-  res.status(404).type('text').send('Not Found');
+  res.status(404).type("text").send("Not Found");
 });
 
 const portNum = process.env.PORT || 3000;

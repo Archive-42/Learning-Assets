@@ -4,10 +4,12 @@ import fs from 'fs-extra';
 import { sample } from 'utils';
 import { Logger } from 'blocks/utilities/logger';
 
-const promisify = func => (...args) =>
-  new Promise((resolve, reject) =>
-    func(...args, (err, result) => (err ? reject(err) : resolve(result)))
-  );
+const promisify =
+  func =>
+  (...args) =>
+    new Promise((resolve, reject) =>
+      func(...args, (err, result) => (err ? reject(err) : resolve(result)))
+    );
 
 /* eslint-disable camelcase */
 export class TwitterBot {

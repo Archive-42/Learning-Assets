@@ -1,7 +1,7 @@
-```
+````
 node ab |07:05:52|bryan@LAPTOP-9LGJ3JGS:[callbacks] callbacks_exitstatus:0__________________________________________________________o>
 
-node absurd_bubble_sort.js 
+node absurd_bubble_sort.js
 Is 3 > 2? (yes/no) y
 Is 2 > 1? (yes/no) u
 Sorted array: [3,2,1]
@@ -68,7 +68,7 @@ Give me a number!2345
 Total Sum: 57110
 ```node ab |07:05:52|bryan@LAPTOP-9LGJ3JGS:[callbacks] callbacks_exitstatus:0__________________________________________________________o>
 
-node absurd_bubble_sort.js 
+node absurd_bubble_sort.js
 Is 3 > 2? (yes/no) y
 Is 2 > 1? (yes/no) u
 Sorted array: [3,2,1]
@@ -133,4 +133,4 @@ Give me a number!54645
 Give me a number!2345
 57110
 Total Sum: 57110
-```
+````

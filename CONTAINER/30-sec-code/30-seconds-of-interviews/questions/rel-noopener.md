@@ -6,15 +6,15 @@ The `rel="noopener"` is an attribute used in `<a>` elements (hyperlinks). It pre
 
 #### Good to hear
 
-* `rel="noopener"` is applied to hyperlinks.
-* `rel="noopener"` prevents opened links from manipulating the source page.
+- `rel="noopener"` is applied to hyperlinks.
+- `rel="noopener"` prevents opened links from manipulating the source page.
 
 ##### Additional links
 
 <!-- Whenever possible, link a more detailed explanation. -->
 
-* [Open external anchors using rel="noopener"](https://developers.google.com/web/tools/lighthouse/audits/noopener)
-* [About rel="noopener"](https://mathiasbynens.github.io/rel-noopener/)
+- [Open external anchors using rel="noopener"](https://developers.google.com/web/tools/lighthouse/audits/noopener)
+- [About rel="noopener"](https://mathiasbynens.github.io/rel-noopener/)
 
 <!-- tags: (html) -->
 

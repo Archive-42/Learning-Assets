@@ -38,7 +38,6 @@ Some applications are:
 
 breaking up the text into words using the split() function, which uses the space between each word as the delimiter. This code is not perfect because punctuation is left in the file and is stored with the nearest word, but it will suffice for our purposes. Once the textual data is stored in an array, we can begin searching through the array to find words, using Sequential or Binary Search.
 
-
 **Binary Search Tree Searches**
 
 There are three types of searches typically performed with a BST:
@@ -70,7 +69,6 @@ Applications:
 - Used by search engines for web-crawling
 - Used in artificial intelligence to build bots, for instance a chess bot
 - Finding shortest path between two cities in a map and many other such applications
-
 
 #### Resources
 

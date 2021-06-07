@@ -12,7 +12,7 @@ const person = {
   age: 50,
   birthday() {
     this.age++
-  }
+  },
 }
 person.birthday() // person.age === 51
 ```
@@ -26,7 +26,7 @@ function Person(name, age) {
   this.name = name
   this.age = age
 }
-Person.prototype.birthday = function() {
+Person.prototype.birthday = function () {
   this.age++
 }
 const person1 = new Person("John", 50)
@@ -57,7 +57,7 @@ Sets the prototype of the newly created object.
 const personProto = {
   birthday() {
     this.age++
-  }
+  },
 }
 const person = Object.create(personProto)
 person.age = 50
@@ -71,15 +71,15 @@ Object.create(personProto, {
   age: {
     value: 50,
     writable: true,
-    enumerable: true
-  }
+    enumerable: true,
+  },
 })
 ```
 
 #### Good to hear
 
-* Prototypes are objects that other objects inherit properties and methods from.
-* Factory functions offer private properties and methods through a closure but increase memory usage as a tradeoff, while classes do not have private properties or methods but reduce memory impact by reusing a single prototype object.
+- Prototypes are objects that other objects inherit properties and methods from.
+- Factory functions offer private properties and methods through a closure but increase memory usage as a tradeoff, while classes do not have private properties or methods but reduce memory impact by reusing a single prototype object.
 
 ##### Additional links
 

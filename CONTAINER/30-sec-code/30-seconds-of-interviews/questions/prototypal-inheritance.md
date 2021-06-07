@@ -10,7 +10,7 @@ In the prototypal inheritance paradigm, object instances inherit directly from o
 
 ##### Additional links
 
-* [MDN docs for inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [MDN docs for inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 <!-- tags: (javascript) -->
 

@@ -12,11 +12,11 @@ To utilize a spritesheet in CSS, one would use certain properties, such as `back
 
 #### Good to hear
 
-* `background-image`, `background-position` and `background-size` can be used to utilize a spritesheet.
+- `background-image`, `background-position` and `background-size` can be used to utilize a spritesheet.
 
 ##### Additional links
 
-* [CSS Sprites explained by CSS Tricks](https://css-tricks.com/css-sprites/)
+- [CSS Sprites explained by CSS Tricks](https://css-tricks.com/css-sprites/)
 
 <!-- tags: (css) -->
 

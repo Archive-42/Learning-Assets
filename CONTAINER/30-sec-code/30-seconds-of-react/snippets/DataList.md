@@ -16,10 +16,10 @@ const DataList = ({ isOrdered = false, data }) => {
 ```
 
 ```jsx
-const names = ['John', 'Paul', 'Mary'];
-ReactDOM.render(<DataList data={names} />, document.getElementById('root'));
+const names = ["John", "Paul", "Mary"];
+ReactDOM.render(<DataList data={names} />, document.getElementById("root"));
 ReactDOM.render(
   <DataList data={names} isOrdered />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

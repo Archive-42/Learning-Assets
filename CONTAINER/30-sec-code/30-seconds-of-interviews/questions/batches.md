@@ -43,7 +43,7 @@ Use the spread `...` operator to feed the array of all the ingredient ratios int
 ```js
 const batches = (recipe, available) =>
   Math.floor(
-    Math.min(...Object.keys(recipe).map(k => available[k] / recipe[k] || 0))
+    Math.min(...Object.keys(recipe).map((k) => available[k] / recipe[k] || 0))
   )
 ```
 

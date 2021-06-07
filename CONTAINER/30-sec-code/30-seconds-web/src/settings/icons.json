@@ -7,9 +7,6 @@
   "cssSelector": ".icon",
   "cssClassName": "icon",
   "cssClassPrefix": "icon-",
-  "cssLanguageSelectors": [
-    ".card-icon",
-    ".btn"
-  ],
+  "cssLanguageSelectors": [".card-icon", ".btn"],
   "cssLanguageChipSelector": ".collection-chip"
 }

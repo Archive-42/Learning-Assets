@@ -11,7 +11,7 @@ Checks if the user color scheme preference is `dark`.
 const prefersDarkColorScheme = () =>
   window &&
   window.matchMedia &&
-  window.matchMedia('(prefers-color-scheme: dark)').matches;
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
 ```
 
 ```js

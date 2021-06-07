@@ -4,9 +4,7 @@
   "editor.detectIndentation": false,
   "eslint.autoFixOnSave": true,
   "git.detectSubmodules": false,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "files.insertFinalNewline": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
@@ -15,11 +13,11 @@
   "files.trimTrailingWhitespace": true,
   "[javascript]": {
     "editor.formatOnSaveMode": "file",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
     "editor.formatOnSaveMode": "file",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.labelFormat": "short"
 }

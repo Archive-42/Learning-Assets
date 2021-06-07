@@ -11,8 +11,9 @@ describe('<SnippetCard />', () => {
   let wrapper, card, tagList, codeBlocks;
 
   beforeEach(() => {
-    wrapper = renderWithContext(<SnippetCard snippet={fullSnippet} />)
-      .container;
+    wrapper = renderWithContext(
+      <SnippetCard snippet={fullSnippet} />
+    ).container;
     card = wrapper.querySelector('.card');
     tagList = wrapper.querySelector('.card-subtitle');
     codeBlocks = wrapper.querySelectorAll('pre');
@@ -107,8 +108,9 @@ describe('<SnippetCard />', () => {
 
   describe('with additional languages', () => {
     beforeEach(() => {
-      wrapper = renderWithContext(<SnippetCard snippet={fullReactSnippet} />)
-        .container;
+      wrapper = renderWithContext(
+        <SnippetCard snippet={fullReactSnippet} />
+      ).container;
     });
 
     it('should render a CodepenButton', () => {

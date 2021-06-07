@@ -12,10 +12,11 @@ The simplest form of linked lists — a singly linked list — is a seri
 common operations you can perform on linked list:
 
 **Additions**
+
 - `add`: grow the list by adding items to the end of the list.
-**Removals**
+  **Removals**
 - `remove`: will always remove from a given position in the list.
-**Search**
+  **Search**
 - `contains`: will search the list for a value.
 
 ### Definition Double Linked List
@@ -33,12 +34,13 @@ LinkedList − A Linked List contains the connection link to the first link call
 common operations you can perform on linked list:
 
 **Additions**
+
 - `add`: grow the list by adding items to the end of the list.
-**Removals**
+  **Removals**
 - `remove`: will always remove from a given position in the list.
-**Search**
+  **Search**
 - `contains`: will search the list for a value.
-**Display**
+  **Display**
 - `display`: displays the complete list in a forward manner.
 
 ### Definition Circular Linked List
@@ -56,15 +58,17 @@ In doubly linked list, the next pointer of the last node points to the first nod
 common operations you can perform on linked list:
 
 **Additions**
+
 - `add`: grow the list by adding items to the end of the list.
-**Removals**
+  **Removals**
 - `remove`: will always remove from a given position in the list.
-**Search**
+  **Search**
 - `contains`: will search the list for a value.
-**Display**
+  **Display**
 - `display`: displays the complete list in a forward manner.
 
 ### Example use cases
+
 - Storing values in a hash table to prevent collisions
 
 ### Resources

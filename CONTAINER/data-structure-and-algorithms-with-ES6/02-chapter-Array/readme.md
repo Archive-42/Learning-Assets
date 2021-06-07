@@ -1,6 +1,7 @@
 # Array data structure
 
 ### Examples
+
 - [Array exercises and examples codes in ES6](./02-chapter-Arrays.js)
 
 ### Definition
@@ -12,6 +13,7 @@ Arrays in JavaScript are very flexible. There are several different ways to crea
 ```
 const myArray = [1, 'one', {some: 'object'}, new Date()]
 ```
+
 ![](https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif)
 
 ### Usage of arrays
@@ -30,7 +32,9 @@ const b = [4,5,6];
 const c = a.concat(b); // this creates a new array by concatenating the 2 arrays.
 
 ```
-or using strings to create an array, by using the ***split*** method and space ' ' delimiter will create a new array containg the words of the text.
+
+or using strings to create an array, by using the **_split_** method and space ' ' delimiter will create a new array containg the words of the text.
+
 ```
 const words = someStringText.split(' ');
 ```
@@ -50,6 +54,7 @@ grades.shift(grade);
 //use of the splice() method will insert a new element at the position indicated.
 grades.splice(position, 0, grade);
 ```
+
 The splice() method, has the ability to insert or to remove an element, the first parameter of the method indicates the position, the second parameter indicates the type of operation 0 = insert, 1 = delete, and the third parameter is the new value to insert.
 
 **Deleting elements to an array**

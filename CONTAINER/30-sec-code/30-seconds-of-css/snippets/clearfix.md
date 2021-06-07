@@ -20,7 +20,7 @@ Ensures that an element self-clears its children.
 
 ```css
 .clearfix:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }

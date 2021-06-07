@@ -13,7 +13,10 @@ boundExample.call({ b: true }) // logs { a: true }
 Return a function that accepts an arbitrary number of arguments by gathering them with the rest `...` operator. From that function, return the result of calling the `fn` with `Function.prototype.apply` to apply the context and the array of arguments to the function.
 
 ```js
-const bind = (fn, context) => (...args) => fn.apply(context, args)
+const bind =
+  (fn, context) =>
+  (...args) =>
+    fn.apply(context, args)
 ```
 
 #### Good to hear

@@ -18,6 +18,6 @@ const Callto = ({ phone, children }) => {
 ```jsx
 ReactDOM.render(
   <Callto phone="+302101234567">Call me!</Callto>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

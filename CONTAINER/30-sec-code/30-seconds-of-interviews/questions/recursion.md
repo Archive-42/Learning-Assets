@@ -9,8 +9,8 @@ For example, you may have a thread of comments returned from a database that exi
 ```js
 const nest = (items, id = null, link = "parent_id") =>
   items
-    .filter(item => item[link] === id)
-    .map(item => ({ ...item, children: nest(items, item.id) }))
+    .filter((item) => item[link] === id)
+    .map((item) => ({ ...item, children: nest(items, item.id) }))
 
 const comments = [
   { id: 1, parent_id: null, text: "First reply to post." },
@@ -18,7 +18,7 @@ const comments = [
   { id: 3, parent_id: 1, text: "Second reply to comment #1." },
   { id: 4, parent_id: 3, text: "First reply to comment #3." },
   { id: 5, parent_id: 4, text: "First reply to comment #4." },
-  { id: 6, parent_id: null, text: "Second reply to post." }
+  { id: 6, parent_id: null, text: "Second reply to post." },
 ]
 
 nest(comments)
@@ -34,14 +34,14 @@ In the above example, the base condition is met if `filter()` returns an empty a
 
 #### Good to hear
 
-* Recursion is useful when working with data structures containing an unknown number of nested structures.
-* Recursion must have a base condition to be met that breaks out of the loop or it will call itself indefinitely.
+- Recursion is useful when working with data structures containing an unknown number of nested structures.
+- Recursion must have a base condition to be met that breaks out of the loop or it will call itself indefinitely.
 
 ##### Additional links
 
 <!-- Whenever possible, link a more detailed explanation. -->
 
-* [In plain English, what is recursion?](https://softwareengineering.stackexchange.com/questions/25052/in-plain-english-what-is-recursion)
+- [In plain English, what is recursion?](https://softwareengineering.stackexchange.com/questions/25052/in-plain-english-what-is-recursion)
 
 <!-- tags: (javascript) -->
 

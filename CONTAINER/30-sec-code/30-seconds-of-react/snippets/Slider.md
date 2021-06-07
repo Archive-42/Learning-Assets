@@ -10,7 +10,7 @@ Renders an uncontrolled range input element that uses a callback function to pas
 - Use the `onChange` event to fire the `onValueChange` callback and send the new value to the parent.
 
 ```jsx
-const Slider = ({ 
+const Slider = ({
   min = 0,
   max = 100,
   defaultValue,
@@ -32,7 +32,7 @@ const Slider = ({
 
 ```jsx
 ReactDOM.render(
-  <Slider onValueChange={val => console.log(val)} />,
-  document.getElementById('root')
+  <Slider onValueChange={(val) => console.log(val)} />,
+  document.getElementById("root")
 );
 ```

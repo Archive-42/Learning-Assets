@@ -8,8 +8,9 @@ describe('<RecommendationList />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = render(<RecommendationList snippetList={snippetList} />)
-      .container;
+    wrapper = render(
+      <RecommendationList snippetList={snippetList} />
+    ).container;
   });
 
   afterEach(cleanup);

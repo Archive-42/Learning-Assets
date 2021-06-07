@@ -26,7 +26,7 @@ const kMeans = (data, k = 1) => {
     for (let d in data) {
       for (let c = 0; c < k; c++) {
         distances[d][c] = Math.hypot(
-          ...Object.keys(data[0]).map(key => data[d][key] - centroids[c][key])
+          ...Object.keys(data[0]).map((key) => data[d][key] - centroids[c][key])
         );
       }
       const m = distances[d].indexOf(Math.min(...distances[d]));
@@ -54,5 +54,13 @@ const kMeans = (data, k = 1) => {
 ```
 
 ```js
-kMeans([[0, 0], [0, 1], [1, 3], [2, 0]], 2); // [0, 1, 1, 0]
+kMeans(
+  [
+    [0, 0],
+    [0, 1],
+    [1, 3],
+    [2, 0],
+  ],
+  2
+); // [0, 1, 1, 0]
 ```

@@ -44,7 +44,7 @@ const Tooltip = ({ children, text, ...rest }) => {
 
   return (
     <div className="tooltip-container">
-      <div className={show ? 'tooltip-box visible' : 'tooltip-box'}>
+      <div className={show ? "tooltip-box visible" : "tooltip-box"}>
         {text}
         <span className="tooltip-arrow" />
       </div>
@@ -65,6 +65,6 @@ ReactDOM.render(
   <Tooltip text="Simple tooltip">
     <button>Hover me!</button>
   </Tooltip>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

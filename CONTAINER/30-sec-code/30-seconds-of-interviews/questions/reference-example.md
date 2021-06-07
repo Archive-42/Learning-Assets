@@ -15,13 +15,13 @@ The first `console.log` outputs `true` because JavaScript's compiler performs ty
 
 #### Good to hear
 
-* JavaScript performs automatic type conversion
-* Objects are compared by reference
-* Primitives are compared by value
+- JavaScript performs automatic type conversion
+- Objects are compared by reference
+- Primitives are compared by value
 
 ##### Additional links
 
-* [JavaScript Value vs Reference](https://medium.com/dailyjs/back-to-roots-javascript-value-vs-reference-8fb69d587a18)
+- [JavaScript Value vs Reference](https://medium.com/dailyjs/back-to-roots-javascript-value-vs-reference-8fb69d587a18)
 
 <!-- tags: (javascript) -->
 

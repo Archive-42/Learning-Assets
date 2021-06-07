@@ -11,7 +11,14 @@ Limit multiline text to a given number of lines.
 
 ```html
 <p class="excerpt">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod enim eget ultricies sollicitudin. Nunc aliquam arcu arcu, non suscipit metus luctus id. Aliquam sodales turpis ipsum, in vehicula dui tempor sit amet. Nullam quis urna erat. Pellentesque mattis dolor purus. Aliquam nisl urna, tempor a euismod a, placerat in mauris. Phasellus neque quam, dapibus quis nunc at, feugiat suscipit tortor. Duis vel posuere dolor. Phasellus risus erat, lobortis et mi vel, viverra faucibus lectus. Etiam ut posuere sapien. Nulla ultrices dui turpis, interdum consectetur urna tempus at.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod enim
+  eget ultricies sollicitudin. Nunc aliquam arcu arcu, non suscipit metus luctus
+  id. Aliquam sodales turpis ipsum, in vehicula dui tempor sit amet. Nullam quis
+  urna erat. Pellentesque mattis dolor purus. Aliquam nisl urna, tempor a
+  euismod a, placerat in mauris. Phasellus neque quam, dapibus quis nunc at,
+  feugiat suscipit tortor. Duis vel posuere dolor. Phasellus risus erat,
+  lobortis et mi vel, viverra faucibus lectus. Etiam ut posuere sapien. Nulla
+  ultrices dui turpis, interdum consectetur urna tempus at.
 </p>
 ```
 

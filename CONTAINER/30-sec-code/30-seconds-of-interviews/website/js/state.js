@@ -11,33 +11,33 @@ export default {
       items: [
         {
           name: "All",
-          icon: "check"
+          icon: "check",
         },
         {
           name: "HTML",
-          icon: "layout"
+          icon: "layout",
         },
         {
           name: "CSS",
-          icon: "feather"
+          icon: "feather",
         },
         {
           name: "JavaScript",
-          icon: "code"
+          icon: "code",
         },
         {
           name: "React",
-          icon: "globe"
+          icon: "globe",
         },
         {
           name: "Node",
-          icon: "server"
+          icon: "server",
         },
         {
           name: "Security",
-          icon: "shield"
-        }
-      ]
-    }
-  }
+          icon: "shield",
+        },
+      ],
+    },
+  },
 }

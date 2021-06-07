@@ -6,12 +6,12 @@
 
 #### Good to hear
 
-* The difference between `isNaN()` and `Number.isNaN()`
-* `const isNaN = x => x !== x`
+- The difference between `isNaN()` and `Number.isNaN()`
+- `const isNaN = x => x !== x`
 
 ##### Additional links
 
-* [MDN docs for `NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
+- [MDN docs for `NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)
 
 <!-- tags: (javascript) -->
 

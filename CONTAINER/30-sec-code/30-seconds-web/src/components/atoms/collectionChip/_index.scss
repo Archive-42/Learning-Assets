@@ -8,7 +8,9 @@
     min-height: 64px;
     text-align: center;
 
-    &, &:link, &:visited {
+    &,
+    &:link,
+    &:visited {
       color: var(--clr-txt-200);
     }
 

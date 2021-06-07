@@ -10,8 +10,9 @@ Checks if the two iterables are disjointed (have no common values).
 
 ```js
 const isDisjoint = (a, b) => {
-  const sA = new Set(a), sB = new Set(b);
-  return [...sA].every(v => !sB.has(v));
+  const sA = new Set(a),
+    sB = new Set(b);
+  return [...sA].every((v) => !sB.has(v));
 };
 ```
 

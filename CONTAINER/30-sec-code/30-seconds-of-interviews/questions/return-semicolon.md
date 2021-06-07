@@ -15,11 +15,11 @@ Because of JavaScript's automatic semicolon insertion (ASI), the compiler places
 
 #### Good to hear
 
-* Automatic semicolon placement can lead to time-consuming bugs
+- Automatic semicolon placement can lead to time-consuming bugs
 
 ##### Additional links
 
-* [Automatic semicolon insertion in JavaScript](http://2ality.com/2011/05/semicolon-insertion.html)
+- [Automatic semicolon insertion in JavaScript](http://2ality.com/2011/05/semicolon-insertion.html)
 
 <!-- tags: (javascript) -->
 

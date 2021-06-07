@@ -13,8 +13,8 @@ myFunction("argument1", "argument2")
 
 #### Good to hear
 
-* `arguments` is an array-like object containing information about the arguments supplied to an invoked function.
-* `myFunction.length` describes the arity of a function (how many parameters it has, regardless of how many arguments it is supplied).
+- `arguments` is an array-like object containing information about the arguments supplied to an invoked function.
+- `myFunction.length` describes the arity of a function (how many parameters it has, regardless of how many arguments it is supplied).
 
 ##### Additional links
 

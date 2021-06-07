@@ -35,10 +35,10 @@ const Collapse = ({ collapsed, children }) => {
         className="collapse-button"
         onClick={() => setIsCollapsed(!isCollapsed)}
       >
-        {isCollapsed ? 'Show' : 'Hide'} content
+        {isCollapsed ? "Show" : "Hide"} content
       </button>
       <div
-        className={`collapse-content ${isCollapsed ? 'collapsed' : 'expanded'}`}
+        className={`collapse-content ${isCollapsed ? "collapsed" : "expanded"}`}
         aria-expanded={isCollapsed}
       >
         {children}
@@ -54,6 +54,6 @@ ReactDOM.render(
     <h1>This is a collapse</h1>
     <p>Hello world!</p>
   </Collapse>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

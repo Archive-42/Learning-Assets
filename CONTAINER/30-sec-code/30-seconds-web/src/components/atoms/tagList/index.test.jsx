@@ -5,8 +5,9 @@ describe('<TagList />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = render(<TagList tags={['array', 'adapter', 'function']} />)
-      .container;
+    wrapper = render(
+      <TagList tags={['array', 'adapter', 'function']} />
+    ).container;
   });
 
   afterEach(cleanup);

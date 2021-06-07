@@ -17,12 +17,12 @@ approxEqual(0.1 + 0.2, 0.3) // true
 
 #### Good to hear
 
-* A simple solution to this problem
+- A simple solution to this problem
 
 ##### Additional links
 
-* [A simple helper function to check equality](https://github.com/Chalarangelo/30-seconds-of-code#approximatelyequal)
-* [Fix "0.1 + 0.2 = 0.300000004" in JavaScript](http://blog.blakesimpson.co.uk/read/61-fix-0-1-0-2-0-300000004-in-javascript)
+- [A simple helper function to check equality](https://github.com/Chalarangelo/30-seconds-of-code#approximatelyequal)
+- [Fix "0.1 + 0.2 = 0.300000004" in JavaScript](http://blog.blakesimpson.co.uk/read/61-fix-0-1-0-2-0-300000004-in-javascript)
 
 <!-- tags: (javascript) -->
 

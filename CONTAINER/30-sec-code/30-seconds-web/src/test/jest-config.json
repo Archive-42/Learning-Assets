@@ -6,15 +6,8 @@
   },
   "testEnvironment": "jest-environment-jsdom-fourteen",
   "moduleFileExtensions": ["js", "jsx", "json"],
-  "moduleDirectories": [
-    "node_modules",
-    "src"
-  ],
-  "testPathIgnorePatterns": [
-    "content/sources",
-    ".cache",
-    "public"
-  ],
+  "moduleDirectories": ["node_modules", "src"],
+  "testPathIgnorePatterns": ["content/sources", ".cache", "public"],
   "coveragePathIgnorePatterns": [
     "/node_modules/",
     "/src/test/",
@@ -27,10 +20,6 @@
     "__BASE_PATH__": ""
   },
   "testURL": "https://localhost",
-  "testMatch": [
-    "**/?(*.)+(test).[jt]s?(x)"
-  ],
-  "setupFiles": [
-    "./src/test/mocks.js"
-  ]
+  "testMatch": ["**/?(*.)+(test).[jt]s?(x)"],
+  "setupFiles": ["./src/test/mocks.js"]
 }

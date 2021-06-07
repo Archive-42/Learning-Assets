@@ -15,23 +15,23 @@ async function createCsv() {
 
   // get paths
   const allFiles = await fs.readdir(mdDir);
-  const files = allFiles.filter(filePath => filePath.endsWith(".md"));
+  const files = allFiles.filter((filePath) => filePath.endsWith(".md"));
 
   // read paths, get buffers
   const buffers = await Promise.all(
-    files.map(filePath => fs.readFile(path.join(mdDir, filePath)))
+    files.map((filePath) => fs.readFile(path.join(mdDir, filePath)))
   );
 
   // make buffers strings
-  const contents = buffers.map(content => content.toString());
+  const contents = buffers.map((content) => content.toString());
 
   // make strings objects
   let frontmatters = contents.map(fm);
 
   // find all attribute keys
   const seenAttributes = new Set();
-  frontmatters.forEach(item => {
-    Object.keys(item.attributes).forEach(attr => seenAttributes.add(attr));
+  frontmatters.forEach((item) => {
+    Object.keys(item.attributes).forEach((attr) => seenAttributes.add(attr));
   });
   const attributes = Array.from(seenAttributes.values());
 
@@ -40,8 +40,8 @@ async function createCsv() {
   }
 
   // get all data into an array
-  let rows = frontmatters.map(item => {
-    const row = attributes.map(attr =>
+  let rows = frontmatters.map((item) => {
+    const row = attributes.map((attr) =>
       item.attributes[attr] ? JSON.stringify(item.attributes[attr]) : ""
     );
     return row;
@@ -51,7 +51,7 @@ async function createCsv() {
   rows.unshift(attributes);
 
   // join into CSV string
-  const csv = rows.map(row => row.join(",")).join("\n");
+  const csv = rows.map((row) => row.join(",")).join("\n");
 
   // write file out
   await fs.writeFile(outputPath, csv);
@@ -60,7 +60,7 @@ async function createCsv() {
 
   // make links csv
   let longestLength = 0;
-  let linksArray = frontmatters.map(row => {
+  let linksArray = frontmatters.map((row) => {
     const links = parseLinks(row.body).filter(isUrl);
     longestLength = longestLength > links.length ? longestLength : links.length;
     const newRow = [row.attributes.order, row.attributes.title, ...links];
@@ -69,7 +69,7 @@ async function createCsv() {
 
   if (longestLength) {
     // add title row
-    linksArray = linksArray.map(array => {
+    linksArray = linksArray.map((array) => {
       const lengthToFill = longestLength + 2 - array.length;
       return array.concat(Array.from({ length: lengthToFill }).fill(""));
     });
@@ -81,7 +81,7 @@ async function createCsv() {
     );
 
     // join into CSV string
-    const linksCsv = linksArray.map(row => row.join(",")).join("\n");
+    const linksCsv = linksArray.map((row) => row.join(",")).join("\n");
 
     // write file out
     await fs.writeFile(linksOutputPath, linksCsv);

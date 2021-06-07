@@ -42,11 +42,11 @@ body {
   z-index: 1001;
   height: 76px;
   width: 100vw;
-  padding-right: 4px;  // Pad to the right for the scrollbar (4px)
+  padding-right: 4px; // Pad to the right for the scrollbar (4px)
 
   @media screen and (min-width: $layout-medium-breakpoint) {
     height: 112px;
-    padding-right: 8px;  // Pad to the right for the scrollbar (8px)
+    padding-right: 8px; // Pad to the right for the scrollbar (8px)
   }
 
   @media screen and (min-width: 882px) {
@@ -63,7 +63,9 @@ body {
     width: calc(100% - 250px - 44px - 76px - 64px);
   }
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     outline: 0;
     animation: none;
   }
@@ -107,10 +109,10 @@ img.nav-website-logo {
 .content {
   transition: 0.3s ease all;
   background: var(--clr-bg);
-  padding-right: 4px;  // Pad to the right for the scrollbar (4px)
+  padding-right: 4px; // Pad to the right for the scrollbar (4px)
 
   @media screen and (min-width: $layout-medium-breakpoint) {
-    padding-right: 8px;  // Pad to the right for the scrollbar (8px)
+    padding-right: 8px; // Pad to the right for the scrollbar (8px)
   }
 
   @media screen and (min-width: 882px) {

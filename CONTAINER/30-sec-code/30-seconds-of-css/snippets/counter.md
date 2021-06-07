@@ -32,6 +32,6 @@ ul {
 
 li:before {
   counter-increment: counter;
-  content: counters(counter, '.') ' ';
+  content: counters(counter, ".") " ";
 }
 ```

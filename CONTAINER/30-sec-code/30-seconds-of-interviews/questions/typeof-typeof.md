@@ -14,7 +14,7 @@ It evaluates to `"string"`.
 
 ##### Additional links
 
-* [MDN docs for typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+- [MDN docs for typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 
 <!-- tags: (javascript) -->
 

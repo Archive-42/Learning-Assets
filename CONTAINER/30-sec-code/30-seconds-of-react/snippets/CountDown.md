@@ -43,12 +43,12 @@ const CountDown = ({ hours = 0, minutes = 0, seconds = 0 }) => {
 
   return (
     <div>
-      <p>{`${h.toString().padStart(2, '0')}:${m
+      <p>{`${h.toString().padStart(2, "0")}:${m.toString().padStart(2, "0")}:${s
         .toString()
-        .padStart(2, '0')}:${s.toString().padStart(2, '0')}`}</p>
-      <div>{over ? "Time's up!" : ''}</div>
+        .padStart(2, "0")}`}</p>
+      <div>{over ? "Time's up!" : ""}</div>
       <button onClick={() => setPaused(!paused)}>
-        {paused ? 'Resume' : 'Pause'}
+        {paused ? "Resume" : "Pause"}
       </button>
       <button onClick={() => reset()}>Restart</button>
     </div>
@@ -59,6 +59,6 @@ const CountDown = ({ hours = 0, minutes = 0, seconds = 0 }) => {
 ```jsx
 ReactDOM.render(
   <CountDown hours={1} minutes={45} />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```

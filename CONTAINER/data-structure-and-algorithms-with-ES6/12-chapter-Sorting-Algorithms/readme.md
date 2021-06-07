@@ -1,6 +1,7 @@
 # Sort Algorithms with ES6
 
 ### Code Examples
+
 - [Basic Sorting Algorithms](./basic-sort.js)
 - [Advanced Sorting Algorithms - Quick Sort](./quick-sort.module.js)
 - [Advanced Sorting Algorithms - Merge Sort](./merge-sort.module.js)
@@ -44,17 +45,16 @@ MergeSort is a Divide and Conquer algorithm. It divides input array in two halve
 
 **Bucket** and **Heap** sort makes use of insertion sort function help, to sort the elements. But this methods are usefull and import anyway.
 
-
 #### Properties of a sorting algorithm
 
 In addition to the time and space complexity of sorting algorithms, the below properties help define sorting algorithms.
 
-|Property |	Description |
-| --- | --- |
-|Adaptability |	An adaptive sort’s performance improves the more sorted the list is initially.
-|In-place |	An in-place sort requires a constant amount of additional space.
-|Parallelism |	A parallel sort can split its workload between multiple workers.
-|Stability |	A stable sort preserves the order of items in the list that evaluate to the same value.
+| Property     | Description                                                                             |
+| ------------ | --------------------------------------------------------------------------------------- |
+| Adaptability | An adaptive sort’s performance improves the more sorted the list is initially.          |
+| In-place     | An in-place sort requires a constant amount of additional space.                        |
+| Parallelism  | A parallel sort can split its workload between multiple workers.                        |
+| Stability    | A stable sort preserves the order of items in the list that evaluate to the same value. |
 
 More importantly one should know when and where to use them. Some examples where you can find direct application of sorting techniques include:
 

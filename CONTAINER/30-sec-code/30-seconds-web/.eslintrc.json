@@ -5,11 +5,7 @@
     "node": true,
     "jest": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -19,10 +15,7 @@
       "modules": true
     }
   },
-  "plugins": [
-    "react",
-    "react-hooks"
-  ],
+  "plugins": ["react", "react-hooks"],
   "settings": {
     "react": {
       "version": "detect"
@@ -31,7 +24,8 @@
   "rules": {
     "indent": "off",
     "comma-dangle": [
-      "error", {
+      "error",
+      {
         "arrays": "always-multiline",
         "objects": "always-multiline",
         "imports": "always-multiline",
@@ -47,10 +41,7 @@
         "allowTemplateLiterals": true
       }
     ],
-    "semi": [
-      "error",
-      "always"
-    ],
+    "semi": ["error", "always"],
     "semi-spacing": [
       "error",
       {
@@ -61,15 +52,9 @@
     "no-trailing-spaces": "error",
     "no-duplicate-imports": "error",
     "no-useless-computed-key": "error",
-    "rest-spread-spacing": [
-      "error",
-      "never"
-    ],
+    "rest-spread-spacing": ["error", "never"],
     "no-console": "off",
-    "eqeqeq": [
-      "error",
-      "smart"
-    ],
+    "eqeqeq": ["error", "smart"],
     "brace-style": [
       "error",
       "1tbs",
@@ -78,10 +63,7 @@
       }
     ],
     "curly": "off",
-    "object-shorthand": [
-      "warn",
-      "always"
-    ],
+    "object-shorthand": ["warn", "always"],
     "key-spacing": [
       "error",
       {
@@ -96,21 +78,10 @@
         "properties": "always"
       }
     ],
-    "dot-location": [
-      "error",
-      "property"
-    ],
-    "generator-star-spacing": [
-      "off"
-    ],
-    "block-spacing": [
-      "error",
-      "always"
-    ],
-    "comma-style": [
-      "error",
-      "last"
-    ],
+    "dot-location": ["error", "property"],
+    "generator-star-spacing": ["off"],
+    "block-spacing": ["error", "always"],
+    "comma-style": ["error", "last"],
     "comma-spacing": [
       "error",
       {
@@ -150,51 +121,21 @@
     "block-scoped-var": "error",
     "no-use-before-define": "warn",
     "no-proto": "error",
-    "complexity": [
-      "warn",
-      50
-    ],
-    "wrap-iife": [
-      "error",
-      "outside"
-    ],
+    "complexity": ["warn", 50],
+    "wrap-iife": ["error", "outside"],
     "new-parens": "error",
     "space-infix-ops": "error",
-    "eol-last": [
-      "error",
-      "always"
-    ],
+    "eol-last": ["error", "always"],
     "space-unary-ops": "error",
-    "arrow-parens": [
-      "error",
-      "as-needed"
-    ],
+    "arrow-parens": ["error", "as-needed"],
     "arrow-spacing": "error",
-    "space-before-blocks": [
-      "error",
-      "always"
-    ],
-    "yoda": [
-      "error",
-      "never"
-    ],
+    "space-before-blocks": ["error", "always"],
+    "yoda": ["error", "never"],
     "space-before-function-paren": "off",
-    "spaced-comment": [
-      "error",
-      "always"
-    ],
-    "react/jsx-equals-spacing": [
-      "error",
-      "never"
-    ],
-    "react/jsx-fragments": [
-      "error",
-      "syntax"
-    ],
-    "react/jsx-indent": [
-      "error",
-      2
-    ],
+    "spaced-comment": ["error", "always"],
+    "react/jsx-equals-spacing": ["error", "never"],
+    "react/jsx-fragments": ["error", "syntax"],
+    "react/jsx-indent": ["error", 2],
     "react/jsx-no-duplicate-props": "error",
     "react/no-deprecated": "error",
     "react/prop-types": "warn",

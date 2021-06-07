@@ -9,8 +9,9 @@ describe('<BlogSnippetCard />', () => {
   let wrapper, card, tagList;
 
   beforeEach(() => {
-    wrapper = renderWithContext(<BlogSnippetCard snippet={fullBlogSnippet} />)
-      .container;
+    wrapper = renderWithContext(
+      <BlogSnippetCard snippet={fullBlogSnippet} />
+    ).container;
     card = wrapper.querySelector('.card');
     tagList = wrapper.querySelector('.card-subtitle');
   });

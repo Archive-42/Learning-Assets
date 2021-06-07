@@ -7,7 +7,7 @@ ARIA stands for "Accessible Rich Internet Applications", and is a technical spec
 An example using ARIA:
 
 ```
-<div 
+<div
   role="combobox"
   aria-expanded="false"
   aria-owns="ex1-grid"
@@ -16,20 +16,21 @@ An example using ARIA:
   ...
 </div>
 ```
+
 Credit: W3C's [ARIA 1.1 Combobox with Grid Popup Example](https://w3c.github.io/aria-practices/examples/combobox/aria1.1pattern/grid-combo.html)
 
 #### Good to hear
 
-* Accessible Rich Internet Applications
-* Benefits people who use assistive technologies (AT)
-* Provides role, name, and state
-* Semantic HTML coupled with JavaScript
+- Accessible Rich Internet Applications
+- Benefits people who use assistive technologies (AT)
+- Provides role, name, and state
+- Semantic HTML coupled with JavaScript
 
 ##### Additional links
 
-* [WAI-ARIA Overview](https://www.w3.org/WAI/standards-guidelines/aria/)
-* [WAI-ARIA Spec](https://www.w3.org/TR/wai-aria/)
-* [ARIA Serious? Eric Eggert presentation](https://youtu.be/4bH57rWPnYo)
+- [WAI-ARIA Overview](https://www.w3.org/WAI/standards-guidelines/aria/)
+- [WAI-ARIA Spec](https://www.w3.org/TR/wai-aria/)
+- [ARIA Serious? Eric Eggert presentation](https://youtu.be/4bH57rWPnYo)
 
 <!-- tags: (accessibility) -->
 

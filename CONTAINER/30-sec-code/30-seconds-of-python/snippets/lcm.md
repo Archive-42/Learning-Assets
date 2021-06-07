@@ -1,6 +1,6 @@
 ---
-title: lcm 
-tags: math,list,intermediate 
+title: lcm
+tags: math,list,intermediate
 ---
 
 Returns the least common multiple of a list of numbers.

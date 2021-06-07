@@ -13,19 +13,19 @@
 
   // Breadcrumb link
   a {
-
-    &, &:link, &:visited {
+    &,
+    &:link,
+    &:visited {
       color: var(--clr-txt-150);
     }
   }
 
   &:not(:last-of-type) {
-
     &:before {
       color: var(--clr-txt-050);
       position: absolute;
       right: -0.75rem;
-      content: "/";
+      content: '/';
     }
   }
 
@@ -37,7 +37,9 @@
     text-overflow: ellipsis;
 
     a {
-      &, &:link, &:visited {
+      &,
+      &:link,
+      &:visited {
         color: var(--clr-txt-050);
         pointer-events: none;
       }

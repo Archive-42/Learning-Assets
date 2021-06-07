@@ -36,20 +36,20 @@ But be wary of function expressions that are assigned to a variable:
 
 ```js
 myFunction() // Error: `myFunction` is not a function
-var myFunction = function() {
+var myFunction = function () {
   console.log("hello")
 }
 ```
 
 #### Good to hear
 
-* Hoisting is JavaScript’s default behavior of moving declarations to the top
-* Functions declarations are hoisted before variable declarations
+- Hoisting is JavaScript’s default behavior of moving declarations to the top
+- Functions declarations are hoisted before variable declarations
 
 ##### Additional links
 
-* [MDN docs for hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
-* [Understanding Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
+- [MDN docs for hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
+- [Understanding Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
 
 <!-- tags: (javascript) -->
 

@@ -6,8 +6,9 @@ describe('<PageTitle />', () => {
   const innerText = 'This is a title';
 
   beforeEach(() => {
-    wrapper = render(<PageTitle className='light'>{innerText}</PageTitle>)
-      .container;
+    wrapper = render(
+      <PageTitle className='light'>{innerText}</PageTitle>
+    ).container;
   });
 
   afterEach(cleanup);

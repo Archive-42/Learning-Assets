@@ -17,7 +17,7 @@ const mask = (str, maskChar = "#") =>
 
 #### Good to hear
 
-* Short, one-line functional solutions to problems should be preferred provided they are efficient
+- Short, one-line functional solutions to problems should be preferred provided they are efficient
 
 ##### Additional links
 

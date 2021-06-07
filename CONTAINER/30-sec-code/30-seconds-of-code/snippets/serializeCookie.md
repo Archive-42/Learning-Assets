@@ -13,5 +13,5 @@ const serializeCookie = (name, val) =>
 ```
 
 ```js
-serializeCookie('foo', 'bar'); // 'foo=bar'
+serializeCookie("foo", "bar"); // 'foo=bar'
 ```

@@ -47,20 +47,20 @@ function isDeepEqual(obj1, obj2, testPrototypes = false) {
   return (
     obj1Props.length === obj2Props.length &&
     prototypesAreEqual &&
-    obj1Props.every(prop => isDeepEqual(obj1[prop], obj2[prop]))
+    obj1Props.every((prop) => isDeepEqual(obj1[prop], obj2[prop]))
   )
 }
 ```
 
 #### Good to hear
 
-* Primitives like strings and numbers are compared by their value
-* Objects on the other hand are compared by their reference (location in memory)
+- Primitives like strings and numbers are compared by their value
+- Objects on the other hand are compared by their reference (location in memory)
 
 ##### Additional links
 
-* [Object Equality in JavaScript](http://adripofjavascript.com/blog/drips/object-equality-in-javascript.html)
-* [Deep comparison between two values](https://30secondsofcode.org/object#equals)
+- [Object Equality in JavaScript](http://adripofjavascript.com/blog/drips/object-equality-in-javascript.html)
+- [Deep comparison between two values](https://30secondsofcode.org/object#equals)
 
 <!-- tags: (javascript) -->
 

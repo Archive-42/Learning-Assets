@@ -1,10 +1,11 @@
 .snippet-card.blog-card {
-
   .card-meta-info {
     margin: 0 0 1rem;
 
     a {
-      &, &:link, &:visited {
+      &,
+      &:link,
+      &:visited {
         color: var(--clr-txt-050);
       }
     }
@@ -19,7 +20,7 @@
       position: relative;
 
       &:before {
-        content: counter(list-item-counter) ". ";
+        content: counter(list-item-counter) '. ';
         position: absolute;
         top: 0;
         left: -1.5rem;
@@ -59,7 +60,6 @@
   }
 
   .card-description {
-
     li:not(.blog-list-item) > p {
       line-height: 2;
       margin: 0;

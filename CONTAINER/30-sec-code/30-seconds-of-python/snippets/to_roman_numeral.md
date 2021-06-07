@@ -3,7 +3,7 @@ title: to_roman_numeral
 tags: math,string,intermediate
 ---
 
-Converts an integer to its roman numeral representation. 
+Converts an integer to its roman numeral representation.
 Accepts value between `1` and `3999` (both inclusive).
 
 - Create a lookup list containing tuples in the form of (roman value, integer).
