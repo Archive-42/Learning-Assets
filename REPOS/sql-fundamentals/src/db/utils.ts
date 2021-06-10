@@ -53,7 +53,7 @@ export async function getDb(): Promise<SQLDatabase> {
 }
 
 export async function timeout(n: number) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(resolve, n);
   });
 }

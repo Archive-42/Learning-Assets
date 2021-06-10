@@ -18,7 +18,7 @@ class EmployeeOrderCountTest {
   public async orderCountIsCorrect() {
     let [employee] = await getAllEmployees();
     let allOrders = await getAllOrders({ page: 1, perPage: 999999 });
-    let orderCt = allOrders.filter(o => o.employeeid === employee.id).length;
+    let orderCt = allOrders.filter((o) => o.employeeid === employee.id).length;
     assert.ok(employee.ordercount);
     assert.equal(employee.ordercount, orderCt);
   }

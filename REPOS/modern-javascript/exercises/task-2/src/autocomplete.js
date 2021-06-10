@@ -17,7 +17,7 @@ export function autocomplete(term) {
     // Begin actual query API call
     let placeResults = yield placesQuery(term);
     console.log(`✅ Completed search for ${term}`);
-    let placeIds = placeResults.map(place => place.place_id);
+    let placeIds = placeResults.map((place) => place.place_id);
     let places = yield detailsFromPlaceIds(placeIds);
     console.log(places);
     // Return the results (eventual value of the task)

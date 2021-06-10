@@ -21,12 +21,15 @@ class MaterializeViewsTest {
   public async materializedViewsPresent() {
     let db = await getDb();
     let mvNames = await db.getAllMaterializedViews();
-    assert.includeMembers(mvNames.map(s => s.toLowerCase()), [
-      'mv_customerleaderboard',
-      'mv_employeeleaderboard',
-      'mv_productleaderboard',
-      'mv_recentorders'
-    ]);
+    assert.includeMembers(
+      mvNames.map((s) => s.toLowerCase()),
+      [
+        'mv_customerleaderboard',
+        'mv_employeeleaderboard',
+        'mv_productleaderboard',
+        'mv_recentorders'
+      ]
+    );
   }
 
   @test(
@@ -36,11 +39,9 @@ class MaterializeViewsTest {
   public async viewsPresent() {
     let db = await getDb();
     let mvNames = await db.getAllViews();
-    assert.includeMembers(mvNames.map(s => s.toLowerCase()), [
-      'v_customerleaderboard',
-      'v_employeeleaderboard',
-      'v_productleaderboard',
-      'v_recentorders'
-    ]);
+    assert.includeMembers(
+      mvNames.map((s) => s.toLowerCase()),
+      ['v_customerleaderboard', 'v_employeeleaderboard', 'v_productleaderboard', 'v_recentorders']
+    );
   }
 }

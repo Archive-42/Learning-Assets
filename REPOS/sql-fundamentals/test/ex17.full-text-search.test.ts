@@ -14,7 +14,7 @@ class FullTextSearchTest {
     let germanResults = await getSearchResults('german');
     assert.equal(germanResults.length, 16, 'Expected 16 search results');
     assert.sameMembers(
-      germanResults.map(r => r.name),
+      germanResults.map((r) => r.name),
       [
         'Frankenversand',
         'Morgenstern Gesundkost',
@@ -42,7 +42,7 @@ class FullTextSearchTest {
     let germanyResults = await getSearchResults('germany');
     assert.equal(germanyResults.length, 14, 'Expected 14 search results');
     assert.sameMembers(
-      germanyResults.map(r => r.name),
+      germanyResults.map((r) => r.name),
       [
         'Frankenversand',
         'Morgenstern Gesundkost',
@@ -69,7 +69,7 @@ class FullTextSearchTest {
     let dryResults = await getSearchResults('dry');
     assert.equal(dryResults.length, 2, 'Expected 2 search results');
     assert.sameMembers(
-      dryResults.map(r => r.name),
+      dryResults.map((r) => r.name),
       ["Uncle Bob's Organic Dried Pears", 'Manjimup Dried Apples'],
       'Includes the correct 2 results'
     );
@@ -80,7 +80,7 @@ class FullTextSearchTest {
     let michaelResults = await getSearchResults('michael');
     assert.equal(michaelResults.length, 3, 'Expected 3 search results');
     assert.sameMembers(
-      michaelResults.map(r => r.name),
+      michaelResults.map((r) => r.name),
       ['Svensk Sjöföda AB', 'Richter Supermarkt', 'Michael Suyama'],
       'Includes the correct 3 results'
     );
@@ -91,7 +91,7 @@ class FullTextSearchTest {
     let leverlingResults = await getSearchResults('leverling');
     assert.equal(leverlingResults.length, 1, 'Expected 1 search result');
     assert.sameMembers(
-      leverlingResults.map(r => r.name),
+      leverlingResults.map((r) => r.name),
       ['Janet Leverling'],
       'Includes the correct result'
     );
@@ -102,7 +102,7 @@ class FullTextSearchTest {
     let deliResults = await getSearchResults('deli');
     assert.isAbove(deliResults.length, 4, 'Expected 5+ search results');
     assert.includeMembers(
-      deliResults.map(r => r.name).sort(),
+      deliResults.map((r) => r.name).sort(),
       [
         'New Orleans Cajun Delights',
         'Old World Delicatessen',

@@ -4,7 +4,7 @@ var inquirer = require('inquirer');
 
 function getAllExercises() {
   let files = fs.readdirSync(__dirname);
-  return files.filter(f => fs.statSync(join(__dirname, f)).isDirectory());
+  return files.filter((f) => fs.statSync(join(__dirname, f)).isDirectory());
 }
 
 /**

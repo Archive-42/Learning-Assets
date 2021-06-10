@@ -19,10 +19,10 @@
 
 Use `apt-get` or equivalent.
 
-
 ## All
 
 Once you've installed mysql, you can test your installation with a user of your choice (we'll use the `root` user) by running
+
 ```sh
 mysqlshow -uroot -p
 ```
@@ -34,7 +34,9 @@ mysql_config_editor set --login-path=local --host=localhost --user=root --passwo
 ```
 
 You should now be able to run
+
 ```sh
 mysqlshow --login-path=local
 ```
+
 without having to provide a password in the CLI.

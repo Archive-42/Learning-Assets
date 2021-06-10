@@ -34,7 +34,7 @@ class MySQLPreparedStatement implements SQLPreparedStatement {
 }
 
 // tslint:disable-next-line:only-arrow-functions
-const pool: mysql2.Pool = (function() {
+const pool: mysql2.Pool = (function () {
   const { database, host, port, user, password } = dbConfig.mysql;
   let p: mysql2.Pool = mysql2.createPool({
     connectionLimit: 10,
@@ -141,9 +141,11 @@ export default class MySQLDB extends SQLDatabase {
     throw new Error('getAllFunctions() not yet implemented');
   }
   public async getAllTableNames(): Promise<string[]> {
-    return (await this.all(
-      sql`SELECT TABLE_NAME AS name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'northwind'`
-    )).map((result: any) => result.name as string);
+    return (
+      await this.all(
+        sql`SELECT TABLE_NAME AS name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'northwind'`
+      )
+    ).map((result: any) => result.name as string);
   }
 
   private normalizeQuery(str: string): string {

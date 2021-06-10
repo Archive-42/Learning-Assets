@@ -1,7 +1,7 @@
-import './styles.scss';
+import "./styles.scss";
 
-import React, { Component } from 'react';
-import CategoryRow from './category-row';
+import React, { Component } from "react";
+import CategoryRow from "./category-row";
 
 class Home extends Component {
   constructor(props) {
@@ -10,8 +10,8 @@ class Home extends Component {
   }
   componentDidMount() {
     this.props.groceryItemStore.categoryListeners.register((newCategories) => {
-      this.setState({categories: newCategories});
-    })
+      this.setState({ categories: newCategories });
+    });
     this.props.groceryItemStore.updateCategories();
   }
 
@@ -22,18 +22,15 @@ class Home extends Component {
         key={c}
         cartStore={this.props.cartStore}
         groceryItemStore={this.props.groceryItemStore}
-        categoryName={c} />
+        categoryName={c}
+      />
     ));
     return (
-      <div className='Home'>
-        <ul className="category-list">
-          {categoryRows}
-        </ul>
+      <div className="Home">
+        <ul className="category-list">{categoryRows}</ul>
       </div>
-    )
+    );
   }
 }
-
-
 
 export default Home;

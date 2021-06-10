@@ -50,7 +50,7 @@ function handleQuestion(question, stdin, stdout, stderr) {
 function main(stdin, stdout, stderr) {
   stdout.write('🔮  What do you wish to ask the oracle?\n > ');
   process.openStdin();
-  stdin.on('data', function(key) {
+  stdin.on('data', function (key) {
     handleQuestion(key.toString(), stdin, stdout, stderr);
   });
 }

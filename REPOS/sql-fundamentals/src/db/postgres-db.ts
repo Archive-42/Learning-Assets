@@ -39,7 +39,7 @@ class PostgresPreparedStatement implements SQLPreparedStatement {
 }
 
 // tslint:disable-next-line:only-arrow-functions
-const pool: pg.Pool = (function() {
+const pool: pg.Pool = (function () {
   const { database, host, port, schema, user, password } = dbConfig.pg;
   let p = new pg.Pool(
     process.env.DATABASE_URL
@@ -124,12 +124,12 @@ export default class PostgresDB extends SQLDatabase {
   }
   public async get<T>(query: string, ...params: any[]): Promise<T> {
     return this.measure(query, params, async () => {
-      return await this.client.query(query, params).then(result => result.rows[0]);
+      return await this.client.query(query, params).then((result) => result.rows[0]);
     });
   }
   public async all<T>(query: string, ...params: any[]): Promise<T[]> {
     return this.measure(query, params, async () => {
-      return await this.client.query(query, params).then(result => result.rows);
+      return await this.client.query(query, params).then((result) => result.rows);
     });
   }
   public prepare(
@@ -140,16 +140,16 @@ export default class PostgresDB extends SQLDatabase {
     return Promise.resolve(new PostgresPreparedStatement(name, query, params, this.client));
   }
   public async getIndicesForTable(tableName: string): Promise<string[]> {
-    return (await this.all(sql`SELECT indexname AS name
-    FROM pg_indexes WHERE tablename = \'${tableName.toLowerCase()}\'`)).map(
-      (result: any) => result.name as string
-    );
+    return (
+      await this.all(sql`SELECT indexname AS name
+    FROM pg_indexes WHERE tablename = \'${tableName.toLowerCase()}\'`)
+    ).map((result: any) => result.name as string);
   }
   public async getAllTriggers(): Promise<string[]> {
-    return (await this.all(sql`SELECT tgname AS name FROM pg_trigger,pg_proc WHERE
-    pg_proc.oid=pg_trigger.tgfoid AND tgisinternal = false`)).map(
-      (result: any) => result.name as string
-    );
+    return (
+      await this.all(sql`SELECT tgname AS name FROM pg_trigger,pg_proc WHERE
+    pg_proc.oid=pg_trigger.tgfoid AND tgisinternal = false`)
+    ).map((result: any) => result.name as string);
   }
   public async getAllMaterializedViews(): Promise<string[]> {
     return (await this.all(sql`SELECT oid::regclass::text FROM pg_class WHERE  relkind = 'm'`)).map(
@@ -162,18 +162,20 @@ export default class PostgresDB extends SQLDatabase {
     );
   }
   public async getAllFunctions(): Promise<string[]> {
-    return (await this.all(sql`SELECT routines.routine_name as name
+    return (
+      await this.all(sql`SELECT routines.routine_name as name
 FROM information_schema.routines
     LEFT JOIN information_schema.parameters ON routines.specific_name=parameters.specific_name
 WHERE routines.specific_schema='public'
-ORDER BY routines.routine_name, parameters.ordinal_position;`)).map(
-      (result: any) => result.name as string
-    );
+ORDER BY routines.routine_name, parameters.ordinal_position;`)
+    ).map((result: any) => result.name as string);
   }
   public async getAllTableNames(): Promise<string[]> {
-    return (await this.all(sql`SELECT table_name as name
+    return (
+      await this.all(sql`SELECT table_name as name
       FROM information_schema.tables
      WHERE table_schema='public'
-       AND table_type='BASE TABLE';`)).map((result: any) => result.name as string);
+       AND table_type='BASE TABLE';`)
+    ).map((result: any) => result.name as string);
   }
 }

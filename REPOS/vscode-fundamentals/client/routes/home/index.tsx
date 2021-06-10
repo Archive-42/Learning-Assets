@@ -1,9 +1,9 @@
-import './styles.scss';
+import "./styles.scss";
 
-import * as React from 'react';
-import CategoryRow from './category-row';
-import GroceryItemStore from 'client/data/grocery-item-store';
-import CartStore from 'client/data/cart-store';
+import * as React from "react";
+import CategoryRow from "./category-row";
+import GroceryItemStore from "client/data/grocery-item-store";
+import CartStore from "client/data/cart-store";
 
 interface IHomeProps {
   groceryItemStore: GroceryItemStore;
@@ -20,7 +20,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
   }
   componentDidMount() {
     this.props.groceryItemStore.categoryListeners.register((newCategories) => {
-      this.setState({categories: newCategories});
+      this.setState({ categories: newCategories });
     });
     this.props.groceryItemStore.updateCategories();
   }
@@ -28,17 +28,16 @@ class Home extends React.Component<IHomeProps, IHomeState> {
   render() {
     const categoryRows = (this.state.categories as any[]).map((c) => (
       <CategoryRow
-        className='category-list__item'
+        className="category-list__item"
         key={c}
         cartStore={this.props.cartStore}
         groceryItemStore={this.props.groceryItemStore}
-        categoryName={c} />
+        categoryName={c}
+      />
     ));
     return (
-      <div className='Home'>
-        <ul className='category-list'>
-          {categoryRows}
-        </ul>
+      <div className="Home">
+        <ul className="category-list">{categoryRows}</ul>
       </div>
     );
   }

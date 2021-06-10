@@ -1,4 +1,4 @@
-@import '_variables';
+@import "_variables";
 
 @mixin large-screens() {
   @media (min-width: $small-screen-width) {

@@ -10,7 +10,7 @@ module.exports = () => {
       target: 'https://maps.googleapis.com',
       changeOrigin: true,
       log: true,
-      pathRewrite: path => `${path}&key=${google}`
+      pathRewrite: (path) => `${path}&key=${google}`
     }
   };
 };

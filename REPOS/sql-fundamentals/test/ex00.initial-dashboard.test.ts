@@ -60,11 +60,7 @@ class InitialDashboardQueriesTest {
   public async reorderListTest() {
     let result = await getReorderList();
     assert.isArray(result, 'Expected result to be an array');
-    assert.isAbove(
-      result.length,
-      0,
-      'Expected at least one product needing reorder'
-    );
+    assert.isAbove(result.length, 0, 'Expected at least one product needing reorder');
     validateRecordColumns(
       {
         recordType: 'reorder-list',

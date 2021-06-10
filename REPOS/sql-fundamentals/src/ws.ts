@@ -30,7 +30,7 @@ class WebSocketManager {
   }
   public close() {
     clearInterval(this.heartbeatInterval);
-    this.wss.clients.forEach(client => {
+    this.wss.clients.forEach((client) => {
       if (client.readyState === WS.OPEN) {
         client.close();
       }
@@ -38,7 +38,7 @@ class WebSocketManager {
     this.wss.close();
   }
   protected broadcast(message: JSONValue) {
-    this.wss.clients.forEach(client => {
+    this.wss.clients.forEach((client) => {
       if (client.readyState === WS.OPEN) {
         client.send(message);
       }

@@ -17,27 +17,18 @@ export function validateRecordColumns(
   forbidden: string[] = []
 ) {
   let argsString = (opts.functionArgs || []).map(stringifyArg).join(', ');
-  required.forEach(k => {
-    assert.ok(
-      record,
-      `record returned from ${
-        opts.functionName
-      }(${argsString}) should be truthy`
-    );
+  required.forEach((k) => {
+    assert.ok(record, `record returned from ${opts.functionName}(${argsString}) should be truthy`);
     assert.isDefined(
       (record as any)[k],
-      `each ${opts.recordType} returned from ${
-        opts.functionName
-      }(${argsString}) must have property ${k}`
+      `each ${opts.recordType} returned from ${opts.functionName}(${argsString}) must have property ${k}`
     );
   });
 
-  forbidden.forEach(k => {
+  forbidden.forEach((k) => {
     assert.isUndefined(
       (record as any)[k],
-      `no ${opts.recordType} returned from ${
-        opts.functionName
-      }(${argsString}) may have properties ${k}`
+      `no ${opts.recordType} returned from ${opts.functionName}(${argsString}) may have properties ${k}`
     );
   });
 }

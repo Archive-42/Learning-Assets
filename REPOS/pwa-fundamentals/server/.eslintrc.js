@@ -3,21 +3,19 @@ module.exports = {
   parser: "babel-eslint",
   parserOptions: {
     ecmaVersion: 2017,
-    sourceType: 'module'
+    sourceType: "module",
   },
-  extends: [
-    'eslint:recommended'
-  ],
+  extends: ["eslint:recommended"],
   env: {
     node: true,
-    es6: true
+    es6: true,
   },
-  plugins: ['babel'],
+  plugins: ["babel"],
   rules: {
-    "quotes": [2, "single", "avoid-escape"],
-    "indent": [2, 2],
-    "strict": 0,
+    quotes: [2, "single", "avoid-escape"],
+    indent: [2, 2],
+    strict: 0,
     "no-console": 0,
-    'no-fallthrough': 0
-  }
+    "no-fallthrough": 0,
+  },
 };

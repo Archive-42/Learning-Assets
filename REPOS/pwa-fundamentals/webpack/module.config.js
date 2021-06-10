@@ -1,8 +1,8 @@
 /* eslint-env node */
 
-const extractSass = require('./extract-sass');
+const extractSass = require("./extract-sass");
 
-module.exports = function() {
+module.exports = function () {
   return {
     rules: [
       {
@@ -10,29 +10,29 @@ module.exports = function() {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader'
+            loader: "babel-loader",
           },
           {
-            loader: 'eslint-loader',
+            loader: "eslint-loader",
             options: {
-              emitError: true
-            }
-          }
-        ]
+              emitError: true,
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
         use: [
-          'style-loader', // creates style nodes from JS strings
-          'css-loader', // translates CSS into CommonJS
+          "style-loader", // creates style nodes from JS strings
+          "css-loader", // translates CSS into CommonJS
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
-              includePaths: ['node_modules/muicss/lib/sass']
-            }
-          }
-        ]
-      }
-    ]
+              includePaths: ["node_modules/muicss/lib/sass"],
+            },
+          },
+        ],
+      },
+    ],
   };
 };

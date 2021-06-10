@@ -1,5 +1,5 @@
 module.exports = function (api) {
-  const GroceryItem = api.db.models['grocery-item'];
+  const GroceryItem = api.db.models["grocery-item"];
 
   let _cachedResults = null;
 
@@ -8,7 +8,7 @@ module.exports = function (api) {
       res.json({ data: _cachedResults });
       return Promise.resolve(_cachedResults);
     }
-    return GroceryItem.count({ attributes: ['category'], group: 'category' })
+    return GroceryItem.count({ attributes: ["category"], group: "category" })
       .then((results) => {
         _cachedResults = results;
         res.json({ data: results });
@@ -17,5 +17,5 @@ module.exports = function (api) {
       .catch((err) => {
         res.json({ error: `Problem fetching data: ${err}` });
       });
-  }
-}
+  };
+};

@@ -15,12 +15,12 @@ export function autocomplete(term) {
       // Begin actual query API call
       return placesQuery(term);
     })
-    .then(placeResults => {
+    .then((placeResults) => {
       console.log(`✅ Completed search for ${term}`);
-      let placeIds = placeResults.map(place => place.place_id);
+      let placeIds = placeResults.map((place) => place.place_id);
       return detailsFromPlaceIds(placeIds);
     })
-    .then(places => {
+    .then((places) => {
       console.log(places);
       // Return the results (eventual value of the task)
       return places;

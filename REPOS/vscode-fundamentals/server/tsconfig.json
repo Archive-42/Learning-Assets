@@ -7,9 +7,7 @@
     "sourceMap": true,
     "outDir": "../dist-server",
     "baseUrl": ".",
-    "rootDirs": [
-      ".."
-    ],
+    "rootDirs": [".."],
     "allowJs": true,
     "paths": {
       "koa-webpack-middleware": [
@@ -18,7 +16,5 @@
     }
   },
   "include": ["./**/*"],
-  "exclude": [
-    "../node_modules"
-  ]
+  "exclude": ["../node_modules"]
 }

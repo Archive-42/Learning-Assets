@@ -124,7 +124,9 @@ export abstract class SQLDatabase {
     let timestring =
       t < 5
         ? chalk.bgGreenBright.black(tv)
-        : t < 100 ? chalk.bgYellowBright.black(tv) : chalk.bgRedBright.white(tv);
+        : t < 100
+        ? chalk.bgYellowBright.black(tv)
+        : chalk.bgRedBright.white(tv);
     logger.info(
       [
         colorizeQuery(query) + ` (${timestring})`,

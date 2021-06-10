@@ -19,8 +19,8 @@ class SupplierProductListTest {
     let [supplierResult] = await getAllSuppliers();
     let allProducts = await getAllProducts();
     let productsString = allProducts
-      .filter(p => p.supplierid === supplierResult.id)
-      .map(p => p.productname)
+      .filter((p) => p.supplierid === supplierResult.id)
+      .map((p) => p.productname)
       .sort()
       .join(', ');
 

@@ -15,14 +15,14 @@ import { timeout } from './utils';
 const MASTER_DB_FILE = path.join(PROJECT_ROOT, dbConfig.sqlite.filename);
 
 async function fileExists(pth: string) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     fs.exists(pth, resolve);
   });
 }
 
 const copyFile = (src: string, dst: string) =>
   new Promise((resolve, reject) => {
-    fs.copy(src, dst, err => {
+    fs.copy(src, dst, (err) => {
       if (err) {
         reject(err);
       } else {
@@ -53,14 +53,14 @@ export default class SQLiteDB extends SQLDatabase {
       }
     }
 
-    dbPromises[name] = sqlite.open(pathToDb, { verbose: true }).then(sqliteDb => {
+    dbPromises[name] = sqlite.open(pathToDb, { verbose: true }).then((sqliteDb) => {
       let db = new SQLiteDB(sqliteDb);
       return db
         .get(sql`PRAGMA foreign_keys = ON`)
         .then(() => {
           return setupPreparedStatements(db);
         })
-        .then(statements => {
+        .then((statements) => {
           db.statements = statements;
           return db;
         });

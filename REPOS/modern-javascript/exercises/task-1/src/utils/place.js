@@ -27,18 +27,18 @@ function urlForPlaceDetails(placeId) {
  */
 export function placesQuery(input) {
   return fetch(urlForQuery(input))
-    .then(response => response.json())
-    .then(jsonData => {
+    .then((response) => response.json())
+    .then((jsonData) => {
       return jsonData.predictions;
     });
 }
 
 export function detailsFromPlaceIds(placeids) {
   return Promise.all(
-    placeids.map(placeid => {
+    placeids.map((placeid) => {
       return fetch(urlForPlaceDetails(placeid))
-        .then(response => response.json())
-        .then(jsonData => jsonData.result);
+        .then((response) => response.json())
+        .then((jsonData) => jsonData.result);
     })
   );
 }

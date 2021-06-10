@@ -1,7 +1,5 @@
 declare module 'debounce' {
-  namespace debounce {
-
-  }
+  namespace debounce {}
   function debounce<A extends Function>(
     f: A,
     interval?: number,

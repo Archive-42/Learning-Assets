@@ -1,13 +1,13 @@
-const Sequelize = require('sequelize');
-const path = require('path');
-const fs = require('fs');
-const chalk = require('chalk');
-const dbModels = require('./models');
-const debug = require('debug')('fegrocer:db');
-const PROJECT_ROOT_PATH = path.join(__dirname, '..');
+const Sequelize = require("sequelize");
+const path = require("path");
+const fs = require("fs");
+const chalk = require("chalk");
+const dbModels = require("./models");
+const debug = require("debug")("fegrocer:db");
+const PROJECT_ROOT_PATH = path.join(__dirname, "..");
 
 function dbPath(name) {
-  return path.join(PROJECT_ROOT_PATH, 'db', `${name}.sqlite`);
+  return path.join(PROJECT_ROOT_PATH, "db", `${name}.sqlite`);
 }
 
 async function openDb(name) {
@@ -19,14 +19,14 @@ async function openDb(name) {
         reject(`File not found: ${databasePath}`);
       }
       let sequelize = new Sequelize({
-        dialect: 'sqlite',
+        dialect: "sqlite",
         pool: {
           max: 5,
           min: 0,
-          idle: 10000
+          idle: 10000,
         },
         logging: (x) => debug(x),
-        storage: databasePath
+        storage: databasePath,
       });
       resolve(sequelize);
     });
@@ -35,13 +35,13 @@ async function openDb(name) {
 
 async function ensureDevelopmentDbExists() {
   return new Promise((resolve, reject) => {
-    fs.exists(dbPath('development'), (itExists) => {
+    fs.exists(dbPath("development"), (itExists) => {
       if (!itExists) {
         let stream = fs
-          .createReadStream(dbPath('master'))
-          .pipe(fs.createWriteStream(dbPath('development')));
-        stream.on('finish', resolve);
-        stream.on('error', reject);
+          .createReadStream(dbPath("master"))
+          .pipe(fs.createWriteStream(dbPath("development")));
+        stream.on("finish", resolve);
+        stream.on("error", reject);
       } else {
         resolve();
       }
@@ -56,15 +56,20 @@ class Db {
   async _connectToDatabase() {
     let conn;
     try {
-      conn = await openDb('development');
+      conn = await openDb("development");
     } catch (err) {
-      process.stderr.write(chalk.red(' - Problem connecting to database\n', err));
+      process.stderr.write(
+        chalk.red(" - Problem connecting to database\n", err)
+      );
       process.exit(1);
     }
-    return conn.authenticate()
+    return conn
+      .authenticate()
       .then(() => conn)
       .catch((err) => {
-        process.stderr.write(chalk.red(' - Problem authenticating to database\n', err));
+        process.stderr.write(
+          chalk.red(" - Problem authenticating to database\n", err)
+        );
         process.exit(1);
       });
   }
@@ -83,7 +88,7 @@ class Db {
 
   get models() {
     if (!this.db) {
-      throw new Error('DB has not been started yet');
+      throw new Error("DB has not been started yet");
     }
     if (this._models === null) {
       this._models = dbModels(this.db);

@@ -20,7 +20,5 @@ export default function concatHelper(...parts: any[]): string | any[] {
     return concatArray(contents[0] as any[], contents.slice(1));
   }
 
-  throw new Error(
-    `Unknown type of first value ${contents[0]} (${typeof contents[0]})`
-  );
+  throw new Error(`Unknown type of first value ${contents[0]} (${typeof contents[0]})`);
 }

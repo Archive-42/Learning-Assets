@@ -23,14 +23,17 @@ class MigrationIndicesTest {
   public async postgresProductIndicesPresent() {
     let db = await getDb();
     let indexInfo = await db.getIndicesForTable('product');
-    assert.includeMembers(indexInfo.map(s => s.toLowerCase()), [
-      'product_tags',
-      'product_spicy',
-      'product_salty',
-      'product_sour',
-      'product_sweet',
-      'product_bitter'
-    ]);
+    assert.includeMembers(
+      indexInfo.map((s) => s.toLowerCase()),
+      [
+        'product_tags',
+        'product_spicy',
+        'product_salty',
+        'product_sour',
+        'product_sweet',
+        'product_bitter'
+      ]
+    );
   }
 
   @test('[MYSQL ONLY] Generated columns for flavors are found on product table')

@@ -1,7 +1,7 @@
-const webpack = require('webpack');
+const webpack = require("webpack");
 // @ts-ignore
-const { devMiddleware, hotMiddleware } = require('koa-webpack-middleware');
-const devConfig = require('../webpack.config.dev');
+const { devMiddleware, hotMiddleware } = require("koa-webpack-middleware");
+const devConfig = require("../webpack.config.dev");
 // @ts-ignore
 const compiler = webpack(devConfig);
 
@@ -25,20 +25,20 @@ function dev() {
 
     // public path to bind the middleware to
     // use the same as in webpack
-    publicPath: '/',
+    publicPath: "/",
 
     // custom headers
-    headers: { 'X-Custom-Header': 'yes' },
+    headers: { "X-Custom-Header": "yes" },
 
     // options for formating the statistics
-    stats: 'minimal',
+    stats: "minimal",
   });
 }
 
 function hot() {
   return hotMiddleware(compiler, {
     log: console.log,
-    path: '/__webpack_hmr',
+    path: "/__webpack_hmr",
     // heartbeat: 10 * 1000
   });
 }

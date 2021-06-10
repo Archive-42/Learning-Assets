@@ -11,13 +11,9 @@
     "max-line-length": [false],
     "no-consecutive-blank-lines": false,
     "eofline": false,
-    "no-trailing-whitespace": [
-      false
-    ],
+    "no-trailing-whitespace": [false],
     "no-console": false,
-    "variable-name": [
-      false
-    ],
+    "variable-name": [false],
     "space-before-function-paren": false
   },
   "rules": {
@@ -30,9 +26,7 @@
     "curly": false,
     "max-line-length": [false],
     "eofline": false,
-    "no-trailing-whitespace": [
-      false
-    ],
+    "no-trailing-whitespace": [false],
     "no-console": false,
     "space-before-function-paren": false
   }

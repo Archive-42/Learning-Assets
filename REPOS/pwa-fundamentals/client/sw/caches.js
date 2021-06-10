@@ -2,23 +2,23 @@ const CACHE_VERSION = 2;
 const CACHE_PREFIX = `FEG-v${CACHE_VERSION}`;
 
 export const ALL_CACHES = {
-  fallbackImages: cacheName('FALLBACK_IMAGES'),
-  prefetch: cacheName('PREFETCH'),
-  fallback: cacheName('FALLBACK')
+  fallbackImages: cacheName("FALLBACK_IMAGES"),
+  prefetch: cacheName("PREFETCH"),
+  fallback: cacheName("FALLBACK"),
 };
 
 function cacheName(name) {
   return `${CACHE_PREFIX}-${name}`;
 }
 
-export const ALL_CACHES_LIST = Object
-  .keys(ALL_CACHES)
-  .map((k) => ALL_CACHES[k]);
+export const ALL_CACHES_LIST = Object.keys(ALL_CACHES).map(
+  (k) => ALL_CACHES[k]
+);
 
 /**
  * Delete all caches other than those whose names are
  * provided in a list
- * 
+ *
  * @public
  * @param {string[]} cacheNamesToKeep names of caches to keep
  * @return {Promise}
@@ -31,7 +31,7 @@ export function removeUnusedCaches(cacheNamesToKeep) {
       return list;
     }, []);
     if (toDelete.length > 0) {
-      console.log('SW: Deleting old caches', toDelete);
+      console.log("SW: Deleting old caches", toDelete);
       return Promise.all(toDelete.map((c) => caches.delete(c)));
     } else {
       return Promise.resolve();
@@ -52,9 +52,9 @@ export function removeUnusedCaches(cacheNamesToKeep) {
 /**
  * Check whether a given filename represents a resource
  * that should be precached
- * 
+ *
  * @private
- * @param {string} fileName 
+ * @param {string} fileName
  * @return {boolean}
  */
 // function _shouldPrecacheFile(fileName) {

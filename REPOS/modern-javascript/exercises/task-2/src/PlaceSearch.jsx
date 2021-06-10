@@ -9,28 +9,31 @@ import { shortUrl } from './utils/string';
  * @prop {HTMLInputElement} target
  */
 
-const SearchResultItem = ({result}) => (
+const SearchResultItem = ({ result }) => (
   <li key={result.id} className="search-result">
     <img className="icon" src={result.icon} />
     <h3>{result.name}</h3>
     <p>
-      <a href={result.url} target="_blank">{result.vicinity}</a> -
-      <a href={result.website} target="_blank">{shortUrl(result.website, 20)}</a>
+      <a href={result.url} target="_blank">
+        {result.vicinity}
+      </a>{' '}
+      -
+      <a href={result.website} target="_blank">
+        {shortUrl(result.website, 20)}
+      </a>
     </p>
   </li>
 );
 
-const SearchResultItemList = ({trySearch, results}) => (
+const SearchResultItemList = ({ trySearch, results }) => (
   <div>
     <h2>Search for a place</h2>
     <input type="search" placeholder="Search" onInput={trySearch} />
-    <ul className="results">
-      {results}
-    </ul>
+    <ul className="results">{results}</ul>
   </div>
 );
 
-const SearchResults = ({search, results, trySearch}) => {
+const SearchResults = ({ search, results, trySearch }) => {
   /**
    * There are a bunch of different things that we could end up
    * displaying as feedback to the user. Below we handle each of
@@ -40,20 +43,24 @@ const SearchResults = ({search, results, trySearch}) => {
   let searchResults = [];
   if (!search) {
     // No search yet
-    searchResults = [<li key='goahead'>Type something in above to search</li>];
+    searchResults = [<li key="goahead">Type something in above to search</li>];
   } else if (search && results.length === 0) {
     // Search in progress
     searchResults = [
-      <li key='inprogress' className="blue">Searching for {search.term}...</li>
+      <li key="inprogress" className="blue">
+        Searching for {search.term}...
+      </li>
     ];
   } else if (results.length === 0) {
     // No results found
     searchResults = [
-      <li key='noresults' className="red">Sorry! No results for {search.term}.</li>
+      <li key="noresults" className="red">
+        Sorry! No results for {search.term}.
+      </li>
     ];
   } else {
     // Search complete
-    searchResults = results.map(r => <SearchResultItem result={r} />);
+    searchResults = results.map((r) => <SearchResultItem result={r} />);
   }
   return <SearchResultItemList results={searchResults} trySearch={trySearch} />;
 };
@@ -70,13 +77,13 @@ export class PlaceSearch extends Component {
   }
   /**
    * Event handler for changes to the serch term
-   * 
+   *
    * @param {InputEvent} evt from the search field
    * @return {void}
    */
   trySearch(evt) {
     // Kick off a search
-    let p = autocomplete(evt.target.value).then(results => {
+    let p = autocomplete(evt.target.value).then((results) => {
       // When the search completes, update the "results" state, triggering a re-render
       if (this.state.search === p) this.setState({ results });
     });
@@ -86,10 +93,14 @@ export class PlaceSearch extends Component {
   }
   render() {
     let { results, search } = this.state;
-    return <SearchResults {...{
-      results,
-      search,
-      trySearch: this.trySearch
-    }} />;
+    return (
+      <SearchResults
+        {...{
+          results,
+          search,
+          trySearch: this.trySearch
+        }}
+      />
+    );
   }
 }

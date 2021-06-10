@@ -18,16 +18,8 @@ class CustomerOrdersPaginationTest {
       page: 1
     });
     assert.isArray(first20Result, 'Expected result to be an array');
-    assert.equal(
-      first20Result.length,
-      20,
-      'Expected 20 orders in array when perPage = 20'
-    );
-    assert.equal(
-      first40Result.length,
-      40,
-      'Expected 40 orders in array when perPage = 40'
-    );
+    assert.equal(first20Result.length, 20, 'Expected 20 orders in array when perPage = 20');
+    assert.equal(first40Result.length, 40, 'Expected 40 orders in array when perPage = 40');
   }
 
   @test('When perPage = 20, page 2 starts at item 20')
@@ -67,11 +59,7 @@ class CustomerOrdersPaginationTest {
     let result = await getCustomerOrders('ANTON');
     let firstPageResult = await getCustomerOrders('ANTON', { page: 1 });
     assert.isArray(result, 'Expected result to be an array');
-    assert.equal(
-      result.length,
-      firstPageResult.length,
-      'Page length is the same'
-    );
+    assert.equal(result.length, firstPageResult.length, 'Page length is the same');
     assert.isArray(firstPageResult, 'Expected result to be an array');
     assert.deepEqual(
       result[0],

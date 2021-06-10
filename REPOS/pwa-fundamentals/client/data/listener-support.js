@@ -7,9 +7,9 @@
  */
 export default class ListenerSupport {
   constructor() {
-    this._listeners = []
+    this._listeners = [];
   }
-  
+
   /**
    * Register a listener
    * @param {function} listener callback to invoke whenever listeners need to be notified
@@ -31,8 +31,8 @@ export default class ListenerSupport {
 
   /**
    * Fire an event, synchronously invoking all listener callbacks that have been registered
-   * @see #register 
-   * @param {any} payload 
+   * @see #register
+   * @param {any} payload
    */
   fire(payload) {
     this._listeners.forEach((x) => x(payload));

@@ -1,17 +1,21 @@
 // @ts-check
-import * as React from 'react';
+import * as React from "react";
 
-import './styles.scss';
+import "./styles.scss";
 
-function SideDrawer({ drawerShowing, children, side}: {drawerShowing: boolean, children: any[], side: string}) {
-  const topClasses = ['sidedrawer', 'mui--no-user-select', (side || 'left')];
+function SideDrawer({
+  drawerShowing,
+  children,
+  side,
+}: {
+  drawerShowing: boolean;
+  children: any[];
+  side: string;
+}) {
+  const topClasses = ["sidedrawer", "mui--no-user-select", side || "left"];
   if (drawerShowing) {
-    topClasses.push('active');
+    topClasses.push("active");
   }
-  return (
-    <div className={topClasses.join(' ')}>
-      {children}
-    </div>
-  );
+  return <div className={topClasses.join(" ")}>{children}</div>;
 }
 export default SideDrawer;

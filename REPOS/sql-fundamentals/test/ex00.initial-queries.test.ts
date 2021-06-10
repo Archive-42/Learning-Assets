@@ -40,11 +40,7 @@ class InitialListQueriesTest {
   public async allProducts() {
     let result = await getAllProducts();
     assert.isArray(result, 'Expected result to be an array');
-    assert.isAbove(
-      result.length,
-      20,
-      'Expected more than 20 products in array'
-    );
+    assert.isAbove(result.length, 20, 'Expected more than 20 products in array');
     validateRecordColumns(
       { recordType: 'product', functionName: 'getAllProducts' },
       result[3],
@@ -100,11 +96,7 @@ class InitialListQueriesTest {
   public async allOrders() {
     let result = await getAllOrders({ perPage: 50000 });
     assert.isArray(result, 'Expected result to be an array');
-    assert.isAbove(
-      result.length,
-      800,
-      'Expected more than 800 orders in array'
-    );
+    assert.isAbove(result.length, 800, 'Expected more than 800 orders in array');
     validateRecordColumns(
       { recordType: 'order', functionName: 'getAllOrders' },
       result[2],
@@ -116,11 +108,7 @@ class InitialListQueriesTest {
   public async allCustomers() {
     let result = await getAllCustomers();
     assert.isArray(result, 'Expected result to be an array');
-    assert.isAbove(
-      result.length,
-      40,
-      'Expected more than 40 customers in array'
-    );
+    assert.isAbove(result.length, 40, 'Expected more than 40 customers in array');
     validateRecordColumns(
       { recordType: 'customer', functionName: 'getAllCustomers' },
       result[2],
@@ -132,11 +120,7 @@ class InitialListQueriesTest {
   public async allSuppliers() {
     let result = await getAllSuppliers();
     assert.isArray(result, 'Expected result to be an array');
-    assert.isAbove(
-      result.length,
-      20,
-      'Expected more than 20 suppliers in array'
-    );
+    assert.isAbove(result.length, 20, 'Expected more than 20 suppliers in array');
     validateRecordColumns(
       { recordType: 'supplier', functionName: 'getAllSuppliers' },
       result[3],

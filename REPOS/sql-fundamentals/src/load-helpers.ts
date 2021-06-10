@@ -17,7 +17,7 @@ async function readdir(name: string): Promise<string[]> {
 
 async function getHelperNames() {
   let files: string[] = await readdir(join(PROJECT_ROOT, 'src', 'helpers'));
-  return files.map(f => f.split('.')[0]);
+  return files.map((f) => f.split('.')[0]);
 }
 
 export async function loadHandlebarsHelpers(): Promise<Handlebars.HelperSet> {

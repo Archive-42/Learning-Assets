@@ -2,17 +2,12 @@ import { assert } from 'chai';
 import * as fs from 'fs';
 import * as path from 'path';
 
-export function assertMigrationCount(
-  migrationCount: number,
-  sqlsCount = migrationCount
-) {
+export function assertMigrationCount(migrationCount: number, sqlsCount = migrationCount) {
   assert.ok(
     fs.existsSync(path.join(__dirname, '..', '..', 'migrations')),
     './migrations folder exists'
   );
-  let migrationsFiles = fs.readdirSync(
-    path.join(__dirname, '..', '..', 'migrations')
-  );
+  let migrationsFiles = fs.readdirSync(path.join(__dirname, '..', '..', 'migrations'));
   assert.ok(
     fs.existsSync(path.join(__dirname, '..', '..', 'migrations', 'sqls')),
     './sqls folder exists'
@@ -27,9 +22,7 @@ export function assertMigrationCount(
     migrationCount,
     `There are at least ${migrationCount} things in the ./migrations folder`
   );
-  let migrationsSqlsFiles = fs.readdirSync(
-    path.join(__dirname, '..', '..', 'migrations', 'sqls')
-  );
+  let migrationsSqlsFiles = fs.readdirSync(path.join(__dirname, '..', '..', 'migrations', 'sqls'));
   assert.isAtLeast(
     migrationsSqlsFiles.length,
     sqlsCount,
@@ -37,7 +30,7 @@ export function assertMigrationCount(
   );
   let downMigrationCount = 0;
   let upMigrationCount = 0;
-  migrationsSqlsFiles.forEach(fileName => {
+  migrationsSqlsFiles.forEach((fileName) => {
     if (fileName.includes('-down')) {
       downMigrationCount++;
     }

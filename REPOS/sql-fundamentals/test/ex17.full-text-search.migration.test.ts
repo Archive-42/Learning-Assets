@@ -16,17 +16,21 @@ class FullTextSearchMigrationTest {
   @test('product_fts, customer_fts, employee_fts and supplier_fts indices are found')
   public async productIndicesPresent() {
     let db = await getDb();
-    assert.includeMembers((await db.getIndicesForTable('product')).map(s => s.toLowerCase()), [
-      'product_fts'
-    ]);
-    assert.includeMembers((await db.getIndicesForTable('customer')).map(s => s.toLowerCase()), [
-      'customer_fts'
-    ]);
-    assert.includeMembers((await db.getIndicesForTable('supplier')).map(s => s.toLowerCase()), [
-      'supplier_fts'
-    ]);
-    assert.includeMembers((await db.getIndicesForTable('employee')).map(s => s.toLowerCase()), [
-      'employee_fts'
-    ]);
+    assert.includeMembers(
+      (await db.getIndicesForTable('product')).map((s) => s.toLowerCase()),
+      ['product_fts']
+    );
+    assert.includeMembers(
+      (await db.getIndicesForTable('customer')).map((s) => s.toLowerCase()),
+      ['customer_fts']
+    );
+    assert.includeMembers(
+      (await db.getIndicesForTable('supplier')).map((s) => s.toLowerCase()),
+      ['supplier_fts']
+    );
+    assert.includeMembers(
+      (await db.getIndicesForTable('employee')).map((s) => s.toLowerCase()),
+      ['employee_fts']
+    );
   }
 }

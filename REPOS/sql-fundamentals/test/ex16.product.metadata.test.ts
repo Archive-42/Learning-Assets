@@ -115,7 +115,7 @@ class ProductMetadataJsonTest {
     );
     assert.ok(
       sweetSourResults.every(
-        p =>
+        (p) =>
           p &&
           p.metadata &&
           p.metadata.flavor &&
@@ -126,11 +126,12 @@ class ProductMetadataJsonTest {
     );
     assert.ok(
       differenceWith(allResults, sweetSourResults, (a: any, b: any) => a.id === b.id).every(
-        p =>
+        (p) =>
           !p ||
           !p.metadata ||
           !p.metadata.flavor ||
-          (p.metadata.flavor.sweet <= 2 || p.metadata.flavor.sour <= 2)
+          p.metadata.flavor.sweet <= 2 ||
+          p.metadata.flavor.sour <= 2
       ),
       'All results excluded by sweet-sour filter have sweet <= 2 OR sour <= 2'
     );
@@ -163,7 +164,7 @@ class ProductMetadataJsonTest {
     );
     assert.ok(
       sweetHotResults.every(
-        p =>
+        (p) =>
           p.metadata &&
           p.metadata.flavor &&
           p.metadata.flavor.sweet > 2 &&
@@ -173,7 +174,7 @@ class ProductMetadataJsonTest {
     );
     assert.ok(
       differenceWith(allResults, sweetHotResults, (a: any, b: any) => a.id === b.id).every(
-        p => !p.metadata || p.metadata.flavor.sweet <= 2 || p.metadata.flavor.spicy <= 2
+        (p) => !p.metadata || p.metadata.flavor.sweet <= 2 || p.metadata.flavor.spicy <= 2
       ),
       'All results excluded by sweet-hot filter have sweet <= 2 OR spicy <= 2'
     );

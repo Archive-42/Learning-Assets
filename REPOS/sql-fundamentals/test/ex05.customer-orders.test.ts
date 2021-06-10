@@ -18,7 +18,7 @@ class CustomerOrderCountTest {
   public async orderCountIsCorrect() {
     let [customer] = await getAllCustomers();
     let allOrders = await getAllOrders({ page: 1, perPage: 999999 });
-    let orderCt = allOrders.filter(o => o.customerid === customer.id).length;
+    let orderCt = allOrders.filter((o) => o.customerid === customer.id).length;
     assert.ok(customer.ordercount);
     assert.equal(customer.ordercount, orderCt);
   }

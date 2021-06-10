@@ -17,7 +17,7 @@ export function isPromise(x) {
  * @returns {Promise} a promise that will resolve after time
  */
 export function wait(time) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve();
     }, time);

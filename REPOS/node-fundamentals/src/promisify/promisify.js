@@ -2,7 +2,7 @@ const { join } = require('path');
 const fs = require('fs');
 
 function promisify(fn) {
-  return function() {
+  return function () {
     let args = [...arguments];
     return new Promise((resolve, reject) => {
       fn(
@@ -26,7 +26,7 @@ function promisify(fn) {
 module.exports.main = function main(stdin, stdout) {
   let pReadDir = promisify(fs.readdir);
   stdout.write('Reading some files\n');
-  pReadDir(join(__dirname, '..', '..')).then(res => {
+  pReadDir(join(__dirname, '..', '..')).then((res) => {
     stdout.write(`res -> ${res}\n`);
   });
 };

@@ -11,5 +11,5 @@ interface ICartItem {
   qty: number;
 }
 
-declare module 'muicss/lib/react/container';
-declare module 'muicss/lib/react/appbar';
+declare module "muicss/lib/react/container";
+declare module "muicss/lib/react/appbar";

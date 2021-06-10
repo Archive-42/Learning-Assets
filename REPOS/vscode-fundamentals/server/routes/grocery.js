@@ -1,5 +1,5 @@
-const Router = require('koa-router');
-const Db = require('../db');
+const Router = require("koa-router");
+const Db = require("../db");
 
 let router = new Router();
 let _cachedCategories = null;
@@ -14,7 +14,7 @@ function toTitleCase(rawStr) {
   return rawStr
     .split(/[\s-]+/g)
     .map((s) => capitalize(s))
-    .join(' ');
+    .join(" ");
 }
 
 function prepareQuery(rawQuery) {
@@ -23,35 +23,38 @@ function prepareQuery(rawQuery) {
   let safeQuery = { limit, offset };
   if (category) {
     safeQuery.where = {
-      category: toTitleCase(category)
+      category: toTitleCase(category),
     };
   }
   return safeQuery;
 }
 
 router
-  .get('/categories', async function(ctx, next) {
-    const GroceryItem = Db.instance.models['grocery-item'];
-    
+  .get("/categories", async function (ctx, next) {
+    const GroceryItem = Db.instance.models["grocery-item"];
+
     if (_cachedCategories) {
       ctx.body = { data: _cachedCategories };
     }
     try {
-      let results = await GroceryItem.count({ attributes: ['category'], group: 'category' });
+      let results = await GroceryItem.count({
+        attributes: ["category"],
+        group: "category",
+      });
       _cachedCategories = results;
       ctx.body = { data: results };
     } catch (err) {
       ctx.body = { error: `Problem fetching data: ${err}` };
     }
   })
-  .get('/items', async function (ctx, next) {
-    const GroceryItem = Db.instance.models['grocery-item'];
+  .get("/items", async function (ctx, next) {
+    const GroceryItem = Db.instance.models["grocery-item"];
     let queryOptions = prepareQuery(ctx.query || {});
-    
+
     try {
       let results = await GroceryItem.findAll(queryOptions);
-      let plainResults = results.map((x) => x.get({plain: true}));
-      ctx.body = {data: plainResults};  
+      let plainResults = results.map((x) => x.get({ plain: true }));
+      ctx.body = { data: plainResults };
     } catch (err) {
       ctx.body = { error: `Problem fetching data: ${err}` };
     }

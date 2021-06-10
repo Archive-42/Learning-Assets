@@ -1,9 +1,11 @@
 {
   "hosting": {
     "public": "dist",
-    "rewrites": [{
-      "source" : "/",
-      "destination" : "/dist/index.html"
-    }]
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/dist/index.html"
+      }
+    ]
   }
 }

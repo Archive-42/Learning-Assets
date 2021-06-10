@@ -91,11 +91,11 @@ class ProductTagsTest {
       'filtered products are a subset of all products'
     );
     assert.ok(
-      filteredResults.every(p => p.tags.indexOf('foo') >= 0),
+      filteredResults.every((p) => p.tags.indexOf('foo') >= 0),
       'All results from tag filter have "foo" tag'
     );
     assert.ok(
-      difference(allResults, filteredResults).every(p => (p.tags || []).indexOf('foo') < 0),
+      difference(allResults, filteredResults).every((p) => (p.tags || []).indexOf('foo') < 0),
       'All results excluded by tag filter are missing tag'
     );
   }

@@ -2,7 +2,6 @@
 
 ## Customizing Visual Studio Code
 
-* 🎨 [Workspace Customization](./workspace.md)
-* ☑️ [Tasks](./tasks.md)
-* 🚀 [Launch Configuration](./launch-configuration.md)
-
+- 🎨 [Workspace Customization](./workspace.md)
+- ☑️ [Tasks](./tasks.md)
+- 🚀 [Launch Configuration](./launch-configuration.md)

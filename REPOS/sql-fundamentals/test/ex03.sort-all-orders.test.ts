@@ -15,12 +15,10 @@ class AllOrdersSortTest {
     assert.deepEqual(firstPageResult, sortedById);
   }
 
-  @test(
-    'using order="desc" (and specifying no column to sort on) sorts decending by id'
-  )
+  @test('using order="desc" (and specifying no column to sort on) sorts decending by id')
   public async orderListDesc() {
     let firstPageResult = await getAllOrders({ perPage: 3, order: 'desc' });
-    let sortedById = sortBy(firstPageResult, o => {
+    let sortedById = sortBy(firstPageResult, (o) => {
       let id: number = typeof o.id === 'string' ? parseInt(o.id, 10) : o.id;
       return -1 * id;
     });

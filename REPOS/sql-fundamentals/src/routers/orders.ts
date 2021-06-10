@@ -24,43 +24,17 @@ const router = express.Router();
  * any required properties are missing, they're of the wrong types, etc...
  */
 const CREATE_ORDER_VALIDATIONS = [
-  check('employeeid')
-    .exists()
-    .isNumeric()
-    .toInt(),
-  check('customerid')
-    .exists()
-    .isAlphanumeric()
-    .trim(),
-  check('shipcity')
-    .exists()
-    .trim(),
-  check('shipaddress')
-    .exists()
-    .trim(),
-  check('shipname')
-    .exists()
-    .trim(),
-  check('shipvia')
-    .exists()
-    .isNumeric()
-    .toInt(),
-  check('shipregion')
-    .exists()
-    .isNumeric()
-    .toInt(),
-  check('shipcountry')
-    .exists()
-    .trim(),
-  check('shippostalcode')
-    .exists()
-    .isAlphanumeric()
-    .trim(),
+  check('employeeid').exists().isNumeric().toInt(),
+  check('customerid').exists().isAlphanumeric().trim(),
+  check('shipcity').exists().trim(),
+  check('shipaddress').exists().trim(),
+  check('shipname').exists().trim(),
+  check('shipvia').exists().isNumeric().toInt(),
+  check('shipregion').exists().isNumeric().toInt(),
+  check('shipcountry').exists().trim(),
+  check('shippostalcode').exists().isAlphanumeric().trim(),
   check('requireddate').exists(),
-  check('freight')
-    .exists()
-    .isFloat()
-    .toFloat(),
+  check('freight').exists().isFloat().toFloat(),
   check('details.id')
     .optional()
     .custom((value: any[]) => value instanceof Array),
@@ -167,9 +141,8 @@ router.post('/', CREATE_ORDER_VALIDATIONS, async (req: Request, res: Response) =
   // matchedData returns only the subset of data validated by the middleware
   const orderData = matchedData(req) as any;
   let detailsObj = orderData.details || {};
-  let details: Array<
-    Pick<OrderDetail, 'productid' | 'quantity' | 'unitprice' | 'discount'>
-  > = normalizeOrderDetails(detailsObj);
+  let details: Array<Pick<OrderDetail, 'productid' | 'quantity' | 'unitprice' | 'discount'>> =
+    normalizeOrderDetails(detailsObj);
   try {
     let order = await createOrder(orderData, details); // * get the data
     res.redirect(`orders/${order.id}`);

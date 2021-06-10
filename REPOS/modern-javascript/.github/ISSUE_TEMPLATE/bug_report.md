@@ -1,7 +1,6 @@
 ---
 name: Bug report
 about: Something broke while you were progressing through the workshop
-
 ---
 
 <!-- 🚨🚨🚨 READ THIS FIRST 🚨🚨🚨 -->
@@ -10,6 +9,7 @@ about: Something broke while you were progressing through the workshop
 -->
 
 - [ ] **System Information**
+
   - [ ] Browser type and version
   - [ ] OS type and version
   - [ ] WINDOWS: be sure to indicate which terminal you're using -- (i.e., cmd.exe, powershell, git- bash, cygwin, Ubuntu via windows subsystem for linux, etc...)
@@ -21,17 +21,18 @@ about: Something broke while you were progressing through the workshop
 <!-- A clear and concise description of what the bug is. -->
 
 - [ ] **To Reproduce**
-Steps to reproduce the behavior:
+      Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
 - [ ] **Expected behavior**
-A clear and concise description of what you expected to happen.
+      A clear and concise description of what you expected to happen.
 
 - [ ] **Screenshots (optional)**
-If applicable, add screenshots to help explain your problem.
+      If applicable, add screenshots to help explain your problem.
 
 - [ ] **Additional context (optional)**
-Add any other context about the problem here.
+      Add any other context about the problem here.

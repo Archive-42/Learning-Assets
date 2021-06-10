@@ -1,4 +1,2 @@
 // jest.config.js
-module.exports = {
-
-};
+module.exports = {};

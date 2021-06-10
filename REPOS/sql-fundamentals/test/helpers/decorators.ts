@@ -5,9 +5,7 @@ import { logger } from '../../src/log';
 export function onlyForDatabaseTypes<T>(...types: DbType[]): MethodDecorator {
   return (target: object, propertyName: string | symbol): void => {
     if (types.indexOf(DB_TYPE) < 0) {
-      logger.warn(
-        `Skipping ${(target as any)[propertyName].name} for ${DbType[DB_TYPE]}`
-      );
+      logger.warn(`Skipping ${(target as any)[propertyName].name} for ${DbType[DB_TYPE]}`);
       test.skip(target, propertyName);
     }
   };

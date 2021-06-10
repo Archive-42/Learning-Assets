@@ -11,6 +11,9 @@ class PubSubTest {
   public async productIndicesPresent() {
     let db = await getDb();
     let indexInfo = await db.getAllFunctions();
-    assert.includeMembers(indexInfo.map(s => s.toLowerCase()), ['table_update_notify']);
+    assert.includeMembers(
+      indexInfo.map((s) => s.toLowerCase()),
+      ['table_update_notify']
+    );
   }
 }

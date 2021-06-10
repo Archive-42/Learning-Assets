@@ -35,26 +35,11 @@ const ALL_PRODUCTS_VALIDATORS = [
 ];
 
 const UPDATE_PRODUCT_VALIDATORS = [
-  check('metadata.flavor.sweet')
-    .exists()
-    .isNumeric()
-    .toInt(),
-  check('metadata.flavor.salty')
-    .exists()
-    .isNumeric()
-    .toInt(),
-  check('metadata.flavor.spicy')
-    .exists()
-    .isNumeric()
-    .toInt(),
-  check('metadata.flavor.sour')
-    .exists()
-    .isNumeric()
-    .toInt(),
-  check('metadata.flavor.bitter')
-    .exists()
-    .isNumeric()
-    .toInt(),
+  check('metadata.flavor.sweet').exists().isNumeric().toInt(),
+  check('metadata.flavor.salty').exists().isNumeric().toInt(),
+  check('metadata.flavor.spicy').exists().isNumeric().toInt(),
+  check('metadata.flavor.sour').exists().isNumeric().toInt(),
+  check('metadata.flavor.bitter').exists().isNumeric().toInt(),
   check('tags').exists()
 ];
 

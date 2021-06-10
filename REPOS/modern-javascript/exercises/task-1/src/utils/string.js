@@ -41,12 +41,7 @@ export function shortString(rawString, maxLength, reverseMode = false) {
   let stopCharacters = [' ', '/', '&'];
   let allowedShortness = maxLength * 0.8; // When to start looking for stop characters
   let reverse = typeof reverseMode !== 'undefined' ? reverseMode : false;
-  let s = reverse
-    ? rawString
-        .split('')
-        .reverse()
-        .join('')
-    : rawString;
+  let s = reverse ? rawString.split('').reverse().join('') : rawString;
   let short = '';
 
   for (let i = 0; i < maxLength; i++) {
@@ -56,10 +51,7 @@ export function shortString(rawString, maxLength, reverseMode = false) {
     }
   }
   if (reverse) {
-    return short
-      .split('')
-      .reverse()
-      .join('');
+    return short.split('').reverse().join('');
   }
   return short;
 }

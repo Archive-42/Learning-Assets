@@ -7,7 +7,6 @@ function hasFile(env, filePath) {
   return fs.existsSync(path.join(exercisePath, filePath));
 }
 
-
 module.exports = {
   hasFile
 };

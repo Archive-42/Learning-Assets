@@ -42,11 +42,7 @@ export function sqlFileMigration(name: string): Migration {
 
   function up(db: any) {
     let dbType = getDbType(db);
-    let filePath = path.join(
-      MIGRATION_PATH,
-      'sqls',
-      `${name}/${dbType}-up.sql`
-    );
+    let filePath = path.join(MIGRATION_PATH, 'sqls', `${name}/${dbType}-up.sql`);
     return new Promise((resolve, reject) => {
       fs.readFile(
         filePath,
@@ -66,18 +62,14 @@ export function sqlFileMigration(name: string): Migration {
           resolve(data);
         }
       );
-    }).then(data => {
+    }).then((data) => {
       return db.runSql(data);
     });
   }
 
   function down(db: any) {
     let dbType = getDbType(db);
-    let filePath = path.join(
-      MIGRATION_PATH,
-      'sqls',
-      `${name}/${dbType}-down.sql`
-    );
+    let filePath = path.join(MIGRATION_PATH, 'sqls', `${name}/${dbType}-down.sql`);
     return new Promise((resolve, reject) => {
       fs.readFile(
         filePath,
@@ -98,7 +90,7 @@ export function sqlFileMigration(name: string): Migration {
           resolve(data);
         }
       );
-    }).then(data => {
+    }).then((data) => {
       return db.runSql(data);
     });
   }

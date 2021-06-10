@@ -13,6 +13,6 @@ const ALL_SHIPPER_COLUMNS = ['id', 'companyname', 'phone'];
 export async function getAllShippers() {
   const db = await getDb();
   return await db.all(sql`
-SELECT ${ALL_SHIPPER_COLUMNS.map(c => `s.${c}`).join(',')}
+SELECT ${ALL_SHIPPER_COLUMNS.map((c) => `s.${c}`).join(',')}
 FROM Shipper as s`);
 }

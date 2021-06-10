@@ -31,17 +31,11 @@ class EmployeeDataTest {
     let result = await getAllProducts();
     assert.isArray(result, 'Expected result to be an array');
     // TODO: tighten assertion
-    assert.isAtLeast(
-      result.length,
-      50,
-      'Expected at least 50 products in array'
-    );
+    assert.isAtLeast(result.length, 50, 'Expected at least 50 products in array');
     assertProductCols(result[0]);
   }
 
-  @test(
-    'getAllProducts({ filter: { inventory: "discontinued" } }) only returns discontinued items'
-  )
+  @test('getAllProducts({ filter: { inventory: "discontinued" } }) only returns discontinued items')
   public async discontinuedProducts() {
     let result = await getAllProducts({
       filter: { inventory: 'discontinued' }
@@ -50,12 +44,8 @@ class EmployeeDataTest {
     // TODO: tighten assertion
     assert.isAtLeast(result.length, 5, 'Expected at least 5 products in array');
     assertProductCols(result[0]);
-    let numDiscontinued = result.filter(r => r.discontinued).length;
-    assert.equal(
-      numDiscontinued,
-      result.length,
-      'All items in result set are discontinued'
-    );
+    let numDiscontinued = result.filter((r) => r.discontinued).length;
+    assert.equal(numDiscontinued, result.length, 'All items in result set are discontinued');
   }
 
   @test(
@@ -70,7 +60,7 @@ class EmployeeDataTest {
     assertProductCols(result[0]);
 
     let numNeedingReorder = result.filter(
-      r => r.unitsinstock + r.unitsonorder < r.reorderlevel
+      (r) => r.unitsinstock + r.unitsonorder < r.reorderlevel
     ).length;
 
     assert.equal(

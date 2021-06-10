@@ -1,7 +1,7 @@
 // @ts-check
 
-import ListenerSupport from './listener-support';
-import { endpoint as API_ENDPOINT } from '../utils/api';
+import ListenerSupport from "./listener-support";
+import { endpoint as API_ENDPOINT } from "../utils/api";
 
 /**
  * A class for keeping track of grocery item state
@@ -37,7 +37,7 @@ export default class GroceryItemStore {
   /**
    * Get the list of categories
    * This is a read only array
-   * 
+   *
    * @public
    * @return {ReadonlyArray<String>}
    */
@@ -48,7 +48,7 @@ export default class GroceryItemStore {
   /**
    * Get the list of grocery items
    * This is a read only array
-   * 
+   *
    * @public
    * @return {ReadonlyArray<Object>}
    */
@@ -60,7 +60,7 @@ export default class GroceryItemStore {
    * Get a filtered list of items for a particular category
    * This does not result in a new request being sent out, it only
    * filters results already available locally
-   * 
+   *
    * @public
    * @param {String} categoryName name of category to filter by
    * @param {Number} limit maximum number of items to return
@@ -69,7 +69,9 @@ export default class GroceryItemStore {
   itemsForCategory(categoryName, limit) {
     return Promise.resolve(
       this.items
-        .filter((item) => item.category.toLowerCase() === categoryName.toLowerCase())
+        .filter(
+          (item) => item.category.toLowerCase() === categoryName.toLowerCase()
+        )
         .slice(0, limit)
     );
   }
@@ -77,7 +79,7 @@ export default class GroceryItemStore {
   /**
    * Given an array of grocery items, add new ones we haven't seen yet to the _items array
    * and update existing ones to reflect any changes in properties
-   *  
+   *
    * @private
    * @param {Array<Object>} data array of grocery items to push into the store
    * @return {void}
@@ -87,7 +89,7 @@ export default class GroceryItemStore {
     this._items.forEach((i) => {
       itemHash[i.id] = i;
     });
-    data.forEach((dataItem) => itemHash[dataItem.id] = dataItem);
+    data.forEach((dataItem) => (itemHash[dataItem.id] = dataItem));
     this._items = Object.keys(itemHash).map((k) => itemHash[k]);
   }
 
@@ -95,14 +97,16 @@ export default class GroceryItemStore {
    * Retrieve fresh data for grocery items pertaining to a particular category
    * They will get pushed into the store, and any appropriate listeners will fire
    * as a result of this process.
-   * 
+   *
    * @public
    * @param {String} categoryName name of category to filter by
    * @param {Number} limit maximum number of items to return
    * @return {Promise<ReadonlyArray<Object>>}
    */
   updateItemsForCategory(categoryName, limit = 10) {
-    return fetch(`${API_ENDPOINT}api/grocery/items?category=${categoryName}&limit=${limit}`)
+    return fetch(
+      `${API_ENDPOINT}api/grocery/items?category=${categoryName}&limit=${limit}`
+    )
       .then((resp) => resp.json())
       .then((jsonData) => {
         this._updateItems(jsonData.data);
@@ -110,7 +114,7 @@ export default class GroceryItemStore {
         return this.items;
       })
       .catch((err) => {
-        console.error('Error fetching grocery items', err);
+        console.error("Error fetching grocery items", err);
         return this.items;
       });
   }
@@ -119,7 +123,7 @@ export default class GroceryItemStore {
    * Retrieve fresh data for grocery categories.
    * They will get pushed into the store, and any appropriate listeners will
    * fire as a result of this process.
-   * 
+   *
    * @public
    * @return {Promise<ReadonlyArray<String>>}
    */
@@ -133,15 +137,15 @@ export default class GroceryItemStore {
         return this.categories;
       })
       .catch((err) => {
-        console.error('Error updating categories', err);
+        console.error("Error updating categories", err);
         return this.categories;
       });
   }
-  
+
   /**
    * Get the "initial" state for grocery items
    * For we'll start with an empty array, but we'll enhance this later!
-   * 
+   *
    * @private
    * @return {Promise}
    */
@@ -152,17 +156,17 @@ export default class GroceryItemStore {
   /**
    * Get the "initial" state for grocery categories
    * For we'll start with an empty array, but we'll enhance this later!
-   * 
+   *
    * @private
    * @return {Promise}
    */
   _restoreCategories() {
     return Promise.resolve([]);
   }
-  
+
   /**
    * Notify any registered listeners that grocery items have changed
-   * 
+   *
    * @private
    * @return {void}
    */
@@ -172,7 +176,7 @@ export default class GroceryItemStore {
 
   /**
    * Notify any registered listeners that grocery categories have changed
-   * 
+   *
    * @private
    * @return {void}
    */

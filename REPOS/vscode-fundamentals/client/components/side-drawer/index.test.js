@@ -1,10 +1,9 @@
 // @ts-nocheck
-import React from 'react';
-import SideDrawer from './index';
-import renderer from 'react-test-renderer';
+import React from "react";
+import SideDrawer from "./index";
+import renderer from "react-test-renderer";
 
-test('SideDrawer renders as expected when drawer is showing', () => {
-
+test("SideDrawer renders as expected when drawer is showing", () => {
   const component = renderer.create(
     <SideDrawer drawerShowing={true}></SideDrawer>
   );
@@ -12,8 +11,7 @@ test('SideDrawer renders as expected when drawer is showing', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('SideDrawer renders as expected when drawer is hiding', () => {
-
+test("SideDrawer renders as expected when drawer is hiding", () => {
   const component = renderer.create(
     <SideDrawer drawerShowing={false}></SideDrawer>
   );
