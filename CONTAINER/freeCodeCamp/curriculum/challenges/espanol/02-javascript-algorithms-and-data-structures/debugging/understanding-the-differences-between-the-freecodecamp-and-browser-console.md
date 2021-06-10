@@ -31,11 +31,7 @@ Primero, usa `console.log` para imprimir la variable `output`. Luego, usa `conso
 Debes utilizar `console.clear()` para limpiar la consola del navegador.
 
 ```js
-assert(
-  __helpers
-    .removeWhiteSpace(code)
-    .match(/console.clear\(\)/)
-);
+assert(__helpers.removeWhiteSpace(code).match(/console.clear\(\)/));
 ```
 
 Debes utilizar `console.log()` para imprimir la variable `output`.
@@ -50,7 +46,8 @@ assert(__helpers.removeWhiteSpace(code).match(/console\.log\(output\)/));
 
 ```js
 // Open your browser console.
-let output = "Get this to log once in the freeCodeCamp console and twice in the browser console";
+let output =
+  'Get this to log once in the freeCodeCamp console and twice in the browser console';
 // Use console.log() to print the output variable.
 
 // Run the tests to see the difference between the two consoles.
@@ -62,7 +59,8 @@ let output = "Get this to log once in the freeCodeCamp console and twice in the 
 
 ```js
 // Open your browser console.
-let output = "Get this to log once in the freeCodeCamp console and twice in the browser console";
+let output =
+  'Get this to log once in the freeCodeCamp console and twice in the browser console';
 // Use console.log() to print the output variable.
 console.clear();
 console.log(output);

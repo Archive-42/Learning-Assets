@@ -32,7 +32,6 @@ assert.strictEqual(euler257(), 139012411);
 
 ```js
 function euler257() {
-
   return true;
 }
 

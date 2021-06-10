@@ -15,7 +15,7 @@ function Bird(name) {
   this.name = name;
 }
 
-let duck = new Bird("Donald");
+let duck = new Bird('Donald');
 ```
 
 `duck` hereda su `prototype` de la función constructor `Bird`. Puedes mostrar esta relación con el método `isPrototypeOf`:
@@ -47,7 +47,7 @@ function Dog(name) {
   this.name = name;
 }
 
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 
 // Only change code below this line
 ```
@@ -58,6 +58,6 @@ let beagle = new Dog("Snoopy");
 function Dog(name) {
   this.name = name;
 }
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 Dog.prototype.isPrototypeOf(beagle);
 ```

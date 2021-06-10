@@ -10,16 +10,16 @@ dashedName: personal-library
 
 Build a full stack JavaScript app that is functionally similar to this: <https://personal-library.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-library) and complete your project locally.
--   Use [our repl.it starter project](https://repl.it/github/freeCodeCamp/boilerplate-project-library)) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-library) and complete your project locally.
+- Use [our repl.it starter project](https://repl.it/github/freeCodeCamp/boilerplate-project-library)) to complete your project.
+- Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 
 When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
 
 # --instructions--
 
 1.  Add your MongoDB connection string to `.env` without quotes as `DB`  
-   Example: `DB=mongodb://admin:pass@1234.mlab.com:1234/fccpersonallib`
+    Example: `DB=mongodb://admin:pass@1234.mlab.com:1234/fccpersonallib`
 2.  In your `.env` file set `NODE_ENV` to `test`, without quotes
 3.  You need to create all routes within `routes/api.js`
 4.  You will create all functional tests in `tests/2_functional-tests.js`
@@ -29,17 +29,17 @@ When you are done, make sure a working demo of your project is hosted somewhere 
 You can provide your own project, not the example URL.
 
 ```js
-(getUserInput) => {
+getUserInput => {
   assert(
     !/.*\/personal-library\.freecodecamp\.rocks/.test(getUserInput('url'))
   );
 };
 ```
 
-You can send a <b>POST</b> request to `/api/books` with `title` as part of the form data to add a book.  The returned response will be an object with the `title` and a unique `_id` as keys.  If `title` is not included in the request, the returned response should be the string `missing required field title`.
+You can send a <b>POST</b> request to `/api/books` with `title` as part of the form data to add a book. The returned response will be an object with the `title` and a unique `_id` as keys. If `title` is not included in the request, the returned response should be the string `missing required field title`.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let data1 = await $.post(getUserInput('url') + '/api/books', {
       title: 'Faux Book 1'
@@ -60,7 +60,7 @@ async (getUserInput) => {
 You can send a <b>GET</b> request to `/api/books` and receive a JSON response representing all the books. The JSON response will be an array of objects with each object (book) containing `title`, `_id`, and `commentcount` properties.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let url = getUserInput('url') + '/api/books';
     let a = $.post(url, { title: 'Faux Book A' });
@@ -70,7 +70,7 @@ async (getUserInput) => {
       let data = await $.get(url);
       assert.isArray(data);
       assert.isAtLeast(data.length, 3);
-      data.forEach((book) => {
+      data.forEach(book => {
         assert.isObject(book);
         assert.property(book, 'title');
         assert.isString(book.title);
@@ -88,7 +88,7 @@ async (getUserInput) => {
 You can send a <b>GET</b> request to `/api/books/{_id}` to retrieve a single object of a book containing the properties `title`, `_id`, and a `comments` array (empty array if no comments present). If no book is found, return the string `no book exists`.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let url = getUserInput('url') + '/api/books';
     let noBook = await $.get(url + '/5f665eb46e296f6b9b6a504d');
@@ -112,7 +112,7 @@ async (getUserInput) => {
 You can send a <b>POST</b> request containing `comment` as the form body data to `/api/books/{_id}` to add a comment to a book. The returned response will be the books object similar to <b>GET</b> `/api/books/{_id}` request in an earlier test. If `comment` is not included in the request, return the string `missing required field comment`. If no book is found, return the string `no book exists`.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let url = getUserInput('url') + '/api/books';
     let commentTarget = await $.post(url, { title: 'Notable Book' });
@@ -129,7 +129,7 @@ async (getUserInput) => {
     assert.property(bookCom2, 'title');
     assert.property(bookCom2, 'comments');
     assert.lengthOf(bookCom2.comments, 2);
-    bookCom2.comments.forEach((comment) => {
+    bookCom2.comments.forEach(comment => {
       assert.isString(comment);
       assert.oneOf(comment, ['This book is fab!', 'I did not care for it']);
     });
@@ -150,7 +150,7 @@ async (getUserInput) => {
 You can send a <b>DELETE</b> request to `/api/books/{_id}` to delete a book from the collection. The returned response will be the string `delete successful` if successful. If no book is found, return the string `no book exists`.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let url = getUserInput('url') + '/api/books';
     let deleteTarget = await $.post(url, { title: 'Deletable Book' });
@@ -174,7 +174,7 @@ async (getUserInput) => {
 You can send a <b>DELETE</b> request to `/api/books` to delete all books in the database. The returned response will be the string `'complete delete successful` if successful.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     const deleteAll = await $.ajax({
       url: getUserInput('url') + '/api/books',
@@ -191,12 +191,12 @@ async (getUserInput) => {
 All 10 functional tests required are complete and passing.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     const getTests = await $.get(getUserInput('url') + '/_api/get-tests');
     assert.isArray(getTests);
     assert.isAtLeast(getTests.length, 10, 'At least 10 tests passed');
-    getTests.forEach((test) => {
+    getTests.forEach(test => {
       assert.equal(test.state, 'passed', 'Test in Passed State');
       assert.isAtLeast(
         test.assertions.length,

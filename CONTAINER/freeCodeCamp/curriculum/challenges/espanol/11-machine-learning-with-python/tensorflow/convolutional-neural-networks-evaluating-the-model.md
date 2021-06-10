@@ -27,4 +27,3 @@ Using your test data to retrain the model.
 ## --video-solution--
 
 3
-

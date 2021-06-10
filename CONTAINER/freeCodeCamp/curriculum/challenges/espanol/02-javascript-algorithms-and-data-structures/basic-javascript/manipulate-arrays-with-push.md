@@ -16,11 +16,11 @@ Una forma fácil de añadir datos al final de un arreglo es a través de la func
 Ejemplos:
 
 ```js
-var arr1 = [1,2,3];
+var arr1 = [1, 2, 3];
 arr1.push(4);
 
-var arr2 = ["Stimpson", "J", "cat"];
-arr2.push(["happy", "joy"]);
+var arr2 = ['Stimpson', 'J', 'cat'];
+arr2.push(['happy', 'joy']);
 ```
 
 `arr1` ahora tiene el valor `[1, 2, 3, 4]` y `arr2` tiene el valor `["Stimpson", "J", "cat", ["happy", "joy"]]`.
@@ -57,14 +57,19 @@ assert(
 ## --after-user-code--
 
 ```js
-(function(z){return 'myArray = ' + JSON.stringify(z);})(myArray);
+(function (z) {
+  return 'myArray = ' + JSON.stringify(z);
+})(myArray);
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var myArray = [["John", 23], ["cat", 2]];
+var myArray = [
+  ['John', 23],
+  ['cat', 2]
+];
 
 // Only change code below this line
 ```
@@ -72,6 +77,9 @@ var myArray = [["John", 23], ["cat", 2]];
 # --solutions--
 
 ```js
-var myArray = [["John", 23], ["cat", 2]];
-myArray.push(["dog",3]);
+var myArray = [
+  ['John', 23],
+  ['cat', 2]
+];
+myArray.push(['dog', 3]);
 ```

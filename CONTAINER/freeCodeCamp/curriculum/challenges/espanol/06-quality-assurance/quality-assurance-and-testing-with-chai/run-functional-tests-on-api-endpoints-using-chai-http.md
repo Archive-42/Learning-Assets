@@ -47,12 +47,12 @@ There should be no name in the query; the endpoint responds with `hello Guest`.
 All tests should pass
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -61,14 +61,14 @@ All tests should pass
 You should test for 'res.status' == 200
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'equal');
       assert.equal(data.assertions[0].args[0], 'res.status');
       assert.equal(data.assertions[0].args[1], '200');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -77,14 +77,14 @@ You should test for 'res.status' == 200
 You should test for 'res.text' == 'hello Guest'
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'equal');
       assert.equal(data.assertions[1].args[0], 'res.text');
       assert.match(data.assertions[1].args[1], /('|")hello Guest\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -35,4 +35,3 @@ Reassign each K point to the closest K centeroid.
 ## --video-solution--
 
 4
-

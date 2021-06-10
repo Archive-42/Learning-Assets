@@ -27,4 +27,3 @@ a vectorized representation of words in a given document that places words with 
 ## --video-solution--
 
 3
-

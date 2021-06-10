@@ -202,7 +202,7 @@ assert(
   }
 
   body {
-    background:#c6faf1;
+    background: #c6faf1;
   }
 
   .penguin * {
@@ -237,5 +237,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.penguin {--penguin-skin: gray;}</style>
+<style>
+  .penguin {
+    --penguin-skin: gray;
+  }
+</style>
 ```

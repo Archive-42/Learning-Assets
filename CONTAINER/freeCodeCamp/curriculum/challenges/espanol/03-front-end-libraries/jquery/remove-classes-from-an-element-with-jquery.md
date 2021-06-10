@@ -4,8 +4,7 @@ title: Elimina clases de un elemento con jQuery
 challengeType: 6
 forumTopicId: 18264
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: remove-classes-from-an-element-with-jquery
 ---
 
@@ -16,7 +15,7 @@ De la misma manera en que puedes agregar clases a un elemento con la función `a
 Así es como lo harías para un botón específico:
 
 ```js
-$("#target2").removeClass("btn-default");
+$('#target2').removeClass('btn-default');
 ```
 
 Eliminemos la clase `btn-default` de todos nuestros elementos `button`.
@@ -51,11 +50,10 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
   });
 </script>
 
@@ -88,11 +86,11 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-    $("button").removeClass("btn-default");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
+    $('button').removeClass('btn-default');
   });
 </script>
 

@@ -101,9 +101,7 @@ assert.equal(luhnTest('1234567812345670'), true);
 ## --seed-contents--
 
 ```js
-function luhnTest(str) {
-
-}
+function luhnTest(str) {}
 ```
 
 # --solutions--

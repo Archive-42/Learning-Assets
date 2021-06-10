@@ -13,9 +13,9 @@ Puedes agrupar las celdas de tu grid en una <dfn>área</dfn> y darle a esa área
 
 ```css
 grid-template-areas:
-  "header header header"
-  "advert content content"
-  "footer footer footer";
+  'header header header'
+  'advert content content'
+  'footer footer footer';
 ```
 
 El código anterior fusiona las tres celdas superiores en una área llamada `header`, las tres celdas inferiores en una área `footer` y hace dos áreas en la fila del medio; `advert` y `content`. **Nota:** cada palabra en el código representa una celda y cada par de comillas representa una fila. Además de los nombres personalizados, puedes usar un punto (`.`) para designar una celda vacía en la grid.
@@ -44,11 +44,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -61,9 +71,9 @@ assert(
     grid-gap: 10px;
     grid-template-areas:
     /* Only change code below this line */
-      "header header header"
-      "advert content content"
-      "footer footer footer";
+      'header header header'
+      'advert content content'
+      'footer footer footer';
     /* Only change code above this line */
   }
 </style>
@@ -81,11 +91,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -98,9 +118,9 @@ assert(
     grid-gap: 10px;
 
     grid-template-areas:
-      "header header header"
-      ". content content"
-      "footer footer footer";
+      'header header header'
+      '. content content'
+      'footer footer footer';
   }
 </style>
 

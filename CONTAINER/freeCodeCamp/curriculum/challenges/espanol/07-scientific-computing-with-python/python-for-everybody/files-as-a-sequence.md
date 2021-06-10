@@ -37,4 +37,3 @@ Skips the next block of code.
 ## --video-solution--
 
 3
-

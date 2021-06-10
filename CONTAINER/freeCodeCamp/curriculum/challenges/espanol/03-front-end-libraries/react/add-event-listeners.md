@@ -67,7 +67,7 @@ Once the component has mounted, pressing `enter` should update its state and the
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
   const beforeState = mockedComponent.state('message');
@@ -94,7 +94,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
+ReactDOM.render(<MyComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -110,15 +110,11 @@ class MyComponent extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
   // Change code below this line
-  componentDidMount() {
-
-  }
-  componentWillUnmount() {
-
-  }
+  componentDidMount() {}
+  componentWillUnmount() {}
   // Change code above this line
   handleEnter() {
-    this.setState((state) => ({
+    this.setState(state => ({
       message: state.message + 'You pressed the enter key! '
     }));
   }
@@ -134,7 +130,7 @@ class MyComponent extends React.Component {
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -147,7 +143,8 @@ class MyComponent extends React.Component {
       message: ''
     };
     this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.handleEnter = this.handleEnter.bind(this);  }
+    this.handleEnter = this.handleEnter.bind(this);
+  }
   componentDidMount() {
     // Change code below this line
     document.addEventListener('keydown', this.handleKeyPress);
@@ -159,7 +156,7 @@ class MyComponent extends React.Component {
     // Change code above this line
   }
   handleEnter() {
-    this.setState((state) => ({
+    this.setState(state => ({
       message: state.message + 'You pressed the enter key! '
     }));
   }
@@ -175,5 +172,5 @@ class MyComponent extends React.Component {
       </div>
     );
   }
-};
+}
 ```

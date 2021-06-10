@@ -17,7 +17,7 @@ Para especificar donde aparecerá esa cadena repetida, utilizarás una barra inv
 El siguiente ejemplo encuentra cualquier palabra que ocurra dos veces separada por un espacio:
 
 ```js
-let repeatStr = "regex regex";
+let repeatStr = 'regex regex';
 let repeatRegex = /(\w+)\s\1/;
 repeatRegex.test(repeatStr);
 repeatStr.match(repeatRegex);
@@ -92,7 +92,7 @@ assert(reRegex.test('10 10 10'));
 ## --seed-contents--
 
 ```js
-let repeatNum = "42 42 42";
+let repeatNum = '42 42 42';
 let reRegex = /change/; // Change this line
 let result = reRegex.test(repeatNum);
 ```
@@ -100,7 +100,7 @@ let result = reRegex.test(repeatNum);
 # --solutions--
 
 ```js
-let repeatNum = "42 42 42";
+let repeatNum = '42 42 42';
 let reRegex = /^(\d+)\s\1\s\1$/;
 let result = reRegex.test(repeatNum);
 ```

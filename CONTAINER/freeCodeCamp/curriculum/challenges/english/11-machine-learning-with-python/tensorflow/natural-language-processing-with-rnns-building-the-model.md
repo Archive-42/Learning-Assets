@@ -59,4 +59,3 @@ D: `return model`
 ## --video-solution--
 
 3
-

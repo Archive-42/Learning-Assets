@@ -76,17 +76,15 @@ assert.equal(lookAndSay('3542'), '13151412');
 ## --seed-contents--
 
 ```js
-function lookAndSay(str) {
-
-}
+function lookAndSay(str) {}
 ```
 
 # --solutions--
 
 ```js
 function lookAndSay(str) {
-    return str.replace(/(.)\1*/g, function(seq, p1) {
-      return seq.length.toString() + p1;
-    });
+  return str.replace(/(.)\1*/g, function (seq, p1) {
+    return seq.length.toString() + p1;
+  });
 }
 ```

@@ -15,9 +15,9 @@ Puedes especificar la posible existencia de un elemento con un signo de interrog
 Por ejemplo, hay ligeras diferencias en inglés americano y británico y puedes usar el signo de interrogación para coincidir con ambas ortografías.
 
 ```js
-let american = "color";
-let british = "colour";
-let rainbowRegex= /colou?r/;
+let american = 'color';
+let british = 'colour';
+let rainbowRegex = /colou?r/;
 rainbowRegex.test(american);
 rainbowRegex.test(british);
 ```
@@ -63,7 +63,7 @@ assert(!favRegex.test('fav'));
 ## --seed-contents--
 
 ```js
-let favWord = "favorite";
+let favWord = 'favorite';
 let favRegex = /change/; // Change this line
 let result = favRegex.test(favWord);
 ```
@@ -71,7 +71,7 @@ let result = favRegex.test(favWord);
 # --solutions--
 
 ```js
-let favWord = "favorite";
+let favWord = 'favorite';
 let favRegex = /favou?r/;
 let result = favRegex.test(favWord);
 ```

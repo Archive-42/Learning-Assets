@@ -31,7 +31,7 @@ io.emit('user count', currentUsers);
 Now, you can implement a way for your client to listen for this event! Similar to listening for a connection on the server, you will use the `on` keyword.
 
 ```js
-socket.on('user count', function(data) {
+socket.on('user count', function (data) {
   console.log(data);
 });
 ```
@@ -45,16 +45,16 @@ Submit your page when you think you've got it right. If you're running into erro
 currentUsers should be defined.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /currentUsers/gi,
         'You should have variable currentUsers defined'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -63,16 +63,16 @@ currentUsers should be defined.
 Server should emit the current user count at each new connection.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /io.emit.*('|")user count('|").*currentUsers/gi,
         'You should emit "user count" with data currentUsers'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -81,16 +81,16 @@ Server should emit the current user count at each new connection.
 Your client should be listening for 'user count' event.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/client.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.on.*('|")user count('|")/gi,
         'Your client should be connection to server with the connection defined as socket'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

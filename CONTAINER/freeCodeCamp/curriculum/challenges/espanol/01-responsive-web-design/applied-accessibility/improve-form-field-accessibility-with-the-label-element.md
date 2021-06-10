@@ -20,7 +20,7 @@ El valor del atributo `for` debe ser igual al valor del atributo `id` del formul
 ```html
 <form>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </form>
 ```
 
@@ -55,27 +55,39 @@ assert($('label').attr('for') == 'email');
     <form>
       <p>Sign up to receive Camper Cat's blog posts by email here!</p>
 
-
       <label>Email:</label>
-      <input type="text" id="email" name="email">
+      <input type="text" id="email" name="email" />
 
-
-      <input type="submit" name="submit" value="Submit">
+      <input type="submit" name="submit" value="Submit" />
     </form>
   </section>
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
-    <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+    <p>
+      The internet is littered with varying opinions on nutritional paradigms,
+      from catnip paleo to hairball cleanses. But let's turn our attention to an
+      often overlooked fitness fuel, and examine the protein-carb-NOM trifecta
+      that is lasagna...
+    </p>
   </article>
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
-    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+    <p>
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near...
+    </p>
   </article>
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
-    <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+    <p>
+      Chuck Norris is widely regarded as the premier martial artist on the
+      planet, and it's a complete coincidence anyone who disagrees with this
+      fact mysteriously disappears soon after. But the real question is, is he a
+      cat person?...
+    </p>
   </article>
   <footer>&copy; 2018 Camper Cat</footer>
 </body>
@@ -92,27 +104,39 @@ assert($('label').attr('for') == 'email');
     <form>
       <p>Sign up to receive Camper Cat's blog posts by email here!</p>
 
-
       <label for="email">Email:</label>
-      <input type="text" id="email" name="email">
+      <input type="text" id="email" name="email" />
 
-
-      <input type="submit" name="submit" value="Submit">
+      <input type="submit" name="submit" value="Submit" />
     </form>
   </section>
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
-    <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+    <p>
+      The internet is littered with varying opinions on nutritional paradigms,
+      from catnip paleo to hairball cleanses. But let's turn our attention to an
+      often overlooked fitness fuel, and examine the protein-carb-NOM trifecta
+      that is lasagna...
+    </p>
   </article>
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
-    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+    <p>
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near...
+    </p>
   </article>
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
-    <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+    <p>
+      Chuck Norris is widely regarded as the premier martial artist on the
+      planet, and it's a complete coincidence anyone who disagrees with this
+      fact mysteriously disappears soon after. But the real question is, is he a
+      cat person?...
+    </p>
   </article>
   <footer>&copy; 2018 Camper Cat</footer>
 </body>

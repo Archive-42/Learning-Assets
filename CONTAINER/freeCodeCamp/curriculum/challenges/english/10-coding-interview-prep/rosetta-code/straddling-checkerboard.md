@@ -18,7 +18,7 @@ Implement functions to encrypt and decrypt a message using the [straddling check
 assert(typeof straddle == 'function');
 ```
 
-`straddle("One night-it was on the twentieth of March, 1888-I was returning.",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return a string.
+`straddle("One night-it was on the twentieth of March, 1888-I was returning.",["ESTONIA R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return a string.
 
 ```js
 assert(
@@ -29,7 +29,7 @@ assert(
 );
 ```
 
-`straddle("One night-it was on the twentieth of March, 1888-I was returning.",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return `"34045747525284613427502840425027537379697175891898898898584619028294547488"`.
+`straddle("One night-it was on the twentieth of March, 1888-I was returning.",["ESTONIA R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return `"34045747525284613427502840425027537379697175891898898898584619028294547488"`.
 
 ```js
 assert.equal(
@@ -73,7 +73,7 @@ assert.equal(
 assert(typeof unstraddle == 'function');
 ```
 
-`unstraddle("34045747525284613427502840425027537379697175891898898898584619028294547488",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return a string.
+`unstraddle("34045747525284613427502840425027537379697175891898898898584619028294547488",["ESTONIA R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return a string.
 
 ```js
 assert(
@@ -84,7 +84,7 @@ assert(
 );
 ```
 
-`unstraddle("34045747525284613427502840425027537379697175891898898898584619028294547488",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return `"ONENIGHTITWASONTHETWENTIETHOFMARCH1888IWASRETURNING."`.
+`unstraddle("34045747525284613427502840425027537379697175891898898898584619028294547488",["ESTONIA R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return `"ONENIGHTITWASONTHETWENTIETHOFMARCH1888IWASRETURNING."`.
 
 ```js
 assert.equal(
@@ -125,13 +125,9 @@ assert.equal(
 ## --seed-contents--
 
 ```js
-function straddle(message, alphabet) {
+function straddle(message, alphabet) {}
 
-}
-
-function unstraddle(message, alphabet) {
-
-}
+function unstraddle(message, alphabet) {}
 ```
 
 # --solutions--

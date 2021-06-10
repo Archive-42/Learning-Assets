@@ -14,7 +14,7 @@ Una tarea común en JavaScript es iterar a través del contenido de un arreglo. 
 ```js
 var arr = [10, 9, 8, 7, 6];
 for (var i = 0; i < arr.length; i++) {
-   console.log(arr[i]);
+  console.log(arr[i]);
 }
 ```
 
@@ -55,14 +55,20 @@ assert(!__helpers.removeWhiteSpace(code).match(/total[=+-]0*[1-9]+/gm));
 ## --after-user-code--
 
 ```js
-(function(){if(typeof total !== 'undefined') { return "total = " + total; } else { return "total is undefined";}})()
+(function () {
+  if (typeof total !== 'undefined') {
+    return 'total = ' + total;
+  } else {
+    return 'total is undefined';
+  }
+})();
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var myArr = [ 2, 3, 4, 5, 6];
+var myArr = [2, 3, 4, 5, 6];
 
 // Only change code below this line
 ```
@@ -70,7 +76,7 @@ var myArr = [ 2, 3, 4, 5, 6];
 # --solutions--
 
 ```js
-var myArr = [ 2, 3, 4, 5, 6];
+var myArr = [2, 3, 4, 5, 6];
 var total = 0;
 
 for (var i = 0; i < myArr.length; i++) {

@@ -48,6 +48,6 @@ assert($('div').children('h3').length > 0);
 
 ```html
 <div class="container-fluid">
-    <h3 class="text-primary text-center">jQuery Playground</h3>
+  <h3 class="text-primary text-center">jQuery Playground</h3>
 </div>
 ```

@@ -56,7 +56,6 @@ assert.strictEqual(nthPrime(10001), 104743);
 
 ```js
 function nthPrime(n) {
-
   return true;
 }
 
@@ -82,5 +81,5 @@ const nthPrime = n => {
     pN++;
   }
   return pN - 1;
-}
+};
 ```

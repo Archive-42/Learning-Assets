@@ -19,12 +19,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#9` in the `Comparisons`
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -33,16 +33,16 @@ All tests should pass.
 You should choose the correct method for the first assertion - `isBelow` vs. `isAtLeast`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'isAtLeast',
         '5 is at least (>=) 5'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,16 +51,16 @@ You should choose the correct method for the first assertion - `isBelow` vs. `is
 You should choose the correct method for the second assertion - `isBelow` vs. `isAtLeast`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'isAtLeast',
         '2 * Math.random() is at least 0'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -69,12 +69,12 @@ You should choose the correct method for the second assertion - `isBelow` vs. `i
 You should choose the correct method for the third assertion - `isBelow` vs. `isAtLeast`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'isBelow', '1 is smaller than 2');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -83,16 +83,16 @@ You should choose the correct method for the third assertion - `isBelow` vs. `is
 You should choose the correct method for the fourth assertion - `isBelow` vs. `isAtLeast`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[3].method,
         'isBelow',
         '2/3 (0.6666) is smaller than 1'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

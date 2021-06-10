@@ -23,13 +23,13 @@ mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }
 "mongodb" dependency should be in package.json
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/file/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(packJson.dependencies, 'mongodb');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -38,13 +38,13 @@ mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }
 "mongoose" dependency should be in package.json
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/file/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(packJson.dependencies, 'mongoose');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,12 +53,12 @@ mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }
 "mongoose" should be connected to a database
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/is-mongoose-ok').then(
-    (data) => {
+    data => {
       assert.isTrue(data.isMongooseOk, 'mongoose is not connected');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

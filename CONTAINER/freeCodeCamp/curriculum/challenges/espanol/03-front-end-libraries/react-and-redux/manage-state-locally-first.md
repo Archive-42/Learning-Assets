@@ -41,7 +41,7 @@ The `DisplayMessages` component should render a `div` containing an `h2` element
 ```js
 async () => {
   const mockedComponent = Enzyme.mount(React.createElement(DisplayMessages));
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   const state = () => {
     mockedComponent.setState({ messages: ['__TEST__MESSAGE'] });
@@ -69,7 +69,7 @@ The `input` element should render the value of `input` in local state.
 ```js
 async () => {
   const mockedComponent = Enzyme.mount(React.createElement(DisplayMessages));
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   const causeChange = (c, v) =>
     c.find('input').simulate('change', { target: { value: v } });
@@ -88,7 +88,7 @@ Calling the method `handleChange` should update the `input` value in state to th
 ```js
 async () => {
   const mockedComponent = Enzyme.mount(React.createElement(DisplayMessages));
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   const causeChange = (c, v) =>
     c.find('input').simulate('change', { target: { value: v } });
@@ -111,7 +111,7 @@ Clicking the `Add message` button should call the method `submitMessage` which s
 ```js
 async () => {
   const mockedComponent = Enzyme.mount(React.createElement(DisplayMessages));
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   const causeChange = (c, v) =>
     c.find('input').simulate('change', { target: { value: v } });
@@ -154,7 +154,7 @@ The `submitMessage` method should clear the current input.
 ```js
 async () => {
   const mockedComponent = Enzyme.mount(React.createElement(DisplayMessages));
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   const causeChange = (c, v) =>
     c.find('input').simulate('change', { target: { value: v } });
@@ -181,7 +181,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<DisplayMessages />, document.getElementById('root'))
+ReactDOM.render(<DisplayMessages />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -193,7 +193,7 @@ class DisplayMessages extends React.Component {
     this.state = {
       input: '',
       messages: []
-    }
+    };
   }
   // Add handleChange() and submitMessage() methods here
 
@@ -201,13 +201,13 @@ class DisplayMessages extends React.Component {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        { /* Render an input, button, and ul below this line */ }
+        {/* Render an input, button, and ul below this line */}
 
-        { /* Change code above this line */ }
+        {/* Change code above this line */}
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -219,42 +219,38 @@ class DisplayMessages extends React.Component {
     this.state = {
       input: '',
       messages: []
-    }
- this.handleChange = this.handleChange.bind(this);
-   this.submitMessage = this.submitMessage.bind(this);
- }
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.submitMessage = this.submitMessage.bind(this);
+  }
   handleChange(event) {
     this.setState({
       input: event.target.value
     });
   }
   submitMessage() {
-    this.setState((state) => {
+    this.setState(state => {
       const currentMessage = state.input;
       return {
         input: '',
         messages: state.messages.concat(currentMessage)
-      };  
+      };
     });
   }
   render() {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        <input
-          value={this.state.input}
-          onChange={this.handleChange}/><br/>
+        <input value={this.state.input} onChange={this.handleChange} />
+        <br />
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.state.messages.map( (message, idx) => {
-              return (
-                 <li key={idx}>{message}</li>
-              )
-            })
-          }
+          {this.state.messages.map((message, idx) => {
+            return <li key={idx}>{message}</li>;
+          })}
         </ul>
       </div>
     );
   }
-};
+}
 ```

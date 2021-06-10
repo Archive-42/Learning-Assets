@@ -8,7 +8,7 @@ dashedName: fractran
 
 # --description--
 
-[FRACTRAN](https://en.wikipedia.org/wiki/FRACTRAN "wp: FRACTRAN") is a Turing-complete esoteric programming language invented by the mathematician [John Horton Conway](https://en.wikipedia.org/wiki/John Horton Conway "wp: John Horton Conway").
+[FRACTRAN](https://en.wikipedia.org/wiki/FRACTRAN 'wp: FRACTRAN') is a Turing-complete esoteric programming language invented by the mathematician [John Horton Conway](https://en.wikipedia.org/wiki/John Horton Conway "wp: John Horton Conway").
 
 A FRACTRAN program is an ordered list of positive fractions $P = (f_1, f_2, \\ldots, f_m)$, together with an initial positive integer input $n$.
 
@@ -91,42 +91,40 @@ assert.deepEqual(
 ## --seed-contents--
 
 ```js
-function fractran(progStr) {
-
-}
+function fractran(progStr) {}
 ```
 
 # --solutions--
 
 ```js
-function fractran(progStr){
+function fractran(progStr) {
   var num = new Array();
   var den = new Array();
-  var val ;
-  var out="";
-  function compile(prog){
+  var val;
+  var out = '';
+  function compile(prog) {
     var regex = /\s*(\d*)\s*\/\s*(\d*)\s*(.*)/m;
-    while(regex.test(prog)){
+    while (regex.test(prog)) {
       num.push(regex.exec(prog)[1]);
       den.push(regex.exec(prog)[2]);
       prog = regex.exec(prog)[3];
     }
   }
 
-  function step(val){
-    var i=0;
-    while(i<den.length && val%den[i] != 0) i++;
-    return num[i]*val/den[i];
+  function step(val) {
+    var i = 0;
+    while (i < den.length && val % den[i] != 0) i++;
+    return (num[i] * val) / den[i];
   }
 
-  var seq=[]
+  var seq = [];
 
-  function exec(val){
+  function exec(val) {
     var i = 0;
-    while(val && i<limit){
-      seq.push(val)
+    while (val && i < limit) {
+      seq.push(val);
       val = step(val);
-      i ++;
+      i++;
     }
   }
 

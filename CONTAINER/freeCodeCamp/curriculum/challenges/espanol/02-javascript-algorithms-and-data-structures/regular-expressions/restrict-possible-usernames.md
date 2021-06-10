@@ -12,13 +12,13 @@ Los nombres de usuario se utilizan en todas partes en Internet. Son los que dan 
 
 Se necesita comprobar todos los nombres de usuario en una base de datos. Estas son algunas reglas simples que los usuarios deben seguir al crear su nombre de usuario.
 
-1) Los nombres de usuario sólo pueden utilizar caracteres alfanuméricos.
+1. Los nombres de usuario sólo pueden utilizar caracteres alfanuméricos.
 
-2) Los únicos números del nombre de usuario tienen que estar al final. Puede tener un cero o más al final. El nombre de usuario no puede iniciar con un número.
+2. Los únicos números del nombre de usuario tienen que estar al final. Puede tener un cero o más al final. El nombre de usuario no puede iniciar con un número.
 
-3) Las letras del nombre de usuario pueden ser minúsculas y mayúsculas.
+3. Las letras del nombre de usuario pueden ser minúsculas y mayúsculas.
 
-4) Los nombres de usuario deben tener al menos dos caracteres. Un nombre de usuario de dos caracteres sólo puede utilizar letras del alfabeto como caracteres.
+4. Los nombres de usuario deben tener al menos dos caracteres. Un nombre de usuario de dos caracteres sólo puede utilizar letras del alfabeto como caracteres.
 
 # --instructions--
 
@@ -101,7 +101,7 @@ assert(userCheck.test('AB1'));
 Tu expresión regular no debe coincidir con la cadena `J%4`
 
 ```js
-assert(!userCheck.test('J%4'))
+assert(!userCheck.test('J%4'));
 ```
 
 # --seed--
@@ -109,7 +109,7 @@ assert(!userCheck.test('J%4'))
 ## --seed-contents--
 
 ```js
-let username = "JackOfAllTrades";
+let username = 'JackOfAllTrades';
 let userCheck = /change/; // Change this line
 let result = userCheck.test(username);
 ```
@@ -117,7 +117,7 @@ let result = userCheck.test(username);
 # --solutions--
 
 ```js
-let username = "JackOfAllTrades";
+let username = 'JackOfAllTrades';
 const userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i;
 let result = userCheck.test(username);
 ```

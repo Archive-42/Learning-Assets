@@ -17,9 +17,7 @@ class Kitten extends React.Component {
   }
 
   render() {
-    return (
-      <h1>Hi</h1>
-    );
+    return <h1>Hi</h1>;
   }
 }
 ```
@@ -62,7 +60,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
+ReactDOM.render(<MyComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -74,12 +72,9 @@ class MyComponent extends React.Component {
   }
   render() {
     // Change code below this line
-
-
-
     // Change code above this line
   }
-};
+}
 ```
 
 # --solutions--
@@ -98,5 +93,5 @@ class MyComponent extends React.Component {
     );
     // Change code above this line
   }
-};
+}
 ```

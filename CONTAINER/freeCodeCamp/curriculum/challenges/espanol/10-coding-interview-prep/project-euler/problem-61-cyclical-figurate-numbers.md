@@ -49,7 +49,6 @@ assert.strictEqual(cyclicalFigurateNums(), 28684);
 
 ```js
 function cyclicalFigurateNums() {
-
   return true;
 }
 

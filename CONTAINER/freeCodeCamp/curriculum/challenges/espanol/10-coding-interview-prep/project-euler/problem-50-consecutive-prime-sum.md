@@ -44,7 +44,6 @@ assert.strictEqual(consecutivePrimeSum(1000000), 997651);
 
 ```js
 function consecutivePrimeSum(limit) {
-
   return true;
 }
 
@@ -81,7 +80,7 @@ function consecutivePrimeSum(limit) {
   let primeSum = [...primes];
   primeSum.reduce((acc, n, i) => {
     primeSum[i] += acc;
-    return acc += n;
+    return (acc += n);
   }, 0);
 
   for (let j = primeSum.length - 1; j >= 0; j--) {

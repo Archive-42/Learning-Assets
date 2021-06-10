@@ -8,7 +8,7 @@ dashedName: check-for-the-presence-of-an-element-with-indexof
 
 # --description--
 
-Ya que los arreglos pueden modificarse, o *mutarse*, en cualquier momento, no se puede garantizar dónde estará un dato concreto en un arreglo determinado, o si ese elemento sigue existiendo. Afortunadamente, JavaScript nos proporciona otro método incorporado, `indexOf()`, que nos permite comprobar rápida y fácilmente la presencia de un elemento en un arreglo. `indexOf()` toma un elemento como parámetro, y cuando lo llama, devuelve la posición, o índice, de ese elemento, o `-1` si el elemento no existe en el arreglo.
+Ya que los arreglos pueden modificarse, o _mutarse_, en cualquier momento, no se puede garantizar dónde estará un dato concreto en un arreglo determinado, o si ese elemento sigue existiendo. Afortunadamente, JavaScript nos proporciona otro método incorporado, `indexOf()`, que nos permite comprobar rápida y fácilmente la presencia de un elemento en un arreglo. `indexOf()` toma un elemento como parámetro, y cuando lo llama, devuelve la posición, o índice, de ese elemento, o `-1` si el elemento no existe en el arreglo.
 
 Por ejemplo:
 
@@ -77,7 +77,6 @@ assert.notStrictEqual(quickCheck.toString().search(/\.indexOf\(/), -1);
 ```js
 function quickCheck(arr, elem) {
   // Only change code below this line
-
   // Only change code above this line
 }
 
@@ -88,6 +87,6 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 ```js
 function quickCheck(arr, elem) {
-  return arr.indexOf(elem) >= 0; 
+  return arr.indexOf(elem) >= 0;
 }
 ```

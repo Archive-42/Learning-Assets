@@ -58,8 +58,8 @@ The `TypesOfFood` component should render to the DOM within the `div` with the i
 ```js
 assert(
   (function () {
-    const html = document.getElementById('challenge-node').childNodes[0]
-      .innerHTML;
+    const html =
+      document.getElementById('challenge-node').childNodes[0].innerHTML;
     return (
       html.includes(
         '<div><h2>Fruits:</h2><h4>Non-Citrus:</h4><ul><li>Apples</li><li>Blueberries</li><li>Strawberries</li><li>Bananas</li></ul><h4>Citrus:</h4><ul><li>Lemon</li><li>Lime</li><li>Orange</li><li>Grapefruit</li></ul></div>'
@@ -82,19 +82,19 @@ const Fruits = () => {
     <div>
       <h2>Fruits:</h2>
       <h4>Non-Citrus:</h4>
-        <ul>
-          <li>Apples</li>
-          <li>Blueberries</li>
-          <li>Strawberries</li>
-          <li>Bananas</li>
-        </ul>
+      <ul>
+        <li>Apples</li>
+        <li>Blueberries</li>
+        <li>Strawberries</li>
+        <li>Bananas</li>
+      </ul>
       <h4>Citrus:</h4>
-        <ul>
-          <li>Lemon</li>
-          <li>Lime</li>
-          <li>Orange</li>
-          <li>Grapefruit</li>
-        </ul>
+      <ul>
+        <li>Lemon</li>
+        <li>Lime</li>
+        <li>Orange</li>
+        <li>Grapefruit</li>
+      </ul>
     </div>
   );
 };
@@ -129,7 +129,7 @@ class TypesOfFood extends React.Component {
       </div>
     );
   }
-};
+}
 
 // Change code below this line
 ```
@@ -146,13 +146,13 @@ class TypesOfFood extends React.Component {
       <div>
         <h1>Types of Food:</h1>
         {/* Change code below this line */}
-          <Fruits />
-           <Vegetables />
-         {/* Change code above this line */}
+        <Fruits />
+        <Vegetables />
+        {/* Change code above this line */}
       </div>
     );
   }
-};
+}
 
 // Change code below this line
 ReactDOM.render(<TypesOfFood />, document.getElementById('challenge-node'));

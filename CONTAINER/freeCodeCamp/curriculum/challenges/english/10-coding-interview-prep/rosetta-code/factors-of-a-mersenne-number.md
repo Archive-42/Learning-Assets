@@ -12,7 +12,7 @@ A Mersenne number is a number in the form of <code>2<sup>P</sup>-1</code>.
 
 If `P` is prime, the Mersenne number may be a Mersenne prime. (If `P` is not prime, the Mersenne number is also not prime.)
 
-In the search for Mersenne prime numbers it is advantageous to eliminate exponents by finding a small factor before starting a, potentially lengthy, [Lucas-Lehmer test](<https://rosettacode.org/wiki/Lucas-Lehmer test> "Lucas-Lehmer test").
+In the search for Mersenne prime numbers it is advantageous to eliminate exponents by finding a small factor before starting a, potentially lengthy, [Lucas-Lehmer test](<https://rosettacode.org/wiki/Lucas-Lehmer test> 'Lucas-Lehmer test').
 
 There are very efficient algorithms for determining if a number divides <code>2<sup>P</sup>-1</code> (or equivalently, if <code>2<sup>P</sup> mod (the number) = 1</code>).
 
@@ -48,7 +48,7 @@ Further properties of Mersenne numbers allow us to refine the process even more.
 
 Any factor `q` of <code>2<sup>P</sup>-1</code> must be of the form `2kP+1`, `k` being a positive integer or zero. Furthermore, `q` must be `1` or `7 mod 8`.
 
-Finally any potential factor `q` must be [prime](<https://rosettacode.org/wiki/Primality by Trial Division> "Primality by Trial Division").
+Finally any potential factor `q` must be [prime](<https://rosettacode.org/wiki/Primality by Trial Division> 'Primality by Trial Division').
 
 As in other trial division algorithms, the algorithm stops when `2kP+1 > sqrt(N)`.These primarily tests only work on Mersenne numbers where `P` is prime. For example, <code>M<sub>4</sub>=15</code> yields no factors using these techniques, but factors into 3 and 5, neither of which fit `2kP+1`.
 
@@ -96,53 +96,51 @@ assert.equal(
 ## --seed-contents--
 
 ```js
-function check_mersenne(p) {
-
-}
+function check_mersenne(p) {}
 ```
 
 # --solutions--
 
 ```js
-function check_mersenne(p){
-    function isPrime(value){
-      for (let i=2; i < value; i++){
-        if (value % i == 0){
-          return false;
-        }
-        if (value % i != 0){
-          return true;
-         }
+function check_mersenne(p) {
+  function isPrime(value) {
+    for (let i = 2; i < value; i++) {
+      if (value % i == 0) {
+        return false;
+      }
+      if (value % i != 0) {
+        return true;
       }
     }
+  }
 
-    function trial_factor(base, exp, mod){
-      let square, bits;
-      square = 1;
-      bits = exp.toString(2).split('');
-      for (let i=0,ln=bits.length; i<ln; i++){
-        square = Math.pow(square, 2) * (bits[i] == 1 ? base : 1) % mod;
-      }
-      return (square == 1);
+  function trial_factor(base, exp, mod) {
+    let square, bits;
+    square = 1;
+    bits = exp.toString(2).split('');
+    for (let i = 0, ln = bits.length; i < ln; i++) {
+      square = (Math.pow(square, 2) * (bits[i] == 1 ? base : 1)) % mod;
     }
+    return square == 1;
+  }
 
-    function mersenne_factor(p){
-      let limit, k, q;
-      limit = Math.sqrt(Math.pow(2,p) - 1);
-      k = 1;
-      while ((2*k*p - 1) < limit){
-        q = 2*k*p + 1;
-        if (isPrime(q) && (q % 8 == 1 || q % 8 == 7) && trial_factor(2,p,q)){
-          return q; // q is a factor of 2**p-1
-        }
-        k++;
+  function mersenne_factor(p) {
+    let limit, k, q;
+    limit = Math.sqrt(Math.pow(2, p) - 1);
+    k = 1;
+    while (2 * k * p - 1 < limit) {
+      q = 2 * k * p + 1;
+      if (isPrime(q) && (q % 8 == 1 || q % 8 == 7) && trial_factor(2, p, q)) {
+        return q; // q is a factor of 2**p-1
       }
-      return null;
+      k++;
     }
+    return null;
+  }
   let f, result;
-  result="M"+p+" = 2^"+p+"-1 is ";
+  result = 'M' + p + ' = 2^' + p + '-1 is ';
   f = mersenne_factor(p);
-  result+=f == null ? "prime" : "composite with factor "+f;
+  result += f == null ? 'prime' : 'composite with factor ' + f;
   return result;
 }
 ```

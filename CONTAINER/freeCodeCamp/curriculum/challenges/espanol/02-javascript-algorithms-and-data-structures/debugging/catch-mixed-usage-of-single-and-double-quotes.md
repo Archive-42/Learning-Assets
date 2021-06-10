@@ -25,7 +25,8 @@ Los dos primeros son correctos, pero el tercero es incorrecto.
 Por supuesto, está bien utilizar sólo un estilo de comillas. Puedes escapar las comillas dentro de una cadena usando el carácter de barra diagonal invertida (`\`):
 
 ```js
-const allSameQuotes = 'I\'ve had a perfectly wonderful evening, but this wasn\'t it.';
+const allSameQuotes =
+  "I've had a perfectly wonderful evening, but this wasn't it.";
 ```
 
 # --instructions--
@@ -58,6 +59,6 @@ console.log(innerHtml);
 # --solutions--
 
 ```js
-let innerHtml = "<p>Click here to <a href=\"#Home\">return home</a></p>";
+let innerHtml = '<p>Click here to <a href="#Home">return home</a></p>';
 console.log(innerHtml);
 ```

@@ -19,7 +19,7 @@ code example 0
 Question line 1
 
 ```js
-  var x = 'y';
+var x = 'y';
 ```
 
 # --question--
@@ -30,7 +30,7 @@ Some inline `code`
 
 ---
 
-Some *italics*
+Some _italics_
 
 A second answer paragraph.
 

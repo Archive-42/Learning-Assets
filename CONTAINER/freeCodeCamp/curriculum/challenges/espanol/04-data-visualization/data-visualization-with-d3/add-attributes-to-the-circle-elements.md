@@ -10,7 +10,7 @@ dashedName: add-attributes-to-the-circle-elements
 
 The last challenge created the `circle` elements for each point in the `dataset`, and appended them to the SVG canvas. But D3 needs more information about the position and size of each `circle` to display them correctly.
 
-A `circle` in SVG has three main attributes. The `cx` and `cy` attributes are the coordinates. They tell D3 where to position the *center* of the shape on the SVG canvas. The radius (`r` attribute) gives the size of the `circle`.
+A `circle` in SVG has three main attributes. The `cx` and `cy` attributes are the coordinates. They tell D3 where to position the _center_ of the shape on the SVG canvas. The radius (`r` attribute) gives the size of the `circle`.
 
 Just like the `rect` `y` coordinate, the `cy` attribute for a `circle` is measured from the top of the SVG canvas, not from the bottom.
 
@@ -136,37 +136,31 @@ assert(
 <body>
   <script>
     const dataset = [
-                  [ 34,    78 ],
-                  [ 109,   280 ],
-                  [ 310,   120 ],
-                  [ 79,    411 ],
-                  [ 420,   220 ],
-                  [ 233,   145 ],
-                  [ 333,   96 ],
-                  [ 222,   333 ],
-                  [ 78,    320 ],
-                  [ 21,    123 ]
-                ];
-
+      [34, 78],
+      [109, 280],
+      [310, 120],
+      [79, 411],
+      [420, 220],
+      [233, 145],
+      [333, 96],
+      [222, 333],
+      [78, 320],
+      [21, 123]
+    ];
 
     const w = 500;
     const h = 500;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("circle")
-       .data(dataset)
-       .enter()
-       .append("circle")
-       // Add your code below this line
+    svg.selectAll('circle').data(dataset).enter().append('circle');
+    // Add your code below this line
 
-
-
-       // Add your code above this line
-
+    // Add your code above this line
   </script>
 </body>
 ```
@@ -177,35 +171,35 @@ assert(
 <body>
   <script>
     const dataset = [
-                  [ 34,    78 ],
-                  [ 109,   280 ],
-                  [ 310,   120 ],
-                  [ 79,    411 ],
-                  [ 420,   220 ],
-                  [ 233,   145 ],
-                  [ 333,   96 ],
-                  [ 222,   333 ],
-                  [ 78,    320 ],
-                  [ 21,    123 ]
-                ];
-
+      [34, 78],
+      [109, 280],
+      [310, 120],
+      [79, 411],
+      [420, 220],
+      [233, 145],
+      [333, 96],
+      [222, 333],
+      [78, 320],
+      [21, 123]
+    ];
 
     const w = 500;
     const h = 500;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("circle")
-       .data(dataset)
-       .enter()
-       .append("circle")
-       .attr("cx", (d) => d[0])
-       .attr("cy", (d) => h - d[1])
-       .attr("r", 5)
-
+    svg
+      .selectAll('circle')
+      .data(dataset)
+      .enter()
+      .append('circle')
+      .attr('cx', d => d[0])
+      .attr('cy', d => h - d[1])
+      .attr('r', 5);
   </script>
 </body>
 ```

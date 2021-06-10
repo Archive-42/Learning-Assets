@@ -8,11 +8,11 @@ dashedName: deal-cards-for-freecell
 
 # --description--
 
-*FreeCell* is the solitaire card game that Paul Alfille introduced to the PLATO system in 1978. Jim Horne, at Microsoft, changed the name to FreeCell and reimplemented the game for [DOS](https://rosettacode.org/wiki/DOS "DOS"), then [Windows](https://rosettacode.org/wiki/Windows "Windows"). This version introduced 32000 numbered deals.
+_FreeCell_ is the solitaire card game that Paul Alfille introduced to the PLATO system in 1978. Jim Horne, at Microsoft, changed the name to FreeCell and reimplemented the game for [DOS](https://rosettacode.org/wiki/DOS 'DOS'), then [Windows](https://rosettacode.org/wiki/Windows 'Windows'). This version introduced 32000 numbered deals.
 
 As the game became popular, Jim Horne disclosed the algorithm, and other implementations of FreeCell began to reproduce the Microsoft deals. These deals are numbered from 1 to 32000. Newer versions from Microsoft have 1 million deals, numbered from 1 to 1000000; some implementations allow numbers outside that range.
 
-The algorithm uses this [linear congruential generator](<https://rosettacode.org/wiki/linear congruential generator> "linear congruential generator") from Microsoft C:
+The algorithm uses this [linear congruential generator](<https://rosettacode.org/wiki/linear congruential generator> 'linear congruential generator') from Microsoft C:
 
 <ul>
   <li>$state_{n + 1} \equiv 214013 \times state_n + 2531011 \pmod{2^{31}}$</li>
@@ -58,7 +58,7 @@ The algorithm follows:
   ['3S', 'TD', '4S', 'TH', '8H', '2C', 'JH', '7D'],
   ['6D', '8S', '8D', 'QS', '6C', '3D', '8C', 'TC'],
   ['6S', '9C', '2H', '6H']
-]
+];
 ```
 
 **Game #617**
@@ -72,7 +72,7 @@ The algorithm follows:
   ['4C', 'QS', '9C', '9H', '7C', '6H', '2C', '2S'],
   ['4S', 'TS', '2H', '5D', 'JC', '6C', 'JH', 'QH'],
   ['JD', 'KS', 'KC', '4H']
-]
+];
 ```
 
 # --instructions--
@@ -143,7 +143,6 @@ const game617 = [
 
 ```js
 function dealFreeCell(seed) {
-
   return true;
 }
 ```
@@ -156,14 +155,28 @@ function FreeCellRNG(seed) {
   return {
     lastNum: seed,
     next() {
-      this.lastNum = ((214013 * this.lastNum) + 2531011) % (Math.pow(2, 31));
+      this.lastNum = (214013 * this.lastNum + 2531011) % Math.pow(2, 31);
       return this.lastNum >> 16;
     }
   };
 }
 // Get cards
 function getDeck() {
-  const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'];
+  const ranks = [
+    'A',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    'T',
+    'J',
+    'Q',
+    'K'
+  ];
   const suits = ['C', 'D', 'H', 'S'];
   const cards = [];
   for (let i = 0; i < ranks.length; i += 1) {

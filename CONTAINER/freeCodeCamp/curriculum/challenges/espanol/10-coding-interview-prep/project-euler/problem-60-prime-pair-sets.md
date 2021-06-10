@@ -32,7 +32,6 @@ assert.strictEqual(primePairSets(), 26033);
 
 ```js
 function primePairSets() {
-
   return true;
 }
 

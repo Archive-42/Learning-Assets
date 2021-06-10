@@ -77,7 +77,7 @@ assert(
 The `rootReducer` should be a function that combines the `counterReducer` and the `authReducer`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       const noWhiteSpace = __helpers.removeWhiteSpace(getUserInput('index'));
@@ -138,7 +138,7 @@ const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 
 const counterReducer = (state = 0, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case INCREMENT:
       return state + 1;
     case DECREMENT:
@@ -151,16 +151,16 @@ const counterReducer = (state = 0, action) => {
 const LOGIN = 'LOGIN';
 const LOGOUT = 'LOGOUT';
 
-const authReducer = (state = {authenticated: false}, action) => {
-  switch(action.type) {
+const authReducer = (state = { authenticated: false }, action) => {
+  switch (action.type) {
     case LOGIN:
       return {
         authenticated: true
-      }
+      };
     case LOGOUT:
       return {
         authenticated: false
-      }
+      };
     default:
       return state;
   }

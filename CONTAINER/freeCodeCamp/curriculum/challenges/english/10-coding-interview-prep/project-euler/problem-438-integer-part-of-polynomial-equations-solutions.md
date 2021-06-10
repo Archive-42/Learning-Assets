@@ -1,6 +1,6 @@
 ---
 id: 5900f5231000cf542c510034
-title: 'Problem 438: Integer part of polynomial equation''s solutions'
+title: "Problem 438: Integer part of polynomial equation's solutions"
 challengeType: 5
 forumTopicId: 302109
 dashedName: problem-438-integer-part-of-polynomial-equations-solutions
@@ -30,7 +30,6 @@ assert.strictEqual(euler438(), 2046409616809);
 
 ```js
 function euler438() {
-
   return true;
 }
 

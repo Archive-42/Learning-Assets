@@ -8,7 +8,7 @@ dashedName: sedols
 
 # --description--
 
-For each number list of 6-digit [SEDOL](https://en.wikipedia.org/wiki/SEDOL "wp: SEDOL")s, calculate and append the checksum digit. That is, given the input string on the left, your function should return the corresponding string on the right:
+For each number list of 6-digit [SEDOL](https://en.wikipedia.org/wiki/SEDOL 'wp: SEDOL')s, calculate and append the checksum digit. That is, given the input string on the left, your function should return the corresponding string on the right:
 
 <pre>
 710889 => 7108899
@@ -64,7 +64,6 @@ assert(sedol('228276') === '2282765');
 
 ```js
 function sedol(input) {
-
   return true;
 }
 ```

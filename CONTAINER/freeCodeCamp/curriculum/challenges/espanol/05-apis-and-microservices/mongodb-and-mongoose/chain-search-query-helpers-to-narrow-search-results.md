@@ -19,7 +19,7 @@ Modify the `queryChain` function to find people who like the food specified by t
 Chaining query helpers should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/_api/query-tools',
     type: 'POST',
@@ -31,7 +31,7 @@ Chaining query helpers should succeed
       { name: 'Mario', age: 51, favoriteFoods: ['burrito', 'prosciutto'] }
     ])
   }).then(
-    (data) => {
+    data => {
       assert.isArray(data, 'the response should be an Array');
       assert.equal(
         data.length,
@@ -59,7 +59,7 @@ Chaining query helpers should succeed
         'The returned second item name is not what expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

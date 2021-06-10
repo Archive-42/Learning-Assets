@@ -13,7 +13,7 @@ Una de las formas más populares en el mundo es la forma del corazón, y en este
 
 ```css
 .heart::before {
-  content: "";
+  content: '';
   background-color: yellow;
   border-radius: 25%;
   position: absolute;
@@ -40,9 +40,7 @@ La propiedad `background-color` del selector `heart::after` debe ser `pink`.
 
 ```js
 const heartAfter = code.match(/\.heart::after\s*{[\s\S]+?[^\}]}/g)[0];
-assert(
-  /({|;)\s*background-color\s*:\s*pink\s*(;|})/g.test(heartAfter)
-);
+assert(/({|;)\s*background-color\s*:\s*pink\s*(;|})/g.test(heartAfter));
 ```
 
 El `border-radius` del selector `heart::after` debe ser 50%.
@@ -83,7 +81,7 @@ assert(code.match(/\.heart::before\s*?{\s*?content\s*?:\s*?("|')\1\s*?;/gi));
   }
   .heart::after {
     background-color: blue;
-    content: "";
+    content: '';
     border-radius: 25%;
     position: absolute;
     width: 50px;
@@ -123,7 +121,7 @@ assert(code.match(/\.heart::before\s*?{\s*?content\s*?:\s*?("|')\1\s*?;/gi));
   }
   .heart::after {
     background-color: pink;
-    content: "";
+    content: '';
     border-radius: 50%;
     position: absolute;
     width: 50px;
@@ -132,7 +130,7 @@ assert(code.match(/\.heart::before\s*?{\s*?content\s*?:\s*?("|')\1\s*?;/gi));
     left: 25px;
   }
   .heart::before {
-    content: "";
+    content: '';
     background-color: pink;
     border-radius: 50%;
     position: absolute;

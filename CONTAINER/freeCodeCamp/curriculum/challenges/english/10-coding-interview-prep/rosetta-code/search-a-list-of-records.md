@@ -63,9 +63,7 @@ assert.equal(searchCity('Lagos'), 0);
 ## --seed-contents--
 
 ```js
-function searchCity(name) {
-
-}
+function searchCity(name) {}
 
 const list = [
   { name: 'Lagos', population: 21.0 },

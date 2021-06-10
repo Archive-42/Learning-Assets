@@ -71,7 +71,7 @@ The `input` tag should be styled with a border of `3px solid red` if the input v
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   const mockedComponent = Enzyme.mount(React.createElement(GateKeeper));
   const simulateChange = (el, value) =>
@@ -102,7 +102,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<GateKeeper />, document.getElementById('root'))
+ReactDOM.render(<GateKeeper />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -117,7 +117,7 @@ class GateKeeper extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
-    this.setState({ input: event.target.value })
+    this.setState({ input: event.target.value });
   }
   render() {
     let inputStyle = {
@@ -130,14 +130,15 @@ class GateKeeper extends React.Component {
       <div>
         <h3>Don't Type Too Much:</h3>
         <input
-          type="text"
+          type='text'
           style={inputStyle}
           value={this.state.input}
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -152,7 +153,7 @@ class GateKeeper extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
-    this.setState({ input: event.target.value })
+    this.setState({ input: event.target.value });
   }
   render() {
     let inputStyle = {
@@ -160,17 +161,18 @@ class GateKeeper extends React.Component {
     };
     if (this.state.input.length > 15) {
       inputStyle.border = '3px solid red';
-    };
+    }
     return (
       <div>
         <h3>Don't Type Too Much:</h3>
         <input
-          type="text"
+          type='text'
           style={inputStyle}
           value={this.state.input}
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
-};
+}
 ```

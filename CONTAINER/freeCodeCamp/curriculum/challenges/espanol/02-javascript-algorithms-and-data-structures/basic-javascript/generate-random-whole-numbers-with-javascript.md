@@ -67,14 +67,15 @@ assert(code.match(/Math.floor/g).length >= 1);
 ## --after-user-code--
 
 ```js
-(function(){return randomWholeNum();})();
+(function () {
+  return randomWholeNum();
+})();
 ```
 
 ## --seed-contents--
 
 ```js
 function randomWholeNum() {
-
   // Only change code below this line
 
   return Math.random();

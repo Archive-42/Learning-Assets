@@ -73,7 +73,7 @@ a specific type of tea).
 const getTea = (prepareTea, numOfCups) => {
   const teaCups = [];
 
-  for(let cups = 1; cups <= numOfCups; cups += 1) {
+  for (let cups = 1; cups <= numOfCups; cups += 1) {
     const teaCup = prepareTea();
     teaCups.push(teaCup);
   }
@@ -85,10 +85,7 @@ const tea4GreenTeamFCC = null;
 const tea4BlackTeamFCC = null;
 // Only change code above this line
 
-console.log(
-  tea4GreenTeamFCC,
-  tea4BlackTeamFCC
-);
+console.log(tea4GreenTeamFCC, tea4BlackTeamFCC);
 ```
 
 # --solutions--
@@ -100,7 +97,7 @@ const prepareBlackTea = () => 'blackTea';
 const getTea = (prepareTea, numOfCups) => {
   const teaCups = [];
 
-  for(let cups = 1; cups <= numOfCups; cups += 1) {
+  for (let cups = 1; cups <= numOfCups; cups += 1) {
     const teaCup = prepareTea();
     teaCups.push(teaCup);
   }

@@ -14,13 +14,13 @@ Puedes añadir nuevas propiedades a los objetos de JavaScript existentes de la m
 Así es como podríamos agregar una propiedad `bark` a nuestro objeto `ourDog`:
 
 ```js
-ourDog.bark = "bow-wow";
+ourDog.bark = 'bow-wow';
 ```
 
 o
 
 ```js
-ourDog["bark"] = "bow-wow";
+ourDog['bark'] = 'bow-wow';
 ```
 
 Ahora cuando evaluemos `ourDog.bark`, obtendremos su ladrido, `bow-wow`.
@@ -29,13 +29,13 @@ Por ejemplo:
 
 ```js
 var ourDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["everything!"]
+  name: 'Camper',
+  legs: 4,
+  tails: 1,
+  friends: ['everything!']
 };
 
-ourDog.bark = "bow-wow";
+ourDog.bark = 'bow-wow';
 ```
 
 # --instructions--
@@ -61,30 +61,30 @@ assert(!/bark[^\n]:/.test(code));
 ## --after-user-code--
 
 ```js
-(function(z){return z;})(myDog);
+(function (z) {
+  return z;
+})(myDog);
 ```
 
 ## --seed-contents--
 
 ```js
 var myDog = {
-  "name": "Happy Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
+  name: 'Happy Coder',
+  legs: 4,
+  tails: 1,
+  friends: ['freeCodeCamp Campers']
 };
-
-
 ```
 
 # --solutions--
 
 ```js
 var myDog = {
-  "name": "Happy Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
+  name: 'Happy Coder',
+  legs: 4,
+  tails: 1,
+  friends: ['freeCodeCamp Campers']
 };
-myDog.bark = "Woof Woof";
+myDog.bark = 'Woof Woof';
 ```

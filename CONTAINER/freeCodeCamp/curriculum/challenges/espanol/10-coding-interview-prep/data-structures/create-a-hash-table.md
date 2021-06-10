@@ -166,13 +166,13 @@ var hash = string => {
   return hash;
 };
 
-var addMethodSolution = function(key, val) {
-    var theHash = hash(key);
-    if (!this.collection.hasOwnProperty(theHash)) {
-      this.collection[theHash] = {};
-    }
-    this.collection[theHash][key] = val;
-}
+var addMethodSolution = function (key, val) {
+  var theHash = hash(key);
+  if (!this.collection.hasOwnProperty(theHash)) {
+    this.collection[theHash] = {};
+  }
+  this.collection[theHash][key] = val;
+};
 ```
 
 ## --seed-contents--
@@ -187,7 +187,7 @@ var hash = string => {
   }
   return hashed;
 };
-var HashTable = function() {
+var HashTable = function () {
   this.collection = {};
   // Only change code below this line
 
@@ -199,25 +199,27 @@ var HashTable = function() {
 
 ```js
 var called = 0;
-var hash = (string) => {
+var hash = string => {
   called++;
   var hash = 0;
-  for (var i = 0; i < string.length; i++) { hash += string.charCodeAt(i); }
+  for (var i = 0; i < string.length; i++) {
+    hash += string.charCodeAt(i);
+  }
   return hash;
 };
-var HashTable = function() {
+var HashTable = function () {
   this.collection = {};
   // Only change code below this line
 
-  this.add = function(key, val) {
+  this.add = function (key, val) {
     var theHash = hash(key);
     if (!this.collection.hasOwnProperty(theHash)) {
       this.collection[theHash] = {};
     }
     this.collection[theHash][key] = val;
-  }
+  };
 
-  this.remove = function(key) {
+  this.remove = function (key) {
     var theHash = hash(key);
     var hashedObj = this.collection[theHash];
     if (hashedObj.hasOwnProperty(key)) {
@@ -226,15 +228,15 @@ var HashTable = function() {
     if (!Object.keys(hashedObj).length) {
       delete this.collection[theHash];
     }
-  }
+  };
 
-  this.lookup = function(key) {
+  this.lookup = function (key) {
     var theHash = hash(key);
     if (this.collection.hasOwnProperty(theHash)) {
       return this.collection[theHash][key];
     }
-    return null
-  }
+    return null;
+  };
   // Only change code above this line
 };
 ```

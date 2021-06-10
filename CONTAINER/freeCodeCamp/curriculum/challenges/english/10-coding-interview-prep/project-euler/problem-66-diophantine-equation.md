@@ -50,7 +50,6 @@ assert.strictEqual(diophantineEquation(), 661);
 
 ```js
 function diophantineEquation() {
-
   return true;
 }
 

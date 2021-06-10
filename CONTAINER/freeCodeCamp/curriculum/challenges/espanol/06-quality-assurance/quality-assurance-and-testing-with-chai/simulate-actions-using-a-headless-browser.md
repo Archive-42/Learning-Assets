@@ -42,7 +42,7 @@ const browser = new Browser();
 Then, use the `suiteSetup` hook to direct the `browser` to the `/` route with the following code:
 
 ```js
-suiteSetup(function(done) {
+suiteSetup(function (done) {
   return browser.visit('/', done);
 });
 ```
@@ -52,14 +52,14 @@ suiteSetup(function(done) {
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional').then(
-    (data) => {
-      data.slice(0, 4).forEach((test) => {
+    data => {
+      data.slice(0, 4).forEach(test => {
         assert.equal(test.state, 'passed');
-      })
+      });
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

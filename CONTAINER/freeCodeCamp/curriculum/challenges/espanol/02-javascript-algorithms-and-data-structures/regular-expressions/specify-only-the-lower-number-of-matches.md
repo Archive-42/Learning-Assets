@@ -15,9 +15,9 @@ Para especificar sólo el número inferior de patrones, mantén el primer númer
 Por ejemplo, para hacer coincidir solo con la cadena `hah` cuando la letra `a` aparezca al menos `3` veces, la expresión regular sería `/ha{3,}h/`.
 
 ```js
-let A4 = "haaaah";
-let A2 = "haah";
-let A100 = "h" + "a".repeat(100) + "h";
+let A4 = 'haaaah';
+let A2 = 'haah';
+let A100 = 'h' + 'a'.repeat(100) + 'h';
 let multipleA = /ha{3,}h/;
 multipleA.test(A4);
 multipleA.test(A2);
@@ -79,7 +79,7 @@ assert('Hazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzah'.match(haRegex)[0].length === 34);
 ## --seed-contents--
 
 ```js
-let haStr = "Hazzzzah";
+let haStr = 'Hazzzzah';
 let haRegex = /change/; // Change this line
 let result = haRegex.test(haStr);
 ```
@@ -87,7 +87,7 @@ let result = haRegex.test(haStr);
 # --solutions--
 
 ```js
-let haStr = "Hazzzzah";
+let haStr = 'Hazzzzah';
 let haRegex = /Haz{4,}ah/; // Change this line
 let result = haRegex.test(haStr);
 ```

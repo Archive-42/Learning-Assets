@@ -100,7 +100,6 @@ assert.strictEqual(euler480(), turnthestarson);
 
 ```js
 function euler480() {
-
   return true;
 }
 

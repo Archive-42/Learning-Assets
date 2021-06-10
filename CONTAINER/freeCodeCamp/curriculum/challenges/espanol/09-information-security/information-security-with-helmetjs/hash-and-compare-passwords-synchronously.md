@@ -35,9 +35,9 @@ Submit your page when you think you've got it right.
 Sync hash should be generated and correctly compared.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /START_SYNC[^]*hash.*=.*bcrypt.hashSync.*myPlaintextPassword( |),( |)saltRounds[^]*END_SYNC/gi,
@@ -49,7 +49,7 @@ Sync hash should be generated and correctly compared.
         'You should call bcrypt.compareSync on myPlaintextPassword with the hash generated in the last line'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

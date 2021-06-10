@@ -53,4 +53,3 @@ Mrugesh
 ## --video-solution--
 
 2
-

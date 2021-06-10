@@ -13,7 +13,7 @@ dashedName: catch-off-by-one-errors-when-using-indexing
 Cuando se utilizan métodos de cadenas o arreglos que toman rangos de índices como argumentos, es útil leer la documentación y entender si son inclusivos (el elemento en el índice dado es parte de lo que se devuelve) o no. Estos son algunos ejemplos de errores por un paso:
 
 ```js
-let alphabet = "abcdefghijklmnopqrstuvwxyz";
+let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 let len = alphabet.length;
 for (let i = 0; i <= len; i++) {
   console.log(alphabet[i]);
@@ -64,11 +64,11 @@ assert(!code.match(/i\s*?<=\s*?len;/g));
 
 ```js
 function countToFive() {
-  let firstFive = "12345";
+  let firstFive = '12345';
   let len = firstFive.length;
   // Only change code below this line
   for (let i = 1; i <= len; i++) {
-  // Only change code above this line
+    // Only change code above this line
     console.log(firstFive[i]);
   }
 }
@@ -80,13 +80,13 @@ countToFive();
 
 ```js
 function countToFive() {
- let firstFive = "12345";
- let len = firstFive.length;
- // Only change code below this line
- for (let i = 0; i < len; i++) {
- // Only change code above this line
-   console.log(firstFive[i]);
- }
+  let firstFive = '12345';
+  let len = firstFive.length;
+  // Only change code below this line
+  for (let i = 0; i < len; i++) {
+    // Only change code above this line
+    console.log(firstFive[i]);
+  }
 }
 
 countToFive();

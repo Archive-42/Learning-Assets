@@ -12,7 +12,7 @@ dashedName: declare-string-variables
 Anteriormente hemos usado el código
 
 ```js
-var myName = "your name";
+var myName = 'your name';
 ```
 
 `"your name"` es conocida como una <dfn>cadena</dfn> <dfn>literal</dfn>. Es una cadena porque es una serie de cero o más caracteres encerrados en comillas simples o dobles.
@@ -64,7 +64,11 @@ assert(
 ## --after-user-code--
 
 ```js
-if(typeof myFirstName !== "undefined" && typeof myLastName !== "undefined"){(function(){return myFirstName + ', ' + myLastName;})();}
+if (typeof myFirstName !== 'undefined' && typeof myLastName !== 'undefined') {
+  (function () {
+    return myFirstName + ', ' + myLastName;
+  })();
+}
 ```
 
 ## --seed-contents--
@@ -76,6 +80,6 @@ if(typeof myFirstName !== "undefined" && typeof myLastName !== "undefined"){(fun
 # --solutions--
 
 ```js
-var myFirstName = "Alan";
-var myLastName = "Turing";
+var myFirstName = 'Alan';
+var myLastName = 'Turing';
 ```

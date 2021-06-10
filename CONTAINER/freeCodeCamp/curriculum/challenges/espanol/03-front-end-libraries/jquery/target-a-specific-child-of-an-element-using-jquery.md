@@ -4,8 +4,7 @@ title: Target a Specific Child of an Element Using jQuery
 challengeType: 6
 forumTopicId: 18315
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: target-a-specific-child-of-an-element-using-jquery
 ---
 
@@ -63,15 +62,14 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
+    $('#right-well').children().css('color', 'orange');
   });
 </script>
 
@@ -104,15 +102,15 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
-    $(".target:nth-child(2)").addClass("animated bounce");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
+    $('#right-well').children().css('color', 'orange');
+    $('.target:nth-child(2)').addClass('animated bounce');
   });
 </script>
 

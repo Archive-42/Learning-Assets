@@ -20,6 +20,7 @@ myVar = 12 - 6;
 ```
 
 `myVar` tendrá el valor `6`.
+
 # --instructions--
 
 Cambia el `0` para que la diferencia sea `12`.
@@ -43,7 +44,9 @@ assert(/difference=45-33;?/.test(__helpers.removeWhiteSpace(code)));
 ## --after-user-code--
 
 ```js
-(function(z){return 'difference = '+z;})(difference);
+(function (z) {
+  return 'difference = ' + z;
+})(difference);
 ```
 
 ## --seed-contents--

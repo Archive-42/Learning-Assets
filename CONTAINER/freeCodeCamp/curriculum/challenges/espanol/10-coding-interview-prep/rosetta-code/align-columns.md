@@ -72,7 +72,7 @@ assert.strictEqual(formatText(testInput, 'center'), centerAligned);
 const testInput = [
   'Given$a$text$file$of$many$lines',
   'where$fields$within$a$line$',
-  'are$delineated$by$a$single$\"dollar\"$character',
+  'are$delineated$by$a$single$"dollar"$character',
   'write$a$program',
   'that$aligns$each$column$of$fields$',
   'by$ensuring$that$words$in$each$',
@@ -82,38 +82,41 @@ const testInput = [
   'or$center$justified$within$its$column.'
 ];
 
-const rightAligned = '     Given          a      text   file     of     many     lines\n' +
-'     where     fields    within      a   line \n' +
-'       are delineated        by      a single "dollar" character\n' +
-'     write          a   program\n' +
-'      that     aligns      each column     of   fields \n' +
-'        by   ensuring      that  words     in     each \n' +
-'    column        are separated     by     at    least       one space.\n' +
-'  Further,      allow       for   each   word       in         a column to be either left \n' +
-'justified,      right justified\n' +
-'        or     center justified within    its  column.';
+const rightAligned =
+  '     Given          a      text   file     of     many     lines\n' +
+  '     where     fields    within      a   line \n' +
+  '       are delineated        by      a single "dollar" character\n' +
+  '     write          a   program\n' +
+  '      that     aligns      each column     of   fields \n' +
+  '        by   ensuring      that  words     in     each \n' +
+  '    column        are separated     by     at    least       one space.\n' +
+  '  Further,      allow       for   each   word       in         a column to be either left \n' +
+  'justified,      right justified\n' +
+  '        or     center justified within    its  column.';
 
-const leftAligned = 'Given      a          text      file   of     many     lines    \n' +
-'where      fields     within    a      line   \n' +
-'are        delineated by        a      single "dollar" character\n' +
-'write      a          program  \n' +
-'that       aligns     each      column of     fields   \n' +
-'by         ensuring   that      words  in     each     \n' +
-'column     are        separated by     at     least    one       space.\n' +
-'Further,   allow      for       each   word   in       a         column to be either left \n' +
-'justified, right      justified\n' +
-'or         center     justified within its    column. ';
+const leftAligned =
+  'Given      a          text      file   of     many     lines    \n' +
+  'where      fields     within    a      line   \n' +
+  'are        delineated by        a      single "dollar" character\n' +
+  'write      a          program  \n' +
+  'that       aligns     each      column of     fields   \n' +
+  'by         ensuring   that      words  in     each     \n' +
+  'column     are        separated by     at     least    one       space.\n' +
+  'Further,   allow      for       each   word   in       a         column to be either left \n' +
+  'justified, right      justified\n' +
+  'or         center     justified within its    column. ';
 
-const centerAligned = '  Given        a        text     file    of     many     lines  \n' +
-'  where      fields    within     a     line  \n' +
-'   are     delineated    by       a    single \"dollar\" character\n' +
-'  write        a       program \n' +
-'   that      aligns     each    column   of    fields  \n' +
-'    by      ensuring    that    words    in     each   \n' +
-'  column      are     separated   by     at    least      one    space.\n' +
-' Further,    allow       for     each   word     in        a     column to be either left \n' +
-'justified,   right    justified\n' +
-'    or       center   justified within  its   column. ';
+const centerAligned =
+  '  Given        a        text     file    of     many     lines  \n' +
+  '  where      fields    within     a     line  \n' +
+  '   are     delineated    by       a    single "dollar" character\n' +
+  '  write        a       program \n' +
+  '   that      aligns     each    column   of    fields  \n' +
+  '    by      ensuring    that    words    in     each   \n' +
+  '  column      are     separated   by     at    least      one    space.\n' +
+  ' Further,    allow       for     each   word     in        a     column to be either left \n' +
+  'justified,   right    justified\n' +
+  '    or       center   justified within  its   column. ';
 ```
 
 ## --seed-contents--
@@ -132,9 +135,7 @@ const testArr = [
   'or$center$justified$within$its$column.'
 ];
 
-function formatText(input, justification) {
-
-}
+function formatText(input, justification) {}
 ```
 
 # --solutions--
@@ -153,10 +154,18 @@ const testArr = [
   'or$center$justified$within$its$column.'
 ];
 
-String.prototype.repeat = function (n) { return new Array(1 + parseInt(n)).join(this); };
+String.prototype.repeat = function (n) {
+  return new Array(1 + parseInt(n)).join(this);
+};
 
 function formatText(input, justification) {
-  let x, y, max, cols = 0, diff, left, right;
+  let x,
+    y,
+    max,
+    cols = 0,
+    diff,
+    left,
+    right;
   for (x = 0; x < input.length; x++) {
     input[x] = input[x].split('$');
     if (input[x].length > cols) {
@@ -176,10 +185,12 @@ function formatText(input, justification) {
         left = ' '.repeat(Math.floor(diff));
         right = ' '.repeat(Math.ceil(diff));
         if (justification === 'left') {
-          right += left; left = '';
+          right += left;
+          left = '';
         }
         if (justification === 'right') {
-          left += right; right = '';
+          left += right;
+          right = '';
         }
         input[y][x] = left + input[y][x] + right;
       }

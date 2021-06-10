@@ -59,9 +59,7 @@ assert.equal(maxCombine([54, 546, 548, 60]), 6054854654);
 ## --seed-contents--
 
 ```js
-function maxCombine(xs) {
-
-}
+function maxCombine(xs) {}
 ```
 
 # --solutions--
@@ -70,7 +68,7 @@ function maxCombine(xs) {
 function maxCombine(xs) {
   return parseInt(
     xs
-      .sort(function(x, y) {
+      .sort(function (x, y) {
         var a = x.toString(),
           b = y.toString(),
           ab = parseInt(a + b),

@@ -16,7 +16,7 @@ Fíjese en el código debajo:
 
 ```js
 const person = {
-  name: "Zodiac Hasbro",
+  name: 'Zodiac Hasbro',
   age: 56
 };
 
@@ -41,7 +41,7 @@ Utiliza un método de iteración (cualquier tipo de bucle) para obtener el resul
   '<li class="text-warning">no-var</li>',
   '<li class="text-warning">var-on-top</li>',
   '<li class="text-warning">linebreak</li>'
-]
+];
 ```
 
 # --hints--
@@ -69,13 +69,13 @@ assert(
 Las cadenas de plantillas y la interpolación de expresiones deben ser usadas.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/(`.*\${.*}.*`)/));
+getUserInput => assert(getUserInput('index').match(/(`.*\${.*}.*`)/));
 ```
 
 Debe utilizarse un iterador.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(getUserInput('index').match(/for|map|reduce|forEach|while/));
 ```
 
@@ -85,9 +85,9 @@ Debe utilizarse un iterador.
 
 ```js
 const result = {
-  success: ["max-length", "no-amd", "prefer-arrow-functions"],
-  failure: ["no-var", "var-on-top", "linebreak"],
-  skipped: ["no-extra-semi", "no-dup-keys"]
+  success: ['max-length', 'no-amd', 'prefer-arrow-functions'],
+  failure: ['no-var', 'var-on-top', 'linebreak'],
+  skipped: ['no-extra-semi', 'no-dup-keys']
 };
 function makeList(arr) {
   // Only change code below this line
@@ -104,9 +104,9 @@ const failuresList = makeList(result.failure);
 
 ```js
 const result = {
-  success: ["max-length", "no-amd", "prefer-arrow-functions"],
-  failure: ["no-var", "var-on-top", "linebreak"],
-  skipped: ["no-extra-semi", "no-dup-keys"]
+  success: ['max-length', 'no-amd', 'prefer-arrow-functions'],
+  failure: ['no-var', 'var-on-top', 'linebreak'],
+  skipped: ['no-extra-semi', 'no-dup-keys']
 };
 function makeList(arr) {
   return arr.map(val => `<li class="text-warning">${val}</li>`);

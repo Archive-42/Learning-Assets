@@ -44,14 +44,15 @@ assert(code.match(/Math\.random/g).length >= 0);
 ## --after-user-code--
 
 ```js
-(function(){return randomFraction();})();
+(function () {
+  return randomFraction();
+})();
 ```
 
 ## --seed-contents--
 
 ```js
 function randomFraction() {
-
   // Only change code below this line
 
   return 0;

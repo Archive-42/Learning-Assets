@@ -63,7 +63,6 @@ const results = [3, 2, 2];
 
 ```js
 function countSubstring(str, subStr) {
-
   return true;
 }
 ```

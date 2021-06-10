@@ -15,19 +15,8 @@ Una de las características más poderosas cuando se piensa en los arreglos como
 ```js
 let nestedArray = [
   ['deep'],
-  [
-    ['deeper'], ['deeper'] 
-  ],
-  [
-    [
-      ['deepest'], ['deepest']
-    ],
-    [
-      [
-        ['deepest-est?']
-      ]
-    ]
-  ]
+  [['deeper'], ['deeper']],
+  [[['deepest'], ['deepest']], [[['deepest-est?']]]]
 ];
 ```
 
@@ -209,7 +198,16 @@ let myNestedArray = [
 
 ```js
 let myNestedArray = [
-  ['unshift', ['deep', ['deeper', ['deepest']]],false, 1, 2, 3, 'complex', 'nested'],
+  [
+    'unshift',
+    ['deep', ['deeper', ['deepest']]],
+    false,
+    1,
+    2,
+    3,
+    'complex',
+    'nested'
+  ],
   ['loop', 'shift', 6, 7, 1000, 'method'],
   ['concat', false, true, 'spread', 'array'],
   ['mutate', 1327.98, 'splice', 'slice', 'push'],

@@ -12,8 +12,8 @@ Aquí tenemos el constructor `Bird` del desafío anterior:
 
 ```js
 function Bird() {
-  this.name = "Albert";
-  this.color  = "blue";
+  this.name = 'Albert';
+  this.color = 'blue';
   this.numLegs = 2;
 }
 
@@ -61,8 +61,8 @@ assert(code.match(/new/g));
 
 ```js
 function Dog() {
-  this.name = "Rupert";
-  this.color = "brown";
+  this.name = 'Rupert';
+  this.color = 'brown';
   this.numLegs = 4;
 }
 // Only change code below this line
@@ -72,8 +72,8 @@ function Dog() {
 
 ```js
 function Dog() {
-  this.name = "Rupert";
-  this.color = "brown";
+  this.name = 'Rupert';
+  this.color = 'brown';
   this.numLegs = 4;
 }
 const hound = new Dog();

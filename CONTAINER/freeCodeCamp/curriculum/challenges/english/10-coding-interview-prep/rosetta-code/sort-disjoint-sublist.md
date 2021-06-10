@@ -39,75 +39,46 @@ assert(Array.isArray(sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7])));
 `sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7])` should return `[7, 0, 5, 4, 3, 2, 1, 6]`.
 
 ```js
-assert.deepEqual(sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7]), [
-  7,
-  0,
-  5,
-  4,
-  3,
-  2,
-  1,
-  6
-]);
+assert.deepEqual(
+  sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7]),
+  [7, 0, 5, 4, 3, 2, 1, 6]
+);
 ```
 
 `sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [1, 2, 5, 6])` should return `[7, 1, 2, 4, 3, 5, 6, 0]`.
 
 ```js
-assert.deepEqual(sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [1, 2, 5, 6]), [
-  7,
-  1,
-  2,
-  4,
-  3,
-  5,
-  6,
-  0
-]);
+assert.deepEqual(
+  sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [1, 2, 5, 6]),
+  [7, 1, 2, 4, 3, 5, 6, 0]
+);
 ```
 
 `sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [6, 1, 7])` should return `[8, 1, 6, 5, 4, 3, 2, 7]`.
 
 ```js
-assert.deepEqual(sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [6, 1, 7]), [
-  8,
-  1,
-  6,
-  5,
-  4,
-  3,
-  2,
-  7
-]);
+assert.deepEqual(
+  sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [6, 1, 7]),
+  [8, 1, 6, 5, 4, 3, 2, 7]
+);
 ```
 
 `sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [1, 3, 5, 6])` should return `[8, 2, 6, 3, 4, 5, 7, 1]`.
 
 ```js
-assert.deepEqual(sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [1, 3, 5, 6]), [
-  8,
-  2,
-  6,
-  3,
-  4,
-  5,
-  7,
-  1
-]);
+assert.deepEqual(
+  sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [1, 3, 5, 6]),
+  [8, 2, 6, 3, 4, 5, 7, 1]
+);
 ```
 
 `sortDisjoint([6, 1, 7, 1, 3, 5, 6], [6, 1, 5, 4])` should return `[6, 1, 7, 1, 3, 5, 6]`.
 
 ```js
-assert.deepEqual(sortDisjoint([6, 1, 7, 1, 3, 5, 6], [6, 1, 5, 4]), [
-  6,
-  1,
-  7,
-  1,
-  3,
-  5,
-  6
-]);
+assert.deepEqual(
+  sortDisjoint([6, 1, 7, 1, 3, 5, 6], [6, 1, 5, 4]),
+  [6, 1, 7, 1, 3, 5, 6]
+);
 ```
 
 # --seed--
@@ -115,9 +86,7 @@ assert.deepEqual(sortDisjoint([6, 1, 7, 1, 3, 5, 6], [6, 1, 5, 4]), [
 ## --seed-contents--
 
 ```js
-function sortDisjoint(values, indices) {
-
-}
+function sortDisjoint(values, indices) {}
 ```
 
 # --solutions--
@@ -126,7 +95,7 @@ function sortDisjoint(values, indices) {
 function sortDisjoint(values, indices) {
   let sublist = [];
 
-  indices.sort(function(a, b) {
+  indices.sort(function (a, b) {
     return a - b;
   });
 

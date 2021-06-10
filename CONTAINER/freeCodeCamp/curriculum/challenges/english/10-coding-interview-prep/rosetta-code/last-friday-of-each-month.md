@@ -77,9 +77,7 @@ assert.equal(lastFriday(2005, 8), 26);
 ## --seed-contents--
 
 ```js
-function lastFriday(year, month) {
-
-}
+function lastFriday(year, month) {}
 ```
 
 # --solutions--

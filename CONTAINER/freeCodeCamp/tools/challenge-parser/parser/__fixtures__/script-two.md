@@ -1,5 +1,5 @@
 ```css
 div {
-  background: red
+  background: red;
 }
 ```

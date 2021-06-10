@@ -15,9 +15,9 @@ Debemos notar que la sintaxis `class` es sólo sintaxis, y no una implementació
 En ES5, normalmente definimos una función `constructor` y usamos la palabra clave `new` para instanciar un objeto.
 
 ```js
-var SpaceShuttle = function(targetPlanet){
+var SpaceShuttle = function (targetPlanet) {
   this.targetPlanet = targetPlanet;
-}
+};
 var zeus = new SpaceShuttle('Jupiter');
 ```
 

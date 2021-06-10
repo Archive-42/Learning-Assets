@@ -15,7 +15,7 @@ jQuery tiene una función llamada `.html()` que te permite añadir etiquetas HTM
 Así es como se reescribiría y enfatizaría el texto de nuestro título:
 
 ```js
-$("h3").html("<em>jQuery Playground</em>");
+$('h3').html('<em>jQuery Playground</em>');
 ```
 
 jQuery también tiene una función similar llamada `.text()` que solo altera el texto sin añadir etiquetas. En otras palabras, esta función no evaluará las etiquetas HTML que se le pasen. En cambio, lo tomará como el texto con el que quieres reemplazar el contenido existente.
@@ -66,9 +66,8 @@ assert(code.match(/\$\(\s*?(\"|\')#target4(\"|\')\s*?\)\.html\(/));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
   });
 </script>
 
@@ -101,9 +100,9 @@ assert(code.match(/\$\(\s*?(\"|\')#target4(\"|\')\s*?\)\.html\(/));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target4").html('<em>#target4</em>');
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target4').html('<em>#target4</em>');
   });
 </script>
 

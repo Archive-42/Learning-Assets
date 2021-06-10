@@ -95,9 +95,7 @@ assert.equal(isSemiPrime(124), false);
 ## --seed-contents--
 
 ```js
-function isSemiPrime(n) {
-
-}
+function isSemiPrime(n) {}
 ```
 
 # --solutions--

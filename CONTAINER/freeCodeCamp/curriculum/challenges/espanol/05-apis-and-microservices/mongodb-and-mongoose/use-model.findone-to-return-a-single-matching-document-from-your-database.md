@@ -19,13 +19,13 @@ Modify the `findOneByFood` function to find just one person which has a certain 
 Find one item should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/find-one-by-food', {
     name: 'Gary',
     age: 46,
     favoriteFoods: ['chicken salad']
   }).then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'Gary', 'item.name is not what expected');
       assert.deepEqual(
         data.favoriteFoods,
@@ -34,7 +34,7 @@ Find one item should succeed
       );
       assert.equal(data.__v, 0, 'The item should be not previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -62,7 +62,7 @@ assert(
 );
 ```
 
-The  `size` of your `LinkedList` class should equal the amount of nodes in the linked list.
+The `size` of your `LinkedList` class should equal the amount of nodes in the linked list.
 
 ```js
 assert(
@@ -84,22 +84,21 @@ function LinkedList() {
   var length = 0;
   var head = null;
 
-  var Node = function(element){
+  var Node = function (element) {
     this.element = element;
     this.next = null;
   };
 
-  this.head = function(){
+  this.head = function () {
     return head;
   };
 
-  this.size = function(){
+  this.size = function () {
     return length;
   };
 
-  this.add = function(element){
+  this.add = function (element) {
     // Only change code below this line
-
     // Only change code above this line
   };
 }
@@ -108,29 +107,28 @@ function LinkedList() {
 # --solutions--
 
 ```js
-function LinkedList() { 
-  var length = 0; 
-  var head = null; 
+function LinkedList() {
+  var length = 0;
+  var head = null;
 
-  var Node = function(element){
-    this.element = element; 
-    this.next = null; 
-  }; 
+  var Node = function (element) {
+    this.element = element;
+    this.next = null;
+  };
 
-  this.head = function(){
+  this.head = function () {
     return head;
   };
 
-  this.size = function(){
+  this.size = function () {
     return length;
   };
 
-  this.add = function(element){
+  this.add = function (element) {
     // Only change code below this line
     if (head == null) {
       head = new Node(element);
-    } 
-    else {
+    } else {
       let currentNode = head;
       while (currentNode.next != null) {
         // currentNode.next will be last node of linked list after loop

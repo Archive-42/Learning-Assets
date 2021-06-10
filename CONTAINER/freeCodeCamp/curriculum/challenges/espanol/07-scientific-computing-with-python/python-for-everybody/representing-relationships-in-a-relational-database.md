@@ -31,4 +31,3 @@ A key that the "real world" might use to look up a row.
 ## --video-solution--
 
 3
-

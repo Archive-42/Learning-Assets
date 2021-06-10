@@ -29,7 +29,7 @@ let camper = 'David';
 Este error se puede ver en la consola de tu navegador. Así que a diferencia de `var`, al usar `let`, una variable con el mismo nombre solo puede declararse una vez. Toma en cuenta el `"use strict"` (uso estricto). Esto habilita el modo estricto, el cual captura errores comunes de programación y acciones "inseguras". Por ejemplo:
 
 ```js
-"use strict";
+'use strict';
 x = 3.14;
 ```
 
@@ -44,7 +44,7 @@ Actualiza el código para que solo utilice la palabra clave `let`.
 `var` no debe existir en el código.
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/var/g));
+getUserInput => assert(!getUserInput('index').match(/var/g));
 ```
 
 `catName` debe ser la cadena `Oliver`.
@@ -67,11 +67,10 @@ assert(quote === 'Oliver says Meow!');
 var catName;
 var quote;
 function catTalk() {
-  "use strict";
+  'use strict';
 
-  catName = "Oliver";
-  quote = catName + " says Meow!";
-
+  catName = 'Oliver';
+  quote = catName + ' says Meow!';
 }
 catTalk();
 ```

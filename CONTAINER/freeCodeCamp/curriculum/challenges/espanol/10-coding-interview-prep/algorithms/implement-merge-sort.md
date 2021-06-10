@@ -14,7 +14,7 @@ Another common intermediate sorting algorithm is merge sort. Like quick sort, me
 
 **2)** Merge each sorted sub-array together to produce the final sorted array.
 
-Merge sort is an efficient sorting method, with time complexity of *O(nlog(n))*. This algorithm is popular because it is performant and relatively easy to implement.
+Merge sort is an efficient sorting method, with time complexity of _O(nlog(n))_. This algorithm is popular because it is performant and relatively easy to implement.
 
 As an aside, this will be the last sorting algorithm we cover here. However, later in the section on tree data structures we will describe heap sort, another efficient sorting method that requires a binary heap in its implementation.
 
@@ -34,23 +34,7 @@ assert(typeof mergeSort == 'function');
 assert(
   isSorted(
     mergeSort([
-      1,
-      4,
-      2,
-      8,
-      345,
-      123,
-      43,
-      32,
-      5643,
-      63,
-      123,
-      43,
-      2,
-      55,
-      1,
-      234,
-      92
+      1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92
     ])
   )
 );
@@ -61,23 +45,7 @@ assert(
 ```js
 assert.sameMembers(
   mergeSort([
-    1,
-    4,
-    2,
-    8,
-    345,
-    123,
-    43,
-    32,
-    5643,
-    63,
-    123,
-    43,
-    2,
-    55,
-    1,
-    234,
-    92
+    1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92
   ]),
   [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]
 );
@@ -94,16 +62,14 @@ assert(isBuiltInSortUsed());
 ## --after-user-code--
 
 ```js
-function isSorted(a){
-  for(let i = 0; i < a.length - 1; i++)
-    if(a[i] > a[i + 1])
-      return false;
+function isSorted(a) {
+  for (let i = 0; i < a.length - 1; i++) if (a[i] > a[i + 1]) return false;
   return true;
 }
 
-function isBuiltInSortUsed(){
+function isBuiltInSortUsed() {
   let sortUsed = false;
-  Array.prototype.sort = () => sortUsed = true;
+  Array.prototype.sort = () => (sortUsed = true);
   mergeSort([0, 1]);
   return !sortUsed;
 }

@@ -45,7 +45,7 @@ When passed an object containing an array, `deepcopy` should return a deep copy 
 assert.deepEqual(deepcopy(obj2), obj2);
 ```
 
-When passed an object containing another object, `deepcopy`  should return a deep copy of the object.
+When passed an object containing another object, `deepcopy` should return a deep copy of the object.
 
 ```js
 assert.deepEqual(deepcopy(obj3), obj3);
@@ -71,7 +71,6 @@ const obj3 = {
 
 ```js
 function deepcopy(obj) {
-
   return true;
 }
 ```

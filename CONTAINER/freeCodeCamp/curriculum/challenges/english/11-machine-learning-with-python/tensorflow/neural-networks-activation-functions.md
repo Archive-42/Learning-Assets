@@ -27,4 +27,3 @@ Sigmoid
 ## --video-solution--
 
 2
-

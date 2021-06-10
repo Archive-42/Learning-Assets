@@ -36,7 +36,6 @@ assert.strictEqual(digitCancellingFractions(), 100);
 
 ```js
 function digitCancellingFractions() {
-
   return true;
 }
 

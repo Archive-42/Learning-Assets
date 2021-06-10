@@ -32,7 +32,6 @@ assert.strictEqual(euler386(), 528755790);
 
 ```js
 function euler386() {
-
   return true;
 }
 

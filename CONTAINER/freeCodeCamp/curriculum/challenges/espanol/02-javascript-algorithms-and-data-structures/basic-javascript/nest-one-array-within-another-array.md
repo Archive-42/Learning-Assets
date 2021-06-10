@@ -12,7 +12,10 @@ dashedName: nest-one-array-within-another-array
 También puedes anidar arreglos dentro de otros arreglos, como a continuación:
 
 ```js
-[["Bulls", 23], ["White Sox", 45]]
+[
+  ['Bulls', 23],
+  ['White Sox', 45]
+];
 ```
 
 Esto también es conocido como <dfn>arreglo multidimensional</dfn>.
@@ -34,7 +37,11 @@ assert(Array.isArray(myArray) && myArray.some(Array.isArray));
 ## --after-user-code--
 
 ```js
-if(typeof myArray !== "undefined"){(function(){return myArray;})();}
+if (typeof myArray !== 'undefined') {
+  (function () {
+    return myArray;
+  })();
+}
 ```
 
 ## --seed-contents--
@@ -47,5 +54,5 @@ var myArray = [];
 # --solutions--
 
 ```js
-var myArray = [[1,2,3]];
+var myArray = [[1, 2, 3]];
 ```

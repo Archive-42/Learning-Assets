@@ -10,15 +10,15 @@ dashedName: longest-common-subsequence
 
 The **longest common subsequence** (or [**LCS**](http://en.wikipedia.org/wiki/Longest_common_subsequence_problem)) of groups A and B is the longest group of elements from A and B that are common between the two groups and in the same order in each group. For example, the sequences "1234" and "1224533324" have an LCS of "1234":
 
-***1234***
+**_1234_**
 
-***12***245***3***332***4***
+**_12_**245**_3_**332**_4_**
 
 For a string example, consider the sequences "thisisatest" and "testing123testing". An LCS would be "tsitest":
 
-***t***hi***si***sa***test***
+**_t_**hi**_si_**sa**_test_**
 
-***t***e***s***t***i***ng123***test***ing.
+**_t_**e**_s_**t**_i_**ng123**_test_**ing.
 
 Your code only needs to deal with strings.
 
@@ -77,9 +77,7 @@ assert.equal(lcs('ABAZDC', 'BACBAD'), 'ABAD');
 ## --seed-contents--
 
 ```js
-function lcs(a, b) {
-
-}
+function lcs(a, b) {}
 ```
 
 # --solutions--
@@ -96,7 +94,7 @@ function lcs(a, b) {
   } else {
     var x = lcs(a, bSub);
     var y = lcs(aSub, b);
-    return (x.length > y.length) ? x : y;
+    return x.length > y.length ? x : y;
   }
 }
 ```

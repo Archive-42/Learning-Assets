@@ -56,18 +56,18 @@ assert(testArr[4] === 10);
 
 ```js
 var logOutput = [];
-var originalConsole = console
+var originalConsole = console;
 function capture() {
-    var nativeLog = console.log;
-    console.log = function (message) {
-        logOutput.push(message);
-        if(nativeLog.apply) {
-          nativeLog.apply(originalConsole, arguments);
-        } else {
-          var nativeMsg = Array.prototype.slice.apply(arguments).join(' ');
-          nativeLog(nativeMsg);
-        }
-    };
+  var nativeLog = console.log;
+  console.log = function (message) {
+    logOutput.push(message);
+    if (nativeLog.apply) {
+      nativeLog.apply(originalConsole, arguments);
+    } else {
+      var nativeMsg = Array.prototype.slice.apply(arguments).join(' ');
+      nativeLog(nativeMsg);
+    }
+  };
 }
 
 function uncapture() {
@@ -81,8 +81,10 @@ capture();
 
 ```js
 uncapture();
-testArr = [1,2,3,4,5];
-(function() { return logOutput.join("\n");})();
+testArr = [1, 2, 3, 4, 5];
+(function () {
+  return logOutput.join('\n');
+})();
 ```
 
 ## --seed-contents--
@@ -93,26 +95,24 @@ function nextInLine(arr, item) {
 
   return item;
   // Only change code above this line
-
-
 }
 
 // Setup
-var testArr = [1,2,3,4,5];
+var testArr = [1, 2, 3, 4, 5];
 
 // Display code
-console.log("Before: " + JSON.stringify(testArr));
+console.log('Before: ' + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6));
-console.log("After: " + JSON.stringify(testArr));
+console.log('After: ' + JSON.stringify(testArr));
 ```
 
 # --solutions--
 
 ```js
-var testArr = [ 1,2,3,4,5];
+var testArr = [1, 2, 3, 4, 5];
 
 function nextInLine(arr, item) {
-    arr.push(item);
-    return arr.shift();
+  arr.push(item);
+  return arr.shift();
 }
 ```

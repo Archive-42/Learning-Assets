@@ -8,7 +8,6 @@ Las páginas de desafío de vídeo son creadas por miembros del equipo freeCodeC
 
 Puedes ayudar creando preguntas de selección múltiple relacionadas con las secciones de video y agregando las preguntas a los archivos markdown para los desafíos de video.
 
-
 ## Plantilla de desafío
 
 A continuación se muestra una plantilla de cómo se ven los archivos markdown de los desafíos.
@@ -27,9 +26,8 @@ forumTopicId: 12345
 Challenge description text, in markdown
 
 ```html
-<div>
-  example code
-</div>
+<div>example code</div>
+```
 ````
 
 # --question--
@@ -56,7 +54,7 @@ Más respuestas
 
 El número para la respuesta correcta va aquí.
 
-````
+```
 
 ## Creando preguntas para los desafíos de video
 
@@ -76,12 +74,16 @@ Elige un archivo markdown de las opciones anteriores.
 Primero, encuentra la videoId (id del vídeo).
 
 Por ejemplo, en el siguiente código de la cabecera de un archivo markdown de desafío de video, el videoId es "nVAaxZ34khk". En GitHub, la información debe ser colocada en un formato de tabla.
-````
+```
+
 ---
+
 id: 5e9a093a74c4063ca6f7c14d title: Data Analysis Example A challengeType: 11
 videoId: nVAaxZ34khk
+
 ---
-```
+
+````
 
 A continuación, accede al vídeo de YouTube con esa `videoId`. La URL del video será:
 https://www.youtube. om/watch?v=[videoId]    (reemplaza `videoId` en la URL con la ID del video sin los corchetes)
@@ -118,15 +120,17 @@ More answers
 ## --video-solution--
 
 1
-```
+````
 
 Añade/Actualiza el texto de la pregunta debajo de la parte que muestra:
+
 ```
 # --question--
 
 ## --text--
 ```
-Añade/Actualiza las respuestas (`Answer 1`, `Answer 2`, y así) debajo de `## --answers--`. Asegúrate de actualizar el número debajo de ` ## --video-solution-- ` con el número de respuesta correcto. Puede añadir más respuestas posibles usando el mismo formato. La pregunta y las respuestas pueden estar rodeadas de comillas.
+
+Añade/Actualiza las respuestas (`Answer 1`, `Answer 2`, y así) debajo de `## --answers--`. Asegúrate de actualizar el número debajo de `## --video-solution--` con el número de respuesta correcto. Puede añadir más respuestas posibles usando el mismo formato. La pregunta y las respuestas pueden estar rodeadas de comillas.
 
 ### Ejemplos de preguntas
 
@@ -134,14 +138,17 @@ Añade/Actualiza las respuestas (`Answer 1`, `Answer 2`, y así) debajo de `## -
 # --question--
 
 ## --text--
+
 ¿Qué imprime este código de JavaScript en la consola?
+
 ```js
 console.log('hello world');
+```
 ````
 
 ## --answers--
 
-hola *mundo*
+hola _mundo_
 
 ---
 
@@ -154,8 +161,10 @@ hola mundo
 ---
 
 ## --video-solution--
+
 3
-````
+
+`````
 
 ````md
 
@@ -169,7 +178,7 @@ hola mundo
 width = 15
 height = 12.0
 print(height/3)
-````
+`````
 
 ## --answers--
 

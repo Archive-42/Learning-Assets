@@ -23,16 +23,16 @@ ChildObject.prototype.methodName = function() {...};
 Es posible sobreescribir un método heredado. Se hace de la misma manera: agregando un método a `ChildObject.prototype` usando el mismo nombre de método que el que se va a sobrescribir. Aquí hay un ejemplo de `Bird` sobrescribiendo el método `eat()` heredado de `Animal`:
 
 ```js
-function Animal() { }
-Animal.prototype.eat = function() {
-  return "nom nom nom";
+function Animal() {}
+Animal.prototype.eat = function () {
+  return 'nom nom nom';
 };
-function Bird() { }
+function Bird() {}
 
 Bird.prototype = Object.create(Animal.prototype);
 
-Bird.prototype.eat = function() {
-  return "peck peck peck";
+Bird.prototype.eat = function () {
+  return 'peck peck peck';
 };
 ```
 
@@ -66,17 +66,17 @@ assert(new Bird().fly() === 'I am flying!');
 ## --seed-contents--
 
 ```js
-function Bird() { }
+function Bird() {}
 
-Bird.prototype.fly = function() { return "I am flying!"; };
+Bird.prototype.fly = function () {
+  return 'I am flying!';
+};
 
-function Penguin() { }
+function Penguin() {}
 Penguin.prototype = Object.create(Bird.prototype);
 Penguin.prototype.constructor = Penguin;
 
 // Only change code below this line
-
-
 
 // Only change code above this line
 
@@ -87,11 +87,13 @@ console.log(penguin.fly());
 # --solutions--
 
 ```js
-function Bird() { }
+function Bird() {}
 
-Bird.prototype.fly = function() { return "I am flying!"; };
+Bird.prototype.fly = function () {
+  return 'I am flying!';
+};
 
-function Penguin() { }
+function Penguin() {}
 Penguin.prototype = Object.create(Bird.prototype);
 Penguin.prototype.constructor = Penguin;
 Penguin.prototype.fly = () => 'Alas, this is a flightless bird.';

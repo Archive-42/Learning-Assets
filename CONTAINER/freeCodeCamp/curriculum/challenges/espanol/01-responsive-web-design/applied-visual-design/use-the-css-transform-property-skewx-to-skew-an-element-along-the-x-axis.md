@@ -40,14 +40,13 @@ assert(code.match(/#bottom\s*?{\s*?.*?\s*?transform:\s*?skewX\(24deg\);/g));
   div {
     width: 70%;
     height: 100px;
-    margin:  50px auto;
+    margin: 50px auto;
   }
   #top {
     background-color: red;
   }
   #bottom {
     background-color: blue;
-
   }
 </style>
 
@@ -62,7 +61,7 @@ assert(code.match(/#bottom\s*?{\s*?.*?\s*?transform:\s*?skewX\(24deg\);/g));
   div {
     width: 70%;
     height: 100px;
-    margin:  50px auto;
+    margin: 50px auto;
   }
   #top {
     background-color: red;
