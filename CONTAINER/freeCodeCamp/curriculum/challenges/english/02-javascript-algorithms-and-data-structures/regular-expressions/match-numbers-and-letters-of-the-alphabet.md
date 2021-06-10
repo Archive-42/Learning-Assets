@@ -15,8 +15,8 @@ For example, `/[0-5]/` matches any number between `0` and `5`, including the `0`
 Also, it is possible to combine a range of letters and numbers in a single character set.
 
 ```js
-let jennyStr = "Jenny8675309";
-let myRegex = /[a-z0-9]/ig;
+let jennyStr = 'Jenny8675309';
+let myRegex = /[a-z0-9]/gi;
 jennyStr.match(myRegex);
 ```
 
@@ -49,7 +49,7 @@ assert(myRegex.flags.match(/i/).length == 1);
 ## --seed-contents--
 
 ```js
-let quoteSample = "Blueberry 3.141592653s are delicious.";
+let quoteSample = 'Blueberry 3.141592653s are delicious.';
 let myRegex = /change/; // Change this line
 let result = myRegex; // Change this line
 ```
@@ -57,7 +57,7 @@ let result = myRegex; // Change this line
 # --solutions--
 
 ```js
-let quoteSample = "Blueberry 3.141592653s are delicious.";
+let quoteSample = 'Blueberry 3.141592653s are delicious.';
 let myRegex = /[h-s2-6]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
 ```

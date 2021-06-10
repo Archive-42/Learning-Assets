@@ -21,7 +21,7 @@ Modify the `createManyPeople` function to create many people using `Model.create
 Creating many db items at once should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/_api/create-many-people',
     type: 'POST',
@@ -31,7 +31,7 @@ Creating many db items at once should succeed
       { name: 'Mary', age: 21, favoriteFoods: ['onions', 'chicken'] }
     ])
   }).then(
-    (data) => {
+    data => {
       assert.isArray(data, 'the response should be an array');
       assert.equal(
         data.length,
@@ -51,7 +51,7 @@ Creating many db items at once should succeed
         'The second item should be not previously edited'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -14,13 +14,13 @@ Once the object is frozen, you can no longer add, update, or delete properties f
 
 ```js
 let obj = {
-  name:"FreeCodeCamp",
-  review:"Awesome"
+  name: 'FreeCodeCamp',
+  review: 'Awesome'
 };
 Object.freeze(obj);
-obj.review = "bad";
-obj.newProp = "Test";
-console.log(obj); 
+obj.review = 'bad';
+obj.newProp = 'Test';
+console.log(obj);
 ```
 
 The `obj.review` and `obj.newProp` assignments will result in errors, and the console will display the value `{ name: "FreeCodeCamp", review: "Awesome" }`.
@@ -34,20 +34,19 @@ In this challenge you are going to use `Object.freeze` to prevent mathematical c
 You should not replace the `const` keyword.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/const/g));
+getUserInput => assert(getUserInput('index').match(/const/g));
 ```
 
 `MATH_CONSTANTS` should be a constant variable (by using `const`).
 
 ```js
-(getUserInput) =>
-  assert(getUserInput('index').match(/const\s+MATH_CONSTANTS/g));
+getUserInput => assert(getUserInput('index').match(/const\s+MATH_CONSTANTS/g));
 ```
 
 You should not change the original declaration of `MATH_CONSTANTS`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     getUserInput('index').match(
       /const\s+MATH_CONSTANTS\s+=\s+{\s+PI:\s+3.14\s+};/g
@@ -72,11 +71,10 @@ function freezeObj() {
   };
   // Only change code below this line
 
-
   // Only change code above this line
   try {
     MATH_CONSTANTS.PI = 99;
-  } catch(ex) {
+  } catch (ex) {
     console.log(ex);
   }
   return MATH_CONSTANTS.PI;
@@ -95,7 +93,7 @@ function freezeObj() {
 
   try {
     MATH_CONSTANTS.PI = 99;
-  } catch(ex) {
+  } catch (ex) {
     console.log(ex);
   }
   return MATH_CONSTANTS.PI;

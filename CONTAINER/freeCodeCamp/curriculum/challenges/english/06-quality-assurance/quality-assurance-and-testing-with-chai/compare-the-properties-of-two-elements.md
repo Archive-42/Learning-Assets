@@ -19,12 +19,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#8` in the `Comparisons`
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -33,16 +33,16 @@ All tests should pass.
 You should choose the correct method for the first assertion - `isAbove` vs. `isAtMost`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'isAtMost',
         '5 is at most (<=) 5'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,12 +51,12 @@ You should choose the correct method for the first assertion - `isAbove` vs. `is
 You should choose the correct method for the second assertion - `isAbove` vs. `isAtMost`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'isAbove', '1 is greater than 0');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -65,16 +65,16 @@ You should choose the correct method for the second assertion - `isAbove` vs. `i
 You should choose the correct method for the third assertion - `isAbove` vs. `isAtMost`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[2].method,
         'isAbove',
         'Math.PI = 3.14159265 is greater than 3'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -83,16 +83,16 @@ You should choose the correct method for the third assertion - `isAbove` vs. `is
 You should choose the correct method for the fourth assertion - `isAbove` vs. `isAtMost`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[3].method,
         'isAtMost',
         '1 - Math.random() is > 0 and <= 1. It is atMost 1 !'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

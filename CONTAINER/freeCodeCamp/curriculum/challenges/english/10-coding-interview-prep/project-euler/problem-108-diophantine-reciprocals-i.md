@@ -34,7 +34,6 @@ assert.strictEqual(diophantineOne(), 180180);
 
 ```js
 function diophantineOne() {
-
   return true;
 }
 

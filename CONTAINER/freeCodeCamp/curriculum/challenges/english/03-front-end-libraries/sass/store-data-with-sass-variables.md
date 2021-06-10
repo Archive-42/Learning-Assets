@@ -65,13 +65,12 @@ assert($('h2').css('color') == 'rgb(255, 0, 0)');
 ## --seed-contents--
 
 ```html
-<style type='text/scss'>
-
-
-  .header{
+<style type="text/scss">
+  .header {
     text-align: center;
   }
-  .blog-post, h2 {
+  .blog-post,
+  h2 {
     color: red;
   }
 </style>
@@ -94,13 +93,14 @@ assert($('h2').css('color') == 'rgb(255, 0, 0)');
 # --solutions--
 
 ```html
-<style type='text/scss'>
+<style type="text/scss">
   $text-color: red;
 
-  .header{
+  .header {
     text-align: center;
   }
-  .blog-post, h2 {
+  .blog-post,
+  h2 {
     color: $text-color;
   }
 </style>

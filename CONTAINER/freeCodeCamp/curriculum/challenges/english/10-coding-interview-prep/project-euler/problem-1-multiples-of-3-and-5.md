@@ -50,7 +50,6 @@ assert.strictEqual(multiplesOf3and5(19564), 89301183);
 
 ```js
 function multiplesOf3and5(number) {
-
   return true;
 }
 
@@ -60,11 +59,11 @@ multiplesOf3and5(1000);
 # --solutions--
 
 ```js
-const multiplesOf3and5 = (number) => {
+const multiplesOf3and5 = number => {
   var total = 0;
 
-  for(var i = 0; i < number; i++) {
-    if(i % 3 == 0 || i % 5 == 0) {
+  for (var i = 0; i < number; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
       total += i;
     }
   }

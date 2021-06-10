@@ -46,7 +46,9 @@ assert(/\+/.test(code));
 ## --after-user-code--
 
 ```js
-(function(z){return 'sum = '+z;})(sum);
+(function (z) {
+  return 'sum = ' + z;
+})(sum);
 ```
 
 ## --seed-contents--

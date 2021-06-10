@@ -13,7 +13,7 @@ Imagine a file called `math_functions.js` that contains several functions relate
 ```js
 export const add = (x, y) => {
   return x + y;
-}
+};
 ```
 
 The above is a common way to export a single function, but you can achieve the same thing like this:
@@ -21,7 +21,7 @@ The above is a common way to export a single function, but you can achieve the s
 ```js
 const add = (x, y) => {
   return x + y;
-}
+};
 
 export { add };
 ```
@@ -63,23 +63,23 @@ assert(
 ## --seed-contents--
 
 ```js
-const uppercaseString = (string) => {
+const uppercaseString = string => {
   return string.toUpperCase();
-}
+};
 
-const lowercaseString = (string) => {
-  return string.toLowerCase()
-}
+const lowercaseString = string => {
+  return string.toLowerCase();
+};
 ```
 
 # --solutions--
 
 ```js
-export const uppercaseString = (string) => {
+export const uppercaseString = string => {
   return string.toUpperCase();
-}
+};
 
-export const lowercaseString = (string) => {
-  return string.toLowerCase()
-}
+export const lowercaseString = string => {
+  return string.toLowerCase();
+};
 ```

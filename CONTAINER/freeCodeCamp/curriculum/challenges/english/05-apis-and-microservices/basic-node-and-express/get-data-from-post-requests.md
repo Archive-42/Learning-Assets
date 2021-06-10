@@ -31,16 +31,16 @@ There are also a couple of other methods which are used to negotiate a connectio
 Test 1 : Your API endpoint should respond with the correct name
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/name', { first: 'Mick', last: 'Jagger' }).then(
-    (data) => {
+    data => {
       assert.equal(
         data.name,
         'Mick Jagger',
         'Test 1: "POST /name" route does not behave as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -49,19 +49,19 @@ Test 1 : Your API endpoint should respond with the correct name
 Test 2 : Your API endpoint should respond with the correct name
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/name', {
     first: 'Keith',
     last: 'Richards'
   }).then(
-    (data) => {
+    data => {
       assert.equal(
         data.name,
         'Keith Richards',
         'Test 2: "POST /name" route does not behave as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

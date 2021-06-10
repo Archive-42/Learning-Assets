@@ -15,10 +15,10 @@ You can search for a literal pattern with some flexibility with <dfn>character c
 For example, you want to match `bag`, `big`, and `bug` but not `bog`. You can create the regex `/b[aiu]g/` to do this. The `[aiu]` is the character class that will only match the characters `a`, `i`, or `u`.
 
 ```js
-let bigStr = "big";
-let bagStr = "bag";
-let bugStr = "bug";
-let bogStr = "bog";
+let bigStr = 'big';
+let bagStr = 'bag';
+let bugStr = 'bug';
+let bogStr = 'bog';
 let bgRegex = /b[aiu]g/;
 bigStr.match(bgRegex);
 bagStr.match(bgRegex);
@@ -71,7 +71,8 @@ assert(!/[b-df-hj-np-tv-z]/gi.test(result.join()));
 ## --seed-contents--
 
 ```js
-let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let quoteSample =
+  'Beware of bugs in the above code; I have only proved it correct, not tried it.';
 let vowelRegex = /change/; // Change this line
 let result = vowelRegex; // Change this line
 ```
@@ -79,7 +80,8 @@ let result = vowelRegex; // Change this line
 # --solutions--
 
 ```js
-let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let quoteSample =
+  'Beware of bugs in the above code; I have only proved it correct, not tried it.';
 let vowelRegex = /[aeiou]/gi; // Change this line
 let result = quoteSample.match(vowelRegex); // Change this line
 ```

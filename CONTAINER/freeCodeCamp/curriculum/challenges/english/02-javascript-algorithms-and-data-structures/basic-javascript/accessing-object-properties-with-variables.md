@@ -15,9 +15,11 @@ Here is an example of using a variable to access a property:
 
 ```js
 var dogs = {
-  Fido: "Mutt",  Hunter: "Doberman",  Snoopie: "Beagle"
+  Fido: 'Mutt',
+  Hunter: 'Doberman',
+  Snoopie: 'Beagle'
 };
-var myDog = "Hunter";
+var myDog = 'Hunter';
 var myBreed = dogs[myDog];
 console.log(myBreed);
 ```
@@ -28,19 +30,19 @@ Another way you can use this concept is when the property's name is collected dy
 
 ```js
 var someObj = {
-  propName: "John"
+  propName: 'John'
 };
 function propPrefix(str) {
-  var s = "prop";
+  var s = 'prop';
   return s + str;
 }
-var someProp = propPrefix("Name");
+var someProp = propPrefix('Name');
 console.log(someObj[someProp]);
 ```
 
 `someProp` would have a value of the string `propName`, and the string `John` would be displayed in the console.
 
-Note that we do *not* use quotes around the variable name when using it to access the property because we are using the *value* of the variable, not the *name*.
+Note that we do _not_ use quotes around the variable name when using it to access the property because we are using the _value_ of the variable, not the _name_.
 
 # --instructions--
 
@@ -89,7 +91,11 @@ assert(/testObj\s*?\[\s*playerNumber\s*\]/.test(code));
 ## --after-user-code--
 
 ```js
-if(typeof player !== "undefined"){(function(v){return v;})(player);}
+if (typeof player !== 'undefined') {
+  (function (v) {
+    return v;
+  })(player);
+}
 ```
 
 ## --seed-contents--
@@ -97,24 +103,24 @@ if(typeof player !== "undefined"){(function(v){return v;})(player);}
 ```js
 // Setup
 var testObj = {
-  12: "Namath",
-  16: "Montana",
-  19: "Unitas"
+  12: 'Namath',
+  16: 'Montana',
+  19: 'Unitas'
 };
 
 // Only change code below this line
 
-var playerNumber;       // Change this line
-var player = testObj;   // Change this line
+var playerNumber; // Change this line
+var player = testObj; // Change this line
 ```
 
 # --solutions--
 
 ```js
 var testObj = {
-  12: "Namath",
-  16: "Montana",
-  19: "Unitas"
+  12: 'Namath',
+  16: 'Montana',
+  19: 'Unitas'
 };
 var playerNumber = 16;
 var player = testObj[playerNumber];

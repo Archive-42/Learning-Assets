@@ -18,7 +18,7 @@ For example, the character at index 0 in the word `Charles` is `C`. So if `var f
 Example:
 
 ```js
-var firstName = "Charles";
+var firstName = 'Charles';
 var firstLetter = firstName[0];
 ```
 
@@ -49,15 +49,17 @@ assert(code.match(/firstLetterOfLastName\s*?=\s*?lastName\[.*?\]/));
 ## --after-user-code--
 
 ```js
-(function(v){return v;})(firstLetterOfLastName);
+(function (v) {
+  return v;
+})(firstLetterOfLastName);
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var firstLetterOfLastName = "";
-var lastName = "Lovelace";
+var firstLetterOfLastName = '';
+var lastName = 'Lovelace';
 
 // Only change code below this line
 firstLetterOfLastName = lastName; // Change this line
@@ -66,8 +68,8 @@ firstLetterOfLastName = lastName; // Change this line
 # --solutions--
 
 ```js
-var firstLetterOfLastName = "";
-var lastName = "Lovelace";
+var firstLetterOfLastName = '';
+var lastName = 'Lovelace';
 
 // Only change code below this line
 firstLetterOfLastName = lastName[0];

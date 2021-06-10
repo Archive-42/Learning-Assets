@@ -34,19 +34,19 @@ An array is declared as `const s = [5, 7, 2]`. Change the array to `[2, 5, 7]` u
 You should not replace `const` keyword.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/const/g));
+getUserInput => assert(getUserInput('index').match(/const/g));
 ```
 
 `s` should be a constant variable (by using `const`).
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/const\s+s/g));
+getUserInput => assert(getUserInput('index').match(/const\s+s/g));
 ```
 
 You should not change the original array declaration.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     getUserInput('index').match(
       /const\s+s\s*=\s*\[\s*5\s*,\s*7\s*,\s*2\s*\]\s*;?/g
@@ -68,9 +68,7 @@ assert.deepEqual(s, [2, 5, 7]);
 const s = [5, 7, 2];
 function editInPlace() {
   // Only change code below this line
-
   // Using s = [2, 5, 7] would be invalid
-
   // Only change code above this line
 }
 editInPlace();

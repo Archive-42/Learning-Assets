@@ -24,14 +24,11 @@ And just like in JavaScript, `@else if` and `@else` test for more conditions:
 @mixin text-effect($val) {
   @if $val == danger {
     color: red;
-  }
-  @else if $val == alert {
+  } @else if $val == alert {
     color: yellow;
-  }
-  @else if $val == success {
+  } @else if $val == success {
     color: green;
-  }
-  @else {
+  } @else {
     color: black;
   }
 }
@@ -98,10 +95,7 @@ assert(code.match(/@else\s*?{\s*?border\s*?:\s*?none\s*?;\s*?}/gi));
 ## --seed-contents--
 
 ```html
-<style type='text/scss'>
-
-
-
+<style type="text/scss">
   #box {
     width: 150px;
     height: 150px;
@@ -116,22 +110,18 @@ assert(code.match(/@else\s*?{\s*?border\s*?:\s*?none\s*?;\s*?}/gi));
 # --solutions--
 
 ```html
-<style type='text/scss'>
+<style type="text/scss">
   @mixin border-stroke($val) {
     @if $val == light {
       border: 1px solid black;
-    }
-    @else if $val == medium {
+    } @else if $val == medium {
       border: 3px solid black;
-    }
-    @else if $val == heavy {
+    } @else if $val == heavy {
       border: 6px solid black;
-    }
-    @else {
+    } @else {
       border: none;
     }
   }
-
 
   #box {
     width: 150px;

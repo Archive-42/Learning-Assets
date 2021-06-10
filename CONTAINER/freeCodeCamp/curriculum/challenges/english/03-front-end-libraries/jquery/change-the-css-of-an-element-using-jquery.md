@@ -17,7 +17,7 @@ jQuery has a function called `.css()` that allows you to change the CSS of an el
 Here's how we would change its color to blue:
 
 ```js
-$("#target1").css("color", "blue");
+$('#target1').css('color', 'blue');
 ```
 
 This is slightly different from a normal CSS declaration, because the CSS property and its value are in quotes, and separated with a comma instead of a colon.
@@ -46,12 +46,11 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-    $("button").removeClass("btn-default");
-
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
+    $('button').removeClass('btn-default');
   });
 </script>
 
@@ -84,12 +83,12 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-    $("button").removeClass("btn-default");
-    $("#target1").css("color", "red");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
+    $('button').removeClass('btn-default');
+    $('#target1').css('color', 'red');
   });
 </script>
 

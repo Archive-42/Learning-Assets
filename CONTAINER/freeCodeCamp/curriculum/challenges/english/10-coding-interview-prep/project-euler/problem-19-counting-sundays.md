@@ -50,7 +50,6 @@ assert.strictEqual(countingSundays(1901, 2000), 171);
 
 ```js
 function countingSundays(firstYear, lastYear) {
-
   return true;
 }
 

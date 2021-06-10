@@ -14,10 +14,10 @@ Check out this code:
 
 ```js
 function howMany(...args) {
-  return "You have passed " + args.length + " arguments.";
+  return 'You have passed ' + args.length + ' arguments.';
 }
 console.log(howMany(0, 1, 2));
-console.log(howMany("string", null, [1, 2, 3], { }));
+console.log(howMany('string', null, [1, 2, 3], {}));
 ```
 
 The console would display the strings `You have passed 3 arguments.` and `You have passed 4 arguments.`.
@@ -68,7 +68,7 @@ assert(__helpers.removeWhiteSpace(code).match(/sum=\(\.\.\.args\)=>/));
 const sum = (x, y, z) => {
   const args = [x, y, z];
   return args.reduce((a, b) => a + b, 0);
-}
+};
 ```
 
 # --solutions--
@@ -76,5 +76,5 @@ const sum = (x, y, z) => {
 ```js
 const sum = (...args) => {
   return args.reduce((a, b) => a + b, 0);
-}
+};
 ```

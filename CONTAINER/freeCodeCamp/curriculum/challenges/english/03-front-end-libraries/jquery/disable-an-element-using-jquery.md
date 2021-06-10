@@ -17,7 +17,7 @@ jQuery has a function called `.prop()` that allows you to adjust the properties 
 Here's how you would disable all buttons:
 
 ```js
-$("button").prop("disabled", true);
+$('button').prop('disabled', true);
 ```
 
 Disable only the `target1` button.
@@ -52,9 +52,8 @@ assert(!code.match(/disabled[^<]*>/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
   });
 </script>
 
@@ -87,10 +86,9 @@ assert(!code.match(/disabled[^<]*>/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
   });
 </script>
 

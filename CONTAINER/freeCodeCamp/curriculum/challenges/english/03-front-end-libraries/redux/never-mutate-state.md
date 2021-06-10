@@ -78,25 +78,25 @@ const todos = [
   'Go to the store',
   'Clean the house',
   'Cook dinner',
-  'Learn to code',
+  'Learn to code'
 ];
 
 const immutableReducer = (state = todos, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD_TO_DO:
       // Don't mutate state here or the tests will fail
-      return
+      return;
     default:
       return state;
   }
 };
 
-const addToDo = (todo) => {
+const addToDo = todo => {
   return {
     type: ADD_TO_DO,
     todo
-  }
-}
+  };
+};
 
 const store = Redux.createStore(immutableReducer);
 ```
@@ -110,11 +110,11 @@ const todos = [
   'Go to the store',
   'Clean the house',
   'Cook dinner',
-  'Learn to code',
+  'Learn to code'
 ];
 
 const immutableReducer = (state = todos, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD_TO_DO:
       return state.concat(action.todo);
     default:
@@ -122,12 +122,12 @@ const immutableReducer = (state = todos, action) => {
   }
 };
 
-const addToDo = (todo) => {
+const addToDo = todo => {
   return {
     type: ADD_TO_DO,
     todo
-  }
-}
+  };
+};
 
 const store = Redux.createStore(immutableReducer);
 ```

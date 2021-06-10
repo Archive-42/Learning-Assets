@@ -66,7 +66,6 @@ const defaultState = {
 
 const reducer = (state = defaultState, action) => {
   // Change code below this line
-
   // Change code above this line
 };
 
@@ -75,7 +74,7 @@ const store = Redux.createStore(reducer);
 const loginAction = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 ```
 
@@ -87,15 +86,11 @@ const defaultState = {
 };
 
 const reducer = (state = defaultState, action) => {
-
   if (action.type === 'LOGIN') {
-    return {login: true}
+    return { login: true };
+  } else {
+    return state;
   }
-
-  else {
-    return state
-  }
-
 };
 
 const store = Redux.createStore(reducer);
@@ -103,6 +98,6 @@ const store = Redux.createStore(reducer);
 const loginAction = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 ```

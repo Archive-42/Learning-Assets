@@ -15,18 +15,22 @@ As a reminder, this project is being built upon the following starter project on
 **Example:**
 
 ```js
-app.use(helmet({
-  frameguard: {         // configure
-    action: 'deny'
-  },
-  contentSecurityPolicy: {    // enable and configure
-    directives: {
-      defaultSrc: ["self"],
-      styleSrc: ['style.com'],
-    }
-  },
-  dnsPrefetchControl: false     // disable
-}))
+app.use(
+  helmet({
+    frameguard: {
+      // configure
+      action: 'deny'
+    },
+    contentSecurityPolicy: {
+      // enable and configure
+      directives: {
+        defaultSrc: ['self'],
+        styleSrc: ['style.com']
+      }
+    },
+    dnsPrefetchControl: false // disable
+  })
+);
 ```
 
 We introduced each middleware separately for teaching purposes and for ease of testing. Using the ‘parent’ `helmet()` middleware is easy to implement in a real project.

@@ -40,4 +40,3 @@ quincy
 ## --video-solution--
 
 3
-

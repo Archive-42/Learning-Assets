@@ -167,39 +167,36 @@ assert(
 ## --after-user-code--
 
 ```js
-BinarySearchTree.prototype = Object.assign(
-  BinarySearchTree.prototype,
-  {
-    add: function(value) {
-      function searchTree(node) {
-        if (value < node.value) {
-          if (node.left == null) {
-            node.left = new Node(value);
-            return;
-          } else if (node.left != null) {
-            return searchTree(node.left);
-          }
-        } else if (value > node.value) {
-          if (node.right == null) {
-            node.right = new Node(value);
-            return;
-          } else if (node.right != null) {
-            return searchTree(node.right);
-          }
-        } else {
-          return null;
+BinarySearchTree.prototype = Object.assign(BinarySearchTree.prototype, {
+  add: function (value) {
+    function searchTree(node) {
+      if (value < node.value) {
+        if (node.left == null) {
+          node.left = new Node(value);
+          return;
+        } else if (node.left != null) {
+          return searchTree(node.left);
         }
-      }
-      var node = this.root;
-      if (node == null) {
-        this.root = new Node(value);
-        return;
+      } else if (value > node.value) {
+        if (node.right == null) {
+          node.right = new Node(value);
+          return;
+        } else if (node.right != null) {
+          return searchTree(node.right);
+        }
       } else {
-        return searchTree(node);
+        return null;
       }
     }
+    var node = this.root;
+    if (node == null) {
+      this.root = new Node(value);
+      return;
+    } else {
+      return searchTree(node);
+    }
   }
-);
+});
 ```
 
 ## --seed-contents--
@@ -214,7 +211,7 @@ function Node(value) {
 function BinarySearchTree() {
   this.root = null;
   // Only change code below this line
-  
+
   // Only change code above this line
 }
 ```
@@ -232,30 +229,30 @@ function BinarySearchTree() {
   this.root = null;
   // Only change code below this line
   this.levelOrder = (root = this.root) => {
-    if(!root) return null;
+    if (!root) return null;
     let queue = [root];
     let results = [];
-    while(queue.length > 0) {
+    while (queue.length > 0) {
       let node = queue.shift();
       results.push(node.value);
-      if(node.left) queue.push(node.left);
-      if(node.right) queue.push(node.right);
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
     }
     return results;
-  }
+  };
 
   this.reverseLevelOrder = (root = this.root) => {
-    if(!root) return null;
+    if (!root) return null;
     let queue = [root];
-    let results = [] ;
-    while ( queue.length > 0) {
+    let results = [];
+    while (queue.length > 0) {
       let node = queue.shift();
       results.push(node.value);
-      if(node.right) queue.push(node.right);
-      if(node.left ) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+      if (node.left) queue.push(node.left);
     }
     return results;
-  }
+  };
   // Only change code above this line
 }
 ```

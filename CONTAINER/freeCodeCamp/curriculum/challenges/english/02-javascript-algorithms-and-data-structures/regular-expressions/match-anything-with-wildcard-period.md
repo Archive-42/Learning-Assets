@@ -14,7 +14,7 @@ The wildcard character `.` will match any one character. The wildcard is also ca
 
 ```js
 let humStr = "I'll hum a song";
-let hugStr = "Bear hug";
+let hugStr = 'Bear hug';
 let huRegex = /hu./;
 huRegex.test(humStr);
 huRegex.test(hugStr);

@@ -23,16 +23,16 @@ Build an API endpoint, mounted at `GET /name`. Respond with a JSON document, tak
 Test 1 : Your API endpoint should respond with the correct name
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/name?first=Mick&last=Jagger').then(
-    (data) => {
+    data => {
       assert.equal(
         data.name,
         'Mick Jagger',
         'Test 1: "GET /name" route does not behave as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -41,16 +41,16 @@ Test 1 : Your API endpoint should respond with the correct name
 Test 2 : Your API endpoint should respond with the correct name
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/name?last=Richards&first=Keith').then(
-    (data) => {
+    data => {
       assert.equal(
         data.name,
         'Keith Richards',
         'Test 2: "GET /name" route does not behave as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

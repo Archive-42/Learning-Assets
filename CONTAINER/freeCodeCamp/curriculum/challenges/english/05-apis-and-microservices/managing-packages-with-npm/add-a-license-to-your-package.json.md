@@ -25,13 +25,13 @@ Fill the `license` field in the package.json file of your project as you find su
 package.json should have a valid "license" key
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert(packJson.license, '"license" is missing');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

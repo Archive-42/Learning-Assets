@@ -62,8 +62,8 @@ function steamrollArray(arr) {
     return [arr];
   }
   var out = [];
-  arr.forEach(function(e) {
-    steamrollArray(e).forEach(function(v) {
+  arr.forEach(function (e) {
+    steamrollArray(e).forEach(function (v) {
       out.push(v);
     });
   });

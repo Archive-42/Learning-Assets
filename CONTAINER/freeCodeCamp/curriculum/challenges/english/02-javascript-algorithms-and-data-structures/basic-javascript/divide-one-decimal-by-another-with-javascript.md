@@ -40,7 +40,9 @@ assert(code.match(/quotient/g).length === 1);
 ## --after-user-code--
 
 ```js
-(function(y){return 'quotient = '+y;})(quotient);
+(function (y) {
+  return 'quotient = ' + y;
+})(quotient);
 ```
 
 ## --seed-contents--

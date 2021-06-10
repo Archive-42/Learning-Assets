@@ -26,13 +26,10 @@ assert($('div.dashboard').length === 1);
 <html>
   <head>
     <title>D3 Dashboard</title>
-    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./dashboard.css" />
   </head>
 
-  <body>
-
-  
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -43,9 +40,7 @@ assert($('div.dashboard').length === 1);
 <html>
   <head>
     <title>D3 Dashboard</title>
-    <link rel="stylesheet" href="./dashboard.css">
-
-    
+    <link rel="stylesheet" href="./dashboard.css" />
   </head>
 
   <body>

@@ -11,7 +11,9 @@ dashedName: use--for-a-more-concise-conditional
 The `if/else` statements worked in the last challenge, but there's a more concise way to achieve the same result. Imagine that you are tracking several conditions in a component and you want different elements to render depending on each of these conditions. If you write a lot of `else if` statements to return slightly different UIs, you may repeat code which leaves room for error. Instead, you can use the `&&` logical operator to perform conditional logic in a more concise way. This is possible because you want to check if a condition is `true`, and if it is, return some markup. Here's an example:
 
 ```jsx
-{condition && <p>markup</p>}
+{
+  condition && <p>markup</p>;
+}
 ```
 
 If the `condition` is `true`, the markup will be returned. If the condition is `false`, the operation will immediately return `false` after evaluating the `condition` and return nothing. You can include these statements directly in your JSX and string multiple conditions together by writing `&&` after each one. This allows you to handle more complex conditional logic in your `render()` method without repeating a lot of code.
@@ -37,7 +39,7 @@ When `display` is set to `true`, a `div`, `button`, and `h1` should render.
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
   const state_1 = () => {
@@ -58,7 +60,7 @@ When `display` is set to `false`, only a `div` and `button` should render.
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
   const state_1 = () => {
@@ -78,7 +80,7 @@ async () => {
 The render method should use the `&&` logical operator to check the condition of `this.state.display`.
 
 ```js
-(getUserInput) => assert(getUserInput('index').includes('&&'));
+getUserInput => assert(getUserInput('index').includes('&&'));
 ```
 
 # --seed--
@@ -86,7 +88,7 @@ The render method should use the `&&` logical operator to check the condition of
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
+ReactDOM.render(<MyComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -97,7 +99,7 @@ class MyComponent extends React.Component {
     super(props);
     this.state = {
       display: true
-    }
+    };
     this.toggleDisplay = this.toggleDisplay.bind(this);
   }
   toggleDisplay() {
@@ -108,13 +110,13 @@ class MyComponent extends React.Component {
   render() {
     // Change code below this line
     return (
-       <div>
-         <button onClick={this.toggleDisplay}>Toggle Display</button>
-         <h1>Displayed!</h1>
-       </div>
+      <div>
+        <button onClick={this.toggleDisplay}>Toggle Display</button>
+        <h1>Displayed!</h1>
+      </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -125,8 +127,8 @@ class MyComponent extends React.Component {
     super(props);
     this.state = {
       display: true
-    }
- this.toggleDisplay = this.toggleDisplay.bind(this);
+    };
+    this.toggleDisplay = this.toggleDisplay.bind(this);
   }
   toggleDisplay() {
     this.setState(state => ({
@@ -136,11 +138,11 @@ class MyComponent extends React.Component {
   render() {
     // Change code below this line
     return (
-       <div>
-         <button onClick={this.toggleDisplay}>Toggle Display</button>
-         {this.state.display && <h1>Displayed!</h1>}
-       </div>
+      <div>
+        <button onClick={this.toggleDisplay}>Toggle Display</button>
+        {this.state.display && <h1>Displayed!</h1>}
+      </div>
     );
   }
-};
+}
 ```

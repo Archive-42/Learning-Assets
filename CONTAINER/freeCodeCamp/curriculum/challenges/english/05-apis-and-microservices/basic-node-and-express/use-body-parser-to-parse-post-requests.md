@@ -35,16 +35,16 @@ Install the `body-parser` module in your `package.json`. Then, `require` it at t
 The 'body-parser' middleware should be mounted
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/add-body-parser').then(
-    (data) => {
+    data => {
       assert.isAbove(
         data.mountedAt,
         0,
         '"body-parser" is not mounted correctly'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

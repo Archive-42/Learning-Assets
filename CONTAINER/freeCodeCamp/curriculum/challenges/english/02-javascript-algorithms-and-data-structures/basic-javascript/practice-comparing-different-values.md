@@ -20,8 +20,8 @@ If the values being compared are not of the same type, the equality operator wil
 **Note:** In JavaScript, you can determine the type of a variable or a value with the `typeof` operator, as follows:
 
 ```js
-typeof 3
-typeof '3'
+typeof 3;
+typeof '3';
 ```
 
 `typeof 3` returns the string `number`, and `typeof '3'` returns the string `string`.
@@ -57,22 +57,23 @@ assert(code.match(/===/g));
 ```js
 // Setup
 function compareEquality(a, b) {
-  if (a == b) { // Change this line
-    return "Equal";
+  if (a == b) {
+    // Change this line
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 
-compareEquality(10, "10");
+compareEquality(10, '10');
 ```
 
 # --solutions--
 
 ```js
-function compareEquality(a,b) {
+function compareEquality(a, b) {
   if (a === b) {
-    return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 ```

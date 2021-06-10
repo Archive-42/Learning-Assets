@@ -13,9 +13,9 @@ When a condition for an `if` statement is true, the block of code following it i
 
 ```js
 if (num > 10) {
-  return "Bigger than 10";
+  return 'Bigger than 10';
 } else {
-  return "10 or Less";
+  return '10 or Less';
 }
 ```
 
@@ -73,15 +73,15 @@ assert(/var result = "";/.test(code) && /return result;/.test(code));
 
 ```js
 function testElse(val) {
-  var result = "";
+  var result = '';
   // Only change code below this line
 
   if (val > 5) {
-    result = "Bigger than 5";
+    result = 'Bigger than 5';
   }
 
   if (val <= 5) {
-    result = "5 or Smaller";
+    result = '5 or Smaller';
   }
 
   // Only change code above this line
@@ -95,11 +95,11 @@ testElse(4);
 
 ```js
 function testElse(val) {
-  var result = "";
-  if(val > 5) {
-    result = "Bigger than 5";
+  var result = '';
+  if (val > 5) {
+    result = 'Bigger than 5';
   } else {
-    result = "5 or Smaller";
+    result = '5 or Smaller';
   }
   return result;
 }

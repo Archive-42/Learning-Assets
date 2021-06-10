@@ -15,9 +15,9 @@ You can specify the possible existence of an element with a question mark, `?`. 
 For example, there are slight differences in American and British English and you can use the question mark to match both spellings.
 
 ```js
-let american = "color";
-let british = "colour";
-let rainbowRegex= /colou?r/;
+let american = 'color';
+let british = 'colour';
+let rainbowRegex = /colou?r/;
 rainbowRegex.test(american);
 rainbowRegex.test(british);
 ```
@@ -63,7 +63,7 @@ assert(!favRegex.test('fav'));
 ## --seed-contents--
 
 ```js
-let favWord = "favorite";
+let favWord = 'favorite';
 let favRegex = /change/; // Change this line
 let result = favRegex.test(favWord);
 ```
@@ -71,7 +71,7 @@ let result = favRegex.test(favWord);
 # --solutions--
 
 ```js
-let favWord = "favorite";
+let favWord = 'favorite';
 let favRegex = /favou?r/;
 let result = favRegex.test(favWord);
 ```

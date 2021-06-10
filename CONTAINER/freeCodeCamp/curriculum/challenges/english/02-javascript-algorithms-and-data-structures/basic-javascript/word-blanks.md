@@ -16,7 +16,14 @@ In a "Mad Libs" game, you are provided sentences with some missing words, like n
 Consider this sentence - It was really **\_\_\_\_**, and we **\_\_\_\_** ourselves **\_\_\_\_**. This sentence has three missing pieces- an adjective, a verb and an adverb, and we can add words of our choice to complete it. We can then assign the completed sentence to a variable as follows:
 
 ```js
-var sentence = "It was really " + "hot" + ", and we " + "laughed" + " ourselves " + "silly" + ".";
+var sentence =
+  'It was really ' +
+  'hot' +
+  ', and we ' +
+  'laughed' +
+  ' ourselves ' +
+  'silly' +
+  '.';
 ```
 
 # --instructions--
@@ -74,34 +81,36 @@ assert(
 ## --after-user-code--
 
 ```js
-const removeAssignments = str => str
-  .replace(/myNoun\s*=\s*["']dog["']/g, '')
-  .replace(/myAdjective\s*=\s*["']big["']/g, '')
-  .replace(/myVerb\s*=\s*["']ran["']/g, '')
-  .replace(/myAdverb\s*=\s*["']quickly["']/g, '');
+const removeAssignments = str =>
+  str
+    .replace(/myNoun\s*=\s*["']dog["']/g, '')
+    .replace(/myAdjective\s*=\s*["']big["']/g, '')
+    .replace(/myVerb\s*=\s*["']ran["']/g, '')
+    .replace(/myAdverb\s*=\s*["']quickly["']/g, '');
 ```
 
 ## --seed-contents--
 
 ```js
-var myNoun = "dog";
-var myAdjective = "big";
-var myVerb = "ran";
-var myAdverb = "quickly";
+var myNoun = 'dog';
+var myAdjective = 'big';
+var myVerb = 'ran';
+var myAdverb = 'quickly';
 
 // Only change code below this line
-var wordBlanks = ""; // Change this line
+var wordBlanks = ''; // Change this line
 // Only change code above this line
 ```
 
 # --solutions--
 
 ```js
-var myNoun = "dog";
-var myAdjective = "big";
-var myVerb = "ran";
-var myAdverb = "quickly";
+var myNoun = 'dog';
+var myAdjective = 'big';
+var myVerb = 'ran';
+var myAdverb = 'quickly';
 
-var wordBlanks = "Once there was a " + myNoun + " which was very " + myAdjective + ". ";
-wordBlanks += "It " + myVerb + " " + myAdverb + " around the yard.";
+var wordBlanks =
+  'Once there was a ' + myNoun + ' which was very ' + myAdjective + '. ';
+wordBlanks += 'It ' + myVerb + ' ' + myAdverb + ' around the yard.';
 ```

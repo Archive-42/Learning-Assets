@@ -17,7 +17,7 @@ To specify where that repeat string will appear, you use a backslash (`\`) and t
 The example below matches any word that occurs twice separated by a space:
 
 ```js
-let repeatStr = "regex regex";
+let repeatStr = 'regex regex';
 let repeatRegex = /(\w+)\s\1/;
 repeatRegex.test(repeatStr);
 repeatStr.match(repeatRegex);
@@ -92,7 +92,7 @@ assert(reRegex.test('10 10 10'));
 ## --seed-contents--
 
 ```js
-let repeatNum = "42 42 42";
+let repeatNum = '42 42 42';
 let reRegex = /change/; // Change this line
 let result = reRegex.test(repeatNum);
 ```
@@ -100,7 +100,7 @@ let result = reRegex.test(repeatNum);
 # --solutions--
 
 ```js
-let repeatNum = "42 42 42";
+let repeatNum = '42 42 42';
 let reRegex = /^(\d+)\s\1\s\1$/;
 let result = reRegex.test(repeatNum);
 ```

@@ -14,7 +14,7 @@ Using an object similar to previous examples:
 
 ```js
 const user = {
-  johnDoe: { 
+  johnDoe: {
     age: 34,
     email: 'johnDoe@freeCodeCamp.com'
   }
@@ -24,13 +24,17 @@ const user = {
 Here's how to extract the values of object properties and assign them to variables with the same name:
 
 ```js
-const { johnDoe: { age, email }} = user;
+const {
+  johnDoe: { age, email }
+} = user;
 ```
 
 And here's how you can assign an object properties' values to variables with different names:
 
 ```js
-const { johnDoe: { age: userAge, email: userEmail }} = user;
+const {
+  johnDoe: { age: userAge, email: userEmail }
+} = user;
 ```
 
 # --instructions--
@@ -86,7 +90,7 @@ const LOCAL_FORECAST = {
 };
 
 // Only change code below this line
-  
+
 const lowToday = LOCAL_FORECAST.today.low;
 const highToday = LOCAL_FORECAST.today.high;
 
@@ -101,6 +105,8 @@ const LOCAL_FORECAST = {
   today: { low: 64, high: 77 },
   tomorrow: { low: 68, high: 80 }
 };
- 
-const { today: { low: lowToday, high: highToday }} = LOCAL_FORECAST;
+
+const {
+  today: { low: lowToday, high: highToday }
+} = LOCAL_FORECAST;
 ```

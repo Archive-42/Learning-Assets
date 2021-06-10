@@ -13,9 +13,7 @@ One of the most important topics in React is `state`. State consists of any data
 You create state in a React component by declaring a `state` property on the component class in its `constructor`. This initializes the component with `state` when it is created. The `state` property must be set to a JavaScript `object`. Declaring it looks like this:
 
 ```jsx
-this.state = {
-
-}
+this.state = {};
 ```
 
 You have access to the `state` object throughout the life of your component. You can update it, render it in your UI, and pass it as props to child components. The `state` object can be as complex or as simple as you need it to be. Note that you must create a class component by extending `React.Component` in order to create `state` like this.
@@ -90,7 +88,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<StatefulComponent />, document.getElementById('root'))
+ReactDOM.render(<StatefulComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -110,7 +108,7 @@ class StatefulComponent extends React.Component {
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -121,7 +119,7 @@ class StatefulComponent extends React.Component {
     super(props);
     this.state = {
       name: 'freeCodeCamp!'
-    }
+    };
   }
   render() {
     return (
@@ -130,5 +128,5 @@ class StatefulComponent extends React.Component {
       </div>
     );
   }
-};
+}
 ```

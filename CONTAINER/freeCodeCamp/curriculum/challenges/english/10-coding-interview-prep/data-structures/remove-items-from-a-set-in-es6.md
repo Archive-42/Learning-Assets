@@ -13,14 +13,14 @@ Let's practice removing items from an ES6 Set using the `delete` method.
 First, create an ES6 Set:
 
 ```js
-var set = new Set([1,2,3]);
+var set = new Set([1, 2, 3]);
 ```
 
 Now remove an item from your Set with the `delete` method.
 
 ```js
 set.delete(1);
-console.log([...set]) // should return [ 2, 3 ]
+console.log([...set]); // should return [ 2, 3 ]
 ```
 
 # --instructions--
@@ -47,18 +47,19 @@ assert(
 ## --seed-contents--
 
 ```js
-function checkSet(){
-   var set = null;
-   return set;
+function checkSet() {
+  var set = null;
+  return set;
 }
 ```
 
 # --solutions--
 
 ```js
-function checkSet(){
-var set = new Set([1,2,3,4,5]);
-set.delete(2);
-set.delete(5);
-return set;}
+function checkSet() {
+  var set = new Set([1, 2, 3, 4, 5]);
+  set.delete(2);
+  set.delete(5);
+  return set;
+}
 ```

@@ -27,13 +27,13 @@ One of the keywords should be "freecodecamp".
 package.json should have a valid "keywords" key
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert(packJson.keywords, '"keywords" is missing');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -42,13 +42,13 @@ package.json should have a valid "keywords" key
 "keywords" field should be an Array
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.isArray(packJson.keywords, '"keywords" is not an array');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -57,9 +57,9 @@ package.json should have a valid "keywords" key
 "keywords" should include "freecodecamp"
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.include(
         packJson.keywords,
@@ -67,7 +67,7 @@ package.json should have a valid "keywords" key
         '"keywords" does not include "freecodecamp"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

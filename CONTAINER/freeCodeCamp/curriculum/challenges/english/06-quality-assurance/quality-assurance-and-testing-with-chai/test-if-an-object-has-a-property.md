@@ -21,12 +21,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#16` in the `Objects` su
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ All tests should pass.
 You should choose the correct method for the first assertion - `property` vs. `notProperty`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'notProperty',
         'A car has not wings'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ You should choose the correct method for the first assertion - `property` vs. `n
 You should choose the correct method for the second assertion - `property` vs. `notProperty`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'property',
         'planes have engines'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -71,12 +71,12 @@ You should choose the correct method for the second assertion - `property` vs. `
 You should choose the correct method for the third assertion - `property` vs. `notProperty`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'property', 'Cars have wheels');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -14,9 +14,9 @@ Since all reliable stock price APIs require an API key, we've built a workaround
 
 Working on this project will involve you writing your code using one of the following methods:
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-stockchecker/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-stockchecker) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-stockchecker/) and complete your project locally.
+- Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-stockchecker) to complete your project.
+- Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 
 When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your projects source code in the `GitHub Link` field.
 
@@ -29,18 +29,18 @@ When you are done, make sure a working demo of your project is hosted somewhere 
 
 Write the following tests in `tests/2_functional-tests.js`:
 
--   Viewing one stock: GET request to `/api/stock-prices/`
--   Viewing one stock and liking it: GET request to `/api/stock-prices/`
--   Viewing the same stock and liking it again: GET request to `/api/stock-prices/`
--   Viewing two stocks: GET request to `/api/stock-prices/`
--   Viewing two stocks and liking them: GET request to `/api/stock-prices/`
+- Viewing one stock: GET request to `/api/stock-prices/`
+- Viewing one stock and liking it: GET request to `/api/stock-prices/`
+- Viewing the same stock and liking it again: GET request to `/api/stock-prices/`
+- Viewing two stocks: GET request to `/api/stock-prices/`
+- Viewing two stocks and liking them: GET request to `/api/stock-prices/`
 
 # --hints--
 
 You can provide your own project, not the example URL.
 
 ```js
-(getUserInput) => {
+getUserInput => {
   assert(
     !/.*\/stock-price-checker\.freecodecamp\.rocks/.test(getUserInput('url'))
   );
@@ -50,7 +50,7 @@ You can provide your own project, not the example URL.
 You should set the content security policies to only allow loading of scripts and CSS from your server.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const data = await fetch(getUserInput('url') + '/_api/app-info');
   const parsed = await data.json();
   assert.isTrue(
@@ -65,7 +65,7 @@ async (getUserInput) => {
 You can send a `GET` request to `/api/stock-prices`, passing a NASDAQ stock symbol to a `stock` query parameter. The returned object will contain a property named `stockData`.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const data = await fetch(
     getUserInput('url') + '/api/stock-prices?stock=GOOG'
   );
@@ -77,7 +77,7 @@ async (getUserInput) => {
 The `stockData` property includes the `stock` symbol as a string, the `price` as a number, and `likes` as a number.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const data = await fetch(
     getUserInput('url') + '/api/stock-prices?stock=GOOG'
   );
@@ -98,7 +98,7 @@ You can also pass along a `like` field as `true` (boolean) to have your like add
 If you pass along 2 stocks, the returned value will be an array with information about both stocks. Instead of `likes`, it will display `rel_likes` (the difference between the likes on both stocks) for both `stockData` objects.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const data = await fetch(
     getUserInput('url') + '/api/stock-prices?stock=GOOG&stock=MSFT'
   );
@@ -113,11 +113,11 @@ async (getUserInput) => {
 All 5 functional tests are complete and passing.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const tests = await fetch(getUserInput('url') + '/_api/get-tests');
   const parsed = await tests.json();
   assert.isTrue(parsed.length >= 5);
-  parsed.forEach((test) => {
+  parsed.forEach(test => {
     assert.equal(test.state, 'passed');
   });
 };

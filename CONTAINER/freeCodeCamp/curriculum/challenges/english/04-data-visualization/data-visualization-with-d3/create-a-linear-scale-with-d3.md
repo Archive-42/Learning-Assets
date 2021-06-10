@@ -19,7 +19,7 @@ It's unlikely you would plot raw data as-is. Before plotting it, you set the sca
 D3 has several scale types. For a linear scale (usually used with quantitative data), there is the D3 method `scaleLinear()`:
 
 ```js
-const scale = d3.scaleLinear()
+const scale = d3.scaleLinear();
 ```
 
 By default, a scale uses the identity relationship. The value of the input is the same as the value of the output. A separate challenge covers how to change this.
@@ -62,10 +62,7 @@ assert(output == 50 && code.match(/scale\(\s*?50\s*?\)/g));
 
     // Add your code above this line
 
-    d3.select("body")
-      .append("h2")
-      .text(output);
-
+    d3.select('body').append('h2').text(output);
   </script>
 </body>
 ```
@@ -75,14 +72,10 @@ assert(output == 50 && code.match(/scale\(\s*?50\s*?\)/g));
 ```html
 <body>
   <script>
-
     const scale = d3.scaleLinear();
-    const output = scale(50); 
+    const output = scale(50);
 
-    d3.select("body")
-      .append("h2")
-      .text(output);
-
+    d3.select('body').append('h2').text(output);
   </script>
 </body>
 ```

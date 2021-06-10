@@ -25,7 +25,7 @@ assert(store.getState() === 5);
 A variable `currentState` should exist and should be assigned the current state of the Redux store.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     currentState === 5 && getUserInput('index').includes('store.getState()')
   );
@@ -36,9 +36,7 @@ A variable `currentState` should exist and should be assigned the current state 
 ## --seed-contents--
 
 ```js
-const store = Redux.createStore(
-  (state = 5) => state
-);
+const store = Redux.createStore((state = 5) => state);
 
 // Change code below this line
 ```
@@ -46,9 +44,7 @@ const store = Redux.createStore(
 # --solutions--
 
 ```js
-const store = Redux.createStore(
-  (state = 5) => state
-);
+const store = Redux.createStore((state = 5) => state);
 
 // Change code below this line
 const currentState = store.getState();

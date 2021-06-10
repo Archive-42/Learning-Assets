@@ -54,12 +54,12 @@ Follow the assertion order above - we rely on it. Be sure to remove `assert.fail
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -68,14 +68,14 @@ All tests should pass.
 You should test for 'res.status' to be 200.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'equal');
       assert.equal(data.assertions[0].args[0], 'res.status');
       assert.equal(data.assertions[0].args[1], '200');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -84,14 +84,14 @@ You should test for 'res.status' to be 200.
 You should test for 'res.type' to be 'application/json'.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'equal');
       assert.equal(data.assertions[1].args[0], 'res.type');
       assert.match(data.assertions[1].args[1], /('|")application\/json\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -100,14 +100,14 @@ You should test for 'res.type' to be 'application/json'.
 You should test for 'res.body.name' to be 'Cristoforo'.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'equal');
       assert.equal(data.assertions[2].args[0], 'res.body.name');
       assert.match(data.assertions[2].args[1], /('|")Cristoforo\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -116,14 +116,14 @@ You should test for 'res.body.name' to be 'Cristoforo'.
 You should test for 'res.body.surname' to be 'Colombo'.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[3].method, 'equal');
       assert.equal(data.assertions[3].args[0], 'res.body.surname');
       assert.match(data.assertions[3].args[1], /('|")Colombo\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

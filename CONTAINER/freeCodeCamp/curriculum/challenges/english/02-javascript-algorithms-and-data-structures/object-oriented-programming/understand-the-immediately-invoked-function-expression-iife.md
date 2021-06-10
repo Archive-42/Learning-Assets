@@ -12,7 +12,7 @@ A common pattern in JavaScript is to execute a function as soon as it is declare
 
 ```js
 (function () {
-  console.log("Chirp, chirp!");
+  console.log('Chirp, chirp!');
 })();
 ```
 
@@ -44,7 +44,7 @@ assert(/\(.*(\)\(|\}\(\))\)/.test(code.replace(/[\s;]/g, '')));
 
 ```js
 function makeNest() {
-  console.log("A cozy nest is ready");
+  console.log('A cozy nest is ready');
 }
 
 makeNest();
@@ -54,7 +54,7 @@ makeNest();
 
 ```js
 (function () {
-  console.log("A cozy nest is ready");
+  console.log('A cozy nest is ready');
 })();
 ```
 
@@ -62,22 +62,20 @@ makeNest();
 
 ```js
 (function () {
-  console.log("A cozy nest is ready");
-}());
-```
-
----
-
-```js
-(() => {
-  console.log("A cozy nest is ready");
+  console.log('A cozy nest is ready');
 })();
 ```
 
 ---
 
 ```js
-(() =>
-  console.log("A cozy nest is ready")
-)();
+(() => {
+  console.log('A cozy nest is ready');
+})();
+```
+
+---
+
+```js
+(() => console.log('A cozy nest is ready'))();
 ```

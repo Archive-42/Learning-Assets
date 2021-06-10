@@ -21,13 +21,13 @@ Use the function argument `personName` as the search key.
 Find all items corresponding to a criteria should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/find-all-by-name', {
     name: 'r@nd0mN4m3',
     age: 24,
     favoriteFoods: ['pizza']
   }).then(
-    (data) => {
+    data => {
       assert.isArray(data, 'the response should be an Array');
       assert.equal(
         data[0].name,
@@ -36,7 +36,7 @@ Find all items corresponding to a criteria should succeed
       );
       assert.equal(data[0].__v, 0, 'The item should be not previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

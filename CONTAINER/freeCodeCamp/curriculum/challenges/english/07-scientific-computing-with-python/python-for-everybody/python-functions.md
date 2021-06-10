@@ -35,4 +35,3 @@ None of the above.
 ## --video-solution--
 
 4
-

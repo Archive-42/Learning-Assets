@@ -36,7 +36,11 @@ assert(myDecimal % 1 != 0);
 ## --after-user-code--
 
 ```js
-(function(){if(typeof myDecimal !== "undefined"){return myDecimal;}})();
+(function () {
+  if (typeof myDecimal !== 'undefined') {
+    return myDecimal;
+  }
+})();
 ```
 
 ## --seed-contents--

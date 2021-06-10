@@ -45,7 +45,7 @@ The rendered `h1` header should contain text rendered from the component's state
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
   const first = () => {
@@ -61,7 +61,7 @@ Calling the `handleClick` method on `MyComponent` should set the name property i
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
   const first = () => {
@@ -83,7 +83,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
+ReactDOM.render(<MyComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -99,7 +99,6 @@ class MyComponent extends React.Component {
   }
   handleClick() {
     // Change code below this line
-
     // Change code above this line
   }
   render() {
@@ -110,7 +109,7 @@ class MyComponent extends React.Component {
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -125,7 +124,7 @@ class MyComponent extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-     // Change code below this line
+    // Change code below this line
     this.setState({
       name: 'React Rocks!'
     });
@@ -134,10 +133,10 @@ class MyComponent extends React.Component {
   render() {
     return (
       <div>
-        <button onClick = {this.handleClick}>Click Me</button>
+        <button onClick={this.handleClick}>Click Me</button>
         <h1>{this.state.name}</h1>
       </div>
     );
   }
-};
+}
 ```

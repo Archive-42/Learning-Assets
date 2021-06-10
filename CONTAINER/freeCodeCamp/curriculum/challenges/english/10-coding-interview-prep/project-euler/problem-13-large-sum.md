@@ -251,7 +251,6 @@ const testNums = [
 
 ```js
 function largeSum(arr) {
-
   return true;
 }
 
@@ -269,10 +268,9 @@ largeSum(testNums);
 
 ```js
 function largeSum(arr) {
-
   let sum = 0;
 
-  arr.forEach(function(num) {
+  arr.forEach(function (num) {
     sum += parseInt(num, 10);
   });
 
