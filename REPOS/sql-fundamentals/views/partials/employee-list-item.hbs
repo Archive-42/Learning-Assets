@@ -1,0 +1,13 @@
+<li>
+  <a class='mui-panel' href="/employees/{{employee.id}}">
+    <span class='mui-badge mui--pull-right'>{{employee.title}}</span>
+    <h3 class='mui-panel__title'>{{employee.lastname}}, {{employee.firstname}}</h3>
+    <p>
+      <b>Region: </b> {{employee.region}}
+      <br>
+      <b>Hired: </b> {{format-date employee.hiredate}}
+      <br>
+      <b>Order Count: </b> {{or employee.ordercount "??"}}
+    </p>
+  </a>
+</li>

@@ -1,0 +1,27 @@
+<div class="mui-container">
+  <h1>All Customers</h1>
+  <form class="mui-form--inline">
+    <div class="mui-textfield">
+      <input name='filter' value='{{filter}}' placeholder='Filter' type="text">
+    </div>
+    <button class="mui-btn">Search</button>
+  </form>
+  <br>
+  <ul class=' collection '>
+    {{#each customers as |c|}}
+    <li>
+      <a class='mui-panel ' href="/customers/{{c.id}}">
+        <span class='mui-badge mui--pull-right '>{{c.id}}</span>
+        <h3 class='mui-panel__title '>{{c.companyname}}</h3>
+        <p>
+          <b>Contact Name:</b> {{c.contactname}}
+          <br>
+          <b>Placed: </b> {{or c.ordercount "??"}} orders
+        </p>
+      </a>
+    </li>
+    {{else}}
+    <li>No customers</li>
+    {{/each}}
+  </ul>
+</div>

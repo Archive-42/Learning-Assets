@@ -1,0 +1,36 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "no-unused-variable": [
+      true
+    ],
+    "no-console": true,
+    "semicolon": false,
+    "space-before-function-paren": false,
+    "interface-name": false,
+    "trailing-comma": false,
+    "max-line-length": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-first"
+      }
+    ],
+    "quotemark": false,
+    "arrow-parens": [
+      false
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "await-promise": true,
+    "prefer-const": [
+      false
+    ]
+  }
+}

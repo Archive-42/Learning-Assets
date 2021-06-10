@@ -1,0 +1,20 @@
+<div class="mui-container">
+  <h1>All Suppliers</h1>
+  <ul class='collection'>
+    {{#each suppliers as |s|}}
+    <li>
+      <a class='mui-panel' href="/suppliers/{{s.id}}">
+        <span class='mui-badge mui--pull-right'>{{s.id}}</span>
+        <h3 class='mui-panel__title'>{{s.companyname}}</h3>
+        <p>
+          <b>Contact Name:</b> {{s.contactname}}
+          <br>
+          <b>Supplier of: </b> {{s.productlist}}
+        </p>
+      </a>
+    </li>
+    {{else}}
+    <li>No suppliers</li>
+    {{/each}}
+  </ul>
+</div>

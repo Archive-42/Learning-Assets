@@ -1,0 +1,128 @@
+<div class="mui-container dashboard">
+  <div class="mui-row">
+    <div class="mui-col-lg-4 mui-col-md-6">
+      <div class="mui-panel dashboard-panel">
+          <h3 class='mui-panel__title'>🏁 Employee Leaderboard</h3>
+          <table class='mui-table leaderboard-table'>
+            <thead>
+              <th>Name</th>
+              <th>Amount</th>
+            </thead>
+            <tbody>
+              {{#each employeeLeaderboard as |e|}}
+                <tr>
+                  <td>{{e.name}}</td>
+                  <td>{{format-money e.amount}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <div class="mui-col-lg-4 mui-col-md-6">
+      <div class="mui-panel dashboard-panel">
+        <h3 class='mui-panel__title'>🛒 Customer Leaderboard</h3>
+        <table class='mui-table leaderboard-table'>
+          <thead>
+            <th>Name</th>
+            <th>Amount</th>
+          </thead>
+          <tbody>
+            {{#each customerLeaderboard as |c|}}
+            <tr>
+              <td>{{c.name}}</td>
+              <td>{{format-money c.amount}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="mui-col-lg-4 mui-col-md-6">
+      <div class="mui-panel dashboard-panel">
+        <h3 class='mui-panel__title'>🌮 Product Leaderboard</h3>
+        <table class='mui-table leaderboard-table'>
+          <thead>
+            <th>Name</th>
+            <th>Amount</th>
+          </thead>
+          <tbody>
+            {{#each productLeaderboard as |p|}}
+            <tr>
+              <td>{{p.name}}</td>
+              <td>{{format-money p.amount}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="mui-col-lg-4 mui-col-md-6">
+      <div class="mui-panel dashboard-panel">
+        <h3 class='mui-panel__title'>⏱ Recent Orders</h3>
+        <table class='mui-table '>
+          <thead>
+            <th>Customer</th>
+            <th>Employee</th>
+            <th>Amount</th>
+          </thead>
+          <tbody>
+            {{#each recentOrders as |o|}}
+            <tr>
+              <td>{{o.customer}}</td>
+              <td>{{o.employee}}</td>
+              <td>{{format-money o.subtotal}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="mui-col-lg-4 mui-col-md-6">
+      <div class="mui-panel dashboard-panel">
+        <h3 class='mui-panel__title'>📦 Reorder List</h3>
+        <table class="mui-table">
+          <thead>
+            <th>Name</th>
+            <th>Quantity In Stock</th>
+          </thead>
+          <tbody>
+            {{#each reorderList as |p|}}
+              <tr>
+                <td>{{p.name}}</td>
+                <td>
+                  {{p.unitsinstock}}
+                  {{#if p.unitsonorder}}
+                    (+ {{p.unitsonorder}} on order)
+                  {{/if}}
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  var HOST = location.origin.replace(/^http/, 'ws');
+
+  var ws = new WebSocket(HOST);
+  // event emmited when connected
+  ws.onopen = function () {
+    console.log('websocket is connected on ' + HOST  + ' ...')
+    // sending a send event to websocket server
+    ws.send('connected')
+  }
+  // event emmited when receiving message 
+  ws.onmessage = function (ev) {
+    if (ev.data === 'refresh') {
+      setTimeout(() => {
+        window.location.href = window.location.href;
+      }, 100);
+    } else {
+      console.log(ev);
+    }
+  }
+</script>
