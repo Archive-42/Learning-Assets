@@ -17,7 +17,7 @@ dashedName: hashing-your-passwords
 最后，在验证逻辑中，我们已经有这样一段代码执行检查：`if (password !== user.password) { return done(null, false); }`。 现在存储的密码 `user.password` 已经是哈希值了。 在对现有代码进行修改前，注意目前的语句是如何检查如果密码**不**匹配，就返回未认证的。 牢记这一点，你的代码应该是如下，检查输入的密码是否与哈希相对照：
 
 ```js
-if (!bcrypt.compareSync(password, user.password)) { 
+if (!bcrypt.compareSync(password, user.password)) {
   return done(null, false);
 }
 ```
@@ -31,9 +31,9 @@ if (!bcrypt.compareSync(password, user.password)) {
 应存在 BCrypt 依赖。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -41,7 +41,7 @@ if (!bcrypt.compareSync(password, user.password)) {
         'Your project should list "bcrypt" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -50,9 +50,9 @@ if (!bcrypt.compareSync(password, user.password)) {
 应正确地引入和调用 BCrypt。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /require.*("|')bcrypt\1/gi,
@@ -69,7 +69,7 @@ if (!bcrypt.compareSync(password, user.password)) {
         'You should compare the password to the hash in your strategy'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

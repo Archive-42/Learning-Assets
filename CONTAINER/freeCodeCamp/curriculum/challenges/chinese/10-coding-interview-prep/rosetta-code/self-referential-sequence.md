@@ -119,9 +119,7 @@ assert.deepEqual(selfReferential(251413126110), [
 ## --seed-contents--
 
 ```js
-function selfReferential(n) {
-
-}
+function selfReferential(n) {}
 ```
 
 # --solutions--
@@ -139,14 +137,14 @@ function selfReferential(n) {
     sequence,
     indexOf =
       [].indexOf ||
-      function(item) {
+      function (item) {
         for (var i = 0, l = this.length; i < l; i++) {
           if (i in this && this[i] === item) return i;
         }
         return -1;
       };
 
-  sequence = function(n) {
+  sequence = function (n) {
     var c, cnt, cnts, d, digit, i, j, l, len, new_cnts, ref, s, seq;
     cnts = {};
     ref = n.toString();
@@ -178,14 +176,14 @@ function selfReferential(n) {
     return seq;
   };
 
-  incr = function(h, k) {
+  incr = function (h, k) {
     if (h[k] == null) {
       h[k] = 0;
     }
     return (h[k] += 1);
   };
 
-  descending = function(n) {
+  descending = function (n) {
     var tens;
     if (n < 10) {
       return true;

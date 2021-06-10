@@ -34,7 +34,6 @@ assert.strictEqual(lrgNonMersennePrime(), 8739992577);
 
 ```js
 function lrgNonMersennePrime() {
-
   return true;
 }
 

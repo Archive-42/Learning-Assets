@@ -8,7 +8,7 @@ dashedName: serialization-of-a-user-object
 
 # --description--
 
-序列化和反序列化在身份认证中是很重要的概念。 序列化一个对象就是将其内容转换成一个体积很小的 *key*，后续可以通过它反序列化为原始对象。 这样，服务器就可以在用户未登录时识别用户，或者说给这个用户一个唯一标识，用户也不需要在每次访问不同页面时都给服务器发送用户名和密码。
+序列化和反序列化在身份认证中是很重要的概念。 序列化一个对象就是将其内容转换成一个体积很小的 _key_，后续可以通过它反序列化为原始对象。 这样，服务器就可以在用户未登录时识别用户，或者说给这个用户一个唯一标识，用户也不需要在每次访问不同页面时都给服务器发送用户名和密码。
 
 我们需要用到序列化和反序列化的方法来进行配置。 passport 为我们提供了 `passport.serializeUser( OURFUNCTION )` 和 `passport.deserializeUser( OURFUNCTION )` 两个方法。
 
@@ -35,9 +35,9 @@ passport.deserializeUser((id, done) => {
 应该正确地序列化用户函数。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /passport.serializeUser/gi,
@@ -49,7 +49,7 @@ passport.deserializeUser((id, done) => {
         'There should be a callback in your serializeUser with (null, user._id)'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -58,9 +58,9 @@ passport.deserializeUser((id, done) => {
 应该正确地反序列化用户函数。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /passport.deserializeUser/gi,
@@ -72,7 +72,7 @@ passport.deserializeUser((id, done) => {
         'There should be a callback in your deserializeUser with (null, null) for now'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -81,9 +81,9 @@ passport.deserializeUser((id, done) => {
 MongoDB 应作为项目的依赖。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -91,7 +91,7 @@ MongoDB 应作为项目的依赖。
         'Your project should list "mongodb" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -100,9 +100,9 @@ MongoDB 应作为项目的依赖。
 应该正确请求 Mongodb，包括 ObjectId。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /require.*("|')mongodb\1/gi,
@@ -114,7 +114,7 @@ MongoDB 应作为项目的依赖。
         'Even though the block is commented out, you should use new ObjectID(id) for when we add the database'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

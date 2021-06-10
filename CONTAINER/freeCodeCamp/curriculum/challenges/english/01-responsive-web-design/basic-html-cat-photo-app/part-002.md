@@ -61,7 +61,7 @@ Your `h2` element should be below the `h1` element. The `h1` element has greater
 
 ```js
 const collection = [...document.querySelectorAll('h1,h2')].map(
-  (node) => node.nodeName
+  node => node.nodeName
 );
 assert(collection.indexOf('H1') < collection.indexOf('H2'));
 ```
@@ -73,10 +73,9 @@ assert(collection.indexOf('H1') < collection.indexOf('H2'));
 ```html
 <html>
   <body>
---fcc-editable-region--
+    --fcc-editable-region--
     <h1>CatPhotoApp</h1>
---fcc-editable-region--
+    --fcc-editable-region--
   </body>
 </html>
 ```
-

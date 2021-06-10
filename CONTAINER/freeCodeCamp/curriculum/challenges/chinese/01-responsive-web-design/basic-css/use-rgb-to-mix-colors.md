@@ -126,7 +126,7 @@ assert(
     color: rgb(160, 82, 45);
   }
   .blue-text {
-    color:rgb(0, 0, 255);
+    color: rgb(0, 0, 255);
   }
 </style>
 

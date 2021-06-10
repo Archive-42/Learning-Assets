@@ -14,7 +14,7 @@ dashedName: shopping-list
 每个子数组中的第一个元素应该是购买的物品名称。 第二个元素应该是物品的数量，类似于：
 
 ```js
-["Chocolate Bar", 15]
+['Chocolate Bar', 15];
 ```
 
 列表中应至少有 5 个子数组。
@@ -54,17 +54,17 @@ var count = 0;
 var isArray = false;
 var hasString = false;
 var hasNumber = false;
-(function(list){
-  if(Array.isArray(myList)) {
+(function (list) {
+  if (Array.isArray(myList)) {
     isArray = true;
-    if(myList.length > 0) {
+    if (myList.length > 0) {
       hasString = true;
       hasNumber = true;
       for (var elem of myList) {
-        if(!elem || !elem[0] || typeof elem[0] !== 'string') {
+        if (!elem || !elem[0] || typeof elem[0] !== 'string') {
           hasString = false;
         }
-        if(!elem || typeof elem[1] !== 'number') {
+        if (!elem || typeof elem[1] !== 'number') {
           hasNumber = false;
         }
       }
@@ -72,9 +72,8 @@ var hasNumber = false;
     count = myList.length;
     return JSON.stringify(myList);
   } else {
-    return "myList is not an array";
+    return 'myList is not an array';
   }
-
 })(myList);
 ```
 
@@ -88,10 +87,10 @@ var myList = [];
 
 ```js
 var myList = [
-  ["Candy", 10],
-  ["Potatoes", 12],
-  ["Eggs", 12],
-  ["Catfood", 1],
-  ["Toads", 9]
+  ['Candy', 10],
+  ['Potatoes', 12],
+  ['Eggs', 12],
+  ['Catfood', 1],
+  ['Toads', 9]
 ];
 ```

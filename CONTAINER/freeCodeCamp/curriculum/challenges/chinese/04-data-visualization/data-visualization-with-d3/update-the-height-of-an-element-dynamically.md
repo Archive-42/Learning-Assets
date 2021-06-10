@@ -10,14 +10,14 @@ dashedName: update-the-height-of-an-element-dynamically
 
 之前的挑战包括如何从数组中显示数据和如何添加 CSS 类。 将这些课程的内容结合起来，你就能创建出一个简单的条形图， 只需两步：
 
-1) 为每一个数组中的数据点都创建一个 `div`
+1. 为每一个数组中的数据点都创建一个 `div`
 
-2) 为每个 `div` 动态分配高度值，在 `style()` 方法中使用回调函数将高度值设置为数据大小
+2. 为每个 `div` 动态分配高度值，在 `style()` 方法中使用回调函数将高度值设置为数据大小
 
 回想使用回调函数设置样式的格式：
 
 ```js
-selection.style("cssProperty", (d) => d)
+selection.style('cssProperty', d => d);
 ```
 
 # --instructions--
@@ -97,16 +97,15 @@ assert($('div').eq(8)[0].style.height === '9px');
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("div")
+    d3.select('body')
+      .selectAll('div')
       .data(dataset)
       .enter()
-      .append("div")
-      .attr("class", "bar")
-      // Add your code below this line
+      .append('div')
+      .attr('class', 'bar');
+    // Add your code below this line
 
-
-
-      // Add your code above this line
+    // Add your code above this line
   </script>
 </body>
 ```
@@ -126,12 +125,13 @@ assert($('div').eq(8)[0].style.height === '9px');
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("div")
+    d3.select('body')
+      .selectAll('div')
       .data(dataset)
       .enter()
-      .append("div")
-      .attr("class", "bar")
-      .style('height', d => `${d}px`)
+      .append('div')
+      .attr('class', 'bar')
+      .style('height', d => `${d}px`);
   </script>
 </body>
 ```

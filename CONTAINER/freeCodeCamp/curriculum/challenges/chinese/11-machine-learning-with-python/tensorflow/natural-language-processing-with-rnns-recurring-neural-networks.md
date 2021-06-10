@@ -31,4 +31,3 @@ What is true about Recurrent Neural Networks?
 ## --video-solution--
 
 4
-

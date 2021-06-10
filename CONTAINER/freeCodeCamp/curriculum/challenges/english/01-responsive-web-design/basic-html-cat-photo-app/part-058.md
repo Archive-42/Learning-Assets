@@ -25,7 +25,7 @@ Your new checkbox should have an `id` attribute with the value `energetic` and a
 const checkboxes = [...$('input[type="checkbox"]')];
 assert(
   checkboxes.some(
-    (checkbox) =>
+    checkbox =>
       checkbox.id === 'energetic' &&
       checkbox.getAttribute('name') === 'personality'
   )
@@ -36,7 +36,7 @@ Your new checkbox should be after the first one. You have them in the wrong orde
 
 ```js
 const checkboxes = [...$('input[type="checkbox"]')].map(
-  (checkbox) => checkbox.id
+  checkbox => checkbox.id
 );
 assert(checkboxes.indexOf('lazy') < checkboxes.indexOf('energetic'));
 ```
@@ -72,8 +72,15 @@ assert(
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
       <section>
         <h2>Cat Lists</h2>
@@ -84,8 +91,11 @@ assert(
           <li>lasagna</li>
         </ul>
         <figure>
-          <img src="https://bit.ly/fcc-lasagna" alt="A slice of lasagna on a plate.">
-          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-lasagna"
+            alt="A slice of lasagna on a plate."
+          />
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
         </figure>
         <h3>Top 3 things cats hate:</h3>
         <ol>
@@ -94,8 +104,11 @@ assert(
           <li>other cats</li>
         </ol>
         <figure>
-          <img src="https://bit.ly/fcc-cats" alt="Five cats looking around a field.">
-          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-cats"
+            alt="Five cats looking around a field."
+          />
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
         </figure>
       </section>
       <section>
@@ -103,17 +116,40 @@ assert(
         <form action="https://freecatphotoapp.com/submit-cat-photo">
           <fieldset>
             <legend>Is your cat an indoor or outdoor cat?</legend>
-            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
-            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+            <label
+              ><input
+                id="indoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="indoor"
+              />
+              Indoor</label
+            >
+            <label
+              ><input
+                id="outdoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="outdoor"
+              />
+              Outdoor</label
+            >
           </fieldset>
           <fieldset>
             <legend>What's your cat's personality?</legend>
---fcc-editable-region--
-            <input id="loving" type="checkbox" name="personality"> <label for="loving">Loving</label>
-            <input id="lazy" type="checkbox" name="personality"> <label for="lazy">Lazy</label>
---fcc-editable-region--
+            --fcc-editable-region--
+            <input id="loving" type="checkbox" name="personality" />
+            <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" />
+            <label for="lazy">Lazy</label>
+            --fcc-editable-region--
           </fieldset>
-          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <input
+            type="text"
+            name="catphotourl"
+            placeholder="cat photo URL"
+            required
+          />
           <button type="submit">Submit</button>
         </form>
       </section>
@@ -121,4 +157,3 @@ assert(
   </body>
 </html>
 ```
-

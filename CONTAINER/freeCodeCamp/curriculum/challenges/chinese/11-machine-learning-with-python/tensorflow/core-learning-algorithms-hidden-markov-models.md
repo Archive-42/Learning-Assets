@@ -27,4 +27,3 @@ It separates data points into separate categories.
 ## --video-solution--
 
 1
-

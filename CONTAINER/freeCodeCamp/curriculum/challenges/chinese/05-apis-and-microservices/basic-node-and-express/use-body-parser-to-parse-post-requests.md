@@ -35,16 +35,16 @@ name=John+Doe&age=25
 应该挂载“body-parser”中间件
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/add-body-parser').then(
-    (data) => {
+    data => {
       assert.isAbove(
         data.mountedAt,
         0,
         '"body-parser" is not mounted correctly'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

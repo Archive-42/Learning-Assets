@@ -59,7 +59,7 @@ assert(code.match(/100%\s*?{\s*?background-color:\s*?#4791d0;\s*?}/gi));
   button {
     border-radius: 5px;
     color: white;
-    background-color: #0F5897;
+    background-color: #0f5897;
     padding: 5px 10px 8px 10px;
   }
 
@@ -67,8 +67,6 @@ assert(code.match(/100%\s*?{\s*?background-color:\s*?#4791d0;\s*?}/gi));
     animation-name: background-color;
     animation-duration: 500ms;
   }
-
-
 </style>
 
 <button>Register</button>
@@ -81,7 +79,7 @@ assert(code.match(/100%\s*?{\s*?background-color:\s*?#4791d0;\s*?}/gi));
   button {
     border-radius: 5px;
     color: white;
-    background-color: #0F5897;
+    background-color: #0f5897;
     padding: 5px 10px 8px 10px;
   }
 

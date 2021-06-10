@@ -15,7 +15,7 @@ dashedName: work-with-dynamic-data-in-d3
 `text()` 方法以字符串或者回调函数作为参数：
 
 ```js
-selection.text((d) => d)
+selection.text(d => d);
 ```
 
 上面这个例子中的参数 `d` 指关联数据集的一个对象。
@@ -91,15 +91,16 @@ assert($('h2').eq(8).text() == '9 USD');
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("h2")
+    d3.select('body')
+      .selectAll('h2')
       .data(dataset)
       .enter()
-      .append("h2")
+      .append('h2')
       // Add your code below this line
 
-      .text("New Title");
+      .text('New Title');
 
-      // Add your code above this line
+    // Add your code above this line
   </script>
 </body>
 ```
@@ -111,12 +112,12 @@ assert($('h2').eq(8).text() == '9 USD');
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("h2")
+    d3.select('body')
+      .selectAll('h2')
       .data(dataset)
       .enter()
-      .append("h2")
-      .text((d) => `${d} USD`);
-
+      .append('h2')
+      .text(d => `${d} USD`);
   </script>
 </body>
 ```

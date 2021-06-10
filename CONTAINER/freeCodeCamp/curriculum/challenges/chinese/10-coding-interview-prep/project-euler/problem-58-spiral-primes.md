@@ -44,7 +44,6 @@ assert.strictEqual(spiralPrimes(), 26241);
 
 ```js
 function spiralPrimes() {
-
   return true;
 }
 

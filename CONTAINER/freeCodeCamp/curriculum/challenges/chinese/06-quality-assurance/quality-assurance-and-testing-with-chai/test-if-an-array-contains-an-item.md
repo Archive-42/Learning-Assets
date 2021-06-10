@@ -19,12 +19,12 @@ dashedName: test-if-an-array-contains-an-item
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -33,16 +33,16 @@ dashedName: test-if-an-array-contains-an-item
 应该为第一个断言选择正确的方法：`include` 或 `notInclude`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'notInclude',
         "It's summer in july..."
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,16 +51,16 @@ dashedName: test-if-an-array-contains-an-item
 应该为第二个断言选择正确的方法：`include` 或 `notInclude`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'include',
         'JavaScript is a backend language !!'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

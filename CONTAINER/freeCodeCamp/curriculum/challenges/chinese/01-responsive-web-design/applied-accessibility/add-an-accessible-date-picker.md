@@ -19,7 +19,7 @@ dashedName: add-an-accessible-date-picker
 
 ```html
 <label for="input1">Enter a date:</label>
-<input type="date" id="input1" name="input1">
+<input type="date" id="input1" name="input1" />
 ```
 
 # --instructions--
@@ -70,11 +70,9 @@ assert($('input').attr('name') == 'date');
 
         <!-- Only change code below this line -->
 
-
-
         <!-- Only change code above this line -->
 
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit" value="Submit" />
       </form>
     </section>
   </main>
@@ -95,8 +93,8 @@ assert($('input').attr('name') == 'date');
       <form>
         <p>Tell us the best date for the competition</p>
         <label for="pickdate">Preferred Date:</label>
-        <input type="date" id="pickdate" name="date">
-        <input type="submit" name="submit" value="Submit">
+        <input type="date" id="pickdate" name="date" />
+        <input type="submit" name="submit" value="Submit" />
       </form>
     </section>
   </main>

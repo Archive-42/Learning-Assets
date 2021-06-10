@@ -12,8 +12,8 @@ dashedName: extend-constructors-to-receive-arguments
 
 ```js
 let swan = new Bird();
-swan.name = "Carlos";
-swan.color = "white";
+swan.name = 'Carlos';
+swan.color = 'white';
 ```
 
 假如你写了一个程序来追踪一个鸟舍里面的几百只甚至几千只不同的小鸟。 你将会花费很多时间去创建所有的小鸟实例并给它们的属性一一修改为不同的值。 为了减轻创建不同 `Bird` 对象的工作量，你可以给你的 Bird 设置为可以接收参数的构造函数：
@@ -29,9 +29,9 @@ function Bird(name, color) {
 然后将值通过参数的方式传递给 `Bird` 构造函数来定义每一个唯一的小鸟实例： `let cardinal = new Bird("Bruce", "red");` 这给 `Bird` 的 `name` 和 `color` 属性分别赋值为 `Bruce` 和 `red` 色。 但 `numLegs` 属性仍然设置为 2。 `cardinal` 有以下这些属性：
 
 ```js
-cardinal.name
-cardinal.color
-cardinal.numLegs
+cardinal.name;
+cardinal.color;
+cardinal.numLegs;
 ```
 
 这样一来构造函数就变得很灵活了。 现在可以在创建每个`Bird`实例时直接定义属性，这是 JavaScript 构造函数非常实用的用法之一。 它们根据共同或相似的属性和行为将对象归纳为一组，并能够自动的创建各自实例。
@@ -71,15 +71,13 @@ assert(terrier instanceof Dog);
 ## --seed-contents--
 
 ```js
-function Dog() {
-
-}
+function Dog() {}
 ```
 
 # --solutions--
 
 ```js
-function Dog (name, color) {
+function Dog(name, color) {
   this.numLegs = 4;
   this.name = name;
   this.color = color;

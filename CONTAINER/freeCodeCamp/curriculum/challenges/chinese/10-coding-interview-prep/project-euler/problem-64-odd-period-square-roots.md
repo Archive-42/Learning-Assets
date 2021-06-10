@@ -86,7 +86,6 @@ assert.strictEqual(oddPeriodSqrts(), 1322);
 
 ```js
 function oddPeriodSqrts() {
-
   return true;
 }
 

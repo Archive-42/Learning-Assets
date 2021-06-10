@@ -28,10 +28,9 @@ Test 1
     <meta charset="utf-8" />
     <title>Camper Cafe Menu</title>
   </head>
---fcc-editable-region--
-  <body>
-  </body>
---fcc-editable-region--
-<html>
+  --fcc-editable-region--
+  <body></body>
+  --fcc-editable-region--
+  <html></html>
+</html>
 ```
-

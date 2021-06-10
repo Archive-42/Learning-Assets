@@ -31,4 +31,3 @@ column
 ## --video-solution--
 
 1
-

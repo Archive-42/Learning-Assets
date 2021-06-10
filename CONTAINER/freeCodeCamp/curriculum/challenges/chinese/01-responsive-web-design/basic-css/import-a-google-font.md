@@ -18,7 +18,11 @@ dashedName: import-a-google-font
 要引入 Google Font，你需要从 Google Fonts 上复制字体的 URL，并粘贴到你的 HTML 里面。 在这个挑战中，我们需要引入 `Lobster` 字体。 因此，请复制以下代码段，并粘贴到代码编辑器顶部，即放到 `style` 标签之前。
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 ```
 
 现在可以在 CSS 中使用 `Lobster` 字体，并像下面一样使用 `Lobster` 作为 FAMILY_NAME：
@@ -93,7 +97,11 @@ assert(
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -111,12 +119,12 @@ assert(
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -125,7 +133,11 @@ assert(
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -145,7 +157,11 @@ assert(
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -163,12 +179,12 @@ assert(
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

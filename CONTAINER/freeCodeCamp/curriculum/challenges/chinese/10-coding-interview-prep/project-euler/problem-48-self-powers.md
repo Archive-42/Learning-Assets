@@ -50,7 +50,6 @@ assert.strictEqual(selfPowers(1000, 10), 9110846700);
 
 ```js
 function selfPowers(power, lastDigits) {
-
   return true;
 }
 

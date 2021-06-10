@@ -15,7 +15,7 @@ function Bird(name) {
   this.name = name;
 }
 
-let duck = new Bird("Donald");
+let duck = new Bird('Donald');
 ```
 
 `duck` 从 `Bird` 构造函数那里继承了它的 `prototype`。 你可以使用 `isPrototypeOf` 方法来验证他们之间的关系：
@@ -47,7 +47,7 @@ function Dog(name) {
   this.name = name;
 }
 
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 
 // Only change code below this line
 ```
@@ -58,6 +58,6 @@ let beagle = new Dog("Snoopy");
 function Dog(name) {
   this.name = name;
 }
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 Dog.prototype.isPrototypeOf(beagle);
 ```

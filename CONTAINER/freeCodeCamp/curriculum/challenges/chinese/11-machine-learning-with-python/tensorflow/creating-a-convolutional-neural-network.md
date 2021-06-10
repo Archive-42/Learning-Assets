@@ -49,4 +49,3 @@ C: `MaxPooling2D`
 ## --video-solution--
 
 3
-

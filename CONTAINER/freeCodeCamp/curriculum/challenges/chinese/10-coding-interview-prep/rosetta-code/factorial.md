@@ -61,9 +61,7 @@ assert.equal(factorial(10), 3628800);
 ## --seed-contents--
 
 ```js
-function factorial(n) {
-
-}
+function factorial(n) {}
 ```
 
 # --solutions--

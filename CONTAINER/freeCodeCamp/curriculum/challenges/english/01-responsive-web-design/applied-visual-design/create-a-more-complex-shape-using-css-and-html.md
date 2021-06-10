@@ -13,7 +13,7 @@ One of the most popular shapes in the world is the heart shape, and in this chal
 
 ```css
 .heart::before {
-  content: "";
+  content: '';
   background-color: yellow;
   border-radius: 25%;
   position: absolute;
@@ -40,9 +40,7 @@ The `background-color` property of the `heart::after` selector should be `pink`.
 
 ```js
 const heartAfter = code.match(/\.heart::after\s*{[\s\S]+?[^\}]}/g)[0];
-assert(
-  /({|;)\s*background-color\s*:\s*pink\s*(;|})/g.test(heartAfter)
-);
+assert(/({|;)\s*background-color\s*:\s*pink\s*(;|})/g.test(heartAfter));
 ```
 
 The `border-radius` of the `heart::after` selector should be 50%.
@@ -83,7 +81,7 @@ assert(code.match(/\.heart::before\s*?{\s*?content\s*?:\s*?("|')\1\s*?;/gi));
   }
   .heart::after {
     background-color: blue;
-    content: "";
+    content: '';
     border-radius: 25%;
     position: absolute;
     width: 50px;
@@ -123,7 +121,7 @@ assert(code.match(/\.heart::before\s*?{\s*?content\s*?:\s*?("|')\1\s*?;/gi));
   }
   .heart::after {
     background-color: pink;
-    content: "";
+    content: '';
     border-radius: 50%;
     position: absolute;
     width: 50px;
@@ -132,7 +130,7 @@ assert(code.match(/\.heart::before\s*?{\s*?content\s*?:\s*?("|')\1\s*?;/gi));
     left: 25px;
   }
   .heart::before {
-    content: "";
+    content: '';
     background-color: pink;
     border-radius: 50%;
     position: absolute;

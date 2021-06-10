@@ -44,7 +44,6 @@ assert.strictEqual(euler419(), 998567458, 1046245404, 43363922);
 
 ```js
 function euler419() {
-
   return true;
 }
 

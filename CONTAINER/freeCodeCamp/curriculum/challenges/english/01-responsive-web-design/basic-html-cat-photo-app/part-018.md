@@ -45,8 +45,8 @@ assert(
 There should be an `h2` element with the text `Cat Lists` above the last `h3` element that is nested in the last `section` element'. You may have accidentally deleted the `h2` element.
 
 ```js
-const secondSectionLastElemNode = document.querySelectorAll('main > section')[1]
-  .lastElementChild;
+const secondSectionLastElemNode =
+  document.querySelectorAll('main > section')[1].lastElementChild;
 assert(
   secondSectionLastElemNode.nodeName === 'H3' &&
     secondSectionLastElemNode.previousElementSibling.innerText
@@ -67,16 +67,22 @@ assert(
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
---fcc-editable-region--
+      --fcc-editable-region--
       <section>
         <h2>Cat Lists</h2>
       </section>
---fcc-editable-region--
+      --fcc-editable-region--
     </main>
   </body>
 </html>
 ```
-

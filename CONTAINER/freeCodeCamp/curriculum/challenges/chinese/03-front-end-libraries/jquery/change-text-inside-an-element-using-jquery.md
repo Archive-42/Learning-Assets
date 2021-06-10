@@ -15,7 +15,7 @@ jQuery 有一个 `.html()` 函数，能用其在标签里添加 HTML 标签和�
 下面是重写并强调标题文本的代码：
 
 ```js
-$("h3").html("<em>jQuery Playground</em>");
+$('h3').html('<em>jQuery Playground</em>');
 ```
 
 jQuery 还有一个类似的函数 `.text()`，可以在不添加标签的前提下改变标签内的文本。 换句话说，这个函数不会评估传递给它的任何 HTML 标记，而是将其视为要替换现有内容的文本。
@@ -66,9 +66,8 @@ assert(code.match(/\$\(\s*?(\"|\')#target4(\"|\')\s*?\)\.html\(/));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
   });
 </script>
 
@@ -101,9 +100,9 @@ assert(code.match(/\$\(\s*?(\"|\')#target4(\"|\')\s*?\)\.html\(/));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target4").html('<em>#target4</em>');
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target4').html('<em>#target4</em>');
   });
 </script>
 

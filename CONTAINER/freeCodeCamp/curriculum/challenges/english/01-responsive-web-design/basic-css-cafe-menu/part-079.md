@@ -133,7 +133,7 @@ h1, h2 {
   display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 18px;  
+  font-size: 18px;
 }
 
 .flavor, .dessert {
@@ -150,4 +150,3 @@ h1, h2 {
 
 --fcc-editable-region--
 ```
-

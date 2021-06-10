@@ -36,7 +36,6 @@ assert(code.match(/#top\s*?{\s*?.*?\s*?transform:\s*?skewY\(-10deg\);/g));
   }
   #top {
     background-color: red;
-
   }
   #bottom {
     background-color: blue;

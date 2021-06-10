@@ -68,7 +68,7 @@ assert(
 `Object.assign` 应该被用于返回一个新状态。
 
 ```js
-(getUserInput) => assert(getUserInput('index').includes('Object.assign'));
+getUserInput => assert(getUserInput('index').includes('Object.assign'));
 ```
 
 # --seed--
@@ -84,10 +84,10 @@ const defaultState = {
 };
 
 const immutableReducer = (state = defaultState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'ONLINE':
       // Don't mutate state here or the tests will fail
-      return
+      return;
     default:
       return state;
   }
@@ -96,7 +96,7 @@ const immutableReducer = (state = defaultState, action) => {
 const wakeUp = () => {
   return {
     type: 'ONLINE'
-  }
+  };
 };
 
 const store = Redux.createStore(immutableReducer);
@@ -113,7 +113,7 @@ const defaultState = {
 };
 
 const immutableReducer = (state = defaultState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'ONLINE':
       return Object.assign({}, state, {
         status: 'online'
@@ -126,7 +126,7 @@ const immutableReducer = (state = defaultState, action) => {
 const wakeUp = () => {
   return {
     type: 'ONLINE'
-  }
+  };
 };
 
 const store = Redux.createStore(immutableReducer);

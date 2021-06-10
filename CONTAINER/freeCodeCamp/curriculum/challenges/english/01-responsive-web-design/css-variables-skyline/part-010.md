@@ -28,7 +28,7 @@ assert(
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -60,7 +60,7 @@ assert(
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>

@@ -13,9 +13,9 @@ ES6 里允许给函数传入<dfn>默认参数</dfn>，来构建更加灵活的�
 请看以下代码：
 
 ```js
-const greeting = (name = "Anonymous") => "Hello " + name;
+const greeting = (name = 'Anonymous') => 'Hello ' + name;
 
-console.log(greeting("John"));
+console.log(greeting('John'));
 console.log(greeting());
 ```
 

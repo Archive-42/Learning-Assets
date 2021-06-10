@@ -72,7 +72,7 @@ assert(currentCountElement.text() === 'Current Count: 0');
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<Counter />, document.getElementById('root'))
+ReactDOM.render(<Counter />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -94,14 +94,20 @@ class Counter extends React.Component {
   render() {
     return (
       <div>
-        <button className='inc' onClick={this.increment}>Increment!</button>
-        <button className='dec' onClick={this.decrement}>Decrement!</button>
-        <button className='reset' onClick={this.reset}>Reset</button>
+        <button className='inc' onClick={this.increment}>
+          Increment!
+        </button>
+        <button className='dec' onClick={this.decrement}>
+          Decrement!
+        </button>
+        <button className='reset' onClick={this.reset}>
+          Reset
+        </button>
         <h1>Current Count: {this.state.count}</h1>
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -113,10 +119,10 @@ class Counter extends React.Component {
     this.state = {
       count: 0
     };
-  this.increment = this.increment.bind(this);
- this.decrement = this.decrement.bind(this);
- this.reset = this.reset.bind(this);
- }
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+    this.reset = this.reset.bind(this);
+  }
   reset() {
     this.setState({
       count: 0
@@ -135,12 +141,18 @@ class Counter extends React.Component {
   render() {
     return (
       <div>
-        <button className='inc' onClick={this.increment}>Increment!</button>
-        <button className='dec' onClick={this.decrement}>Decrement!</button>
-        <button className='reset' onClick={this.reset}>Reset</button>
+        <button className='inc' onClick={this.increment}>
+          Increment!
+        </button>
+        <button className='dec' onClick={this.decrement}>
+          Decrement!
+        </button>
+        <button className='reset' onClick={this.reset}>
+          Reset
+        </button>
         <h1>Current Count: {this.state.count}</h1>
       </div>
     );
   }
-};
+}
 ```

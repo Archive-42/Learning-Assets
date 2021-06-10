@@ -29,7 +29,7 @@ assert(
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -54,7 +54,8 @@ assert(
         overflow: hidden;
       }
 
-      .background-buildings, .foreground-buildings {
+      .background-buildings,
+      .foreground-buildings {
         width: 100%;
         height: 100%;
         display: flex;
@@ -63,7 +64,7 @@ assert(
         position: absolute;
         top: 0;
       }
-      
+
       /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
       .bb1 {
         width: 10%;
@@ -76,11 +77,11 @@ assert(
       .bb1a {
         width: 70%;
       }
-  
+
       .bb1b {
         width: 80%;
       }
-  
+
       .bb1c {
         width: 90%;
       }
@@ -89,17 +90,17 @@ assert(
         width: 100%;
         height: 70%;
         background: linear-gradient(
-            var(--building-color1) 50%,
-            var(--window-color1)
-          );
+          var(--building-color1) 50%,
+          var(--window-color1)
+        );
       }
 
       .bb1-window {
         height: 10%;
         background: linear-gradient(
-            var(--building-color1),
-            var(--window-color1)
-          );
+          var(--building-color1),
+          var(--window-color1)
+        );
       }
 
       .bb2 {
@@ -117,22 +118,22 @@ assert(
         width: 100%;
         height: 100%;
         background: repeating-linear-gradient(
-            var(--building-color2),
-            var(--building-color2) 6%,
-            var(--window-color2) 6%,
-            var(--window-color2) 9%
-          );
+          var(--building-color2),
+          var(--building-color2) 6%,
+          var(--window-color2) 6%,
+          var(--window-color2) 9%
+        );
       }
-      
+
       .bb3 {
         width: 10%;
         height: 55%;
         background: repeating-linear-gradient(
-            90deg,
-            var(--building-color3),
-            var(--building-color3),
-            var(--window-color3) 15%
-          );
+          90deg,
+          var(--building-color3),
+          var(--building-color3),
+          var(--window-color3) 15%
+        );
       }
 
       .bb4 {
@@ -150,7 +151,7 @@ assert(
         width: 80%;
         height: 5%;
       }
-  
+
       .bb4c {
         width: 100%;
         height: 85%;
@@ -174,7 +175,7 @@ assert(
         height: 35%;
         background-color: var(--building-color1);
       }
-  
+
       .fb4 {
         width: 8%;
         height: 45%;
@@ -182,7 +183,7 @@ assert(
         position: relative;
         left: 10%;
       }
-      
+
       .fb5 {
         width: 10%;
         height: 33%;
@@ -245,7 +246,7 @@ assert(
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -270,7 +271,8 @@ assert(
         overflow: hidden;
       }
 
-      .background-buildings, .foreground-buildings {
+      .background-buildings,
+      .foreground-buildings {
         width: 100%;
         height: 100%;
         display: flex;
@@ -279,7 +281,7 @@ assert(
         position: absolute;
         top: 0;
       }
-      
+
       /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
       .bb1 {
         width: 10%;
@@ -292,11 +294,11 @@ assert(
       .bb1a {
         width: 70%;
       }
-  
+
       .bb1b {
         width: 80%;
       }
-  
+
       .bb1c {
         width: 90%;
       }
@@ -305,17 +307,17 @@ assert(
         width: 100%;
         height: 70%;
         background: linear-gradient(
-            var(--building-color1) 50%,
-            var(--window-color1)
-          );
+          var(--building-color1) 50%,
+          var(--window-color1)
+        );
       }
 
       .bb1-window {
         height: 10%;
         background: linear-gradient(
-            var(--building-color1),
-            var(--window-color1)
-          );
+          var(--building-color1),
+          var(--window-color1)
+        );
       }
 
       .bb2 {
@@ -333,22 +335,22 @@ assert(
         width: 100%;
         height: 100%;
         background: repeating-linear-gradient(
-            var(--building-color2),
-            var(--building-color2) 6%,
-            var(--window-color2) 6%,
-            var(--window-color2) 9%
-          );
+          var(--building-color2),
+          var(--building-color2) 6%,
+          var(--window-color2) 6%,
+          var(--window-color2) 9%
+        );
       }
-      
+
       .bb3 {
         width: 10%;
         height: 55%;
         background: repeating-linear-gradient(
-            90deg,
-            var(--building-color3),
-            var(--building-color3),
-            var(--window-color3) 15%
-          );
+          90deg,
+          var(--building-color3),
+          var(--building-color3),
+          var(--window-color3) 15%
+        );
       }
 
       .bb4 {
@@ -367,7 +369,7 @@ assert(
         height: 5%;
         background-color: var(--building-color4);
       }
-  
+
       .bb4c {
         width: 100%;
         height: 85%;
@@ -392,7 +394,7 @@ assert(
         height: 35%;
         background-color: var(--building-color1);
       }
-  
+
       .fb4 {
         width: 8%;
         height: 45%;
@@ -400,7 +402,7 @@ assert(
         position: relative;
         left: 10%;
       }
-      
+
       .fb5 {
         width: 10%;
         height: 33%;

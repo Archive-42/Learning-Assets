@@ -47,7 +47,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
+ReactDOM.render(<MyComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -59,13 +59,12 @@ class MyComponent extends React.Component {
   }
   componentWillMount() {
     // Change code below this line
-
     // Change code above this line
   }
   render() {
-    return <div />
+    return <div />;
   }
-};
+}
 ```
 
 # --solutions--
@@ -81,7 +80,7 @@ class MyComponent extends React.Component {
     // Change code above this line
   }
   render() {
-    return <div />
+    return <div />;
   }
-};
+}
 ```

@@ -8,7 +8,7 @@ dashedName: identity-matrix
 
 # --description--
 
-An *identity matrix* is a square matrix of size \\( n \\times n \\), where the diagonal elements are all `1`s (ones), and all the other elements are all `0`s (zeroes).
+An _identity matrix_ is a square matrix of size \\( n \\times n \\), where the diagonal elements are all `1`s (ones), and all the other elements are all `0`s (zeroes).
 
 <ul>
   <li style='list-style: none;'>\(\displaystyle I_{n}=\begin{bmatrix} 1 &#x26; 0 &#x26; 0 \cr 0 &#x26; 1 &#x26; 0 \cr 0 &#x26; 0 &#x26; 1 \cr \end{bmatrix}\)</li>
@@ -61,28 +61,40 @@ assert.deepEqual(idMatrix(4), results[3]);
 ## --after-user-code--
 
 ```js
-let results=[[ [ 1 ] ],
-[ [ 1, 0 ], [ 0, 1 ] ],
-[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ],
-[ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 0, 0, 1 ] ]]
+let results = [
+  [[1]],
+  [
+    [1, 0],
+    [0, 1]
+  ],
+  [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1]
+  ],
+  [
+    [1, 0, 0, 0],
+    [0, 1, 0, 0],
+    [0, 0, 1, 0],
+    [0, 0, 0, 1]
+  ]
+];
 ```
 
 ## --seed-contents--
 
 ```js
-function idMatrix(n) {
-
-}
+function idMatrix(n) {}
 ```
 
 # --solutions--
 
 ```js
 function idMatrix(n) {
-    return Array.apply(null, new Array(n)).map(function (x, i, xs) {
-        return xs.map(function (_, k) {
-            return i === k ? 1 : 0;
-        })
+  return Array.apply(null, new Array(n)).map(function (x, i, xs) {
+    return xs.map(function (_, k) {
+      return i === k ? 1 : 0;
     });
+  });
 }
 ```

@@ -15,9 +15,12 @@ The simplest way to make your images properly appear on High-Resolution Displays
 
 ```html
 <style>
-  img { height: 250px; width: 250px; }
+  img {
+    height: 250px;
+    width: 250px;
+  }
 </style>
-<img src="coolPic500x500" alt="A most excellent picture">
+<img src="coolPic500x500" alt="A most excellent picture" />
 ```
 
 # --instructions--
@@ -43,22 +46,26 @@ assert(document.querySelector('img').height === 100);
 ## --seed-contents--
 
 ```html
-<style>
+<style></style>
 
-</style>
-
-<img src="https://s3.amazonaws.com/freecodecamp/FCCStickers-CamperBot200x200.jpg" alt="freeCodeCamp sticker that says 'Because CamperBot Cares'">
+<img
+  src="https://s3.amazonaws.com/freecodecamp/FCCStickers-CamperBot200x200.jpg"
+  alt="freeCodeCamp sticker that says 'Because CamperBot Cares'"
+/>
 ```
 
 # --solutions--
 
 ```html
 <style>
-  img { 
-    height: 100px; 
-    width: 100px; 
+  img {
+    height: 100px;
+    width: 100px;
   }
 </style>
 
-<img src="https://s3.amazonaws.com/freecodecamp/FCCStickers-CamperBot200x200.jpg" alt="freeCodeCamp sticker that says 'Because CamperBot Cares'">
+<img
+  src="https://s3.amazonaws.com/freecodecamp/FCCStickers-CamperBot200x200.jpg"
+  alt="freeCodeCamp sticker that says 'Because CamperBot Cares'"
+/>
 ```

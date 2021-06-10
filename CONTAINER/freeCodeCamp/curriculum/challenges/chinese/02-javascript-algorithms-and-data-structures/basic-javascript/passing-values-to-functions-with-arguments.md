@@ -70,19 +70,19 @@ assert(
 ## --before-user-code--
 
 ```js
-var logOutput = "";
-var originalConsole = console
+var logOutput = '';
+var originalConsole = console;
 function capture() {
-    var nativeLog = console.log;
-    console.log = function (message) {
-        if(message) logOutput = JSON.stringify(message).trim();
-        if(nativeLog.apply) {
-          nativeLog.apply(originalConsole, arguments);
-        } else {
-          var nativeMsg = Array.prototype.slice.apply(arguments).join(' ');
-          nativeLog(nativeMsg);
-        }
-    };
+  var nativeLog = console.log;
+  console.log = function (message) {
+    if (message) logOutput = JSON.stringify(message).trim();
+    if (nativeLog.apply) {
+      nativeLog.apply(originalConsole, arguments);
+    } else {
+      var nativeMsg = Array.prototype.slice.apply(arguments).join(' ');
+      nativeLog(nativeMsg);
+    }
+  };
 }
 
 function uncapture() {
@@ -97,10 +97,14 @@ capture();
 ```js
 uncapture();
 
-if (typeof functionWithArgs !== "function") { 
-  (function() { return "functionWithArgs is not defined"; })();
+if (typeof functionWithArgs !== 'function') {
+  (function () {
+    return 'functionWithArgs is not defined';
+  })();
 } else {
-  (function() { return logOutput || "console.log never called"; })();
+  (function () {
+    return logOutput || 'console.log never called';
+  })();
 }
 ```
 

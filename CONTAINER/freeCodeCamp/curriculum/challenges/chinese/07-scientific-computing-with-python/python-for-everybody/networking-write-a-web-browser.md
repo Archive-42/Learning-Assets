@@ -47,4 +47,3 @@ A simple web browser.
 ## --video-solution--
 
 4
-

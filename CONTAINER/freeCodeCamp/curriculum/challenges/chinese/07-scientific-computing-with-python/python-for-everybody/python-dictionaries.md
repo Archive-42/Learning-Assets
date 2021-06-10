@@ -52,4 +52,3 @@ dict["Sun"] = 9
 ## --video-solution--
 
 5
-

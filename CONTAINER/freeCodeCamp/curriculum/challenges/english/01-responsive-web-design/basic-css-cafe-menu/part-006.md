@@ -29,10 +29,10 @@ Test 1
     <title>Camper Cafe Menu</title>
   </head>
   <body>
---fcc-editable-region--
+    --fcc-editable-region--
     <h1>CAMPER CAFE</h1>
---fcc-editable-region--
+    --fcc-editable-region--
   </body>
-<html>
+  <html></html>
+</html>
 ```
-

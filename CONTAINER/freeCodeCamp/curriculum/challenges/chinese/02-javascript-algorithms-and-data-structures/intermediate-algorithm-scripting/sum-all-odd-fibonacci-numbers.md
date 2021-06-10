@@ -75,7 +75,7 @@ function sumFibs(num) {
     if (a % 2 !== 0) {
       s += a;
     }
-    a = [b, b=b+a][0];
+    a = [b, (b = b + a)][0];
   }
   return s;
 }

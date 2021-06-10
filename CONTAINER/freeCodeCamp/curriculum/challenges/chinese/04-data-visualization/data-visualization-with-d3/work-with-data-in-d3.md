@@ -22,12 +22,13 @@ D3 是数据驱动的库。 可以使用 D3 的方法将数组形式的数据显
 <body>
   <ul></ul>
   <script>
-    const dataset = ["a", "b", "c"];
-    d3.select("ul").selectAll("li")
+    const dataset = ['a', 'b', 'c'];
+    d3.select('ul')
+      .selectAll('li')
       .data(dataset)
       .enter()
-      .append("li")
-      .text("New item");
+      .append('li')
+      .text('New item');
   </script>
 </body>
 ```
@@ -79,8 +80,6 @@ assert(code.match(/\.enter/g));
 
     // Add your code below this line
 
-
-
     // Add your code above this line
   </script>
 </body>
@@ -93,13 +92,12 @@ assert(code.match(/\.enter/g));
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body")
-      .selectAll("h2")
+    d3.select('body')
+      .selectAll('h2')
       .data(dataset)
       .enter()
-      .append("h2")
-      .text("New Title")
-
+      .append('h2')
+      .text('New Title');
   </script>
 </body>
 ```

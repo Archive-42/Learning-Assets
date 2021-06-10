@@ -30,7 +30,7 @@ Test 1
     <title>Camper Cafe Menu</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
---fcc-editable-region--
+  --fcc-editable-region--
   <body>
     <header>
       <h1>CAMPER CAFE</h1>
@@ -42,8 +42,9 @@ Test 1
       </section>
     </main>
   </body>
---fcc-editable-region--
-<html>
+  --fcc-editable-region--
+  <html></html>
+</html>
 ```
 
 ```css
@@ -51,8 +52,9 @@ body {
   background-color: burlywood;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 ```
-

@@ -8,7 +8,7 @@ dashedName: sum-multiples-of-3-and-5
 
 # --description--
 
-The objective is to write a function that finds the sum of all positive multiples of 3 or 5 below *n*.
+The objective is to write a function that finds the sum of all positive multiples of 3 or 5 below _n_.
 
 # --hints--
 
@@ -59,9 +59,7 @@ assert.equal(sumMults(100000), 2333316668);
 ## --seed-contents--
 
 ```js
-function sumMults(n) {
-
-}
+function sumMults(n) {}
 ```
 
 # --solutions--

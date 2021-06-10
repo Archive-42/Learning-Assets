@@ -31,12 +31,12 @@ dashedName: run-functional-tests-using-a-headless-browser-ii
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -45,12 +45,12 @@ dashedName: run-functional-tests-using-a-headless-browser-ii
 应断言无头浏览器成功执行请求。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'browser.success');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -59,14 +59,14 @@ dashedName: run-functional-tests-using-a-headless-browser-ii
 应断言元素 “span#surname” 中的文本为 “Vespucci”。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'browser.text');
       assert.match(data.assertions[1].args[0], /('|")span#name\1/);
       assert.match(data.assertions[1].args[1], /('|")Amerigo\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -75,14 +75,14 @@ dashedName: run-functional-tests-using-a-headless-browser-ii
 应断言元素 “span#surname” 中的文本为 “Vespucci”。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'browser.text');
       assert.match(data.assertions[2].args[0], /('|")span#surname\1/);
       assert.match(data.assertions[2].args[1], /('|")Vespucci\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -91,14 +91,14 @@ dashedName: run-functional-tests-using-a-headless-browser-ii
 应该断言元素 “span#dates” 存在，且它的值为 1。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[3].method, 'browser.element');
       assert.match(data.assertions[3].args[0], /('|")span#dates\1/);
       assert.equal(data.assertions[3].args[1], 1);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

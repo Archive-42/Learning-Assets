@@ -12,12 +12,12 @@ dashedName: iterate-over-all-properties
 
 ```js
 function Bird(name) {
-  this.name = name;  //own property
+  this.name = name; //own property
 }
 
 Bird.prototype.numLegs = 2; // prototype property
 
-let duck = new Bird("Donald");
+let duck = new Bird('Donald');
 ```
 
 这个示例会告诉你如何将 `duck` 的自身属性和 `prototype` 属性分别添加到 `ownProps` 数组和 `prototypeProps` 数组里面：
@@ -27,7 +27,7 @@ let ownProps = [];
 let prototypeProps = [];
 
 for (let property in duck) {
-  if(duck.hasOwnProperty(property)) {
+  if (duck.hasOwnProperty(property)) {
     ownProps.push(property);
   } else {
     prototypeProps.push(property);
@@ -75,7 +75,7 @@ function Dog(name) {
 
 Dog.prototype.numLegs = 4;
 
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 
 let ownProps = [];
 let prototypeProps = [];
@@ -92,7 +92,7 @@ function Dog(name) {
 
 Dog.prototype.numLegs = 4;
 
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 
 let ownProps = [];
 let prototypeProps = [];

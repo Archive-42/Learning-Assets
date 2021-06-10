@@ -4,8 +4,7 @@ title: 使用 jQuery 从元素中移除 class
 challengeType: 6
 forumTopicId: 18264
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: remove-classes-from-an-element-with-jquery
 ---
 
@@ -16,7 +15,7 @@ dashedName: remove-classes-from-an-element-with-jquery
 下面是为指定按钮执行上面的操作的代码：
 
 ```js
-$("#target2").removeClass("btn-default");
+$('#target2').removeClass('btn-default');
 ```
 
 请把所有 `button` 元素的 `btn-default` class 移除。
@@ -51,11 +50,10 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
   });
 </script>
 
@@ -88,11 +86,11 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-    $("button").removeClass("btn-default");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
+    $('button').removeClass('btn-default');
   });
 </script>
 

@@ -31,7 +31,7 @@ You should have three `li` elements with the text `cat nip`, `laser pointers` an
 ```js
 assert.deepStrictEqual(
   [...document.querySelectorAll('li')]
-    .map((item) => item.innerText.toLowerCase())
+    .map(item => item.innerText.toLowerCase())
     .sort((a, b) => a.localeCompare(b)),
   ['cat nip', 'lasagna', 'laser pointers']
 );
@@ -42,7 +42,7 @@ The three `li` elements should be located between the `ul` element's opening and
 ```js
 assert(
   [...document.querySelectorAll('li')].filter(
-    (item) => item.parentNode.nodeName === 'UL'
+    item => item.parentNode.nodeName === 'UL'
   ).length === 3
 );
 ```
@@ -59,19 +59,24 @@ assert(
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
       <section>
         <h2>Cat Lists</h2>
         <h3>Things cats love:</h3>
---fcc-editable-region--
-        <ul>
-        </ul>
---fcc-editable-region--
+        --fcc-editable-region--
+        <ul></ul>
+        --fcc-editable-region--
       </section>
     </main>
   </body>
 </html>
 ```
-

@@ -40,40 +40,50 @@ Test 1
         <section>
           <h2>Coffees</h2>
           <article class="item">
-            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+            <p class="flavor">French Vanilla</p>
+            <p class="price">3.00</p>
           </article>
           <article class="item">
-            <p class="flavor">Carmel Macchiato</p><p class="price">3.75</p>
+            <p class="flavor">Carmel Macchiato</p>
+            <p class="price">3.75</p>
           </article>
           <article class="item">
-            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+            <p class="flavor">Pumpkin Spice</p>
+            <p class="price">3.50</p>
           </article>
           <article class="item">
-            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+            <p class="flavor">Hazelnut</p>
+            <p class="price">4.00</p>
           </article>
           <article class="item">
-            <p class="flavor">Mocha</p><p class="price">4.50</p>
+            <p class="flavor">Mocha</p>
+            <p class="price">4.50</p>
           </article>
         </section>
         <section>
           <h2>Desserts</h2>
           <article class="item">
-            <p class="dessert">Donut</p><p class="price">1.50</p>
+            <p class="dessert">Donut</p>
+            <p class="price">1.50</p>
           </article>
           <article class="item">
-            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+            <p class="dessert">Cherry Pie</p>
+            <p class="price">2.75</p>
           </article>
           <article class="item">
-            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+            <p class="dessert">Cheesecake</p>
+            <p class="price">3.00</p>
           </article>
           <article class="item">
-            <p class="dessert">Cinammon Roll</p><p class="price">2.50</p>
+            <p class="dessert">Cinammon Roll</p>
+            <p class="price">2.50</p>
           </article>
         </section>
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -81,12 +91,13 @@ body {
   background-image: url(https://tinyurl.com/coffee-beans-fcc);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 
---fcc-editable-region--
-.menu {
+--fcc-editable-region-- .menu {
   width: 80%;
   background-color: burlywood;
   margin-left: auto;
@@ -96,20 +107,18 @@ h1, h2, p {
   padding-top: 20px;
   padding-bottom: 20px;
 }
---fcc-editable-region--
-
-.item p {
+--fcc-editable-region-- .item p {
   display: inline-block;
 }
 
-.flavor, .dessert {
+.flavor,
+.dessert {
   text-align: left;
   width: 75%;
 }
 
 .price {
   text-align: right;
-  width: 25%
+  width: 25%;
 }
 ```
-

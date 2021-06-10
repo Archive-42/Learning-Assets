@@ -49,8 +49,6 @@ assert($('h2').css('top') == '15px');
 ```html
 <style>
   h2 {
-
-
   }
 </style>
 <body>

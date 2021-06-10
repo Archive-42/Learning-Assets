@@ -16,10 +16,10 @@ dashedName: comparison-with-the-greater-than-or-equal-to-operator
 **例如：**
 
 ```js
-6   >=  6
-7   >= '3'
-2   >=  3
-'7' >=  9
+6 >= 6;
+7 >= '3';
+2 >= 3;
+'7' >= 9;
 ```
 
 按顺序，这些表达式会返回 `true`、`true`、`false` 和 `false`。
@@ -84,15 +84,17 @@ assert(code.match(/val\s*>=\s*('|")*\d+('|")*/g).length > 1);
 
 ```js
 function testGreaterOrEqual(val) {
-  if (val) {  // Change this line
-    return "20 or Over";
+  if (val) {
+    // Change this line
+    return '20 or Over';
   }
 
-  if (val) {  // Change this line
-    return "10 or Over";
+  if (val) {
+    // Change this line
+    return '10 or Over';
   }
 
-  return "Less than 10";
+  return 'Less than 10';
 }
 
 testGreaterOrEqual(10);
@@ -102,14 +104,16 @@ testGreaterOrEqual(10);
 
 ```js
 function testGreaterOrEqual(val) {
-  if (val >= 20) {  // Change this line
-    return "20 or Over";
+  if (val >= 20) {
+    // Change this line
+    return '20 or Over';
   }
 
-  if (val >= 10) {  // Change this line
-    return "10 or Over";
+  if (val >= 10) {
+    // Change this line
+    return '10 or Over';
   }
 
-  return "Less than 10";
+  return 'Less than 10';
 }
 ```

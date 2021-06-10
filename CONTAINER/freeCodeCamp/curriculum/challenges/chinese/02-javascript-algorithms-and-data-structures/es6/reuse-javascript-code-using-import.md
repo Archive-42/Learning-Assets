@@ -53,11 +53,10 @@ assert(
 ## --seed-contents--
 
 ```js
-
 // Only change code above this line
 
-uppercaseString("hello");
-lowercaseString("WORLD!");
+uppercaseString('hello');
+lowercaseString('WORLD!');
 ```
 
 # --solutions--
@@ -65,6 +64,6 @@ lowercaseString("WORLD!");
 ```js
 import { uppercaseString, lowercaseString } from './string_functions.js';
 
-uppercaseString("hello");
-lowercaseString("WORLD!");
+uppercaseString('hello');
+lowercaseString('WORLD!');
 ```

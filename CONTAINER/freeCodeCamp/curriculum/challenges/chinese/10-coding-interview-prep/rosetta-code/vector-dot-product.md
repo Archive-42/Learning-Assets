@@ -55,7 +55,7 @@ assert.equal(dotProduct([3, 2, 1], [2, 4, 2], [5, 3, 1]), null);
 `dotProduct([ 0, 3, 6, 9, 12 ], [ 0, 4, 8, 12, 16 ])` should return `360`.
 
 ```js
-assert.equal(dotProduct([ 0, 3, 6, 9, 12 ], [ 0, 4, 8, 12, 16 ]), 360);
+assert.equal(dotProduct([0, 3, 6, 9, 12], [0, 4, 8, 12, 16]), 360);
 ```
 
 # --seed--
@@ -63,16 +63,19 @@ assert.equal(dotProduct([ 0, 3, 6, 9, 12 ], [ 0, 4, 8, 12, 16 ]), 360);
 ## --seed-contents--
 
 ```js
-function dotProduct(...vectors) {
-
-}
+function dotProduct(...vectors) {}
 ```
 
 # --solutions--
 
 ```js
 function dotProduct(...vectors) {
-  if (!vectors || !vectors.length || vectors.length > 2 || vectors[0].length !== vectors[1].length) {
+  if (
+    !vectors ||
+    !vectors.length ||
+    vectors.length > 2 ||
+    vectors[0].length !== vectors[1].length
+  ) {
     return null;
   }
   const vectorLen = vectors[0].length;

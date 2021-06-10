@@ -18,7 +18,7 @@ There are other ways that you can override CSS. Do you remember inline styles?
 Use an inline style to try to make our `h1` element white. Remember, inline styles look like this:
 
 ```html
-<h1 style="color: green;">
+<h1 style="color: green;"></h1>
 ```
 
 Leave the `blue-text` and `pink-text` classes on your `h1` element.
@@ -98,5 +98,7 @@ assert($('h1').css('color') === 'rgb(255, 255, 255)');
     color: blue;
   }
 </style>
-<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">
+  Hello World!
+</h1>
 ```

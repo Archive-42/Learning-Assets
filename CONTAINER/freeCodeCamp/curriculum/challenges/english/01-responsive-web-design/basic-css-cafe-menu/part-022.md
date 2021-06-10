@@ -43,7 +43,8 @@ Test 1
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -57,4 +58,3 @@ h1, h2, p {
 }
 --fcc-editable-region--
 ```
-

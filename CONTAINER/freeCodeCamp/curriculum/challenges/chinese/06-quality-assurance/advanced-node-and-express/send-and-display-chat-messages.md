@@ -11,7 +11,7 @@ dashedName: send-and-display-chat-messages
 是时候开始允许用户向服务器发送聊天消息，以向所有客户端发送消息了！ 在 `client.js` 文件里，你应该已经注意到了这段提交消息表单的代码：
 
 ```js
-$('form').submit(function() {
+$('form').submit(function () {
   /*logic*/
 });
 ```
@@ -35,16 +35,16 @@ socket.emit('chat message', messageToSend);
 服务端应监听 `'chat message'`，且应在监听到后发送它。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.on.*('|")chat message('|")[^]*io.emit.*('|")chat message('|").*name.*message/gis,
         'Your server should listen to the socket for "chat message" then emit to all users "chat message" with name and message in the data object'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -53,16 +53,16 @@ socket.emit('chat message', messageToSend);
 客户端应正确处理和展示从 `'chat message'` 事件发来的新数据。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/client.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.on.*('|")chat message('|")[^]*messages.*li/gis,
         'You should append a list item to #messages on your client within the "chat message" event listener to display the new message'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

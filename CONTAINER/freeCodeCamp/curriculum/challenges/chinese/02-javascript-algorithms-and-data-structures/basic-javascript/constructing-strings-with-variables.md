@@ -14,8 +14,8 @@ dashedName: constructing-strings-with-variables
 例如：
 
 ```js
-var ourName = "freeCodeCamp";
-var ourStr = "Hello, our name is " + ourName + ", how are you?";
+var ourName = 'freeCodeCamp';
+var ourStr = 'Hello, our name is ' + ourName + ', how are you?';
 ```
 
 `ourStr` 值为 `Hello, our name is freeCodeCamp, how are you?`
@@ -43,14 +43,14 @@ assert(code.match(/["']\s*\+\s*myName\s*\+\s*["']/g).length > 0);
 ## --after-user-code--
 
 ```js
-(function(){
+(function () {
   var output = [];
-  if(typeof myName === 'string') {
+  if (typeof myName === 'string') {
     output.push('myName = "' + myName + '"');
   } else {
     output.push('myName is not a string');
   }
-  if(typeof myStr === 'string') {
+  if (typeof myStr === 'string') {
     output.push('myStr = "' + myStr + '"');
   } else {
     output.push('myStr is not a string');
@@ -70,6 +70,6 @@ var myStr;
 # --solutions--
 
 ```js
-var myName = "Bob";
-var myStr = "My name is " + myName + " and I am well!";
+var myName = 'Bob';
+var myStr = 'My name is ' + myName + ' and I am well!';
 ```

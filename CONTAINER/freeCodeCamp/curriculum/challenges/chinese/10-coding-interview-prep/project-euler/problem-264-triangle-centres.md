@@ -40,7 +40,6 @@ assert.strictEqual(euler264(), 2816417.1055);
 
 ```js
 function euler264() {
-
   return true;
 }
 

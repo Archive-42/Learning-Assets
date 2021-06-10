@@ -21,12 +21,12 @@ dashedName: test-if-a-string-contains-a-substring
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ dashedName: test-if-a-string-contains-a-substring
 应该为第一个断言选择正确的方法：`include` 或 `notInclude`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'include',
         "'Arrow' contains 'row'..."
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ dashedName: test-if-a-string-contains-a-substring
 应该为第二个断言选择正确的方法：`include` 或 `notInclude`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'notInclude',
         "... a 'dart' doesn't contain a 'queue'"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

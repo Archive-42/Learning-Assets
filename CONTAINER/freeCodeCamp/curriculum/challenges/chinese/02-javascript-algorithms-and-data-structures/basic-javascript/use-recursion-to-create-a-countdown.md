@@ -58,17 +58,13 @@ assert.deepStrictEqual(countdown(5), [5, 4, 3, 2, 1]);
 代码不能包含任意形式的循环（`for`、`while` 或者高阶函数如：`forEach`、`map`、`filter` 以及 `reduce`）。
 
 ```js
-assert(
-  !code.match(/for|while|forEach|map|filter|reduce/g)
-);
+assert(!code.match(/for|while|forEach|map|filter|reduce/g));
 ```
 
 应该用递归解决这个问题。
 
 ```js
-assert(
-  countdown.toString().match(/countdown\s*\(.+\)/)
-);
+assert(countdown.toString().match(/countdown\s*\(.+\)/));
 ```
 
 # --seed--
@@ -77,7 +73,7 @@ assert(
 
 ```js
 // Only change code below this line
-function countdown(n){
+function countdown(n) {
   return;
 }
 // Only change code above this line
@@ -86,7 +82,7 @@ function countdown(n){
 # --solutions--
 
 ```js
-function countdown(n){
-   return n < 1 ? [] : [n].concat(countdown(n - 1));
+function countdown(n) {
+  return n < 1 ? [] : [n].concat(countdown(n - 1));
 }
 ```

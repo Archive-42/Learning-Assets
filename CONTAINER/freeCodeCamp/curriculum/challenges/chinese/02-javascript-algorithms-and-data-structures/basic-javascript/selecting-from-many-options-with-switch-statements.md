@@ -14,12 +14,12 @@ dashedName: selecting-from-many-options-with-switch-statements
 这是 `switch` 语句的示例：
 
 ```js
-switch(lowercaseLetter) {
-  case "a":
-    console.log("A");
+switch (lowercaseLetter) {
+  case 'a':
+    console.log('A');
     break;
-  case "b":
-    console.log("B");
+  case 'b':
+    console.log('B');
     break;
 }
 ```
@@ -78,10 +78,8 @@ assert(code.match(/break/g).length > 2);
 
 ```js
 function caseInSwitch(val) {
-  var answer = "";
+  var answer = '';
   // Only change code below this line
-
-
 
   // Only change code above this line
   return answer;
@@ -94,20 +92,20 @@ caseInSwitch(1);
 
 ```js
 function caseInSwitch(val) {
-  var answer = "";
+  var answer = '';
 
-  switch(val) {
+  switch (val) {
     case 1:
-      answer = "alpha";
+      answer = 'alpha';
       break;
     case 2:
-      answer = "beta";
+      answer = 'beta';
       break;
     case 3:
-      answer = "gamma";
+      answer = 'gamma';
       break;
     case 4:
-      answer = "delta";
+      answer = 'delta';
   }
   return answer;
 }

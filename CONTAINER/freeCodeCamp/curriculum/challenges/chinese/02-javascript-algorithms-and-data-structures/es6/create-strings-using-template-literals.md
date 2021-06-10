@@ -16,7 +16,7 @@ dashedName: create-strings-using-template-literals
 
 ```js
 const person = {
-  name: "Zodiac Hasbro",
+  name: 'Zodiac Hasbro',
   age: 56
 };
 
@@ -41,7 +41,7 @@ console.log(greeting);
   '<li class="text-warning">no-var</li>',
   '<li class="text-warning">var-on-top</li>',
   '<li class="text-warning">linebreak</li>'
-]
+];
 ```
 
 # --hints--
@@ -69,13 +69,13 @@ assert(
 应使用模板字符串和表达式内插。
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/(`.*\${.*}.*`)/));
+getUserInput => assert(getUserInput('index').match(/(`.*\${.*}.*`)/));
 ```
 
 应该使用遍历。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(getUserInput('index').match(/for|map|reduce|forEach|while/));
 ```
 
@@ -85,9 +85,9 @@ assert(
 
 ```js
 const result = {
-  success: ["max-length", "no-amd", "prefer-arrow-functions"],
-  failure: ["no-var", "var-on-top", "linebreak"],
-  skipped: ["no-extra-semi", "no-dup-keys"]
+  success: ['max-length', 'no-amd', 'prefer-arrow-functions'],
+  failure: ['no-var', 'var-on-top', 'linebreak'],
+  skipped: ['no-extra-semi', 'no-dup-keys']
 };
 function makeList(arr) {
   // Only change code below this line
@@ -104,9 +104,9 @@ const failuresList = makeList(result.failure);
 
 ```js
 const result = {
-  success: ["max-length", "no-amd", "prefer-arrow-functions"],
-  failure: ["no-var", "var-on-top", "linebreak"],
-  skipped: ["no-extra-semi", "no-dup-keys"]
+  success: ['max-length', 'no-amd', 'prefer-arrow-functions'],
+  failure: ['no-var', 'var-on-top', 'linebreak'],
+  skipped: ['no-extra-semi', 'no-dup-keys']
 };
 function makeList(arr) {
   return arr.map(val => `<li class="text-warning">${val}</li>`);

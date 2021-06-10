@@ -44,11 +44,7 @@ assert(
     height: 40px;
     margin: 50 auto;
     position: fixed;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     border-radius: 50%;
   }
   #ball1 {
@@ -56,14 +52,11 @@ assert(
   }
   #ball2 {
     left: 65%;
-
   }
-
-
 </style>
 
-<div class="ball" id= "ball1"></div>
-<div class="ball" id= "ball2"></div>
+<div class="ball" id="ball1"></div>
+<div class="ball" id="ball2"></div>
 ```
 
 # --solutions--
@@ -75,11 +68,7 @@ assert(
     height: 40px;
     margin: 50 auto;
     position: fixed;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     border-radius: 50%;
   }
   #ball1 {
@@ -90,6 +79,6 @@ assert(
     transform: scale(1.5);
   }
 </style>
-<div class="ball" id= "ball1"></div>
-<div class="ball" id= "ball2"></div>
+<div class="ball" id="ball1"></div>
+<div class="ball" id="ball2"></div>
 ```

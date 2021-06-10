@@ -90,7 +90,7 @@ const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 
 const counterReducer = (state = 0, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case INCREMENT:
       return state + 1;
     case DECREMENT:
@@ -103,13 +103,13 @@ const counterReducer = (state = 0, action) => {
 const incAction = () => {
   return {
     type: INCREMENT
-  }
+  };
 };
 
 const decAction = () => {
   return {
     type: DECREMENT
-  }
+  };
 };
 
 const store = Redux.createStore(counterReducer);

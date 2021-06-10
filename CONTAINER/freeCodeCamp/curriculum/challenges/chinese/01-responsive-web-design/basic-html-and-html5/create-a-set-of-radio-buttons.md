@@ -19,23 +19,21 @@ dashedName: create-a-set-of-radio-buttons
 下面是一个单选按钮的例子：
 
 ```html
-<label> 
-  <input type="radio" name="indoor-outdoor">Indoor 
-</label>
+<label> <input type="radio" name="indoor-outdoor" />Indoor </label>
 ```
 
 最佳实践是在 `label` 元素上设置 `for` 属性，让其值与相关联的 `input` 单选按钮的 `id` 属性值相同。 这使得辅助技术能够在标签和相关的 `input` 元素之间建立关联关系。 例如：
 
 ```html
-<input id="indoor" type="radio" name="indoor-outdoor">
+<input id="indoor" type="radio" name="indoor-outdoor" />
 <label for="indoor">Indoor</label>
 ```
 
 我们也可以在 `label` 标签中嵌入 `input` 元素：
 
 ```html
-<label for="indoor"> 
-  <input id="indoor" type="radio" name="indoor-outdoor">Indoor 
+<label for="indoor">
+  <input id="indoor" type="radio" name="indoor-outdoor" />Indoor
 </label>
 ```
 
@@ -108,7 +106,11 @@ assert($('label').parent().get(0).tagName.match('FORM'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -123,7 +125,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
     <li>other cats</li>
   </ol>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <input type="text" placeholder="cat photo URL" required>
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -136,7 +138,11 @@ assert($('label').parent().get(0).tagName.match('FORM'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -151,9 +157,13 @@ assert($('label').parent().get(0).tagName.match('FORM'));
     <li>other cats</li>
   </ol>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-   <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
-    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label for="indoor"
+      ><input id="indoor" type="radio" name="indoor-outdoor" /> Indoor</label
+    >
+    <label for="outdoor"
+      ><input id="outdoor" type="radio" name="indoor-outdoor" /> Outdoor</label
+    ><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

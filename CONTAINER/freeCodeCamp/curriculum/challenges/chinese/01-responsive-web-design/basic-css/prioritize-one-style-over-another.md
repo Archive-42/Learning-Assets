@@ -13,7 +13,7 @@ dashedName: prioritize-one-style-over-another
 
 就像 `h1` 元素不能同时设置绿色和粉色两种颜色。
 
-让我们尝试创建一个字体颜色为粉色的 class，并应用于其中一个元素中。 猜一猜，它会 *覆盖* `body` 元素的 `color: green;` CSS 规则吗？
+让我们尝试创建一个字体颜色为粉色的 class，并应用于其中一个元素中。 猜一猜，它会 _覆盖_ `body` 元素的 `color: green;` CSS 规则吗？
 
 # --instructions--
 

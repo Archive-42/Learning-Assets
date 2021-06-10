@@ -36,46 +36,56 @@ Test 1
         <h1>CAMPER CAFE</h1>
         <p class="established">Est. 2020</p>
       </header>
---fcc-editable-region--
+      --fcc-editable-region--
       <main>
         <section>
           <h2>Coffees</h2>
           <article class="item">
-            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+            <p class="flavor">French Vanilla</p>
+            <p class="price">3.00</p>
           </article>
           <article class="item">
-            <p class="flavor">Carmel Macchiato</p><p class="price">3.75</p>
+            <p class="flavor">Carmel Macchiato</p>
+            <p class="price">3.75</p>
           </article>
           <article class="item">
-            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+            <p class="flavor">Pumpkin Spice</p>
+            <p class="price">3.50</p>
           </article>
           <article class="item">
-            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+            <p class="flavor">Hazelnut</p>
+            <p class="price">4.00</p>
           </article>
           <article class="item">
-            <p class="flavor">Mocha</p><p class="price">4.50</p>
+            <p class="flavor">Mocha</p>
+            <p class="price">4.50</p>
           </article>
         </section>
         <section>
           <h2>Desserts</h2>
           <article class="item">
-            <p class="dessert">Donut</p><p class="price">1.50</p>
+            <p class="dessert">Donut</p>
+            <p class="price">1.50</p>
           </article>
           <article class="item">
-            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+            <p class="dessert">Cherry Pie</p>
+            <p class="price">2.75</p>
           </article>
           <article class="item">
-            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+            <p class="dessert">Cheesecake</p>
+            <p class="price">3.00</p>
           </article>
           <article class="item">
-            <p class="dessert">Cinammon Roll</p><p class="price">2.50</p>
+            <p class="dessert">Cinammon Roll</p>
+            <p class="price">2.50</p>
           </article>
         </section>
       </main>
---fcc-editable-region--
+      --fcc-editable-region--
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -96,7 +106,9 @@ h2 {
   font-style: italic;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 
@@ -109,7 +121,8 @@ h1, h2, p {
   max-width: 500px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: Impact, serif;
 }
 
@@ -117,14 +130,14 @@ h1, h2 {
   display: inline-block;
 }
 
-.flavor, .dessert {
+.flavor,
+.dessert {
   text-align: left;
   width: 75%;
 }
 
 .price {
   text-align: right;
-  width: 25%
+  width: 25%;
 }
 ```
-

@@ -65,24 +65,15 @@
       },
       "basic-html-cat-photo-app": {
         "title": "Aplicación básica de fotos de gato HTML",
-        "intro": [
-          "",
-          ""
-        ]
+        "intro": ["", ""]
       },
       "basic-css-cafe-menu": {
         "title": "Menú básico de café CSS",
-        "intro": [
-          "",
-          ""
-        ]
+        "intro": ["", ""]
       },
       "css-variables-skyline": {
         "title": "Skyline variables de CSS",
-        "intro": [
-          "",
-          ""
-        ]
+        "intro": ["", ""]
       }
     }
   },
@@ -168,24 +159,15 @@
       },
       "basic-javascript-rpg-game": {
         "title": "Juego RPG básico en JavaScript",
-        "intro": [
-          "",
-          ""
-        ]
+        "intro": ["", ""]
       },
       "intermediate-javascript-calorie-counter": {
         "title": "Intermedio JavaScript contador de calorías",
-        "intro": [
-          "",
-          ""
-        ]
+        "intro": ["", ""]
       },
       "functional-programming-spreadsheet": {
         "title": "Hoja de cálculo de programación funcional",
-        "intro": [
-          "",
-          ""
-        ]
+        "intro": ["", ""]
       }
     }
   },
@@ -285,10 +267,7 @@
       },
       "d3-dashboard": {
         "title": "D3 Dashboard",
-        "intro": [
-          "",
-          ""
-        ]
+        "intro": ["", ""]
       }
     }
   },

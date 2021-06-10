@@ -34,7 +34,6 @@ assert.strictEqual(almostEquilateralTriangles(), 518408346);
 
 ```js
 function almostEquilateralTriangles() {
-
   return true;
 }
 

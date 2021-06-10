@@ -19,9 +19,9 @@ dashedName: positive-and-negative-lookahead
 尽管先行断言有点儿令人困惑，但是这些示例会有所帮助。
 
 ```js
-let quit = "qu";
-let noquit = "qt";
-let quRegex= /q(?=u)/;
+let quit = 'qu';
+let noquit = 'qt';
+let quRegex = /q(?=u)/;
 let qRegex = /q(?!u)/;
 quit.match(quRegex);
 noquit.match(qRegex);
@@ -32,7 +32,7 @@ noquit.match(qRegex);
 先行断言的更实际用途是检查一个字符串中的两个或更多匹配模式。 这里有一个简单的密码检查器，密码规则是 3 到 6 个字符且至少包含一个数字：
 
 ```js
-let password = "abc123";
+let password = 'abc123';
 let checkPass = /(?=\w{3,6})(?=\D*\d)/;
 checkPass.test(password);
 ```
@@ -102,7 +102,7 @@ assert(pwRegex.test('astr1on11aut'));
 ## --seed-contents--
 
 ```js
-let sampleWord = "astronaut";
+let sampleWord = 'astronaut';
 let pwRegex = /change/; // Change this line
 let result = pwRegex.test(sampleWord);
 ```
@@ -110,5 +110,5 @@ let result = pwRegex.test(sampleWord);
 # --solutions--
 
 ```js
-let pwRegex =  /(?=\w{6})(?=\w*\d{2})/;
+let pwRegex = /(?=\w{6})(?=\w*\d{2})/;
 ```

@@ -24,7 +24,7 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -46,7 +46,8 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         overflow: hidden;
       }
 
-      .background-buildings, .foreground-buildings {
+      .background-buildings,
+      .foreground-buildings {
         width: 100%;
         height: 100%;
         display: flex;
@@ -55,7 +56,7 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         position: absolute;
         top: 0;
       }
-      
+
       /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
       .bb1 {
         width: 10%;
@@ -70,13 +71,13 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         height: 10%;
         background-color: var(--building-color1);
       }
-  
+
       .bb1b {
         width: 80%;
         height: 10%;
         background-color: var(--building-color1);
       }
-  
+
       .bb1c {
         width: 90%;
         height: 10%;
@@ -125,7 +126,7 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         height: 35%;
         background-color: var(--building-color1);
       }
-  
+
       .fb4 {
         width: 8%;
         height: 45%;
@@ -133,7 +134,7 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         position: relative;
         left: 10%;
       }
-      
+
       .fb5 {
         width: 10%;
         height: 33%;
@@ -189,7 +190,7 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -212,7 +213,8 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         overflow: hidden;
       }
 
-      .background-buildings, .foreground-buildings {
+      .background-buildings,
+      .foreground-buildings {
         width: 100%;
         height: 100%;
         display: flex;
@@ -221,7 +223,7 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         position: absolute;
         top: 0;
       }
-      
+
       /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
       .bb1 {
         width: 10%;
@@ -236,13 +238,13 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         height: 10%;
         background-color: var(--building-color1);
       }
-  
+
       .bb1b {
         width: 80%;
         height: 10%;
         background-color: var(--building-color1);
       }
-  
+
       .bb1c {
         width: 90%;
         height: 10%;
@@ -291,7 +293,7 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         height: 35%;
         background-color: var(--building-color1);
       }
-  
+
       .fb4 {
         width: 8%;
         height: 45%;
@@ -299,7 +301,7 @@ assert(/--window-color1\s*:\s*black\s*(;|})/g.test(rootStyle));
         position: relative;
         left: 10%;
       }
-      
+
       .fb5 {
         width: 10%;
         height: 33%;

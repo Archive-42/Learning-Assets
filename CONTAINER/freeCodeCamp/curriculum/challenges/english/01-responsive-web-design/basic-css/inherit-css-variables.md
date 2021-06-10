@@ -240,5 +240,9 @@ assert(
 # --solutions--
 
 ```html
-<style>:root {--penguin-belly: pink;}</style>
+<style>
+  :root {
+    --penguin-belly: pink;
+  }
+</style>
 ```

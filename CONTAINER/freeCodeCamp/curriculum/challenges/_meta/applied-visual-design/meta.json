@@ -21,22 +21,10 @@
       "587d7791367417b2b2512ab5",
       "Adjust the Height of an Element Using the height Property"
     ],
-    [
-      "587d781a367417b2b2512ab7",
-      "Use the strong Tag to Make Text Bold"
-    ],
-    [
-      "587d781a367417b2b2512ab8",
-      "Use the u Tag to Underline Text"
-    ],
-    [
-      "587d781a367417b2b2512ab9",
-      "Use the em Tag to Italicize Text"
-    ],
-    [
-      "587d781b367417b2b2512aba",
-      "Use the s Tag to Strikethrough Text"
-    ],
+    ["587d781a367417b2b2512ab7", "Use the strong Tag to Make Text Bold"],
+    ["587d781a367417b2b2512ab8", "Use the u Tag to Underline Text"],
+    ["587d781a367417b2b2512ab9", "Use the em Tag to Italicize Text"],
+    ["587d781b367417b2b2512aba", "Use the s Tag to Strikethrough Text"],
     [
       "587d781b367417b2b2512abb",
       "Create a Horizontal Line Using the hr Element"
@@ -49,14 +37,8 @@
       "587d781b367417b2b2512abd",
       "Adjust the Size of a Header Versus a Paragraph Tag"
     ],
-    [
-      "587d781b367417b2b2512abe",
-      "Add a box-shadow to a Card-like Element"
-    ],
-    [
-      "587d781c367417b2b2512abf",
-      "Decrease the Opacity of an Element"
-    ],
+    ["587d781b367417b2b2512abe", "Add a box-shadow to a Card-like Element"],
+    ["587d781c367417b2b2512abf", "Decrease the Opacity of an Element"],
     [
       "587d781c367417b2b2512ac0",
       "Use the text-transform Property to Make Text Uppercase"
@@ -69,22 +51,10 @@
       "587d781c367417b2b2512ac3",
       "Set the font-weight for Multiple Heading Elements"
     ],
-    [
-      "587d781c367417b2b2512ac4",
-      "Set the font-size of Paragraph Text"
-    ],
-    [
-      "587d781d367417b2b2512ac5",
-      "Set the line-height of Paragraphs"
-    ],
-    [
-      "587d781d367417b2b2512ac8",
-      "Adjust the Hover State of an Anchor Tag"
-    ],
-    [
-      "587d781e367417b2b2512ac9",
-      "Change an Element's Relative Position"
-    ],
+    ["587d781c367417b2b2512ac4", "Set the font-size of Paragraph Text"],
+    ["587d781d367417b2b2512ac5", "Set the line-height of Paragraphs"],
+    ["587d781d367417b2b2512ac8", "Adjust the Hover State of an Anchor Tag"],
+    ["587d781e367417b2b2512ac9", "Change an Element's Relative Position"],
     [
       "587d781e367417b2b2512aca",
       "Move a Relatively Positioned Element with CSS Offsets"
@@ -109,30 +79,15 @@
       "587d78a3367417b2b2512ad0",
       "Center an Element Horizontally Using the margin Property"
     ],
-    [
-      "587d78a3367417b2b2512ad1",
-      "Learn about Complementary Colors"
-    ],
-    [
-      "587d78a4367417b2b2512ad2",
-      "Learn about Tertiary Colors"
-    ],
+    ["587d78a3367417b2b2512ad1", "Learn about Complementary Colors"],
+    ["587d78a4367417b2b2512ad2", "Learn about Tertiary Colors"],
     [
       "587d78a4367417b2b2512ad3",
       "Adjust the Color of Various Elements to Complementary Colors"
     ],
-    [
-      "587d78a4367417b2b2512ad4",
-      "Adjust the Hue of a Color"
-    ],
-    [
-      "587d78a4367417b2b2512ad5",
-      "Adjust the Tone of a Color"
-    ],
-    [
-      "587d78a5367417b2b2512ad6",
-      "Create a Gradual CSS Linear Gradient"
-    ],
+    ["587d78a4367417b2b2512ad4", "Adjust the Hue of a Color"],
+    ["587d78a4367417b2b2512ad5", "Adjust the Tone of a Color"],
+    ["587d78a5367417b2b2512ad6", "Create a Gradual CSS Linear Gradient"],
     [
       "587d78a5367417b2b2512ad7",
       "Use a CSS Linear Gradient to Create a Striped Element"
@@ -157,10 +112,7 @@
       "587d78a6367417b2b2512adc",
       "Use the CSS Transform Property skewY to Skew an Element Along the Y-Axis"
     ],
-    [
-      "587d78a6367417b2b2512add",
-      "Create a Graphic Using CSS"
-    ],
+    ["587d78a6367417b2b2512add", "Create a Graphic Using CSS"],
     [
       "587d78a6367417b2b2512ade",
       "Create a More Complex Shape Using CSS and HTML"
@@ -173,14 +125,8 @@
       "587d78a7367417b2b2512ae0",
       "Use CSS Animation to Change the Hover State of a Button"
     ],
-    [
-      "58a7a6ebf9a6318348e2d5aa",
-      "Modify Fill Mode of an Animation"
-    ],
-    [
-      "587d78a7367417b2b2512ae1",
-      "Create Movement Using CSS Animation"
-    ],
+    ["58a7a6ebf9a6318348e2d5aa", "Modify Fill Mode of an Animation"],
+    ["587d78a7367417b2b2512ae1", "Create Movement Using CSS Animation"],
     [
       "587d78a7367417b2b2512ae2",
       "Create Visual Direction by Fading an Element from Left to Right"
@@ -193,26 +139,11 @@
       "587d78a8367417b2b2512ae4",
       "Make a CSS Heartbeat using an Infinite Animation Count"
     ],
-    [
-      "587d78a8367417b2b2512ae5",
-      "Animate Elements at Variable Rates"
-    ],
-    [
-      "587d78a8367417b2b2512ae6",
-      "Animate Multiple Elements at Variable Rates"
-    ],
-    [
-      "587d78a8367417b2b2512ae7",
-      "Change Animation Timing with Keywords"
-    ],
-    [
-      "587d78a9367417b2b2512ae8",
-      "Learn How Bezier Curves Work"
-    ],
-    [
-      "587d78a9367417b2b2512ae9",
-      "Use a Bezier Curve to Move a Graphic"
-    ],
+    ["587d78a8367417b2b2512ae5", "Animate Elements at Variable Rates"],
+    ["587d78a8367417b2b2512ae6", "Animate Multiple Elements at Variable Rates"],
+    ["587d78a8367417b2b2512ae7", "Change Animation Timing with Keywords"],
+    ["587d78a9367417b2b2512ae8", "Learn How Bezier Curves Work"],
+    ["587d78a9367417b2b2512ae9", "Use a Bezier Curve to Move a Graphic"],
     [
       "587d78a9367417b2b2512aea",
       "Make Motion More Natural Using a Bezier Curve"

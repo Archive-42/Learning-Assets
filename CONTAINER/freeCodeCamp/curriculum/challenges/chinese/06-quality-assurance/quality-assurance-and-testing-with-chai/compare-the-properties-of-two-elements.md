@@ -19,12 +19,12 @@ dashedName: compare-the-properties-of-two-elements
 不应有未通过的测试
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -33,16 +33,16 @@ dashedName: compare-the-properties-of-two-elements
 请为第一个断言选择正确的方法 — `isAbove` 或 `isAtMost`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'isAtMost',
         '5 is at most (<=) 5'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,12 +51,12 @@ dashedName: compare-the-properties-of-two-elements
 请为第二个断言选择正确的方法 — `isAbove` 或 `isAtMost`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'isAbove', '1 is greater than 0');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -65,16 +65,16 @@ dashedName: compare-the-properties-of-two-elements
 请为第三个断言选择正确的方法 — `isAbove` 或 `isAtMost`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[2].method,
         'isAbove',
         'Math.PI = 3.14159265 is greater than 3'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -83,16 +83,16 @@ dashedName: compare-the-properties-of-two-elements
 请为第四个断言选择正确的方法 — `isAbove` 或 `isAtMost`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[3].method,
         'isAtMost',
         '1 - Math.random() is > 0 and <= 1. It is atMost 1 !'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

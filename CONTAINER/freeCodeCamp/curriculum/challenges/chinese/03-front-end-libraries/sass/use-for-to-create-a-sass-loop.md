@@ -10,13 +10,15 @@ dashedName: use-for-to-create-a-sass-loop
 
 可以在 Sass 中使用 `@for` 循环添加样式，它的用法和 JavaScript 中的 `for` 循环类似。
 
-`@for` 以两种方式使用：“开始 through 结束” 或 “开始 to 结束”。 主要区别在于“开始 **to** 结束”*不包括*结束数字，而“开始 **through** 结束”*包括* 结束号码。
+`@for` 以两种方式使用：“开始 through 结束” 或 “开始 to 结束”。 主要区别在于“开始 **to** 结束”*不包括*结束数字，而“开始 **through** 结束”_包括_ 结束号码。
 
 这是一个开始 **through** 结束的示例：
 
 ```scss
 @for $i from 1 through 12 {
-  .col-#{$i} { width: 100%/12 * $i; }
+  .col-#{$i} {
+    width: 100%/12 * $i;
+  }
 }
 ```
 
@@ -31,9 +33,7 @@ dashedName: use-for-to-create-a-sass-loop
   width: 16.66667%;
 }
 
-...
-
-.col-12 {
+... .col-12 {
   width: 100%;
 }
 ```
@@ -89,11 +89,7 @@ assert($('.text-5').css('font-size') == '75px');
 ## --seed-contents--
 
 ```html
-<style type='text/scss'>
-
-
-
-</style>
+<style type="text/scss"></style>
 
 <p class="text-1">Hello</p>
 <p class="text-2">Hello</p>
@@ -105,12 +101,12 @@ assert($('.text-5').css('font-size') == '75px');
 # --solutions--
 
 ```html
-<style type='text/scss'>
-
-@for $i from 1 through 5 {
-  .text-#{$i} { font-size: 15px * $i; }
-}
-
+<style type="text/scss">
+  @for $i from 1 through 5 {
+    .text-#{$i} {
+      font-size: 15px * $i;
+    }
+  }
 </style>
 
 <p class="text-1">Hello</p>
@@ -123,12 +119,12 @@ assert($('.text-5').css('font-size') == '75px');
 ---
 
 ```html
-<style type='text/scss'>
-
-@for $i from 1 to 6 {
-  .text-#{$i} { font-size: 15px * $i; }
-}
-
+<style type="text/scss">
+  @for $i from 1 to 6 {
+    .text-#{$i} {
+      font-size: 15px * $i;
+    }
+  }
 </style>
 
 <p class="text-1">Hello</p>

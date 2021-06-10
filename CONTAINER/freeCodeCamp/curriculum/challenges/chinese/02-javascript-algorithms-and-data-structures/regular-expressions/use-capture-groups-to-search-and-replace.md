@@ -13,9 +13,9 @@ dashedName: use-capture-groups-to-search-and-replace
 可以在字符串上使用 `.replace()` 方法来搜索并替换字符串中的文本。 `.replace()` 的输入首先是想要搜索的正则表达式匹配模式。 第二个参数是用于替换匹配的字符串或用于执行某些操作的函数。
 
 ```js
-let wrongText = "The sky is silver.";
+let wrongText = 'The sky is silver.';
 let silverRegex = /silver/;
-wrongText.replace(silverRegex, "blue");
+wrongText.replace(silverRegex, 'blue');
 ```
 
 `replace` 调用将返回字符串 `The sky is blue.`。
@@ -23,7 +23,7 @@ wrongText.replace(silverRegex, "blue");
 你还可以使用美元符号（`$`）访问替换字符串中的捕获组。
 
 ```js
-"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+'Code Camp'.replace(/(\w+)\s(\w+)/, '$2 $1');
 ```
 
 调用 `replace` 将返回字符串 `Camp Code`。
@@ -72,17 +72,17 @@ assert(new RegExp(fixRegex.source + '|').exec('').length - 1 >= 3);
 ## --seed-contents--
 
 ```js
-let str = "one two three";
+let str = 'one two three';
 let fixRegex = /change/; // Change this line
-let replaceText = ""; // Change this line
+let replaceText = ''; // Change this line
 let result = str.replace(fixRegex, replaceText);
 ```
 
 # --solutions--
 
 ```js
-let str = "one two three";
+let str = 'one two three';
 let fixRegex = /(\w+) (\w+) (\w+)/g; // Change this line
-let replaceText = "$3 $2 $1"; // Change this line
+let replaceText = '$3 $2 $1'; // Change this line
 let result = str.replace(fixRegex, replaceText);
 ```

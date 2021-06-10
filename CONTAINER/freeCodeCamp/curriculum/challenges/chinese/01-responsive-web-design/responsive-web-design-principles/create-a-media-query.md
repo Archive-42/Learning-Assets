@@ -16,13 +16,17 @@ dashedName: create-a-media-query
 下面是一个媒体查询的例子，当设备宽度小于或等于 100px 时返回内容：
 
 ```css
-@media (max-width: 100px) { /* CSS Rules */ }
+@media (max-width: 100px) {
+  /* CSS Rules */
+}
 ```
 
 以下定义的媒体查询，是当设备高度大于或等于 350px 时返回内容：
 
 ```css
-@media (min-height: 350px) { /* CSS Rules */ }
+@media (min-height: 350px) {
+  /* CSS Rules */
+}
 ```
 
 注意，只有当媒体类型与所使用的设备的类型匹配时，媒体查询中定义的 CSS 才生效。
@@ -82,7 +86,14 @@ assert(
   /* Only change code above this line */
 </style>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus
+  massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet
+  lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem.
+  Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida
+  consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+</p>
 ```
 
 # --solutions--
@@ -100,5 +111,12 @@ assert(
   }
 </style>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus
+  massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet
+  lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem.
+  Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida
+  consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+</p>
 ```

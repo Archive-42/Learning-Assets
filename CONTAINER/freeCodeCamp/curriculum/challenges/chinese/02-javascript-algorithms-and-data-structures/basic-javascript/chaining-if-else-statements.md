@@ -122,8 +122,7 @@ assert(testSize(25) === 'Huge');
 function testSize(num) {
   // Only change code below this line
 
-
-  return "Change Me";
+  return 'Change Me';
   // Only change code above this line
 }
 
@@ -135,15 +134,15 @@ testSize(7);
 ```js
 function testSize(num) {
   if (num < 5) {
-    return "Tiny";
+    return 'Tiny';
   } else if (num < 10) {
-    return "Small";
+    return 'Small';
   } else if (num < 15) {
-    return "Medium";
+    return 'Medium';
   } else if (num < 20) {
-    return "Large";
+    return 'Large';
   } else {
-    return "Huge";
+    return 'Huge';
   }
 }
 ```

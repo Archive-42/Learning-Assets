@@ -14,7 +14,7 @@ dashedName: use-the-some-method-to-check-that-any-elements-in-an-array-meet-a-cr
 
 ```js
 var numbers = [10, 50, 8, 220, 110, 11];
-numbers.some(function(currentValue) {
+numbers.some(function (currentValue) {
   return currentValue < 10;
 });
 ```
@@ -58,8 +58,6 @@ assert(!checkPositive([-1, -2, -3, -4, -5]));
 ```js
 function checkPositive(arr) {
   // Only change code below this line
-
-
   // Only change code above this line
 }
 checkPositive([1, 2, 3, -4, 5]);

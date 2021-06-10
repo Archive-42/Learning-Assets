@@ -15,17 +15,23 @@ dashedName: authentication-strategies
 然后，需要让 passport **使用**一个实例化的 LocalStrategy 对象，这个对象的一些设置已完成。 请注意，接下来的所有代码都应写在连接数据库的回调中，因为它们的执行都依赖数据库。
 
 ```js
-passport.use(new LocalStrategy(
-  function(username, password, done) {
+passport.use(
+  new LocalStrategy(function (username, password, done) {
     myDataBase.findOne({ username: username }, function (err, user) {
-      console.log('User '+ username +' attempted to log in.');
-      if (err) { return done(err); }
-      if (!user) { return done(null, false); }
-      if (password !== user.password) { return done(null, false); }
+      console.log('User ' + username + ' attempted to log in.');
+      if (err) {
+        return done(err);
+      }
+      if (!user) {
+        return done(null, false);
+      }
+      if (password !== user.password) {
+        return done(null, false);
+      }
       return done(null, user);
     });
-  }
-));
+  })
+);
 ```
 
 这就是我们的用户验证逻辑： 首先根据用户输入的用户名在数据库中寻找用户；然后检查密码是否匹配，最后如果没有发生错误（比如密码错误），那么就会返回 `user` 对象并通过验证。
@@ -41,9 +47,9 @@ passport.use(new LocalStrategy(
 需要使用 passport-local 作为依赖。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -51,7 +57,7 @@ passport.use(new LocalStrategy(
         'Your project should list "passport-local " as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -60,9 +66,9 @@ passport.use(new LocalStrategy(
 应该正确地引入和配置 passport-local。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /require.*("|')passport-local("|')/gi,
@@ -79,7 +85,7 @@ passport.use(new LocalStrategy(
         'Your new local strategy should use the findOne query to find a username based on the inputs'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

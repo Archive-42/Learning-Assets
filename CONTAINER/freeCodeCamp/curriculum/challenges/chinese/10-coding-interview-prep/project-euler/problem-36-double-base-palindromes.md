@@ -52,7 +52,6 @@ assert(doubleBasePalindromes(1000000) == 872187);
 
 ```js
 function doubleBasePalindromes(n) {
-
   return n;
 }
 

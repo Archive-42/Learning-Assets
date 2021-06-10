@@ -34,72 +34,30 @@ assert(Array.isArray(LZW(true, 'TOBEORNOTTOBEORTOBEORNOT')));
 
 ```js
 assert(
-  typeof LZW(false, [
-    84,
-    79,
-    66,
-    69,
-    79,
-    82,
-    78,
-    79,
-    84,
-    256,
-    258,
-    260,
-    265,
-    259,
-    261,
-    263
-  ]) === 'string'
+  typeof LZW(
+    false,
+    [84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263]
+  ) === 'string'
 );
 ```
 
 `LZW(true, "TOBEORNOTTOBEORTOBEORNOT")` should return `[84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263]`.
 
 ```js
-assert.deepEqual(LZW(true, 'TOBEORNOTTOBEORTOBEORNOT'), [
-  84,
-  79,
-  66,
-  69,
-  79,
-  82,
-  78,
-  79,
-  84,
-  256,
-  258,
-  260,
-  265,
-  259,
-  261,
-  263
-]);
+assert.deepEqual(
+  LZW(true, 'TOBEORNOTTOBEORTOBEORNOT'),
+  [84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263]
+);
 ```
 
 `LZW(false, [84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263])` should return `"TOBEORNOTTOBEORTOBEORNOT"`.
 
 ```js
 assert.equal(
-  LZW(false, [
-    84,
-    79,
-    66,
-    69,
-    79,
-    82,
-    78,
-    79,
-    84,
-    256,
-    258,
-    260,
-    265,
-    259,
-    261,
-    263
-  ]),
+  LZW(
+    false,
+    [84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263]
+  ),
   'TOBEORNOTTOBEORTOBEORNOT'
 );
 ```
@@ -107,18 +65,10 @@ assert.equal(
 `LZW(true, "0123456789")` should return `[48, 49, 50, 51, 52, 53, 54, 55, 56, 57]`.
 
 ```js
-assert.deepEqual(LZW(true, '0123456789'), [
-  48,
-  49,
-  50,
-  51,
-  52,
-  53,
-  54,
-  55,
-  56,
-  57
-]);
+assert.deepEqual(
+  LZW(true, '0123456789'),
+  [48, 49, 50, 51, 52, 53, 54, 55, 56, 57]
+);
 ```
 
 `LZW(false, [48, 49, 50, 51, 52, 53, 54, 55, 56, 57])` should return `"0123456789"`.
@@ -147,22 +97,20 @@ assert.equal(LZW(false, [66, 65, 256, 257, 65, 260]), 'BABAABAAA');
 ## --seed-contents--
 
 ```js
-function LZW (compressData, input) {
-
-}
+function LZW(compressData, input) {}
 ```
 
 # --solutions--
 
 ```js
-function LZW (compressData, input) {
+function LZW(compressData, input) {
   function compress(uncompressed) {
     // Build the dictionary.
     var i,
       dictionary = {},
       c,
       wc,
-      w = "",
+      w = '',
       result = [],
       dictSize = 256;
     for (i = 0; i < 256; i += 1) {
@@ -186,12 +134,11 @@ function LZW (compressData, input) {
     }
 
     // Output the code for w.
-    if (w !== "") {
+    if (w !== '') {
       result.push(dictionary[w]);
     }
     return result;
   }
-
 
   function decompress(compressed) {
     // Build the dictionary.
@@ -200,7 +147,7 @@ function LZW (compressData, input) {
       w,
       result,
       k,
-      entry = "",
+      entry = '',
       dictSize = 256;
     for (i = 0; i < 256; i += 1) {
       dictionary[i] = String.fromCharCode(i);
@@ -230,10 +177,10 @@ function LZW (compressData, input) {
     return result;
   }
 
-  if(compressData){
-    return compress(input)
-  }else{
-    return decompress(input)
+  if (compressData) {
+    return compress(input);
+  } else {
+    return decompress(input);
   }
 }
 ```

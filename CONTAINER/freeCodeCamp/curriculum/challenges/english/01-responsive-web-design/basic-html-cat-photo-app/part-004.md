@@ -19,7 +19,7 @@ Your comment should start with `<!--`. You are missing one or more of the charac
 assert(code.match(/<!--/));
 ```
 
-Your comment should end with `-->`.  You are missing one or more of the characters that define the end of a comment.
+Your comment should end with `-->`. You are missing one or more of the characters that define the end of a comment.
 
 ```js
 assert(code.match(/-->/));
@@ -59,10 +59,9 @@ assert(
   <body>
     <h1>CatPhotoApp</h1>
     <h2>Cat Photos</h2>
---fcc-editable-region--
+    --fcc-editable-region--
     <p>Click here to view more cat photos.</p>
---fcc-editable-region--
+    --fcc-editable-region--
   </body>
 </html>
 ```
-

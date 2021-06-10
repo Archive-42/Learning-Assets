@@ -17,21 +17,21 @@ dashedName: comparisons-with-the-logical-or-operator
 
 ```js
 if (num > 10) {
-  return "No";
+  return 'No';
 }
 if (num < 5) {
-  return "No";
+  return 'No';
 }
-return "Yes";
+return 'Yes';
 ```
 
 只有当 `num` 大于等于 `5` 或小于等于 `10` 时，函数才返回 `Yes`。 相同的逻辑可以简写成：
 
 ```js
 if (num > 10 || num < 5) {
-  return "No";
+  return 'No';
 }
-return "Yes";
+return 'Yes';
 ```
 
 # --instructions--
@@ -109,15 +109,15 @@ function testLogicalOr(val) {
   // Only change code below this line
 
   if (val) {
-    return "Outside";
+    return 'Outside';
   }
 
   if (val) {
-    return "Outside";
+    return 'Outside';
   }
 
   // Only change code above this line
-  return "Inside";
+  return 'Inside';
 }
 
 testLogicalOr(15);
@@ -128,8 +128,8 @@ testLogicalOr(15);
 ```js
 function testLogicalOr(val) {
   if (val < 10 || val > 20) {
-    return "Outside";
+    return 'Outside';
   }
-  return "Inside";
+  return 'Inside';
 }
 ```

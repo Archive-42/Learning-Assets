@@ -130,9 +130,7 @@ assert.equal(eulersMethod(0, 100, 100, 10), 20.000472392);
 ## --seed-contents--
 
 ```js
-function eulersMethod(x1, y1, x2, h) {
-
-}
+function eulersMethod(x1, y1, x2, h) {}
 ```
 
 # --solutions--

@@ -36,15 +36,22 @@ assert(noSpaces.match(/^\<\!DOCTYPEhtml\>\<html/));
   <head>
     <title>CatPhotoApp</title>
   </head>
---fcc-editable-region--
+  --fcc-editable-region--
   <body>
     <h1>CatPhotoApp</h1>
     <main>
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
       <section>
         <h2>Cat Lists</h2>
@@ -55,8 +62,11 @@ assert(noSpaces.match(/^\<\!DOCTYPEhtml\>\<html/));
           <li>lasagna</li>
         </ul>
         <figure>
-          <img src="https://bit.ly/fcc-lasagna" alt="A slice of lasagna on a plate.">
-          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-lasagna"
+            alt="A slice of lasagna on a plate."
+          />
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
         </figure>
         <h3>Top 3 things cats hate:</h3>
         <ol>
@@ -65,8 +75,11 @@ assert(noSpaces.match(/^\<\!DOCTYPEhtml\>\<html/));
           <li>other cats</li>
         </ol>
         <figure>
-          <img src="https://bit.ly/fcc-cats" alt="Five cats looking around a field.">
-          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-cats"
+            alt="Five cats looking around a field."
+          />
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
         </figure>
       </section>
       <section>
@@ -74,23 +87,60 @@ assert(noSpaces.match(/^\<\!DOCTYPEhtml\>\<html/));
         <form action="https://freecatphotoapp.com/submit-cat-photo">
           <fieldset>
             <legend>Is your cat an indoor or outdoor cat?</legend>
-            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+            <label
+              ><input
+                id="indoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="indoor"
+                checked
+              />
+              Indoor</label
+            >
+            <label
+              ><input
+                id="outdoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="outdoor"
+              />
+              Outdoor</label
+            >
           </fieldset>
           <fieldset>
             <legend>What's your cat's personality?</legend>
-            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
-            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
-            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+            <input
+              id="loving"
+              type="checkbox"
+              name="personality"
+              value="loving"
+              checked
+            />
+            <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy" />
+            <label for="lazy">Lazy</label>
+            <input
+              id="energetic"
+              type="checkbox"
+              name="personality"
+              value="energetic"
+            />
+            <label for="energetic">Energetic</label>
           </fieldset>
-          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <input
+            type="text"
+            name="catphotourl"
+            placeholder="cat photo URL"
+            required
+          />
           <button type="submit">Submit</button>
         </form>
       </section>
     </main>
     <footer>
       <p>
-        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+        No Copyright -
+        <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
       </p>
     </footer>
   </body>
@@ -111,8 +161,15 @@ assert(noSpaces.match(/^\<\!DOCTYPEhtml\>\<html/));
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
       <section>
         <h2>Cat Lists</h2>
@@ -123,8 +180,11 @@ assert(noSpaces.match(/^\<\!DOCTYPEhtml\>\<html/));
           <li>lasagna</li>
         </ul>
         <figure>
-          <img src="https://bit.ly/fcc-lasagna" alt="A slice of lasagna on a plate.">
-          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-lasagna"
+            alt="A slice of lasagna on a plate."
+          />
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
         </figure>
         <h3>Top 3 things cats hate:</h3>
         <ol>
@@ -133,8 +193,11 @@ assert(noSpaces.match(/^\<\!DOCTYPEhtml\>\<html/));
           <li>other cats</li>
         </ol>
         <figure>
-          <img src="https://bit.ly/fcc-cats" alt="Five cats looking around a field.">
-          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-cats"
+            alt="Five cats looking around a field."
+          />
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
         </figure>
       </section>
       <section>
@@ -142,23 +205,71 @@ assert(noSpaces.match(/^\<\!DOCTYPEhtml\>\<html/));
         <form action="https://freecatphotoapp.com/submit-cat-photo">
           <fieldset>
             <legend>Is your cat an indoor or outdoor cat?</legend>
-            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+            <label
+              ><input
+                id="indoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="indoor"
+                checked
+              />
+              Indoor</label
+            >
+            <label
+              ><input
+                id="outdoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="outdoor"
+              />
+              Outdoor</label
+            >
           </fieldset>
           <fieldset>
             <legend>What's your cat's personality?</legend>
-            <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
-            <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
-            <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label>
+            <label for="loving"
+              ><input
+                id="loving"
+                type="checkbox"
+                name="personality"
+                value="loving"
+                checked
+              />
+              Loving</label
+            >
+            <label for="lazy"
+              ><input
+                id="lazy"
+                type="checkbox"
+                name="personality"
+                value="lazy"
+              />
+              Lazy</label
+            >
+            <label for="energetic"
+              ><input
+                id="energetic"
+                type="checkbox"
+                name="personality"
+                value="energetic"
+              />
+              Energetic</label
+            >
           </fieldset>
-          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <input
+            type="text"
+            name="catphotourl"
+            placeholder="cat photo URL"
+            required
+          />
           <button type="submit">Submit</button>
         </form>
       </section>
     </main>
     <footer>
       <p>
-        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+        No Copyright -
+        <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
       </p>
     </footer>
   </body>

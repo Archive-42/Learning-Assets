@@ -28,7 +28,7 @@ dashedName: add-a-box-shadow-to-a-card-like-element
 如下为添加了模糊效果的例子，它使用了透明度较高的黑色作为阴影：
 
 ```css
-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 ```
 
 # --instructions--
@@ -73,8 +73,6 @@ assert(
     color: black;
   }
 
-
-
   .fullCard {
     width: 245px;
     border: 1px solid #ccc;
@@ -93,12 +91,27 @@ assert(
   <div class="cardContent">
     <div class="cardText">
       <h4>Alphabet</h4>
-      <hr>
-      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <hr />
+      <p>
+        <em
+          >Google was founded by Larry Page and Sergey Brin while they were
+          <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em
+        >
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>
@@ -122,7 +135,7 @@ assert(
     color: black;
   }
   #thumbnail {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
   .fullCard {
     width: 245px;
@@ -142,12 +155,27 @@ assert(
   <div class="cardContent">
     <div class="cardText">
       <h4>Alphabet</h4>
-      <hr>
-      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <hr />
+      <p>
+        <em
+          >Google was founded by Larry Page and Sergey Brin while they were
+          <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em
+        >
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>

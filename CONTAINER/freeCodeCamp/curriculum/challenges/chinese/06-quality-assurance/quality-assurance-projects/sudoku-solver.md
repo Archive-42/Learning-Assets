@@ -9,9 +9,9 @@ dashedName: sudoku-solver
 
 构建一个 JavaScript 的全栈应用，在功能上与这个应用相似：<https://sudoku-solver.freecodecamp.rocks/>。 可以采用下面的任意一种方式完成这个挑战：
 
--   克隆 [GitHub 仓库](https://github.com/freecodecamp/boilerplate-project-sudoku-solver) 并在本地完成你的项目。
--   使用 [repl.it 初始化项目](https://repl.it/github/freeCodeCamp/boilerplate-project-sudoku-solver) 来完成项目。
--   使用一个你喜欢的站点生成器来完成项目。 需要确定包含了我们 GitHub 仓库的所有文件。
+- 克隆 [GitHub 仓库](https://github.com/freecodecamp/boilerplate-project-sudoku-solver) 并在本地完成你的项目。
+- 使用 [repl.it 初始化项目](https://repl.it/github/freeCodeCamp/boilerplate-project-sudoku-solver) 来完成项目。
+- 使用一个你喜欢的站点生成器来完成项目。 需要确定包含了我们 GitHub 仓库的所有文件。
 
 完成本项目后，请将一个正常运行的 demo（项目演示）托管在可以公开访问的平台。 然后在 `Solution Link` 框中提交你的项目 URL。 此外，还可以将项目的源码提交到 `GitHub Link` 中。
 
@@ -19,7 +19,7 @@ dashedName: sudoku-solver
 
 - 所有解谜逻辑都可以进入 `/controllers/sudoku-solver.js`
   - `validate` 函数应该使用给定的解谜字符串，然后检查它是否是 81 个有效的输入字符。
-  - `check` 函数应对棋盘的 *current* 进行验证。
+  - `check` 函数应对棋盘的 _current_ 进行验证。
   - `solve` 函数应该处理任何给定的解谜字符串，而不仅仅是测试输入和解决方法。 你需要写出解决这个问题的逻辑。
 - 所有路由逻辑都可以进入 `/routes/api.js`
 - 阅读 `/controllers` 中的 `puzzle-strings.js` 文件来了解一些应用程序应该解决的示例谜题
@@ -28,42 +28,42 @@ dashedName: sudoku-solver
 
 在 `tests/1_unit-tests.js` 中写下以下测试：
 
--   逻辑处理 81 个字符的解谜字符串
--   逻辑处理无效的解谜字符串 (不是 1-9 或 `.`)
--   逻辑处理一个长度不是 81 个字符的解谜字符串
--   逻辑处理有效行的位置
--   逻辑处理无效行的位置
--   逻辑处理一个有效的列位置
--   逻辑处理无效列位置
--   逻辑处理一个有效的区域 (3x3 网格)
--   逻辑处理一个无效的区域 (3x3 网格)
--   有效解谜字符串通过 solver
--   无效解谜字符串无法通过 solver
--   solver 返回一个不完整谜题的的预期解决方案
+- 逻辑处理 81 个字符的解谜字符串
+- 逻辑处理无效的解谜字符串 (不是 1-9 或 `.`)
+- 逻辑处理一个长度不是 81 个字符的解谜字符串
+- 逻辑处理有效行的位置
+- 逻辑处理无效行的位置
+- 逻辑处理一个有效的列位置
+- 逻辑处理无效列位置
+- 逻辑处理一个有效的区域 (3x3 网格)
+- 逻辑处理一个无效的区域 (3x3 网格)
+- 有效解谜字符串通过 solver
+- 无效解谜字符串无法通过 solver
+- solver 返回一个不完整谜题的的预期解决方案
 
 在 `tests/2_functional-tests.js` 中编写下以下测试：
 
--   用有效的解谜字符串解决一个谜题：POST 请求到 `/api/solve`
--   用缺失的解谜字符串解决一个谜题：POST 请求到 `/api/solve`
--   用无效字符解决一个谜题：POST 请求到 `/api/solve`
--   用不正确的长度解决一个谜题：POST 请求到 `/api/solve`
--   解决一个无法解决的谜题：POST 请求到 `/api/solve`
--   检查所有字段的解谜位置：POST 请求到 `/api/check`
--   用单个位置冲突检查解谜位置：POST 请求到 `/api/check`
--   检查一个有多个位置冲突的解谜位置: POST 请求到 `/api/check`
--   检查与所有位置冲突的解谜位置: POST 请求到 `/api/check`
--   检查缺失所需字段的解谜位置：POST 请求到 `/api/check`
--   检查一个有无效字符的解谜位置: POST 请求到 `/api/check`
--   检查不正确长度的解谜位置：POST 请求到 `/api/check`
--   检查一个无效的放置坐标的解谜位置：POST 请求到 `/api/check`
--   检查具有无效的放置值的解谜位置：POST 请求到 `/api/check`
+- 用有效的解谜字符串解决一个谜题：POST 请求到 `/api/solve`
+- 用缺失的解谜字符串解决一个谜题：POST 请求到 `/api/solve`
+- 用无效字符解决一个谜题：POST 请求到 `/api/solve`
+- 用不正确的长度解决一个谜题：POST 请求到 `/api/solve`
+- 解决一个无法解决的谜题：POST 请求到 `/api/solve`
+- 检查所有字段的解谜位置：POST 请求到 `/api/check`
+- 用单个位置冲突检查解谜位置：POST 请求到 `/api/check`
+- 检查一个有多个位置冲突的解谜位置: POST 请求到 `/api/check`
+- 检查与所有位置冲突的解谜位置: POST 请求到 `/api/check`
+- 检查缺失所需字段的解谜位置：POST 请求到 `/api/check`
+- 检查一个有无效字符的解谜位置: POST 请求到 `/api/check`
+- 检查不正确长度的解谜位置：POST 请求到 `/api/check`
+- 检查一个无效的放置坐标的解谜位置：POST 请求到 `/api/check`
+- 检查具有无效的放置值的解谜位置：POST 请求到 `/api/check`
 
 # --hints--
 
 提交自己的项目，而不是示例的 URL。
 
 ```js
-(getUserInput) => {
+getUserInput => {
   const url = getUserInput('url');
   assert(!/.*\/sudoku-solver\.freecodecamp\.rocks/.test(getUserInput('url')));
 };
@@ -72,7 +72,7 @@ dashedName: sudoku-solver
 可以发送 `POST` 请求到 `/api/solve`，使用包含 `puzzle` 的表单数据这将是一个包含数字 (1-9) 和点号的字符串组合，`.` 表示空格。 返回的对象将包含一个 `solution` 属性与解决的谜题。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const output =
@@ -88,10 +88,10 @@ async (getUserInput) => {
 };
 ```
 
-如果提交给 `/api/solve` 的对象缺失 `puzzle`，返回的值将是 `{ error: 'Required field missing' }`
+如果提交给 `/api/solve` 的对象缺失 `puzzle`，返回的值将是 `{ error: 'Required field missing' }`
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const output = 'Required field missing';
@@ -106,10 +106,10 @@ async (getUserInput) => {
 };
 ```
 
-如果提交给 `/api/solve` 谜题包含非数字或点号的值。 返回的值将是 `{ error: 'Invalid characters in puzzle' }`
+如果提交给 `/api/solve` 谜题包含非数字或点号的值。 返回的值将是 `{ error: 'Invalid characters in puzzle' }`
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     'AA9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const output = 'Invalid characters in puzzle';
@@ -124,10 +124,10 @@ async (getUserInput) => {
 };
 ```
 
-如果提交给 `/api/solve` 的谜题大于或小于 81 个字符， 返回的值将是 `{ error: 'Expected puzzle to be 81 characters long' }`
+如果提交给 `/api/solve` 的谜题大于或小于 81 个字符， 返回的值将是 `{ error: 'Expected puzzle to be 81 characters long' }`
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const output = 'Expected puzzle to be 81 characters long';
@@ -142,10 +142,10 @@ async (getUserInput) => {
 };
 ```
 
-如果提交给 `/api/solve` 的谜题无效或无法解决， 返回的值将是 `{ error: 'Puzzle cannot be solved' }`
+如果提交给 `/api/solve` 的谜题无效或无法解决， 返回的值将是 `{ error: 'Puzzle cannot be solved' }`
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '9.9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const output = 'Puzzle cannot be solved';
@@ -163,7 +163,7 @@ async (getUserInput) => {
 可以发送 `POST` 请求到 `/api/check`，包含 `puzzle`、`coordinate` 和 `value` 的对象，其中 `coordinate` 是表示行的字母 A-I，后跟表示列的数字 1-9，而 `value` 是 1-9 的数字。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const coordinate = 'A1';
@@ -182,7 +182,7 @@ async (getUserInput) => {
 发送 `POST` 请求到 `/api/check`，返回值是一个包含 `valid` 属性的对象，如果数字可能放置在提供的坐标中则是 `true`，否则是`false`。 如果错误，返回的对象还将包含一个 `conflict` 属性，它是一个字符串 `"row"`、`"column"`, 和/或 取决于哪个区域使位置无效的`"region"` 。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const coordinate = 'A1';
@@ -205,9 +205,9 @@ async (getUserInput) => {
 如果提交给 `/api/check` 的 `value` 已放置在该 `coordinate` 上的 `puzzle`中，如果 `value` 不冲突，则返回的是 `valid` 属性为 `true` 的对象。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
-  '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
+    '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const coordinate = 'C3';
   const value = '2';
   const data = await fetch(getUserInput('url') + '/api/check', {
@@ -221,10 +221,10 @@ async (getUserInput) => {
 };
 ```
 
-如果提交给 `/api/check` 的谜题包含非数字或点号的值。 返回的值将是 `{ error: 'Invalid characters in puzzle' }`
+如果提交给 `/api/check` 的谜题包含非数字或点号的值。 返回的值将是 `{ error: 'Invalid characters in puzzle' }`
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     'AA9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const coordinate = 'A1';
@@ -244,7 +244,7 @@ async (getUserInput) => {
 如果提交给 `/api/check` 的谜题大于或小于 81 个字符， 返回的值将是 `{ error: 'Expected puzzle to be 81 characters long' }`
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const coordinate = 'A1';
@@ -261,10 +261,10 @@ async (getUserInput) => {
 };
 ```
 
-如果提交给 `/api/check` 的对象缺失 `puzzle`、`coordinate` 或 `value`，返回的值将是 `{ error: Required field(s) missing }`
+如果提交给 `/api/check` 的对象缺失 `puzzle`、`coordinate` 或 `value`，返回的值将是 `{ error: Required field(s) missing }`
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const output = 'Required field(s) missing';
@@ -279,10 +279,10 @@ async (getUserInput) => {
 };
 ```
 
-如果提交给 `api/check` 的坐标不指向现有的网格单元格， 返回的值将是 `{ error: 'Invalid coordinate'}`
+如果提交给 `api/check` 的坐标不指向现有的网格单元格， 返回的值将是 `{ error: 'Invalid coordinate'}`
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const output = 'Invalid coordinate';
@@ -299,10 +299,10 @@ async (getUserInput) => {
 };
 ```
 
-如果提交给 `/api/check` 的 `value` 不是一个介于 1 到 9 之间的数字，则返回的值将是 `{ error: 'Invalid value' }`
+如果提交给 `/api/check` 的 `value` 不是一个介于 1 到 9 之间的数字，则返回的值将是 `{ error: 'Invalid value' }`
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const input =
     '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
   const output = 'Invalid value';
@@ -322,13 +322,13 @@ async (getUserInput) => {
 所有 12 个单元的测试都已完成并通过。 请参阅 `/tests/1_unit-tests.js` 来了解你应该写的测试的预期行为。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     const getTests = await $.get(getUserInput('url') + '/_api/get-tests');
     assert.isArray(getTests);
-    const units = getTests.filter((el) => el.context.includes('UnitTests'));
+    const units = getTests.filter(el => el.context.includes('UnitTests'));
     assert.isAtLeast(units.length, 12, 'At least 12 tests passed');
-    units.forEach((test) => {
+    units.forEach(test => {
       assert.equal(test.state, 'passed', 'Test in Passed State');
       assert.isAtLeast(
         test.assertions.length,
@@ -345,15 +345,15 @@ async (getUserInput) => {
 所有 14 项功能测试都已完成并通过。 请参阅 `/tests/2_functional-tests.js` 来了解你应该编写的测试的功能。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     const getTests = await $.get(getUserInput('url') + '/_api/get-tests');
     assert.isArray(getTests);
-    const funcs = getTests.filter((el) =>
+    const funcs = getTests.filter(el =>
       el.context.includes('Functional Tests')
     );
     assert.isAtLeast(funcs.length, 14, 'At least 14 tests passed');
-    funcs.forEach((test) => {
+    funcs.forEach(test => {
       assert.equal(test.state, 'passed', 'Test in Passed State');
       assert.isAtLeast(
         test.assertions.length,

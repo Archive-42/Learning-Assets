@@ -13,12 +13,13 @@ dashedName: match-whitespace
 可以使用 `\s` 搜寻空格，其中 `s` 是小写。 此匹配模式将匹配空格、回车符、制表符、换页符和换行符。 可以认为这类似于元字符 `[ \r\t\f\n\v]`。
 
 ```js
-let whiteSpace = "Whitespace. Whitespace everywhere!"
+let whiteSpace = 'Whitespace. Whitespace everywhere!';
 let spaceRegex = /\s/g;
 whiteSpace.match(spaceRegex);
 ```
 
 这个 `match` 调用将返回 `[" ", " "]`。
+
 # --instructions--
 
 修改正则表达式 `countWhiteSpace` 查找字符串中的多个空白字符。
@@ -63,7 +64,7 @@ assert('MindYourPersonalSpace'.match(countWhiteSpace) == null);
 ## --seed-contents--
 
 ```js
-let sample = "Whitespace is important in separating words";
+let sample = 'Whitespace is important in separating words';
 let countWhiteSpace = /change/; // Change this line
 let result = sample.match(countWhiteSpace);
 ```
@@ -71,7 +72,7 @@ let result = sample.match(countWhiteSpace);
 # --solutions--
 
 ```js
-let sample = "Whitespace is important in separating words";
+let sample = 'Whitespace is important in separating words';
 let countWhiteSpace = /\s/g;
 let result = sample.match(countWhiteSpace);
 ```

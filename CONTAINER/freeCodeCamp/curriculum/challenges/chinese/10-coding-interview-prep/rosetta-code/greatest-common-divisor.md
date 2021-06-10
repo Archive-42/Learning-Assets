@@ -65,15 +65,13 @@ assert.equal(gcd(1300, 250), 50);
 ## --seed-contents--
 
 ```js
-function gcd(a, b) {
-
-}
+function gcd(a, b) {}
 ```
 
 # --solutions--
 
 ```js
 function gcd(a, b) {
-  return b==0 ? Math.abs(a):gcd(b, a % b);
+  return b == 0 ? Math.abs(a) : gcd(b, a % b);
 }
 ```

@@ -13,10 +13,10 @@ dashedName: split-a-string-into-an-array-using-the-split-method
 下面是两个用空格分隔一个字符串的例子，另一个是用数字的正则表达式分隔：
 
 ```js
-var str = "Hello World";
-var bySpace = str.split(" ");
+var str = 'Hello World';
+var bySpace = str.split(' ');
 
-var otherString = "How9are7you2today";
+var otherString = 'How9are7you2today';
 var byDigits = otherString.split(/\d/);
 ```
 
@@ -70,11 +70,9 @@ assert(
 ```js
 function splitify(str) {
   // Only change code below this line
-
-
   // Only change code above this line
 }
-splitify("Hello World,I-am code");
+splitify('Hello World,I-am code');
 ```
 
 # --solutions--

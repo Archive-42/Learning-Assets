@@ -111,7 +111,6 @@ let users = {
 
 function isEveryoneHere(obj) {
   // Only change code below this line
-
   // Only change code above this line
 }
 
@@ -141,12 +140,7 @@ let users = {
 };
 
 function isEveryoneHere(obj) {
-  return [
-    'Alan',
-    'Jeff',
-    'Sarah',
-    'Ryan'
-  ].every(i => obj.hasOwnProperty(i));
+  return ['Alan', 'Jeff', 'Sarah', 'Ryan'].every(i => obj.hasOwnProperty(i));
 }
 
 console.log(isEveryoneHere(users));

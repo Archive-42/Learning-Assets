@@ -101,15 +101,13 @@ assert(!happy(33));
 ## --seed-contents--
 
 ```js
-function happy(number) {
-
-}
+function happy(number) {}
 ```
 
 # --solutions--
 
 ```js
-function happy (number) {
+function happy(number) {
   let m;
   let digit;
   const cycle = [];
@@ -124,6 +122,6 @@ function happy (number) {
     }
     number = m;
   }
-  return (number === 1);
+  return number === 1;
 }
 ```

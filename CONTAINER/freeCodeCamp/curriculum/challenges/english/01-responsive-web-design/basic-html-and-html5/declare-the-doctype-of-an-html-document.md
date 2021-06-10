@@ -23,9 +23,7 @@ Here's an example of the page structure. Your HTML code would go in the space be
 
 ```html
 <!DOCTYPE html>
-<html>
-
-</html>
+<html></html>
 ```
 
 # --instructions--
@@ -65,6 +63,6 @@ assert(code.match(/<html>\s*?<h1>\s*?.*?\s*?<\/h1>\s*?<\/html>/gi));
 ```html
 <!DOCTYPE html>
 <html>
-  <h1> Hello world </h1>
+  <h1>Hello world</h1>
 </html>
 ```

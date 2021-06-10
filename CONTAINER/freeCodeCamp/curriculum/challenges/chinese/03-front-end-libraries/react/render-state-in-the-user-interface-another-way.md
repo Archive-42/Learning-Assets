@@ -40,7 +40,7 @@ assert(
 渲染的 `h1` 标签应该包含 `{name}` 的引用。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(/<h1>\n*\s*\{\s*name\s*\}\s*\n*<\/h1>/.test(getUserInput('index')));
 ```
 
@@ -48,7 +48,7 @@ assert(
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
   const first = () => {
@@ -65,7 +65,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
+ReactDOM.render(<MyComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -76,7 +76,7 @@ class MyComponent extends React.Component {
     super(props);
     this.state = {
       name: 'freeCodeCamp'
-    }
+    };
   }
   render() {
     // Change code below this line
@@ -84,13 +84,13 @@ class MyComponent extends React.Component {
     // Change code above this line
     return (
       <div>
-        { /* Change code below this line */ }
+        {/* Change code below this line */}
 
-        { /* Change code above this line */ }
+        {/* Change code above this line */}
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -101,7 +101,7 @@ class MyComponent extends React.Component {
     super(props);
     this.state = {
       name: 'freeCodeCamp'
-    }
+    };
   }
   render() {
     // Change code below this line
@@ -109,11 +109,11 @@ class MyComponent extends React.Component {
     // Change code above this line
     return (
       <div>
-        { /* Change code below this line */ }
+        {/* Change code below this line */}
         <h1>{name}</h1>
-        { /* Change code above this line */ }
+        {/* Change code above this line */}
       </div>
     );
   }
-};
+}
 ```

@@ -13,7 +13,7 @@ Sometimes your HTML elements will receive multiple styles that conflict with one
 
 For example, your `h1` element can't be both green and pink at the same time.
 
-Let's see what happens when we create a class that makes text pink, then apply it to an element. Will our class *override* the `body` element's `color: green;` CSS property?
+Let's see what happens when we create a class that makes text pink, then apply it to an element. Will our class _override_ the `body` element's `color: green;` CSS property?
 
 # --instructions--
 

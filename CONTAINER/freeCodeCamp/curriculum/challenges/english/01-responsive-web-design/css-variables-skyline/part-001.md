@@ -22,6 +22,7 @@ assert(code.match(/<!DOCTYPE\s+html\s*>/gi));
 ## --seed-contents--
 
 ```html
+
 ```
 
 # --solutions--

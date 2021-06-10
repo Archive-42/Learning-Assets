@@ -40,27 +40,33 @@ Test 1
         <section>
           <h2>Coffees</h2>
           <article class="item">
-            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+            <p class="flavor">French Vanilla</p>
+            <p class="price">3.00</p>
           </article>
---fcc-editable-region--
+          --fcc-editable-region--
           <article class="item">
-            <p>Carmel Macchiato</p><p>3.75</p>
-          </article>
-          <article class="item">
-            <p>Pumpkin Spice</p><p>3.50</p>
-          </article>
-          <article class="item">
-            <p>Hazelnut</p><p>4.00</p>
+            <p>Carmel Macchiato</p>
+            <p>3.75</p>
           </article>
           <article class="item">
-            <p>Mocha</p><p>4.50</p>
+            <p>Pumpkin Spice</p>
+            <p>3.50</p>
           </article>
---fcc-editable-region--
+          <article class="item">
+            <p>Hazelnut</p>
+            <p>4.00</p>
+          </article>
+          <article class="item">
+            <p>Mocha</p>
+            <p>4.50</p>
+          </article>
+          --fcc-editable-region--
         </section>
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -68,7 +74,9 @@ body {
   background-image: url(https://tinyurl.com/coffee-beans-fcc);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 
@@ -93,4 +101,3 @@ h1, h2, p {
   width: 50%;
 }
 ```
-

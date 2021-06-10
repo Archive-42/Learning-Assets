@@ -93,7 +93,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<Frameworks />, document.getElementById('root'))
+ReactDOM.render(<Frameworks />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -113,12 +113,10 @@ function Frameworks() {
   return (
     <div>
       <h1>Popular Front End JavaScript Frameworks</h1>
-      <ul>
-        {renderFrameworks}
-      </ul>
+      <ul>{renderFrameworks}</ul>
     </div>
   );
-};
+}
 ```
 
 # --solutions--
@@ -134,14 +132,14 @@ const frontEndFrameworks = [
 ];
 
 function Frameworks() {
-  const renderFrameworks = frontEndFrameworks.map((fw, i) => <li key={i}>{fw}</li>);
+  const renderFrameworks = frontEndFrameworks.map((fw, i) => (
+    <li key={i}>{fw}</li>
+  ));
   return (
     <div>
       <h1>Popular Front End JavaScript Frameworks</h1>
-      <ul>
-        {renderFrameworks}
-      </ul>
+      <ul>{renderFrameworks}</ul>
     </div>
   );
-};
+}
 ```

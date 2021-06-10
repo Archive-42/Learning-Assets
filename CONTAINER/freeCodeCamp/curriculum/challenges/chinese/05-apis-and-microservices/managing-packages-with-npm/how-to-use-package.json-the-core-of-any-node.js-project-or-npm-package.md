@@ -37,13 +37,13 @@ dashedName: how-to-use-package-json-the-core-of-any-node-js-project-or-npm-packa
 package.json 应该有一个有效的“author”键
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert(packJson.author, '"author" is missing');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

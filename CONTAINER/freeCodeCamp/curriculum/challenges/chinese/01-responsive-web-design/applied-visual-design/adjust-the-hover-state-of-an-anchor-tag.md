@@ -50,9 +50,6 @@ assert(
   a {
     color: #000;
   }
-
-
-
 </style>
 <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
 ```
@@ -65,7 +62,7 @@ assert(
     color: #000;
   }
   a:hover {
-    color: rgba(0,0,255,1);
+    color: rgba(0, 0, 255, 1);
   }
 </style>
 <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>

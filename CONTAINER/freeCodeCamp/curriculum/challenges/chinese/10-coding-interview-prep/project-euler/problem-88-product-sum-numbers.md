@@ -48,7 +48,6 @@ assert.strictEqual(productSumNumbers(), 7587457);
 
 ```js
 function productSumNumbers() {
-
   return true;
 }
 

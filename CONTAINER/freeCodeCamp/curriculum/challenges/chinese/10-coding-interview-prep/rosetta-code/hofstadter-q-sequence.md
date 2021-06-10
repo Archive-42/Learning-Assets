@@ -8,7 +8,7 @@ dashedName: hofstadter-q-sequence
 
 # --description--
 
-The [Hofstadter Q sequence](https://en.wikipedia.org/wiki/Hofstadter_sequence#Hofstadter_Q_sequence "wp: Hofstadter_sequence#Hofstadter_Q_sequence") is defined as:
+The [Hofstadter Q sequence](https://en.wikipedia.org/wiki/Hofstadter_sequence#Hofstadter_Q_sequence 'wp: Hofstadter_sequence#Hofstadter_Q_sequence') is defined as:
 
 $Q(1)=Q(2)=1, \\\\ Q(n)=Q\\big(n-Q(n-1)\\big)+Q\\big(n-Q(n-2)), \\quad n>2.$
 
@@ -69,7 +69,6 @@ const res = [502, 755, 1005, 1261];
 
 ```js
 function hofstadterQ(n) {
-
   return n;
 }
 ```
@@ -77,7 +76,7 @@ function hofstadterQ(n) {
 # --solutions--
 
 ```js
-function hofstadterQ (n) {
+function hofstadterQ(n) {
   const memo = [1, 1, 1];
   const Q = function (i) {
     let result = memo[i];

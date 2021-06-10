@@ -17,9 +17,7 @@ dashedName: dynamically-set-the-coordinates-for-each-bar
 D3 的 `attr()` 方法可接收一个回调函数来动态设置属性。 这个回调函数有两个参数，一个是数据点本身（通常是 `d`），另一个是该数据点在数组中的下标， 这个参数是可选的。 下面是其格式：
 
 ```js
-selection.attr("property", (d, i) => {
-
-})
+selection.attr('property', (d, i) => {});
 ```
 
 值得注意的是，你不需要写 `for` 循环或者用 `forEach()` 迭代数据集中的对象。 `data()` 方法会解析数据集，任何链接在 `data()` 后面的方法都会为数据集中的每个对象运行一次。
@@ -98,25 +96,24 @@ assert($('rect').eq(8).attr('x') == '240');
     const w = 500;
     const h = 100;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("rect")
-       .data(dataset)
-       .enter()
-       .append("rect")
-       .attr("x", (d, i) => {
-         // Add your code below this line
-
-
-
-         // Add your code above this line
-       })
-       .attr("y", 0)
-       .attr("width", 25)
-       .attr("height", 100);
+    svg
+      .selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('x', (d, i) => {
+        // Add your code below this line
+        // Add your code above this line
+      })
+      .attr('y', 0)
+      .attr('width', 25)
+      .attr('height', 100);
   </script>
 </body>
 ```
@@ -131,21 +128,23 @@ assert($('rect').eq(8).attr('x') == '240');
     const w = 500;
     const h = 100;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("rect")
-       .data(dataset)
-       .enter()
-       .append("rect")
-       .attr("x", (d, i) => {
-         return i * 30
-       })
-       .attr("y", 0)
-       .attr("width", 25)
-       .attr("height", 100);
+    svg
+      .selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('x', (d, i) => {
+        return i * 30;
+      })
+      .attr('y', 0)
+      .attr('width', 25)
+      .attr('height', 100);
   </script>
 </body>
 ```

@@ -33,11 +33,10 @@ assert(
 <style>
   header {
     background-color: hsl(180, 90%, 35%);
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   nav {
-
   }
 
   h1 {
@@ -79,7 +78,7 @@ assert(
 <style>
   header {
     background-color: hsl(180, 90%, 35%);
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   nav {

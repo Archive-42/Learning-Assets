@@ -19,7 +19,7 @@ Repl.it 是一个真实的服务器。正式的服务通过 handler 函数和数
 ```js
 /* Example */
 
-const someFunc = function(done) {
+const someFunc = function (done) {
   //... do something (risky) ...
   if (error) return done(error);
   done(null, result);
@@ -47,13 +47,13 @@ favoriteFoods : array of strings (*)
 应当成功地通过 Mongoose schema 创建实例
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/mongoose-model', {
     name: 'Mike',
     age: 28,
     favoriteFoods: ['pizza', 'cheese']
   }).then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'Mike', '"model.name" is not what expected');
       assert.equal(data.age, '28', '"model.age" is not what expected');
       assert.isArray(
@@ -71,7 +71,7 @@ favoriteFoods : array of strings (*)
         '"model.favoriteFoods" does not include the expected items'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

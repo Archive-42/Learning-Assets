@@ -21,13 +21,13 @@ dashedName: perform-new-updates-on-a-document-using-model-findoneandupdate
 应成功地使用 findOneAndUpdate 更新数据
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/find-one-update', {
     name: 'Dorian Gray',
     age: 35,
     favoriteFoods: ['unknown']
   }).then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'Dorian Gray', 'item.name is not what expected');
       assert.equal(data.age, 20, 'item.age is not what expected');
       assert.deepEqual(
@@ -41,7 +41,7 @@ dashedName: perform-new-updates-on-a-document-using-model-findoneandupdate
         'findOneAndUpdate does not increment version by design!'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

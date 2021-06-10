@@ -24,7 +24,7 @@ Test 1
 ```html
 <!DOCTYPE html>
 <html>
---fcc-editable-region--
+  --fcc-editable-region--
   <head>
     <meta charset="utf-8" />
     <title>Camper Cafe Menu</title>
@@ -40,7 +40,7 @@ Test 1
       </section>
     </main>
   </body>
---fcc-editable-region--
-<html>
+  --fcc-editable-region--
+  <html></html>
+</html>
 ```
-

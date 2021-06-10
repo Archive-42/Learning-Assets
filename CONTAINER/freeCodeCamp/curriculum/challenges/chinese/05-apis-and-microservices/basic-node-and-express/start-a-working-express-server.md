@@ -31,16 +31,16 @@ function(req, res) {
 应用应该返回字符串“Hello Express”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url')).then(
-    (data) => {
+    data => {
       assert.equal(
         data,
         'Hello Express',
         'Your app does not serve the text "Hello Express"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

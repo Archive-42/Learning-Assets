@@ -50,7 +50,7 @@ assert.deepEqual(translatePigLatin('algorithm'), 'algorithmway');
 assert.deepEqual(translatePigLatin('eight'), 'eightway');
 ```
 
-应该处理单词的第一个元音在单词中间的位置的情况。  `translatePigLatin("schwartz")` 应该返回字符串 `artzschway`。
+应该处理单词的第一个元音在单词中间的位置的情况。 `translatePigLatin("schwartz")` 应该返回字符串 `artzschway`。
 
 ```js
 assert.deepEqual(translatePigLatin('schwartz'), 'artzschway');
@@ -71,14 +71,14 @@ function translatePigLatin(str) {
   return str;
 }
 
-translatePigLatin("consonant");
+translatePigLatin('consonant');
 ```
 
 # --solutions--
 
 ```js
 function translatePigLatin(str) {
-  if (isVowel(str.charAt(0))) return str + "way";
+  if (isVowel(str.charAt(0))) return str + 'way';
   var front = [];
   str = str.split('');
   while (str.length && !isVowel(str[0])) {

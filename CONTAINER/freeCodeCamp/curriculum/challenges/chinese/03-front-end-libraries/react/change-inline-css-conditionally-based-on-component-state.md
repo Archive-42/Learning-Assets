@@ -10,7 +10,7 @@ dashedName: change-inline-css-conditionally-based-on-component-state
 
 此时，已经看到了一些条件渲染的应用程序和内联样式的使用。 这里还有一个将这两个主题结合在一起的例子。 你也可以根据 React 组件的 state 有条件地渲染 CSS。 要执行此操作，请检查条件，如果满足该条件，则修改在 render 方法中分配给 JSX 元素的样式对象。
 
-理解这个模式很重要，因为相比传统的方式（这在 jQuery 中非常常见），直接修改 DOM 元素来应用样式的方法是一个戏剧性的转变。 在该方法中，必须跟踪元素何时更改并直接处理实际操作。 跟踪更改可能变得很困难，可能会使 UI无法预测。 当根据一个条件设置一个样式对象时，描述了 UI 作为应用程序的状态函数应当如何展现。 如此便有一个清晰的单向流动的信息流。 这是使用 React 编写应用程序时的首选方法。
+理解这个模式很重要，因为相比传统的方式（这在 jQuery 中非常常见），直接修改 DOM 元素来应用样式的方法是一个戏剧性的转变。 在该方法中，必须跟踪元素何时更改并直接处理实际操作。 跟踪更改可能变得很困难，可能会使 UI 无法预测。 当根据一个条件设置一个样式对象时，描述了 UI 作为应用程序的状态函数应当如何展现。 如此便有一个清晰的单向流动的信息流。 这是使用 React 编写应用程序时的首选方法。
 
 # --instructions--
 
@@ -71,7 +71,7 @@ assert(
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   const mockedComponent = Enzyme.mount(React.createElement(GateKeeper));
   const simulateChange = (el, value) =>
@@ -102,7 +102,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<GateKeeper />, document.getElementById('root'))
+ReactDOM.render(<GateKeeper />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -117,7 +117,7 @@ class GateKeeper extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
-    this.setState({ input: event.target.value })
+    this.setState({ input: event.target.value });
   }
   render() {
     let inputStyle = {
@@ -130,14 +130,15 @@ class GateKeeper extends React.Component {
       <div>
         <h3>Don't Type Too Much:</h3>
         <input
-          type="text"
+          type='text'
           style={inputStyle}
           value={this.state.input}
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -152,7 +153,7 @@ class GateKeeper extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
-    this.setState({ input: event.target.value })
+    this.setState({ input: event.target.value });
   }
   render() {
     let inputStyle = {
@@ -160,17 +161,18 @@ class GateKeeper extends React.Component {
     };
     if (this.state.input.length > 15) {
       inputStyle.border = '3px solid red';
-    };
+    }
     return (
       <div>
         <h3>Don't Type Too Much:</h3>
         <input
-          type="text"
+          type='text'
           style={inputStyle}
           value={this.state.input}
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
-};
+}
 ```

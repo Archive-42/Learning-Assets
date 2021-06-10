@@ -39,7 +39,6 @@ assert($('#box-container').css('flex-wrap') == 'wrap');
     background: gray;
     display: flex;
     height: 100%;
-
   }
   #box-1 {
     background-color: dodgerblue;
