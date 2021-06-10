@@ -16,13 +16,13 @@ Doctests
 [{"x": 3, "y": 1}, {"x": 3.5, "y": 5.5}, {"x": 4, "y": 11.625}]
 */
 
-function eulerStep (xCurrent, stepSize, yCurrent, differentialEquation) {
+function eulerStep(xCurrent, stepSize, yCurrent, differentialEquation) {
   // calculates the next y-value based on the current value of x, y and the stepSize
   const yNext = yCurrent + stepSize * differentialEquation(xCurrent, yCurrent)
   return yNext
 }
 
-function eulerFull (xStart, xEnd, stepSize, yStart, differentialEquation) {
+function eulerFull(xStart, xEnd, stepSize, yStart, differentialEquation) {
   // loops through all the steps until xEnd is reached, adds a point for each step and then returns all the points
   const points = [{ x: xStart, y: yStart }]
   let yCurrent = yStart
@@ -38,7 +38,7 @@ function eulerFull (xStart, xEnd, stepSize, yStart, differentialEquation) {
   return points
 }
 
-function plotLine (label, points, width, height) {
+function plotLine(label, points, width, height) {
   // utility function to plot the results
 
   // container needed to control the size of the canvas
@@ -52,17 +52,20 @@ function plotLine (label, points, width, height) {
   container.append(canvas)
 
   // Chart-class from chartjs
-  const chart = new Chart(canvas, { // eslint-disable-line
+  const chart = new Chart(canvas, {
+    // eslint-disable-line
     type: 'scatter',
     data: {
-      datasets: [{
-        label: label,
-        data: points,
-        showLine: true,
-        fill: false,
-        tension: 0,
-        borderColor: 'black'
-      }]
+      datasets: [
+        {
+          label: label,
+          data: points,
+          showLine: true,
+          fill: false,
+          tension: 0,
+          borderColor: 'black'
+        }
+      ]
     },
     options: {
       maintainAspectRatio: false,
@@ -71,17 +74,17 @@ function plotLine (label, points, width, height) {
   })
 }
 
-function exampleEquation1 (x, y) {
+function exampleEquation1(x, y) {
   return x
 }
 
 // example from https://en.wikipedia.org/wiki/Euler_method
-function exampleEquation2 (x, y) {
+function exampleEquation2(x, y) {
   return y
 }
 
 // example from https://www.geeksforgeeks.org/euler-method-solving-differential-equation/
-function exampleEquation3 (x, y) {
+function exampleEquation3(x, y) {
   return x + y + x * y
 }
 

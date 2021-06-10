@@ -41,7 +41,7 @@
   display: inline-block;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  content: '';
+  content: "";
 }
 .carousel .control-disabled.control-arrow {
   opacity: 0;

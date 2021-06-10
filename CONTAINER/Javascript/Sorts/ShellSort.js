@@ -3,7 +3,7 @@
  * more information: https://en.wikipedia.org/wiki/Shellsort
  *
  */
-function shellSort (items) {
+function shellSort(items) {
   let interval = 1
 
   while (interval < items.length / 3) {

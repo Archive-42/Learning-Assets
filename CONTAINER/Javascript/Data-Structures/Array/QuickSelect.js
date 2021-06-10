@@ -11,16 +11,11 @@
  * @flow
  */
 
-function QuickSelect (items, kth) {
+function QuickSelect(items, kth) {
   return RandomizedSelect(items, 0, items.length - 1, kth)
 }
 
-function RandomizedSelect (
-  items,
-  left,
-  right,
-  i
-) {
+function RandomizedSelect(items, left, right, i) {
   if (left === right) return items[left]
 
   const pivotIndex = RandomizedPartition(items, left, right)
@@ -32,13 +27,13 @@ function RandomizedSelect (
   return RandomizedSelect(items, pivotIndex + 1, right, i - k)
 }
 
-function RandomizedPartition (items, left, right) {
+function RandomizedPartition(items, left, right) {
   const rand = getRandomInt(left, right)
   Swap(items, rand, right)
   return Partition(items, left, right)
 }
 
-function Partition (items, left, right) {
+function Partition(items, left, right) {
   const x = items[right]
   let pivotIndex = left - 1
 
@@ -54,12 +49,12 @@ function Partition (items, left, right) {
   return pivotIndex + 1
 }
 
-function getRandomInt (min, max) {
+function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-function Swap (arr, x, y) {
-  [arr[x], arr[y]] = [arr[y], arr[x]]
+function Swap(arr, x, y) {
+  ;[arr[x], arr[y]] = [arr[y], arr[x]]
 }
 
 // testing

@@ -9,7 +9,7 @@
  *
  */
 
-function interpolationSearch (arr, key) {
+function interpolationSearch(arr, key) {
   const length = arr.length - 1
   let low = 0
   let high = length

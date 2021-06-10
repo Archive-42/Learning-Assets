@@ -1,26 +1,25 @@
-import React from 'react'
-import List from './list'
-import Form from './form'
+import React from "react";
+import List from "./list";
+import Form from "./form";
 
 class Todos extends React.Component {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      items: ['foo', 'bar'],
-    }
+      items: ["foo", "bar"],
+    };
 
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(value) {
-    const items = this.state.items.slice()
-    items.unshift(value)
+    const items = this.state.items.slice();
+    items.unshift(value);
 
     this.setState({
       items,
-    })
+    });
   }
 
   render() {
@@ -29,8 +28,8 @@ class Todos extends React.Component {
         <List items={this.state.items} />
         <Form onSubmit={this.handleSubmit} />
       </div>
-    )
+    );
   }
 }
 
-export default Todos
+export default Todos;

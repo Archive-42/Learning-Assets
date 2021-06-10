@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import Todos from './components/todos'
+import Todos from "./components/todos";
 
 class App extends Component {
   render() {
@@ -14,8 +14,8 @@ class App extends Component {
         </div>
         <Todos />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

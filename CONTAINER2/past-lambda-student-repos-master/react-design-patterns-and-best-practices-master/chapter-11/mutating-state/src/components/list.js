@@ -1,21 +1,20 @@
-import React from 'react'
+import React from "react";
 
 class List extends React.PureComponent {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      items: ['foo', 'bar'],
-    }
+      items: ["foo", "bar"],
+    };
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState({
-      items: this.state.items.concat('baz'),
-    })
+      items: this.state.items.concat("baz"),
+    });
   }
 
   render() {
@@ -24,9 +23,8 @@ class List extends React.PureComponent {
         {this.state.items.length}
         <button onClick={this.handleClick}>+</button>
       </div>
-    )
+    );
   }
-
 }
 
-export default List
+export default List;

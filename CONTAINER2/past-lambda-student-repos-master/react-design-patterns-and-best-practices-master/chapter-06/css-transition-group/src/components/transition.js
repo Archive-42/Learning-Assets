@@ -1,6 +1,6 @@
-import React from 'react'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import './transition.css'
+import React from "react";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import "./transition.css";
 
 const Transition = () => (
   <ReactCSSTransitionGroup
@@ -10,6 +10,6 @@ const Transition = () => (
   >
     <h1>Hello React</h1>
   </ReactCSSTransitionGroup>
-)
+);
 
-export default Transition
+export default Transition;

@@ -94,9 +94,10 @@ Handy way of reducing size of data returned for any one query
   Projections reduce the network overhead and processing requirements by limiting the fields returned in result documents
   Projections are supplied as the second argument of the find command
 
-Projection syntax allows you to explicitly include fields in documents returned - can also explicitly exclude fields  
- - if you want to exclude \_id, expliclty state that in the projection document
-`db.collection.find({query document}, {projection document})`
+Projection syntax allows you to explicitly include fields in documents returned - can also explicitly exclude fields
+
+- if you want to exclude \_id, expliclty state that in the projection document
+  `db.collection.find({query document}, {projection document})`
 
 ### Comparison Operators:
 

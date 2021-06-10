@@ -1,19 +1,19 @@
 /* Binary Search Tree!!
-*
-* Nodes that will go on the Binary Tree.
-* They consist of the data in them, the node to the left, the node
-* to the right, and the parent from which they came from.
-*
-* A binary tree is a data structure in which an element
-* has two successors(children). The left child is usually
-* smaller than the parent, and the right child is usually
-* bigger.
-*/
+ *
+ * Nodes that will go on the Binary Tree.
+ * They consist of the data in them, the node to the left, the node
+ * to the right, and the parent from which they came from.
+ *
+ * A binary tree is a data structure in which an element
+ * has two successors(children). The left child is usually
+ * smaller than the parent, and the right child is usually
+ * bigger.
+ */
 
 // class Node
 const Node = (function () {
   // Node in the tree
-  function Node (val) {
+  function Node(val) {
     this.value = val
     this.left = null
     this.right = null
@@ -64,14 +64,14 @@ const Node = (function () {
 
   // returns the constructor
   return Node
-}())
+})()
 
 // class Tree
 const Tree = (function () {
-  function Tree () {
+  function Tree() {
     // Just store the root
     this.root = null
-  };
+  }
 
   // Inorder traversal
   Tree.prototype.traverse = function () {
@@ -100,7 +100,7 @@ const Tree = (function () {
 
   // returns the constructor
   return Tree
-}())
+})()
 
 // Implementation of BST
 const bst = new Tree()

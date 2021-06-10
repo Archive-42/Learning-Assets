@@ -17,7 +17,7 @@ const maxCharacter = (value) => {
   }
   let maxCharacter = null
   let maxCount = 0
-  Object.keys(occurrences).forEach(char => {
+  Object.keys(occurrences).forEach((char) => {
     if (occurrences[char] > maxCount) {
       maxCount = occurrences[char]
       maxCharacter = char

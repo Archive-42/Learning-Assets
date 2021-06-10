@@ -14,7 +14,7 @@ Doctests
 [ 'F', 'G' ]
 */
 
-function breadthFirstSearch (graph, startingNode) {
+function breadthFirstSearch(graph, startingNode) {
   // visited keeps track of all nodes visited
   const visited = new Set()
 

@@ -1,6 +1,6 @@
 class DoubleLinkedListNode {
   // Double Linked List Node built specifically for LRU Cache
-  constructor (key, val) {
+  constructor(key, val) {
     this.key = key
     this.val = val
     this.next = null
@@ -10,14 +10,14 @@ class DoubleLinkedListNode {
 
 class DoubleLinkedList {
   // Double Linked List built specifically for LRU Cache
-  constructor () {
+  constructor() {
     this.head = new DoubleLinkedListNode(null, null)
     this.rear = new DoubleLinkedListNode(null, null)
     this.head.next = this.rear
     this.rear.prev = this.head
   }
 
-  add (node) {
+  add(node) {
     // Adds the given node to the end of the list (before rear)
     const temp = this.rear.prev
     temp.next = node
@@ -26,7 +26,7 @@ class DoubleLinkedList {
     node.next = this.rear
   }
 
-  remove (node) {
+  remove(node) {
     // Removes and returns the given node from the list
     const tempLast = node.prev
     const tempNext = node.next
@@ -41,7 +41,7 @@ class DoubleLinkedList {
 
 class LRUCache {
   // LRU Cache to store a given capacity of data
-  constructor (capacity) {
+  constructor(capacity) {
     this.list = new DoubleLinkedList()
     this.capacity = capacity
     this.numKeys = 0
@@ -50,12 +50,12 @@ class LRUCache {
     this.cache = {}
   }
 
-  cacheInfo () {
+  cacheInfo() {
     // Return the details for the cache instance [hits, misses, capacity, current_size]
     return `CacheInfo(hits=${this.hits}, misses=${this.miss}, capacity=${this.capacity}, current size=${this.numKeys})`
   }
 
-  set (key, value) {
+  set(key, value) {
     // Sets the value for the input key and updates the Double Linked List
     if (!(key in this.cache)) {
       if (this.numKeys >= this.capacity) {
@@ -74,7 +74,7 @@ class LRUCache {
     }
   }
 
-  get (key) {
+  get(key) {
     // Returns the value for the input key and updates the Double Linked List. Returns null if key is not present in cache
     if (key in this.cache) {
       this.hits += 1
@@ -86,7 +86,7 @@ class LRUCache {
   }
 }
 
-function main () {
+function main() {
   // Example 1 (Small Cache)
   const cache = new LRUCache(2)
   cache.set(1, 1)
@@ -107,19 +107,27 @@ function main () {
   console.log('Example Cache: ', cache.cacheInfo(), '\n')
 
   // Example 2 (Computing Fibonacci Series - 100 terms)
-  function fib (num, cache = null) {
+  function fib(num, cache = null) {
     if (cache) {
       const value = cache.get(num)
-      if (value) { return value }
+      if (value) {
+        return value
+      }
     }
-    if (num === 1 || num === 2) { return 1 }
+    if (num === 1 || num === 2) {
+      return 1
+    }
     const result = fib(num - 1, cache) + fib(num - 2, cache)
-    if (cache) { cache.set(num, result) }
+    if (cache) {
+      cache.set(num, result)
+    }
     return result
   }
 
   const fibCache = new LRUCache(100)
-  for (let i = 1; i <= 100; i++) { fib(i, fibCache) }
+  for (let i = 1; i <= 100; i++) {
+    fib(i, fibCache)
+  }
   console.log('Fibonacci Series Cache: ', fibCache.cacheInfo(), '\n')
 }
 

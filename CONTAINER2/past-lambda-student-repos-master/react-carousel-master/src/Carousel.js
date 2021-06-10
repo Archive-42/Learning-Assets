@@ -1,8 +1,8 @@
-import React from 'react'
-import { Carousel } from 'react-responsive-carousel'
-import ImageOne from './assets/1.jpeg'
-import ImageTwo from './assets/2.jpeg'
-import ImageThree from './assets/3.jpeg'
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import ImageOne from "./assets/1.jpeg";
+import ImageTwo from "./assets/2.jpeg";
+import ImageThree from "./assets/3.jpeg";
 // import ImageFour from './assets/4.jpeg'
 // import ImageFive from './assets/5.jpeg'
 // import ImageSix from './assets/6.jpeg'
@@ -32,4 +32,4 @@ export default () => (
       <img alt="7" src={ImageSeven} />
     </div> */}
   </Carousel>
-)
+);

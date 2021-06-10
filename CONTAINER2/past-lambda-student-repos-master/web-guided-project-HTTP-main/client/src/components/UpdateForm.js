@@ -7,21 +7,22 @@ const initialItem = {
   price: "",
   imageUrl: "",
   description: "",
-  shipping: ""
+  shipping: "",
 };
 
-const UpdateForm = props => {
+const UpdateForm = (props) => {
   const { push } = useHistory();
   const [item, setItem] = useState(initialItem);
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:3333/itemById/${id}`)
-    .then(res => setItem(res.data))
-    .catch(err => console.log(err));
+    axios
+      .get(`http://localhost:3333/itemById/${id}`)
+      .then((res) => setItem(res.data))
+      .catch((err) => console.log(err));
   }, [id]);
 
-  const changeHandler = ev => {
+  const changeHandler = (ev) => {
     ev.persist();
     let value = ev.target.value;
     if (ev.target.name === "price") {
@@ -30,19 +31,20 @@ const UpdateForm = props => {
 
     setItem({
       ...item,
-      [ev.target.name]: value
+      [ev.target.name]: value,
     });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // make a PUT request to edit the item
-    axios.put(`http://localhost:3333/items/${id}`, item)
-    .then((res) => {
-      props.setItems(res.data); // update application level state (prop passed in from the Route!)
-      push(`/item-list/${id}`); // direct the user to the single item view for the updated item
-    })
-    .catch(err => console.log(err));
+    axios
+      .put(`http://localhost:3333/items/${id}`, item)
+      .then((res) => {
+        props.setItems(res.data); // update application level state (prop passed in from the Route!)
+        push(`/item-list/${id}`); // direct the user to the single item view for the updated item
+      })
+      .catch((err) => console.log(err));
   };
 
   return (

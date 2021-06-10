@@ -1,7 +1,7 @@
 /**
-  * Check and count occurrence of each word in a string
-  * Inputs a String eg. Madonna and Boolean
-  **/
+ * Check and count occurrence of each word in a string
+ * Inputs a String eg. Madonna and Boolean
+ **/
 
 const checkWordOccurrence = (str, isCaseSensitive = false) => {
   if (typeof str !== 'string') {
@@ -16,7 +16,7 @@ const checkWordOccurrence = (str, isCaseSensitive = false) => {
     for (let i = 0; i < str.length; i++) {
       const word = isCaseSensitive ? str[i] : str[i].toUpperCase()
       if (/\s/.test(word)) continue
-      result[word] = (!result[word]) ? 1 : result[word] + 1
+      result[word] = !result[word] ? 1 : result[word] + 1
     }
   }
 

@@ -1,1 +1,1 @@
-export { default } from './geolocation-container'
+export { default } from "./geolocation-container";

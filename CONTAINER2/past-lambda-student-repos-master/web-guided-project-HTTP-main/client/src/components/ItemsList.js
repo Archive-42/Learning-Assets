@@ -7,9 +7,9 @@ function ItemsList(props) {
   }
   return (
     <div className="items-list-wrapper">
-      {props.items.map(item => (
+      {props.items.map((item) => (
         <div
-          onClick={ev => routeToItem(ev, item)}
+          onClick={(ev) => routeToItem(ev, item)}
           className="item-card"
           key={item.id}
         >

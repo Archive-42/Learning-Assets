@@ -1,30 +1,29 @@
-import React from 'react'
-import Display from './display'
-import Buttons from './buttons'
+import React from "react";
+import Display from "./display";
+import Buttons from "./buttons";
 
 class Counter extends React.Component {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       counter: 0,
-    }
+    };
 
-    this.handleIncrement = this.handleIncrement.bind(this)
-    this.handleDecrement = this.handleDecrement.bind(this)
+    this.handleIncrement = this.handleIncrement.bind(this);
+    this.handleDecrement = this.handleDecrement.bind(this);
   }
 
   handleIncrement() {
     this.setState({
       counter: this.state.counter + 1,
-    })
+    });
   }
 
   handleDecrement() {
     this.setState({
       counter: this.state.counter - 1,
-    })
+    });
   }
 
   render() {
@@ -36,9 +35,8 @@ class Counter extends React.Component {
           onIncrement={this.handleIncrement}
         />
       </div>
-    )
+    );
   }
-
 }
 
-export default Counter
+export default Counter;

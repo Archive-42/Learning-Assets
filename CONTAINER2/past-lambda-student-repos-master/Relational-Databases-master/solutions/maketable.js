@@ -1,9 +1,9 @@
-const { Client } = require('pg');
+const { Client } = require("pg");
 
 (async function run() {
-  const client = new Client()
+  const client = new Client();
   try {
-    await client.connect()
+    await client.connect();
     await client.query(`
       CREATE TABLE IF NOT EXISTS Earthquake
       (ID SERIAL NOT NULL PRIMARY KEY,
@@ -11,8 +11,8 @@ const { Client } = require('pg');
       Magnitude REAL,
       Occurrence DATE,
       LONG REAL,
-      LAT REAL)`)
-    await client.query('DELETE FROM Earthquake')
+      LAT REAL)`);
+    await client.query("DELETE FROM Earthquake");
 
     /* I spent way too much time trying to figure out how to
        INSERT a POINT type using client.query()
@@ -39,22 +39,23 @@ const { Client } = require('pg');
     // INSERT INTO Earthquake(Name, Magnitude, Occurrence, Long_Lat) VALUES('Earthquake 7', 6.6, '2016-03-19', '(39.739236, -104.990251)')
 
     let data = [
-      ['Earthquake 1', 2.2, '2017-12-31', '36.169941', '-115.139830'],
-      ['Earthquake 2', 7.0, '2018-01-01', '37.774929', '-122.419416'],
-      ['Earthquake 3', 1.8, '2017-12-22', '40.712775', '-74.005973'],
-      ['Earthquake 4', 5.2, '2017-11-25', '34.052234', '-118.243685'],
-      ['Earthquake 5', 2.9, '2013-09-11', '45.523062', '-122.676482'],
-      ['Earthquake 6', 0.6, '2016-08-01', '30.267153', '-97.743061'],
-      ['Earthquake 7', 6.6, '2016-03-19', '39.739236', '-104.990251']
-    ]
+      ["Earthquake 1", 2.2, "2017-12-31", "36.169941", "-115.139830"],
+      ["Earthquake 2", 7.0, "2018-01-01", "37.774929", "-122.419416"],
+      ["Earthquake 3", 1.8, "2017-12-22", "40.712775", "-74.005973"],
+      ["Earthquake 4", 5.2, "2017-11-25", "34.052234", "-118.243685"],
+      ["Earthquake 5", 2.9, "2013-09-11", "45.523062", "-122.676482"],
+      ["Earthquake 6", 0.6, "2016-08-01", "30.267153", "-97.743061"],
+      ["Earthquake 7", 6.6, "2016-03-19", "39.739236", "-104.990251"],
+    ];
 
-    const query = 'INSERT INTO Earthquake(Name, Magnitude, Occurrence, LONG, LAT) VALUES($1, $2, $3, $4, $5)'
+    const query =
+      "INSERT INTO Earthquake(Name, Magnitude, Occurrence, LONG, LAT) VALUES($1, $2, $3, $4, $5)";
     for (let record of data) {
-      await client.query(query, record)
+      await client.query(query, record);
     }
 
-    await client.end()
+    await client.end();
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
-})()
+})();

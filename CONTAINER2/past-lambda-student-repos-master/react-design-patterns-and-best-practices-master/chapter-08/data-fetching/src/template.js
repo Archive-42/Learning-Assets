@@ -10,4 +10,4 @@ export default (body, gists) => `
       <script src="/bundle.js"></script>
     </body>
   </html>
-`
+`;

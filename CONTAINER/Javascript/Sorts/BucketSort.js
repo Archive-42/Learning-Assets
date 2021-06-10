@@ -11,7 +11,7 @@ Time Complexity of Solution:
 Best Case O(n); Average Case O(n); Worst Case O(n)
 
 */
-function bucketSort (list, size) {
+function bucketSort(list, size) {
   if (undefined === size) {
     size = 5
   }

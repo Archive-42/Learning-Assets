@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Button = styled.button`
   background-color: #ff0000;
@@ -16,6 +16,7 @@ const Button = styled.button`
   }
   @media (max-width: 480px) {
     width: 160px;
-  }`
+  }
+`;
 
-export default Button
+export default Button;

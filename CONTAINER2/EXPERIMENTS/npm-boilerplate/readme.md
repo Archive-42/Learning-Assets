@@ -37,9 +37,9 @@ $ npm install unicorn-fun
 ## Usage
 
 ```js
-import unicornFun from 'unicorn-fun';
+import unicornFun from "unicorn-fun";
 
-unicornFun('unicorns');
+unicornFun("unicorns");
 //=> 'unicorns & rainbows'
 ```
 

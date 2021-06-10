@@ -1,29 +1,28 @@
-import React from 'react'
+import React from "react";
 
 class Uncontrolled extends React.Component {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      firstName: '',
-      lastName: '',
-    }
+      firstName: "",
+      lastName: "",
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange({ target }) {
     this.setState({
       [target.name]: target.value,
-    })
+    });
   }
 
   handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    console.log(`${this.state.firstName} ${this.state.lastName}`)
+    console.log(`${this.state.firstName} ${this.state.lastName}`);
   }
 
   render() {
@@ -33,9 +32,8 @@ class Uncontrolled extends React.Component {
         <input type="text" name="lastName" onChange={this.handleChange} />
         <button>Submit</button>
       </form>
-    )
+    );
   }
-
 }
 
-export default Uncontrolled
+export default Uncontrolled;

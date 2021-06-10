@@ -1,67 +1,59 @@
-import React, { useState } from 'react';
-import  axiosWithAuth  from './axiosWithAuth'
-import axios from 'axios';
+import React, { useState } from "react";
+import axiosWithAuth from "./axiosWithAuth";
+import axios from "axios";
 
-export const Login = props => {
+export const Login = (props) => {
+  const [credentials, setCredentials] = useState({
+    id: "",
+    password: "",
+    email: "",
+  });
 
-    const [credentials, setCredentials ] = useState({
-        id:'',
-        password: '',
-        email: ''
-       
+  const { password, email } = credentials;
+
+  const url = "https://mc-7-be.herokuapp.com";
+
+  const onChange = (e) => {
+    setCredentials({
+      ...credentials,
+      [e.target.name]: e.target.value,
     });
+  };
 
-    const { password, email } = credentials;
+  const onSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post(`${url}/api/auth/login`, credentials)
+      .then((res) => {
+        window.localStorage.setItem("token", res.payload);
+        props.history.push("/protectedstrains");
+      })
+      .catch((err) => console.log(err));
+  };
 
-    const url = 'https://mc-7-be.herokuapp.com'
+  return (
+    <form onSubmit={onSubmit}>
+      <h2>Login</h2>
+      <input
+        name="email"
+        type="email"
+        placeholder="email"
+        value={email}
+        onChange={onChange}
+      />
 
-    const onChange = e => {
-        
-        setCredentials({
-            ...credentials,
-        [e.target.name]: e.target.value
-        })
-    }
+      <input
+        name="password"
+        type="password"
+        placeholder="password"
+        value={password}
+        onChange={onChange}
+      />
 
-    const onSubmit = e => {
-        e.preventDefault();
-        axios
-        .post(`${url}/api/auth/login`, credentials)
-       .then(res => {
-           window.localStorage.setItem('token', res.payload)
-           props.history.push('/protectedstrains')
-       })
-       .catch(err => console.log(err))
-    }
-    
-    return (
-       <form onSubmit={onSubmit}>
-           <h2>Login</h2>
-           <input
-           name="email"
-           type="email"
-           placeholder="email"
-           value={email}
-           onChange={onChange}
-           />
-           
-            <input
-            name="password"
-           type="password"
-           placeholder="password"
-           value={password}
-           onChange={onChange}
-           />
-          
-
-        <div>
-               <input
-               type="submit"
-               value="Login"
-               className="btn btn-block bg-dark"
-               />
-           </div>
-           {/* <h5>Role</h5>
+      <div>
+        <input type="submit" value="Login" className="btn btn-block bg-dark" />
+      </div>
+      {/* <h5>Role</h5>
            <input
            type="radio"
            name="role"
@@ -83,8 +75,8 @@ export const Login = props => {
                className="btn btn-block bg-dark"
                />
            </div> */}
-       </form>
-    )
-}
+    </form>
+  );
+};
 
 export default Login;

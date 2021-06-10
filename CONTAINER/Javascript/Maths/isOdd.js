@@ -5,7 +5,7 @@
  */
 
 const isOdd = (value) => {
-  return !!((value & 1))
+  return !!(value & 1)
 }
 
 // testing

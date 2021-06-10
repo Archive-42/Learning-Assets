@@ -1,32 +1,34 @@
-import React from 'react'
+import React from "react";
 
 class Form extends React.PureComponent {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      value: '',
-    }
+      value: "",
+    };
 
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange({ target }) {
     this.setState({
       value: target.value,
-    })
+    });
   }
 
   render() {
     return (
       <div>
-        <input type="text" value={this.state.value} onChange={this.handleChange} />
+        <input
+          type="text"
+          value={this.state.value}
+          onChange={this.handleChange}
+        />
         <button onClick={() => this.props.onSubmit(this.state.value)}>+</button>
       </div>
-    )
+    );
   }
-
 }
 
-export default Form
+export default Form;

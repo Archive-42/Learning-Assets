@@ -8,12 +8,12 @@ function isDefined<T>(x: T | undefined): x is T {
 // (1) Create the program
 const program = ts.createProgram({
   options: {
-    target: ts.ScriptTarget.ESNext
+    target: ts.ScriptTarget.ESNext,
   },
   rootNames: [
     // path to ../examples/hello-ts/src/index.ts
-    path.join(__dirname, "..", "examples", "hello-ts", "src", "index.ts")
-  ]
+    path.join(__dirname, "..", "examples", "hello-ts", "src", "index.ts"),
+  ],
 });
 
 // // (2) Get the non-declaration (.d.ts) source files (.ts)

@@ -1,22 +1,24 @@
 # Static-Pages
+
 Guide/comparison of ways to create and host static pages
 
 ## What is a static webpage?
+
 Any webpage where all the content (HTML, JavaScript, CSS, images) is loaded in
 and rendered by the user's browser ("front-end"). There are some important
 benefits and limitations of this:
 
-- *Can* host freely/cheaply at a bunch of places, deploy and switch hosts
-easily.
-- *Can* be built with a variety of tools and play nicely with almost any
-language/framework/ecosystem.
-- *Can't* persist user data across sessions/devices (or need to rely on external
-service to do so, or can do
-[localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-but that won't go across devices and the user may wipe it).
-- *Can't* use a secret API key to connect to a service - anyone who loads the
-page could extract the key and abuse the service (and get your access
-suspended). Can still connect to unauthenticated APIs.
+- _Can_ host freely/cheaply at a bunch of places, deploy and switch hosts
+  easily.
+- _Can_ be built with a variety of tools and play nicely with almost any
+  language/framework/ecosystem.
+- _Can't_ persist user data across sessions/devices (or need to rely on external
+  service to do so, or can do
+  [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+  but that won't go across devices and the user may wipe it).
+- _Can't_ use a secret API key to connect to a service - anyone who loads the
+  page could extract the key and abuse the service (and get your access
+  suspended). Can still connect to unauthenticated APIs.
 
 Static just means "unchanging", and overall that's what static webpages are good
 for - content that doesn't change. However, front-end frameworks like
@@ -28,6 +30,7 @@ webpage that maximizes the advantages and minimizes the disadvantages of being
 static.
 
 ## How can I build a static webpage?
+
 The simplest thing to do is just build it "by hand" - that is, use a text editor
 and write .html, .css, and .js files to your hearts content. This "back to
 basics" approach can be appropriate for things that are really simple, really
@@ -51,22 +54,23 @@ it's good to choose accordingly.
 Some top highlights:
 
 - [Jekyll](https://jekyllrb.com) - Ruby, it's been around (mature/stable), and
-is what actually powers GitHub pages if you just push Markdown files (see also:
-[Octopress](http://octopress.org)).
+  is what actually powers GitHub pages if you just push Markdown files (see also:
+  [Octopress](http://octopress.org)).
 - [Hexo](https://hexo.io) - Node.js, essentially a JavaScript take on Jekyll
-(compatible with the same Markdown and similar plugin ecosystem).
-- [Hugo](http://gohugo.io) - Go, *extremely fast*, great for generating *big*
-sites. Also just a single binary, so no need to mess with package management or
-dependencies for installation.
+  (compatible with the same Markdown and similar plugin ecosystem).
+- [Hugo](http://gohugo.io) - Go, _extremely fast_, great for generating _big_
+  sites. Also just a single binary, so no need to mess with package management or
+  dependencies for installation.
 - [Pelican](https://blog.getpelican.com) - Python, supports a variety of content
-formats and integrates/imports from WordPress and others.
+  formats and integrates/imports from WordPress and others.
 - [Gatsby](https://github.com/gatsbyjs/gatsby) - React, creates a "dynamic"
-static site (a Single Page Application where everything is loaded on the initial
-request and further clicking/browsing doesn't refresh the page).
+  static site (a Single Page Application where everything is loaded on the initial
+  request and further clicking/browsing doesn't refresh the page).
 - [Brunch](http://brunch.io) - JavaScript, not really a blog generator like the
-above but rather a build tool/pipeline to simplify making a modern static site.
+  above but rather a build tool/pipeline to simplify making a modern static site.
 
 ## How/where can I deploy a static webpage?
+
 One of the big advantages of static webpages is the ease and flexibility of
 deployment. To deploy all you do is copy the files to the server that serves
 them - that's it! The only dependency is a basic webserver that listens to and
@@ -75,6 +79,7 @@ that is an excellent exercise), but for our purposes here we'll consider some of
 the many excellent free/cheap services that do this for you.
 
 ### Start Simple - GitHub Pages
+
 [GitHub Pages](https://pages.github.com) are a great way to get started, and
 actually still a strong choice as you scale up. It's a free service, but can
 handle substantial traffic, supports custom URLs/domains, and gives SSL. The
@@ -82,13 +87,13 @@ deploy process is simple - just enable GitHub Pages in the settings page for
 your repository. You have a few options:
 
 - Use the `master` branch - this means any content in the master branch of
-`github.com/user/repo/` will be served from `user.github.io/repo/`. Good for
-repos that are entirely meant to be webpages.
+  `github.com/user/repo/` will be served from `user.github.io/repo/`. Good for
+  repos that are entirely meant to be webpages.
 - Use the `gh-pages` branch - content in `gh-pages` will be served per the same
-URLs as above. Good for repos that use a tool/template to generate the page (you
-save that to your `master` branch and save the built output to `gh-pages`).
+  URLs as above. Good for repos that use a tool/template to generate the page (you
+  save that to your `master` branch and save the built output to `gh-pages`).
 - Use the `/docs` folder on the master branch - good for non-webapp projects
-(e.g. tools, games, etc.) where you want to serve the documentation as a page.
+  (e.g. tools, games, etc.) where you want to serve the documentation as a page.
 
 This particular repository is using the first approach, so you can read this
 very file from [https://lambdaschool.github.io/Static-Pages/](https://lambdaschool.github.io/Static-Pages/)
@@ -116,6 +121,7 @@ preferred package ecosystem and see what options exist - but just doing it
 directly in git is simple enough that it's good to understand it there too.
 
 ### Dedicated Hosts - Netlify, Surge, Forge
+
 If you want a service that just hosts pages, and doesn't offer it as a simple
 "add-on" for source code hosting, there are plenty of options. The focus here is
 services meant for coders - so you can interact with them and push content to
@@ -124,13 +130,13 @@ but will be harder to automate and generally teach you less than using one of
 these options.
 
 - [Netlify](https://www.netlify.com/) - generous free tier, can connect to
-GitHub repositories, handle forms, facilitate A/B testing, continuous
-deployment, and more. Paid service is mostly for multiuser/enterprise.
+  GitHub repositories, handle forms, facilitate A/B testing, continuous
+  deployment, and more. Paid service is mostly for multiuser/enterprise.
 - [surge](http://surge.sh/) - similar to Netlify, good free tier, somewhat
-fewer options but if you don't intend to use them that may be a good thing.
+  fewer options but if you don't intend to use them that may be a good thing.
 - [Forge](https://getforge.com/) - not free (but cheap to start), emphasis on
-speed and simplicity (optimized CDN and JS processing, cli for programmers but
-also supports just dragging/dropping files or connecting Dropbox for others).
+  speed and simplicity (optimized CDN and JS processing, cli for programmers but
+  also supports just dragging/dropping files or connecting Dropbox for others).
 
 To actually use these services, just follow the tutorial/guide they offer - the
 general pattern is "install something (probably from npm), then run it." Try a
@@ -142,6 +148,7 @@ and when you're making static content it's pretty easy to switch hosts - just
 push your content somewhere else!
 
 ### Big Players - Amazon, Google, Microsoft
+
 If you're making something Real - it's got to scale, it's got to load fast
 around the globe, and if it goes down pagers need to ring - then these are some
 options to consider. The line between the above simpler approaches and these
@@ -158,21 +165,21 @@ Compared to most of their other services, it's a fairly simple thing to do, and
 definitely scales great without costing too much.
 
 - [Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) -
-gives you "buckets" in different regions where you can upload your content. You
-may have to configure to make sure you've got good global coverage. Can be
-integrated with [CloudFront](https://aws.amazon.com/cloudfront/), the AWS CDN,
-to get even better performance around the world.
+  gives you "buckets" in different regions where you can upload your content. You
+  may have to configure to make sure you've got good global coverage. Can be
+  integrated with [CloudFront](https://aws.amazon.com/cloudfront/), the AWS CDN,
+  to get even better performance around the world.
 - [Google Cloud Storage](https://cloud.google.com/storage/docs/hosting-static-website) -
-also uses "buckets", and also integrates with their
-[CDN](https://cloud.google.com/cdn/). Basically the Coke/Pepsi decision, and
-ultimately a decision that will be made for reasons besides static content.
+  also uses "buckets", and also integrates with their
+  [CDN](https://cloud.google.com/cdn/). Basically the Coke/Pepsi decision, and
+  ultimately a decision that will be made for reasons besides static content.
 - [Azure Static Content Hosting](https://docs.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting) -
-yes, Microsoft too has a cloud, though they use "blobs" rather than "buckets."
-They even have a
-[CDN](https://docs.microsoft.com/en-us/azure/cdn/cdn-cloud-service-with-cdn),
-and other services more or less comparable to Amazon and Google. They are a less
-popular choice for a variety of practical and historical reasons, but some
-clients will use them and they do offer generous free credits to a lot of users.
+  yes, Microsoft too has a cloud, though they use "blobs" rather than "buckets."
+  They even have a
+  [CDN](https://docs.microsoft.com/en-us/azure/cdn/cdn-cloud-service-with-cdn),
+  and other services more or less comparable to Amazon and Google. They are a less
+  popular choice for a variety of practical and historical reasons, but some
+  clients will use them and they do offer generous free credits to a lot of users.
 
 How do you use these services? Read the documentation - it'll change fast, and
 generally involve lots of platform-specific settings and commands. The general
@@ -180,6 +187,7 @@ concept though is the same - you just want to push some built static content to
 some path on the server that will be served via a webserver at some domain.
 
 ## Closing Notes and "Gotchas"
+
 Now you know the basics on what a static page is and how to get it out there -
 actually having static content worth putting out there is another matter. Lots
 of prominent developers maintain blogs (often built and hosted with the above
@@ -190,14 +198,14 @@ yourself.
 Some examples of high quality tech blogs for inspiration:
 
 - [Slack Engineering Blog](https://slack.engineering/) - gives great
-transparency and real technical details for what's going on at Slack. Simple but
-pleasing and highly readable design, and good quality writing (clearly it's a
-team effort, and they likely review each others posts before publishing).
+  transparency and real technical details for what's going on at Slack. Simple but
+  pleasing and highly readable design, and good quality writing (clearly it's a
+  team effort, and they likely review each others posts before publishing).
 - [CSS-Tricks](https://css-tricks.com/) - great current front-end and design
-content, and as one would expect - very pleasing design.
+  content, and as one would expect - very pleasing design.
 - [Smashing Magazine](https://www.smashingmagazine.com/) - more for developers
-and designers, and also a good example of a blog incorporated into a larger
-site.
+  and designers, and also a good example of a blog incorporated into a larger
+  site.
 - [Beej's Bit Bucket](https://beej.us/blog/) - simple, readable, fast, Beej.
 
 Another typical use of static pages is for resumes - there are
@@ -206,7 +214,6 @@ and [lots](http://www.rleonardi.com/interactive-resume/)
 [of](https://magemello.github.io/) [crazy](http://liugle.com)
 [cool](http://www.anniwang.com) [examples](https://phildub.com)
 [out](http://www.kickjannic.com) [there](http://www.guillaumejuvenet.com).
-
 
 Besides what content to put out there, you're likely to run into issues as you
 get started, especially if you're doing something fancy like hitting an API. In

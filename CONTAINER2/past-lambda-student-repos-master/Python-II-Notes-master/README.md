@@ -19,8 +19,7 @@ We want to be able to type in a number corresponding to an area of the store, an
 
 Let's make our store class, using the keyword "class" followed by the name (usually capitalized):
 
-```class Store:```
-
+`class Store:`
 
 We'll need to define a specific function to create the attributes of this class:
 
@@ -39,9 +38,9 @@ class Store:
         self.categories = categories
 ```
 
-To give the class initial values, we set self.THING to something, like self.name = name. 
+To give the class initial values, we set self.THING to something, like self.name = name.
 
-When we call init in our program, we're trying to take specific values and assign them to specific Store instances. Like, on this specific store, set the name equal to "Sports Store" or "Cooking". 
+When we call init in our program, we're trying to take specific values and assign them to specific Store instances. Like, on this specific store, set the name equal to "Sports Store" or "Cooking".
 
 Self is like the "this" keyword in JavaScript - it's a reference to THIS specific object in memory that we're trying to initialize or change. It indicates which object. We are setting the "name" value on THIS object, the Sports Store.
 
@@ -74,7 +73,7 @@ class Store:
       # 2. + categories[1]
 ```
 
-We can get a string representation of an object in a few ways ( str(), repr() ). Generally, str() is used to output to an end user while repr() is used for debugging and development (output to the dev).  (More info: https://www.pythoncentral.io/what-is-the-difference-between-__str__-and-__repr__-in-python/) 
+We can get a string representation of an object in a few ways ( str(), repr() ). Generally, str() is used to output to an end user while repr() is used for debugging and development (output to the dev). (More info: https://www.pythoncentral.io/what-is-the-difference-between-__str__-and-__repr__-in-python/)
 
 ```
 class Store:
@@ -92,8 +91,7 @@ class Store:
       return output
 ```
 
-** NOTE: The underscores before and after init, repr and str must be double underscores, not single.
-
+\*\* NOTE: The underscores before and after init, repr and str must be double underscores, not single.
 
 Now the output in the terminal when we print:
 
@@ -105,10 +103,10 @@ print(my_store)
 Is:
 
 The Dugout
+
 1. Running
 2. Baseball
 3. Basketball
-
 
 Now let's get our user to select a department so they can then see what inventory is there using some if/else logic:
 
@@ -207,7 +205,7 @@ class Category:
         self.name = name
 
     def __repr__(self):
-        return "No products in " + self.name 
+        return "No products in " + self.name
 ```
 
 Instead of hard coding strings into our store, we could use the category class to create an instance of each category in our store.py file:
@@ -264,16 +262,15 @@ Or by nesting the if statements:
 if selection > 0 and selection <= len(my_store.categories)+1:
             if selection == len(my_store.categories)+1:
                 exit()
-                
+
             print(f"You chose {my_store.categories[selection-1].name}.")
 ```
-
 
 # Notes Lecture II
 
 ##### Inheritance and Association
 
-```Perhaps the most important concept in OOP, a class may inherit from another class. This gives the child class all of the variables and methods found in the parent class, or classes, automatically. Child classes can also override parent methods to define alternate or additional behaviors. Inheritance is also sometimes described as an “is-a” relationship.```
+`Perhaps the most important concept in OOP, a class may inherit from another class. This gives the child class all of the variables and methods found in the parent class, or classes, automatically. Child classes can also override parent methods to define alternate or additional behaviors. Inheritance is also sometimes described as an “is-a” relationship.`
 
 Often clarified by describing one as "is a" versus "has a"
 
@@ -283,17 +280,17 @@ Often clarified by describing one as "is a" versus "has a"
 
 When one class inherits from another class, that is an "is a" (inherited) relationship. We can test it by asking ourselves if this sentence makes sense for two classes:
 
-```ClassA is a Class B```
+`ClassA is a Class B`
 
 If that makes sense and is true, that is an "is a" relationship.
 
 If one class wouldn't make sense using the "is a" test, it's probably associative instead of inherited.
 
-```Category is a Store```
+`Category is a Store`
 
 Category is not a Store (per our current code example), so that is NOT an "is a" (inherited) relationship.
 
-```A Store has a Category.```
+`A Store has a Category.`
 
 This statement is true, so the relationship between these two classes is a "has a" (associative) relationship.
 
@@ -303,13 +300,11 @@ Currently, our Store has association, but not inheritance.
 
 For further reading: https://interactivepython.org/runestone/static/JavaReview/OOBasics/ooAssocVsInherit.html
 
-
-
 ##### Composition and Aggregation
 
 Within an association relationship, there are two further specializations: `composition` and `aggregation`.
 
-A *composition* relationship exists when one class has instance variables (attributes) that are using a second class. One class is a container while the other is the content. If you delete the container class, all of its content class instances are also deleted.
+A _composition_ relationship exists when one class has instance variables (attributes) that are using a second class. One class is a container while the other is the content. If you delete the container class, all of its content class instances are also deleted.
 
 An example of this would be a class of Salary and a class of Employee, which uses salary as an attribute on its class instance.
 
@@ -323,7 +318,7 @@ If the Employee and Salary were created like so:
 
 This instance of Salary would cease to exist if we deleted the container class instance of this Employee. The Salary is created by this instance of Employee and does not exist separately from it.
 
-*Aggregation* is a form of composition where the content object can exist without the container object.
+_Aggregation_ is a form of composition where the content object can exist without the container object.
 
 If we adjust the Employee and Salary instances like so:
 
@@ -333,11 +328,11 @@ If we adjust the Employee and Salary instances like so:
 
         def get_total_(self):
             return (self.pay*12)
-    
+
     class Employee:
         def __init__(self, pay):
             self.pay = pay
-        
+
         def annual_salary(self):
             return "Total: " + str(self.pay.get_total())
 
@@ -348,20 +343,17 @@ print (obj_emp.annual_salary())
 
 Salary exists independently of any single instance of Employee, so it has an aggregate relationship to Employee.
 
-
 In our code example, the attributes in our Store class for categories are defined in a separate class (Category). We could delete the Store class and the categories would still exist, as they are currently defined. This is an _aggregation_ example.
 
 If, however, the Category instances were created _in_ the Store instance, that would be a _composition_ example. By deleting the Store, the Categories would also cease to exist.
 
 Further reading: https://stackoverflow.com/questions/19861785/composition-and-aggregation-in-python
 
-
 #### In summary:
 
-*Inheritance*: a class may inherit from another class. This gives the child class all of the variables and methods found in the parent class, or classes, automatically. "Is a" relationship.
+_Inheritance_: a class may inherit from another class. This gives the child class all of the variables and methods found in the parent class, or classes, automatically. "Is a" relationship.
 
-*Association*: objects or constructs that exist in the real-world and are related to each other that do not have hierarchical, inheritance relationships. "Has a" relationship.
-
+_Association_: objects or constructs that exist in the real-world and are related to each other that do not have hierarchical, inheritance relationships. "Has a" relationship.
 
 #### Let's apply inheritance to our Store class
 
@@ -392,13 +384,11 @@ While each product would have a specific department, we'll actually use that to 
         self.products = products
 ```
 
-
 There is nothing we do in Python specifically to indicate something is a Parent class, but there is syntax required for indicating something is a child class.
-
 
 Let's also add the string version of our Product for our end user (not developer) to see:
 
-```    
+```
 def __str__(self):
     return self.name + '\t$' + str(self.price)
 ```
@@ -412,11 +402,11 @@ print(p)
 
 In the terminal, it prints:
 
-`baseball bat	$19.99`
+`baseball bat $19.99`
 
 Let's take that and add to our store.py file:
 
-```from product import Product```
+`from product import Product`
 
 Under the Baseball category, we'll add a list of Products:
 
@@ -448,12 +438,13 @@ We've made products an optional parameter, in case a Category does not have any 
 
 When also need to adjust the print line on line 28 in store.py:
 
-```            print(f"You chose {my_store.categories[selection-1]}.")
+```print(f"You chose {my_store.categories[selection-1]}.")
+
 ```
 
-In `store.py`, our print statement points to the `__str__` method on `catgory.py` for what to print (the return). 
+In `store.py`, our print statement points to the `__str__` method on `catgory.py` for what to print (the return).
 
-```            for p in self.products:
+```for p in self.products:
                 output += '\n' + str(p)
 ```
 
@@ -478,7 +469,7 @@ To indicate that these classes are child classes and have a parent class, we'll 
 ```
 class Clothing(Product):
     def __init__(self):
-        
+
 ```
 
 Referencing our Product parent class, we can see that any child class is setup to have the attributes of name and price. What are additional attributes that clothing might have, that products in general don't necessarily? Likely color and size.
@@ -491,7 +482,7 @@ class Clothing(Product):
         #...
         self.color = color
         self.size = size
-        
+
 ```
 
 But how do we initialize the inherited attributes from the parent (name and price) without tediously typing out the same self.price = price?
@@ -511,7 +502,6 @@ class Clothing(Product):
 ```
 
 It doesn't know how to handle color or size, so we do not pass those to the super() function, but it can handle name and price. We'll handle the parent super() initializations first, then initialize the unique, standalone attributes within this child class init().
-
 
 Let's setup our equipment child class too:
 
@@ -568,4 +558,3 @@ But we are not creating DRY code because we're re-typing the same first part of 
 ```
 
 Similarly to before, we can make use of super() to call a method on the parent class to fill in the first part of that string return.
-

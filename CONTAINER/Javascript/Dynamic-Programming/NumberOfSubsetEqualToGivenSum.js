@@ -6,7 +6,7 @@ equal to the given sum.
 /*
  Given solution is O(n*sum) Time complexity and O(sum) Space complexity
 */
-function NumberOfSubsetSum (array, sum) {
+function NumberOfSubsetSum(array, sum) {
   const dp = [] // create an dp array where dp[i] denote number of subset with sum equal to i
   for (let i = 1; i <= sum; i++) {
     dp[i] = 0
@@ -23,7 +23,7 @@ function NumberOfSubsetSum (array, sum) {
   return dp[sum]
 }
 
-function main () {
+function main() {
   const array = [1, 1, 2, 2, 3, 1, 1]
   const sum = 4
   const result = NumberOfSubsetSum(array, sum)

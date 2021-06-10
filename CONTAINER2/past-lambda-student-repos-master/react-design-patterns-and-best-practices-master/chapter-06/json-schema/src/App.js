@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import JSONSchemaForm from './components/json-schema-form'
+import JSONSchemaForm from "./components/json-schema-form";
 
 class App extends Component {
   render() {
@@ -14,8 +14,8 @@ class App extends Component {
         </div>
         <JSONSchemaForm />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

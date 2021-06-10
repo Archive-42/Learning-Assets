@@ -1,21 +1,20 @@
-import React from 'react'
+import React from "react";
 
 class FontSize extends React.Component {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       value: 16,
-    }
+    };
 
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange({ target }) {
     this.setState({
       value: Number(target.value),
-    })
+    });
   }
 
   render() {
@@ -26,9 +25,8 @@ class FontSize extends React.Component {
         onChange={this.handleChange}
         style={{ fontSize: this.state.value }}
       />
-    )
+    );
   }
-
 }
 
-export default FontSize
+export default FontSize;

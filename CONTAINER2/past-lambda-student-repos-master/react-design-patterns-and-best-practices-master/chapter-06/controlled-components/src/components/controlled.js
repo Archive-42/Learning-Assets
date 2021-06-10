@@ -1,29 +1,28 @@
-import React from 'react'
+import React from "react";
 
 class Controlled extends React.Component {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      firstName: 'Dan',
-      lastName: 'Abramov',
-    }
+      firstName: "Dan",
+      lastName: "Abramov",
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange({ target }) {
     this.setState({
       [target.name]: target.value,
-    })
+    });
   }
 
   handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    console.log(`${this.state.firstName} ${this.state.lastName}`)
+    console.log(`${this.state.firstName} ${this.state.lastName}`);
   }
 
   render() {
@@ -43,9 +42,8 @@ class Controlled extends React.Component {
         />
         <button>Submit</button>
       </form>
-    )
+    );
   }
-
 }
 
-export default Controlled
+export default Controlled;

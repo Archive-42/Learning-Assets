@@ -1,32 +1,28 @@
-import React from 'react'
-import Form from 'react-jsonschema-form'
+import React from "react";
+import Form from "react-jsonschema-form";
 
 const schema = {
-  type: 'object',
+  type: "object",
   properties: {
-    firstName: { type: 'string', default: 'Dan' },
-    lastName: { type: 'string', default: 'Abramov' },
+    firstName: { type: "string", default: "Dan" },
+    lastName: { type: "string", default: "Abramov" },
   },
-}
+};
 
 class JSONSchemaForm extends React.Component {
-
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit({ formData }) {
-    console.log(formData)
+    console.log(formData);
   }
 
   render() {
-    return (
-      <Form schema={schema} onSubmit={this.handleSubmit} />
-    )
+    return <Form schema={schema} onSubmit={this.handleSubmit} />;
   }
-
 }
 
-export default JSONSchemaForm
+export default JSONSchemaForm;

@@ -1,36 +1,38 @@
-import React from 'react'
+import React from "react";
 
 class Input extends React.Component {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      value: '',
-    }
+      value: "",
+    };
 
-    this.reset = this.reset.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+    this.reset = this.reset.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   reset() {
     this.setState({
-      value: '',
-    })
+      value: "",
+    });
   }
 
   handleChange({ target }) {
     this.setState({
       value: target.value,
-    })
+    });
   }
 
   render() {
     return (
-      <input type="text" value={this.state.value} onChange={this.handleChange} />
-    )
+      <input
+        type="text"
+        value={this.state.value}
+        onChange={this.handleChange}
+      />
+    );
   }
-
 }
 
-export default Input
+export default Input;

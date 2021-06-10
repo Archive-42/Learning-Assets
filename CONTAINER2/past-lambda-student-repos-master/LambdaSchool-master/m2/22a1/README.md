@@ -21,6 +21,7 @@ Challenges:
 import React from 'react';
 const componentOne = () => {
 return (<div>
+
 <div>Counter Button</div>
 </div>);
 }
@@ -36,6 +37,7 @@ hobbies: "hockey, video games"
 };
 function App() {
 return (
+
 <div className="App">
 <h1>{person.name}</h1>
 <h2>{person.age} years old</h2>
@@ -78,6 +80,7 @@ count: state.count - 1
 }
 render() {
 return (
+
 <div>
 <button className='inc' onClick={this.increment}>Increment!</button>
 <button className='dec' onClick={this.decrement}>Decrement!</button>

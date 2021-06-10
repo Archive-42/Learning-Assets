@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import Counter from './components/counter'
-import List from './components/list'
+import Counter from "./components/counter";
+import List from "./components/list";
 
 class App extends Component {
   render() {
@@ -16,8 +16,8 @@ class App extends Component {
         <Counter initialCount={1} />
         <List />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

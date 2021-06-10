@@ -38,7 +38,9 @@ const checkAnagram = (str1, str2) => {
   // Now check if all entries in hashmap has zeros.
 
   for (const key in str1CharCount) {
-    if (str1CharCount[key] !== 0) { return 'Not anagrams' }
+    if (str1CharCount[key] !== 0) {
+      return 'Not anagrams'
+    }
   }
 
   return 'Anagrams'

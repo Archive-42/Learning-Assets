@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import { StyleRoot } from 'radium'
-import Button from './components/button'
+import { StyleRoot } from "radium";
+import Button from "./components/button";
 
 class App extends Component {
   render() {
@@ -17,8 +17,8 @@ class App extends Component {
           <Button />
         </div>
       </StyleRoot>
-    )
+    );
   }
 }
 
-export default App
+export default App;

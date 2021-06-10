@@ -1,19 +1,18 @@
-import React from 'react'
+import React from "react";
 
 class Counter extends React.Component {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       count: props.initialCount,
-    }
+    };
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.state.count++
+    this.state.count++;
   }
 
   render() {
@@ -21,15 +20,14 @@ class Counter extends React.Component {
       <div>
         {this.state.count}
         <button onClick={this.handleClick}>+</button>
-        <button onClick={() => this.setState({ foo: 'bar' })}>Update</button>
+        <button onClick={() => this.setState({ foo: "bar" })}>Update</button>
       </div>
-    )
+    );
   }
-
 }
 
 Counter.propTypes = {
   initialCount: React.PropTypes.number,
-}
+};
 
-export default Counter
+export default Counter;

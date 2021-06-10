@@ -1,9 +1,9 @@
-import React from 'react';
-import { Route, NavLink, useHistory } from 'react-router-dom';
-import axios from 'axios';
+import React from "react";
+import { Route, NavLink, useHistory } from "react-router-dom";
+import axios from "axios";
 
-import ItemDescription from './ItemDescription';
-import ItemShipping from './ItemShipping';
+import ItemDescription from "./ItemDescription";
+import ItemShipping from "./ItemShipping";
 
 function Item(props) {
   const { push } = useHistory();
@@ -11,7 +11,7 @@ function Item(props) {
   // const history = useHistory();
   // const push = history.push;
   const item = props.items.find(
-    thing => `${thing.id}` === props.match.params.id
+    (thing) => `${thing.id}` === props.match.params.id
   );
 
   if (!props.items.length || !item) {
@@ -21,13 +21,13 @@ function Item(props) {
   const deleteItem = (e) => {
     e.preventDefault();
     axios
-    .delete(`http://localhost:3333/items/${item.id}`)
-    .then(res => {
-      props.setItems(res.data); // set items (application level state) to the new array returned in the response
-      push("/item-list"); // direct the user to the all items ("Shop") view
-    })
-    .catch(err => console.log(err));
-  }
+      .delete(`http://localhost:3333/items/${item.id}`)
+      .then((res) => {
+        props.setItems(res.data); // set items (application level state) to the new array returned in the response
+        push("/item-list"); // direct the user to the all items ("Shop") view
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="item-wrapper">
@@ -49,22 +49,19 @@ function Item(props) {
       <Route
         exact
         path="/item-list/:id"
-        render={props => <ItemDescription {...props} item={item} />}
+        render={(props) => <ItemDescription {...props} item={item} />}
       />
       <Route
         path="/item-list/:id/shipping"
-        render={props => <ItemShipping {...props} item={item} />}
+        render={(props) => <ItemShipping {...props} item={item} />}
       />
-      <button 
+      <button
         className="md-button"
         onClick={() => push(`/update-item/${item.id}`)}
       >
         Edit
       </button>
-      <button 
-        className="md-button"
-        onClick={deleteItem}
-      >
+      <button className="md-button" onClick={deleteItem}>
         Delete
       </button>
     </div>

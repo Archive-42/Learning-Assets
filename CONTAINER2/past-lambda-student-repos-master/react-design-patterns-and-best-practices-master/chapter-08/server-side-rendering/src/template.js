@@ -1,4 +1,4 @@
-export default body => `
+export default (body) => `
   <!DOCTYPE html>
   <html>
     <head>
@@ -9,4 +9,4 @@ export default body => `
       <script src="/bundle.js"></script>
     </body>
   </html>
-`
+`;

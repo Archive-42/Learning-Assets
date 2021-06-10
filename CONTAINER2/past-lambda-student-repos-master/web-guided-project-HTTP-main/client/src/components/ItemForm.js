@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const initialItem = {
-  name: '',
-  price: '',
-  imageUrl: '',
-  description: '',
-  shipping: ''
+  name: "",
+  price: "",
+  imageUrl: "",
+  description: "",
+  shipping: "",
 };
 
-const ItemForm = props => {
+const ItemForm = (props) => {
   const [item, setItem] = useState(initialItem);
 
-  const changeHandler = ev => {
+  const changeHandler = (ev) => {
     ev.persist();
     let value = ev.target.value;
-    if (ev.target.name === 'price') {
+    if (ev.target.name === "price") {
       value = parseInt(value, 10);
     }
 
     setItem({
       ...item,
-      [ev.target.name]: value
+      [ev.target.name]: value,
     });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   };
 

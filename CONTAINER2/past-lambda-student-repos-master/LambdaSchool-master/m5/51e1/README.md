@@ -8,7 +8,7 @@ We have a magical "piggy bank" (a piggy bank is the traditional name of a place 
 
 - [x] Create a collection (array, arraylist, or hashmap) to represent the piggy bank.
 - [x] The collection can hold money.  
-      This money can be
+       This money can be
 - [x] A Dollar worth $1.00
 - [x] A Quarter worth $0.25
 - [x] A Dime worth $0.10
@@ -64,6 +64,7 @@ The main program will look something like this pseudocode:
 ## Stretch Goals:
 
 - [x] Add the ability to remove coins from the piggy bank
+
   - [ ] Prevent taking more coins than present in the piggy bank
   - [x] Coins do not have to be removed in the same quantity that were added. For example based on the main program above, removing 3 dimes would be allowed. The Piggy Bank should adjust appropriately.
   - [x] Just the amount to be removed should be given. The program will figure out which coins to remove.
@@ -71,7 +72,7 @@ The main program will look something like this pseudocode:
   - [ ] subtract(1.50)
   - [ ] print contents of the Piggy Bank
     - [ ] on the console on possible out come is  
-          [ ] `$4`  
-          [ ] `7 Dimes`  
-          [ ] `$1`  
-          [ ] `10 Pennies`
+           [ ] `$4`  
+           [ ] `7 Dimes`  
+           [ ] `$1`  
+           [ ] `10 Pennies`

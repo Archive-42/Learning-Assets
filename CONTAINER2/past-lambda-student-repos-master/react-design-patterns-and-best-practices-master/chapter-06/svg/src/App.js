@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import RedCircle from './components/red-circle'
+import RedCircle from "./components/red-circle";
 
 class App extends Component {
   render() {
@@ -14,8 +14,8 @@ class App extends Component {
         </div>
         <RedCircle x={40} y={40} radius={40} />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

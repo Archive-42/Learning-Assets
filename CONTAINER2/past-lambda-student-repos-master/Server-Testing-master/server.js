@@ -1,11 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const Food = require('./food');
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const Food = require("./food");
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/data', { useMongoClient: true }, () => {
-  console.log('Connected to MongoDB');
+mongoose.connect("mongodb://localhost/data", { useMongoClient: true }, () => {
+  console.log("Connected to MongoDB");
 });
 
 const server = express();
@@ -13,17 +13,17 @@ const server = express();
 server.use(bodyParser.json());
 
 // (Replaces try/catch) Catches async/await errors and Promise rejections → passes to middleware
-const catchErrors = fn => (req, res, next) => {
+const catchErrors = (fn) => (req, res, next) => {
   const promise = fn(req, res, next);
-  if (promise.catch) promise.catch(err => next(err));
+  if (promise.catch) promise.catch((err) => next(err));
 };
 
 const handleErrors = (err, req, res, next) => {
-  err.stack = err.stack || '';
+  err.stack = err.stack || "";
   const errorDetails = {
     status: err.status,
     message: err.message,
-    stack: err.stack
+    stack: err.stack,
   };
   res.status(err.status || 500).json(errorDetails);
 };
@@ -51,21 +51,18 @@ const putFood = async (req, res) => {
 const deleteFood = async (req, res) => {
   const { id } = req.params;
   await Food.findByIdAndRemove(id);
-  res.json({ Success: 'Food removed' });
+  res.json({ Success: "Food removed" });
 };
 
-server
-  .route('/food')
-  .get(catchErrors(getFoods))
-  .post(catchErrors(postFood))
+server.route("/food").get(catchErrors(getFoods)).post(catchErrors(postFood));
 
 server
-  .route('/food/:id')
+  .route("/food/:id")
   .put(catchErrors(putFood))
   .delete(catchErrors(deleteFood));
 
 server.use(handleErrors);
 
-server.listen(3030, () => console.log('Express running → PORT 3030'));
+server.listen(3030, () => console.log("Express running → PORT 3030"));
 
 module.exports = server;

@@ -1,24 +1,24 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './index.js',
+  entry: "./index.js",
 
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
+        loader: "babel",
         query: {
-          presets: ['es2015', 'react'],
+          presets: ["es2015", "react"],
         },
       },
       {
         test: /\.css$/,
-        loader: 'style!css?modules&localIdentName=[local]--[hash:base64:5]',
+        loader: "style!css?modules&localIdentName=[local]--[hash:base64:5]",
       },
     ],
   },
 
   plugins: [new HtmlWebpackPlugin()],
-}
+};
