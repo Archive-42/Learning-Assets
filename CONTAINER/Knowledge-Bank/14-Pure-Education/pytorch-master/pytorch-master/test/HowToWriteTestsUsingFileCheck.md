@@ -51,8 +51,7 @@ graph(%a : Tensor, %b : Tensor):
 ```
 
 And now we run `FileCheck` passing to it both original input string and the
-optimized IR. From the input string `FileCheck` ignores everything except `#
-CHECK` pragmas and essentially it sees the input string like this:
+optimized IR. From the input string `FileCheck` ignores everything except `# CHECK` pragmas and essentially it sees the input string like this:
 
 ```
       # CHECK: aten::mul       (1)
@@ -68,6 +67,7 @@ match (3), the annotation (2) is also satisfied.
 
 One could also register FileCheck annotations using a builder API. To generate
 annotations from the example above one would write:
+
 ```python
       FileCheck().check("aten::mul")     \
                  .check_not("aten::mul") \
@@ -77,20 +77,20 @@ annotations from the example above one would write:
 
 ## Supported pragmas
 
-* `CHECK: <pattern>`
+- `CHECK: <pattern>`
   Scans the input until `PATTERN` is found. Fails if the pattern is not found.
-* `CHECK-NOT: <pattern>`
+- `CHECK-NOT: <pattern>`
   Scans the input and fails if `PATTERN` is found on any line. The scan stops when
   a match for a next `CHECK` is found.
-* `CHECK-SAME: <pattern>`
+- `CHECK-SAME: <pattern>`
   Checks that PATTERN is found in the line of the last match.
-* `CHECK-COUNT-<num>: <pattern>`
+- `CHECK-COUNT-<num>: <pattern>`
   Scans the input and succeeds when a line containing at least `NUM` entries of
   `PATTERN` is found.
-* `CHECK-COUNT-EXACTLY-<num>: <pattern>`
+- `CHECK-COUNT-EXACTLY-<num>: <pattern>`
   Scans the input and succeeds when a line containing exactly `NUM` entries of
   `PATTERN` is found.
-* `CHECK-DAG: pattern`
+- `CHECK-DAG: pattern`
   Works similar to the usual `CHECK` pragma, but also matches if there exists a
   way to reorder the CHECK-DAG pragmas to satisfy all patterns.
   For example the following pattern:

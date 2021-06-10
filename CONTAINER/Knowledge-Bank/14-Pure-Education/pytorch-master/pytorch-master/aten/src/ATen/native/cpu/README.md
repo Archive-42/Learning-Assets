@@ -1,36 +1,36 @@
 The most important things to know:
 
 **Don't add a kernel to this folder unless you want it to be
-compiled multiple times for different instruction sets.**  Yes,
+compiled multiple times for different instruction sets.** Yes,
 this folder is named `cpu`, but that doesn't mean put any old
-CPU kernel it.  Only put CPU kernels which need to be compiled
+CPU kernel it. Only put CPU kernels which need to be compiled
 multiple times to take advantage of AVX/SSE instructions, but
 only on processors that support them.
 
 **Ensure that all implementations in this folder are put in an
-anonymous namespace.**  The files in this folder are compiled multiple
+anonymous namespace.** The files in this folder are compiled multiple
 times with different headers. It's important that these functions have
 internal linkage so that kernels for different architectures don't get
-combined during linking.  It's sufficient to label functions "static",
+combined during linking. It's sufficient to label functions "static",
 but class methods must be an unnamed namespace to have internal linkage
 (since static means something different in the context of classes).
 
 **The basic recipe is to define your kernel, and then register
-it using DECLARE/REGISTER DISPATCH.**  Writing a kernel requires
+it using DECLARE/REGISTER DISPATCH.** Writing a kernel requires
 three steps:
 
 1. Declare your dispatch in a header file using
-  `DECLARE_DISPATCH(fn_type, fnNameImpl);`
+   `DECLARE_DISPATCH(fn_type, fnNameImpl);`
    where `fn_type` is the function pointer type of the kernel (e.g.,
    defined as `using fn_type = void(*)(Tensor&, const Tensor&)`
    and `fnNameImpl` is the name of your dispatch registry.
-   (It doesn't really matter where you  put this declaration.)
+   (It doesn't really matter where you put this declaration.)
 
 2. Define your dispatch in a C++ file that is NOT in the cpu
    directory (dispatch must be defined exactly once) using
    `DEFINE_DISPATCH(fnNameImpl)` (matching the name of your declaration.)
    Include the header file that declares the dispatch in this C++
-   file.  Conventionally, we define the dispatch in the same file
+   file. Conventionally, we define the dispatch in the same file
    we will define our native function in.
 
 3. Define a native function which calls into the dispatch using
@@ -44,7 +44,7 @@ three steps:
 
 There are plenty of existing examples, look at them for more details.
 
-----
+---
 
 TODO: Clarify and add more documentation all around.
 
@@ -58,7 +58,7 @@ given platform.
 
 Vec256.h provides a generic implementation of a vec256 type that allows
 the programmer to write code packing various primitives (such as floats)
-within 256bit registers. vec256 defines various operators such as + and *
+within 256bit registers. vec256 defines various operators such as + and \*
 and provides functions to allow operations such as max, min, etc.
 
 As an example `ReduceOpsKernel.cpp` implements a generic `kernel_` that reduces

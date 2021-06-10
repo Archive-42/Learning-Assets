@@ -14,7 +14,7 @@ Lists are created using square brackets and the elements separated by commas. Th
 
 Can you access the number 4 in the previous list?
 
-Sometimes you want just a small portion of a list, a sublist. Sublists can be retrieved using a technique called *slicing*, which consists on defining the start and end indexes:
+Sometimes you want just a small portion of a list, a sublist. Sublists can be retrieved using a technique called _slicing_, which consists on defining the start and end indexes:
 
 ```Python
 >>> l = ['a', 'b', 'c', 'd', 'e']

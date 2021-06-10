@@ -3,6 +3,7 @@
 Benchmarks for TorchScript models
 
 For most stable results, do the following:
+
 - Set CPU Governor to performance mode (as opposed to energy save)
 - Turn off turbo for all CPUs (assuming Intel CPUs)
 - Shield cpus via `cset shield` when running benchmarks.
@@ -39,4 +40,3 @@ you can also specify the models to generate nvprof files separately:
 
 Use Linux for the most accurate timing. A lot of these tests only run
 on CUDA.
-

@@ -16,9 +16,9 @@ The maximum here is 10 (2x5), so your result should be 10.
 
 const assert = require("assert");
 
-const yahtzee_upper = dice => {
+const yahtzee_upper = (dice) => {
   const scores = [0, 0, 0, 0, 0, 0];
-  dice.forEach(die => (scores[die - 1] += die));
+  dice.forEach((die) => (scores[die - 1] += die));
   return Math.max(...scores);
 };
 

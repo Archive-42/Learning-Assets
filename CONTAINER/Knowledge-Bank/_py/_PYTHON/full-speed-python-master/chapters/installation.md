@@ -20,7 +20,7 @@ In this chapter we will install and run the Python interpreter in your local com
 
     ![Windows installation](images/python_windows3.jpg){width=62%}
 
-6.  Now, open the command line (cmd) and execute "python" or "python3". If everything was correctly installed, you should see the Python REPL. The REPL (from Read, Evaluate, Print and Loop) is a environment that you can use to program small snippets of Python code. Run *exit()* to leave the REPL.
+6.  Now, open the command line (cmd) and execute "python" or "python3". If everything was correctly installed, you should see the Python REPL. The REPL (from Read, Evaluate, Print and Loop) is a environment that you can use to program small snippets of Python code. Run _exit()_ to leave the REPL.
 
     ![Python REPL](images/python_windows4.jpg){width=62%}
 

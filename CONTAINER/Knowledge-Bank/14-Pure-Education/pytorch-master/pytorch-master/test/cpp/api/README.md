@@ -32,4 +32,4 @@ $ python tools/download_mnist.py -d test/cpp/api/mnist
 ```
 
 The required paths will be referenced as `test/cpp/api/mnist/...` in the test
-code, so you *must* run the integration tests from the PyTorch root folder.
+code, so you _must_ run the integration tests from the PyTorch root folder.

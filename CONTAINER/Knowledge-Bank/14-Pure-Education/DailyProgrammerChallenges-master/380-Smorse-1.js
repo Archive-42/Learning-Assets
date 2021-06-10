@@ -15,9 +15,10 @@ Normally, you would indicate where one letter ends and the next begins, for inst
 
 const assert = require("assert");
 
-const morseAlphabet = ".- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --..".split(
-  " "
-);
+const morseAlphabet =
+  ".- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --..".split(
+    " "
+  );
 const engAlphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 // Map the morse alphabet to the english alphabet, so that the
@@ -28,10 +29,10 @@ const alphabet = Object.assign(
 
 // mildly code-golphed function for converting an english word
 // into smorse code.
-const smorse = code =>
+const smorse = (code) =>
   code
     .split("")
-    .map(a => alphabet[a])
+    .map((a) => alphabet[a])
     .join("");
 
 assert.equal(smorse("sos"), "...---...");
