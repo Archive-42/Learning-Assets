@@ -9,9 +9,9 @@ Analyze the time and space complexity of your solution.
 Examples:
 
 ```
-input: a = [[10, 50], [60, 120], [140, 210]]       
-       b = [[0, 15], [60, 70]]         
-       duration = 8 
+input: a = [[10, 50], [60, 120], [140, 210]]
+       b = [[0, 15], [60, 70]]
+       duration = 8
 output: [60, 68]
 
 input: a = [[10, 50], [60, 120], [140, 210]]
@@ -19,10 +19,10 @@ input: a = [[10, 50], [60, 120], [140, 210]]
        duration = 12
 output: [60, 72]
 
-input: a = [[10, 50], [60, 120], [140, 210]]         
-       b = [[0, 15], [60, 70]]         
-       duration = 12 
+input: a = [[10, 50], [60, 120], [140, 210]]
+       b = [[0, 15], [60, 70]]
+       duration = 12
 output: [] // since there is no common slot
 ```
 
-These example inputs are obviously not realistic input numbers for representing meeting times. Ideally the inputs would consist of Unix epoch timestamps, but those are very large numbers to have to type out over and over again, so we're just going to fake that part. If your function works with these faux inputs, it will work just fine with Unix timestamps. 
+These example inputs are obviously not realistic input numbers for representing meeting times. Ideally the inputs would consist of Unix epoch timestamps, but those are very large numbers to have to type out over and over again, so we're just going to fake that part. If your function works with these faux inputs, it will work just fine with Unix timestamps.

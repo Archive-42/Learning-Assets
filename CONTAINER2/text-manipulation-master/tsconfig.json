@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "lib": ["es6", "dom"],
     "sourceMap": true,
     "module": "commonjs",
     "declaration": true,
@@ -13,17 +10,9 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "allowJs": false,
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "node_modules/types"
-    ]
+    "types": ["node"],
+    "typeRoots": ["node_modules/types"]
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

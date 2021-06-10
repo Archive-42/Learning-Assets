@@ -8,46 +8,46 @@
 
 ## Implements
 
-* [TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md)
+- [TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md)
 
 ## Index
 
 ### Constructors
 
-* [constructor](_buffer_basic_text_buffer_.basictextbuffer.md#constructor)
+- [constructor](_buffer_basic_text_buffer_.basictextbuffer.md#constructor)
 
 ### Properties
 
-* [lineDelimiter](_buffer_basic_text_buffer_.basictextbuffer.md#linedelimiter)
-* [originalText](_buffer_basic_text_buffer_.basictextbuffer.md#originaltext)
-* [table](_buffer_basic_text_buffer_.basictextbuffer.md#table)
+- [lineDelimiter](_buffer_basic_text_buffer_.basictextbuffer.md#linedelimiter)
+- [originalText](_buffer_basic_text_buffer_.basictextbuffer.md#originaltext)
+- [table](_buffer_basic_text_buffer_.basictextbuffer.md#table)
 
 ### Methods
 
-* [buildTable](_buffer_basic_text_buffer_.basictextbuffer.md#buildtable)
-* [charAt](_buffer_basic_text_buffer_.basictextbuffer.md#charat)
-* [columnExists](_buffer_basic_text_buffer_.basictextbuffer.md#columnexists)
-* [getColumnCount](_buffer_basic_text_buffer_.basictextbuffer.md#getcolumncount)
-* [getColumnRange](_buffer_basic_text_buffer_.basictextbuffer.md#getcolumnrange)
-* [getLine](_buffer_basic_text_buffer_.basictextbuffer.md#getline)
-* [getLineCount](_buffer_basic_text_buffer_.basictextbuffer.md#getlinecount)
-* [getLineRange](_buffer_basic_text_buffer_.basictextbuffer.md#getlinerange)
-* [getRangeText](_buffer_basic_text_buffer_.basictextbuffer.md#getrangetext)
-* [getText](_buffer_basic_text_buffer_.basictextbuffer.md#gettext)
-* [init](_buffer_basic_text_buffer_.basictextbuffer.md#init)
-* [insertText](_buffer_basic_text_buffer_.basictextbuffer.md#inserttext)
-* [insertTextAtLine](_buffer_basic_text_buffer_.basictextbuffer.md#inserttextatline)
-* [isLineEmpty](_buffer_basic_text_buffer_.basictextbuffer.md#islineempty)
-* [lineExists](_buffer_basic_text_buffer_.basictextbuffer.md#lineexists)
-* [removeColumn](_buffer_basic_text_buffer_.basictextbuffer.md#removecolumn)
-* [removeColumnRange](_buffer_basic_text_buffer_.basictextbuffer.md#removecolumnrange)
-* [removeFirstLine](_buffer_basic_text_buffer_.basictextbuffer.md#removefirstline)
-* [removeLastLine](_buffer_basic_text_buffer_.basictextbuffer.md#removelastline)
-* [removeLine](_buffer_basic_text_buffer_.basictextbuffer.md#removeline)
-* [removeLineRange](_buffer_basic_text_buffer_.basictextbuffer.md#removelinerange)
-* [removeRange](_buffer_basic_text_buffer_.basictextbuffer.md#removerange)
-* [replaceRange](_buffer_basic_text_buffer_.basictextbuffer.md#replacerange)
-* [replaceTextInLine](_buffer_basic_text_buffer_.basictextbuffer.md#replacetextinline)
+- [buildTable](_buffer_basic_text_buffer_.basictextbuffer.md#buildtable)
+- [charAt](_buffer_basic_text_buffer_.basictextbuffer.md#charat)
+- [columnExists](_buffer_basic_text_buffer_.basictextbuffer.md#columnexists)
+- [getColumnCount](_buffer_basic_text_buffer_.basictextbuffer.md#getcolumncount)
+- [getColumnRange](_buffer_basic_text_buffer_.basictextbuffer.md#getcolumnrange)
+- [getLine](_buffer_basic_text_buffer_.basictextbuffer.md#getline)
+- [getLineCount](_buffer_basic_text_buffer_.basictextbuffer.md#getlinecount)
+- [getLineRange](_buffer_basic_text_buffer_.basictextbuffer.md#getlinerange)
+- [getRangeText](_buffer_basic_text_buffer_.basictextbuffer.md#getrangetext)
+- [getText](_buffer_basic_text_buffer_.basictextbuffer.md#gettext)
+- [init](_buffer_basic_text_buffer_.basictextbuffer.md#init)
+- [insertText](_buffer_basic_text_buffer_.basictextbuffer.md#inserttext)
+- [insertTextAtLine](_buffer_basic_text_buffer_.basictextbuffer.md#inserttextatline)
+- [isLineEmpty](_buffer_basic_text_buffer_.basictextbuffer.md#islineempty)
+- [lineExists](_buffer_basic_text_buffer_.basictextbuffer.md#lineexists)
+- [removeColumn](_buffer_basic_text_buffer_.basictextbuffer.md#removecolumn)
+- [removeColumnRange](_buffer_basic_text_buffer_.basictextbuffer.md#removecolumnrange)
+- [removeFirstLine](_buffer_basic_text_buffer_.basictextbuffer.md#removefirstline)
+- [removeLastLine](_buffer_basic_text_buffer_.basictextbuffer.md#removelastline)
+- [removeLine](_buffer_basic_text_buffer_.basictextbuffer.md#removeline)
+- [removeLineRange](_buffer_basic_text_buffer_.basictextbuffer.md#removelinerange)
+- [removeRange](_buffer_basic_text_buffer_.basictextbuffer.md#removerange)
+- [replaceRange](_buffer_basic_text_buffer_.basictextbuffer.md#replacerange)
+- [replaceTextInLine](_buffer_basic_text_buffer_.basictextbuffer.md#replacetextinline)
 
 ---
 
@@ -55,20 +55,20 @@
 
 <a id="constructor"></a>
 
-###  constructor
+### constructor
 
-⊕ **new BasicTextBuffer**(originalText: *`string`*, lineDelimiter?: *`string`*): [BasicTextBuffer](_buffer_basic_text_buffer_.basictextbuffer.md)
+⊕ **new BasicTextBuffer**(originalText: _`string`_, lineDelimiter?: _`string`_): [BasicTextBuffer](_buffer_basic_text_buffer_.basictextbuffer.md)
 
 **Parameters:**
 
-| Param | Type | Default value |
-| ------ | ------ | ------ |
-| originalText | `string` | - |
-| `Default value` lineDelimiter | `string` | &quot;&quot; |
+| Param                         | Type     | Default value |
+| ----------------------------- | -------- | ------------- |
+| originalText                  | `string` | -             |
+| `Default value` lineDelimiter | `string` | &quot;&quot;  |
 
 **Returns:** [BasicTextBuffer](_buffer_basic_text_buffer_.basictextbuffer.md)
 
-___
+---
 
 ## Properties
 
@@ -76,23 +76,25 @@ ___
 
 ### `<Private>` lineDelimiter
 
-**● lineDelimiter**: *`string`*
+**● lineDelimiter**: _`string`_
 
-___
+---
+
 <a id="originaltext"></a>
 
 ### `<Private>` originalText
 
-**● originalText**: *`string`*
+**● originalText**: _`string`_
 
-___
+---
+
 <a id="table"></a>
 
 ### `<Private>` table
 
-**● table**: *`string`[][]*
+**● table**: _`string`[][]_
 
-___
+---
 
 ## Methods
 
@@ -100,146 +102,156 @@ ___
 
 ### `<Private>` buildTable
 
-▸ **buildTable**(text: *`string`*, lineDelimiter: *`string`*): `string`[][]
+▸ **buildTable**(text: _`string`_, lineDelimiter: _`string`_): `string`[][]
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| text | `string` |
+| Param         | Type     |
+| ------------- | -------- |
+| text          | `string` |
 | lineDelimiter | `string` |
 
 **Returns:** `string`[][]
 
-___
+---
+
 <a id="charat"></a>
 
-###  charAt
+### charAt
 
-▸ **charAt**(column: *`number`*, line: *`number`*):  `string` &#124; `undefined`
+▸ **charAt**(column: _`number`_, line: _`number`_): `string` &#124; `undefined`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param  | Type     |
+| ------ | -------- |
 | column | `number` |
-| line | `number` |
+| line   | `number` |
 
-**Returns:**  `string` &#124; `undefined`
+**Returns:** `string` &#124; `undefined`
 
-___
+---
+
 <a id="columnexists"></a>
 
-###  columnExists
+### columnExists
 
-▸ **columnExists**(column: *`number`*, line: *`number`*): `boolean`
+▸ **columnExists**(column: _`number`_, line: _`number`_): `boolean`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param  | Type     |
+| ------ | -------- |
 | column | `number` |
-| line | `number` |
+| line   | `number` |
 
 **Returns:** `boolean`
 
-___
+---
+
 <a id="getcolumncount"></a>
 
-###  getColumnCount
+### getColumnCount
 
-▸ **getColumnCount**(line: *`number`*): `number`
+▸ **getColumnCount**(line: _`number`_): `number`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| line | `number` |
+| Param | Type     |
+| ----- | -------- |
+| line  | `number` |
 
 **Returns:** `number`
 
-___
+---
+
 <a id="getcolumnrange"></a>
 
-###  getColumnRange
+### getColumnRange
 
-▸ **getColumnRange**(columnStart: *`number`*, columnEnd: *`number`*, line: *`number`*): `string`
+▸ **getColumnRange**(columnStart: _`number`_, columnEnd: _`number`_, line: _`number`_): `string`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param       | Type     |
+| ----------- | -------- |
 | columnStart | `number` |
-| columnEnd | `number` |
-| line | `number` |
+| columnEnd   | `number` |
+| line        | `number` |
 
 **Returns:** `string`
 
-___
+---
+
 <a id="getline"></a>
 
-###  getLine
+### getLine
 
-▸ **getLine**(line: *`number`*): `string`
+▸ **getLine**(line: _`number`_): `string`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| line | `number` |
+| Param | Type     |
+| ----- | -------- |
+| line  | `number` |
 
 **Returns:** `string`
 
-___
+---
+
 <a id="getlinecount"></a>
 
-###  getLineCount
+### getLineCount
 
 ▸ **getLineCount**(): `number`
 
 **Returns:** `number`
 
-___
+---
+
 <a id="getlinerange"></a>
 
-###  getLineRange
+### getLineRange
 
-▸ **getLineRange**(lineStart: *`number`*, lineEnd: *`number`*): `string`
+▸ **getLineRange**(lineStart: _`number`_, lineEnd: _`number`_): `string`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param     | Type     |
+| --------- | -------- |
 | lineStart | `number` |
-| lineEnd | `number` |
+| lineEnd   | `number` |
 
 **Returns:** `string`
 
-___
+---
+
 <a id="getrangetext"></a>
 
-###  getRangeText
+### getRangeText
 
-▸ **getRangeText**(range: *[TextRange](../interfaces/_buffer_text_range_.textrange.md)*): `string`
+▸ **getRangeText**(range: _[TextRange](../interfaces/_buffer_text_range_.textrange.md)_): `string`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param | Type                                                        |
+| ----- | ----------------------------------------------------------- |
 | range | [TextRange](../interfaces/_buffer_text_range_.textrange.md) |
 
 **Returns:** `string`
 
-___
+---
+
 <a id="gettext"></a>
 
-###  getText
+### getText
 
 ▸ **getText**(): `string`
 
 **Returns:** `string`
 
-___
+---
+
 <a id="init"></a>
 
 ### `<Private>` init
@@ -248,197 +260,209 @@ ___
 
 **Returns:** `void`
 
-___
+---
+
 <a id="inserttext"></a>
 
-###  insertText
+### insertText
 
-▸ **insertText**(column: *`number`*, line: *`number`*, text: *`string`*): `void`
+▸ **insertText**(column: _`number`_, line: _`number`_, text: _`string`_): `void`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param  | Type     |
+| ------ | -------- |
 | column | `number` |
-| line | `number` |
-| text | `string` |
+| line   | `number` |
+| text   | `string` |
 
 **Returns:** `void`
 
-___
+---
+
 <a id="inserttextatline"></a>
 
-###  insertTextAtLine
+### insertTextAtLine
 
-▸ **insertTextAtLine**(line: *`number`*, text: *`string`*): `void`
+▸ **insertTextAtLine**(line: _`number`_, text: _`string`_): `void`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| line | `number` |
-| text | `string` |
+| Param | Type     |
+| ----- | -------- |
+| line  | `number` |
+| text  | `string` |
 
 **Returns:** `void`
 
-___
+---
+
 <a id="islineempty"></a>
 
-###  isLineEmpty
+### isLineEmpty
 
-▸ **isLineEmpty**(line: *`number`*): `boolean`
+▸ **isLineEmpty**(line: _`number`_): `boolean`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| line | `number` |
+| Param | Type     |
+| ----- | -------- |
+| line  | `number` |
 
 **Returns:** `boolean`
 
-___
+---
+
 <a id="lineexists"></a>
 
-###  lineExists
+### lineExists
 
-▸ **lineExists**(line: *`number`*): `boolean`
+▸ **lineExists**(line: _`number`_): `boolean`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| line | `number` |
+| Param | Type     |
+| ----- | -------- |
+| line  | `number` |
 
 **Returns:** `boolean`
 
-___
+---
+
 <a id="removecolumn"></a>
 
-###  removeColumn
+### removeColumn
 
-▸ **removeColumn**(column: *`number`*, line: *`number`*): `void`
+▸ **removeColumn**(column: _`number`_, line: _`number`_): `void`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param  | Type     |
+| ------ | -------- |
 | column | `number` |
-| line | `number` |
+| line   | `number` |
 
 **Returns:** `void`
 
-___
+---
+
 <a id="removecolumnrange"></a>
 
-###  removeColumnRange
+### removeColumnRange
 
-▸ **removeColumnRange**(columnStart: *`number`*, columnEnd: *`number`*, line: *`number`*): `void`
+▸ **removeColumnRange**(columnStart: _`number`_, columnEnd: _`number`_, line: _`number`_): `void`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param       | Type     |
+| ----------- | -------- |
 | columnStart | `number` |
-| columnEnd | `number` |
-| line | `number` |
+| columnEnd   | `number` |
+| line        | `number` |
 
 **Returns:** `void`
 
-___
+---
+
 <a id="removefirstline"></a>
 
-###  removeFirstLine
+### removeFirstLine
 
 ▸ **removeFirstLine**(): `void`
 
 **Returns:** `void`
 
-___
+---
+
 <a id="removelastline"></a>
 
-###  removeLastLine
+### removeLastLine
 
 ▸ **removeLastLine**(): `void`
 
 **Returns:** `void`
 
-___
+---
+
 <a id="removeline"></a>
 
-###  removeLine
+### removeLine
 
-▸ **removeLine**(line: *`number`*): `void`
+▸ **removeLine**(line: _`number`_): `void`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| line | `number` |
+| Param | Type     |
+| ----- | -------- |
+| line  | `number` |
 
 **Returns:** `void`
 
-___
+---
+
 <a id="removelinerange"></a>
 
-###  removeLineRange
+### removeLineRange
 
-▸ **removeLineRange**(lineStart: *`number`*, lineEnd: *`number`*): `void`
+▸ **removeLineRange**(lineStart: _`number`_, lineEnd: _`number`_): `void`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param     | Type     |
+| --------- | -------- |
 | lineStart | `number` |
-| lineEnd | `number` |
+| lineEnd   | `number` |
 
 **Returns:** `void`
 
-___
+---
+
 <a id="removerange"></a>
 
-###  removeRange
+### removeRange
 
-▸ **removeRange**(range: *[TextRange](../interfaces/_buffer_text_range_.textrange.md)*): [TextPosition](_buffer_text_position_.textposition.md)
+▸ **removeRange**(range: _[TextRange](../interfaces/_buffer_text_range_.textrange.md)_): [TextPosition](_buffer_text_position_.textposition.md)
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param | Type                                                        |
+| ----- | ----------------------------------------------------------- |
 | range | [TextRange](../interfaces/_buffer_text_range_.textrange.md) |
 
 **Returns:** [TextPosition](_buffer_text_position_.textposition.md)
 
-___
+---
+
 <a id="replacerange"></a>
 
-###  replaceRange
+### replaceRange
 
-▸ **replaceRange**(range: *[TextRange](../interfaces/_buffer_text_range_.textrange.md)*, text: *`string`*):  [TextRange](../interfaces/_buffer_text_range_.textrange.md) &#124; `undefined`
+▸ **replaceRange**(range: _[TextRange](../interfaces/_buffer_text_range_.textrange.md)_, text: _`string`_): [TextRange](../interfaces/_buffer_text_range_.textrange.md) &#124; `undefined`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
+| Param | Type                                                        |
+| ----- | ----------------------------------------------------------- |
 | range | [TextRange](../interfaces/_buffer_text_range_.textrange.md) |
-| text | `string` |
+| text  | `string`                                                    |
 
-**Returns:**  [TextRange](../interfaces/_buffer_text_range_.textrange.md) &#124; `undefined`
+**Returns:** [TextRange](../interfaces/_buffer_text_range_.textrange.md) &#124; `undefined`
 
-___
+---
+
 <a id="replacetextinline"></a>
 
-###  replaceTextInLine
+### replaceTextInLine
 
-▸ **replaceTextInLine**(line: *`number`*, lineText: *`string`*): `void`
+▸ **replaceTextInLine**(line: _`number`_, lineText: _`string`_): `void`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| line | `number` |
+| Param    | Type     |
+| -------- | -------- |
+| line     | `number` |
 | lineText | `string` |
 
 **Returns:** `void`
 
-___
-
+---

@@ -6,7 +6,6 @@
 
 ### Classes
 
-* [BasicTextBuffer](../classes/_buffer_basic_text_buffer_.basictextbuffer.md)
+- [BasicTextBuffer](../classes/_buffer_basic_text_buffer_.basictextbuffer.md)
 
 ---
-

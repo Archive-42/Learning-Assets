@@ -6,7 +6,6 @@
 
 ### Interfaces
 
-* [TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md)
+- [TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md)
 
 ---
-

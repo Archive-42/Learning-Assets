@@ -10,8 +10,8 @@
 
 ### Properties
 
-* [column](_buffer_text_position_.textposition.md#column)
-* [line](_buffer_text_position_.textposition.md#line)
+- [column](_buffer_text_position_.textposition.md#column)
+- [line](_buffer_text_position_.textposition.md#line)
 
 ---
 
@@ -19,16 +19,16 @@
 
 <a id="column"></a>
 
-###  column
+### column
 
-**● column**: *`number`*
+**● column**: _`number`_
 
-___
+---
+
 <a id="line"></a>
 
-###  line
+### line
 
-**● line**: *`number`*
+**● line**: _`number`_
 
-___
-
+---

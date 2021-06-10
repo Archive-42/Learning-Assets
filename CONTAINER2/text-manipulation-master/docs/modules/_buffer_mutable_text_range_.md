@@ -6,7 +6,6 @@
 
 ### Classes
 
-* [MutableTextRange](../classes/_buffer_mutable_text_range_.mutabletextrange.md)
+- [MutableTextRange](../classes/_buffer_mutable_text_range_.mutabletextrange.md)
 
 ---
-

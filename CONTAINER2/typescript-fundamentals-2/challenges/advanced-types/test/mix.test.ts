@@ -13,9 +13,9 @@ let c: Mix<{}, {}>;
 let d: Mix<{ a: number; b: string }, { a: string; c: number[] }> = {
   ...{
     a: 42,
-    b: "abc"
+    b: "abc",
   },
-  ...{ a: "abc", c: [1, 2, 3] }
+  ...{ a: "abc", c: [1, 2, 3] },
 };
 
 // Known properties should have the correct types

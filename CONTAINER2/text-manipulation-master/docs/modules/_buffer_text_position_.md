@@ -6,7 +6,6 @@
 
 ### Classes
 
-* [TextPosition](../classes/_buffer_text_position_.textposition.md)
+- [TextPosition](../classes/_buffer_text_position_.textposition.md)
 
 ---
-

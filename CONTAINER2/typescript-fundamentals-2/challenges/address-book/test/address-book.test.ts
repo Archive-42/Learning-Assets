@@ -78,7 +78,7 @@ describe("AddressBook", () => {
       firstName: "Mike",
       lastName: "North",
       addresses: {},
-      phones: {}
+      phones: {},
     });
     expect(ab.contacts.length).to.eq(1);
   });
@@ -88,13 +88,13 @@ describe("AddressBook", () => {
       firstName: "Mike",
       lastName: "North",
       addresses: {},
-      phones: {}
+      phones: {},
     });
     ab.addContact({
       firstName: "Nobody",
       lastName: "North",
       addresses: {},
-      phones: {}
+      phones: {},
     });
     expect(ab.findContactByName({ lastName: "" }).length).to.eq(0);
     expect(ab.findContactByName({ lastName: "North" }).length).to.eq(2);
@@ -105,13 +105,13 @@ describe("AddressBook", () => {
       firstName: "Mike",
       lastName: "North",
       addresses: {},
-      phones: {}
+      phones: {},
     });
     ab.addContact({
       firstName: "Nobody",
       lastName: "North",
       addresses: {},
-      phones: {}
+      phones: {},
     });
     expect(ab.findContactByName({ firstName: "Mike" }).length).to.eq(1);
     expect(ab.findContactByName({ lastName: "Steve" }).length).to.eq(0);
@@ -122,13 +122,13 @@ describe("AddressBook", () => {
       firstName: "Mike",
       lastName: "North",
       addresses: {},
-      phones: {}
+      phones: {},
     });
     ab.addContact({
       firstName: "Nobody",
       lastName: "North",
       addresses: {},
-      phones: {}
+      phones: {},
     });
     expect(
       ab.findContactByName({ firstName: "Mike", lastName: "North" }).length
@@ -148,7 +148,7 @@ describe("getVcardText", () => {
           firstName: "Mike",
           lastName: "North",
           addresses: {},
-          phones: {}
+          phones: {},
         },
         date
       )
@@ -172,8 +172,8 @@ END:VCARD`
           addresses: {},
           phones: {
             home: "3215551212",
-            office: "3215551200"
-          }
+            office: "3215551200",
+          },
         },
         date
       )
@@ -202,7 +202,7 @@ END:VCARD`
               state: "MN",
               city: "Anytown",
               country: "United States of America",
-              postalCode: 123456
+              postalCode: 123456,
             },
             work: {
               houseNumber: 456,
@@ -210,13 +210,13 @@ END:VCARD`
               state: "MN",
               city: "Anytown",
               country: "United States of America",
-              postalCode: 123456
-            }
+              postalCode: 123456,
+            },
           },
           phones: {
             home: "3215551212",
-            office: "3215551200"
-          }
+            office: "3215551200",
+          },
         },
         date
       )

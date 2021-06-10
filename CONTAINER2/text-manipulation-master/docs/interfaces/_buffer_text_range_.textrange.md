@@ -8,15 +8,15 @@
 
 ## Implemented by
 
-* [ImmutableTextRange](../classes/_buffer_immutable_text_range_.immutabletextrange.md)
-* [MutableTextRange](../classes/_buffer_mutable_text_range_.mutabletextrange.md)
+- [ImmutableTextRange](../classes/_buffer_immutable_text_range_.immutabletextrange.md)
+- [MutableTextRange](../classes/_buffer_mutable_text_range_.mutabletextrange.md)
 
 ## Index
 
 ### Properties
 
-* [end](_buffer_text_range_.textrange.md#end)
-* [start](_buffer_text_range_.textrange.md#start)
+- [end](_buffer_text_range_.textrange.md#end)
+- [start](_buffer_text_range_.textrange.md#start)
 
 ---
 
@@ -24,20 +24,20 @@
 
 <a id="end"></a>
 
-###  end
+### end
 
-**● end**: *[TextPosition](../classes/_buffer_text_position_.textposition.md)*
+**● end**: _[TextPosition](../classes/_buffer_text_position_.textposition.md)_
 
 The end of the range
 
-___
+---
+
 <a id="start"></a>
 
-###  start
+### start
 
-**● start**: *[TextPosition](../classes/_buffer_text_position_.textposition.md)*
+**● start**: _[TextPosition](../classes/_buffer_text_position_.textposition.md)_
 
 The start of the range
 
-___
-
+---

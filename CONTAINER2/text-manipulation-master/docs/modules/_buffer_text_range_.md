@@ -6,7 +6,6 @@
 
 ### Interfaces
 
-* [TextRange](../interfaces/_buffer_text_range_.textrange.md)
+- [TextRange](../interfaces/_buffer_text_range_.textrange.md)
 
 ---
-

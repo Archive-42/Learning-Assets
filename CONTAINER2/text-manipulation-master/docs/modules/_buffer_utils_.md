@@ -6,8 +6,8 @@
 
 ### Functions
 
-* [cmp](_buffer_utils_.md#cmp)
-* [sortRange](_buffer_utils_.md#sortrange)
+- [cmp](_buffer_utils_.md#cmp)
+- [sortRange](_buffer_utils_.md#sortrange)
 
 ---
 
@@ -15,35 +15,35 @@
 
 <a id="cmp"></a>
 
-###  cmp
+### cmp
 
-▸ **cmp**(a: *[TextPosition](../classes/_buffer_text_position_.textposition.md)*, b: *[TextPosition](../classes/_buffer_text_position_.textposition.md)*): `number`
+▸ **cmp**(a: _[TextPosition](../classes/_buffer_text_position_.textposition.md)_, b: _[TextPosition](../classes/_buffer_text_position_.textposition.md)_): `number`
 
 **Parameters:**
 
-| Param | Type |
-| ------ | ------ |
-| a | [TextPosition](../classes/_buffer_text_position_.textposition.md) |
-| b | [TextPosition](../classes/_buffer_text_position_.textposition.md) |
+| Param | Type                                                              |
+| ----- | ----------------------------------------------------------------- |
+| a     | [TextPosition](../classes/_buffer_text_position_.textposition.md) |
+| b     | [TextPosition](../classes/_buffer_text_position_.textposition.md) |
 
 **Returns:** `number`
 
-___
+---
+
 <a id="sortrange"></a>
 
-###  sortRange
+### sortRange
 
-▸ **sortRange**(range: *[[TextPosition](../classes/_buffer_text_position_.textposition.md), [TextPosition](../classes/_buffer_text_position_.textposition.md)]*): [[TextPosition](../classes/_buffer_text_position_.textposition.md), [TextPosition](../classes/_buffer_text_position_.textposition.md)]
+▸ **sortRange**(range: _[[TextPosition](../classes/_buffer_text_position_.textposition.md), [TextPosition](../classes/_buffer_text_position_.textposition.md)]_): [[TextPosition](../classes/_buffer_text_position_.textposition.md), [TextPosition](../classes/_buffer_text_position_.textposition.md)]
 
 Sort the provided range
 
 **Parameters:**
 
-| Param | Type | Description |
-| ------ | ------ | ------ |
-| range | [[TextPosition](../classes/_buffer_text_position_.textposition.md), [TextPosition](../classes/_buffer_text_position_.textposition.md)] |  - |
+| Param | Type                                                                                                                                   | Description |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| range | [[TextPosition](../classes/_buffer_text_position_.textposition.md), [TextPosition](../classes/_buffer_text_position_.textposition.md)] | -           |
 
 **Returns:** [[TextPosition](../classes/_buffer_text_position_.textposition.md), [TextPosition](../classes/_buffer_text_position_.textposition.md)]
 
-___
-
+---

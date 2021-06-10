@@ -8,26 +8,26 @@
 
 ## Implements
 
-* [TextRange](../interfaces/_buffer_text_range_.textrange.md)
+- [TextRange](../interfaces/_buffer_text_range_.textrange.md)
 
 ## Index
 
 ### Constructors
 
-* [constructor](_buffer_mutable_text_range_.mutabletextrange.md#constructor)
+- [constructor](_buffer_mutable_text_range_.mutabletextrange.md#constructor)
 
 ### Properties
 
-* [end](_buffer_mutable_text_range_.mutabletextrange.md#end)
-* [start](_buffer_mutable_text_range_.mutabletextrange.md#start)
-* [textBuffer](_buffer_mutable_text_range_.mutabletextrange.md#textbuffer)
+- [end](_buffer_mutable_text_range_.mutabletextrange.md#end)
+- [start](_buffer_mutable_text_range_.mutabletextrange.md#start)
+- [textBuffer](_buffer_mutable_text_range_.mutabletextrange.md#textbuffer)
 
 ### Methods
 
-* [exists](_buffer_mutable_text_range_.mutabletextrange.md#exists)
-* [getText](_buffer_mutable_text_range_.mutabletextrange.md#gettext)
-* [setText](_buffer_mutable_text_range_.mutabletextrange.md#settext)
-* [sort](_buffer_mutable_text_range_.mutabletextrange.md#sort)
+- [exists](_buffer_mutable_text_range_.mutabletextrange.md#exists)
+- [getText](_buffer_mutable_text_range_.mutabletextrange.md#gettext)
+- [setText](_buffer_mutable_text_range_.mutabletextrange.md#settext)
+- [sort](_buffer_mutable_text_range_.mutabletextrange.md#sort)
 
 ---
 
@@ -35,50 +35,52 @@
 
 <a id="constructor"></a>
 
-###  constructor
+### constructor
 
-⊕ **new MutableTextRange**(interval: *[[TextPosition](_buffer_text_position_.textposition.md), [TextPosition](_buffer_text_position_.textposition.md)]*, textBuffer: *[TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md)*): [MutableTextRange](_buffer_mutable_text_range_.mutabletextrange.md)
+⊕ **new MutableTextRange**(interval: _[[TextPosition](_buffer_text_position_.textposition.md), [TextPosition](_buffer_text_position_.textposition.md)]_, textBuffer: _[TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md)_): [MutableTextRange](_buffer_mutable_text_range_.mutabletextrange.md)
 
 **Parameters:**
 
-| Param | Type | Description |
-| ------ | ------ | ------ |
-| interval | [[TextPosition](_buffer_text_position_.textposition.md), [TextPosition](_buffer_text_position_.textposition.md)] |  - |
-| textBuffer | [TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md) |   |
+| Param      | Type                                                                                                             | Description |
+| ---------- | ---------------------------------------------------------------------------------------------------------------- | ----------- |
+| interval   | [[TextPosition](_buffer_text_position_.textposition.md), [TextPosition](_buffer_text_position_.textposition.md)] | -           |
+| textBuffer | [TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md)                                                   |             |
 
 **Returns:** [MutableTextRange](_buffer_mutable_text_range_.mutabletextrange.md)
 
-___
+---
 
 ## Properties
 
 <a id="end"></a>
 
-###  end
+### end
 
-**● end**: *[TextPosition](_buffer_text_position_.textposition.md)*
+**● end**: _[TextPosition](_buffer_text_position_.textposition.md)_
 
-___
+---
+
 <a id="start"></a>
 
-###  start
+### start
 
-**● start**: *[TextPosition](_buffer_text_position_.textposition.md)*
+**● start**: _[TextPosition](_buffer_text_position_.textposition.md)_
 
-___
+---
+
 <a id="textbuffer"></a>
 
 ### `<Private>` textBuffer
 
-**● textBuffer**: *[TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md)*
+**● textBuffer**: _[TextBuffer](../interfaces/_buffer_text_buffer_.textbuffer.md)_
 
-___
+---
 
 ## Methods
 
 <a id="exists"></a>
 
-###  exists
+### exists
 
 ▸ **exists**(): `boolean`
 
@@ -86,10 +88,11 @@ The range from start to end exists
 
 **Returns:** `boolean`
 
-___
+---
+
 <a id="gettext"></a>
 
-###  getText
+### getText
 
 ▸ **getText**(): `string`
 
@@ -97,27 +100,29 @@ Get the text of the range
 
 **Returns:** `string`
 
-___
+---
+
 <a id="settext"></a>
 
-###  setText
+### setText
 
-▸ **setText**(text: *`string`*): `void`
+▸ **setText**(text: _`string`_): `void`
 
 Change the text of the range
 
 **Parameters:**
 
-| Param | Type | Description |
-| ------ | ------ | ------ |
-| text | `string` |   |
+| Param | Type     | Description |
+| ----- | -------- | ----------- |
+| text  | `string` |             |
 
 **Returns:** `void`
 
-___
+---
+
 <a id="sort"></a>
 
-###  sort
+### sort
 
 ▸ **sort**(): [MutableTextRange](_buffer_mutable_text_range_.mutabletextrange.md)
 
@@ -125,5 +130,4 @@ Sort the range ensuring that start is less than or equal to end start <= end
 
 **Returns:** [MutableTextRange](_buffer_mutable_text_range_.mutabletextrange.md)
 
-___
-
+---

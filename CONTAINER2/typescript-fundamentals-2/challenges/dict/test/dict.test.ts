@@ -26,7 +26,7 @@ describe("Dict type", () => {
   it("(compile) should be able to hold a dictionary of string[]", () => {
     const x: Dict<string[]> = {
       abc: ["def"],
-      ghi: ["jkl", "mno"]
+      ghi: ["jkl", "mno"],
     };
   });
 });
@@ -36,23 +36,23 @@ describe("mapDict", () => {
     expect(indexExports.mapDict.length).to.eq(2);
   });
   it("should return a dictionary", () => {
-    expect(indexExports.mapDict({ abc: 4 }, x => x)).to.deep.eq({ abc: 4 });
+    expect(indexExports.mapDict({ abc: 4 }, (x) => x)).to.deep.eq({ abc: 4 });
   });
   it("should use the second argument (fn) to transform each value", () => {
-    expect(indexExports.mapDict({ abc: 4 }, x => `${x}`)).to.deep.eq({
-      abc: "4"
+    expect(indexExports.mapDict({ abc: 4 }, (x) => `${x}`)).to.deep.eq({
+      abc: "4",
     });
   });
   it("should not invoke the transform function for undefined values", () => {
     let invokeCount = 0;
     expect(
-      indexExports.mapDict({ abc: 4, def: undefined }, x => {
+      indexExports.mapDict({ abc: 4, def: undefined }, (x) => {
         invokeCount++;
 
         return `${x}`;
       })
     ).to.deep.include({
-      abc: "4"
+      abc: "4",
     });
     expect(invokeCount).to.eq(1);
   });

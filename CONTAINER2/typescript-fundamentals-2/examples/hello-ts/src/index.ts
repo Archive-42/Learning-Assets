@@ -3,7 +3,7 @@
  * @param n number of milliseconds before promise resolves
  */
 function timeout(n: number) {
-  return new Promise(res => setTimeout(res, n));
+  return new Promise((res) => setTimeout(res, n));
 }
 
 /**

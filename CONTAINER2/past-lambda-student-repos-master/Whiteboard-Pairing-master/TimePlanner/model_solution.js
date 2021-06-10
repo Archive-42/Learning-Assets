@@ -21,26 +21,59 @@ function timePlanner(a, b, duration) {
 }
 
 /* Some simple console.log tests */
-console.log(timePlanner(
-  [[10, 50], [60, 120], [140, 210]],
-  [[0, 15], [60, 70]],
-  8
-));   // should print [60, 68]
+console.log(
+  timePlanner(
+    [
+      [10, 50],
+      [60, 120],
+      [140, 210],
+    ],
+    [
+      [0, 15],
+      [60, 70],
+    ],
+    8
+  )
+); // should print [60, 68]
 
-console.log(timePlanner(
-  [[10, 50], [60, 120], [140, 210]],
-  [[0, 15], [60, 72]],
-  12
-));   // should print [60, 72]
+console.log(
+  timePlanner(
+    [
+      [10, 50],
+      [60, 120],
+      [140, 210],
+    ],
+    [
+      [0, 15],
+      [60, 72],
+    ],
+    12
+  )
+); // should print [60, 72]
 
-console.log(timePlanner(
-  [[10, 50], [60, 120], [140, 210]],
-  [[0, 15], [60, 70]],
-  12
-));   // should print []
+console.log(
+  timePlanner(
+    [
+      [10, 50],
+      [60, 120],
+      [140, 210],
+    ],
+    [
+      [0, 15],
+      [60, 70],
+    ],
+    12
+  )
+); // should print []
 
-console.log(timePlanner(
-  [[0, 5], [50, 70], [120, 125]],
-  [[0, 50]],
-  8
-));   // should print []
+console.log(
+  timePlanner(
+    [
+      [0, 5],
+      [50, 70],
+      [120, 125],
+    ],
+    [[0, 50]],
+    8
+  )
+); // should print []

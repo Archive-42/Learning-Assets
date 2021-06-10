@@ -6,7 +6,6 @@
 
 ### Classes
 
-* [ImmutableTextRange](../classes/_buffer_immutable_text_range_.immutabletextrange.md)
+- [ImmutableTextRange](../classes/_buffer_immutable_text_range_.immutabletextrange.md)
 
 ---
-

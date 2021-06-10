@@ -47,7 +47,7 @@ interface Foo {
   y: number;
 }
 export type ExtractPropertyNamesAssignableTo<T, S> = {
-  [K in keyof T]: Record<K, S> extends Pick<T, K> ? K : never
+  [K in keyof T]: Record<K, S> extends Pick<T, K> ? K : never;
 }[keyof T];
 
 type X = ExtractPropertyNamesAssignableTo<
@@ -68,7 +68,7 @@ type X = ExtractPropertyNamesAssignableTo<
  *
  */
 export type OptionalPropertyNamesOf<T> = {
-  [K in keyof T]: T extends Record<K, T[K]> ? never : K
+  [K in keyof T]: T extends Record<K, T[K]> ? never : K;
 }[keyof T];
 
 /**
@@ -83,5 +83,5 @@ export type OptionalPropertyNamesOf<T> = {
  * 'a'
  */
 export type RequiredPropertyNamesOf<T> = {
-  [K in keyof T]: T extends Record<K, T[K]> ? K : never
+  [K in keyof T]: T extends Record<K, T[K]> ? K : never;
 }[keyof T];
