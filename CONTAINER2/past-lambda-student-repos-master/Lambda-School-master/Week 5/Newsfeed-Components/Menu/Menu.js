@@ -6,7 +6,7 @@ let menuItems = [
   "What's New",
   "Tech Trends",
   "Music",
-  "Log Out"
+  "Log Out",
 ];
 
 /* 
@@ -43,7 +43,7 @@ function menuComponent(arr) {
   let ul = document.createElement("ul");
   menuComponent.appendChild(ul);
 
-  arr.forEach(item => {
+  arr.forEach((item) => {
     let li = document.createElement("li");
     li.textContent = item;
     ul.appendChild(li);
@@ -52,7 +52,7 @@ function menuComponent(arr) {
   console.log(menuComponent);
 }
 
-const toggleMenu = e => {
+const toggleMenu = (e) => {
   console.log(e);
   menu.classList.toggle("menu--open");
   menu.classList.add("animation");
@@ -62,4 +62,4 @@ menuComponent(menuItems);
 const menuBtn = document.querySelector(".menu-button");
 const menu = document.querySelector(".menu");
 
-menuBtn.addEventListener("click", event => toggleMenu(event));
+menuBtn.addEventListener("click", (event) => toggleMenu(event));

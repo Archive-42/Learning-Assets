@@ -1,26 +1,24 @@
 # Lecture III: The System Stack
 
-<br> a. [Additional Resources](#Additional-Resources)   
+<br> a. [Additional Resources](#Additional-Resources)  
 <br> b. [Stacks](#Stacks)  
-<br> c. [Implementing a Stack](#Implementing-a-Stack)    
+<br> c. [Implementing a Stack](#Implementing-a-Stack)  
 <br>
 <br>
-
 
 ## Additional Resources
 
-[The CPU Stack](https://youtu.be/vAy5rXxUwoc)  
+[The CPU Stack](https://youtu.be/vAy5rXxUwoc)
 
-[CPU Interrupts](https://youtu.be/w3gDDg_kORk)  
+[CPU Interrupts](https://youtu.be/w3gDDg_kORk)
 
 [CS19 Lecture III: The System Stack Recording: Brady Fukumoto](https://www.youtube.com/watch?v=nCghJadoRYU&feature=youtu.be)
 
 <br>
 
-[Memory Layout of C Programs](https://www.geeksforgeeks.org/memory-layout-of-c-program/)  
+[Memory Layout of C Programs](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
 
-[Explain a Call Stack in a Nutshell](https://stackoverflow.com/questions/10057443/explain-the-concept-of-a-stack-frame-in-a-nutshell)  
-
+[Explain a Call Stack in a Nutshell](https://stackoverflow.com/questions/10057443/explain-the-concept-of-a-stack-frame-in-a-nutshell)
 
 <br>
 
@@ -38,9 +36,7 @@ Within the LS8 project, our memory is not a complex data structure - it's simply
 
 If you understand how stacks work, it helps you understand how memory, function storage, recursion and compilers work. Thorough knowledge of the processes that go into computing allow us to become excellent debuggers.
 
-
 ![C Memory](memory.png "C Memory")
-
 
 When we look at this diagram of how the memory is laid out in a C Program, we notice that the stack and heap grow in opposite directions.
 
@@ -127,7 +123,6 @@ Stack Underflow -- it will move to an area of memory that it shouldn't be pointi
 
 Stack Overflow happens when we call PUSH more times than our Stack's memory allows, going into the program memory area. Infinite recursion can cause this.
 
-
 <br>
 
 Let's create a stack and start coding. How do we implement a stack?
@@ -177,7 +172,7 @@ We've also added references to our PUSH and POP commands. Now we'll add them int
 
 Both PUSH and POP look very similar, but in reverse order. One gets the value first, then puts it in the stack where indicated. The other gets a value from the stack to put into the register.
 
-One thing to note about how PUSH works is _when_ the Stack Pointer is decremented. The Stack Pointer is always pointing to the last item in the stack -- to a filled space in memory. 
+One thing to note about how PUSH works is _when_ the Stack Pointer is decremented. The Stack Pointer is always pointing to the last item in the stack -- to a filled space in memory.
 
 Before we write a new value into memory in the stack, we need to _decrement_ the Stack Pointer, to ensure it's at an empty (or unused) space in memory.
 
@@ -205,23 +200,3 @@ Our software can keep track of this pending issue and prevent it; but the hardwa
 
 <br>
 <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

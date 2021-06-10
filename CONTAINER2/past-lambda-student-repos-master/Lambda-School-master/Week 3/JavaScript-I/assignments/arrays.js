@@ -9,7 +9,7 @@ let inventory = [
     id: 3,
     car_make: "Land Rover",
     car_model: "Defender Ice Edition",
-    car_year: 2010
+    car_year: 2010,
   },
   { id: 4, car_make: "Honda", car_model: "Accord", car_year: 1983 },
   { id: 5, car_make: "Mitsubishi", car_model: "Galant", car_year: 1990 },
@@ -27,7 +27,7 @@ let inventory = [
     id: 16,
     car_make: "Mitsubishi",
     car_model: "Montero Sport",
-    car_year: 2001
+    car_year: 2001,
   },
   { id: 17, car_make: "Buick", car_model: "Skylark", car_year: 1987 },
   { id: 18, car_make: "Geo", car_model: "Prizm", car_year: 1995 },
@@ -62,15 +62,13 @@ let inventory = [
   { id: 47, car_make: "Volkswagen", car_model: "Jetta", car_year: 2007 },
   { id: 48, car_make: "Dodge", car_model: "Magnum", car_year: 2008 },
   { id: 49, car_make: "Chrysler", car_model: "Sebring", car_year: 1996 },
-  { id: 50, car_make: "Lincoln", car_model: "Town Car", car_year: 1999 }
+  { id: 50, car_make: "Lincoln", car_model: "Town Car", car_year: 1999 },
 ];
 
 // ==== Challenge 1 ====
 // The dealer can't recall the information for a car with an id of 33 on his lot. Help the dealer find out which car has an id of 33 by logging the car's year, make, and model in the console log provided to you below:
 console.log(
-  `Car 33 is a ${inventory[32].id} ${inventory[32].car_make} ${
-    inventory[32].car_model
-  }`
+  `Car 33 is a ${inventory[32].id} ${inventory[32].car_make} ${inventory[32].car_model}`
 );
 
 // ==== Challenge 2 ====
@@ -81,21 +79,21 @@ console.log(`Last car is a ${lastCar.car_model} ${lastCar.car_make}`);
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 let carModels = [];
-inventory.forEach(car => carModels.push(car.car_model));
+inventory.forEach((car) => carModels.push(car.car_model));
 carModels.sort();
 console.table(carModels);
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
 let carYears = [];
-inventory.forEach(car => carYears.push(car.car_year));
+inventory.forEach((car) => carYears.push(car.car_year));
 carYears.sort();
 console.table(carYears);
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
 let oldCars = [];
-carYears.forEach(year => {
+carYears.forEach((year) => {
   if (year < 2000) oldCars.push(year);
 });
 console.table(oldCars);
@@ -103,7 +101,7 @@ console.table(oldCars);
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
 let BMWAndAudi = [];
-inventory.forEach(car => {
+inventory.forEach((car) => {
   if (car.car_make === "BMW" || car.car_make === "Audi") BMWAndAudi.push(car);
 });
 console.log(JSON.stringify(BMWAndAudi) + "\n");

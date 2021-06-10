@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getQuote } from "../actions/actions";
 import quoteIcon from "../images/quotation.svg";
 
-const GeneratedQuote = props => {
+const GeneratedQuote = (props) => {
   if (props.quote.content.length > 270) {
     props.getQuote();
   }
@@ -22,14 +22,11 @@ const GeneratedQuote = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     quote: state.quote,
-    error: state.error
+    error: state.error,
   };
 };
 
-export default connect(
-  mapStateToProps,
-  { getQuote }
-)(GeneratedQuote);
+export default connect(mapStateToProps, { getQuote })(GeneratedQuote);

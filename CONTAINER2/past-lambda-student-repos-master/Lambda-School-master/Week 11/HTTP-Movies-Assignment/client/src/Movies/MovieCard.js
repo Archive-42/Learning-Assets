@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const MovieCard = props => {
+const MovieCard = (props) => {
   console.log("card", props.prop);
   const { title, director, metascore, stars } = props.movie;
   return (
@@ -10,10 +10,10 @@ const MovieCard = props => {
         onClick={() => {
           axios
             .delete(`http://localhost:5000/api/movies/${props.movie.id}`)
-            .then(response => {
+            .then((response) => {
               alert("Successfully deleted");
             })
-            .catch(err => {
+            .catch((err) => {
               console.log(err);
             });
           return props.prop.history.push("/");
@@ -30,7 +30,7 @@ const MovieCard = props => {
       </div>
       <h3>Actors</h3>
 
-      {stars.map(star => (
+      {stars.map((star) => (
         <div key={star} className="movie-star">
           {star}
         </div>

@@ -33,7 +33,7 @@ function App() {
   
   */
 
-  buttonClick = e => {
+  buttonClick = (e) => {
     console.log("inside the buttonClick function with item:  " + e.item);
     if (e.item === "C") {
       displayAmount = 0;

@@ -3,18 +3,18 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { createFriend } from "../actions/actions";
 
-const FriendForm = props => {
+const FriendForm = (props) => {
   return (
     <div>
       <h4>Add a friend!</h4>
       <form
-        onSubmit={e => {
+        onSubmit={(e) => {
           e.preventDefault();
           alert("Friend successfully added!");
           return props.createFriend({
             name: document.getElementById("name").value,
             age: document.getElementById("age").value,
-            email: document.getElementById("email").value
+            email: document.getElementById("email").value,
           });
         }}
       >
@@ -53,9 +53,6 @@ const FriendForm = props => {
   );
 };
 
-export default connect(
-  null,
-  {
-    createFriend
-  }
-)(FriendForm);
+export default connect(null, {
+  createFriend,
+})(FriendForm);

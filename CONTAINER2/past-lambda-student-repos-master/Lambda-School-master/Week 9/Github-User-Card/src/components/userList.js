@@ -13,7 +13,7 @@ class UserList extends React.Component {
     return (
       <div className="cards">
         {this.props.data ? (
-          this.props.data.map(user => {
+          this.props.data.map((user) => {
             return <UserComponent data={user} />;
           })
         ) : (

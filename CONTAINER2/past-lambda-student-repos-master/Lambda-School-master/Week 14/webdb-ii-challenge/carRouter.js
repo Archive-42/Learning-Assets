@@ -5,10 +5,10 @@ const carRouter = express.Router();
 
 carRouter.get("/", (req, res) => {
   db.find()
-    .then(account => {
+    .then((account) => {
       res.status(200).json(account);
     })
-    .catch(error => {
+    .catch((error) => {
       res
         .status(500)
         .json({ error: "The post information could not be retrieved." });
@@ -17,7 +17,7 @@ carRouter.get("/", (req, res) => {
 
 carRouter.get("/:id", (req, res) => {
   db.findById(req.params.id)
-    .then(account => {
+    .then((account) => {
       if (!account) {
         res
           .status(404)
@@ -26,7 +26,7 @@ carRouter.get("/:id", (req, res) => {
         res.status(200).json(account);
       }
     })
-    .catch(error => {
+    .catch((error) => {
       res
         .status(500)
         .json({ error: "The post information could not be retrieved." });
@@ -37,16 +37,16 @@ carRouter.post("/", (req, res) => {
   console.log(req.body);
   if (!req.body.VIN || !req.body.make || !req.body.model || !req.body.mileage) {
     res.status(400).json({
-      errorMessage: "Please provide title and contents for the post."
+      errorMessage: "Please provide title and contents for the post.",
     });
   } else {
     db.insert(req.body)
-      .then(account => {
+      .then((account) => {
         res.status(201).json(account);
       })
-      .catch(error => {
+      .catch((error) => {
         res.status(500).json({
-          error: "There was an error while saving the post to the database"
+          error: "There was an error while saving the post to the database",
         });
       });
   }
@@ -55,18 +55,18 @@ carRouter.post("/", (req, res) => {
 carRouter.put("/:id", (req, res) => {
   if (!req.body.VIN || !req.body.make || !req.body.model || !req.body.mileage) {
     res.status(400).json({
-      errorMessage: "Please provide title and contents for the post."
+      errorMessage: "Please provide title and contents for the post.",
     });
   } else {
     db.update(req.params.id, req.body)
-      .then(account => {
+      .then((account) => {
         if (!account) {
           res.status(404).json({
-            message: "The post with the specified ID does not exist."
+            message: "The post with the specified ID does not exist.",
           });
         } else res.status(200).json(account);
       })
-      .catch(error => {
+      .catch((error) => {
         res
           .status(500)
           .json({ error: "The post information could not be modified." });
@@ -76,7 +76,7 @@ carRouter.put("/:id", (req, res) => {
 
 carRouter.delete("/:id", (req, res) => {
   db.remove(req.params.id)
-    .then(account => {
+    .then((account) => {
       console.log(account);
       if (!account) {
         res
@@ -86,7 +86,7 @@ carRouter.delete("/:id", (req, res) => {
         res.status(204).send({});
       }
     })
-    .catch(error => {
+    .catch((error) => {
       res.status(500).json({ error: "The post could not be removed" });
     });
 });

@@ -1,16 +1,16 @@
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   return knex("users")
     .truncate()
-    .then(function() {
+    .then(function () {
       return knex("users").insert([
         {
           name: "Samwise Gamgee",
-          bio: "Gardener and poet. Married to Rose Cotton"
+          bio: "Gardener and poet. Married to Rose Cotton",
         },
         {
           name: "Frodo Baggins",
-          bio: "The ring bearer"
-        }
+          bio: "The ring bearer",
+        },
       ]);
     });
 };

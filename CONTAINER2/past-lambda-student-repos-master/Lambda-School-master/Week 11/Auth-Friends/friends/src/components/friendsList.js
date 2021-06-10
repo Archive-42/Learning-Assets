@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getFriends } from "../actions/actions";
 import { Link } from "react-router-dom";
 
-const FriendsList = props => {
+const FriendsList = (props) => {
   return (
     <div>
       <h4>Here's a list of friends</h4>
@@ -35,8 +35,8 @@ const FriendsList = props => {
   );
 };
 
-const mapOverFriends = friends => {
-  return friends.map(friend => {
+const mapOverFriends = (friends) => {
+  return friends.map((friend) => {
     return (
       <div>
         <h5>{friend.name}</h5>
@@ -48,13 +48,10 @@ const mapOverFriends = friends => {
   });
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    friends: state.friends
+    friends: state.friends,
   };
 };
 
-export default connect(
-  mapStateToProps,
-  { getFriends }
-)(FriendsList);
+export default connect(mapStateToProps, { getFriends })(FriendsList);

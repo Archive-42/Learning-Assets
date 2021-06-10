@@ -5,11 +5,11 @@
     <br>d. [Word Transformation](#Word-Transformation)  
     <br>h. [Adventure Map Traversing](#Adventure-Map-Traversing)  
     <br>
-<br>
+   <br>
 
 # Lecture IV: Maze Traversal
 
-[CS18 Social Graph, Map Traversal: Brady Fukumoto](https://www.youtube.com/watch?v=p263i-Shn9o)  
+[CS18 Social Graph, Map Traversal: Brady Fukumoto](https://www.youtube.com/watch?v=p263i-Shn9o)
 
 [CS19 Graphs IV, Earliest Ancestors: Brian Doyle](https://youtu.be/s3jZ7dKFtyI)  
 For CS19 notes, go straight to [Earliest Ancestor](#Earliest-Ancestor).
@@ -18,8 +18,7 @@ For CS19 notes, go straight to [Earliest Ancestor](#Earliest-Ancestor).
 
 [How to Get That Job at Google](https://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)  
 [DFS and BFS Visualization](https://visualgo.net/en/dfsbfs)  
-[BFS Tutorial and Notes](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/)  
-
+[BFS Tutorial and Notes](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/)
 
 <br>
 
@@ -62,11 +61,11 @@ for userID in self.users:
 
 <br>
 
-What is the time complexity of this? 
+What is the time complexity of this?
 
 `O(n)` for the first loop because we are iterating through all the users; but on the nested loop, we go through some (but not all) of the users on each loop (progressively fewer with each loop as we near the end).
 
-This is still `O(n^2)` even though the second loop doesn't go through all of n with each loop, it averages 1/2 * n ( `O(n/2)` ), but removing the qualifying integer, it's still O(n) * O(n) = `O(n^2)`.
+This is still `O(n^2)` even though the second loop doesn't go through all of n with each loop, it averages 1/2 _ n ( `O(n/2)` ), but removing the qualifying integer, it's still O(n) _ O(n) = `O(n^2)`.
 
 Now let's actually create the friendships and assign them friendships:
 
@@ -117,10 +116,9 @@ if __name__ == '__main__':
 <br>
 <br>
 
-
 ## Implement Degrees of Separation
 
-Now let's try to `getAllSocialPathts(self, userID)`. We'll pass in a userID and return the extended network, and the shortest path between the user and each person in the extended network. 
+Now let's try to `getAllSocialPathts(self, userID)`. We'll pass in a userID and return the extended network, and the shortest path between the user and each person in the extended network.
 
 We're going between each user in the extended network and calculating the distance between that user and the primary user.
 
@@ -248,11 +246,12 @@ Example output
 <br>
 
 Clarifications:
-* The input will not be empty.
-* There are no cycles in the input.
-* There are no "repeated" ancestors – if two individuals are connected, it is by exactly one path.
-* IDs will always be positive integers.
-* A parent may have any number of children.
+
+- The input will not be empty.
+- There are no cycles in the input.
+- There are no "repeated" ancestors – if two individuals are connected, it is by exactly one path.
+- IDs will always be positive integers.
+- A parent may have any number of children.
 
 <br>
 
@@ -266,12 +265,13 @@ test_ancestors = [(1, 3), (2, 3), (3, 6), (5, 6), (5, 7), (4, 5), (4, 8), (8, 9)
 
 <br>
 
-Some key words also stand out: 
-* `furthest distance` = looking for the _longest_ shortest path (BFS)
-* `relationships` (or `connections`) = a graph problem
-* `Integer ID` = node/vertex
-* `Parent Child Pair` = edges
-* `Only look up to an ancestor` = Directional Graph
+Some key words also stand out:
+
+- `furthest distance` = looking for the _longest_ shortest path (BFS)
+- `relationships` (or `connections`) = a graph problem
+- `Integer ID` = node/vertex
+- `Parent Child Pair` = edges
+- `Only look up to an ancestor` = Directional Graph
 
 Knowing that it's a directional graph simplifies how we approach this problem. For example, 6 has an edge with 3 and 5, but because it's directed, 3 does _not_ share an edge with 6 (it's not bidirectional) and only cares about its shared edges with 1 and 2.
 
@@ -324,7 +324,7 @@ class Graph:
         else:
             # Error
             pass
-    
+
     def add_edge(self, vertex_from, vertex_to):
         # Make sure vertices exist
         if vertex_from in self.vertices and vertex_to in self.vertices:
@@ -337,7 +337,6 @@ class Graph:
 ```
 
 <br>
-
 
 Using our Graph class, we'll setup our graph using the passed in ancestors:
 
@@ -393,7 +392,7 @@ Now we need to implement the BFS for traversing the graph.
 
             earliest_ancestor = parent
             max_path_length = len(path)
-        
+
         for neighbor in graph.vertices[parent]:
             new_path = list(path)
             new_path.append(neighbor)
@@ -446,9 +445,9 @@ Let's look for key words to tell us about how to tackle the problem
 
 <br>
 
-* `dictionary` = words are nodes
-* `Shortest` = Breadth First Search
-* `transformation sequence` = path
+- `dictionary` = words are nodes
+- `Shortest` = Breadth First Search
+- `transformation sequence` = path
 
 <br>
 
@@ -518,7 +517,7 @@ def get_neighbors(word):
             # Make sure the mutated word doesn't equal the starting word
             if new_word != word and new_word in word_set:
                 neighbors.append(new_word)
-    
+
     return neighbors
 ```
 
@@ -545,7 +544,7 @@ def find_word_ladder(beginWord, endWord):
             # End when we find endWord
             if vertex == endWord:
                 return path
-            
+
             # If not endWord, find next word neighbors and keep searching
             for neighbor in get_neighbors(vertex):
                 path_copy = list(path)
@@ -576,13 +575,12 @@ We receive back:
 
 > ['hit', 'cit', 'cot', 'cog']  
 > ['sail', 'bail', 'boil', 'boll', 'bolt', 'boat']  
-> None  
+> None
 
 So it looks like it's passing our pre-defined tests!
 
 <br>
 <br>
-
 
 ## Adventure Map Traversing
 
@@ -670,25 +668,25 @@ An additional Q&A about this project with Brady Fukumoto can be found [here](htt
 
 When in doubt, use POLYA and stayed neat, organized, and well-planned.
 
->Beautiful is better than ugly.  
->Explicit is better than implicit.  
->Simple is better than complex.  
->Complex is better than complicated.  
->Flat is better than nested.  
->Sparse is better than dense.  
->Readability counts.  
->Special cases aren't special enough to break the rules.  
->Although practicality beats purity.  
->Errors should never pass silently.  
->Unless explicitly silenced.  
->In the face of ambiguity, refuse the temptation to guess.  
->There should be one-- and preferably only one --obvious way to do it.  
->Although that way may not be obvious at first unless you're Dutch.  
->Now is better than never.  
->Although never is often better than *right* now.  
->If the implementation is hard to explain, it's a bad idea.  
->If the implementation is easy to explain, it may be a good idea.  
->Namespaces are one honking great idea -- let's do more of those!  
+> Beautiful is better than ugly.  
+> Explicit is better than implicit.  
+> Simple is better than complex.  
+> Complex is better than complicated.  
+> Flat is better than nested.  
+> Sparse is better than dense.  
+> Readability counts.  
+> Special cases aren't special enough to break the rules.  
+> Although practicality beats purity.  
+> Errors should never pass silently.  
+> Unless explicitly silenced.  
+> In the face of ambiguity, refuse the temptation to guess.  
+> There should be one-- and preferably only one --obvious way to do it.  
+> Although that way may not be obvious at first unless you're Dutch.  
+> Now is better than never.  
+> Although never is often better than _right_ now.  
+> If the implementation is hard to explain, it's a bad idea.  
+> If the implementation is easy to explain, it may be a good idea.  
+> Namespaces are one honking great idea -- let's do more of those!
 
 <br>
 <br>

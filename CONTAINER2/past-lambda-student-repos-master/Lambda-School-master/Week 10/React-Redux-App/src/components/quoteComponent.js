@@ -5,7 +5,7 @@ import redoIcon from "../images/redo-solid.svg";
 
 import GeneratedQuote from "./generatedQuote";
 
-const QuoteComponent = props => {
+const QuoteComponent = (props) => {
   return (
     <div className="card">
       <GeneratedQuote />
@@ -19,7 +19,4 @@ const QuoteComponent = props => {
   );
 };
 
-export default connect(
-  null,
-  { getQuote }
-)(QuoteComponent);
+export default connect(null, { getQuote })(QuoteComponent);

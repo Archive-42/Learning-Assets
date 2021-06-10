@@ -1,7 +1,7 @@
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   return knex("cars")
     .truncate()
-    .then(function() {
+    .then(function () {
       return knex("cars").insert([
         {
           VIN: "1HGBH41JXMN109186",
@@ -9,7 +9,7 @@ exports.seed = function(knex) {
           model: "Civic Sedan",
           mileage: "100007",
           "transmission status": "",
-          "title status": "salvage"
+          "title status": "salvage",
         },
         {
           VIN: "2HGBH47UXMN109186",
@@ -17,8 +17,8 @@ exports.seed = function(knex) {
           model: "Model 3",
           mileage: "70007",
           "transmission status": "",
-          "title status": "clean"
-        }
+          "title status": "clean",
+        },
       ]);
     });
 };

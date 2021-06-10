@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
-import { GET_FRIENDS, ADD_FRIEND, REMOVE_FRIEND } from '../actions';
+import { combineReducers } from "redux";
+import { GET_FRIENDS, ADD_FRIEND, REMOVE_FRIEND } from "../actions";
 
 const friendsReducer = (friends = [], action) => {
   switch (action.type) {
@@ -15,7 +15,7 @@ const friendsReducer = (friends = [], action) => {
 };
 
 const rootReducer = combineReducers({
-  friends: friendsReducer
+  friends: friendsReducer,
 });
 
 export default rootReducer;

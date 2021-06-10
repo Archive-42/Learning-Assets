@@ -24,10 +24,10 @@ loveStickers();
 
 const dogObject = {
   greeting: "Bark! ",
-  speak: function() {
+  speak: function () {
     console.log("Implicit this: ", this);
     return `${this.greeting}You're a human!`;
-  }
+  },
 };
 
 console.log(dogObject.speak());
@@ -37,7 +37,7 @@ console.log(dogObject.speak());
 function cat(obj) {
   this.name = obj.name;
   this.nickname = obj.nickname;
-  this.speak = function() {
+  this.speak = function () {
     console.log("This new binding: ", this);
     console.log(
       `Meow! My name is ${this.name} and my nickname is ${this.nickname}!`

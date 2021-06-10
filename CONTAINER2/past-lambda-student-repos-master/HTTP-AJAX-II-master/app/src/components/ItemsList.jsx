@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function ItemsList(props) {
   return (
     <div className="items-list-wrapper">
-      {props.items.map(item => (
+      {props.items.map((item) => (
         <Link className="some-link" to={`/item-list/${item.id}`} key={item.id}>
           <div className="item-card">
             <img

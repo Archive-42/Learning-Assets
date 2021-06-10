@@ -3,18 +3,18 @@ import { connect } from "react-redux";
 import { getInitialData } from "../actions/actions";
 import { Link } from "react-router-dom";
 
-const Login = props => {
+const Login = (props) => {
   const [credentials, setCredentials] = useState({});
 
-  const login = e => {
+  const login = (e) => {
     e.preventDefault();
     props.getInitialData(credentials, props.history);
   };
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setCredentials({
       ...credentials,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -46,7 +46,4 @@ const Login = props => {
   );
 };
 
-export default connect(
-  null,
-  { getInitialData }
-)(Login);
+export default connect(null, { getInitialData })(Login);

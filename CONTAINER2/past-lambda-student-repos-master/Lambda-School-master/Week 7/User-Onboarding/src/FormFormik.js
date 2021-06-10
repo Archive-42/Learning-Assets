@@ -91,13 +91,11 @@ const FormFormik = withFormik({
       name: name || "",
       email: email || "",
       password: password || "",
-      terms: terms || false
+      terms: terms || false,
     };
   },
   validationSchema: Yup.object().shape({
-    email: Yup.string()
-      .email("Email not valid")
-      .required("Email is required"),
+    email: Yup.string().email("Email not valid").required("Email is required"),
     password: Yup.string()
       .min(6, "Password must be 6 characters or longer")
       .required("Password is required"),
@@ -106,7 +104,7 @@ const FormFormik = withFormik({
         [true],
         "You must read terms of service and click the checkbox in order to proceed"
       )
-      .required("Pls check it")
+      .required("Pls check it"),
   }),
   handleSubmit(values, { resetForm, setErrors, setSubmitting }) {
     if (values.email === "alreadytaken@atb.dev") {
@@ -114,17 +112,17 @@ const FormFormik = withFormik({
     } else {
       axios
         .post("https://reqres.in/api/users", values)
-        .then(res => {
+        .then((res) => {
           console.log(res); // Data was created successfully and logs to console
           resetForm();
           setSubmitting(false);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err); // There was an error creating the data and logs to console
           setSubmitting(false);
         });
     }
-  }
+  },
 })(LoginForm);
 
 export default FormFormik;

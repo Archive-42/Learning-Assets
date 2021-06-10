@@ -4,31 +4,30 @@
 <br> b. [Number Bases](#Number-Bases)  
 <br> c. [LS8 Emulator](#LS8-Emulator)  
 <br> d. [How to Approach the Project](#How-to-Approach-the-Project)  
-<br>   
+<br>  
 <br>
-
 
 ## Additional Resources
 
-[CPU and Components](https://www.youtube.com/watch?v=Ae6zRhgMatc)  
+[CPU and Components](https://www.youtube.com/watch?v=Ae6zRhgMatc)
 
-[Number Bases and Conversions](https://www.youtube.com/watch?v=umwSs9fNegY)  
+[Number Bases and Conversions](https://www.youtube.com/watch?v=umwSs9fNegY)
 
-[Project Repo](https://github.com/LambdaSchool/Computer-Architecture)  
+[Project Repo](https://github.com/LambdaSchool/Computer-Architecture)
 
-[Lecture I Recording: Brady Fukumoto](https://youtu.be/E61m_d6BbcU)  
+[Lecture I Recording: Brady Fukumoto](https://youtu.be/E61m_d6BbcU)
 
 <br>
 
-[How to count binary on your hand](https://www.youtube.com/watch?v=Bke95oWWZII).  
+[How to count binary on your hand](https://www.youtube.com/watch?v=Bke95oWWZII).
 
-[Binary Explained Simply](http://www.steves-internet-guide.com/binary-numbers-explained/)  
+[Binary Explained Simply](http://www.steves-internet-guide.com/binary-numbers-explained/)
 
-[Counting Systems Explained](https://ryanstutorials.net/binary-tutorial/)  
+[Counting Systems Explained](https://ryanstutorials.net/binary-tutorial/)
 
-[Hexadecimal Basics](https://learn.sparkfun.com/tutorials/hexadecimal/all) 
+[Hexadecimal Basics](https://learn.sparkfun.com/tutorials/hexadecimal/all)
 
-<br> 
+<br>
 
 This week we'll be working on a [single project repo](https://github.com/LambdaSchool/Computer-Architecture). Tonight's project is working on `ls8` in the repository.
 
@@ -42,7 +41,7 @@ Focus on reading the ReadMe carefully and exploring documentation.
 
 > Hexa = base 16  
 > Dec = base 10  
-> Bi = base 2  
+> Bi = base 2
 
 But what does this mean?
 
@@ -62,15 +61,15 @@ In base 10, we are used to expressing numbers based on 10s. For example, the num
 
 > 100 = 1 one hundreds  
 > 20 = 2 tens  
-> 3 = 3 1's  
+> 3 = 3 1's
 
 Think of it this way -- we use digits 1-9 to count up to a base of 10. When we reach a base of 10, we move over one digit.
 
 > 09  
-> 10  
+> 10
 
 We could also think of the tens place as 10^1 (ten to the power of one), and the hundreds place as 10^2 (ten to the power of two), etc.
-<br> 
+<br>
 
 Binary is similar, except that our base is 2, so we only use the digits 0 and 1 as placeholders. Computers use binary because 0 or 1 indicates either passing a charge or not.
 
@@ -80,7 +79,7 @@ In binary, we write it like so:
 > 0b01 = 1  
 > 0b10 = 2  
 > 0b11 = 3  
-> 0b100 = 4  
+> 0b100 = 4
 
 Each digit place holds up to 1, so we count by increasing from 0 to 1 with each number. 00 to 01 to 10, much like we count in base 10 from 08 to 09 to 10.
 
@@ -92,11 +91,11 @@ Let's compare how we build the number 7352 in binary and decimal:
 
 > 0b11100011  
 > 128 place, 64 place, 32 place, 16 place, 8 place, 4 place, 2 place, 1 place  
-> 128 + 64 + 32 + 0 + 0 + 0 + 2 + 1  
+> 128 + 64 + 32 + 0 + 0 + 0 + 2 + 1
 
 > 7352  
 > 1000 place, 100 place, 10 place, 1 place  
-> 7000 + 300 + 50 + 2  
+> 7000 + 300 + 50 + 2
 
 Base 10 tells us that we have 7 1000's, 3 100's, etc..
 
@@ -113,19 +112,19 @@ Remember the places are 16^0, 16^1, 16^2, etc..
 > 0xA32F  
 > 4096 place, 256 place, 16 place, 1 place  
 > 40960 + 768 + 32 + 15  
-> 41775  
+> 41775
 
 The larger the base, the more compact numbers can be. In hexadecimal, this number looks very small but is in fact quite large.
 
 <br>
 
-[How to count binary on your hand](https://www.youtube.com/watch?v=Bke95oWWZII).  
+[How to count binary on your hand](https://www.youtube.com/watch?v=Bke95oWWZII).
 
-[Binary Explained Simply](http://www.steves-internet-guide.com/binary-numbers-explained/)  
+[Binary Explained Simply](http://www.steves-internet-guide.com/binary-numbers-explained/)
 
-[Counting Systems Explained](https://ryanstutorials.net/binary-tutorial/)  
+[Counting Systems Explained](https://ryanstutorials.net/binary-tutorial/)
 
-[Hexadecimal Basics](https://learn.sparkfun.com/tutorials/hexadecimal/all)  
+[Hexadecimal Basics](https://learn.sparkfun.com/tutorials/hexadecimal/all)
 
 <br>
 
@@ -171,16 +170,16 @@ _Fun Fact: In casual conversation, computer geeks say "kilo" to mean 1024. In do
 
 Let's convert this to hex:
 
-> 0b11100011  
+> 0b11100011
 
 We could split it into two hexadecimal digits (remember, each digit is the same as 4 bits -- or 4 places in binary):
 
 > 0b1110 0b0011  
-> 0xE 0x3  
+> 0xE 0x3
 
 Which reduces down to:
 
-> 0xE3  
+> 0xE3
 
 <br>
 
@@ -308,7 +307,6 @@ memory = [
 
 <br>
 
-
 If our code works correctly, it should halt before printing 37. We know that if we hit PRINT_NUM, then the next value is the number we want to print.
 
 <br>
@@ -336,13 +334,11 @@ BEEJ
 
 <br>
 
-
 Our bug is that `PRINT_NUM` takes an argument (the next value in memory), but because we are incrementing by only 1 when we hit that command, it tries to read the argument (number) as a command.
 
 In the first instand, it worked because it read '1' as our instruction of 1 (PRINT_BEEJ) rather than as the number to print.
 
 But the second time it hits a number, it reads 12 as an unknown instruction and stops running.
-
 
 We can fix it by incrementing by 2 instead of 1 when we hit that instruction (to bypass the arguments that are not meant to be read as commands):
 
@@ -448,7 +444,7 @@ Now, let's update our handling of each code to add, print and save:
         register[reg] = num
         # Increment by 3 to pass the arguments
         pc += 3
-    
+
     elif command == ADD:
         # Sets first adding register index to the next value in memory
         reg_a = memory[pc + 1]
@@ -459,7 +455,7 @@ Now, let's update our handling of each code to add, print and save:
         register[reg_a] += register[reg_b]
         # Increments by 3 to pass the arguments
         pc += 3
-    
+
     elif command == PRINT_REGISTER:
         # Sets the register index to print to the next value in memory
         reg_index = memory[pc + 1]
@@ -471,7 +467,6 @@ Now, let's update our handling of each code to add, print and save:
 
 <br>
 <br>
-
 
 ## How to Approach the Project
 
@@ -487,9 +482,7 @@ There is starter code to help get things up and running. Instead of using decima
 
 A big part of this project is step 1 of Polya's. Expect to spend some time understanding the problem and seeing what resources you have at your disposal.
 
-
 <br>
-
 
 What's the difference between an emulator and a compiler?
 
@@ -507,24 +500,26 @@ Turn the switches to ON OFF ON OFF ON ON OFF OFF ON and then hit the "STORE" but
 
 That was a pain. So we put keyboards on there and were able to type things instead. But typing in hex is a pain.
 
-*Machine code:*
+_Machine code:_
+
 > 82  
 > 00  
 > 08  
 > 82  
-> 01  
+> 01
 
 So someone wrote a program (in hex) to take programs written in assembly and convert them to numbers.
 
-*Assembly:*
+_Assembly:_
+
 > LDI R0,8  
 > LDI R1,2  
 > MUL R0,R1  
-> PRN R0  
+> PRN R0
 
 But writing assembly is a pain, so someone wrote a compiler (in assembly) that would take a higher level language and convert it to assembly for you:
 
-*C:*
+_C:_
 
 ```
 int main(void)
@@ -548,21 +543,20 @@ Eventually they rewrote the assembler in assembly, and rewrote the C compiler in
 
 From Beej:
 
->Time to level up in C, roughly, using numbers I made up:  
->  
+> Time to level up in C, roughly, using numbers I made up:
+>
 > 0 hours: noob, what is this sorcery
->  
-> 10 hours: beginner, can get basic jobs done, simple pointer tasks by rote.  
->  
-> 200 hours: intermediate, understands pointers and pointer arithmetic, can handle single and double indirection without thinking about it, knows the build/link process, knows what undefined behavior is and can avoid it with pointers and arrays, can copy objects by casting to char* and iterating over the bytes.  
->  
-> 1000 hours: expert, complete understanding of pointers and arbitrary amounts of indirection, knows all functions in the standard library, understands array-pointer equivalence, knows how to use union, can build shared and static libraries, can write endian-agnostic code, understands the ramifications of numeric type conversions, understands memory alignment and struct padding, never writes code with undefined behavior unless required and documented, understands the difference between undefined and implementation-defined behavior.  
->  
+>
+> 10 hours: beginner, can get basic jobs done, simple pointer tasks by rote.
+>
+> 200 hours: intermediate, understands pointers and pointer arithmetic, can handle single and double indirection without thinking about it, knows the build/link process, knows what undefined behavior is and can avoid it with pointers and arrays, can copy objects by casting to char\* and iterating over the bytes.
+>
+> 1000 hours: expert, complete understanding of pointers and arbitrary amounts of indirection, knows all functions in the standard library, understands array-pointer equivalence, knows how to use union, can build shared and static libraries, can write endian-agnostic code, understands the ramifications of numeric type conversions, understands memory alignment and struct padding, never writes code with undefined behavior unless required and documented, understands the difference between undefined and implementation-defined behavior.
+>
 > 2000 hours: wizard, expert plus knows the esoterica in the spec, e.g. comparing items one past the end of an array, what happens with strange casts like floats to pointers, the computational model of expression evaluation, etc.
-I'll bet you can get entry-level embedded systems jobs at the intermediate level. But even expert level is "only" 4 months of full time study.  
->  
-> C isn't a complicated language. It has a few tough concepts, but that's about it.  
-
+> I'll bet you can get entry-level embedded systems jobs at the intermediate level. But even expert level is "only" 4 months of full time study.
+>
+> C isn't a complicated language. It has a few tough concepts, but that's about it.
 
 <br>
 <br>

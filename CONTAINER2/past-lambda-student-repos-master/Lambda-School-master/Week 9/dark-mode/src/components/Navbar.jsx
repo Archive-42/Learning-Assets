@@ -4,7 +4,7 @@ import "../styles.scss";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useDarkMode(false);
-  const toggleMode = e => {
+  const toggleMode = (e) => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };

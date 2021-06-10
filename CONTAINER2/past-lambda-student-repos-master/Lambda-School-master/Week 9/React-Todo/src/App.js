@@ -9,25 +9,25 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      users: []
+      users: [],
     };
   }
 
   componentDidMount() {
     axios
       .get("https://api.github.com/search/users?q=kefi", {
-        method: "get"
+        method: "get",
       })
-      .then(res => {
+      .then((res) => {
         if (res.data.items.length > 0) {
-          res.data.items.forEach(user => {
-            axios.get(user.url, { mathod: "get" }).then(responseTwo => {
+          res.data.items.forEach((user) => {
+            axios.get(user.url, { mathod: "get" }).then((responseTwo) => {
               this.setState({ users: [...this.state.users, responseTwo.data] });
             });
           });
         }
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   }

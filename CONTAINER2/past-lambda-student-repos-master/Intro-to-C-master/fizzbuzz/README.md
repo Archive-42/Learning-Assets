@@ -5,6 +5,7 @@ Functions in C are not much different from functions in JavaScript. Probably the
 Here is a non-comprehensive list of C data types: [https://www.le.ac.uk/users/rjm1/cotter/page_22.htm](https://www.le.ac.uk/users/rjm1/cotter/page_22.htm)
 
 To reiterate, you might declare a function in C like this:
+
 ```c
     int foo(int param1, int param2)
     {
@@ -12,15 +13,18 @@ To reiterate, you might declare a function in C like this:
         return 0;
     }
 ```
-This function signature states that it receives two integer parameters and returns an integer. 
+
+This function signature states that it receives two integer parameters and returns an integer.
 
 Here's another example:
+
 ```c
     void bar(int[])
     {
         ...
     }
 ```
+
 This function signature states that it receives a single integer array and doesn't return anything. You'll often see this kind of function signature when you want the function to simply mutate the input and/or print the contents of the input.
 
 For printing output, you'll want to use the `printf` function, which is included in the `stdlib` library.

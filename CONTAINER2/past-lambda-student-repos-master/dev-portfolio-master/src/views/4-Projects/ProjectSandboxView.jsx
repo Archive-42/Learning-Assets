@@ -1,6 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { View, Button, Card, Link } from '../../components/~reusables/atoms/atoms';
+import React from "react";
+import styled from "styled-components";
+import {
+  View,
+  Button,
+  Card,
+  Link,
+} from "../../components/~reusables/atoms/atoms";
 
 function ProjectSandboxView(props) {
   return (
@@ -12,7 +17,7 @@ function ProjectSandboxView(props) {
         <Button fullWidth>View Project Code</Button>
       </Link>
     </View>
-  )
+  );
 }
 
 const ProjectFrame = styled(Card)`

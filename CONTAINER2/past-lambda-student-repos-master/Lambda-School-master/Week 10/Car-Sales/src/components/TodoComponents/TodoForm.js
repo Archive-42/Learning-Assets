@@ -6,7 +6,7 @@ class TodoForm extends React.Component {
     this.newValue = {};
   }
 
-  updateStateMessage = e => {
+  updateStateMessage = (e) => {
     let value = e.target.value;
     if (value !== null) {
       this.newValue = { item: value, completed: false, id: Date.now() };
@@ -16,13 +16,13 @@ class TodoForm extends React.Component {
   render() {
     return (
       <form
-        onSubmit={e => {
+        onSubmit={(e) => {
           {
             document.getElementById("todoInput").value = "";
             e.preventDefault();
             return this.props.dispatch({
               type: "HANDLE-SUBMIT",
-              newValue: this.newValue
+              newValue: this.newValue,
             });
           }
         }}
@@ -39,7 +39,7 @@ class TodoForm extends React.Component {
         <button
           onClick={() => {
             this.props.dispatch({
-              type: "CLEAR-COMPLETED"
+              type: "CLEAR-COMPLETED",
             });
           }}
           type="button"

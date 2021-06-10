@@ -136,9 +136,8 @@ export default App;
 
 /* TODO STEP 7 - Play around with the styling and make this project your own! Maybe make it a soccer (non-american football) scoreboard, or a rugby or baseball scoreboard */
 
-
 /* TODO STEP 8 - Add a button that changes which quarter the game is in, and then render the state quarter value on the scoreboard */
 
-// done 
+// done
 
 /* TODO STEP 9 - Make the entire board fully functional with buttons and state! (If you want to make a timer, you'll have to look into useEffect) */

@@ -1,6 +1,5 @@
-
-exports.seed = function(knex, Promise) {
-  return knex('zoo_animals').insert([
+exports.seed = function (knex, Promise) {
+  return knex("zoo_animals").insert([
     { zoo_id: 1, animal_id: 1 },
     { zoo_id: 1, animal_id: 2 },
     { zoo_id: 1, animal_id: 3 },
@@ -14,6 +13,6 @@ exports.seed = function(knex, Promise) {
     { zoo_id: 2, animal_id: 8 },
     { zoo_id: 2, animal_id: 9 },
     { zoo_id: 2, animal_id: 10 },
-    { zoo_id: 2, animal_id: 11 }
+    { zoo_id: 2, animal_id: 11 },
   ]);
 };

@@ -7,13 +7,13 @@ import {
   CREATE_FRIEND_SUCCESS,
   FRIENDS_FETCH_FAIL,
   FRIENDS_FETCH_START,
-  FRIENDS_FETCH_SUCCESS
+  FRIENDS_FETCH_SUCCESS,
 } from "../actions/actions";
 
 const initialState = {
   friends: [],
   error: "",
-  isFetching: false
+  isFetching: false,
 };
 
 function reducer(state = initialState, action) {
@@ -23,56 +23,56 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         isFetching: true,
-        error: ""
+        error: "",
       };
     case FRIENDS_FETCH_SUCCESS:
       return {
         ...state,
         friends: [...action.payload],
         isFetching: false,
-        error: ""
+        error: "",
       };
     case FRIENDS_FETCH_FAIL:
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
       };
     case INITIAL_FETCH_START:
       return {
         ...state,
         isFetching: true,
-        error: ""
+        error: "",
       };
     case INITIAL_FETCH_SUCCESS:
       return {
         ...state,
         friends: [...state.friends, ...action.payload],
         isFetching: false,
-        error: ""
+        error: "",
       };
     case INITIAL_FETCH_FAIL:
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
       };
     case CREATE_FRIEND_START:
       return {
         ...state,
         isFetching: true,
-        error: ""
+        error: "",
       };
     case CREATE_FRIEND_SUCCESS:
       return {
         ...state,
         friends: [...action.payload],
         isFetching: false,
-        error: ""
+        error: "",
       };
     case CREATE_FRIEND_FAIL:
       console.log("Post failed");
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
       };
     default:
       return state;

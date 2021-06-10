@@ -7,7 +7,7 @@
 function whatsAge() {
   let x = 19;
   return function iAge(x) {
-    return "What's my age again?  " + (x * 2);
+    return "What's my age again?  " + x * 2;
   };
 }
 var myAge = whatsAge();
@@ -37,7 +37,7 @@ console.log(counterMaker);
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
 // will refuse to go over the limit, and start back at 1.
-const counterMaker1 = iterations => {
+const counterMaker1 = (iterations) => {
   let count = 1;
   function counter1(iterations) {
     for (let x = 1; x <= iterations; x++) {
@@ -54,7 +54,7 @@ const counterMaker1 = iterations => {
 console.log(counterMaker1(5));
 
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
-const counterFactory = iterations => {
+const counterFactory = (iterations) => {
   // Return an object that has two methods called `increment` and `decrement`.
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.

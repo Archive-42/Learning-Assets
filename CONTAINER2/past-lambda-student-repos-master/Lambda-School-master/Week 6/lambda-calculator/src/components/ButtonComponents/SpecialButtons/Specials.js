@@ -8,7 +8,7 @@ const Specials = () => {
 
   return (
     <div className="specialsContainer">
-      {specialsState.map(special => (
+      {specialsState.map((special) => (
         <SpecialButton key={special} special={special} />
       ))}
     </div>

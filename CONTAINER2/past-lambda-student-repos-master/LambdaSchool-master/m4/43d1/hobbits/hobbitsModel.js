@@ -1,4 +1,4 @@
-const db = require('../data/dbConfig.js');
+const db = require("../data/dbConfig.js");
 
 module.exports = {
   insert,
@@ -21,7 +21,7 @@ function remove(id) {
 }
 
 function getAll() {
-  return db('hobbits');
+  return db("hobbits");
 }
 
 function findById(id) {

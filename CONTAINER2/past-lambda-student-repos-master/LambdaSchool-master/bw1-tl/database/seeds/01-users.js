@@ -1,29 +1,29 @@
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   return knex("users")
     .del()
-    .then(function() {
+    .then(function () {
       return knex("users").insert([
         {
           email: "admin@admin.com",
           password: "lambda",
           first_name: "john",
           last_name: "doe",
-          role: "admin"
+          role: "admin",
         },
         {
           email: "volunteer@volunteer.com",
           password: "lambda",
           first_name: "jane",
           last_name: "doe",
-          role: "volunteer"
+          role: "volunteer",
         },
         {
           email: "student@student.com",
           password: "lambda",
           first_name: "vivienne",
           last_name: "marie",
-          role: "student"
-        }
+          role: "student",
+        },
       ]);
     });
 };

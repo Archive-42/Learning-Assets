@@ -47,13 +47,13 @@ const mage = new Humanoid({
   dimensions: {
     length: 2,
     width: 1,
-    height: 1
+    height: 1,
   },
   healthPoints: 5,
   name: "Bruce",
   team: "Mage Guild",
   weapons: ["Staff of Shamalama"],
-  language: "Common Tongue"
+  language: "Common Tongue",
 });
 
 const swordsman = new Humanoid({
@@ -61,13 +61,13 @@ const swordsman = new Humanoid({
   dimensions: {
     length: 2,
     width: 2,
-    height: 2
+    height: 2,
   },
   healthPoints: 15,
   name: "Sir Mustachio",
   team: "The Round Table",
   weapons: ["Giant Sword", "Shield"],
-  language: "Common Tongue"
+  language: "Common Tongue",
 });
 
 const archer = new Humanoid({
@@ -75,13 +75,13 @@ const archer = new Humanoid({
   dimensions: {
     length: 1,
     width: 2,
-    height: 4
+    height: 4,
   },
   healthPoints: 10,
   name: "Lilith",
   team: "Forest Kingdom",
   weapons: ["Bow", "Dagger"],
-  language: "Elvish"
+  language: "Elvish",
 });
 
 console.log("********************");

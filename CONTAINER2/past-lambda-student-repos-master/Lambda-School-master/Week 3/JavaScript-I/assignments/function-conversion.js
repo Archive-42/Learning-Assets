@@ -15,7 +15,7 @@ myFunction();
 // };
 // anotherFunction("Example");
 
-let anotherFunction = param => {
+let anotherFunction = (param) => {
   return param;
 };
 anotherFunction("Example");
@@ -49,7 +49,7 @@ subtract(1, 2);
 // console.log(triple);
 
 exampleArray = [1, 2, 3, 4];
-const triple = exampleArray.map(num => {
+const triple = exampleArray.map((num) => {
   return num * 3;
 });
 console.log(triple);

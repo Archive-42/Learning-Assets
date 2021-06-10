@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class AddItemForm extends React.Component {
   render() {
@@ -6,39 +6,19 @@ class AddItemForm extends React.Component {
       <div className="form-container">
         <h2>Add New Item</h2>
         <form>
-          <input
-            type="text"
-            name="name"
-            placeholder="name"
-          />
+          <input type="text" name="name" placeholder="name" />
           <div className="baseline" />
 
-          <input
-            type="number"
-            name="price"
-            placeholder="Price"
-          />
+          <input type="number" name="price" placeholder="Price" />
           <div className="baseline" />
 
-          <input
-            type="text"
-            name="imageUrl"
-            placeholder="Image"
-          />
+          <input type="text" name="imageUrl" placeholder="Image" />
           <div className="baseline" />
 
-          <input
-            type="text"
-            name="description"
-            placeholder="Description"
-          />
+          <input type="text" name="description" placeholder="Description" />
           <div className="baseline" />
 
-          <input
-            type="text"
-            name="shipping"
-            placeholder="Shipping"
-          />
+          <input type="text" name="shipping" placeholder="Shipping" />
           <div className="baseline" />
 
           <button className="md-button form-button">Add New Item</button>

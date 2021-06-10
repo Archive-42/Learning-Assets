@@ -6,13 +6,13 @@ import FormFormik from "./FormFormik";
 
 function App() {
   const [usersArray, setUsersArray] = useState([]);
-  const memberToEdit = props => {
+  const memberToEdit = (props) => {
     console.log("props", props);
   };
   return (
     <div class="container-all">
       <FormFormik usersArray={usersArray} setUsersArray={setUsersArray} />
-      {usersArray.map(user => (
+      {usersArray.map((user) => (
         <Card user={user} memberToEdit={memberToEdit} />
       ))}
     </div>

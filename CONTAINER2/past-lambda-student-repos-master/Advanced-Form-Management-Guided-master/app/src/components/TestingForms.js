@@ -2,24 +2,24 @@ import React, { useState } from "react";
 
 export default function TestingForms() {
   const [testingForm, setTestingForms] = useState({
-    username: '',
-    password: '',
+    username: "",
+    password: "",
     remember_pass: false,
-    account_type: ''
+    account_type: "",
   });
 
   function changeHandler(e) {
     // console.log(e.target.name);
     if (e.target.value.length < 18) {
-      if (e.target.type === 'checkbox') {
+      if (e.target.type === "checkbox") {
         setTestingForms({
           ...testingForm,
-          [e.target.name]: e.target.checked
+          [e.target.name]: e.target.checked,
         });
       } else {
         setTestingForms({
           ...testingForm,
-          [e.target.name]: e.target.value
+          [e.target.name]: e.target.value,
         });
       }
     }
@@ -36,14 +36,14 @@ export default function TestingForms() {
 
     // Clearing the values in our form inputs
     const initialState = {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
       remember_pass: false,
-      account_type: ''
-    }
+      account_type: "",
+    };
     setTestingForms(initialState);
   }
-  
+
   return (
     <div className="TestingForms">
       <form onSubmit={submitHandler}>

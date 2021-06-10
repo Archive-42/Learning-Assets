@@ -137,7 +137,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -152,7 +152,7 @@ html {
 }
 html,
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: #5e6164;
 }
 h1,
@@ -160,7 +160,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   color: #23293b;
 }
 h2 {
@@ -205,7 +205,7 @@ form {
   color: #23293b;
 }
 footer {
-  color: #22283B;
+  color: #22283b;
   background: #f4f4f4;
   padding: 20px 0;
   border: 1px double #e0e0e0;

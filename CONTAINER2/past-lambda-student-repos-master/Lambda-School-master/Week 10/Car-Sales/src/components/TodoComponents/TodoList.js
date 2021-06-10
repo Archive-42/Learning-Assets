@@ -5,13 +5,13 @@ class TodoList extends React.Component {
   constructor() {
     super();
     this.state = {
-      listOfTodoes: []
+      listOfTodoes: [],
     };
   }
 
   render() {
     return this.props.data ? (
-      this.props.data.map(todo => {
+      this.props.data.map((todo) => {
         return (
           <Todo
             dispatch={this.props.dispatch}

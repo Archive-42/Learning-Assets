@@ -5,15 +5,15 @@ module.exports = {
     client: "sqlite3",
     useNullAsDefault: true,
     connection: {
-      filename: "./data/car-dealer.db3"
+      filename: "./data/car-dealer.db3",
     },
     migrations: {
       directory: "./data/migrations",
-      tableName: "migrations"
+      tableName: "migrations",
     },
     seeds: {
-      directory: "./data/seeds"
-    }
+      directory: "./data/seeds",
+    },
   },
 
   staging: {
@@ -21,16 +21,16 @@ module.exports = {
     connection: {
       database: "my_db",
       user: "username",
-      password: "password"
+      password: "password",
     },
     pool: {
       min: 2,
-      max: 10
+      max: 10,
     },
     migrations: {
       directory: "./data/migrations",
-      tableName: "migrations"
-    }
+      tableName: "migrations",
+    },
   },
 
   production: {
@@ -38,14 +38,14 @@ module.exports = {
     connection: {
       database: "my_db",
       user: "username",
-      password: "password"
+      password: "password",
     },
     pool: {
       min: 2,
-      max: 10
+      max: 10,
     },
     migrations: {
-      tableName: "knex_migrations"
-    }
-  }
+      tableName: "knex_migrations",
+    },
+  },
 };

@@ -11,7 +11,7 @@ module.exports = (req, res, next) => {
       if (err) {
         res.status(401).json({
           message:
-            "Invalid Credentials. You must be logged in to view this page"
+            "Invalid Credentials. You must be logged in to view this page",
         });
         // if it DOES...
       } else {
@@ -22,7 +22,7 @@ module.exports = (req, res, next) => {
   } else {
     res.status(400).json({
       message:
-        "No credentials provided. You must be logged in to view this page."
+        "No credentials provided. You must be logged in to view this page.",
     });
   }
 };

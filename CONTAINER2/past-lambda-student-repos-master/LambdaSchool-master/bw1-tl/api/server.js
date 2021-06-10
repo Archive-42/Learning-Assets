@@ -24,7 +24,7 @@ server.use("/api/volunteer", authenticate, volunteerRouter);
 
 server.get("/", (req, res, next) => {
   res.json({
-    message: "Welcome to School in the Cloud API"
+    message: "Welcome to School in the Cloud API",
   });
 });
 

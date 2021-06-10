@@ -1,7 +1,7 @@
 import {
   FETCH_QUOTE_FAIL,
   FETCH_QUOTE_START,
-  FETCH_QUOTE_SUCCESS
+  FETCH_QUOTE_SUCCESS,
 } from "../actions/actions";
 
 const initialState = {
@@ -9,10 +9,10 @@ const initialState = {
     _id: 1234567890,
     content:
       "Together we can change the world, just one random act of kindness at a time.",
-    author: "Ron Hal"
+    author: "Ron Hal",
   },
   error: "",
-  isFetching: false
+  isFetching: false,
 };
 
 function reducer(state = initialState, action) {
@@ -21,19 +21,19 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         isFetching: true,
-        error: ""
+        error: "",
       };
     case FETCH_QUOTE_SUCCESS:
       return {
         ...state,
         quote: { ...action.payload },
         isFetching: false,
-        error: ""
+        error: "",
       };
     case FETCH_QUOTE_FAIL:
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
       };
     default:
       return state;

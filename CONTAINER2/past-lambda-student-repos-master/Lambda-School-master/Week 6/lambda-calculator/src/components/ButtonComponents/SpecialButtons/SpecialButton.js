@@ -1,6 +1,6 @@
 import React from "react";
 
-const SpecialButton = props => {
+const SpecialButton = (props) => {
   return <button className="button specialButton">{props.special}</button>;
 };
 

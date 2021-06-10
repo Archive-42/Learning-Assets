@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function StudentForm() {
   const [studentForm, setStudentForm] = useState({
-    first_name: '',
-    last_name: '',
-    username: '',
-    password: '',
+    first_name: "",
+    last_name: "",
+    username: "",
+    password: "",
     remember_pass: false,
   });
 
@@ -15,21 +15,21 @@ export default function StudentForm() {
       setStudentForm({
         ...studentForm,
         [e.target.name]:
-          e.target.type === 'checkbox' ? e.target.checked : e.target.value
+          e.target.type === "checkbox" ? e.target.checked : e.target.value,
       });
     }
   }
 
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
     console.log(studentForm);
     const initialState = {
-      first_name: '',
-      last_name: '',
-      username: '',
-      password: '',
-      remember_pass: false
-    }
+      first_name: "",
+      last_name: "",
+      username: "",
+      password: "",
+      remember_pass: false,
+    };
     setStudentForm(initialState);
   }
 

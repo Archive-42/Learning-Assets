@@ -6,12 +6,12 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
+    "img-src": "img/logo.png",
   },
   cta: {
     h1: "DOM Is Awesome",
     button: "Get Started",
-    "img-src": "img/header-img.png"
+    "img-src": "img/header-img.png",
   },
   "main-content": {
     "features-h4": "Features",
@@ -29,17 +29,17 @@ const siteContent = {
       "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "vision-h4": "Vision",
     "vision-content":
-      "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+      "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   contact: {
     "contact-h4": "Contact",
     address: "123 Way 456 Street Somewhere, USA",
     phone: "1 (888) 888-8888",
-    email: "sales@greatidea.io"
+    email: "sales@greatidea.io",
   },
   footer: {
-    copyright: "Copyright Great Idea! 2018"
-  }
+    copyright: "Copyright Great Idea! 2018",
+  },
 };
 
 // Example: Update the img src for the logo
@@ -56,7 +56,7 @@ nav[2].textContent = siteContent["nav"]["nav-item-3"];
 nav[3].textContent = siteContent["nav"]["nav-item-4"];
 nav[4].textContent = siteContent["nav"]["nav-item-5"];
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
-nav.forEach(nav => (nav.style.color = "green"));
+nav.forEach((nav) => (nav.style.color = "green"));
 let lastNav = document.createElement("a");
 lastNav.innerText = "lastNav";
 document.querySelector("nav").appendChild(lastNav);
@@ -69,8 +69,8 @@ mainHeader.textContent = siteContent["cta"]["h1"];
 
 const mainBtn = document.querySelector("button");
 mainBtn.textContent = siteContent["cta"]["button"];
-mainBtn.addEventListener("click", function(e) {
-  nav.forEach(a => (a.style.backgroundColor = "black"));
+mainBtn.addEventListener("click", function (e) {
+  nav.forEach((a) => (a.style.backgroundColor = "black"));
 });
 
 const codeImage = document.getElementById("cta-img");

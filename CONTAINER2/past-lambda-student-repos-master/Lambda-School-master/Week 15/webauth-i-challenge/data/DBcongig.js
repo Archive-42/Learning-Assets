@@ -8,7 +8,7 @@ module.exports = {
   findSecret,
   register,
   login,
-  update
+  update,
 };
 
 function find() {
@@ -32,11 +32,9 @@ function register(resource) {
 function login(resource) {
   return db("users")
     .insert(resource)
-    .then(ids => ({ id: ids[0] }));
+    .then((ids) => ({ id: ids[0] }));
 }
 
 function update(id, resource) {
-  return db("users")
-    .where("id", Number(id))
-    .update(resource);
+  return db("users").where("id", Number(id)).update(resource);
 }

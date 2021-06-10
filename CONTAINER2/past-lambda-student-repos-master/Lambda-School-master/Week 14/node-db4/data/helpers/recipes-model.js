@@ -5,7 +5,7 @@ const db = knex(configureOptions);
 module.exports = {
   getRecipes,
   getInstructions,
-  getShoppingList
+  getShoppingList,
 };
 
 function getRecipes() {

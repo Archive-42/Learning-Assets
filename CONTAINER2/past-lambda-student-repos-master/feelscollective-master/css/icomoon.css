@@ -1,17 +1,19 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon/icomoon.eot?lir4dr');
-  src:  url('../fonts/icomoon/icomoon.eot?lir4dr#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon/icomoon.ttf?lir4dr') format('truetype'),
-    url('../fonts/icomoon/icomoon.woff?lir4dr') format('woff'),
-    url('../fonts/icomoon/icomoon.svg?lir4dr#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot?lir4dr");
+  src: url("../fonts/icomoon/icomoon.eot?lir4dr#iefix")
+      format("embedded-opentype"),
+    url("../fonts/icomoon/icomoon.ttf?lir4dr") format("truetype"),
+    url("../fonts/icomoon/icomoon.woff?lir4dr") format("woff"),
+    url("../fonts/icomoon/icomoon.svg?lir4dr#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -1083,10 +1085,10 @@
 .icon-google-play:before {
   content: "\ea60";
 }
-.icon-google+-with-circle:before {
+.icon-google + -with-circle:before {
   content: "\ea61";
 }
-.icon-google+:before {
+.icon-google + :before {
   content: "\ea62";
 }
 .icon-grooveshark:before {

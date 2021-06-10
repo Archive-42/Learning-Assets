@@ -1,16 +1,13 @@
-exports.up = function(knex) {
-  return knex.schema.createTable("hubs", tbl => {
+exports.up = function (knex) {
+  return knex.schema.createTable("hubs", (tbl) => {
     tbl.increments();
 
-    tbl
-      .string("name")
-      .notNullable()
-      .unique();
+    tbl.string("name").notNullable().unique();
 
     tbl.timestamps(true, true);
   });
 };
 
-exports.down = function(knex) {
+exports.down = function (knex) {
   return knex.schema.dropTableIfExists("hubs");
 };

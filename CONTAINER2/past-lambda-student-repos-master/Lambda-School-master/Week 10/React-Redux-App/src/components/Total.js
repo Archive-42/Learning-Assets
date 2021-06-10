@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Total = props => {
+const Total = (props) => {
   console.log("props", props);
   return (
     <div className="content">
@@ -10,14 +10,11 @@ const Total = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     additionalPrice: state.additionalPrice,
-    originalPrice: state.car.price
+    originalPrice: state.car.price,
   };
 };
 
-export default connect(
-  mapStateToProps,
-  {}
-)(Total);
+export default connect(mapStateToProps, {})(Total);

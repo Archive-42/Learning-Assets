@@ -5,11 +5,11 @@
 
 axios
   .get("https://api.github.com/users/kefimochi")
-  .then(response => {
+  .then((response) => {
     console.log(response.data);
     // deal with the response data in here
   })
-  .catch(err => {
+  .catch((err) => {
     // deal with the error in here
   });
 
@@ -66,22 +66,22 @@ const followersArray = [];
 // Goes to a provided url and converts the received data into a JSON object
 axios
   .get("https://api.github.com/search/users?q=roman", {
-    method: "get"
+    method: "get",
   })
-  .then(res => {
+  .then((res) => {
     res.data.items.length !== 0 ? addUsersToDOM(res.data) : false;
     // res.json().then(result => {
     //   console.log("result", result);
     //   result.total_count !== 0 ? addUsersToDOM(result) : noUsersFound();
     // });
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(err);
   });
 
 function addUsersToDOM(users) {
   console.log("USERTEMS", users.items);
-  users.items.forEach(person => {
+  users.items.forEach((person) => {
     // Prevents undefined profiles from showing
     if (person === undefined) return;
     // Shows small cards for all found users
@@ -92,13 +92,13 @@ function addUsersToDOM(users) {
 function extractUserObject(user) {
   axios
     .get(user.url, {
-      method: "get"
+      method: "get",
     })
-    .then(res => {
+    .then((res) => {
       console.log("Res", res.data);
       createUserComponent(res.data);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     });
 }

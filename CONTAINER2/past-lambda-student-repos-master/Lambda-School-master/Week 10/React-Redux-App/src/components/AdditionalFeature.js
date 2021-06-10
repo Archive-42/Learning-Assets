@@ -2,7 +2,7 @@ import React from "react";
 import { addFeatureToCar } from "../actions/actions";
 import { connect } from "react-redux";
 
-const AdditionalFeature = props => {
+const AdditionalFeature = (props) => {
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
@@ -19,7 +19,4 @@ const AdditionalFeature = props => {
   );
 };
 
-export default connect(
-  null,
-  { addFeatureToCar }
-)(AdditionalFeature);
+export default connect(null, { addFeatureToCar })(AdditionalFeature);

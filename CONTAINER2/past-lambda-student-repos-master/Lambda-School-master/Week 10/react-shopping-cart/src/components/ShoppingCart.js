@@ -16,7 +16,7 @@ const ShoppingCart = () => {
 
   return (
     <div className="shopping-cart">
-      {cart.map(item => (
+      {cart.map((item) => (
         <Item key={item.id} {...item} />
       ))}
 

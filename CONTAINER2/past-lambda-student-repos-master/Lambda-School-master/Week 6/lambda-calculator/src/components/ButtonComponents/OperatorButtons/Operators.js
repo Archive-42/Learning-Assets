@@ -8,7 +8,7 @@ const Operators = () => {
 
   return (
     <div className="operatorsContainer">
-      {operatorsState.map(operator => (
+      {operatorsState.map((operator) => (
         <OperatorButton key={operator.char} operator={operator.char} />
       ))}
     </div>

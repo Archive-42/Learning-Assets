@@ -1,5 +1,5 @@
 import React from "react";
-const OperatorButton = props => {
+const OperatorButton = (props) => {
   return <button className="button operatorButton">{props.operator}</button>;
 };
 

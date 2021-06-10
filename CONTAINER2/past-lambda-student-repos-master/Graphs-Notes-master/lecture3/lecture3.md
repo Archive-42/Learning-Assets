@@ -3,9 +3,9 @@
     <br>b. [Social Connections](#Social-Connections)  
     <br>c. [Populate Graph](#Populate-Graph)  
     <br>d. [Get Social Paths](#Get-Social-Paths)  
-    <br>e. [Islands Algorithm](#Islands-Algorithm)   
+    <br>e. [Islands Algorithm](#Islands-Algorithm)  
     <br>
-<br>
+   <br>
 
 # Lecture III Random Social Network
 
@@ -13,16 +13,15 @@ _Note: these notes do not follow the CS18 lecture but instead, the CS19 lecture.
 
 ## Pre-Class Resources
 
-[Graphs: Connected Components](https://youtu.be/EsyLzGWlsA8)  
+[Graphs: Connected Components](https://youtu.be/EsyLzGWlsA8)
 
-[Follow Along Lecture Repo](https://github.com/LambdaSchool/Graphs/tree/master/objectives/randomness)  
+[Follow Along Lecture Repo](https://github.com/LambdaSchool/Graphs/tree/master/objectives/randomness)
 
-[CS18 Earliest Ancestor, Island Matrix: Brady Fukumoto](https://www.youtube.com/watch?v=RPWUmNEOxpk)  
+[CS18 Earliest Ancestor, Island Matrix: Brady Fukumoto](https://www.youtube.com/watch?v=RPWUmNEOxpk)
 
-[CS19 Social Networks: Brian Doyle](https://youtu.be/g4HB6d1IhKk)  
+[CS19 Social Networks: Brian Doyle](https://youtu.be/g4HB6d1IhKk)
 
 <br>
-
 
 ## Social Connections
 
@@ -126,7 +125,7 @@ random.shuffle(possibleFriendships)
 
 <br>
 
-Let's now make a list of friendships to create that are randomly chosen out of our randomized list of _possible_ friendships. 
+Let's now make a list of friendships to create that are randomly chosen out of our randomized list of _possible_ friendships.
 
 <br>
 
@@ -255,16 +254,15 @@ while q.sizze() > 0:
 
 <br>
 
-
 Now our dictionary is filling with the extended network and associated paths.
 
 <br>
 
 To create 100 users with an average of 10 friends each, how many times would you need to call `addFriendship()`? Why?
 
-We could add a debug counter to check. It should run 500 times. 
+We could add a debug counter to check. It should run 500 times.
 
-> (100 users * 10 average friendships) // 2 = 500  
+> (100 users \* 10 average friendships) // 2 = 500
 
 ...which is the number of times the current solution calls addFriendship out of the possible pool of friendships.
 
@@ -295,13 +293,11 @@ The length of visited tells us how many friends are in the user's extended netwo
 > Average degree of separation: 6324 // 994 = 6. Number in extended network: 994
 >
 > Average degree of separation: 5115 // 990 = 5. Number in extended network: 990
->
 
 If we run this a few times, we see that the number of people in the extended network is always above 990 (99%) and the average degree of separation tends to be 5. Of course, because of the randomization of data, this will vary.
 
 <br>
 <br>
-
 
 ## Islands Algorithm
 
@@ -310,8 +306,8 @@ Let's tackle a problem:
 <br>
 
 ```
-Write a function that takes a 2D binary array and returns the number of 1 islands. 
-An island consists of 1s that are connected to the north, south, east or west. 
+Write a function that takes a 2D binary array and returns the number of 1 islands.
+An island consists of 1s that are connected to the north, south, east or west.
 Diagonals do not count.
 
 For example:
@@ -397,7 +393,6 @@ print(island_counter(islands))
 
 Brady Fukumoto also offered a DFS solution that creates a "visited" matrix using a nested for loop to traverse the rows and columns of the islands matrix. On each "found" land (1), he calls a DFS search to find the rest of the island, and increments the island counter.
 
-
 ![Visited Matrix](Islands3.png "Visited Matrix")
 
 ![DFS](Islands4.png "DFS")
@@ -406,7 +401,7 @@ Brady Fukumoto also offered a DFS solution that creates a "visited" matrix using
 
 <br>
 
-See a tutorial that walks through DFS and BFS solutions [here](https://colorfulcodesblog.wordpress.com/2018/09/06/number-of-islands-tutorial-python/).  
+See a tutorial that walks through DFS and BFS solutions [here](https://colorfulcodesblog.wordpress.com/2018/09/06/number-of-islands-tutorial-python/).
 
 <br>
 <br>

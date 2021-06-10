@@ -4,34 +4,34 @@
 
 class GameObject {
   constructor(options) {
-  this.createdAt = options.createdAt;
-  this.dimensions = options.dimensions;
+    this.createdAt = options.createdAt;
+    this.dimensions = options.dimensions;
   }
-  destroy(){
+  destroy() {
     return `${this.name} was removed from the game.`;
   }
 }
 
 class CharacterStats extends GameObject {
-  constructor(characterStatsOptions){
-    super(characterStatsOptions)
+  constructor(characterStatsOptions) {
+    super(characterStatsOptions);
     this.hp = characterStatsOptions.hp;
     this.name = characterStatsOptions.name;
   }
-  takeDamage(){
-    return `${this.name} took damage.`
+  takeDamage() {
+    return `${this.name} took damage.`;
   }
 }
 
 class Humanoid extends CharacterStats {
   constructor(humanoidOptions) {
-    super(humanoidOptions)
+    super(humanoidOptions);
     this.faction = humanoidOptions.faction;
     this.weapons = humanoidOptions.weapons;
     this.language = humanoidOptions.language;
   }
 
-  greet(){
+  greet() {
     return `${this.name} offers a greeting in ${this.language}.`;
   }
 }
@@ -41,13 +41,13 @@ const mage = new Humanoid({
   dimensions: {
     length: 2,
     width: 1,
-    height: 1
+    height: 1,
   },
   hp: 5,
-  name: 'Bruce',
-  faction: 'Mage Guild',
-  weapons: ['Staff of Shamalama'],
-  language: 'Common Toungue'
+  name: "Bruce",
+  faction: "Mage Guild",
+  weapons: ["Staff of Shamalama"],
+  language: "Common Toungue",
 });
 
 const swordsman = new Humanoid({
@@ -55,13 +55,13 @@ const swordsman = new Humanoid({
   dimensions: {
     length: 2,
     width: 2,
-    height: 2
+    height: 2,
   },
   hp: 15,
-  name: 'Sir Mustachio',
-  faction: 'The Round Table',
-  weapons: ['Giant Sword', 'Shield'],
-  language: 'Common Toungue'
+  name: "Sir Mustachio",
+  faction: "The Round Table",
+  weapons: ["Giant Sword", "Shield"],
+  language: "Common Toungue",
 });
 
 const archer = new Humanoid({
@@ -69,13 +69,13 @@ const archer = new Humanoid({
   dimensions: {
     length: 1,
     width: 2,
-    height: 4
+    height: 4,
   },
   hp: 10,
-  name: 'Lilith',
-  faction: 'Forest Kingdom',
-  weapons: ['Bow', 'Dagger'],
-  language: 'Elvish'
+  name: "Lilith",
+  faction: "Forest Kingdom",
+  weapons: ["Bow", "Dagger"],
+  language: "Elvish",
 });
 
 console.log(mage.createdAt); // Today's date

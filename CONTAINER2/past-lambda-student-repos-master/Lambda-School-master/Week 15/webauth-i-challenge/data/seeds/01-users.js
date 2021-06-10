@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   return knex("users")
     .truncate()
     .then(() => {
@@ -10,15 +10,15 @@ exports.seed = function(knex) {
           name: "The Goddess of all Living",
           password: bcrypt.hashSync("password"),
           image_url:
-            "https://github.com/kefimochi/Side-projects/blob/master/BJHu2X_n.jpg?raw=true"
+            "https://github.com/kefimochi/Side-projects/blob/master/BJHu2X_n.jpg?raw=true",
         },
         {
           username: "kefi",
           name: "Kate Efi",
           password: bcrypt.hashSync("123"),
           image_url:
-            "https://github.com/kefimochi/Side-projects/blob/master/BJHu2X_n.jpg?raw=true"
-        }
+            "https://github.com/kefimochi/Side-projects/blob/master/BJHu2X_n.jpg?raw=true",
+        },
       ]);
     });
 };

@@ -1,24 +1,23 @@
 1. [Lecture I: Graphs Intro, Representation & BFS/DFS](#Lecture-I-Notes:-Graphs-Intro,-Representations-&-BFS/DFS)
-    <br>a. [What are Graphs?](#What-are-Graphs)
-        <br> - [Graph Types and Terms](#Graph-Types-and-Terms)
-        <br>
-    <br>b. [What will we be learning?](#What-will-we-be-learning?)
-    <br>
-    <br>c. [How to Represent a Graph](#How-to-Represent-a-Graph)
-    <br> - [Adjacency List](#Adjacency-List)
-    <br> - [Adjacency Matrix](#Adjacency-Matrix)
-    <br> - [When Do We Use a List v a Matrix?](#When-do-we-use-a-list-v-a-matrix?)
-    <br>
-    <br>d. [Space and Time Complexity](#Space-and-Time-Complexity)
-    <br>e. [Queue and Stack](#Queue-and-Stack)
-    <br>f. [Breadth-First Traversal](#Breadth-First-Traversal)
-    <br>g. [Depth First Search](#Depth-First-Search)
-    <br>h. [Implementing BFT](#Implementing-BFT)
-    <br>i. [Implementing Depth First Traversal](#Implementing-Depth-First-Traversal)
-    <br>j. [Implementing Searches](#Implementing-Search)
-    <br>
-    <br>
-
+   <br>a. [What are Graphs?](#What-are-Graphs)
+   <br> - [Graph Types and Terms](#Graph-Types-and-Terms)
+   <br>
+   <br>b. [What will we be learning?](#What-will-we-be-learning?)
+   <br>
+   <br>c. [How to Represent a Graph](#How-to-Represent-a-Graph)
+   <br> - [Adjacency List](#Adjacency-List)
+   <br> - [Adjacency Matrix](#Adjacency-Matrix)
+   <br> - [When Do We Use a List v a Matrix?](#When-do-we-use-a-list-v-a-matrix?)
+   <br>
+   <br>d. [Space and Time Complexity](#Space-and-Time-Complexity)
+   <br>e. [Queue and Stack](#Queue-and-Stack)
+   <br>f. [Breadth-First Traversal](#Breadth-First-Traversal)
+   <br>g. [Depth First Search](#Depth-First-Search)
+   <br>h. [Implementing BFT](#Implementing-BFT)
+   <br>i. [Implementing Depth First Traversal](#Implementing-Depth-First-Traversal)
+   <br>j. [Implementing Searches](#Implementing-Search)
+   <br>
+   <br>
 
 # Lecture I Notes: Graphs Intro, Representations & BFS/DFS
 
@@ -32,7 +31,7 @@
 
 [Article: A Gentle Introduction to Graph Theory](https://medium.com/basecs/a-gentle-introduction-to-graph-theory-77969829ead8)
 
-[CS18 Lecture Recording: Brady Fukumoto](https://youtu.be/QZlXUo-ovBs)  
+[CS18 Lecture Recording: Brady Fukumoto](https://youtu.be/QZlXUo-ovBs)
 
 [CS19 Lecture Recording: Brian Doyle](https://youtu.be/3aGdP0QgZjg)
 
@@ -94,7 +93,6 @@ Some social networks are considered directed, because you can follow someone on 
 
 <br>
 
-
 - `Acyclic Graph`: vertices can only be visited once. A recipe turned into a graph might be acyclic because some steps should only be done _once_. Or the lifespan of an animal -- each stage of life only occurs once.
 
 ![Butterfly Life Cycle](../img/butterfly.jpg "Butterfly Life Cycle")
@@ -113,13 +111,11 @@ If there are no weights on the edges, it's considered an `Unweighted Graph`.
 
 <br>
 
-
 A `sparse` graph has a lower ratio of nodes to edges, like a subway map:
 
 ![Subway Map](../img/subway.jpg "Subway Map")
 
 <br>
-
 
 - `Directed Acyclic Graphs` (DAGs): a one directional, non-circular graph. Moving node-to-node, one way, without encountering the same node again. Trees are often DAGs but not all DAGs are trees.
 
@@ -127,10 +123,8 @@ GitHub uses DAGs for branching and then merging. It is one directional and there
 
 _Further reading: Introduction to DAGs and How They Differ From Blockchains: https://medium.com/fantomfoundation/an-introduction-to-dags-and-how-they-differ-from-blockchains-a6f703462090_
 
-
 <br>
 <br>
-
 
 ## What will we be learning?
 
@@ -150,7 +144,6 @@ Handling graph problems follow the same three steps each time:
 
 _Further learning: Dijkstra's's Algorithm (shortest path first) is a form of Breadth First Search. Once you learn BFS, learning that would be easier._
 
-
 When drawing out graphs, be sure to be specific with your arrows to properly visualize directions that data flow (for direct or undirected graphs, identifying cyclical graphs, etc.)
 
 <br>
@@ -163,31 +156,31 @@ From Steve Yegge's article on [Get That Job At Google](https://steve-yegge.blogs
 ```
 Graphs
 
-Graphs are, like, really really important. 
-More than you think. Even if you already think 
+Graphs are, like, really really important.
+More than you think. Even if you already think
 they're important, it's probably more than you think.
 
-There are three basic ways to represent a graph in 
-memory (objects and pointers, matrix, and adjacency 
+There are three basic ways to represent a graph in
+memory (objects and pointers, matrix, and adjacency
 list), and you should familiarize yourself with each
 representation and its pros and cons.
 
 You should know the basic graph traversal algorithms:
-breadth-first search and depth-first search. 
-You should know their computational complexity, 
+breadth-first search and depth-first search.
+You should know their computational complexity,
 their tradeoffs, and how to implement them in real code.
 
-You should try to study up on fancier algorithms, 
-such as Dijkstra and A*, if you get a chance. 
-They're really great for just about anything, 
-from game programming to distributed computing to 
+You should try to study up on fancier algorithms,
+such as Dijkstra and A*, if you get a chance.
+They're really great for just about anything,
+from game programming to distributed computing to
 you name it. You should know them.
 
-Whenever someone gives you a problem, think graphs. 
-They are the most fundamental and flexible way of 
-representing any kind of a relationship, so it's about 
-a 50-50 shot that any interesting design problem has a 
-graph involved in it. Make absolutely sure you can't think 
+Whenever someone gives you a problem, think graphs.
+They are the most fundamental and flexible way of
+representing any kind of a relationship, so it's about
+a 50-50 shot that any interesting design problem has a
+graph involved in it. Make absolutely sure you can't think
 of a way to solve it using graphs before moving on to other
 solution types. This tip is important!
 ```
@@ -196,7 +189,6 @@ Short answer: yes.
 
 <br>
 <br>
-
 
 ## How to Represent a Graph
 
@@ -210,7 +202,7 @@ Looking at the above graph, we can see that it is a directed, unweighted, cyclic
 
 An adjacency list is a way to represent that graph by listing out the vertices/nodes and showing both their directions and weights (if there are any).
 
-This adjacency list shows a relationship from Vertex 1 to 2, 4 and 3. It then shows Vertex 2 to 4. 
+This adjacency list shows a relationship from Vertex 1 to 2, 4 and 3. It then shows Vertex 2 to 4.
 
 We can think of each of these as _sets_.
 
@@ -240,7 +232,7 @@ We need to consider both our time and space complexity when deciding.
 
 Let's go back to dictionaries v sets. A dictionary contains key value pairs for the data, whereas a set only contains the data. Sets are somewhat like dictionaries without the keys.
 
-What are the drawbacks? Sets cannot have duplicates and are unordered (you're not guaranteed to get them in any particular order). 
+What are the drawbacks? Sets cannot have duplicates and are unordered (you're not guaranteed to get them in any particular order).
 
 <br>
 
@@ -273,19 +265,17 @@ For now, we'll be focusing on adjacency lists mostly on this sprint because it's
 
 ### Space and Time Complexity
 
-Assuming `n` = total number of vertices in the graph, `E` = total number of edges in the graph, and `e` is the total number of edges per vertex....   
+Assuming `n` = total number of vertices in the graph, `E` = total number of edges in the graph, and `e` is the total number of edges per vertex....
 
 <br>
 
 The space complexity of both a matrix and list are:
 
-Adjacency Matrix: `O(n^2)` --> the number of nodes * number of nodes, because it's creating a column _and_ row for each node
+Adjacency Matrix: `O(n^2)` --> the number of nodes \* number of nodes, because it's creating a column _and_ row for each node
 
 Adjacency List: `O(n + E)` --> n for each entry, plus a list for every edge related to that entry
 
-
 <br>
-
 
 The Time Complexity of adding a vertex...
 
@@ -300,7 +290,7 @@ Because adding a new key to a dictionary is a constant time equation.
 The Time Complexity of removing a vertex...
 
 Adjacency Matrix: `O(n^2)`
-On the matrix, we'll simply remove the vertex reference on each row, then moving all the remaining vertex points in the set over one spot; and we do this one _every_ column. So it's the same as n*n, O(n^2)
+On the matrix, we'll simply remove the vertex reference on each row, then moving all the remaining vertex points in the set over one spot; and we do this one _every_ column. So it's the same as n\*n, O(n^2)
 
 Adjacency List: `O(n)`
 On the adjacency list, we first have to remove B and its corresponding list of edges; but we also have to go through the remaining vertices and search their lists, to remove B as a referenced vertex as well.
@@ -580,10 +570,8 @@ It should match the example graph below:
 
 ![Example Graph](../img/example.png "Example Graph")
 
-
 <br>
 <br>
-
 
 ## Breadth-First Traversal
 
@@ -593,14 +581,11 @@ A tree is a directed, acyclic graph that start from a single root note, from whi
 
 ![Node Tree](../img/root_node.png "Node Tree")
 
-
 <br>
-
 
 Often times we might use Traversal and Search interchangeably but a `traversal` means we start from a node and visit each node in an order. `Search` finds a path from one node to another specific node.
 
 With Breadth First Traversal, you'll start at the root node and visit each child node, then each grandchild node, and so on. You'll visit every node that is 1 link away first, then every node that is 2 links away, etc...
-
 
 <br>
 
@@ -610,8 +595,7 @@ Keeping this in mind, on non-tree graphs, there is no "first" or "root" node. _A
 
 Because of this lack of order, we might refer to nodes as neighbors instead of children.
 
-Breadth First Search will always return the _shortest_ path to the node being found, because it searches level by level. 
-
+Breadth First Search will always return the _shortest_ path to the node being found, because it searches level by level.
 
 <br>
 <br>
@@ -629,7 +613,6 @@ Depth First Search will not always return the _shortest_ path, just a viable pat
 <br>
 
 It's important to remember that when iterating through an object or list, order is not guaranteed -- which means it can be difficult to reproduce results using DFS, because the starting node could be different each time it's run. In that vein, writing tests for DFS can be tricky because it requires accounting for all possible correct answers because there is not one _single_ right answer, and we may find that colleagues who solve the same problem find a different (but equally correct) answer.
-
 
 <br>
 <br>
@@ -767,7 +750,6 @@ queue = []
 
 Having walked through how this psuedo-code would work, looking at the graph, the solution seems sound. So now we can write the code:
 
-
 <br>
 
 ```
@@ -801,13 +783,12 @@ while q.size() > 0:
 
 Let's make DFT work, starting with the pseudo-code. The main difference is that we'll use a stack instead of a queue.
 
->> Stack is LIFO - Last In, First Out.
->> Queue is FIFO - First In, First Out.
+> > Stack is LIFO - Last In, First Out.
+> > Queue is FIFO - First In, First Out.
 
 A queue is like a line: the first person in line is the first person to get served.
 
 A stack is like a stack of pancakes: the last pancake was placed on top, but would be the first to get pulled off to get eaten.
-
 
 <br>
 
@@ -827,12 +808,11 @@ Essentially, the only difference is that we changed from using a queue to a stac
 
 So remember:
 
->DFT = LIFO = Stack = last in line, first served
+> DFT = LIFO = Stack = last in line, first served
 >
->BFT = FIFO = Queue = first in line, first served
+> BFT = FIFO = Queue = first in line, first served
 
 Our code would simply change like so:
-
 
 <br>
 
@@ -952,7 +932,6 @@ Does it matter which node we start with? Yes, depending on the starting node, we
 
 We can also implement this recursively, but we'll touch on that in the next lecture.
 
-
 <br>
 <br>
 
@@ -967,7 +946,6 @@ A search is like a traversal, except you stop when you find the target node and 
 How can we implement this with our current algorithm?
 
 Instead of storing nodes, we want to store a _path_ to the node.
-
 
 <br>
 
@@ -987,7 +965,7 @@ Instead of storing nodes, we want to store a _path_ to the node.
     # If that vertex has not been visited...
         # Mark it as visited
         # Then add A PATH TO all of its neighbors to the back of the queue
-        
+
             # Copy the path
             # Append neighbor to the back of the copy
             # Enqueue copy
@@ -1066,7 +1044,7 @@ q = [ [1, 2, 3], [1, 2, 4] ]
 
 <br>
 
-This will continue to loop until we find our target node. Let's say our target is 4. 
+This will continue to loop until we find our target node. Let's say our target is 4.
 
 <br>
 

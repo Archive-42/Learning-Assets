@@ -1,6 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { View, ButtonPrimary, Button, HeadingText, Figure, Img, Figcaption, Container } from '../../components/~reusables/atoms/atoms';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  View,
+  ButtonPrimary,
+  Button,
+  HeadingText,
+  Figure,
+  Img,
+  Figcaption,
+  Container,
+} from "../../components/~reusables/atoms/atoms";
 
 function ResumeView() {
   return (
@@ -14,11 +23,11 @@ function ResumeView() {
           <ButtonPrimary fullWidth>Download</ButtonPrimary>
         </Figcaption>
       </Container>
-      <Link to='/contact'>
+      <Link to="/contact">
         <Button>↓</Button>
       </Link>
     </View>
-  )
+  );
 }
 
 export default ResumeView;

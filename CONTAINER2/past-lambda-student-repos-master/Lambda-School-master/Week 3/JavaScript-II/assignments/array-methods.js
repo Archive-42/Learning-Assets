@@ -10,7 +10,7 @@ const runners = [
     email: "cseiler0@wired.com",
     shirt_size: "2XL",
     company_name: "Divanoodle",
-    donation: 75
+    donation: 75,
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const runners = [
     email: "wierland1@angelfire.com",
     shirt_size: "2XL",
     company_name: "Wordtune",
-    donation: 148
+    donation: 148,
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const runners = [
     email: "jmccloid2@yahoo.com",
     shirt_size: "S",
     company_name: "Riffpedia",
-    donation: 171
+    donation: 171,
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const runners = [
     email: "mpaye3@sciencedaily.com",
     shirt_size: "XL",
     company_name: "Wordware",
-    donation: 288
+    donation: 288,
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const runners = [
     email: "graraty4@ucoz.ru",
     shirt_size: "L",
     company_name: "Oozz",
-    donation: 291
+    donation: 291,
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ const runners = [
     email: "ytommasetti5@state.gov",
     shirt_size: "S",
     company_name: "Yodo",
-    donation: 27
+    donation: 27,
   },
   {
     id: 7,
@@ -64,7 +64,7 @@ const runners = [
     email: "kmajury6@guardian.co.uk",
     shirt_size: "3XL",
     company_name: "Zoomcast",
-    donation: 261
+    donation: 261,
   },
   {
     id: 8,
@@ -73,7 +73,7 @@ const runners = [
     email: "tbranton7@tmall.com",
     shirt_size: "2XL",
     company_name: "Realmix",
-    donation: 28
+    donation: 28,
   },
   {
     id: 9,
@@ -82,7 +82,7 @@ const runners = [
     email: "slasham8@toplist.cz",
     shirt_size: "XL",
     company_name: "Gigashots",
-    donation: 110
+    donation: 110,
   },
   {
     id: 10,
@@ -91,7 +91,7 @@ const runners = [
     email: "blonergan9@issuu.com",
     shirt_size: "3XL",
     company_name: "Skinte",
-    donation: 62
+    donation: 62,
   },
   {
     id: 11,
@@ -100,7 +100,7 @@ const runners = [
     email: "tstudda@networkadvertising.org",
     shirt_size: "S",
     company_name: "Cogidoo",
-    donation: 76
+    donation: 76,
   },
   {
     id: 12,
@@ -109,7 +109,7 @@ const runners = [
     email: "mokeshottb@chron.com",
     shirt_size: "M",
     company_name: "DabZ",
-    donation: 91
+    donation: 91,
   },
   {
     id: 13,
@@ -118,7 +118,7 @@ const runners = [
     email: "blogsdailc@wix.com",
     shirt_size: "M",
     company_name: "Mymm",
-    donation: 9
+    donation: 9,
   },
   {
     id: 14,
@@ -127,7 +127,7 @@ const runners = [
     email: "lrivlind@behance.net",
     shirt_size: "2XL",
     company_name: "Linktype",
-    donation: 204
+    donation: 204,
   },
   {
     id: 15,
@@ -136,7 +136,7 @@ const runners = [
     email: "ckendalle@example.com",
     shirt_size: "XS",
     company_name: "Skinix",
-    donation: 252
+    donation: 252,
   },
   {
     id: 16,
@@ -145,7 +145,7 @@ const runners = [
     email: "kwhitwamf@deliciousdays.com",
     shirt_size: "2XL",
     company_name: "Oyope",
-    donation: 147
+    donation: 147,
   },
   {
     id: 17,
@@ -154,7 +154,7 @@ const runners = [
     email: "hheningamg@tripadvisor.com",
     shirt_size: "L",
     company_name: "Skinix",
-    donation: 172
+    donation: 172,
   },
   {
     id: 18,
@@ -163,7 +163,7 @@ const runners = [
     email: "mballingerh@a8.net",
     shirt_size: "S",
     company_name: "Nlounge",
-    donation: 266
+    donation: 266,
   },
   {
     id: 19,
@@ -172,7 +172,7 @@ const runners = [
     email: "nabberleyi@jalbum.net",
     shirt_size: "XL",
     company_name: "Photospace",
-    donation: 148
+    donation: 148,
   },
   {
     id: 20,
@@ -181,7 +181,7 @@ const runners = [
     email: "ntreslerj@marketwatch.com",
     shirt_size: "3XL",
     company_name: "Wikido",
-    donation: 292
+    donation: 292,
   },
   {
     id: 21,
@@ -190,7 +190,7 @@ const runners = [
     email: "uvuittetk@gov.uk",
     shirt_size: "S",
     company_name: "Skinte",
-    donation: 102
+    donation: 102,
   },
   {
     id: 22,
@@ -199,7 +199,7 @@ const runners = [
     email: "sspennockl@icq.com",
     shirt_size: "3XL",
     company_name: "Kwimbee",
-    donation: 213
+    donation: 213,
   },
   {
     id: 23,
@@ -208,7 +208,7 @@ const runners = [
     email: "cwoffindenm@wikispaces.com",
     shirt_size: "S",
     company_name: "Rooxo",
-    donation: 137
+    donation: 137,
   },
   {
     id: 24,
@@ -217,7 +217,7 @@ const runners = [
     email: "mkimmeln@jimdo.com",
     shirt_size: "M",
     company_name: "Livetube",
-    donation: 96
+    donation: 96,
   },
   {
     id: 25,
@@ -226,7 +226,7 @@ const runners = [
     email: "bburriso@slate.com",
     shirt_size: "2XL",
     company_name: "Wordtune",
-    donation: 128
+    donation: 128,
   },
   {
     id: 26,
@@ -235,7 +235,7 @@ const runners = [
     email: "jberzonp@soup.io",
     shirt_size: "3XL",
     company_name: "Einti",
-    donation: 234
+    donation: 234,
   },
   {
     id: 27,
@@ -244,7 +244,7 @@ const runners = [
     email: "solsenq@reverbnation.com",
     shirt_size: "2XL",
     company_name: "Viva",
-    donation: 190
+    donation: 190,
   },
   {
     id: 28,
@@ -253,7 +253,7 @@ const runners = [
     email: "jonolanr@samsung.com",
     shirt_size: "XL",
     company_name: "Skinix",
-    donation: 31
+    donation: 31,
   },
   {
     id: 29,
@@ -262,7 +262,7 @@ const runners = [
     email: "mrainards@yale.edu",
     shirt_size: "XS",
     company_name: "Podcat",
-    donation: 52
+    donation: 52,
   },
   {
     id: 30,
@@ -271,7 +271,7 @@ const runners = [
     email: "froskellyt@ibm.com",
     shirt_size: "XS",
     company_name: "Avavee",
-    donation: 5
+    donation: 5,
   },
   {
     id: 31,
@@ -280,7 +280,7 @@ const runners = [
     email: "tmacsweeneyu@parallels.com",
     shirt_size: "M",
     company_name: "Jaloo",
-    donation: 82
+    donation: 82,
   },
   {
     id: 32,
@@ -289,7 +289,7 @@ const runners = [
     email: "jwalheddv@slashdot.org",
     shirt_size: "L",
     company_name: "Trilia",
-    donation: 5
+    donation: 5,
   },
   {
     id: 33,
@@ -298,7 +298,7 @@ const runners = [
     email: "kpiperw@ucsd.edu",
     shirt_size: "3XL",
     company_name: "Yombu",
-    donation: 110
+    donation: 110,
   },
   {
     id: 34,
@@ -307,7 +307,7 @@ const runners = [
     email: "mmitchensonx@webeden.co.uk",
     shirt_size: "M",
     company_name: "Zoonoodle",
-    donation: 97
+    donation: 97,
   },
   {
     id: 35,
@@ -316,7 +316,7 @@ const runners = [
     email: "mthrashery@opensource.org",
     shirt_size: "XL",
     company_name: "Bluejam",
-    donation: 17
+    donation: 17,
   },
   {
     id: 36,
@@ -325,7 +325,7 @@ const runners = [
     email: "tmaniez@netscape.com",
     shirt_size: "L",
     company_name: "Kanoodle",
-    donation: 30
+    donation: 30,
   },
   {
     id: 37,
@@ -334,7 +334,7 @@ const runners = [
     email: "csheering10@mit.edu",
     shirt_size: "3XL",
     company_name: "Jatri",
-    donation: 262
+    donation: 262,
   },
   {
     id: 38,
@@ -343,7 +343,7 @@ const runners = [
     email: "veynaud11@archive.org",
     shirt_size: "XS",
     company_name: "Jaxbean",
-    donation: 212
+    donation: 212,
   },
   {
     id: 39,
@@ -352,7 +352,7 @@ const runners = [
     email: "dmcdarmid12@tinyurl.com",
     shirt_size: "S",
     company_name: "Kayveo",
-    donation: 74
+    donation: 74,
   },
   {
     id: 40,
@@ -361,7 +361,7 @@ const runners = [
     email: "mhymas13@cornell.edu",
     shirt_size: "XS",
     company_name: "Vimbo",
-    donation: 101
+    donation: 101,
   },
   {
     id: 41,
@@ -370,7 +370,7 @@ const runners = [
     email: "jfrend14@ca.gov",
     shirt_size: "XS",
     company_name: "Latz",
-    donation: 156
+    donation: 156,
   },
   {
     id: 42,
@@ -379,7 +379,7 @@ const runners = [
     email: "yhacket15@wp.com",
     shirt_size: "XL",
     company_name: "Lazzy",
-    donation: 291
+    donation: 291,
   },
   {
     id: 43,
@@ -388,7 +388,7 @@ const runners = [
     email: "hzebedee16@ezinearticles.com",
     shirt_size: "L",
     company_name: "Gigashots",
-    donation: 241
+    donation: 241,
   },
   {
     id: 44,
@@ -397,7 +397,7 @@ const runners = [
     email: "jstawell17@yale.edu",
     shirt_size: "S",
     company_name: "Jaxspan",
-    donation: 262
+    donation: 262,
   },
   {
     id: 45,
@@ -406,7 +406,7 @@ const runners = [
     email: "fkarsh18@pcworld.com",
     shirt_size: "S",
     company_name: "Mycat",
-    donation: 239
+    donation: 239,
   },
   {
     id: 46,
@@ -415,7 +415,7 @@ const runners = [
     email: "rpurselowe19@thetimes.co.uk",
     shirt_size: "L",
     company_name: "Jabbersphere",
-    donation: 11
+    donation: 11,
   },
   {
     id: 47,
@@ -424,7 +424,7 @@ const runners = [
     email: "vtydd1a@dropbox.com",
     shirt_size: "S",
     company_name: "Quaxo",
-    donation: 55
+    donation: 55,
   },
   {
     id: 48,
@@ -433,7 +433,7 @@ const runners = [
     email: "amacgiollapheadair1b@xing.com",
     shirt_size: "2XL",
     company_name: "Kwimbee",
-    donation: 214
+    donation: 214,
   },
   {
     id: 49,
@@ -442,7 +442,7 @@ const runners = [
     email: "balway1c@ow.ly",
     shirt_size: "S",
     company_name: "Voolia",
-    donation: 107
+    donation: 107,
   },
   {
     id: 50,
@@ -451,26 +451,26 @@ const runners = [
     email: "sbaine1d@intel.com",
     shirt_size: "M",
     company_name: "Gabtype",
-    donation: 171
-  }
+    donation: 171,
+  },
 ];
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName.
 let fullName = [];
-runners.forEach(runner =>
+runners.forEach((runner) =>
   fullName.push(runner.first_name + " " + runner.last_name)
 );
 console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
-let allCaps = runners.map(runner => runner.first_name.toUpperCase());
+let allCaps = runners.map((runner) => runner.first_name.toUpperCase());
 console.log(allCaps);
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
-let largeShirts = runners.filter(runner => runner.shirt_size === "L");
+let largeShirts = runners.filter((runner) => runner.shirt_size === "L");
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
@@ -487,7 +487,7 @@ console.log(ticketPriceTotal);
 // Problem 1
 // All people with the company "Lazzy" were fired due to loss of funding. Their data needs to be changed to 'unemployed'
 const unemployed = [];
-runners.forEach(runner => {
+runners.forEach((runner) => {
   if (runner.company_name === "Lazzy") {
     runner.company_name = "Unemployed";
     unemployed.push(runner);
@@ -498,16 +498,16 @@ console.log(unemployed);
 
 // Problem 2
 // Data of all runners was requested, but they decided to hide sensitive information like an email adress, company's name, id and shirt's size
-const requested = runners.map(runner => {
+const requested = runners.map((runner) => {
   return {
     first_name: runner.first_name,
     last_name: runner.last_name,
-    donation: runner.donation
+    donation: runner.donation,
   };
 });
 console.log(requested);
 
 // Problem 3
 // Hacker could get the requested data and he reset all donations to zero. He changed the data instead of creating a new set of it!
-requested.forEach(runner => (runner.donation = 0));
+requested.forEach((runner) => (runner.donation = 0));
 console.log(requested);

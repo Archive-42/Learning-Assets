@@ -1,5 +1,17 @@
-import React from 'react';
-import { View, HeadingText, Img, Figure, Text, SmallText, Section, SubheadingText, Container, Link, Button } from '../../components/~reusables/atoms/atoms';
+import React from "react";
+import {
+  View,
+  HeadingText,
+  Img,
+  Figure,
+  Text,
+  SmallText,
+  Section,
+  SubheadingText,
+  Container,
+  Link,
+  Button,
+} from "../../components/~reusables/atoms/atoms";
 
 function AboutView() {
   return (
@@ -9,7 +21,13 @@ function AboutView() {
         <Figure fullWidth>
           <Img src="https://picsum.photos/640/200?blur=10" />
         </Figure>
-        <Text>Maecenas volutpat, justo ac imperdiet lobortis, arcu augue congue nibh, et eleifend tellus ex eu lacus. Curabitur est justo, accumsan ut bibendum sit amet, semper at dui. Maecenas volutpat, justo ac imperdiet lobortis, arcu augue congue nibh, et eleifend tellus ex eu lacus.</Text>
+        <Text>
+          Maecenas volutpat, justo ac imperdiet lobortis, arcu augue congue
+          nibh, et eleifend tellus ex eu lacus. Curabitur est justo, accumsan ut
+          bibendum sit amet, semper at dui. Maecenas volutpat, justo ac
+          imperdiet lobortis, arcu augue congue nibh, et eleifend tellus ex eu
+          lacus.
+        </Text>
       </Section>
       <Section column>
         <SubheadingText>5 Facts About Me</SubheadingText>
@@ -46,7 +64,7 @@ function AboutView() {
 
         <Container column hCenter>
           <SmallText noMargin>Skills</SmallText>
-          <Link to='/skills'>
+          <Link to="/skills">
             <Button>↓</Button>
           </Link>
         </Container>

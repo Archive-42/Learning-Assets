@@ -7,23 +7,21 @@
 <br> e. [Bit Masking](#Bit-Masking)  
 <br> f. [Binary Conversion](#Binary-Conversion)  
 <br> g. [Q&A](#Q&A)  
-<br>  
-
+<br>
 
 ## Additional Resources
 
-[Bitwise Operations](https://www.youtube.com/watch?v=0PNyhnIEsXE)  
+[Bitwise Operations](https://www.youtube.com/watch?v=0PNyhnIEsXE)
 
-[CS19 Lecture II Recording: Brady Fukumoto](https://youtu.be/dgrUvv7bDgI)  
+[CS19 Lecture II Recording: Brady Fukumoto](https://youtu.be/dgrUvv7bDgI)
 
 <br>
 
+[Conversion Methods Between Bases](https://www.robotroom.com/NumberSystems.html)
 
-[Conversion Methods Between Bases](https://www.robotroom.com/NumberSystems.html)  
+[Endianness](https://en.wikipedia.org/wiki/Endianness)
 
-[Endianness](https://en.wikipedia.org/wiki/Endianness)  
-
-[Using Dispatch Tables](https://medium.com/better-programming/dispatch-tables-in-python-d37bcc443b0b)  
+[Using Dispatch Tables](https://medium.com/better-programming/dispatch-tables-in-python-d37bcc443b0b)
 
 <br>
 
@@ -31,7 +29,7 @@
 
 Let's practice converting a binary string to a decimal string with code, to fully understand how both base systems work. We'll add the code into [lectureII.py](lectureII.py).
 
-> str = "1010"  
+> str = "1010"
 
 In decimal, this number is 10. How do we know this?
 
@@ -65,11 +63,11 @@ This prints out in the terminal:
 <br>
 
 ```
-0 in the 1's place' 
-1 in the 2's place' 
-0 in the 4's place' 
+0 in the 1's place'
+1 in the 2's place'
+0 in the 4's place'
 1 in the 8's place'
-The final number is 10 
+The final number is 10
 ```
 
 <br>
@@ -97,7 +95,7 @@ A logic table can represent the logic of a statement, like this `and` table:
 
 A and B
 
-A   B   A and B 
+A   B   A and B
 ---------------
 0   0      0
 0   1      0
@@ -123,11 +121,11 @@ for A in [False, True]:
 <br>
 
 Which prints to show:
-  
+
 > False - False --> False  
 > False - True --> False  
 > True - False --> False  
-> True - True --> True  
+> True - True --> True
 
 <br>
 
@@ -145,7 +143,7 @@ What would the truth table for `or` and `xor` look like?
 
 ```
 
-A   B   A or B 
+A   B   A or B
 ---------------
 0   0      0
 0   1      1
@@ -153,7 +151,7 @@ A   B   A or B
 1   1      1
 
 
-A   B   A xor B 
+A   B   A xor B
 ---------------
 0   0      0
 0   1      1
@@ -171,8 +169,7 @@ This differs from the traditional `or` statement because `or` would consider A a
 
 <br>
 
-
-Using binary, we can represent all kinds of data and data structures with 1's and 0's. 
+Using binary, we can represent all kinds of data and data structures with 1's and 0's.
 
 What if we look at two binary numbers like an `and` truth table?
 
@@ -223,45 +220,45 @@ If we wanted to shift this number to the right by 2, the process would look like
 
 > 0b10100111 >> 2  
 > 0b01010011 >> 1  
-> 0b00101001  
+> 0b00101001
 
- We can also bit shift to the left:
+We can also bit shift to the left:
 
 > 0b10100111 << 2  
 > 0b01001110 << 1  
-> 0b10011100  
+> 0b10011100
 
 This looks clear and obvious in binary, but if we did this in decimal, how would it look?
 
 `7 << 2` becomes `28` because every time we shift _to the left_, we're multiplying it by 2 (since each place is a power of 2).
 
-> (7 * 2) * 2 = (14) * 2 = 28  
+> (7 _ 2) _ 2 = (14) \* 2 = 28
 
 Looking at it in binary:
 
 > 0111 = 7 (4 + 2 + 1)  
 > 1110 = 14 (8 + 4 + 2)  
-> 11100 = 28 (16 + + 8 + 4)  
+> 11100 = 28 (16 + + 8 + 4)
 
 If we shift to the right, it's reducing the value by half (dividing by 2):
 
 > 0111 = 7  
 > 0011 = 3  
-> 0000 = 0  
+> 0000 = 0
 
 In base 10, it's the same, If we shift to the left in decimal, we're multiplying by 10; if we shift to the right, we divide by 10.
 
-Remember: 
+Remember:
 
-> LEFT = MULTIPLY * BASE  
-> RIGHT = DIVIDE / BASE   
+> LEFT = MULTIPLY \* BASE  
+> RIGHT = DIVIDE / BASE
 
 <br>
 <br>
 
 ## Bit Masking
 
-Bit masking uses bitwise `and` to "mask" 
+Bit masking uses bitwise `and` to "mask"
 
 <br>
 
@@ -378,7 +375,7 @@ try:
             # Ignore blank values
             if num == "":
                 continue
-            
+
             # Set x to the number, of base 2
             x = int(num, 2)
 
@@ -386,7 +383,6 @@ try:
 ```
 
 <br>
-
 
 Now it prints out the binary value and the decimal value:
 
@@ -501,8 +497,6 @@ When I coded it,  ir was just a local variable in my main loop
 ```
 
 In today's example, the IR is the same as the `command`: command = memory[pc]
-
-
 
 <br>
 <br>

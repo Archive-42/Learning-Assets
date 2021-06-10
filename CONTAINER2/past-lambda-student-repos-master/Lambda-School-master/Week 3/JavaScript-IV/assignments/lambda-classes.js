@@ -37,7 +37,7 @@ class Student extends Person {
   }
 
   listsSubjects() {
-    this.favSubjects.forEach(subject => console.log(subject));
+    this.favSubjects.forEach((subject) => console.log(subject));
   }
 
   PRAssignment(subject) {
@@ -77,7 +77,7 @@ const Jon = new Instructor({
   location: "Beyond the Wall",
   specialty: "Looking confident",
   favLanguage: "English",
-  catchPhrase: "Winter is Coming"
+  catchPhrase: "Winter is Coming",
 });
 const Igrid = new Instructor({
   name: "Igrid",
@@ -85,7 +85,7 @@ const Igrid = new Instructor({
   location: "Underworld",
   favLanguage: "English",
   specialty: "Shooting arrows and dying",
-  catchPhrase: "You know nothing, Jon Snow"
+  catchPhrase: "You know nothing, Jon Snow",
 });
 
 const Kate = new Student({
@@ -95,7 +95,7 @@ const Kate = new Student({
   previousBackground: "C++, Java and JavaScript",
   className: "WEB22",
   grade: 100,
-  favSubjects: ["Drawing", "Coding", "Anything that does not involve running"]
+  favSubjects: ["Drawing", "Coding", "Anything that does not involve running"],
 });
 
 const Gregoriooo = new Student({
@@ -105,7 +105,7 @@ const Gregoriooo = new Student({
   previousBackground: "Being rasict against Khajiits",
   className: "WEB588",
   grade: 78,
-  favSubjects: ["Coming from the future", "to leave you", "a message!"]
+  favSubjects: ["Coming from the future", "to leave you", "a message!"],
 });
 
 const Sansa = new ProjectManager({
@@ -116,7 +116,7 @@ const Sansa = new ProjectManager({
   favLanguage: "English",
   catchPhrase: "Lol",
   gradClassName: "WEB18",
-  favInstructor: "Not Jon"
+  favInstructor: "Not Jon",
 });
 
 const DoctorWho = new ProjectManager({
@@ -127,7 +127,7 @@ const DoctorWho = new ProjectManager({
   favLanguage: "English",
   catchPhrase: "Wibbly Wobly, Timey Wimey...stuff",
   gradClassName: "WEB1",
-  favInstructor: "Me, myself and I"
+  favInstructor: "Me, myself and I",
 });
 
 Jon.speak();

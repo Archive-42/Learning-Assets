@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const SmurfForm = props => {
+const SmurfForm = (props) => {
   return (
     <div>
       <h1>Imagine a form is here</h1>
       <form
-        onSubmit={e => {
+        onSubmit={(e) => {
           e.preventDefault();
           // return props.createSmurf({
           //   name: document.getElementById("name").value,
@@ -42,9 +42,6 @@ const SmurfForm = props => {
   );
 };
 
-export default connect(
-  null,
-  {
-    /*createSmurf */
-  }
-)(SmurfForm);
+export default connect(null, {
+  /*createSmurf */
+})(SmurfForm);

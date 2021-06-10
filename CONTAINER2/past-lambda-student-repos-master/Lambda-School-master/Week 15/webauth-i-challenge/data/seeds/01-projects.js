@@ -1,4 +1,4 @@
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   return knex("projects")
     .truncate()
     .then(() => {
@@ -6,14 +6,14 @@ exports.seed = function(knex) {
         {
           name: "Backend sprint",
           description: "Has to be completed on 10/11/2019",
-          completed: false
+          completed: false,
         },
         {
           name: "Buy at 40% Ross discount",
           description: "Lasts until tomorrow!",
-          completed: false
+          completed: false,
         },
-        { name: "Drink tea", description: "Super healthy!", completed: true }
+        { name: "Drink tea", description: "Super healthy!", completed: true },
       ]);
     });
 };

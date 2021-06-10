@@ -16,7 +16,7 @@ span.add-a-friend {
 input {
   border: none;
   height: 18px;
-  box-shadow: 1px 1px 3px 0px #DDDDDD;
+  box-shadow: 1px 1px 3px 0px #dddddd;
 }
 input.input-name {
   margin: 0 0 0 30px;

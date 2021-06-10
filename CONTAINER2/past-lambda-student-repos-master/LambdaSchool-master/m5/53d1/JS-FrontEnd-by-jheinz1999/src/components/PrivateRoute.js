@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
 
 /*
 
@@ -12,17 +12,15 @@ Otherwise, we will redirect the user to the Login page
 */
 
 export default function PrivateRoute({ component: Component, ...rest }) {
-
   return (
-
     <div>
-      <Route {...rest} render={() => {
-        if (localStorage.getItem('token'))
-          return <Component />
-        return <Redirect to='/login'/>
-      }}/>
+      <Route
+        {...rest}
+        render={() => {
+          if (localStorage.getItem("token")) return <Component />;
+          return <Redirect to="/login" />;
+        }}
+      />
     </div>
-
-  )
-
+  );
 }

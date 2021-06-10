@@ -4,7 +4,7 @@ module.exports = {
   addTodo,
   find,
   findBy,
-  findById
+  findById,
   // update,
   // remove
 };
@@ -14,9 +14,7 @@ function find() {
 }
 
 function findById(id) {
-  return db("todos")
-    .where({ id })
-    .first();
+  return db("todos").where({ id }).first();
 }
 
 function findBy(filter) {
@@ -29,7 +27,7 @@ async function addTodo(todo, admin_id, volunteer_id) {
     description: todo.description,
     is_completed: todo.is_completed || false,
     admin_id,
-    volunteer_id
+    volunteer_id,
   };
   const [id] = await db("todos").insert(newTodo);
   return findById(id);

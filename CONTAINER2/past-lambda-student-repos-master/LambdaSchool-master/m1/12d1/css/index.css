@@ -123,7 +123,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -138,14 +138,14 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
 h1 {
   font-size: 4rem;
@@ -360,7 +360,7 @@ img {
   background-color: white;
 }
 /* Full-width input fields */
-.form-container input[type=text] {
+.form-container input[type="text"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -368,7 +368,7 @@ img {
   background: #f1f1f1;
 }
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus {
+.form-container input[type="text"]:focus {
   background-color: #ddd;
   outline: none;
 }

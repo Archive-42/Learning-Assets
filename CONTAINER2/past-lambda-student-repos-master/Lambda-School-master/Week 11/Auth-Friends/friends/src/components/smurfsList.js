@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getSmurfs } from "../actions/actions";
-const SmurfsList = props => {
+const SmurfsList = (props) => {
   return (
     <div>
       <h3>Here's smurfs list:</h3>
       <button onClick={() => props.getSmurfs()}>Get</button>
-      {props.smurfs.map(smurf => {
+      {props.smurfs.map((smurf) => {
         return (
           <div id="list">
             <h3>{smurf.name}</h3>
@@ -20,13 +20,10 @@ const SmurfsList = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    smurfs: state.smurfs
+    smurfs: state.smurfs,
   };
 };
 
-export default connect(
-  mapStateToProps,
-  { getSmurfs }
-)(SmurfsList);
+export default connect(mapStateToProps, { getSmurfs })(SmurfsList);

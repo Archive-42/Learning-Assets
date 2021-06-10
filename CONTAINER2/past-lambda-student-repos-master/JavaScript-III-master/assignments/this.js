@@ -28,54 +28,54 @@ explicitly set This.
 
 // Principle 1
 
-function sayHello(item){
-    console.log(this)
+function sayHello(item) {
+  console.log(this);
 }
 console.log(sayHello());
 
 // Principle 2
 
 let unicorn = {
-    firstName: 'Angela',
-    favoriteFood: 'Apples',
-    farts: 'Rainbows',
-    myself: function(){
-        return `My name is ${this.firstName}. My favorite food is ${this.favoriteFood} and I fart ${this.farts}.`
-    }
-}
+  firstName: "Angela",
+  favoriteFood: "Apples",
+  farts: "Rainbows",
+  myself: function () {
+    return `My name is ${this.firstName}. My favorite food is ${this.favoriteFood} and I fart ${this.farts}.`;
+  },
+};
 unicorn.myself();
 
 // Principle 3
 
-function PastaDish(shape, sauce, topping){
-    this.shape = shape;
-    this.sauce = sauce;
-    this.topping = topping;
-    this.letsEat = function(){
-        return `I am excited to eat ${shape} pasta with ${sauce} sauce with ${topping} on top.`
-    }
+function PastaDish(shape, sauce, topping) {
+  this.shape = shape;
+  this.sauce = sauce;
+  this.topping = topping;
+  this.letsEat = function () {
+    return `I am excited to eat ${shape} pasta with ${sauce} sauce with ${topping} on top.`;
+  };
 }
 
-let alfredo = new PastaDish('bowtie', 'alfredo', 'parmesan');
+let alfredo = new PastaDish("bowtie", "alfredo", "parmesan");
 
 alfredo.letsEat();
 
 // Principle 4
 
 function Introduction(hobby, pet) {
-    return `Hi, my name is ${this.name}. I am from ${this.hometown} but live in ${this.currentTown} now. I enjoy ${hobby} and have a pet ${pet}.`
+  return `Hi, my name is ${this.name}. I am from ${this.hometown} but live in ${this.currentTown} now. I enjoy ${hobby} and have a pet ${pet}.`;
 }
 
 const Julie = {
-    name: 'Julie',
-    hometown: 'Charlottesville',
-    currentTown: 'Houston',
-}
+  name: "Julie",
+  hometown: "Charlottesville",
+  currentTown: "Houston",
+};
 
-Introduction.call(Julie, 'soccer', 'chicken');
+Introduction.call(Julie, "soccer", "chicken");
 
-const info = ['soccer', 'chicken'];
+const info = ["soccer", "chicken"];
 Introduction.apply(Julie, info);
 
 const julieFacts = Introduction.bind(Julie);
-julieFacts('soccer', 'chicken');
+julieFacts("soccer", "chicken");

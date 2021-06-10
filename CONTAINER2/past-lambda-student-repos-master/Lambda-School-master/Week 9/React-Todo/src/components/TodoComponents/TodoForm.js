@@ -8,7 +8,7 @@ class TodoForm extends React.Component {
   render() {
     return (
       <form
-        onSubmit={e => {
+        onSubmit={(e) => {
           {
             document.getElementById("todoInput").value = "";
             return this.props.handleSubmit(e);

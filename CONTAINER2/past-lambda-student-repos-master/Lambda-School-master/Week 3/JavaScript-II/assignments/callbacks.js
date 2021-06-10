@@ -28,7 +28,7 @@ const items = ["Pencil", "Notebook", "yo-yo", "Gum"];
 function getLength(arr, cb) {
   cb(arr.length);
 }
-getLength(items, arrayItem => {
+getLength(items, (arrayItem) => {
   console.log("Length of the array is " + arrayItem);
 });
 
@@ -36,7 +36,7 @@ getLength(items, arrayItem => {
 function last(arr, cb) {
   cb(arr[arr.length - 1]);
 }
-last(items, arrayItem => {
+last(items, (arrayItem) => {
   console.log("Last array element is " + arrayItem);
 });
 
@@ -44,7 +44,7 @@ last(items, arrayItem => {
 function sumNums(x, y, cb) {
   cb(x + y);
 }
-sumNums(2, 5, arrayItem => {
+sumNums(2, 5, (arrayItem) => {
   console.log("Sum of 2+5 is " + arrayItem);
 });
 
@@ -52,7 +52,7 @@ sumNums(2, 5, arrayItem => {
 function multiplyNums(x, y, cb) {
   cb(x * y);
 }
-multiplyNums(2, 5, arrayItem => {
+multiplyNums(2, 5, (arrayItem) => {
   console.log("Multiplying 2*5 is " + arrayItem);
 });
 
@@ -61,7 +61,7 @@ multiplyNums(2, 5, arrayItem => {
 function contains(item, list, cb) {
   cb(list.includes(item));
 }
-contains("Pencil", items, arrayItem => {
+contains("Pencil", items, (arrayItem) => {
   console.log("Is 'Pencil' inside items? " + arrayItem);
 });
 
@@ -78,7 +78,7 @@ const duplicateArray = [
   "just",
   "too lazy",
   "tbh",
-  "."
+  ".",
 ];
 
 function removeDuplicates(array, cb) {
@@ -89,4 +89,4 @@ function removeDuplicates(array, cb) {
   return cb(newArr);
 }
 
-removeDuplicates(duplicateArray, array => console.log(array));
+removeDuplicates(duplicateArray, (array) => console.log(array));

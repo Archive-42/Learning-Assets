@@ -5,22 +5,22 @@ import axios from "axios";
 const put = (id, movie) => {
   axios
     .put(`http://localhost:5000/api/movies/${id}`, movie)
-    .then(response => {
+    .then((response) => {
       alert("Successfully changed");
       console.log("successful put", response);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     });
 };
 
-const UpdateMovie = props => {
+const UpdateMovie = (props) => {
   console.log("PROPS EDIT", props);
   const id = props.match.params.id;
   return (
     <div>
       <form
-        onSubmit={e => {
+        onSubmit={(e) => {
           e.preventDefault();
 
           let newMovie = {
@@ -28,7 +28,7 @@ const UpdateMovie = props => {
             title: document.getElementById("title").value,
             director: document.getElementById("director").value,
             metascore: document.getElementById("score").value,
-            stars: document.getElementById("stars").value.split(",")
+            stars: document.getElementById("stars").value.split(","),
           };
           console.log("new movie", newMovie);
           put(id, newMovie);

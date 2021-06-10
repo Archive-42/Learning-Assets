@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Movie = props => {
+const Movie = (props) => {
   const [movie, setMovie] = useState({});
   console.log("props", props);
   let id = props.match.params.id;
@@ -11,10 +11,10 @@ const Movie = props => {
 
     axios
       .get(`http://localhost:5000/api/movies/${id}`)
-      .then(response => {
+      .then((response) => {
         setMovie(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   }, []);

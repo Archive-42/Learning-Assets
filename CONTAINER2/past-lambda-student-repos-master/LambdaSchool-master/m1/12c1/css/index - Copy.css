@@ -3,7 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -13,7 +93,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* HTML5 display-role reset for older browsers */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -21,16 +111,21 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 
@@ -46,9 +141,9 @@ table {
 }
 
 .gradientHeader {
-  background-image: linear-gradient(to bottom right, #002244, #69BE28);
-  font-family: 'Caveat', cursive;
-  color: #A5ACAF;
+  background-image: linear-gradient(to bottom right, #002244, #69be28);
+  font-family: "Caveat", cursive;
+  color: #a5acaf;
   width: 100%;
   display: flex;
   overflow-y: hidden;
@@ -139,7 +234,7 @@ section {
 }
 
 .content {
-  background-color: #A5ACAF;
+  background-color: #a5acaf;
   color: #002244;
 }
 
@@ -154,7 +249,7 @@ section {
 }
 
 .contact a {
-  color: #A5ACAF;
+  color: #a5acaf;
   text-decoration: none;
   font-weight: bold;
 }
@@ -182,21 +277,21 @@ a:hover {
 }
 
 p {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah", cursive;
   margin: 2%;
   line-height: 23px;
 }
 
 li {
   line-height: 23px;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah", cursive;
 }
 
 .intro {
   display: flex;
   margin-right: 2%;
   width: 45%;
-  background-color: #A5ACAF;
+  background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
   justify-content: space-between;
@@ -204,7 +299,7 @@ li {
 
 .skills {
   width: 45%;
-  background-color: #A5ACAF;
+  background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
   justify-content: space-between;
@@ -214,7 +309,7 @@ li {
   width: 45%;
   margin-right: 2%;
   flex-direction: column;
-  background-color: #A5ACAF;
+  background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
   justify-content: space-between;
@@ -222,7 +317,7 @@ li {
 
 .education {
   width: 45%;
-  background-color: #A5ACAF;
+  background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
   margin-bottom: 2%;
@@ -233,7 +328,7 @@ li {
   width: 100%;
   order: 3;
   flex-wrap: wrap;
-  background-color: #A5ACAF;
+  background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
   justify-content: space-between;
@@ -241,7 +336,7 @@ li {
 
 .portfolio {
   display: flex;
-  color: #A5ACAF;
+  color: #a5acaf;
   margin: 0;
   padding-top: 2%;
   padding-bottom: 2%;
@@ -288,7 +383,7 @@ li {
   top: -6px;
   left: -8px;
   display: block;
-  content: '';
+  content: "";
   transform: rotate(-35deg);
 }
 
@@ -303,7 +398,7 @@ li {
   border-bottom: 9px solid #002244;
   border-left: 12px solid transparent;
   transform: rotate(-70deg);
-  content: '';
+  content: "";
 }
 
 .star-row {
@@ -348,7 +443,7 @@ li {
 
 ul {
   list-style-type: square;
-  margin-left: 5%
+  margin-left: 5%;
 }
 
 button {
@@ -359,7 +454,7 @@ button {
   padding-bottom: 2%;
   padding-top: 2%;
   border: 2px solid #002244;
-  background-color: #A5ACAF;
+  background-color: #a5acaf;
   margin: 0 auto;
   margin-bottom: 2%;
   margin-top: 2%;
@@ -451,6 +546,6 @@ span {
   }
   ul {
     list-style-type: square;
-    margin-left: 8%
+    margin-left: 8%;
   }
 }

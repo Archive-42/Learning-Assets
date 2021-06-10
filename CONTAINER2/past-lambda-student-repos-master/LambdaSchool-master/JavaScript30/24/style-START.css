@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   background: #eeeeee;
-  font-family: 'helvetica neue';
+  font-family: "helvetica neue";
   font-size: 20px;
   font-weight: 200;
 }
@@ -10,7 +10,9 @@ body {
   margin: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -78,7 +80,7 @@ li.logo {
   max-width: 0;
   overflow: hidden;
   background: white;
-  transition: all .5s;
+  transition: all 0.5s;
   font-weight: 600;
   font-size: 30px;
 }

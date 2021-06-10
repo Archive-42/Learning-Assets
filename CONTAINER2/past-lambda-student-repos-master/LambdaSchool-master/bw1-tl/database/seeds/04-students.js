@@ -1,11 +1,11 @@
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   return knex("student")
     .del()
-    .then(function() {
+    .then(function () {
       return knex("student").insert([
         {
-          user_id: 1
-        }
+          user_id: 1,
+        },
       ]);
     });
 };

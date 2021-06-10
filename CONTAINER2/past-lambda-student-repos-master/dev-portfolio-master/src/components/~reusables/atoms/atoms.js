@@ -1,27 +1,26 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link as L } from 'react-router-dom';
-import { 
-  small_space, 
+import React from "react";
+import styled from "styled-components";
+import { Link as L } from "react-router-dom";
+import {
+  small_space,
   normal_space,
   medium_space,
-  large_space 
-} from '../variables/spacing';
-import { 
-  base_font_size, 
-  small_font_size, 
+  large_space,
+} from "../variables/spacing";
+import {
+  base_font_size,
+  small_font_size,
   h1_font_size,
   h2_font_size,
   h3_font_size,
-  h4_font_size 
-} from '../variables/font-sizes';
-import { 
+  h4_font_size,
+} from "../variables/font-sizes";
+import {
   white,
   theme_dark,
   theme_primary,
-  theme_secondary
-} from '../variables/colors';
-
+  theme_secondary,
+} from "../variables/colors";
 
 //====== Buttons ======//
 export const Button = styled.button`
@@ -36,14 +35,15 @@ export const Button = styled.button`
   border-radius: 2px;
   text-decoration: none;
   cursor: pointer;
-  
+
   &:active {
-    opacity: .8;
+    opacity: 0.8;
   }
 
-  ${props => (props.fullWidth ? `width: 100%;` : null)}
-  ${props => (props.noMargin ? `margin: 0;` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+  ${(props) => (props.fullWidth ? `width: 100%;` : null)}
+  ${(props) => (props.noMargin ? `margin: 0;` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
 `;
 
 export const ButtonPrimary = styled(Button)`
@@ -51,9 +51,10 @@ export const ButtonPrimary = styled(Button)`
   color: ${theme_dark};
   border: unset;
 
-  ${props => (props.fullWidth ? `width: 100%;` : null)}
-  ${props => (props.noMargin ? `margin: 0;` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+  ${(props) => (props.fullWidth ? `width: 100%;` : null)}
+  ${(props) => (props.noMargin ? `margin: 0;` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
 `;
 
 export const TextButton = styled(Button)`
@@ -62,7 +63,7 @@ export const TextButton = styled(Button)`
   padding: ${normal_space};
 
   &:active {
-    opacity: .8;
+    opacity: 0.8;
     box-shadow: unset;
   }
 `;
@@ -79,47 +80,53 @@ export const Card = styled.div`
   border-radius: 2px;
   overflow: hidden;
 
-  ${props => (props.row ? `flex-direction: row;` : null)}
-  ${props => (props.column ? `flex-direction: column;` : null)}
-  ${
-    props => (
-      props.vCenter && props.column 
+  ${(props) => (props.row ? `flex-direction: row;` : null)}
+  ${(props) => (props.column ? `flex-direction: column;` : null)}
+  ${(props) =>
+    props.vCenter && props.column
       ? `justify-content: center;`
       : props.vCenter
-        ? `align-items: center;`
-      : null
-    )
-  }
-  ${
-    props => (
-      props.hCenter && props.column
+      ? `align-items: center;`
+      : null}
+  ${(props) =>
+    props.hCenter && props.column
       ? `align-items: center;`
       : props.hCenter
-        ? `justify-content: center;`
-      : null
-    )
-  }
-  ${props => (props.noPadding ? `padding: 0;` : null)}
-  ${props => (props.padding && Array.isArray(props.padding) ? `padding: ${props.padding.join(' ')};` : null)}
-  ${props => (props.padding && Array.isArray(props.padding) === false ? `padding: ${props.padding};` : null)}
-  ${props => (props.fullWidth ? `width: 100%;` : null)}
-  ${props => (props.width ? `width: ${props.width};` : null)}
-  ${props => (props.maxWidth ? `max-width: ${props.maxWidth};` : null)}
-  ${props => (props.margin ? `margin: ${props.margin};` : null)}
+      ? `justify-content: center;`
+      : null}
+  ${(props) => (props.noPadding ? `padding: 0;` : null)}
+  ${(props) =>
+    props.padding && Array.isArray(props.padding)
+      ? `padding: ${props.padding.join(" ")};`
+      : null}
+  ${(props) =>
+    props.padding && Array.isArray(props.padding) === false
+      ? `padding: ${props.padding};`
+      : null}
+  ${(props) => (props.fullWidth ? `width: 100%;` : null)}
+  ${(props) => (props.width ? `width: ${props.width};` : null)}
+  ${(props) => (props.maxWidth ? `max-width: ${props.maxWidth};` : null)}
+  ${(props) => (props.margin ? `margin: ${props.margin};` : null)}
 `;
 
 //====== Container ======//
 export const Container = styled.div`
   display: flex;
 
-  ${props => (props.vCenter ? `justify-content: center;` : null)}
-  ${props => (props.column ? `flex-direction: column;` : null)}
-  ${props => (props.hCenter ? `align-items: center;` : null)}
-  ${props => (props.padding && Array.isArray(props.padding) ? `padding: ${props.padding.join(' ')};` : null)}
-  ${props => (props.padding && Array.isArray(props.padding) === false ? `padding: ${props.padding};` : null)}
-  ${props => (props.fullWidth ? `width: 100%;` : null)}
-  ${props => (props.width ? `width: ${props.width};` : null)}
-  ${props => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
+  ${(props) => (props.vCenter ? `justify-content: center;` : null)}
+  ${(props) => (props.column ? `flex-direction: column;` : null)}
+  ${(props) => (props.hCenter ? `align-items: center;` : null)}
+  ${(props) =>
+    props.padding && Array.isArray(props.padding)
+      ? `padding: ${props.padding.join(" ")};`
+      : null}
+  ${(props) =>
+    props.padding && Array.isArray(props.padding) === false
+      ? `padding: ${props.padding};`
+      : null}
+  ${(props) => (props.fullWidth ? `width: 100%;` : null)}
+  ${(props) => (props.width ? `width: ${props.width};` : null)}
+  ${(props) => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
 `;
 
 //====== Section ======//
@@ -127,15 +134,22 @@ export const Section = styled.section`
   display: flex;
   margin-bottom: ${medium_space};
 
-  ${props => (props.vCenter ? `justify-content: center;` : null)}
-  ${props => (props.column ? `flex-direction: column;` : null)}
-  ${props => (props.hCenter ? `align-items: center;` : null)}
-  ${props => (props.padding && Array.isArray(props.padding) ? `padding: ${props.padding.join(' ')};` : null)}
-  ${props => (props.padding && Array.isArray(props.padding) === false ? `padding: ${props.padding};` : null)}
-  ${props => (props.fullWidth ? `width: 100%;` : null)}
-  ${props => (props.width ? `width: ${props.width};` : null)}
-  ${props => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+  ${(props) => (props.vCenter ? `justify-content: center;` : null)}
+  ${(props) => (props.column ? `flex-direction: column;` : null)}
+  ${(props) => (props.hCenter ? `align-items: center;` : null)}
+  ${(props) =>
+    props.padding && Array.isArray(props.padding)
+      ? `padding: ${props.padding.join(" ")};`
+      : null}
+  ${(props) =>
+    props.padding && Array.isArray(props.padding) === false
+      ? `padding: ${props.padding};`
+      : null}
+  ${(props) => (props.fullWidth ? `width: 100%;` : null)}
+  ${(props) => (props.width ? `width: ${props.width};` : null)}
+  ${(props) => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
 `;
 
 //====== Inputs ======//
@@ -146,19 +160,20 @@ export const Input = styled.input`
   margin-bottom: ${normal_space};
   font-size: ${base_font_size};
   font-weight: 600;
-  border-bottom: 2px solid rgba(40, 51, 63, .4);
+  border-bottom: 2px solid rgba(40, 51, 63, 0.4);
   background-color: unset;
   outline: none;
   transition: all 200ms ease-in-out;
-    &::placeholder {
-      color: rgba(40, 51,63, .4);
-      opacity: 1;
-    }
+  &::placeholder {
+    color: rgba(40, 51, 63, 0.4);
+    opacity: 1;
+  }
 
-    &:focus, &:checked {
-      border: 2px solid ${theme_secondary};
-      box-shadow: 0 0 6px 0 rgba(19,82,221,0.37);
-    }
+  &:focus,
+  &:checked {
+    border: 2px solid ${theme_secondary};
+    box-shadow: 0 0 6px 0 rgba(19, 82, 221, 0.37);
+  }
 `;
 
 //====== Text ======//
@@ -167,23 +182,25 @@ export const Text = styled.p`
   line-height: 2.5rem;
   margin-bottom: ${small_space};
 
-  ${props => (props.light ? `color: ${white};` : null)}
-  ${props => (props.noMargin ? `margin: 0;` : null)}
-  ${props => (props.underline ? `text-decoration: underline;` : null)}
-  ${props => (props.color ? `color: ${props.color};` : null)}
-  ${props => (props.hCenter ? `text-align: center;` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+  ${(props) => (props.light ? `color: ${white};` : null)}
+  ${(props) => (props.noMargin ? `margin: 0;` : null)}
+  ${(props) => (props.underline ? `text-decoration: underline;` : null)}
+  ${(props) => (props.color ? `color: ${props.color};` : null)}
+  ${(props) => (props.hCenter ? `text-align: center;` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
 `;
 
 export const SmallText = styled(Text)`
   font-size: ${small_font_size};
   margin-bottom: ${normal_space};
-  
-  ${props => (props.light ? `color: ${white};` : null)}
-  ${props => (props.noMargin ? `margin: 0;` : null)}
-  ${props => (props.color ? `color: ${props.color};` : null)}
-  ${props => (props.hCenter ? `text-align: center;` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+
+  ${(props) => (props.light ? `color: ${white};` : null)}
+  ${(props) => (props.noMargin ? `margin: 0;` : null)}
+  ${(props) => (props.color ? `color: ${props.color};` : null)}
+  ${(props) => (props.hCenter ? `text-align: center;` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
 `;
 
 export const HeroText = styled.h1`
@@ -192,9 +209,10 @@ export const HeroText = styled.h1`
   color: ${theme_primary};
   text-transform: uppercase;
 
-  ${props => (props.noMargin ? `margin: 0;` : null)}
-  ${props => (props.hCenter ? `text-align: center;` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+  ${(props) => (props.noMargin ? `margin: 0;` : null)}
+  ${(props) => (props.hCenter ? `text-align: center;` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
 `;
 
 export const HeadingText = styled.h3`
@@ -204,11 +222,13 @@ export const HeadingText = styled.h3`
   color: ${theme_primary};
   text-transform: uppercase;
 
-  ${props => (props.noMargin ? `margin: 0;` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
-  ${props => (props.marginTop ? `margin-top: ${props.marginTop};` : null)}
-  ${props => (props.hCenter ? `text-align: center;` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+  ${(props) => (props.noMargin ? `margin: 0;` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
+  ${(props) => (props.marginTop ? `margin-top: ${props.marginTop};` : null)}
+  ${(props) => (props.hCenter ? `text-align: center;` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
 `;
 
 export const SubheadingText = styled.h4`
@@ -217,9 +237,10 @@ export const SubheadingText = styled.h4`
   color: ${theme_secondary};
   text-transform: uppercase;
 
-  ${props => (props.noMargin ? `margin: 0;` : null)}
-  ${props => (props.hCenter ? `text-align: center;` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+  ${(props) => (props.noMargin ? `margin: 0;` : null)}
+  ${(props) => (props.hCenter ? `text-align: center;` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
 `;
 
 export const H3 = styled.h3`
@@ -227,29 +248,30 @@ export const H3 = styled.h3`
   margin-bottom: ${normal_space};
   text-transform: uppercase;
 
-  ${props => (props.light ? `color: ${white};` : null)}
-  ${props => (props.bold ? `font-weight: bold;` : null)}
-  ${props => (props.noMargin ? `margin: 0;` : null)}
-  ${props => (props.color ? `color: ${props.color};` : null)}
-  ${props => (props.hCenter ? `text-align: center;` : null)}
-  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+  ${(props) => (props.light ? `color: ${white};` : null)}
+  ${(props) => (props.bold ? `font-weight: bold;` : null)}
+  ${(props) => (props.noMargin ? `margin: 0;` : null)}
+  ${(props) => (props.color ? `color: ${props.color};` : null)}
+  ${(props) => (props.hCenter ? `text-align: center;` : null)}
+  ${(props) =>
+    props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null}
 `;
 
-export const Link = styled(({ fullWidth, ...rest}) => <L {...rest}/>)`
+export const Link = styled(({ fullWidth, ...rest }) => <L {...rest} />)`
   text-decoration: none;
   color: unset;
   display: inline-block;
 
-  ${props => (props.fullWidth ? `width: 100%;` : null)}
+  ${(props) => (props.fullWidth ? `width: 100%;` : null)}
 `;
 
 export const A = styled.a`
   color: ${theme_secondary};
   font-size: ${base_font_size};
 
-  ${props => (props.noUnderline ? `text-decoration: none;` : null)}
-  ${props => (props.hCenter ? `text-align: center;` : null)}
-  ${props => (props.fullWidth ? `width: 100%;` : null)}
+  ${(props) => (props.noUnderline ? `text-decoration: none;` : null)}
+  ${(props) => (props.hCenter ? `text-align: center;` : null)}
+  ${(props) => (props.fullWidth ? `width: 100%;` : null)}
 `;
 
 export const APrimary = styled(A)`
@@ -264,10 +286,10 @@ export const View = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  ${props => (props.vCenter ? `justify-content: center;` : null)}
-  ${props => (props.hCenter ? `align-items: center;` : null)}
-  ${props => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
-  ${props => (props.padding ? `padding: ${props.padding};` : null)}
+  ${(props) => (props.vCenter ? `justify-content: center;` : null)}
+  ${(props) => (props.hCenter ? `align-items: center;` : null)}
+  ${(props) => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
+  ${(props) => (props.padding ? `padding: ${props.padding};` : null)}
 `;
 
 //====== Img ======//
@@ -288,29 +310,26 @@ export const Figure = styled.figure`
   overflow: hidden;
   margin-bottom: ${small_space};
 
-  ${props => (props.width ? `width: ${props.width};` : null)}
-  ${props => (props.height ? `height: ${props.height};` : null)}
-  ${props => (props.fullWidth ? `width: 100%;` : null)}
-  ${props => (props.noBorder ? `border: unset;` : null)}
+  ${(props) => (props.width ? `width: ${props.width};` : null)}
+  ${(props) => (props.height ? `height: ${props.height};` : null)}
+  ${(props) => (props.fullWidth ? `width: 100%;` : null)}
+  ${(props) => (props.noBorder ? `border: unset;` : null)}
 `;
 
 export const Figcaption = styled.figcaption`
   font-size: ${base_font_size};
   display: flex;
 
-  
-  ${props => (
+  ${(props) =>
     props.vCenter && props.column
       ? `justify-content: center;`
       : props.vCenter
-        ? `align-items: center;`
-        : null
-  )}
-  ${props => (
+      ? `align-items: center;`
+      : null}
+  ${(props) =>
     props.hCenter && props.column
       ? `align-items: center;`
       : props.hCenter
-        ? `justify-content: center;`
-        : null
-  )}
+      ? `justify-content: center;`
+      : null}
 `;

@@ -7,7 +7,7 @@ module.exports = {
   findById,
   insert,
   update,
-  remove
+  remove,
 };
 
 function find() {
@@ -22,17 +22,13 @@ function findById(id) {
 function insert(post) {
   return db("accounts")
     .insert(post)
-    .then(ids => ({ id: ids[0] }));
+    .then((ids) => ({ id: ids[0] }));
 }
 
 function update(id, post) {
-  return db("accounts")
-    .where("id", Number(id))
-    .update(post);
+  return db("accounts").where("id", Number(id)).update(post);
 }
 
 function remove(id) {
-  return db("accounts")
-    .where("id", Number(id))
-    .del();
+  return db("accounts").where("id", Number(id)).del();
 }

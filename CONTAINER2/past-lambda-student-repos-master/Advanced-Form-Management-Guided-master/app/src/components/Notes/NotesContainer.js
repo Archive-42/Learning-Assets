@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import NoteForm from './NoteForm';
-import NotesList from './NotesList';
+import NoteForm from "./NoteForm";
+import NotesList from "./NotesList";
 
 export default function Notes() {
   return (

@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { getFriends, removeFriend } from '../actions';
-import Friend from './Friend';
-import './FriendsList.css';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { getFriends, removeFriend } from "../actions";
+import Friend from "./Friend";
+import "./FriendsList.css";
 
 class FriendsList extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      hoverBtn: false
-    }
+      hoverBtn: false,
+    };
   }
   componentDidMount() {
     this.props.getFriends();
@@ -19,10 +19,10 @@ class FriendsList extends Component {
     this.props.removeFriend(index);
   }
   handleMouseEnter() {
-    this.setState({ hoverBtn: true })
+    this.setState({ hoverBtn: true });
   }
   handleMouseOut() {
-    this.setState({ hoverBtn: false })
+    this.setState({ hoverBtn: false });
   }
   render() {
     const { friends } = this.props;
@@ -36,15 +36,17 @@ class FriendsList extends Component {
         <div className="friends-list">
           <ul>
             {friends.map((friend, i) => {
-              return <Friend 
-                handleClick={this.handleClick.bind(this)}
-                handleMouseEnter={this.handleMouseEnter.bind(this)}
-                handleMouseOut={this.handleMouseOut.bind(this)}
-                state={this.state}
-                key={i}
-                index={i}
-                {...friend}
-              />;
+              return (
+                <Friend
+                  handleClick={this.handleClick.bind(this)}
+                  handleMouseEnter={this.handleMouseEnter.bind(this)}
+                  handleMouseOut={this.handleMouseOut.bind(this)}
+                  state={this.state}
+                  key={i}
+                  index={i}
+                  {...friend}
+                />
+              );
             })}
           </ul>
         </div>
@@ -53,12 +55,12 @@ class FriendsList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  friends: state.friends
+const mapStateToProps = (state) => ({
+  friends: state.friends,
 });
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ getFriends, removeFriend }, dispatch); 
+  return bindActionCreators({ getFriends, removeFriend }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FriendsList);

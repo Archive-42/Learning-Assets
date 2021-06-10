@@ -16,7 +16,7 @@
     "url": "https://github.com/LambdaSchool/webapi-iii-guided-solution/issues"
   },
   "homepage": "https://github.com/LambdaSchool/webapi-iii-guided-solution#readme",
- "devDependencies": {
+  "devDependencies": {
     "nodemon": "^2.0.2"
   },
   "dependencies": {

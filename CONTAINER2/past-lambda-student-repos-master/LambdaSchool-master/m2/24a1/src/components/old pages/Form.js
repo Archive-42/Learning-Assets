@@ -14,9 +14,9 @@ const Button = styled.button`
   padding: 0.25em 1em;
 `
 */
-const Form = {}
+const Form = {};
 function loadForm() {
-    /*
+  /*
     axios
         .get("http://localhost:3000/data")
         .then(res => {
@@ -35,7 +35,7 @@ function loadForm() {
         });  
         
         */
-        }
+}
 loadForm();
 
 export default Form;

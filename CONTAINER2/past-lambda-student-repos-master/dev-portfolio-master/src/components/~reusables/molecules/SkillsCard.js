@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Card } from '../atoms/atoms';
-import { small_space, normal_space, medium_space } from '../variables/spacing';
+import styled from "styled-components";
+import { Card } from "../atoms/atoms";
+import { small_space, normal_space, medium_space } from "../variables/spacing";
 
 export const SkillsCard = styled(Card)`
   position: relative;

@@ -7,18 +7,18 @@ import { Route } from "react-router-dom";
 const App = () => {
   const [savedList, setSavedList] = useState([]);
   const [urlID, setUrlID] = useState(0);
-  const addToSavedList = movie => {
+  const addToSavedList = (movie) => {
     setSavedList([...savedList, movie]);
   };
 
   return (
     <div>
       <SavedList list={savedList} />
-      <Route exact path="/" render={props => <MovieList {...props} />} />
+      <Route exact path="/" render={(props) => <MovieList {...props} />} />
       <Route
         match
         path="/movies/:id"
-        render={props => (
+        render={(props) => (
           <Movie
             {...props}
             setUrlID={setUrlID}

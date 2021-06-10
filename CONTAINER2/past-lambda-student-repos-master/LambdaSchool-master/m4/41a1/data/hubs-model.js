@@ -11,7 +11,7 @@ module.exports = {
   findById,
   add,
   remove,
-  update
+  update,
 };
 
 async function find(query = {}) {
@@ -27,9 +27,7 @@ async function find(query = {}) {
 }
 
 function findById(id) {
-  return db("hubs")
-    .where({ id })
-    .first();
+  return db("hubs").where({ id }).first();
 }
 
 async function add(hub) {
@@ -41,17 +39,13 @@ async function add(hub) {
 async function remove(id) {
   const removed = await findById(id);
 
-  await db("hubs")
-    .where({ id })
-    .del();
+  await db("hubs").where({ id }).del();
 
   return removed;
 }
 
 async function update(id, changes) {
-  await db("hubs")
-    .where({ id })
-    .update(changes);
+  await db("hubs").where({ id }).update(changes);
 
   return findById(id);
 }

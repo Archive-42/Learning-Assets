@@ -1,18 +1,18 @@
 2. [Lecture II: Applied Graph Search](#Lecture-II)
-    <br>a. [Update to DFT](#Update-to-DFT)  
-    <br> b. [Implementing Search](#Implementing-Search)  
-    <br> c. [Breadth-First Search](#Breadth-First-Search)  
-    <br> d. [When do you use BFS over DFS?](#When-do-you-use-BFS-over-DFS?)
-    <br>e. [DFS Iteratively](#DFS-Iteratively)  
-    <br> f. [DFS Recursively](#DFS-Recursively)  
-    <br>f. [Why can we use DFS recursively?](#Why-can-we-do-DFS-recursively-but-not-really-BFS?)  
-    <br> g. [Example Code Challenge](#Let's-try-an-example-problem)
-    <br>
-    <br>
+   <br>a. [Update to DFT](#Update-to-DFT)  
+   <br> b. [Implementing Search](#Implementing-Search)  
+   <br> c. [Breadth-First Search](#Breadth-First-Search)  
+   <br> d. [When do you use BFS over DFS?](#When-do-you-use-BFS-over-DFS?)
+   <br>e. [DFS Iteratively](#DFS-Iteratively)  
+   <br> f. [DFS Recursively](#DFS-Recursively)  
+   <br>f. [Why can we use DFS recursively?](#Why-can-we-do-DFS-recursively-but-not-really-BFS?)  
+   <br> g. [Example Code Challenge](#Let's-try-an-example-problem)
+   <br>
+   <br>
 
-# Lecture II 
+# Lecture II
 
-[CS18 Lecture II Recording: Brady Fukumoto](https://www.youtube.com/watch?v=Yi7V4AzhFPc)  
+[CS18 Lecture II Recording: Brady Fukumoto](https://www.youtube.com/watch?v=Yi7V4AzhFPc)
 
 [CS19 Lecture II Recording: Brian Doyle](https://youtu.be/FmTfZCq4-L0)
 
@@ -45,8 +45,6 @@ print(test_set)
 <br>
 
 This prints `{3, 5, 7}` and then `{1, 3, 5, 7, 9}`, which is ordered but not in the order the integers were added.
-
-
 
 We'll also change `visited.add()` to `visited.append()`.
 
@@ -89,7 +87,6 @@ How can we implement this with our current algorithm?
 
 Instead of storing nodes, we want to store a _path_ to the node.
 
-
 <br>
 
 ```
@@ -108,7 +105,7 @@ Instead of storing nodes, we want to store a _path_ to the node.
     # If that vertex has not been visited...
         # Mark it as visited
         # Then add A PATH TO all of its neighbors to the back of the queue
-        
+
             # Copy the path
             # Append neighbor to the back of the copy
             # Enqueue copy
@@ -187,7 +184,7 @@ q = [ [1, 2, 3], [1, 2, 4] ]
 
 <br>
 
-This will continue to loop until we find our target node. Let's say our target is 4. 
+This will continue to loop until we find our target node. Let's say our target is 4.
 
 <br>
 
@@ -222,7 +219,6 @@ A traversal search visits every single node in an order and does something (make
 In a Breadth-First Search, we're still traversing the nodes but only _looking_ for the target and return the item or the path to that node. We're returning the shortest path each time, whereas Depth First does not return the _shortest_ path.
 
 ![Example Graph](../img/dfs-visit-order-2.png "Example Graph")
-
 
 If we're looking at this graph and try to find the shortest path from 1 to 6, it should return [1, 2, 4, 6].
 
@@ -309,7 +305,7 @@ if vertex not in visited:
     # Then add & PATH TO all of its neighbors to the back of the queue
     for neighbor in self.vertices[vertex]:
 
-        # Copy the path so that the append is being added to the list copy, not to the actual list 
+        # Copy the path so that the append is being added to the list copy, not to the actual list
         path_copy = list(path)
 
         # Append neighbor to the back of the copy
@@ -413,14 +409,12 @@ while s.size() > 0:
 return None
 ```
 
-Remember, we're using path_copy instead of just appending to the path because we'd be mutating the path and lose individual instances to track each _possible_ path from that vertex.
+Remember, we're using path*copy instead of just appending to the path because we'd be mutating the path and lose individual instances to track each \_possible* path from that vertex.
 
-`path` is a reference to our current path. Each loop create a `path_copy` that represents one possible path from the current node.  
+`path` is a reference to our current path. Each loop create a `path_copy` that represents one possible path from the current node.
 
 <br>
 <br>
-
-
 
 ## DFS Recursively
 
@@ -497,8 +491,8 @@ target = 3
 stack = [] # stack
 visited = {} # set
 ```
-<br>
 
+<br>
 
 The first loop goes:
 
@@ -608,17 +602,15 @@ Since 3 is our target, we return the path. It's not the shortest but that's how 
 <br>
 <br>
 
-
 ## Let's try an example problem
 
-_ In CS19, Brian Doyle skips this and moves on to Lecture III's Social Graph problem. In CS18, Brady Fukumoto continues with the following.
+\_ In CS19, Brian Doyle skips this and moves on to Lecture III's Social Graph problem. In CS18, Brady Fukumoto continues with the following.
 
-To follow along with CS19, go to the first 2 sections of Lecture III Notes._
+To follow along with CS19, go to the first 2 sections of Lecture III Notes.\_
 
 Using Leet Code's Word Ladder problem (https://leetcode.com/problems/word-ladder/)
 
 <br>
-
 
 ```
 Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
@@ -628,7 +620,6 @@ Each transformed word must exist in the word list. Note that beginWord is not a 
 ```
 
 <br>
-
 
 We want to change one letter at a time and see if this word exists in the given list.
 
@@ -641,8 +632,7 @@ Let's use POLYA and our steps for solving graph problems.
 <br>
 <br>
 
-
-## How do we recognize that this is a graph problem? 
+## How do we recognize that this is a graph problem?
 
 It doesn't look ike a graph problem off the bat. We need to look for some key words, like "shortest transformation sequence" or are seeking the relationships between things (words are one letter away).
 
@@ -673,13 +663,12 @@ Starting vertex is "hit", goal vertex is "cog".
 
 We should use BFS because the problem is asking us for the _shortest_ path.
 
-"Transformation sequence" should make you think of BFS as well. 
+"Transformation sequence" should make you think of BFS as well.
 
 "Word" is the graph vertex. "One letter change" is the graph edge.
 
 <br>
 <br>
-
 
 ## Build Your Graph
 
@@ -744,7 +733,7 @@ We'll repeat this for each following letter in the word.
 
 <br>
 
-This is also `O(n)` but where n is the word length, not the wordlist we search through. While it's O(26 * n), that's not very long compared to the tens of thousands of a word list.
+This is also `O(n)` but where n is the word length, not the wordlist we search through. While it's O(26 \* n), that's not very long compared to the tens of thousands of a word list.
 
 Understanding how to compare O(n) where n is a different variable helps us decide which method of solving a problem is more efficient.
 
@@ -760,7 +749,7 @@ letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 # Get neighbors function
 def get_neighbors(word):
     # A neighbor is all words in the word list that differ by exactly one letter
-    
+
     # create an empty neighbors list
     neighbors = []
     # turn our word into an array of characters
@@ -784,7 +773,7 @@ def get_neighbors(word):
 
 Now that both functions are written, we can use get_neighbors to run a BFS and efficiently solve this code challenge.
 
-But how would this solution scale if we have a wordList with over 200,000 words? 
+But how would this solution scale if we have a wordList with over 200,000 words?
 
 Testing against a large data set is a good way to see how efficient our solution is.
 

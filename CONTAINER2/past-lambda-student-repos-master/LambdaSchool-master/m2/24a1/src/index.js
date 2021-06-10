@@ -95,4 +95,3 @@ Score 3:
 	-- TODO: If time allows, redo components to streamline headers, include classes, etc
 	-- TODO: If time allows, change background color of hover over ticket or alternating bg colors 
 */
-

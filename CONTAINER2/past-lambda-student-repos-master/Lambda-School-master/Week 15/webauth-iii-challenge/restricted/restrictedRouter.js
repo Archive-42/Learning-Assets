@@ -6,10 +6,10 @@ const RestrictedRouter = express.Router();
 
 RestrictedRouter.get("/info", restricted, (req, res) => {
   db.findSecret()
-    .then(account => {
+    .then((account) => {
       res.status(200).json(account);
     })
-    .catch(error => {
+    .catch((error) => {
       res
         .status(500)
         .json({ error: "The project information could not be retrieved." });

@@ -15,7 +15,7 @@ class Todo extends React.Component {
           onClick={() =>
             this.props.dispatch({
               type: "TOGGLE-COMPLETED",
-              id: this.props.data.id
+              id: this.props.data.id,
             })
           }
         >

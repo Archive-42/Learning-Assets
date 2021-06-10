@@ -1,6 +1,6 @@
 import React from "react";
-import hideLogin from './Hide.js';
-import hideSignup from './Hide.js';
+import hideLogin from "./Hide.js";
+import hideSignup from "./Hide.js";
 
 // hide current page when login showing
 hideLogin();

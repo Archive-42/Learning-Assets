@@ -8,7 +8,7 @@ const Numbers = () => {
 
   return (
     <div className="numbersContainer">
-      {numberState.map(num => (
+      {numberState.map((num) => (
         <NumberButton key={num} num={num} />
       ))}
     </div>

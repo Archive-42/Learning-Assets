@@ -1,17 +1,14 @@
-exports.up = function(knex) {
+exports.up = function (knex) {
   return knex.schema
-    .createTable("users", users => {
+    .createTable("users", (users) => {
       users.increments();
-      users
-        .string("email")
-        .notNullable()
-        .unique();
+      users.string("email").notNullable().unique();
       users.string("password").notNullable();
       users.string("first_name").notNullable();
       users.string("last_name").notNullable();
       users.string("role").notNullable();
     })
-    .createTable("admin", admins => {
+    .createTable("admin", (admins) => {
       admins.increments();
       admins
         .integer("user_id")
@@ -21,7 +18,7 @@ exports.up = function(knex) {
         .onDelete("CASCADE")
         .onUpdate("CASCADE");
     })
-    .createTable("volunteer", vols => {
+    .createTable("volunteer", (vols) => {
       vols.increments();
       vols.string("availability", 512).notNullable();
       vols.string("country").notNullable();
@@ -33,7 +30,7 @@ exports.up = function(knex) {
         .onDelete("CASCADE")
         .onUpdate("CASCADE");
     })
-    .createTable("student", students => {
+    .createTable("student", (students) => {
       students.increments();
       students
         .integer("user_id")
@@ -43,14 +40,11 @@ exports.up = function(knex) {
         .onDelete("CASCADE")
         .onUpdate("CASCADE");
     })
-    .createTable("todos", todos => {
+    .createTable("todos", (todos) => {
       todos.increments();
       todos.string("title", 256).notNullable();
       todos.string("description", 2056).notNullable();
-      todos
-        .boolean("is_completed")
-        .notNullable()
-        .defaultTo(false);
+      todos.boolean("is_completed").notNullable().defaultTo(false);
       todos
         .integer("admin_id")
         .unsigned()
@@ -68,7 +62,7 @@ exports.up = function(knex) {
     });
 };
 
-exports.down = function(knex) {
+exports.down = function (knex) {
   return knex.schema
     .dropTableIfExists("todos")
     .dropTableIfExists("student")

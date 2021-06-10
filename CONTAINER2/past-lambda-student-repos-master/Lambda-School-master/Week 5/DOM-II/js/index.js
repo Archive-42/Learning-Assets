@@ -3,10 +3,10 @@
 // });
 
 const navLinks = document.querySelector(".nav");
-navLinks.addEventListener("mouseover", event => {
+navLinks.addEventListener("mouseover", (event) => {
   if (event.target.tagName === "A") {
     event.target.style.textShadow = "1px 3px 7px white";
-    setTimeout(function() {
+    setTimeout(function () {
       event.target.style.textShadow = "none";
     }, 300);
   }
@@ -14,28 +14,28 @@ navLinks.addEventListener("mouseover", event => {
 });
 
 var logo = document.querySelector("#logo");
-logo.addEventListener("click", e => {
+logo.addEventListener("click", (e) => {
   logo.setAttribute("href", "index.html");
 });
 
 let background = document.querySelector(".home");
-background.addEventListener("dblclick", e => {
+background.addEventListener("dblclick", (e) => {
   background.style.background = "yellow";
 });
 
 let images = document.querySelectorAll(".img-content");
 
-window.addEventListener("keydown", e => {
+window.addEventListener("keydown", (e) => {
   if (e.keyCode === 65) {
-    images.forEach(img => {
+    images.forEach((img) => {
       img.style.transform = "rotate(180deg)";
     });
   }
 });
 
-window.addEventListener("keyup", e => {
+window.addEventListener("keyup", (e) => {
   if (e.keyCode !== 65) {
-    images.forEach(img => {
+    images.forEach((img) => {
       img.style.transform = "scale(0)";
     });
   }
@@ -48,10 +48,10 @@ imgBus.addEventListener("select", () => {
 });
 
 const signUpBtn2 = document.querySelector("#btn-2");
-signUpBtn2.addEventListener("mouseenter", event => {
+signUpBtn2.addEventListener("mouseenter", (event) => {
   event.target.style.transform = "scale(2)";
 });
 
-signUpBtn2.addEventListener("mouseleave", event => {
+signUpBtn2.addEventListener("mouseleave", (event) => {
   event.target.style.transform = "scale(1)";
 });

@@ -22,7 +22,7 @@ const characters = [
   "Viktor Krum ",
   "Bellatrix Lestrange",
   "Narcissa Malfoy",
-  "Draco Malfoy"
+  "Draco Malfoy",
 ];
 function App() {
   // searchTerm will save the data from the search input on every occurance of the change event.
@@ -31,13 +31,13 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    const results = characters.filter(character =>
+    const results = characters.filter((character) =>
       character.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(results);
   }, [searchTerm]);
   // The handleChange method takes the event object as the arguement and sets the current value of the form to the searchTerm state using setSearchTerm
-  const handleChange = event => {
+  const handleChange = (event) => {
     // console.log(event.target.value)
     setSearchTerm(event.target.value);
   };
@@ -60,7 +60,7 @@ function App() {
       </form>
       <div className="character-list">
         <ul>
-          {searchResults.map(character => (
+          {searchResults.map((character) => (
             <li key={character}>{character}</li>
           ))}
         </ul>

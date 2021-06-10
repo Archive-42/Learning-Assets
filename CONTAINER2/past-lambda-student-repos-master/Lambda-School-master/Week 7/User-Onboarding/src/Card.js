@@ -1,5 +1,5 @@
 import React from "react";
-const Card = props => {
+const Card = (props) => {
   if (
     props.user.name === "" ||
     props.user.email === "" ||
