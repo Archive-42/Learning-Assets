@@ -1,9 +1,9 @@
 Router.configure({
-  layoutTemplate: 'layout'
+  layoutTemplate: "layout",
 });
-Router.route('/', function () {
-  this.render('home');
+Router.route("/", function () {
+  this.render("home");
 });
-Router.route('/news', function () {
-  this.render('news');
+Router.route("/news", function () {
+  this.render("news");
 });

@@ -1,153 +1,226 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- hello --><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Algorithm Wiki | Interactive algorithms.</title>
-<meta name="generator" content="Jekyll v3.8.3">
-<meta property="og:title" content="Algorithm Wiki">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="Interactive algorithms.">
-<meta property="og:description" content="Interactive algorithms.">
-<link rel="canonical" href="https://thimbleby.gitlab.io/algorithm-wiki-site/">
-<meta property="og:url" content="https://thimbleby.gitlab.io/algorithm-wiki-site/">
-<meta property="og:site_name" content="Algorithm Wiki">
-<script type="application/ld+json">
-{"name":"Algorithm Wiki","description":"Interactive algorithms.","@type":"WebSite","url":"https://thimbleby.gitlab.io/algorithm-wiki-site/","headline":"Algorithm Wiki","@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="css/assets-main.css"><link type="application/atom+xml" rel="alternate" href="https://thimbleby.gitlab.io/algorithm-wiki-site/feed.xml" title="Algorithm Wiki"><script type="text/javascript" src="js/2.7.4-MathJax.js">
-  </script>
-</head>
-<body><header class="site-header" role="banner">
-
-  <div class="wrapper"><a class="site-title" rel="author" href="algorithm-wiki-site.html">Algorithm Wiki</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger">
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewbox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
-            </svg>
-          </span>
-        </label>
-      </nav></div>
-</header><main class="page-content" aria-label="Content">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- hello -->
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+    <title>Algorithm Wiki | Interactive algorithms.</title>
+    <meta name="generator" content="Jekyll v3.8.3" />
+    <meta property="og:title" content="Algorithm Wiki" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Interactive algorithms." />
+    <meta property="og:description" content="Interactive algorithms." />
+    <link
+      rel="canonical"
+      href="https://thimbleby.gitlab.io/algorithm-wiki-site/"
+    />
+    <meta
+      property="og:url"
+      content="https://thimbleby.gitlab.io/algorithm-wiki-site/"
+    />
+    <meta property="og:site_name" content="Algorithm Wiki" />
+    <script type="application/ld+json">
+      {
+        "name": "Algorithm Wiki",
+        "description": "Interactive algorithms.",
+        "@type": "WebSite",
+        "url": "https://thimbleby.gitlab.io/algorithm-wiki-site/",
+        "headline": "Algorithm Wiki",
+        "@context": "http://schema.org"
+      }
+    </script>
+    <!-- End Jekyll SEO tag -->
+    <link rel="stylesheet" href="css/assets-main.css" />
+    <link
+      type="application/atom+xml"
+      rel="alternate"
+      href="https://thimbleby.gitlab.io/algorithm-wiki-site/feed.xml"
+      title="Algorithm Wiki"
+    />
+    <script type="text/javascript" src="js/2.7.4-MathJax.js"></script>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
       <div class="wrapper">
-        <div class="home"><p>This wiki is an experiment in making algorithms interactive on the web. The algorithms on this wiki
-are not just some clever animations but are built on a real <a href="interpreter.html">interpreter</a>,
-and the visualisations are based on the actual Javascript code running. The code is guaranteed to work.</p>
-
-<h1 id="algorithms">Algorithms</h1>
-
-<div style="column-count:2">
-
-  <h2 id="data-structures">Data structures</h2>
-  <ul>
-    <li><a href="linked-list.html">Linked List</a></li>
-    <li><a href="stack.html">Stack</a></li>
-    <li><a href="queue.html">Queue</a></li>
-    <li><a href="hash-table.html">Hash table</a></li>
-  </ul>
-
-  <h2 id="searching">Searching</h2>
-  <ul>
-    <li><a href="linear-search.html">Linear search</a></li>
-    <li><a href="binary-search.html">Binary search</a></li>
-  </ul>
-
-  <h2 id="sorting">Sorting</h2>
-  <h3 id="comparison-sorting">Comparison sorting</h3>
-  <ul>
-    <li><a href="bubble_sort.html">Bubble sort</a></li>
-    <li><a href="cocktail_sort.html">Cocktail sort</a></li>
-    <li><a href="insertion_sort.html">Insertion sort</a></li>
-    <li><a href="selection_sort.html">Selection sort</a></li>
-    <li><a href="shell_sort.html">Shell sort</a></li>
-    <li><a href="quick_sort.html">Quick sort</a></li>
-    <li><a href="merge_sort.html">Merge sort</a></li>
-  </ul>
-
-  <h3 id="other-sorting">Other sorting</h3>
-  <ul>
-    <li><a href="bogosort.html">Bogosort</a></li>
-    <li><a href="bucket_sort.html">Bucket sort</a></li>
-  </ul>
-
-  <h2 id="trees">Trees</h2>
-  <ul>
-    <li><a href="binary_search_tree.html">Binary search tree</a></li>
-    <li><a href="b-tree.html">B-tree</a></li>
-    <li><a href="depth-first_search.html">Depth-first search</a></li>
-    <li><a href="iterative_deepening_depth-first_search.html">Iterative deepening depth-first search</a></li>
-    <li><a href="breadth-first_search.html">Breadth-first search</a></li>
-    <li><a href="lowest_common_ancestor.html">Lowest common ancestor</a></li>
-    <li><a href="minimax_search.html">Minimax search</a></li>
-    <li><a href="minimax_search_with_alpha-beta_pruning.html">Minimax search with alpha-beta pruning</a></li>
-  </ul>
-
-  <h2 id="graphs">Graphs</h2>
-  <ul>
-    <li><a href="Kruskals_algorithm.html">Kruskal&rsquo;s algorithm</a></li>
-    <li><a href="Dijkstras_algorithm.html">Dijkstra&rsquo;s algorithm</a></li>
-  </ul>
-
-  <h2 id="math">Math</h2>
-  <ul>
-    <li><a href="greatest_common_divisor.html">Greatest common divisor</a></li>
-    <li><a href="factorial.html">Factorial</a></li>
-    <li><a href="fibonacci.html">Fibonacci</a></li>
-  </ul>
-
-  <h2 id="other">Other</h2>
-  <ul>
-    <li><a href="n-queens.html">N-Queens</a></li>
-    <li><a href="fisher-yates_shuffle.html">Fisher-Yates shuffle</a></li>
-    <li><a href="binary_to_decimal.html">Binary to decimal</a></li>
-    <li><a href="is_sorted.html">Is sorted</a></li>
-    <li><a href="reversing_an_array.html">Reversing an array</a></li>
-    <li><a href="reversing_a_string.html">Reversing a string</a></li>
-    <li><a href="fowler-noll-vo_hash_function.html">Fowler&ndash;Noll&ndash;Vo hash function</a></li>
-    <li>
-      <p><a href="making_change.html">Making change</a></p>
-    </li>
-    <li><a href="continuation_passing_style.html">Continuation passing style</a></li>
-  </ul>
-
-  <h2 id="contributing">Contributing</h2>
-  <ul>
-    <li><a href="creating_a_vizualization.html">Creating a vizualization</a></li>
-    <li><a href="todo.html">Things todo</a></li>
-    <li><a href="style_guide.html">Style guide</a></li>
-    <li><a href="similar_sites.html">Similar sites</a></li>
-  </ul>
-
-</div>
-</div>
-
+        <a class="site-title" rel="author" href="algorithm-wiki-site.html"
+          >Algorithm Wiki</a
+        >
+        <nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path
+                  d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"
+                ></path>
+              </svg>
+            </span>
+          </label>
+        </nav>
       </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/algorithm-wiki-site/"></data>
+    </header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home">
+          <p>
+            This wiki is an experiment in making algorithms interactive on the
+            web. The algorithms on this wiki are not just some clever animations
+            but are built on a real <a href="interpreter.html">interpreter</a>,
+            and the visualisations are based on the actual Javascript code
+            running. The code is guaranteed to work.
+          </p>
 
-  <div class="wrapper">
+          <h1 id="algorithms">Algorithms</h1>
 
-    <h2 class="footer-heading">Algorithm Wiki</h2>
+          <div style="column-count: 2">
+            <h2 id="data-structures">Data structures</h2>
+            <ul>
+              <li><a href="linked-list.html">Linked List</a></li>
+              <li><a href="stack.html">Stack</a></li>
+              <li><a href="queue.html">Queue</a></li>
+              <li><a href="hash-table.html">Hash table</a></li>
+            </ul>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Algorithm Wiki</li><li><a class="u-email" href="mailto:will@thimbleby.net">will@thimbleby.net</a></li></ul>
+            <h2 id="searching">Searching</h2>
+            <ul>
+              <li><a href="linear-search.html">Linear search</a></li>
+              <li><a href="binary-search.html">Binary search</a></li>
+            </ul>
+
+            <h2 id="sorting">Sorting</h2>
+            <h3 id="comparison-sorting">Comparison sorting</h3>
+            <ul>
+              <li><a href="bubble_sort.html">Bubble sort</a></li>
+              <li><a href="cocktail_sort.html">Cocktail sort</a></li>
+              <li><a href="insertion_sort.html">Insertion sort</a></li>
+              <li><a href="selection_sort.html">Selection sort</a></li>
+              <li><a href="shell_sort.html">Shell sort</a></li>
+              <li><a href="quick_sort.html">Quick sort</a></li>
+              <li><a href="merge_sort.html">Merge sort</a></li>
+            </ul>
+
+            <h3 id="other-sorting">Other sorting</h3>
+            <ul>
+              <li><a href="bogosort.html">Bogosort</a></li>
+              <li><a href="bucket_sort.html">Bucket sort</a></li>
+            </ul>
+
+            <h2 id="trees">Trees</h2>
+            <ul>
+              <li><a href="binary_search_tree.html">Binary search tree</a></li>
+              <li><a href="b-tree.html">B-tree</a></li>
+              <li><a href="depth-first_search.html">Depth-first search</a></li>
+              <li>
+                <a href="iterative_deepening_depth-first_search.html"
+                  >Iterative deepening depth-first search</a
+                >
+              </li>
+              <li>
+                <a href="breadth-first_search.html">Breadth-first search</a>
+              </li>
+              <li>
+                <a href="lowest_common_ancestor.html">Lowest common ancestor</a>
+              </li>
+              <li><a href="minimax_search.html">Minimax search</a></li>
+              <li>
+                <a href="minimax_search_with_alpha-beta_pruning.html"
+                  >Minimax search with alpha-beta pruning</a
+                >
+              </li>
+            </ul>
+
+            <h2 id="graphs">Graphs</h2>
+            <ul>
+              <li>
+                <a href="Kruskals_algorithm.html">Kruskal&rsquo;s algorithm</a>
+              </li>
+              <li>
+                <a href="Dijkstras_algorithm.html"
+                  >Dijkstra&rsquo;s algorithm</a
+                >
+              </li>
+            </ul>
+
+            <h2 id="math">Math</h2>
+            <ul>
+              <li>
+                <a href="greatest_common_divisor.html"
+                  >Greatest common divisor</a
+                >
+              </li>
+              <li><a href="factorial.html">Factorial</a></li>
+              <li><a href="fibonacci.html">Fibonacci</a></li>
+            </ul>
+
+            <h2 id="other">Other</h2>
+            <ul>
+              <li><a href="n-queens.html">N-Queens</a></li>
+              <li>
+                <a href="fisher-yates_shuffle.html">Fisher-Yates shuffle</a>
+              </li>
+              <li><a href="binary_to_decimal.html">Binary to decimal</a></li>
+              <li><a href="is_sorted.html">Is sorted</a></li>
+              <li><a href="reversing_an_array.html">Reversing an array</a></li>
+              <li><a href="reversing_a_string.html">Reversing a string</a></li>
+              <li>
+                <a href="fowler-noll-vo_hash_function.html"
+                  >Fowler&ndash;Noll&ndash;Vo hash function</a
+                >
+              </li>
+              <li>
+                <p><a href="making_change.html">Making change</a></p>
+              </li>
+              <li>
+                <a href="continuation_passing_style.html"
+                  >Continuation passing style</a
+                >
+              </li>
+            </ul>
+
+            <h2 id="contributing">Contributing</h2>
+            <ul>
+              <li>
+                <a href="creating_a_vizualization.html"
+                  >Creating a vizualization</a
+                >
+              </li>
+              <li><a href="todo.html">Things todo</a></li>
+              <li><a href="style_guide.html">Style guide</a></li>
+              <li><a href="similar_sites.html">Similar sites</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </main>
+    <footer class="site-footer h-card">
+      <data class="u-url" href="/algorithm-wiki-site/"></data>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
-</div>
+      <div class="wrapper">
+        <h2 class="footer-heading">Algorithm Wiki</h2>
 
-      <div class="footer-col footer-col-3">
-        <p>Interactive algorithms.</p>
+        <div class="footer-col-wrapper">
+          <div class="footer-col footer-col-1">
+            <ul class="contact-list">
+              <li class="p-name">Algorithm Wiki</li>
+              <li>
+                <a class="u-email" href="mailto:will@thimbleby.net"
+                  >will@thimbleby.net</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-col-2">
+            <ul class="social-media-list"></ul>
+          </div>
+
+          <div class="footer-col footer-col-3">
+            <p>Interactive algorithms.</p>
+          </div>
+        </div>
       </div>
-    </div>
-
-  </div>
-
-</footer></body>
-
+    </footer>
+  </body>
 </html>

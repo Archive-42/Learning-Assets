@@ -4,7 +4,7 @@ module.exports = function (fn, delay, execAsap) {
   return function () {
     // Continue to pass through the function execution context and arguments
     var that = this,
-        args = arguments;
+      args = arguments;
 
     // If there is no timeout variable set, proceed to create a new timeout
     if (!timeout) {

@@ -47,8 +47,8 @@ let count = list.size;
 let index = list.indexOf("foo");
 
 // search for a value
-let result = list.find(value => value.length > 3);
-let foundIndex = list.findIndex(value => value.length > 3);
+let result = list.find((value) => value.length > 3);
+let foundIndex = list.findIndex((value) => value.length > 3);
 
 // convert to an array using iterators
 let array1 = [...list.values()];

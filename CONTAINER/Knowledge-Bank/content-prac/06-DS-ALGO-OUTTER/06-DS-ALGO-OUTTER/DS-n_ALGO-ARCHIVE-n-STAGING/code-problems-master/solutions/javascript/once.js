@@ -6,11 +6,13 @@ module.exports = function (fn, times) {
 
   // Return the function that will be executed.
   return function () {
-    if (!times) { return memo; }
+    if (!times) {
+      return memo;
+    }
 
     // Set memo to the result of the function and decrement the number of
     // executions.
-    memo   = fn.apply(this, arguments);
+    memo = fn.apply(this, arguments);
     times -= 1;
 
     // If there are no more execution times, set the function to `null` so

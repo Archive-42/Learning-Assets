@@ -6,19 +6,18 @@ Is simple website I made as a fun project to help me understand better: algorith
 
 Sections are divided into:
 
-  - Big o cheat sheets
-  - intro
-  - big o notation
-  - data structures
-  - algorithms
+- Big o cheat sheets
+- intro
+- big o notation
+- data structures
+- algorithms
 
 ### Technologies or guidelines
+
 This website uses the following technologies to work properly:
 
-* JS & jQuery for interactivity 
-* jQuery tablesorte unoficial fork http://mottie.github.io/tablesorter/docs/
-* CSS + HTML for structure and styling
-* Responsive Web Design (RWD) to adjust to desktop and smartphones
-* Git for VCS
-
-
+- JS & jQuery for interactivity
+- jQuery tablesorte unoficial fork http://mottie.github.io/tablesorter/docs/
+- CSS + HTML for structure and styling
+- Responsive Web Design (RWD) to adjust to desktop and smartphones
+- Git for VCS

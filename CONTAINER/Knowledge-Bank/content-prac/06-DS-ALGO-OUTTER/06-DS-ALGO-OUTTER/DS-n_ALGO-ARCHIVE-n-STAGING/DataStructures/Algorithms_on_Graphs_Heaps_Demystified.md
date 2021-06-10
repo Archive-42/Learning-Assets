@@ -14,9 +14,9 @@ First, let’s talk discuss what a heap exactly is.
 
 Heaps are graphs that have the following properties:
 
-*   each node has at most two descending nodes (children nodes)
-*   the root node has the smallest or highest value of all the values in the graph
-*   every subtree is itself a heap with the same properties as the overall heap
+- each node has at most two descending nodes (children nodes)
+- the root node has the smallest or highest value of all the values in the graph
+- every subtree is itself a heap with the same properties as the overall heap
 
 In the following example, the root node has a value a 3, which is the smallest of all the values in the graph. If we take a look at each subtree, we’ll notice a similar pattern:
 
@@ -42,8 +42,8 @@ If you haven’t noticed by now, we can use a simple formula to find the index o
 
 Assuming index-based 0:
 
-*   To find the left child, we use: **_2 \* parent.index + 1_**
-*   To find the right child, we use: **_2 \* parent.index + 2_**
+- To find the left child, we use: **_2 \* parent.index + 1_**
+- To find the right child, we use: **_2 \* parent.index + 2_**
 
 From the above example:
 
@@ -51,15 +51,14 @@ From the above example:
 
 And what’s great about these equations is that we can use them to find the parents of a given node by simply doing the inverse:
 
-*   Find left child’s parent: **_Math.floor(child.index / 2)_**
-*   Find right child’s parent: **_Math.floor(child.index / 2) -1_**
+- Find left child’s parent: **_Math.floor(child.index / 2)_**
+- Find right child’s parent: **_Math.floor(child.index / 2) -1_**
 
 > **_Note:_** Math.floor() is just a function that drops the decimals of a fraction to give us a whole number
 
 Great! Now that we know what heaps are and how to find children and parents of each node, we can use these ideas to implement the important functions that are used to maintain a heap’s properties whenever a new node is inserted or extracted.
 
-Insertion and Sift Up
----------------------
+## Insertion and Sift Up
 
 What’s great about an array list is that we can add new elements to its end at **O(1)** time. Since we use them to represent heaps, we can use this nice property to add new nodes easily.
 
@@ -105,8 +104,7 @@ So the algorithm for adding a node to a heap goes as follows:
 
 Here’s the code for **insertNode** in JavaScript:
 
-Analysis of Insert and Sift Up
-------------------------------
+## Analysis of Insert and Sift Up
 
 Since we’re using an array list to represent a heap, adding a new element to the end of it takes **O(1)** time. However, we need to move it up to its correct place if we wish to maintain the heap.
 
@@ -114,8 +112,7 @@ Remember that the node that’s being sifted up is swapped with its parent. So i
 
 Therefore, inserting and sifting up a node takes **O(log n)** runtime.
 
-Extraction and Sift Down
-------------------------
+## Extraction and Sift Down
 
 The reason why heaps are so great is that they allow us to extract the minimum (or maximum) value of a set of numbers really quickly.
 
@@ -166,8 +163,7 @@ Here’s the code for **siftDown**:
 
 Here’s the code for **extractMin**:
 
-Analysis of Extract and Sift Down:
-----------------------------------
+## Analysis of Extract and Sift Down:
 
 So extracting the root really boils down to swapping the root with the last node, moving the new root down until we have a new heap and then return the old root.
 
@@ -177,12 +173,11 @@ Since **siftDown** is really just **siftUp** but going in the opposite direction
 
 The benefit of using heaps is that extracting the minimum (or maximum) value of a list of numbers is relatively faster than traversing the whole list or sorting it. We found that we can do it in **O(log n)** runtime as opposed to **O(n)** or **O(n \* log n)** and this difference will save us a lot of time in the long run, especially if we’re asked to repeat this process multiple times in an algorithm.
 
-*   Heaps come in two types: min-heaps or max-heaps
-*   Heaps are used to find the minimum (or maximum) value of a list of numbers without needing to sort or traverse the list.
-*   Heaps are commonly represented as array lists
-*   The indices in the array list allows us to find the parents or children of a particular node
-*   Each time a new node is inserted, it must be sifted up to the correct position in order to maintain the heap property. This is done in **O(log n)** time.
-*   Each time a root is extracted, it must be swapped with the last node, the new root must be sifted down to the correct position to maintain the heap property, and then the former root can be removed from the end of the list. This can be done in **O(log n)** time.
-
+- Heaps come in two types: min-heaps or max-heaps
+- Heaps are used to find the minimum (or maximum) value of a list of numbers without needing to sort or traverse the list.
+- Heaps are commonly represented as array lists
+- The indices in the array list allows us to find the parents or children of a particular node
+- Each time a new node is inserted, it must be sifted up to the correct position in order to maintain the heap property. This is done in **O(log n)** time.
+- Each time a root is extracted, it must be swapped with the last node, the new root must be sifted down to the correct position to maintain the heap property, and then the former root can be removed from the end of the list. This can be done in **O(log n)** time.
 
 [Source](https://trykv.medium.com/algorithms-on-graphs-the-importance-of-heaps-e3e1385ae534)

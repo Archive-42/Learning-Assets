@@ -1,6 +1,6 @@
 module.exports = function (string) {
-  var output = '',
-      hash   = {};
+  var output = "",
+    hash = {};
 
   for (var i = 0; i < string.length; i++) {
     if (!hash[string[i]]) {

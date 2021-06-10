@@ -59,20 +59,24 @@ module.exports = function (dictionary, start, end) {
   var graph = createGraph(dictionary);
   var shortestRoute;
 
-  (function findRoute (word, route) {
+  (function findRoute(word, route) {
     // If the word doesn't exist in the graph or we have gone to the word
     // before, break early.
-    if (!graph[word] || ~route.indexOf(word)) { return; }
+    if (!graph[word] || ~route.indexOf(word)) {
+      return;
+    }
 
     // If the route is longer than a previous route, stop trying to loop around.
-    if (shortestRoute && route.length >= shortestRoute.length) { return; }
+    if (shortestRoute && route.length >= shortestRoute.length) {
+      return;
+    }
 
     // Push the word into the current route
     route.push(word);
 
     // If the word now matches the final word, set it as the route.
     if (word === end) {
-      return shortestRoute = route;
+      return (shortestRoute = route);
     }
 
     graph[word].forEach(function (connection) {

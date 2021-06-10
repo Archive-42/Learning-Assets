@@ -2,7 +2,8 @@
 // first array. When the number doesn't exist in the hash - you know we have
 // found the missing number
 exports.iterative = function (a, b) {
-  var hash = {}, i;
+  var hash = {},
+    i;
 
   for (i = 0; i < b.length; i++) {
     hash[b[i]] = hash[b[i]] + 1 || 1;

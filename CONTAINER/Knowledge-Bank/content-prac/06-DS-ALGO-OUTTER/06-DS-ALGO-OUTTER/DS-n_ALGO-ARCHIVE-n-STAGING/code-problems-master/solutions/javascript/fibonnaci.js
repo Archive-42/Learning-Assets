@@ -1,12 +1,14 @@
 // Implementing recursive solution
-exports.recursive = function fibonacci (n) {
-  if (n in fibonacci) { return fibonacci[n]; }
+exports.recursive = function fibonacci(n) {
+  if (n in fibonacci) {
+    return fibonacci[n];
+  }
   // Store the fibonacci values on the function itself
-  return fibonacci[n] = (n < 2) ? n : fibonacci(n - 1) + fibonacci(n - 2);
+  return (fibonacci[n] = n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2));
 };
 
 // Implementing iterative solution
-exports.iterative = function fibonacci (n) {
+exports.iterative = function fibonacci(n) {
   var results = [0, 1];
 
   if (n > 2) {
@@ -20,7 +22,13 @@ exports.iterative = function fibonacci (n) {
 
 // Implementing O(logn) matrix solution
 exports.matrix = function (n) {
-  var memo = [0, [[0, 1], [1, 1]]];
+  var memo = [
+    0,
+    [
+      [0, 1],
+      [1, 1],
+    ],
+  ];
 
   var matrixMultiply = function (A, B) {
     var C;
@@ -46,10 +54,16 @@ exports.matrix = function (n) {
     var T;
 
     if (n & 1) {
-      T = [[0, 1], [1, 1]];
+      T = [
+        [0, 1],
+        [1, 1],
+      ];
       n -= 1;
     } else {
-      T = [[1, 0], [0,1 ]];
+      T = [
+        [1, 0],
+        [0, 1],
+      ];
     }
 
     while (n > 0) {
