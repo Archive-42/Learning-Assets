@@ -13,11 +13,11 @@ Si tienes múltiples condiciones que necesitan ser resueltas, puedes encadenar s
 
 ```js
 if (num > 15) {
-  return "Bigger than 15";
+  return 'Bigger than 15';
 } else if (num < 5) {
-  return "Smaller than 5";
+  return 'Smaller than 5';
 } else {
-  return "Between 5 and 15";
+  return 'Between 5 and 15';
 }
 ```
 
@@ -86,14 +86,14 @@ assert(testElseIf(12) === 'Greater than 10');
 ```js
 function testElseIf(val) {
   if (val > 10) {
-    return "Greater than 10";
+    return 'Greater than 10';
   }
 
   if (val < 5) {
-    return "Smaller than 5";
+    return 'Smaller than 5';
   }
 
-  return "Between 5 and 10";
+  return 'Between 5 and 10';
 }
 
 testElseIf(7);
@@ -103,12 +103,12 @@ testElseIf(7);
 
 ```js
 function testElseIf(val) {
-  if(val > 10) {
-    return "Greater than 10";
-  } else if(val < 5) {
-    return "Smaller than 5";
+  if (val > 10) {
+    return 'Greater than 10';
+  } else if (val < 5) {
+    return 'Smaller than 5';
   } else {
-    return "Between 5 and 10";
+    return 'Between 5 and 10';
   }
 }
 ```

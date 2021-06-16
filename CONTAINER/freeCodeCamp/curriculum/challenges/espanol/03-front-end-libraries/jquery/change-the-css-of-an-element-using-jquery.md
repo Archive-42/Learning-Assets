@@ -4,8 +4,7 @@ title: Cambia el CSS de un elemento usando jQuery
 challengeType: 6
 forumTopicId: 16776
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: change-the-css-of-an-element-using-jquery
 ---
 
@@ -18,7 +17,7 @@ jQuery tiene una función llamada `.css()` que te permite cambiar el CSS de un e
 Así es como cambiaríamos su color a azul:
 
 ```js
-$("#target1").css("color", "blue");
+$('#target1').css('color', 'blue');
 ```
 
 Esto es ligeramente diferente de una declaración CSS normal, porque la propiedad CSS y su valor están entre comillas y separados con coma en lugar de con dos puntos.
@@ -47,12 +46,11 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-    $("button").removeClass("btn-default");
-
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
+    $('button').removeClass('btn-default');
   });
 </script>
 
@@ -85,12 +83,12 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-    $("button").removeClass("btn-default");
-    $("#target1").css("color", "red");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
+    $('button').removeClass('btn-default');
+    $('#target1').css('color', 'red');
   });
 </script>
 

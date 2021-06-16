@@ -31,9 +31,9 @@ Add version "2.14.0" of the "moment" package to the `dependencies` field of your
 "dependencies" should include "moment"
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -41,7 +41,7 @@ Add version "2.14.0" of the "moment" package to the `dependencies` field of your
         '"dependencies" does not include "moment"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -50,9 +50,9 @@ Add version "2.14.0" of the "moment" package to the `dependencies` field of your
 "moment" version should be "2.14.0"
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.match(
         packJson.dependencies.moment,
@@ -60,7 +60,7 @@ Add version "2.14.0" of the "moment" package to the `dependencies` field of your
         'Wrong version of "moment" installed. It should be 2.14.0'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

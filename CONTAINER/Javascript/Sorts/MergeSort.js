@@ -14,27 +14,27 @@
  * @return {Array} merged list
  */
 /*
-*  Doctests
-* > merge([5, 4],[ 1, 2, 3])
-*  [1, 2, 3, 5, 4]
-* > merge([],[1, 2])
-*  [1, 2]
-* > merge([1, 2, 3], [1])
-*  [1, 1, 2, 3]
-* > merge([], [])
-*  []
-*
-* > mergeSort([5, 4])
-*  [4, 5]
-* > mergeSort([8, 4, 10, 15, 9])
-*  [4, 8, 9, 10, 15]
-* > mergeSort([1, 2, 3])
-*  [1, 2, 3]
-* > mergeSort([ ])
-*  [ ]
-*/
+ *  Doctests
+ * > merge([5, 4],[ 1, 2, 3])
+ *  [1, 2, 3, 5, 4]
+ * > merge([],[1, 2])
+ *  [1, 2]
+ * > merge([1, 2, 3], [1])
+ *  [1, 1, 2, 3]
+ * > merge([], [])
+ *  []
+ *
+ * > mergeSort([5, 4])
+ *  [4, 5]
+ * > mergeSort([8, 4, 10, 15, 9])
+ *  [4, 8, 9, 10, 15]
+ * > mergeSort([1, 2, 3])
+ *  [1, 2, 3]
+ * > mergeSort([ ])
+ *  [ ]
+ */
 
-function merge (list1, list2) {
+function merge(list1, list2) {
   const results = []
   let i = 0
   let j = 0
@@ -55,7 +55,7 @@ function merge (list1, list2) {
  * @param {Array} list - list to be sorted
  * @return {Array} sorted list
  */
-function mergeSort (list) {
+function mergeSort(list) {
   if (list.length < 2) return list
 
   const listHalf = Math.floor(list.length / 2)

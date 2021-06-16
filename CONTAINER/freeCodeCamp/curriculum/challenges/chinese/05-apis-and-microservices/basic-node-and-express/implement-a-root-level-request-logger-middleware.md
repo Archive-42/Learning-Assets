@@ -32,15 +32,15 @@ function(req, res, next) {
 应该激活根级记录器中间件
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/root-middleware-logger').then(
-    (data) => {
+    data => {
       assert.isTrue(
         data.passed,
         'root-level logger is not working as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

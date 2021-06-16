@@ -50,7 +50,7 @@ assert.deepEqual(translatePigLatin('algorithm'), 'algorithmway');
 assert.deepEqual(translatePigLatin('eight'), 'eightway');
 ```
 
-Debes manejar las palabras en donde la primera vocal viene en el centro de la palabra.  `translatePigLatin("schwartz")` debe devolver la cadena `artzschway`.
+Debes manejar las palabras en donde la primera vocal viene en el centro de la palabra. `translatePigLatin("schwartz")` debe devolver la cadena `artzschway`.
 
 ```js
 assert.deepEqual(translatePigLatin('schwartz'), 'artzschway');
@@ -71,14 +71,14 @@ function translatePigLatin(str) {
   return str;
 }
 
-translatePigLatin("consonant");
+translatePigLatin('consonant');
 ```
 
 # --solutions--
 
 ```js
 function translatePigLatin(str) {
-  if (isVowel(str.charAt(0))) return str + "way";
+  if (isVowel(str.charAt(0))) return str + 'way';
   var front = [];
   str = str.split('');
   while (str.length && !isVowel(str[0])) {

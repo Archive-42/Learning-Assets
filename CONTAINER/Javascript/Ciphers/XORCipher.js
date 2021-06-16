@@ -12,7 +12,7 @@
  * @return {String} encrypted string
  */
 
-function XOR (str, key) {
+function XOR(str, key) {
   let result = ''
   for (const elem of str) {
     result += String.fromCharCode(elem.charCodeAt(0) ^ key)

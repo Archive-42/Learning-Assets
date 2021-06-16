@@ -37,4 +37,3 @@ B: `from_generator`
 ## --video-solution--
 
 1
-

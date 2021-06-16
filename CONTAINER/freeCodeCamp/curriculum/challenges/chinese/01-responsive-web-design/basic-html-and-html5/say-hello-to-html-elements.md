@@ -20,7 +20,7 @@ dashedName: say-hello-to-html-elements
 开始标签像这样：
 
 ```html
-<h1>
+<h1></h1>
 ```
 
 结束标签像这样：

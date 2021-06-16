@@ -34,11 +34,7 @@ assert(!code.match(/for|while|forEach/g));
 应该使用 `map`、`filter` 或者 `reduce`。
 
 ```js
-assert(
-  __helpers
-    .removeWhiteSpace(code)
-    .match(/\.(map|filter|reduce)\(/g)
-);
+assert(__helpers.removeWhiteSpace(code).match(/\.(map|filter|reduce)\(/g));
 ```
 
 函数应该返回 `array`。
@@ -50,21 +46,19 @@ assert(Array.isArray(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])));
 `squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])` 应该返回 `[16, 1764, 36]`。
 
 ```js
-assert.deepStrictEqual(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]), [
-  16,
-  1764,
-  36
-]);
+assert.deepStrictEqual(
+  squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]),
+  [16, 1764, 36]
+);
 ```
 
 `squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3])` 应该返回 `[9, 100, 49]`。
 
 ```js
-assert.deepStrictEqual(squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]), [
-  9,
-  100,
-  49
-]);
+assert.deepStrictEqual(
+  squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]),
+  [9, 100, 49]
+);
 ```
 
 # --seed--

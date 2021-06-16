@@ -36,13 +36,14 @@ const main = () => {
   //   [1, 0, 3, 4],
   //   [2, 3, 0, 1],
   //   [3, 4, 1, 0] ]
-  console.log(FloydWarshall(
-    [[0, 1, 2, Infinity],
+  console.log(
+    FloydWarshall([
+      [0, 1, 2, Infinity],
       [1, 0, Infinity, Infinity],
       [2, Infinity, 0, 1],
       [Infinity, Infinity, 1, 0]
-    ]
-  ))
+    ])
+  )
 }
 
 main()

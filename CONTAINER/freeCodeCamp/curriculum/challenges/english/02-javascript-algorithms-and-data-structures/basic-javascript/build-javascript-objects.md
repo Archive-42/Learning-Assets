@@ -19,10 +19,10 @@ Here's a sample cat object:
 
 ```js
 var cat = {
-  "name": "Whiskers",
-  "legs": 4,
-  "tails": 1,
-  "enemies": ["Water", "Dogs"]
+  name: 'Whiskers',
+  legs: 4,
+  tails: 1,
+  enemies: ['Water', 'Dogs']
 };
 ```
 
@@ -30,9 +30,9 @@ In this example, all the properties are stored as strings, such as - `name`, `le
 
 ```js
 var anotherObject = {
-  make: "Ford",
-  5: "five",
-  "model": "focus"
+  make: 'Ford',
+  5: 'five',
+  model: 'focus'
 };
 ```
 
@@ -133,17 +133,17 @@ assert(
 ## --after-user-code--
 
 ```js
-(function(z){return z;})(myDog);
+(function (z) {
+  return z;
+})(myDog);
 ```
 
 ## --seed-contents--
 
 ```js
 var myDog = {
-// Only change code below this line
-
-
-// Only change code above this line
+  // Only change code below this line
+  // Only change code above this line
 };
 ```
 
@@ -151,9 +151,9 @@ var myDog = {
 
 ```js
 var myDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["everything!"]
+  name: 'Camper',
+  legs: 4,
+  tails: 1,
+  friends: ['everything!']
 };
 ```

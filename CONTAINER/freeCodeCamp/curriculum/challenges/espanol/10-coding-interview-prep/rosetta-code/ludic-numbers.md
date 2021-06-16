@@ -103,9 +103,7 @@ assert.deepEqual(ludic(26), [1, 2, 3, 5, 7, 11, 13, 17, 23, 25]);
 ## --seed-contents--
 
 ```js
-function ludic(n) {
-
-}
+function ludic(n) {}
 ```
 
 # --solutions--

@@ -19,10 +19,10 @@ Por ejemplo, aquí hay un objeto de gato:
 
 ```js
 var cat = {
-  "name": "Whiskers",
-  "legs": 4,
-  "tails": 1,
-  "enemies": ["Water", "Dogs"]
+  name: 'Whiskers',
+  legs: 4,
+  tails: 1,
+  enemies: ['Water', 'Dogs']
 };
 ```
 
@@ -30,9 +30,9 @@ En este ejemplo, todas las propiedades se almacenan como cadenas, tales como: `n
 
 ```js
 var anotherObject = {
-  make: "Ford",
-  5: "five",
-  "model": "focus"
+  make: 'Ford',
+  5: 'five',
+  model: 'focus'
 };
 ```
 
@@ -133,17 +133,17 @@ assert(
 ## --after-user-code--
 
 ```js
-(function(z){return z;})(myDog);
+(function (z) {
+  return z;
+})(myDog);
 ```
 
 ## --seed-contents--
 
 ```js
 var myDog = {
-// Only change code below this line
-
-
-// Only change code above this line
+  // Only change code below this line
+  // Only change code above this line
 };
 ```
 
@@ -151,9 +151,9 @@ var myDog = {
 
 ```js
 var myDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["everything!"]
+  name: 'Camper',
+  legs: 4,
+  tails: 1,
+  friends: ['everything!']
 };
 ```

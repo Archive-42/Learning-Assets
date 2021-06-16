@@ -89,8 +89,7 @@ assert(code.match(/\n*?\s*?\}\s*?\);/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-  });
+  $(document).ready(function () {});
 </script>
 <!-- Only change code above this line -->
 

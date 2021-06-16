@@ -112,24 +112,21 @@ assert(
 ## --after-user-code--
 
 ```js
-BinarySearchTree.prototype = Object.assign(
-  BinarySearchTree.prototype,
-  {
-    inOrder() {
-      if (!this.root) {
-        return null;
-      }
-      var result = new Array();
-      function traverseInOrder(node) {
-        node.left && traverseInOrder(node.left);
-        result.push(node.value);
-        node.right && traverseInOrder(node.right);
-      }
-      traverseInOrder(this.root);
-      return result;
+BinarySearchTree.prototype = Object.assign(BinarySearchTree.prototype, {
+  inOrder() {
+    if (!this.root) {
+      return null;
     }
+    var result = new Array();
+    function traverseInOrder(node) {
+      node.left && traverseInOrder(node.left);
+      result.push(node.value);
+      node.right && traverseInOrder(node.right);
+    }
+    traverseInOrder(this.root);
+    return result;
   }
-);
+});
 ```
 
 ## --seed-contents--
@@ -144,7 +141,7 @@ function Node(value) {
 function BinarySearchTree() {
   this.root = null;
   // Only change code below this line
-  
+
   // Only change code above this line
 }
 ```
@@ -159,13 +156,13 @@ function Node(value) {
 }
 function BinarySearchTree() {
   this.root = null;
-  this.add = function(element) {
+  this.add = function (element) {
     let current = this.root;
     if (!current) {
       this.root = new Node(element);
       return;
     } else {
-      const searchTree = function(current) {
+      const searchTree = function (current) {
         if (current.value > element) {
           if (current.left) {
             return searchTree(current.left);

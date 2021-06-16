@@ -14,7 +14,7 @@ En JavaScript, cuando el operador `+` se utiliza con un valor de cadena (`String
 **Ejemplo**
 
 ```js
-'My name is Alan,' + ' I concatenate.'
+'My name is Alan,' + ' I concatenate.';
 ```
 
 **Nota:** Ten cuidado con los espacios. La concatenación no añade espacios entre las cadenas concatenadas, así que tendrás que añadirlos por tu cuenta.
@@ -22,10 +22,11 @@ En JavaScript, cuando el operador `+` se utiliza con un valor de cadena (`String
 Ejemplo:
 
 ```js
-var ourStr = "I come first. " + "I come second.";
+var ourStr = 'I come first. ' + 'I come second.';
 ```
 
 La cadena `I come first. I come second.` se mostrará en la consola.
+
 # --instructions--
 
 Construye `myStr` a partir de las cadenas `This is the start.` y `This is the end.` utilizando el operador `+`.
@@ -61,8 +62,8 @@ assert(/myStr\s*=/.test(code));
 ## --after-user-code--
 
 ```js
-(function(){
-  if(typeof myStr === 'string') {
+(function () {
+  if (typeof myStr === 'string') {
     return 'myStr = "' + myStr + '"';
   } else {
     return 'myStr is not a string';
@@ -79,5 +80,5 @@ var myStr; // Change this line
 # --solutions--
 
 ```js
-var myStr = "This is the start. " + "This is the end.";
+var myStr = 'This is the start. ' + 'This is the end.';
 ```

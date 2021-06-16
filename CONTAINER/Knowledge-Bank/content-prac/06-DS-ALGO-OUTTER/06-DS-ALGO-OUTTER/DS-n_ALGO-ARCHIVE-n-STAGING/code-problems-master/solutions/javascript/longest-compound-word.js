@@ -1,17 +1,17 @@
 module.exports = function (list) {
-  var prefixes      = {};
+  var prefixes = {};
   var possibleWords = [];
-  var longestWords  = [];
+  var longestWords = [];
   var longestLength = 0;
 
   // Inserts a word into the prefix tree structure.
   var insertWord = function (word) {
-    var index  = 0;
+    var index = 0;
     var active = prefixes;
     var char;
 
-    while (char = word[index++]) {
-      active = (active[char] = active[char] || {});
+    while ((char = word[index++])) {
+      active = active[char] = active[char] || {};
     }
 
     active.word = true;
@@ -19,14 +19,16 @@ module.exports = function (list) {
 
   // Finds the longest prefix we can make using the word.
   var findPrefixes = function (word) {
-    var prefix = '';
-    var found  = [];
-    var index  = 0;
+    var prefix = "";
+    var found = [];
+    var index = 0;
     var active = prefixes;
     var char;
 
-    while (char = word[index++]) {
-      if (!active[char]) { break; }
+    while ((char = word[index++])) {
+      if (!active[char]) {
+        break;
+      }
       // Move to the next character and add to the prefix.
       active = active[char];
       prefix += char;
@@ -44,7 +46,7 @@ module.exports = function (list) {
     // If we can find a closest possible word, it may be possible to create a
     // compound word - but we won't be able to check until we reach the end.
     if ((prefix = findPrefixes(word)) && prefix.length) {
-      possibleWords.push([ word, prefix ]);
+      possibleWords.push([word, prefix]);
     }
 
     // Insert the word into the prefix tree.
@@ -52,9 +54,9 @@ module.exports = function (list) {
   });
 
   possibleWords.forEach(function (possible) {
-    var word     = possible[0];
+    var word = possible[0];
     var prefixes = possible[1];
-    var found    = false;
+    var found = false;
 
     var findCompoundWord = function (suffix) {
       // Find all future prefixes and continue search.
@@ -67,7 +69,7 @@ module.exports = function (list) {
       // If the suffix doesn't exist, it must be because we have found an
       // exact compound word.
       if (word.length > longestLength) {
-        longestWords  = [];
+        longestWords = [];
         longestLength = word.length;
       }
 

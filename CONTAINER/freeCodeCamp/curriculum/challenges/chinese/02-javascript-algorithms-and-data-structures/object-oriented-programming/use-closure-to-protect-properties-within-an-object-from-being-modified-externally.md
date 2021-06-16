@@ -13,7 +13,7 @@ dashedName: >-
 在上一次挑战中，`bird` 有一个公共属性 `name`。 公共属性的定义就是：它可以在 `bird` 的定义范围之外被访问和更改。
 
 ```js
-bird.name = "Duffy";
+bird.name = 'Duffy';
 ```
 
 因此，代码的任何地方都可以轻松地将 `bird` 的 name 属性更改为任意值。 想想密码和银行账户之类的东西，如果代码库的任何部分都可以轻易改变他们。 那么将会引起很多问题。
@@ -24,7 +24,7 @@ bird.name = "Duffy";
 function Bird() {
   let hatchedEgg = 10;
 
-  this.getHatchedEggCount = function() { 
+  this.getHatchedEggCount = function () {
     return hatchedEgg;
   };
 }
@@ -65,8 +65,6 @@ assert(code.match(/((return\s+)|(\(\s*\)\s*\=\>\s*))weight\;?/g));
 ```js
 function Bird() {
   this.weight = 15;
-
-
 }
 ```
 

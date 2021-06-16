@@ -133,9 +133,7 @@ assert.equal(
 ## --seed-contents--
 
 ```js
-function knapContinuous(items, maxweight) {
-
-}
+function knapContinuous(items, maxweight) {}
 ```
 
 # --solutions--

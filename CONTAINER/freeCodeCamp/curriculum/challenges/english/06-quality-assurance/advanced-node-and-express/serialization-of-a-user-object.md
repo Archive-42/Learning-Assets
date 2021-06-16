@@ -8,7 +8,7 @@ dashedName: serialization-of-a-user-object
 
 # --description--
 
-Serialization and deserialization are important concepts in regards to authentication. To serialize an object means to convert its contents into a small *key* that can then be deserialized into the original object. This is what allows us to know who has communicated with the server without having to send the authentication data, like the username and password, at each request for a new page.
+Serialization and deserialization are important concepts in regards to authentication. To serialize an object means to convert its contents into a small _key_ that can then be deserialized into the original object. This is what allows us to know who has communicated with the server without having to send the authentication data, like the username and password, at each request for a new page.
 
 To set this up properly, we need to have a serialize function and a deserialize function. In Passport, we create these with `passport.serializeUser( OURFUNCTION )` and `passport.deserializeUser( OURFUNCTION )`
 
@@ -35,9 +35,9 @@ Submit your page when you think you've got it right. If you're running into erro
 You should serialize user function correctly.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /passport.serializeUser/gi,
@@ -49,7 +49,7 @@ You should serialize user function correctly.
         'There should be a callback in your serializeUser with (null, user._id)'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -58,9 +58,9 @@ You should serialize user function correctly.
 You should deserialize user function correctly.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /passport.deserializeUser/gi,
@@ -72,7 +72,7 @@ You should deserialize user function correctly.
         'There should be a callback in your deserializeUser with (null, null) for now'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -81,9 +81,9 @@ You should deserialize user function correctly.
 MongoDB should be a dependency.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -91,7 +91,7 @@ MongoDB should be a dependency.
         'Your project should list "mongodb" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -100,9 +100,9 @@ MongoDB should be a dependency.
 Mongodb should be properly required including the ObjectId.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /require.*("|')mongodb\1/gi,
@@ -114,7 +114,7 @@ Mongodb should be properly required including the ObjectId.
         'Even though the block is commented out, you should use new ObjectID(id) for when we add the database'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

@@ -28,13 +28,13 @@ Use `helmet.xssFilter()` to sanitize input sent to your server.
 helmet.xssFilter() middleware should be mounted correctly
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       assert.include(data.appStack, 'xXssProtection');
       assert.property(data.headers, 'x-xss-protection');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

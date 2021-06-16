@@ -36,7 +36,6 @@ assert.strictEqual(pandigitalProducts(), 45228);
 
 ```js
 function pandigitalProducts() {
-
   return true;
 }
 
@@ -74,7 +73,10 @@ function pandigitalProducts() {
   for (let mult1 = 2; mult1 < 9876; mult1++) {
     let mult2 = 123;
     while (concatenateNums(mult1, mult2, mult1 * mult2).length < 10) {
-      if (is1to9Pandigital(mult1, mult2, mult1 * mult2) && !pandigitalNums.includes(mult1 * mult2)) {
+      if (
+        is1to9Pandigital(mult1, mult2, mult1 * mult2) &&
+        !pandigitalNums.includes(mult1 * mult2)
+      ) {
         pandigitalNums.push(mult1 * mult2);
         sum += mult1 * mult2;
       }

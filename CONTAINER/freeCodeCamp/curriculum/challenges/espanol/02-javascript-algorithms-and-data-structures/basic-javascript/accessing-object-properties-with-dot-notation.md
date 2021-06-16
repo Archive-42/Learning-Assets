@@ -17,14 +17,15 @@ Aquí hay un ejemplo de cómo usar la notación de puntos (`.`) para leer la pro
 
 ```js
 var myObj = {
-  prop1: "val1",
-  prop2: "val2"
+  prop1: 'val1',
+  prop2: 'val2'
 };
 var prop1val = myObj.prop1;
 var prop2val = myObj.prop2;
 ```
 
 `prop1val` tendrá una cadena con valor `val1` y `prop2val` tendrá una cadena con valor `val2`.
+
 # --instructions--
 
 Lee los valores de las propiedades de `testObj` utilizando la notación de puntos. Asigna la variable `hatValue` igual a la propiedad `hat` del objeto y asigna la variable `shirtValue` igual a la propiedad `shirt` del objeto.
@@ -66,7 +67,9 @@ assert(code.match(/testObj\.\w+/g).length > 1);
 ## --after-user-code--
 
 ```js
-(function(a,b) { return "hatValue = '" + a + "', shirtValue = '" + b + "'"; })(hatValue,shirtValue);
+(function (a, b) {
+  return "hatValue = '" + a + "', shirtValue = '" + b + "'";
+})(hatValue, shirtValue);
 ```
 
 ## --seed-contents--
@@ -74,24 +77,24 @@ assert(code.match(/testObj\.\w+/g).length > 1);
 ```js
 // Setup
 var testObj = {
-  "hat": "ballcap",
-  "shirt": "jersey",
-  "shoes": "cleats"
+  hat: 'ballcap',
+  shirt: 'jersey',
+  shoes: 'cleats'
 };
 
 // Only change code below this line
 
-var hatValue = testObj;      // Change this line
-var shirtValue = testObj;    // Change this line
+var hatValue = testObj; // Change this line
+var shirtValue = testObj; // Change this line
 ```
 
 # --solutions--
 
 ```js
 var testObj = {
-  "hat": "ballcap",
-  "shirt": "jersey",
-  "shoes": "cleats"
+  hat: 'ballcap',
+  shirt: 'jersey',
+  shoes: 'cleats'
 };
 
 var hatValue = testObj.hat;

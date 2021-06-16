@@ -54,12 +54,12 @@ dashedName: run-functional-tests-on-an-api-response-using-chai-http-iii---put-me
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -68,14 +68,14 @@ dashedName: run-functional-tests-on-an-api-response-using-chai-http-iii---put-me
 应测试 “res.status” 是否为 200。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'equal');
       assert.equal(data.assertions[0].args[0], 'res.status');
       assert.equal(data.assertions[0].args[1], '200');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -84,14 +84,14 @@ dashedName: run-functional-tests-on-an-api-response-using-chai-http-iii---put-me
 需要测试 “res.type” 是否为 “application/json”。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'equal');
       assert.equal(data.assertions[1].args[0], 'res.type');
       assert.match(data.assertions[1].args[1], /('|")application\/json\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -100,14 +100,14 @@ dashedName: run-functional-tests-on-an-api-response-using-chai-http-iii---put-me
 需要测试 “res.body.name” 是否为 “Cristoforo”。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'equal');
       assert.equal(data.assertions[2].args[0], 'res.body.name');
       assert.match(data.assertions[2].args[1], /('|")Cristoforo\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -116,14 +116,14 @@ dashedName: run-functional-tests-on-an-api-response-using-chai-http-iii---put-me
 需要测试 “res.body.surname” 是否为 “Colombo”。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[3].method, 'equal');
       assert.equal(data.assertions[3].args[0], 'res.body.surname');
       assert.match(data.assertions[3].args[1], /('|")Colombo\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

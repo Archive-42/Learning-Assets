@@ -41,7 +41,7 @@ The second `section` element should not be nested in the first `section` element
 const childrenOf1stSection = [
   ...document.querySelector('main > section').children
 ];
-const foundElems = childrenOf1stSection.filter((child) => {
+const foundElems = childrenOf1stSection.filter(child => {
   return child.nodeName === 'SECTION';
 });
 assert(foundElems.length === 0);
@@ -51,7 +51,7 @@ Both `section` elements should be between the opening and closing tags of the `m
 
 ```js
 const childrenOfMain = [...document.querySelector('main').children];
-const foundElems = childrenOfMain.filter((child) => {
+const foundElems = childrenOfMain.filter(child => {
   return child.nodeName === 'SECTION';
 });
 assert(foundElems.length === 2);
@@ -66,16 +66,22 @@ assert(foundElems.length === 2);
   <body>
     <h1>CatPhotoApp</h1>
     <main>
---fcc-editable-region--
+      --fcc-editable-region--
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
---fcc-editable-region--
+      --fcc-editable-region--
     </main>
   </body>
 </html>
 ```
-

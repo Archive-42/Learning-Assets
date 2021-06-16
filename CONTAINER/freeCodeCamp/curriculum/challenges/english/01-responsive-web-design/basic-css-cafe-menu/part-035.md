@@ -41,9 +41,9 @@ Test 1
           <h2>Coffees</h2>
           <article>
             <p class="flavor">French Vanilla</p>
---fcc-editable-region--
+            --fcc-editable-region--
             <p>3.00</p>
---fcc-editable-region--
+            --fcc-editable-region--
           </article>
           <article>
             <p>Carmel Macchiato</p>
@@ -65,7 +65,8 @@ Test 1
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -73,7 +74,9 @@ body {
   background-image: url(https://tinyurl.com/coffee-beans-fcc);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 
@@ -88,4 +91,3 @@ h1, h2, p {
   text-align: left;
 }
 ```
-

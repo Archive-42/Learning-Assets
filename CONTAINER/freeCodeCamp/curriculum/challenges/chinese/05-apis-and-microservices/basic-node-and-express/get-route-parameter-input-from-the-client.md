@@ -21,16 +21,16 @@ dashedName: get-route-parameter-input-from-the-client
 测试 1：你的 echo 服务应该正确地重复单词
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/eChOtEsT/echo').then(
-    (data) => {
+    data => {
       assert.equal(
         data.echo,
         'eChOtEsT',
         'Test 1: the echo server is not working as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -39,16 +39,16 @@ dashedName: get-route-parameter-input-from-the-client
 测试 2：你的 echo 服务应该正确地重复单词
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/ech0-t3st/echo').then(
-    (data) => {
+    data => {
       assert.equal(
         data.echo,
         'ech0-t3st',
         'Test 2: the echo server is not working as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -6,10 +6,10 @@ This directory contains the code implementing `TensorRTOp` Caffe2 operator as we
 To enable this functionality in your PyTorch build please set
 
 `USE_TENSORRT=1 ... python setup.py ...`
- 
- or if you use CMake directly
- 
- `-DUSE_TENSORRT=ON`
+
+or if you use CMake directly
+
+`-DUSE_TENSORRT=ON`
 
 For further information please explore `caffe2/python/trt/test_trt.py` test showing all possible use cases.
 

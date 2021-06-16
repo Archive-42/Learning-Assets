@@ -25,17 +25,13 @@ assert(Array.isArray(rangeOfNumbers(5, 10)));
 Your code should not use any loop syntax (`for` or `while` or higher order functions such as `forEach`, `map`, `filter`, or `reduce`).
 
 ```js
-assert(
-  !code.match(/for|while|forEach|map|filter|reduce/g)
-);
+assert(!code.match(/for|while|forEach|map|filter|reduce/g));
 ```
 
 `rangeOfNumbers` should use recursion (call itself) to solve this challenge.
 
 ```js
-assert(
-  rangeOfNumbers.toString().match(/rangeOfNumbers\s*\(.+\)/)
-);
+assert(rangeOfNumbers.toString().match(/rangeOfNumbers\s*\(.+\)/));
 ```
 
 `rangeOfNumbers(1, 5)` should return `[1, 2, 3, 4, 5]`.
@@ -63,7 +59,7 @@ assert.deepStrictEqual(rangeOfNumbers(4, 4), [4]);
 ```js
 function rangeOfNumbers(startNum, endNum) {
   return [];
-};
+}
 ```
 
 # --solutions--

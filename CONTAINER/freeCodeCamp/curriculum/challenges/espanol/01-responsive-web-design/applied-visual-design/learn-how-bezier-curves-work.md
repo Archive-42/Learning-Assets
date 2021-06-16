@@ -53,14 +53,9 @@ assert(
 
 ```html
 <style>
-
-  .balls{
+  .balls {
     border-radius: 50%;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     position: fixed;
     width: 50px;
     height: 50px;
@@ -86,7 +81,6 @@ assert(
       top: 249px;
     }
   }
-
 </style>
 
 <div class="balls" id="ball1"></div>
@@ -97,14 +91,9 @@ assert(
 
 ```html
 <style>
-
-  .balls{
+  .balls {
     border-radius: 50%;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     position: fixed;
     width: 50px;
     height: 50px;

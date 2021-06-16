@@ -37,13 +37,11 @@ assert($('h2').css('left') == '15px');
 
 ```html
 <head>
-<style>
-  h2 {
-    position: relative;
-
-
-  }
-</style>
+  <style>
+    h2 {
+      position: relative;
+    }
+  </style>
 </head>
 <body>
   <h1>On Being Well-Positioned</h1>
@@ -56,13 +54,13 @@ assert($('h2').css('left') == '15px');
 
 ```html
 <head>
-<style>
-  h2 {
-    position: relative;
-    left: 15px;
-    bottom: 10px;
-  }
-</style>
+  <style>
+    h2 {
+      position: relative;
+      left: 15px;
+      bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <h1>On Being Well-Positioned</h1>

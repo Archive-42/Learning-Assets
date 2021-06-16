@@ -4,13 +4,11 @@
 
 ```html
 <html>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
+
 ::id{#key-for-css}
-
-
 
 ```css
 body {
@@ -18,10 +16,8 @@ body {
 }
 ```
 
-
-
-
 ::id{#key-for-js}
+
 ```js
 var x = 'y';
 ```

@@ -64,7 +64,6 @@ assert(quadraticPrimes(1000) == -59231);
 
 ```js
 function quadraticPrimes(range) {
-
   return range;
 }
 

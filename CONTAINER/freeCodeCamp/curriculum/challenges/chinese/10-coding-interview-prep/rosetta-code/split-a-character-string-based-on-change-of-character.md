@@ -99,9 +99,7 @@ assert.deepEqual(split('gHHH5YY++///\\'), [
 ## --seed-contents--
 
 ```js
-function split(str) {
-
-}
+function split(str) {}
 ```
 
 # --solutions--

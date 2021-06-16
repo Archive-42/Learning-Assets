@@ -13,13 +13,11 @@ dashedName: get-json-with-the-javascript-fetch-method
 下面是使用 GET 请求 `/json/cats.json` 数据的例子。
 
 ```js
-
 fetch('/json/cats.json')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('message').innerHTML = JSON.stringify(data);
-    })
-
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('message').innerHTML = JSON.stringify(data);
+  });
 ```
 
 逐行解释一下代码。
@@ -64,9 +62,11 @@ assert(__helpers.removeWhiteSpace(code).match(/\.then\(\(?\w+\)?=>{[^}]*}\)/g));
 
 ```js
 assert(
-  __helpers.removeWhiteSpace(code).match(
-    /document\.getElementById\(('|")message\1\)\.innerHTML=JSON\.stringify\(?\w+\)/g
-  )
+  __helpers
+    .removeWhiteSpace(code)
+    .match(
+      /document\.getElementById\(('|")message\1\)\.innerHTML=JSON\.stringify\(?\w+\)/g
+    )
 );
 ```
 
@@ -76,11 +76,9 @@ assert(
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded',function(){
-    document.getElementById('getMessage').onclick= () => {
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('getMessage').onclick = () => {
       // Add your code below this line
-
-
       // Add your code above this line
     };
   });
@@ -88,7 +86,7 @@ assert(
 <style>
   body {
     text-align: center;
-    font-family: "Helvetica", sans-serif;
+    font-family: 'Helvetica', sans-serif;
   }
   h1 {
     font-size: 2em;
@@ -107,18 +105,14 @@ assert(
     padding: 5px 10px 8px 10px;
   }
   button:hover {
-    background-color: #0F5897;
-    border: 1px solid #0F5897;
+    background-color: #0f5897;
+    border: 1px solid #0f5897;
   }
 </style>
 <h1>Cat Photo Finder</h1>
-<p id="message" class="box">
-  The message will go here
-</p>
+<p id="message" class="box">The message will go here</p>
 <p>
-  <button id="getMessage">
-    Get Message
-  </button>
+  <button id="getMessage">Get Message</button>
 </p>
 ```
 
@@ -126,20 +120,20 @@ assert(
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded',function(){
-    document.getElementById('getMessage').onclick= () => {
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('getMessage').onclick = () => {
       fetch('/json/cats.json')
         .then(response => response.json())
         .then(data => {
-          document.getElementById('message').innerHTML=JSON.stringify(data);
-        })
+          document.getElementById('message').innerHTML = JSON.stringify(data);
+        });
     };
   });
 </script>
 <style>
   body {
     text-align: center;
-    font-family: "Helvetica", sans-serif;
+    font-family: 'Helvetica', sans-serif;
   }
   h1 {
     font-size: 2em;
@@ -158,17 +152,13 @@ assert(
     padding: 5px 10px 8px 10px;
   }
   button:hover {
-    background-color: #0F5897;
-    border: 1px solid #0F5897;
+    background-color: #0f5897;
+    border: 1px solid #0f5897;
   }
 </style>
 <h1>Cat Photo Finder</h1>
-<p id="message" class="box">
-  The message will go here
-</p>
+<p id="message" class="box">The message will go here</p>
 <p>
-  <button id="getMessage">
-    Get Message
-  </button>
+  <button id="getMessage">Get Message</button>
 </p>
 ```

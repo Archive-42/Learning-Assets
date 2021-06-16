@@ -16,13 +16,11 @@ The following function uses `if`, `else if`, and `else` statements to check mult
 ```js
 function findGreaterOrEqual(a, b) {
   if (a === b) {
-    return "a and b are equal";
-  }
-  else if (a > b) {
-    return "a is greater";
-  }
-  else {
-    return "b is greater";
+    return 'a and b are equal';
+  } else if (a > b) {
+    return 'a is greater';
+  } else {
+    return 'b is greater';
   }
 }
 ```
@@ -31,9 +29,11 @@ The above function can be re-written using multiple conditional operators:
 
 ```js
 function findGreaterOrEqual(a, b) {
-  return (a === b) ? "a and b are equal" 
-    : (a > b) ? "a is greater" 
-    : "b is greater";
+  return a === b
+    ? 'a and b are equal'
+    : a > b
+    ? 'a is greater'
+    : 'b is greater';
 }
 ```
 
@@ -41,7 +41,11 @@ It is considered best practice to format multiple conditional operators such tha
 
 ```js
 function findGreaterOrEqual(a, b) {
-  return (a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
+  return a === b
+    ? 'a and b are equal'
+    : a > b
+    ? 'a is greater'
+    : 'b is greater';
 }
 ```
 
@@ -80,9 +84,7 @@ assert(checkSign(0) === 'zero');
 ## --seed-contents--
 
 ```js
-function checkSign(num) {
-
-}
+function checkSign(num) {}
 
 checkSign(10);
 ```
@@ -91,6 +93,6 @@ checkSign(10);
 
 ```js
 function checkSign(num) {
-  return (num > 0) ? 'positive' : (num < 0) ? 'negative' : 'zero';
+  return num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero';
 }
 ```

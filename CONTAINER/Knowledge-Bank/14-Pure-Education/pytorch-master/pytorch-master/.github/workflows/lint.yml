@@ -3,7 +3,7 @@ name: Lint
 on:
   push:
     branches:
-    - master
+      - master
   pull_request:
 
 jobs:
@@ -80,8 +80,8 @@ jobs:
       - name: Add annotations
         uses: pytorch/add-annotations-github-action@master
         with:
-          check_name: 'flake8-py3'
-          linter_output_path: 'flake8-output.txt'
+          check_name: "flake8-py3"
+          linter_output_path: "flake8-output.txt"
           commit_sha: ${{ steps.get-commit-sha.outputs.commit-sha }}
           regex: '^(?<filename>.*?):(?<lineNumber>\d+):(?<columnNumber>\d+): (?<errorCode>\w+\d+) (?<errorDesc>.*)'
         env:
@@ -186,8 +186,8 @@ jobs:
       - name: Add annotations
         uses: pytorch/add-annotations-github-action@master
         with:
-          check_name: 'clang-tidy'
-          linter_output_path: 'clang-tidy-output.txt'
+          check_name: "clang-tidy"
+          linter_output_path: "clang-tidy-output.txt"
           commit_sha: ${{ steps.get-commit-sha.outputs.commit-sha }}
           regex: '^(?<filename>.*?):(?<lineNumber>\d+):(?<columnNumber>\d+): (?<errorDesc>.*?) \[(?<errorCode>.*)\]'
         env:

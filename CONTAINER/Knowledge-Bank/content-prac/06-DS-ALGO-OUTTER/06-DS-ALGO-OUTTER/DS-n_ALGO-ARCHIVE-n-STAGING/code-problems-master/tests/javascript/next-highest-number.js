@@ -1,8 +1,8 @@
-var assert            = require('assert');
-var nextHighest = require('../../solutions/javascript/next-highest-number');
+var assert = require("assert");
+var nextHighest = require("../../solutions/javascript/next-highest-number");
 
-describe('next highest number', function () {
-  it('should return the next highest number', function () {
+describe("next highest number", function () {
+  it("should return the next highest number", function () {
     assert.equal(nextHighest(1524), 1542);
     assert.equal(nextHighest(1542), 2145);
     assert.equal(nextHighest(1543), 3145);
@@ -15,7 +15,7 @@ describe('next highest number', function () {
     assert.equal(nextHighest(15895), 15958);
   });
 
-  it('should work when there isn\'t a higher number', function () {
+  it("should work when there isn't a higher number", function () {
     assert.equal(nextHighest(98765), 98765);
     assert.equal(nextHighest(11111), 11111);
   });

@@ -70,7 +70,7 @@ assert(
 `authReducer` 函数应该使用 switch 语句处理多个 action 类型。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       return (
@@ -96,7 +96,7 @@ assert(
 action creator 和 reducer 中应该引用 `LOGIN` 和 `LOGOUT` 常量。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       const noWhiteSpace = __helpers.removeWhiteSpace(
@@ -117,29 +117,24 @@ action creator 和 reducer 中应该引用 `LOGIN` 和 `LOGOUT` 常量。
 ## --seed-contents--
 
 ```js
-
-
 const defaultState = {
   authenticated: false
 };
 
 const authReducer = (state = defaultState, action) => {
-
   switch (action.type) {
-    case 'LOGIN': 
+    case 'LOGIN':
       return {
         authenticated: true
-      }
-    case 'LOGOUT': 
+      };
+    case 'LOGOUT':
       return {
         authenticated: false
-      }
+      };
 
     default:
       return state;
-
   }
-
 };
 
 const store = Redux.createStore(authReducer);
@@ -147,13 +142,13 @@ const store = Redux.createStore(authReducer);
 const loginUser = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 
 const logoutUser = () => {
   return {
     type: 'LOGOUT'
-  }
+  };
 };
 ```
 
@@ -168,24 +163,20 @@ const defaultState = {
 };
 
 const authReducer = (state = defaultState, action) => {
-
   switch (action.type) {
-
     case LOGIN:
       return {
         authenticated: true
-      }
+      };
 
     case LOGOUT:
       return {
         authenticated: false
-      }
+      };
 
     default:
       return state;
-
   }
-
 };
 
 const store = Redux.createStore(authReducer);
@@ -193,12 +184,12 @@ const store = Redux.createStore(authReducer);
 const loginUser = () => {
   return {
     type: LOGIN
-  }
+  };
 };
 
 const logoutUser = () => {
   return {
     type: LOGOUT
-  }
+  };
 };
 ```

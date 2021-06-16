@@ -12,12 +12,12 @@ En el siguiente ejemplo, el constructor `Bird` define dos propiedades: `name` y 
 
 ```js
 function Bird(name) {
-  this.name  = name;
+  this.name = name;
   this.numLegs = 2;
 }
 
-let duck = new Bird("Donald");
-let canary = new Bird("Tweety");
+let duck = new Bird('Donald');
+let canary = new Bird('Tweety');
 ```
 
 `name` y `numLegs` se llaman <dfn>propiedades directas</dfn>, porque están definidas directamente en la instancia del objeto. Eso significa que `duck` y `canary` tienen su propia copia separada de estas propiedades. De hecho, cada instancia de `Bird` tendrá su propia copia de estas propiedades. El siguiente código añade todas las propiedades directas de `duck` al arreglo `ownProps`:
@@ -26,7 +26,7 @@ let canary = new Bird("Tweety");
 let ownProps = [];
 
 for (let property in duck) {
-  if(duck.hasOwnProperty(property)) {
+  if (duck.hasOwnProperty(property)) {
     ownProps.push(property);
   }
 }
@@ -74,7 +74,7 @@ function Bird(name) {
   this.numLegs = 2;
 }
 
-let canary = new Bird("Tweety");
+let canary = new Bird('Tweety');
 let ownProps = [];
 // Only change code below this line
 ```
@@ -87,8 +87,8 @@ function Bird(name) {
   this.numLegs = 2;
 }
 
-let canary = new Bird("Tweety");
-function getOwnProps (obj) {
+let canary = new Bird('Tweety');
+function getOwnProps(obj) {
   const props = [];
 
   for (let prop in obj) {

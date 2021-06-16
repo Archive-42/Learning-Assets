@@ -38,14 +38,15 @@ Test 1
       </header>
       <main>
         <section>
---fcc-editable-region--
+          --fcc-editable-region--
           <h2>Coffees</h2>
---fcc-editable-region--
+          --fcc-editable-region--
         </section>
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -53,7 +54,9 @@ body {
   background-image: url(https://tinyurl.com/coffee-beans-fcc);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 
@@ -64,4 +67,3 @@ h1, h2, p {
   margin-right: auto;
 }
 ```
-

@@ -32,27 +32,29 @@ assert(!code.replace(/\s/g, '').includes('constaddVar=add'));
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Spreadsheet</title>
-  <style>
-    #container {
-      display: grid;
-      grid-template-columns: 50px repeat(10, 200px);
-      grid-template-rows: repeat(11, 30px);
-    }
-    .label {
-      background-color: lightgray;
-      text-align: center;
-      vertical-align: middle;
-      line-height: 30px;
-    }
-  </style>
-</head>
-<body>
-<div id="container">
-  <div></div>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spreadsheet</title>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: 50px repeat(10, 200px);
+        grid-template-rows: repeat(11, 30px);
+      }
+      .label {
+        background-color: lightgray;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div></div>
+    </div>
+  </body>
+</html>
 ```
 
 ## --after-user-code--
@@ -66,16 +68,13 @@ assert(!code.replace(/\s/g, '').includes('constaddVar=add'));
 
 ```html
 <script>
+  function add(x, y) {
+    return x + y;
+  }
 
-function add(x, y) {
-  return x + y;
-}
+  const addVar = add;
 
-const addVar = add;
-
-const infixToFunction = {};
-
-
+  const infixToFunction = {};
 </script>
 ```
 
@@ -83,10 +82,10 @@ const infixToFunction = {};
 
 ```html
 <script>
-function add(x, y) {
-  return x + y;
-}
+  function add(x, y) {
+    return x + y;
+  }
 
-const infixToFunction = {};
+  const infixToFunction = {};
 </script>
 ```

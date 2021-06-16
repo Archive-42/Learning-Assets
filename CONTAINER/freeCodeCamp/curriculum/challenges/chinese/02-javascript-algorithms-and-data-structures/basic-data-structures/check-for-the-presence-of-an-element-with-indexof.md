@@ -8,7 +8,7 @@ dashedName: check-for-the-presence-of-an-element-with-indexof
 
 # --description--
 
-由于数组随时都可以修改或发生 *mutated*，我们很难保证某个数据始终处于数组中的特定位置，甚至不能保证该元素是否还存在于该数组中。 好消息是，JavaScript 为我们提供了内置方法 `indexOf()`。 这个方法让我们可以方便地检查某个元素是否存在于数组中。 `indexOf()` 方法接受一个元素作为输入参数，并返回该元素在数组中的位置（索引）；若该元素不存在于数组中则返回 `-1`。
+由于数组随时都可以修改或发生 _mutated_，我们很难保证某个数据始终处于数组中的特定位置，甚至不能保证该元素是否还存在于该数组中。 好消息是，JavaScript 为我们提供了内置方法 `indexOf()`。 这个方法让我们可以方便地检查某个元素是否存在于数组中。 `indexOf()` 方法接受一个元素作为输入参数，并返回该元素在数组中的位置（索引）；若该元素不存在于数组中则返回 `-1`。
 
 例如：
 
@@ -77,7 +77,6 @@ assert.notStrictEqual(quickCheck.toString().search(/\.indexOf\(/), -1);
 ```js
 function quickCheck(arr, elem) {
   // Only change code below this line
-
   // Only change code above this line
 }
 
@@ -88,6 +87,6 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 ```js
 function quickCheck(arr, elem) {
-  return arr.indexOf(elem) >= 0; 
+  return arr.indexOf(elem) >= 0;
 }
 ```

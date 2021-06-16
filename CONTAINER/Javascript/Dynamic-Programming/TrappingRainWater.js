@@ -35,7 +35,7 @@ right maxes =     [3,3,3,3,3,3,3,2,2,2,1,0]
 water contained = [0,0,1,0,1,2,1,0,0,1,0,0] -> sum = 6
 */
 
-function trap (heights) {
+function trap(heights) {
   const maxes = new Array(heights.length).fill(0)
 
   let leftMax = 0

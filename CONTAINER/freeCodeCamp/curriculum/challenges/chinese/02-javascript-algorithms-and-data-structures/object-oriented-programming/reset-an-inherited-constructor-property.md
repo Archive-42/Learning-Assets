@@ -13,17 +13,17 @@ dashedName: reset-an-inherited-constructor-property
 请看下面的举例：
 
 ```js
-function Bird() { }
+function Bird() {}
 Bird.prototype = Object.create(Animal.prototype);
 let duck = new Bird();
-duck.constructor
+duck.constructor;
 ```
 
 但是 `duck` 和其他所有 `Bird` 的实例都应该表明它们是由 `Bird` 创建的，而不是由 `Animal` 创建的。 为此，你可以手动把 `Bird's` 的 constructor 属性设置为 `Bird` 对象：
 
 ```js
 Bird.prototype.constructor = Bird;
-duck.constructor
+duck.constructor;
 ```
 
 # --instructions--
@@ -61,16 +61,14 @@ assert(beagle.constructor === Dog);
 ## --seed-contents--
 
 ```js
-function Animal() { }
-function Bird() { }
-function Dog() { }
+function Animal() {}
+function Bird() {}
+function Dog() {}
 
 Bird.prototype = Object.create(Animal.prototype);
 Dog.prototype = Object.create(Animal.prototype);
 
 // Only change code below this line
-
-
 
 let duck = new Bird();
 let beagle = new Dog();
@@ -79,9 +77,9 @@ let beagle = new Dog();
 # --solutions--
 
 ```js
-function Animal() { }
-function Bird() { }
-function Dog() { }
+function Animal() {}
+function Bird() {}
+function Dog() {}
 Bird.prototype = Object.create(Animal.prototype);
 Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;

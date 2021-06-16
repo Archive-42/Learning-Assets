@@ -40,7 +40,8 @@ Test 1
         <section>
           <h2>Coffees</h2>
           <article class="item">
-            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+            <p class="flavor">French Vanilla</p>
+            <p class="price">3.00</p>
           </article>
           <article>
             <p>Carmel Macchiato</p>
@@ -62,7 +63,8 @@ Test 1
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -97,4 +99,3 @@ h1, h2, p {
 }
 --fcc-editable-region--
 ```
-

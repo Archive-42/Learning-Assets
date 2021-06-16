@@ -35,26 +35,25 @@ The minimum coin change problem goes as follow:
 Example:
 
 > **_Coins:_** _\[1, 2, 5\]_
-> 
+>
 > **_Amount:_** _11_
-> 
+>
 > **_Answer_**_: 3 coins (because 5 + 5 + 1 = 11)_
 
 From a glance, this problem seems really daunting. An initial thought might be to determine which of the combinations of coins will have the minimum number of coins.
 
 Using this thinking, we’d determine that 11 can be made up in the following ways:
 
-*   1 + 1 + 1 + … + 1 = 11
-*   1 + 1 + 1 + 1 + 1 (9 ones) + 2 = 11
-*   …
-*   5 + 5 + 1= 11
+- 1 + 1 + 1 + … + 1 = 11
+- 1 + 1 + 1 + 1 + 1 (9 ones) + 2 = 11
+- …
+- 5 + 5 + 1= 11
 
 Now, this approach looks rather simple. But as you can see, I got tired of writing the various combination of coins. Just imagine if we have a larger array of coins and an even larger amount. This approach would be impractical.
 
 As a matter of fact, it’s unnecessary and tedious to record all the combination of coins. But fortunately, there’s a much simpler and arguably more elegant solution.
 
-DP Approach
------------
+## DP Approach
 
 Recall the Quora answer from earlier. Let’s start with:
 
@@ -112,7 +111,7 @@ Here, we’re saying that we already know that it takes one **_1-coin_** to make
 
 ![](https://miro.medium.com/max/2056/1*bTyXFWQ38q2l8ianr8c6eA.png)
 
-Okay, before I go to the next step, you’re probably asking: “**_What about the other coins, 2 and 5?_**” We’re getting to them next. What I wanted to emphasize is the idea that we’re solving this problem one coin at a time. Using just one coin, we ask ourselves: “_Using just this coin,_ w_hat’s the minimum number of coins that we can use to get this specific amount?_”
+Okay, before I go to the next step, you’re probably asking: “**_What about the other coins, 2 and 5?_**” We’re getting to them next. What I wanted to emphasize is the idea that we’re solving this problem one coin at a time. Using just one coin, we ask ourselves: “_Using just this coin,_ w*hat’s the minimum number of coins that we can use to get this specific amount?*”
 
 Now, let’s look at what happens when use both 1 and 2. We’ve already seen the ways in which using **_1-coins_** will get us a certain amount. But now, we’re going to look at whether we can replace some of those **_1-coins_** with **_2-coins_**.
 
@@ -136,9 +135,9 @@ Or simply put, from the amount 1, we can put a **_2-coin_** on top of it to make
 
 Now, this is where it gets interesting and I think you might start to see the pattern emerge. In order to create the amount 4 using **_1-coins_** and **_2-coins_**, we can see:
 
-*   1 + 1 + 1 + 1 = 4 (only 1s)
-*   1 + 1 + 2 = 4 (both 1 and 2)
-*   2 + 2 = 4 (all 2s)
+- 1 + 1 + 1 + 1 = 4 (only 1s)
+- 1 + 1 + 2 = 4 (both 1 and 2)
+- 2 + 2 = 4 (all 2s)
 
 As we can see, that using only two **_2-coins_** will give us the minimum number of coins it takes to make the amount 4. Or another way to put it, from the amount 2, we can add a **_2-coin_** to make 4:
 
@@ -154,7 +153,7 @@ Now that we’ve finished looking at the minimum number of coins needed to make 
 
 ![](https://miro.medium.com/max/1974/1*qpNJWH-jyMZs10Qa1coNVA.png)
 
-It’s becoming clear that the first argument in the **min()** is **array\[current\_amount — current\_coin\] + 1**, while the second argument is just the **array\[current\_amount\]**.
+It’s becoming clear that the first argument in the **min()** is **array\[current_amount — current_coin\] + 1**, while the second argument is just the **array\[current_amount\]**.
 
 And at last, we’ve exhausted all our coin options and see that at amount 11, there is a minimum value of 3 coins (5 + 5 + 1) that are required to make 11.
 
@@ -166,10 +165,9 @@ From the code, we can see that we’re using two for-loops. Since we’re iterat
 
 And since we’re using an array to keep track of our minimum coins for each amount, **_minCoins_**, the space complexity is **O(|amount|)**.
 
-*   Dynamic Programming (DP) is simply the method of storing previously calculated values so that we don’t have to recalculate them, which saves us time and allows us to use smaller sub-solutions to solve larger ones.
-*   Look at one coin at a time and find out what is the minimum number of coins that are needed to make each amount from 0 to **_amount_**.
-*   **Runtime**: **O(|coins|•|amount|)**, where **|coins|** represent the length of the **_coins_** array and **|amount|** represents the length of **_minCoins_** array.
-*   **Space Complexity**: **O(|amount|)** because we used an array to keep track of the minimum number of coins for each amount.
-
+- Dynamic Programming (DP) is simply the method of storing previously calculated values so that we don’t have to recalculate them, which saves us time and allows us to use smaller sub-solutions to solve larger ones.
+- Look at one coin at a time and find out what is the minimum number of coins that are needed to make each amount from 0 to **_amount_**.
+- **Runtime**: **O(|coins|•|amount|)**, where **|coins|** represent the length of the **_coins_** array and **|amount|** represents the length of **_minCoins_** array.
+- **Space Complexity**: **O(|amount|)** because we used an array to keep track of the minimum number of coins for each amount.
 
 [Source](https://trykv.medium.com/how-to-solve-minimum-coin-change-f96a758ccade)

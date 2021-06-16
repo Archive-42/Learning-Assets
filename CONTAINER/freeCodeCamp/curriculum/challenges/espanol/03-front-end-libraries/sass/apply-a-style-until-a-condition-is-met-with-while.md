@@ -15,12 +15,14 @@ The `@for` challenge gave an example to create a simple grid system. This can al
 ```scss
 $x: 1;
 @while $x < 13 {
-  .col-#{$x} { width: 100%/12 * $x;}
+  .col-#{$x} {
+    width: 100%/12 * $x;
+  }
   $x: $x + 1;
 }
 ```
 
-First, define a variable `$x` and set it to 1. Next, use the `@while` directive to create the grid system *while* `$x` is less than 13. After setting the CSS rule for `width`, `$x` is incremented by 1 to avoid an infinite loop.
+First, define a variable `$x` and set it to 1. Next, use the `@while` directive to create the grid system _while_ `$x` is less than 13. After setting the CSS rule for `width`, `$x` is incremented by 1 to avoid an infinite loop.
 
 # --instructions--
 
@@ -83,11 +85,7 @@ assert($('.text-5').css('font-size') == '75px');
 ## --seed-contents--
 
 ```html
-<style type='text/scss'>
-
-
-
-</style>
+<style type="text/scss"></style>
 
 <p class="text-1">Hello</p>
 <p class="text-2">Hello</p>
@@ -99,10 +97,10 @@ assert($('.text-5').css('font-size') == '75px');
 # --solutions--
 
 ```html
-<style type='text/scss'>
+<style type="text/scss">
   $x: 1;
   @while $x < 6 {
-    .text-#{$x}{
+    .text-#{$x} {
       font-size: 15px * $x;
     }
     $x: $x + 1;

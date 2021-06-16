@@ -16,7 +16,7 @@ dashedName: use-bracket-notation-to-find-the-last-character-in-a-string
 示例：
 
 ```js
-var firstName = "Charles";
+var firstName = 'Charles';
 var lastLetter = firstName[firstName.length - 1];
 ```
 
@@ -47,14 +47,16 @@ assert(code.match(/\.length/g).length > 0);
 ## --after-user-code--
 
 ```js
-(function(v){return v;})(lastLetterOfLastName);
+(function (v) {
+  return v;
+})(lastLetterOfLastName);
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 
 // Only change code below this line
 var lastLetterOfLastName = lastName; // Change this line
@@ -63,6 +65,6 @@ var lastLetterOfLastName = lastName; // Change this line
 # --solutions--
 
 ```js
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 var lastLetterOfLastName = lastName[lastName.length - 1];
 ```

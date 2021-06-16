@@ -19,12 +19,12 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -33,16 +33,16 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
 应该为第一个断言选择正确的方法：`isBelow` 或 `isAtLeast`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'isAtLeast',
         '5 is at least (>=) 5'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,16 +51,16 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
 应该为第二个断言选择正确的方法：`isBelow` 或 `isAtLeast`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'isAtLeast',
         '2 * Math.random() is at least 0'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -69,12 +69,12 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
 应该为第三个断言选择正确的方法：`isBelow` 或 `isAtLeast`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'isBelow', '1 is smaller than 2');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -83,16 +83,16 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
 应该为第四个断言选择正确的方法：`isBelow` 或 `isAtLeast`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[3].method,
         'isBelow',
         '2/3 (0.6666) is smaller than 1'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -21,13 +21,13 @@ dashedName: use-model-find-to-search-your-database
 应成功地找到所有符合条件的数据
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/find-all-by-name', {
     name: 'r@nd0mN4m3',
     age: 24,
     favoriteFoods: ['pizza']
   }).then(
-    (data) => {
+    data => {
       assert.isArray(data, 'the response should be an Array');
       assert.equal(
         data[0].name,
@@ -36,7 +36,7 @@ dashedName: use-model-find-to-search-your-database
       );
       assert.equal(data[0].__v, 0, 'The item should be not previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -36,4 +36,3 @@ x = 6
 ## --video-solution--
 
 2
-

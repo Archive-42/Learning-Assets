@@ -13,8 +13,8 @@ The keyword `let` is not the only new way to declare variables. In ES6, you can 
 `const` has all the awesome features that `let` has, with the added bonus that variables declared using `const` are read-only. They are a constant value, which means that once a variable is assigned with `const`, it cannot be reassigned.
 
 ```js
-const FAV_PET = "Cats";
-FAV_PET = "Dogs";
+const FAV_PET = 'Cats';
+FAV_PET = 'Dogs';
 ```
 
 The console will display an error due to reassigning the value of `FAV_PET`.
@@ -32,25 +32,25 @@ Change the code so that all variables are declared using `let` or `const`. Use `
 `var` should not exist in your code.
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/var/g));
+getUserInput => assert(!getUserInput('index').match(/var/g));
 ```
 
 `SENTENCE` should be a constant variable declared with `const`.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/(const SENTENCE)/g));
+getUserInput => assert(getUserInput('index').match(/(const SENTENCE)/g));
 ```
 
 `i` should be declared with `let`.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/(let i)/g));
+getUserInput => assert(getUserInput('index').match(/(let i)/g));
 ```
 
 `console.log` should be changed to print the `SENTENCE` variable.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(getUserInput('index').match(/console\.log\(\s*SENTENCE\s*\)\s*;?/g));
 ```
 
@@ -60,30 +60,26 @@ Change the code so that all variables are declared using `let` or `const`. Use `
 
 ```js
 function printManyTimes(str) {
-
   // Only change code below this line
 
-  var sentence = str + " is cool!";
-  for (var i = 0; i < str.length; i+=2) {
+  var sentence = str + ' is cool!';
+  for (var i = 0; i < str.length; i += 2) {
     console.log(sentence);
   }
 
   // Only change code above this line
-
 }
-printManyTimes("freeCodeCamp");
+printManyTimes('freeCodeCamp');
 ```
 
 # --solutions--
 
 ```js
 function printManyTimes(str) {
-
-  const SENTENCE = str + " is cool!";
-  for (let i = 0; i < str.length; i+=2) {
+  const SENTENCE = str + ' is cool!';
+  for (let i = 0; i < str.length; i += 2) {
     console.log(SENTENCE);
   }
-
 }
-printManyTimes("freeCodeCamp");
+printManyTimes('freeCodeCamp');
 ```

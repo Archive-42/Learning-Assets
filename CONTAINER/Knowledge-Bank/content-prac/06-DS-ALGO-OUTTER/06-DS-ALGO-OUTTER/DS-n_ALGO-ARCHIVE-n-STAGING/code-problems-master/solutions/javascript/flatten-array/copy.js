@@ -1,4 +1,4 @@
-module.exports = function flatten (array) {
+module.exports = function flatten(array) {
   var copy = [];
 
   for (var i = 0; i < array.length; i++) {

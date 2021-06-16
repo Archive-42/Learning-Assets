@@ -12,13 +12,13 @@ dashedName: create-and-save-a-record-of-a-model
 
 # --instructions--
 
-在 `createAndSavePerson` 函数中，用我们在上一个挑战中写好的 `Person` 构造函数创建 document 实例， 将包含 `name`、`age` 和 `favoriteFoods` 的对象传给构造函数， 这些属性的数据类型必须符合我们在 `personSchema` 中定义的类型。 然后在返回的 document 实例上调用方法 `document.save()`。 同时，按 Node.js 的方式为它传一个回调函数。 这是一种常见模式，以下所有CRUD方法都将这样的回调函数作为最后一个参数。
+在 `createAndSavePerson` 函数中，用我们在上一个挑战中写好的 `Person` 构造函数创建 document 实例， 将包含 `name`、`age` 和 `favoriteFoods` 的对象传给构造函数， 这些属性的数据类型必须符合我们在 `personSchema` 中定义的类型。 然后在返回的 document 实例上调用方法 `document.save()`。 同时，按 Node.js 的方式为它传一个回调函数。 这是一种常见模式，以下所有 CRUD 方法都将这样的回调函数作为最后一个参数。
 
 ```js
 /* Example */
 
 // ...
-person.save(function(err, data) {
+person.save(function (err, data) {
   //   ...do your stuff here...
 });
 ```
@@ -28,9 +28,9 @@ person.save(function(err, data) {
 应成功地创建数据并保存一条数据到数据库
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/create-and-save-person').then(
-    (data) => {
+    data => {
       assert.isString(data.name, '"item.name" should be a String');
       assert.isNumber(data.age, '28', '"item.age" should be a Number');
       assert.isArray(
@@ -39,7 +39,7 @@ person.save(function(err, data) {
       );
       assert.equal(data.__v, 0, 'The db item should be not previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

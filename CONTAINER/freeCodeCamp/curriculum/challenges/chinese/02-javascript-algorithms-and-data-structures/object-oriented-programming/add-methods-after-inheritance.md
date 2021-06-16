@@ -13,11 +13,11 @@ dashedName: add-methods-after-inheritance
 请看举例：`Bird` 是一个构造函数，它继承了 `Animal` 的 `prototype`：
 
 ```js
-function Animal() { }
-Animal.prototype.eat = function() {
-  console.log("nom nom nom");
+function Animal() {}
+Animal.prototype.eat = function () {
+  console.log('nom nom nom');
 };
-function Bird() { }
+function Bird() {}
 Bird.prototype = Object.create(Animal.prototype);
 Bird.prototype.constructor = Bird;
 ```
@@ -25,7 +25,7 @@ Bird.prototype.constructor = Bird;
 除了从 `Animal` 构造函数继承的行为之外，还需要给 `Bird` 对象添加它独有的行为。 这里，我们给 `Bird` 对象添加一个 `fly()` 函数。 函数会以一种与其他构造函数相同的方式添加到 `Bird's` 的 `prototype` 中：
 
 ```js
-Bird.prototype.fly = function() {
+Bird.prototype.fly = function () {
   console.log("I'm flying!");
 };
 ```
@@ -99,15 +99,14 @@ assert.throws(() => beagle.bark(), 'Woof!');
 ## --seed-contents--
 
 ```js
-function Animal() { }
-Animal.prototype.eat = function() { console.log("nom nom nom"); };
+function Animal() {}
+Animal.prototype.eat = function () {
+  console.log('nom nom nom');
+};
 
-function Dog() { }
+function Dog() {}
 
 // Only change code below this line
-
-
-
 
 // Only change code above this line
 
@@ -117,10 +116,12 @@ let beagle = new Dog();
 # --solutions--
 
 ```js
-function Animal() { }
-Animal.prototype.eat = function() { console.log("nom nom nom"); };
+function Animal() {}
+Animal.prototype.eat = function () {
+  console.log('nom nom nom');
+};
 
-function Dog() { }
+function Dog() {}
 Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;
 Dog.prototype.bark = function () {

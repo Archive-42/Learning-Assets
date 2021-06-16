@@ -52,9 +52,7 @@ assert(
     width: 70%;
     height: 400px;
     margin: 50px auto;
-
   }
-
 </style>
 
 <div></div>
@@ -69,7 +67,7 @@ assert(
     width: 70%;
     height: 400px;
     margin: 50px auto;
-    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
   }
 </style>
 <div></div>

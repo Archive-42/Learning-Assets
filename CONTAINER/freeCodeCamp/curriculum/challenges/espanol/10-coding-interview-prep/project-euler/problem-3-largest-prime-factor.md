@@ -68,7 +68,6 @@ assert.strictEqual(largestPrimeFactor(600851475143), 6857);
 
 ```js
 function largestPrimeFactor(number) {
-
   return true;
 }
 
@@ -78,7 +77,7 @@ largestPrimeFactor(13195);
 # --solutions--
 
 ```js
-const largestPrimeFactor = (number) => {
+const largestPrimeFactor = number => {
   let largestFactor = number;
 
   for (let i = 2; i <= Math.sqrt(largestFactor); i++) {
@@ -91,5 +90,5 @@ const largestPrimeFactor = (number) => {
   }
 
   return largestFactor;
-}
+};
 ```

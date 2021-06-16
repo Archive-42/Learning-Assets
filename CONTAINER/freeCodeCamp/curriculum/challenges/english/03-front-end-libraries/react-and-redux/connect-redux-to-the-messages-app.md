@@ -10,7 +10,7 @@ dashedName: connect-redux-to-the-messages-app
 
 Now that you understand how to use `connect` to connect React to Redux, you can apply what you've learned to your React component that handles messages.
 
-In the last lesson, the component you connected to Redux was named `Presentational`, and this wasn't arbitrary. This term *generally* refers to React components that are not directly connected to Redux. They are simply responsible for the presentation of UI and do this as a function of the props they receive. By contrast, container components are connected to Redux. These are typically responsible for dispatching actions to the store and often pass store state to child components as props.
+In the last lesson, the component you connected to Redux was named `Presentational`, and this wasn't arbitrary. This term _generally_ refers to React components that are not directly connected to Redux. They are simply responsible for the presentation of UI and do this as a function of the props they receive. By contrast, container components are connected to Redux. These are typically responsible for dispatching actions to the store and often pass store state to child components as props.
 
 # --instructions--
 
@@ -88,7 +88,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<AppWrapper />, document.getElementById('root'))
+ReactDOM.render(<AppWrapper />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -97,20 +97,17 @@ ReactDOM.render(<AppWrapper />, document.getElementById('root'))
 // Redux:
 const ADD = 'ADD';
 
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: ADD,
     message: message
-  }
+  };
 };
 
 const messageReducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
-      return [
-        ...state,
-        action.message
-      ];
+      return [...state, action.message];
     default:
       return state;
   }
@@ -125,7 +122,7 @@ class Presentational extends React.Component {
     this.state = {
       input: '',
       messages: []
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
     this.submitMessage = this.submitMessage.bind(this);
   }
@@ -135,7 +132,7 @@ class Presentational extends React.Component {
     });
   }
   submitMessage() {
-    this.setState((state) => {
+    this.setState(state => {
       const currentMessage = state.input;
       return {
         input: '',
@@ -147,34 +144,30 @@ class Presentational extends React.Component {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        <input
-          value={this.state.input}
-          onChange={this.handleChange}/><br/>
+        <input value={this.state.input} onChange={this.handleChange} />
+        <br />
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.state.messages.map( (message, idx) => {
-              return (
-                 <li key={idx}>{message}</li>
-              )
-            })
-          }
+          {this.state.messages.map((message, idx) => {
+            return <li key={idx}>{message}</li>;
+          })}
         </ul>
       </div>
     );
   }
-};
+}
 
 // React-Redux:
-const mapStateToProps = (state) => {
-  return { messages: state }
+const mapStateToProps = state => {
+  return { messages: state };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    submitNewMessage: (newMessage) => {
-       dispatch(addMessage(newMessage))
+    submitNewMessage: newMessage => {
+      dispatch(addMessage(newMessage));
     }
-  }
+  };
 };
 
 const Provider = ReactRedux.Provider;
@@ -182,16 +175,15 @@ const connect = ReactRedux.connect;
 
 // Define the Container component here:
 
-
 class AppWrapper extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
     // Complete the return statement:
-    return (null);
+    return null;
   }
-};
+}
 ```
 
 # --solutions--
@@ -200,20 +192,17 @@ class AppWrapper extends React.Component {
 // Redux:
 const ADD = 'ADD';
 
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: ADD,
     message: message
-  }
+  };
 };
 
 const messageReducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
-      return [
-        ...state,
-        action.message
-      ];
+      return [...state, action.message];
     default:
       return state;
   }
@@ -228,9 +217,9 @@ class Presentational extends React.Component {
     this.state = {
       input: '',
       messages: []
-    }
- this.handleChange = this.handleChange.bind(this);
- this.submitMessage = this.submitMessage.bind(this);
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.submitMessage = this.submitMessage.bind(this);
   }
   handleChange(event) {
     this.setState({
@@ -238,7 +227,7 @@ class Presentational extends React.Component {
     });
   }
   submitMessage() {
-    this.setState((state) => {
+    this.setState(state => {
       const currentMessage = state.input;
       return {
         input: '',
@@ -250,34 +239,30 @@ class Presentational extends React.Component {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        <input
-          value={this.state.input}
-          onChange={this.handleChange}/><br/>
+        <input value={this.state.input} onChange={this.handleChange} />
+        <br />
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.state.messages.map( (message, idx) => {
-              return (
-                 <li key={idx}>{message}</li>
-              )
-            })
-          }
+          {this.state.messages.map((message, idx) => {
+            return <li key={idx}>{message}</li>;
+          })}
         </ul>
       </div>
     );
   }
-};
+}
 
 // React-Redux:
-const mapStateToProps = (state) => {
-  return { messages: state }
+const mapStateToProps = state => {
+  return { messages: state };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    submitNewMessage: (newMessage) => {
-       dispatch(addMessage(newMessage))
+    submitNewMessage: newMessage => {
+      dispatch(addMessage(newMessage));
     }
-  }
+  };
 };
 
 const Provider = ReactRedux.Provider;
@@ -292,9 +277,9 @@ class AppWrapper extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Container/>
+        <Container />
       </Provider>
     );
   }
-};
+}
 ```

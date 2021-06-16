@@ -28,27 +28,29 @@ assert(
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Spreadsheet</title>
-  <style>
-    #container {
-      display: grid;
-      grid-template-columns: 50px repeat(10, 200px);
-      grid-template-rows: repeat(11, 30px);
-    }
-    .label {
-      background-color: lightgray;
-      text-align: center;
-      vertical-align: middle;
-      line-height: 30px;
-    }
-  </style>
-</head>
-<body>
-<div id="container">
-  <div></div>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spreadsheet</title>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: 50px repeat(10, 200px);
+        grid-template-rows: repeat(11, 30px);
+      }
+      .label {
+        background-color: lightgray;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div></div>
+    </div>
+  </body>
+</html>
 ```
 
 ## --after-user-code--
@@ -62,15 +64,12 @@ assert(
 
 ```html
 <script>
-
-const infixToFunction = {
-  "+": (x, y) => x + y,
-  "-": (x, y) => x - y,
-  "*": (x, y) => x * y,
-  "/": (x, y) => x / y
-};
-
-
+  const infixToFunction = {
+    '+': (x, y) => x + y,
+    '-': (x, y) => x - y,
+    '*': (x, y) => x * y,
+    '/': (x, y) => x / y
+  };
 </script>
 ```
 
@@ -78,13 +77,13 @@ const infixToFunction = {
 
 ```html
 <script>
-const infixToFunction = {
-  "+": (x, y) => x + y,
-  "-": (x, y) => x - y,
-  "*": (x, y) => x * y,
-  "/": (x, y) => x / y
-};
+  const infixToFunction = {
+    '+': (x, y) => x + y,
+    '-': (x, y) => x - y,
+    '*': (x, y) => x * y,
+    '/': (x, y) => x / y
+  };
 
-const infixEval = (str, regex) => str.replace(regex, "");
+  const infixEval = (str, regex) => str.replace(regex, '');
 </script>
 ```

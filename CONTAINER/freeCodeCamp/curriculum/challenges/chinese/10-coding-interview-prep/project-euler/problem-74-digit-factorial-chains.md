@@ -51,7 +51,6 @@ assert.strictEqual(digitFactorialChains(), 402);
 
 ```js
 function digitFactorialChains() {
-
   return true;
 }
 

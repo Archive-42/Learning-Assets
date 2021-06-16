@@ -56,12 +56,12 @@ Do not forget to remove the `assert.fail()` call.
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -70,12 +70,12 @@ All tests should pass.
 You should assert that the headless browser request succeeded.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'browser.success');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -84,14 +84,14 @@ You should assert that the headless browser request succeeded.
 You should assert that the text inside the element 'span#name' is 'Cristoforo'.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'browser.text');
       assert.match(data.assertions[1].args[0], /('|")span#name\1/);
       assert.match(data.assertions[1].args[1], /('|")Cristoforo\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -100,14 +100,14 @@ You should assert that the text inside the element 'span#name' is 'Cristoforo'.
 You should assert that the text inside the element 'span#surname' is 'Colombo'.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'browser.text');
       assert.match(data.assertions[2].args[0], /('|")span#surname\1/);
       assert.match(data.assertions[2].args[1], /('|")Colombo\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -116,14 +116,14 @@ You should assert that the text inside the element 'span#surname' is 'Colombo'.
 You should assert that the element 'span#dates' exist and its count is 1.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[3].method, 'browser.element');
       assert.match(data.assertions[3].args[0], /('|")span#dates\1/);
       assert.equal(data.assertions[3].args[1], 1);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

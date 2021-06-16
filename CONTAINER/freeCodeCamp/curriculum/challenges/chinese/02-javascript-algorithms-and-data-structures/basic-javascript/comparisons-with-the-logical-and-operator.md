@@ -16,19 +16,19 @@ dashedName: comparisons-with-the-logical-and-operator
 ```js
 if (num > 5) {
   if (num < 10) {
-    return "Yes";
+    return 'Yes';
   }
 }
-return "No";
+return 'No';
 ```
 
 只有当 `num` 的值大于 `5` 并且小于`10` 时才会返回 `Yes`。 相同的逻辑可被写为：
 
 ```js
 if (num > 5 && num < 10) {
-  return "Yes";
+  return 'Yes';
 }
-return "No";
+return 'No';
 ```
 
 # --instructions--
@@ -107,12 +107,12 @@ function testLogicalAnd(val) {
 
   if (val) {
     if (val) {
-      return "Yes";
+      return 'Yes';
     }
   }
 
   // Only change code above this line
-  return "No";
+  return 'No';
 }
 
 testLogicalAnd(10);
@@ -123,8 +123,8 @@ testLogicalAnd(10);
 ```js
 function testLogicalAnd(val) {
   if (val >= 25 && val <= 50) {
-    return "Yes";
+    return 'Yes';
   }
-  return "No";
+  return 'No';
 }
 ```

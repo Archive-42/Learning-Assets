@@ -66,7 +66,11 @@ const MatrixExponentiationRecursive = (mat, m) => {
 }
 
 const main = () => {
-  const mat = [[1, 0, 2], [2, 1, 0], [0, 2, 1]]
+  const mat = [
+    [1, 0, 2],
+    [2, 1, 0],
+    [0, 2, 1]
+  ]
 
   // mat ^ 0 = [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ]
   console.log(MatrixExponentiationRecursive(mat, 0))

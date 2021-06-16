@@ -15,7 +15,7 @@ describe('checkWordOccurrence', () => {
     const occurrencesObjectKeys = Object.keys(charsOccurrences)
     const expectObjectKeys = Object.keys(expectResult)
     expect(occurrencesObjectKeys.length).toBe(expectObjectKeys.length)
-    expectObjectKeys.forEach(key => {
+    expectObjectKeys.forEach((key) => {
       expect(expectResult[key]).toBe(charsOccurrences[key])
     })
   })
@@ -26,7 +26,7 @@ describe('checkWordOccurrence', () => {
     const occurrencesObjectKeys = Object.keys(charsOccurrences)
     const expectObjectKeys = Object.keys(expectResult)
     expect(occurrencesObjectKeys.length).toBe(expectObjectKeys.length)
-    expectObjectKeys.forEach(key => {
+    expectObjectKeys.forEach((key) => {
       expect(expectResult[key]).toBe(charsOccurrences[key])
     })
   })

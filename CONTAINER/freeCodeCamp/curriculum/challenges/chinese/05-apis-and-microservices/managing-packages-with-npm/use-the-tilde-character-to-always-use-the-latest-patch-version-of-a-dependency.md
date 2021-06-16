@@ -29,9 +29,9 @@ dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-
 “dependencies”应该包含“moment”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -39,7 +39,7 @@ dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-
         '"dependencies" does not include "moment"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -48,9 +48,9 @@ dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-
 “moment”的版本号应该是“~2.10.2”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.match(
         packJson.dependencies.moment,
@@ -58,7 +58,7 @@ dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-
         'Wrong version of "moment". It should be ~2.10.2'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

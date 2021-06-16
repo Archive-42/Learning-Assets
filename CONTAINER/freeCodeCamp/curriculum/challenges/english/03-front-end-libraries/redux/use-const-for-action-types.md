@@ -70,7 +70,7 @@ assert(
 The `authReducer` function should handle multiple action types with a switch statement.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       return (
@@ -96,7 +96,7 @@ assert(
 The action creators and the reducer should reference the `LOGIN` and `LOGOUT` constants.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       const noWhiteSpace = __helpers.removeWhiteSpace(
@@ -117,29 +117,24 @@ The action creators and the reducer should reference the `LOGIN` and `LOGOUT` co
 ## --seed-contents--
 
 ```js
-
-
 const defaultState = {
   authenticated: false
 };
 
 const authReducer = (state = defaultState, action) => {
-
   switch (action.type) {
-    case 'LOGIN': 
+    case 'LOGIN':
       return {
         authenticated: true
-      }
-    case 'LOGOUT': 
+      };
+    case 'LOGOUT':
       return {
         authenticated: false
-      }
+      };
 
     default:
       return state;
-
   }
-
 };
 
 const store = Redux.createStore(authReducer);
@@ -147,13 +142,13 @@ const store = Redux.createStore(authReducer);
 const loginUser = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 
 const logoutUser = () => {
   return {
     type: 'LOGOUT'
-  }
+  };
 };
 ```
 
@@ -168,24 +163,20 @@ const defaultState = {
 };
 
 const authReducer = (state = defaultState, action) => {
-
   switch (action.type) {
-
     case LOGIN:
       return {
         authenticated: true
-      }
+      };
 
     case LOGOUT:
       return {
         authenticated: false
-      }
+      };
 
     default:
       return state;
-
   }
-
 };
 
 const store = Redux.createStore(authReducer);
@@ -193,12 +184,12 @@ const store = Redux.createStore(authReducer);
 const loginUser = () => {
   return {
     type: LOGIN
-  }
+  };
 };
 
 const logoutUser = () => {
   return {
     type: LOGOUT
-  }
+  };
 };
 ```

@@ -58,7 +58,7 @@ Dispatching `addMessage` with `submitNewMessage` from `mapDispatchToProps` shoul
 assert(
   (function () {
     let testAction;
-    const dispatch = (fn) => {
+    const dispatch = fn => {
       testAction = fn;
     };
     let dispatchFn = mapDispatchToProps(dispatch);
@@ -75,11 +75,11 @@ assert(
 ## --seed-contents--
 
 ```jsx
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: 'ADD',
     message: message
-  }
+  };
 };
 
 // Change code below this line
@@ -88,20 +88,20 @@ const addMessage = (message) => {
 # --solutions--
 
 ```jsx
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: 'ADD',
     message: message
-  }
+  };
 };
 
 // Change code below this line
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    submitNewMessage: function(message) {
+    submitNewMessage: function (message) {
       dispatch(addMessage(message));
     }
-  }
+  };
 };
 ```

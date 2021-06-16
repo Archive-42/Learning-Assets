@@ -6,8 +6,7 @@ formatted notebooks and comment further. The following are the **draft**
 Jupyter notebooks. A subset of the blog and the content here is available
 in printed form on [Amazon](http://www.amazon.com/Python-Signal-Processing-Featuring-Notebooks/dp/3319013416).
 
-Notebook Viewer Static Page Views
------------------------------------
+## Notebook Viewer Static Page Views
 
 **Signal Processing Reading List**
 

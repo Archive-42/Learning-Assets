@@ -26,23 +26,7 @@ assert(typeof insertionSort == 'function');
 assert(
   isSorted(
     insertionSort([
-      1,
-      4,
-      2,
-      8,
-      345,
-      123,
-      43,
-      32,
-      5643,
-      63,
-      123,
-      43,
-      2,
-      55,
-      1,
-      234,
-      92
+      1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92
     ])
   )
 );
@@ -53,23 +37,7 @@ assert(
 ```js
 assert.sameMembers(
   insertionSort([
-    1,
-    4,
-    2,
-    8,
-    345,
-    123,
-    43,
-    32,
-    5643,
-    63,
-    123,
-    43,
-    2,
-    55,
-    1,
-    234,
-    92
+    1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92
   ]),
   [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]
 );
@@ -86,16 +54,14 @@ assert(isBuiltInSortUsed());
 ## --after-user-code--
 
 ```js
-function isSorted(a){
-  for(let i = 0; i < a.length - 1; i++)
-    if(a[i] > a[i + 1])
-      return false;
+function isSorted(a) {
+  for (let i = 0; i < a.length - 1; i++) if (a[i] > a[i + 1]) return false;
   return true;
 }
 
-function isBuiltInSortUsed(){
+function isBuiltInSortUsed() {
   let sortUsed = false;
-  Array.prototype.sort = () => sortUsed = true;
+  Array.prototype.sort = () => (sortUsed = true);
   insertionSort([0, 1]);
   return !sortUsed;
 }
@@ -110,13 +76,15 @@ function insertionSort(array) {
   // Only change code above this line
 }
 
-insertionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]);
+insertionSort([
+  1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92
+]);
 ```
 
 # --solutions--
 
 ```js
-function insertionSort (array) {
+function insertionSort(array) {
   for (let currentIndex = 0; currentIndex < array.length; currentIndex++) {
     let current = array[currentIndex];
     let j = currentIndex - 1;

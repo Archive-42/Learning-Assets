@@ -12,7 +12,7 @@ dashedName: quoting-strings-with-single-quotes
 <dfn>String</dfn> values in JavaScript may be written with single or double quotes, as long as you start and end with the same type of quote. Unlike some other programming languages, single and double quotes work the same in JavaScript.
 
 ```js
-doubleQuoteStr = "This is a string"; 
+doubleQuoteStr = 'This is a string';
 singleQuoteStr = 'This is also a string';
 ```
 
@@ -25,7 +25,7 @@ conversation = 'Finn exclaims to Jake, "Algebraic!"';
 However, this becomes a problem if you need to use the outermost quotes within it. Remember, a string has the same kind of quote at the beginning and end. But if you have that same quote somewhere in the middle, the string will stop early and throw an error.
 
 ```js
-goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
+goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"';
 badStr = 'Finn responds, "Let's go!"';
 ```
 
@@ -65,13 +65,15 @@ assert(code.match(/"/g).length === 4 && code.match(/'/g).length === 2);
 ## --after-user-code--
 
 ```js
-(function() { return "myStr = " + myStr; })();
+(function () {
+  return 'myStr = ' + myStr;
+})();
 ```
 
 ## --seed-contents--
 
 ```js
-var myStr = "<a href=\"http://www.example.com\" target=\"_blank\">Link</a>";
+var myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
 ```
 
 # --solutions--

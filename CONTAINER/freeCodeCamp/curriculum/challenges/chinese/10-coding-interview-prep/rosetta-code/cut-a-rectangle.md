@@ -8,7 +8,7 @@ dashedName: cut-a-rectangle
 
 # --description--
 
-A given rectangle is made from *m* × *n* squares. If *m* and *n* are not both odd, then it is possible to cut a path through the rectangle along the square edges such that the rectangle splits into two connected pieces with the same shape (after rotating one of the pieces by 180°). All such paths for 2 × 2 and 4 × 3 rectangles are shown below.
+A given rectangle is made from _m_ × _n_ squares. If _m_ and _n_ are not both odd, then it is possible to cut a path through the rectangle along the square edges such that the rectangle splits into two connected pieces with the same shape (after rotating one of the pieces by 180°). All such paths for 2 × 2 and 4 × 3 rectangles are shown below.
 
 <div style="width: 100%; text-align: center;">
   <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="520" height="170" aria-hidden="true" alt="Diagram showing the possible paths for 2 by 2 and 4 by 3 rectangles">
@@ -61,7 +61,7 @@ A given rectangle is made from *m* × *n* squares. If *m* and *n* are not both o
 
 # --instructions--
 
-Write a function that calculates the number of different ways to cut an *m* × *n* rectangle.
+Write a function that calculates the number of different ways to cut an _m_ × _n_ rectangle.
 
 # --hints--
 
@@ -112,9 +112,7 @@ assert.equal(cutRectangle(7, 4), 151);
 ## --seed-contents--
 
 ```js
-function cutRectangle(w, h) {
-
-}
+function cutRectangle(w, h) {}
 ```
 
 # --solutions--
@@ -123,7 +121,12 @@ function cutRectangle(w, h) {
 function cutRectangle(w, h) {
   if (w % 2 == 1 && h % 2 == 1) return;
 
-  var dirs = [[0, -1], [-1, 0], [0, 1], [1, 0]];
+  var dirs = [
+    [0, -1],
+    [-1, 0],
+    [0, 1],
+    [1, 0]
+  ];
 
   var grid = new Array(h);
   for (var i = 0; i < grid.length; i++) grid[i] = new Array(w);

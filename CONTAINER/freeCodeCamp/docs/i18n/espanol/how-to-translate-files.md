@@ -68,7 +68,7 @@ Feliz traducción.
 
 Una vez que visites la plataforma de traducción, verás varios "proyectos" disponibles para traducción:
 
-1. [Documentación del proyecto de contribución ](https://translate.freecodecamp.org/contributing-docs),  el cual contiene los archivos para este sitio de documentación.
+1. [Documentación del proyecto de contribución ](https://translate.freecodecamp.org/contributing-docs), el cual contiene los archivos para este sitio de documentación.
 2. [Proyecto de currículo de programación](https://translate.freecodecamp.org/curriculum), el cual contiene nuestros archivos de desafío para nuestro plan de estudios.
 3. [Aprende Interfaz de usuario](https://translate.freecodecamp.org/learn-ui) proyecto que contiene cadenas para elementos de interfaz de usuario como botones, etiquetas, etc. para nuestra plataforma de aprendizaje.
 
@@ -115,7 +115,7 @@ Eres bienvenido a traducir tantas cadenas como desees, no se requieren pasos adi
 
 Traducir nuestra documentación de contribución es un proceso similar a traducir nuestros archivos de currículo.
 
-> [!NOTE] Nuestra documentación de contribución esta basada en `docsify`, y tenemos una  forma especial de procesar los cuadros de mensaje como este. Si ves cadenas que comiencen con `[!NOTE]`, `[!WARNING]` o ` [!TIP]`, estas palabras NO deben traducirse.
+> [!NOTE] Nuestra documentación de contribución esta basada en `docsify`, y tenemos una forma especial de procesar los cuadros de mensaje como este. Si ves cadenas que comiencen con `[!NOTE]`, `[!WARNING]` o ` [!TIP]`, estas palabras NO deben traducirse.
 
 ## Calificar traducciones
 

@@ -56,19 +56,18 @@ Here’s the code in JavaScript:
 
 > **_Note_**: This specific DFS algorithm allows us to determine if it’s possible to reach from one place to another. DFS can be used in a variety of ways and there may be subtle changes to the algorithm above. However the general concept remains the same.
 
-Analysis of DFS
----------------
+## Analysis of DFS
 
 Now let’s analyze this algorithm. Since we’re traversing through each neighbor of the node and we’re ignoring the visited ones, we have a runtime of **O(V + E)**.
 
 A quick explanation of exactly what **V+E** means:
 
 > **V** represents the total number of vertices. **E** represents the total number of edges. Every vertex has a number of edges.
-> 
+>
 > While it may seem that one may be led to believe that it is **V•E** instead of **V + E**, let’s think about what **V•E** means exactly.
-> 
+>
 > For something to be **V•E**, it would mean that for each vertex, we have to look at all the edges in the graph regardless of whether or not those edges are connected to that specific vertex.
-> 
+>
 > While, on the other hand, **V + E** means that for each vertex, we only look at the number of edges that pertain to that vertex. Recall from the [previous post](https://medium.com/@trykv/algorithms-on-graphs-what-is-a-graph-69d8b9384b49), that the space we take up for the adjacency list is **O(V + E)**. Each vertex has a number of edges and in the worst case, if we were to run DFS on each vertex, we would have done **O(V)** work along with exploring all the edges of the vertices, which is **O(E)**. Once we’ve looked at all **V** number of vertices, we would have also looked at a total of **E** edges. Therefore, it is **V + E**.
 
 Now, since DFS uses recursion on each vertex, that means that a **stack** is used (which is why it’s called a **_stack_** _overflow error_ whenever you run into an infinite recursive call). Therefore, the space complexity is **O(V)**.
@@ -103,8 +102,7 @@ Well, we could utilize a **queue**’s first-in-first-out (FIFO) property where 
 
 Now let’s look at the code in JavaScript:
 
-Analysis of BFS
----------------
+## Analysis of BFS
 
 It may seem like BFS is slower. But if you look carefully at the visualizations of both BFS and DFS, you’ll find that they actually have the same runtime.
 
@@ -134,11 +132,10 @@ Much like how BFS starts at the source and visits the source’s neighbors first
 
 Like a ripple
 
-*   Depth-First Search (DFS) and Breadth-First Search (BFS) are both used to traverse graphs.
-*   DFS charges down one path until it has exhausted that path to find its target, while BFS ripples through neighboring vertices to find its target.
-*   DFS uses a stack while BFS uses a queue.
-*   Both DFS and BFS have a runtime of **O(V + E)** and a space complexity of **O(V)**.
-*   Both algorithms have different philosophies but share equal importance in how we traverse graphs.
-
+- Depth-First Search (DFS) and Breadth-First Search (BFS) are both used to traverse graphs.
+- DFS charges down one path until it has exhausted that path to find its target, while BFS ripples through neighboring vertices to find its target.
+- DFS uses a stack while BFS uses a queue.
+- Both DFS and BFS have a runtime of **O(V + E)** and a space complexity of **O(V)**.
+- Both algorithms have different philosophies but share equal importance in how we traverse graphs.
 
 [Source](https://trykv.medium.com/algorithms-on-graphs-lets-talk-depth-first-search-dfs-and-breadth-first-search-bfs-5250c31d831a)

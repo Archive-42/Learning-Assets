@@ -106,7 +106,7 @@ assert(
 async () => {
   const mockedComponent = Enzyme.mount(React.createElement(AppWrapper));
   const testValue = '__MOCK__INPUT__';
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   const causeChange = (c, v) =>
     c.find('input').simulate('change', { target: { value: v } });
@@ -129,7 +129,7 @@ async () => {
 ```js
 async () => {
   const mockedComponent = Enzyme.mount(React.createElement(AppWrapper));
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   let beforeProps = mockedComponent.find('Presentational').props();
   const testValue = '__TEST__EVENT__INPUT__';
@@ -161,7 +161,7 @@ async () => {
 ```js
 async () => {
   const mockedComponent = Enzyme.mount(React.createElement(AppWrapper));
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 100));
   let beforeProps = mockedComponent.find('Presentational').props();
   const testValue = '__TEST__EVENT__INPUT__';
@@ -194,7 +194,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<AppWrapper />, document.getElementById('root'))
+ReactDOM.render(<AppWrapper />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -203,20 +203,17 @@ ReactDOM.render(<AppWrapper />, document.getElementById('root'))
 // Redux:
 const ADD = 'ADD';
 
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: ADD,
     message: message
-  }
+  };
 };
 
 const messageReducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
-      return [
-        ...state,
-        action.message
-      ];
+      return [...state, action.message];
     default:
       return state;
   }
@@ -235,7 +232,7 @@ class Presentational extends React.Component {
     this.state = {
       input: '',
       messages: []
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
     this.submitMessage = this.submitMessage.bind(this);
   }
@@ -245,7 +242,7 @@ class Presentational extends React.Component {
     });
   }
   submitMessage() {
-    this.setState((state) => ({
+    this.setState(state => ({
       input: '',
       messages: state.messages.concat(state.input)
     }));
@@ -254,34 +251,30 @@ class Presentational extends React.Component {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        <input
-          value={this.state.input}
-          onChange={this.handleChange}/><br/>
+        <input value={this.state.input} onChange={this.handleChange} />
+        <br />
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.state.messages.map( (message, idx) => {
-              return (
-                 <li key={idx}>{message}</li>
-              )
-            })
-          }
+          {this.state.messages.map((message, idx) => {
+            return <li key={idx}>{message}</li>;
+          })}
         </ul>
       </div>
     );
   }
-};
+}
 // Change code above this line
 
-const mapStateToProps = (state) => {
-  return {messages: state}
+const mapStateToProps = state => {
+  return { messages: state };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    submitNewMessage: (message) => {
-      dispatch(addMessage(message))
+    submitNewMessage: message => {
+      dispatch(addMessage(message));
     }
-  }
+  };
 };
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational);
@@ -290,11 +283,11 @@ class AppWrapper extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Container/>
+        <Container />
       </Provider>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -303,20 +296,17 @@ class AppWrapper extends React.Component {
 // Redux:
 const ADD = 'ADD';
 
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: ADD,
     message: message
-  }
+  };
 };
 
 const messageReducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
-      return [
-        ...state,
-        action.message
-      ];
+      return [...state, action.message];
     default:
       return state;
   }
@@ -334,9 +324,9 @@ class Presentational extends React.Component {
     super(props);
     this.state = {
       input: ''
-    }
- this.handleChange = this.handleChange.bind(this);
- this.submitMessage = this.submitMessage.bind(this);
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.submitMessage = this.submitMessage.bind(this);
   }
   handleChange(event) {
     this.setState({
@@ -353,34 +343,30 @@ class Presentational extends React.Component {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        <input
-          value={this.state.input}
-          onChange={this.handleChange}/><br/>
+        <input value={this.state.input} onChange={this.handleChange} />
+        <br />
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.props.messages.map( (message, idx) => {
-              return (
-                 <li key={idx}>{message}</li>
-              )
-            })
-          }
+          {this.props.messages.map((message, idx) => {
+            return <li key={idx}>{message}</li>;
+          })}
         </ul>
       </div>
     );
   }
-};
+}
 // Change code above this line
 
-const mapStateToProps = (state) => {
-  return {messages: state}
+const mapStateToProps = state => {
+  return { messages: state };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    submitNewMessage: (message) => {
-      dispatch(addMessage(message))
+    submitNewMessage: message => {
+      dispatch(addMessage(message));
     }
-  }
+  };
 };
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational);
@@ -389,9 +375,9 @@ class AppWrapper extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Container/>
+        <Container />
       </Provider>
     );
   }
-};
+}
 ```

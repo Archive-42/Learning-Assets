@@ -58,9 +58,9 @@ let heap = new BinaryHeap((a, b) => b - a);
 
 The comparator function uses the same format as comparator functions for JavaScript arrays, two values are passed in and you must return:
 
-* A negative number if the first value should come before the second
-* Zero if the ordering of the two values should remain unchanged
-* A positive number if the first value should come after the second
+- A negative number if the first value should come before the second
+- Zero if the ordering of the two values should remain unchanged
+- A positive number if the first value should come after the second
 
 ## Note on Code Style
 

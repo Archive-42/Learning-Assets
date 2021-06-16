@@ -48,7 +48,7 @@ assert($('.yellow').css('background-color') == 'rgb(255, 255, 0)');
 ```html
 <style>
   body {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
   .blue {
     background-color: #000000;
@@ -71,7 +71,7 @@ assert($('.yellow').css('background-color') == 'rgb(255, 255, 0)');
 ```html
 <style>
   body {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
   .blue {
     background-color: blue;

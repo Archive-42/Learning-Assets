@@ -42,7 +42,6 @@ assert.strictEqual(amicableChains(), 14316);
 
 ```js
 function amicableChains() {
-
   return true;
 }
 

@@ -98,39 +98,36 @@ assert(
 ## --after-user-code--
 
 ```js
-BinarySearchTree.prototype = Object.assign(
-  BinarySearchTree.prototype,
-  {
-    add: function(value) {
-      var node = this.root;
-      if (node == null) {
-        this.root = new Node(value);
-        return;
-      } else {
-        function searchTree(node) {
-          if (value < node.value) {
-            if (node.left == null) {
-              node.left = new Node(value);
-              return;
-            } else if (node.left != null) {
-              return searchTree(node.left);
-            }
-          } else if (value > node.value) {
-            if (node.right == null) {
-              node.right = new Node(value);
-              return;
-            } else if (node.right != null) {
-              return searchTree(node.right);
-            }
-          } else {
-            return null;
+BinarySearchTree.prototype = Object.assign(BinarySearchTree.prototype, {
+  add: function (value) {
+    var node = this.root;
+    if (node == null) {
+      this.root = new Node(value);
+      return;
+    } else {
+      function searchTree(node) {
+        if (value < node.value) {
+          if (node.left == null) {
+            node.left = new Node(value);
+            return;
+          } else if (node.left != null) {
+            return searchTree(node.left);
           }
+        } else if (value > node.value) {
+          if (node.right == null) {
+            node.right = new Node(value);
+            return;
+          } else if (node.right != null) {
+            return searchTree(node.right);
+          }
+        } else {
+          return null;
         }
-        return searchTree(node);
       }
+      return searchTree(node);
     }
   }
-);
+});
 ```
 
 ## --seed-contents--
@@ -145,7 +142,7 @@ function Node(value) {
 function BinarySearchTree() {
   this.root = null;
   // Only change code below this line
-  
+
   // Only change code above this line
 }
 ```
@@ -153,7 +150,7 @@ function BinarySearchTree() {
 # --solutions--
 
 ```js
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
 function Node(value) {
   this.value = value;
   this.left = null;
@@ -162,7 +159,7 @@ function Node(value) {
 function BinarySearchTree() {
   this.root = null;
   this.isPresent = function (value) {
-    var current = this.root
+    var current = this.root;
     while (current) {
       if (value === current.value) {
         return true;
@@ -170,6 +167,6 @@ function BinarySearchTree() {
       current = value < current.value ? current.left : current.right;
     }
     return false;
-  }
+  };
 }
 ```

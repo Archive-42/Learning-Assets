@@ -1,6 +1,6 @@
 ---
 id: 5900f4021000cf542c50ff14
-title: 'Problem 148: Exploring Pascal''s triangle'
+title: "Problem 148: Exploring Pascal's triangle"
 challengeType: 5
 forumTopicId: 301777
 dashedName: problem-148-exploring-pascals-triangle
@@ -40,7 +40,6 @@ assert.strictEqual(euler148(), 2129970655314432);
 
 ```js
 function euler148() {
-
   return true;
 }
 

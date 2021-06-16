@@ -89,9 +89,7 @@ assert.equal(isKaprekar(999, 17), false);
 ## --seed-contents--
 
 ```js
-function isKaprekar(n, bs) {
-
-}
+function isKaprekar(n, bs) {}
 ```
 
 # --solutions--

@@ -64,7 +64,9 @@ assert(
 ## --after-user-code--
 
 ```js
-(function(a,b,c){ return "a = " + a + ", b = " + b + ", c = " + c; })(a,b,c);
+(function (a, b, c) {
+  return 'a = ' + a + ', b = ' + b + ', c = ' + c;
+})(a, b, c);
 ```
 
 ## --seed-contents--

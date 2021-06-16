@@ -38,7 +38,7 @@ assert(store.getState().login === false);
 The `store.dispatch()` method should be used to dispatch an action of type `LOGIN`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       let noWhiteSpace = getUserInput('index').replace(/\s/g, '');
@@ -55,14 +55,12 @@ The `store.dispatch()` method should be used to dispatch an action of type `LOGI
 ## --seed-contents--
 
 ```js
-const store = Redux.createStore(
-  (state = {login: false}) => state
-);
+const store = Redux.createStore((state = { login: false }) => state);
 
 const loginAction = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 
 // Dispatch the action here:
@@ -71,14 +69,12 @@ const loginAction = () => {
 # --solutions--
 
 ```js
-const store = Redux.createStore(
-  (state = {login: false}) => state
-);
+const store = Redux.createStore((state = { login: false }) => state);
 
 const loginAction = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 
 store.dispatch(loginAction());

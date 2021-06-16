@@ -14,7 +14,7 @@ dashedName: use-destructuring-assignment-to-assign-variables-from-nested-objects
 
 ```js
 const user = {
-  johnDoe: { 
+  johnDoe: {
     age: 34,
     email: 'johnDoe@freeCodeCamp.com'
   }
@@ -24,13 +24,17 @@ const user = {
 这是解构对象的属性值赋值给具有相同名字的变量：
 
 ```js
-const { johnDoe: { age, email }} = user;
+const {
+  johnDoe: { age, email }
+} = user;
 ```
 
 这是将对象的属性值赋值给具有不同名字的变量：
 
 ```js
-const { johnDoe: { age: userAge, email: userEmail }} = user;
+const {
+  johnDoe: { age: userAge, email: userEmail }
+} = user;
 ```
 
 # --instructions--
@@ -102,5 +106,7 @@ const LOCAL_FORECAST = {
   tomorrow: { low: 68, high: 80 }
 };
 
-const { today: { low: lowToday, high: highToday }} = LOCAL_FORECAST;
+const {
+  today: { low: lowToday, high: highToday }
+} = LOCAL_FORECAST;
 ```

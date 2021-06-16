@@ -21,12 +21,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#14` in the `Strings` su
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ All tests should pass.
 You should choose the correct method for the first assertion - `include` vs. `notInclude`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'include',
         "'Arrow' contains 'row'..."
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ You should choose the correct method for the first assertion - `include` vs. `no
 You should choose the correct method for the second assertion - `include` vs. `notInclude`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'notInclude',
         "... a 'dart' doesn't contain a 'queue'"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

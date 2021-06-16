@@ -20,11 +20,11 @@ When the condition evaluates to `true`, the program executes the statement insid
 **Example**
 
 ```js
-function test (myCondition) {
+function test(myCondition) {
   if (myCondition) {
-     return "It was true";
+    return 'It was true';
   }
-  return "It was false";
+  return 'It was false';
 }
 test(true);
 test(false);
@@ -32,7 +32,7 @@ test(false);
 
 `test(true)` returns the string `It was true`, and `test(false)` returns the string `It was false`.
 
-When `test` is called with a value of `true`, the `if` statement evaluates `myCondition` to see if it is `true` or not. Since it is `true`, the function returns `It was true`. When we call `test` with a value of `false`, `myCondition` is *not* `true` and the statement in the curly braces is not executed and the function returns `It was false`.
+When `test` is called with a value of `true`, the `if` statement evaluates `myCondition` to see if it is `true` or not. Since it is `true`, the function returns `It was true`. When we call `test` with a value of `false`, `myCondition` is _not_ `true` and the statement in the curly braces is not executed and the function returns `It was false`.
 
 # --instructions--
 
@@ -77,11 +77,7 @@ assert(trueOrFalse(false) === 'No, that was false');
 ```js
 function trueOrFalse(wasThatTrue) {
   // Only change code below this line
-
-
-
   // Only change code above this line
-
 }
 ```
 
@@ -90,8 +86,8 @@ function trueOrFalse(wasThatTrue) {
 ```js
 function trueOrFalse(wasThatTrue) {
   if (wasThatTrue) {
-    return "Yes, that was true";
+    return 'Yes, that was true';
   }
-  return "No, that was false";
+  return 'No, that was false';
 }
 ```

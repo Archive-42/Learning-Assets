@@ -4,8 +4,7 @@ title: 使用 jQuery 修改整个页面
 challengeType: 6
 forumTopicId: 18361
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: use-jquery-to-modify-the-entire-page
 ---
 
@@ -33,18 +32,17 @@ assert($('body').hasClass('animated') && $('body').hasClass('hinge'));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
-    $("#left-well").children().css("color", "green");
-    $(".target:nth-child(2)").addClass("animated bounce");
-    $(".target:even").addClass("animated shake");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
+    $('#right-well').children().css('color', 'orange');
+    $('#left-well').children().css('color', 'green');
+    $('.target:nth-child(2)').addClass('animated bounce');
+    $('.target:even').addClass('animated shake');
   });
 </script>
 
@@ -77,18 +75,18 @@ assert($('body').hasClass('animated') && $('body').hasClass('hinge'));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
-    $("#left-well").children().css("color", "green");
-    $(".target:nth-child(2)").addClass("animated bounce");
-    $(".target:even").addClass("animated shake");
-    $("body").addClass("animated hinge");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
+    $('#right-well').children().css('color', 'orange');
+    $('#left-well').children().css('color', 'green');
+    $('.target:nth-child(2)').addClass('animated bounce');
+    $('.target:even').addClass('animated shake');
+    $('body').addClass('animated hinge');
   });
 </script>
 

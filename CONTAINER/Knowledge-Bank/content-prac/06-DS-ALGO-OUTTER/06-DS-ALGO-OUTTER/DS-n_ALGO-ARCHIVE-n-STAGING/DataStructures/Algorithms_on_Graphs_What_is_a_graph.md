@@ -28,8 +28,7 @@ Let’s take this graph as an example and see how we would represent it in code.
 
 ![](https://miro.medium.com/max/591/1*xnJ8tK5hV8C-AZW7ls1ubw.png)
 
-Adjacency Matrix
-----------------
+## Adjacency Matrix
 
 One way it could be represented would be by an adjacency matrix that looks like this.
 
@@ -55,8 +54,7 @@ Not only that, but notice how we have a bunch of 0’s in the array to indicate 
 
 Let’s look at another representation that we can use.
 
-Adjacency List
---------------
+## Adjacency List
 
 Another way we can condense space and search time of neighbors is through an adjacency list:
 
@@ -72,10 +70,9 @@ Lookup time for a node’s neighbors are also shortened to **O(E)** because E re
 
 Throughout much of these posts, I’ll be using the adjacency list over the adjacency matrix in order to optimize our algorithms.
 
-*   Graphs come in varying size and shape. We’ll discuss how they influence our algorithms in future posts.
-*   A graph can be represented either as an adjacency matrix or an adjacency list.
-*   An adjacency matrix allows us **O(1)** access if we know the node but take up **O(V)** times for searching neighbors and **O(V²)** space.
-*   An adjacency list cuts our search time to **O(E)** and our memory to **O(V + E)**.
-
+- Graphs come in varying size and shape. We’ll discuss how they influence our algorithms in future posts.
+- A graph can be represented either as an adjacency matrix or an adjacency list.
+- An adjacency matrix allows us **O(1)** access if we know the node but take up **O(V)** times for searching neighbors and **O(V²)** space.
+- An adjacency list cuts our search time to **O(E)** and our memory to **O(V + E)**.
 
 [Source](https://trykv.medium.com/algorithms-on-graphs-what-is-a-graph-69d8b9384b49)

@@ -1,11 +1,11 @@
 class NQueen {
-  constructor (size) {
+  constructor(size) {
     this.board = new Array(size).fill('.').map(() => new Array(size).fill('.'))
     this.size = size
     this.solutionCount = 0
   }
 
-  isValid ([row, col]) {
+  isValid([row, col]) {
     // function to check if the placement of the queen in the given location is valid
 
     // checking the left of the current row
@@ -26,15 +26,15 @@ class NQueen {
     return true
   }
 
-  placeQueen (row, col) {
+  placeQueen(row, col) {
     this.board[row][col] = 'Q'
   }
 
-  removeQueen (row, col) {
+  removeQueen(row, col) {
     this.board[row][col] = '.'
   }
 
-  solve (col = 0) {
+  solve(col = 0) {
     if (col >= this.size) {
       this.printBoard()
       this.solutionCount++
@@ -52,7 +52,7 @@ class NQueen {
     return false
   }
 
-  printBoard () {
+  printBoard() {
     console.log('\n')
     for (const row of this.board) {
       console.log(...row)

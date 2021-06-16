@@ -15,7 +15,7 @@ Si deseas encontrar `Penguin` o `Pumpkin` en una cadena, puedes usar la siguient
 Luego, comprueba si los grupos de cadena deseados están en la cadena de prueba usando el método `test()`.
 
 ```js
-let testStr = "Pumpkin";
+let testStr = 'Pumpkin';
 let testRegex = /P(engu|umpk)in/;
 testRegex.test(testStr);
 ```
@@ -75,7 +75,7 @@ assert(result === true);
 ## --seed-contents--
 
 ```js
-let myString = "Eleanor Roosevelt";
+let myString = 'Eleanor Roosevelt';
 let myRegex = /False/; // Change this line
 let result = false; // Change this line
 // After passing the challenge experiment with myString and see how the grouping works
@@ -84,7 +84,7 @@ let result = false; // Change this line
 # --solutions--
 
 ```js
-let myString = "Eleanor Roosevelt";
+let myString = 'Eleanor Roosevelt';
 let myRegex = /(Franklin|Eleanor).*Roosevelt/;
 let result = myRegex.test(myString);
 ```

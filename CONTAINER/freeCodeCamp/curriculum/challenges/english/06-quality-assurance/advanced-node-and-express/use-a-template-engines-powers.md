@@ -14,9 +14,9 @@ In your Pug file, you're able to use a variable by referencing the variable name
 
 We strongly recommend looking at the syntax and structure of Pug [here](https://github.com/pugjs/pug) on GitHub's README. Pug is all about using whitespace and tabs to show nested elements and cutting down on the amount of code needed to make a beautiful site.
 
-Looking at our pug file 'index.pug' included in your project, we used the variables *title* and *message*.
+Looking at our pug file 'index.pug' included in your project, we used the variables _title_ and _message_.
 
-To pass those along from our server, you will need to add an object as a second argument to your *res.render* with the variables and their values. For example, pass this object along setting the variables for your index view: `{title: 'Hello', message: 'Please login'}`
+To pass those along from our server, you will need to add an object as a second argument to your _res.render_ with the variables and their values. For example, pass this object along setting the variables for your index view: `{title: 'Hello', message: 'Please login'}`
 
 It should look like: `res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login'});` Now refresh your page and you should see those values rendered in your view in the correct spot as laid out in your index.pug file!
 
@@ -27,16 +27,16 @@ Submit your page when you think you've got it right. If you're running into erro
 Pug should correctly render variables.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /pug-variable("|')>Please login/gi,
         'Your projects home page should now be rendered by pug with the projects .pug file unaltered'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

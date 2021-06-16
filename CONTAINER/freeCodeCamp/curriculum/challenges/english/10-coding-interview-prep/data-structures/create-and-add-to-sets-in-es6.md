@@ -87,6 +87,8 @@ checkSet();
 # --solutions--
 
 ```js
-function checkSet(){var set = new Set([1,2,3,'Taco','Cat','Awesome']);
-return set;}
+function checkSet() {
+  var set = new Set([1, 2, 3, 'Taco', 'Cat', 'Awesome']);
+  return set;
+}
 ```

@@ -66,7 +66,6 @@ assert(code.match(/\.red-box\s*?{[\s\S]*padding:\s*?1\.5em/gi));
   .red-box {
     background-color: red;
     margin: 20px 40px 20px 40px;
-
   }
 
   .green-box {

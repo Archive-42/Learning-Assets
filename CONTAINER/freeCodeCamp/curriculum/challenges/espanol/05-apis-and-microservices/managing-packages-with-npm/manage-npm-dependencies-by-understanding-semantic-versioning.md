@@ -27,9 +27,9 @@ In the dependencies section of your package.json file, change the `version` of m
 "dependencies" should include "moment"
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -37,7 +37,7 @@ In the dependencies section of your package.json file, change the `version` of m
         '"dependencies" does not include "moment"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -46,9 +46,9 @@ In the dependencies section of your package.json file, change the `version` of m
 "moment" version should be "2.10.2"
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.equal(
         packJson.dependencies.moment,
@@ -56,7 +56,7 @@ In the dependencies section of your package.json file, change the `version` of m
         'Wrong version of "moment". It should be 2.10.2'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -27,4 +27,3 @@ assign random values between 0 and the maximum number of vocabulary in your data
 ## --video-solution--
 
 2
-

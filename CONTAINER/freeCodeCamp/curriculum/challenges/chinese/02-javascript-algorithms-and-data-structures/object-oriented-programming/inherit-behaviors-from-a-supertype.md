@@ -11,9 +11,9 @@ dashedName: inherit-behaviors-from-a-supertype
 在上一个挑战中，我们创建了一个`Animal` 超类（`supertype`），用来定义所有动物共有的行为：
 
 ```js
-function Animal() { }
-Animal.prototype.eat = function() {
-  console.log("nom nom nom");
+function Animal() {}
+Animal.prototype.eat = function () {
+  console.log('nom nom nom');
 };
 ```
 
@@ -93,12 +93,12 @@ assert(beagle instanceof Animal);
 ## --seed-contents--
 
 ```js
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 
@@ -111,12 +111,12 @@ let beagle; // Change this line
 # --solutions--
 
 ```js
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 let duck = Object.create(Animal.prototype);

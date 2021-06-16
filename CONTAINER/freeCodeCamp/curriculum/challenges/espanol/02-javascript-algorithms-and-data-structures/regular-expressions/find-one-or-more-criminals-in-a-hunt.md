@@ -15,19 +15,19 @@ Este es un ejemplo para revisar cómo hacer esto:
 La expresión regular `/z+/` coincide con la letra `z` cuando aparece una o más veces seguidas. Encontrará coincidencias en las siguientes cadenas:
 
 ```js
-"z"
-"zzzzzz"
-"ABCzzzz"
-"zzzzABC"
-"abczzzzzzzzzzzzzzzzzzzzzabc"
+'z';
+'zzzzzz';
+'ABCzzzz';
+'zzzzABC';
+'abczzzzzzzzzzzzzzzzzzzzzabc';
 ```
 
 Pero no encuentra coincidencias en las siguientes cadenas, ya que no hay letras `z`:
 
 ```js
-""
-"ABC"
-"abcabc"
+'';
+'ABC';
+'abcabc';
 ```
 
 # --instructions--

@@ -28,7 +28,9 @@ Test 1
     <meta charset="utf-8" />
     <title>Camper Cafe Menu</title>
     <style>
-      h1, h2, p {
+      h1,
+      h2,
+      p {
         text-align: center;
       }
     </style>
@@ -44,7 +46,8 @@ Test 1
       </section>
     </main>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -52,4 +55,3 @@ Test 1
 
 --fcc-editable-region--
 ```
-

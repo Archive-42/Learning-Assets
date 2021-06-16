@@ -30,7 +30,6 @@ assert.strictEqual(euler360(), 878825614395267100);
 
 ```js
 function euler360() {
-
   return true;
 }
 

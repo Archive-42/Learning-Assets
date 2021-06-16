@@ -21,7 +21,7 @@ a:hover {
 
 # --instructions--
 
-El editor de código tiene una regla CSS para dar estilo a todas las etiquetas `a`  en negro. Añade una regla para que cuando el usuario pase sobre la etiqueta `a`, el color `` sea azul.
+El editor de código tiene una regla CSS para dar estilo a todas las etiquetas `a` en negro. Añade una regla para que cuando el usuario pase sobre la etiqueta `a`, el color `` sea azul.
 
 # --hints--
 
@@ -50,9 +50,6 @@ assert(
   a {
     color: #000;
   }
-
-
-
 </style>
 <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
 ```
@@ -65,7 +62,7 @@ assert(
     color: #000;
   }
   a:hover {
-    color: rgba(0,0,255,1);
+    color: rgba(0, 0, 255, 1);
   }
 </style>
 <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>

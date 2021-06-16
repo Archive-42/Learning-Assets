@@ -21,16 +21,16 @@ Build an echo server, mounted at the route `GET /:word/echo`. Respond with a JSO
 Test 1 : Your echo server should repeat words correctly
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/eChOtEsT/echo').then(
-    (data) => {
+    data => {
       assert.equal(
         data.echo,
         'eChOtEsT',
         'Test 1: the echo server is not working as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -39,16 +39,16 @@ Test 1 : Your echo server should repeat words correctly
 Test 2 : Your echo server should repeat words correctly
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/ech0-t3st/echo').then(
-    (data) => {
+    data => {
       assert.equal(
         data.echo,
         'ech0-t3st',
         'Test 2: the echo server is not working as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

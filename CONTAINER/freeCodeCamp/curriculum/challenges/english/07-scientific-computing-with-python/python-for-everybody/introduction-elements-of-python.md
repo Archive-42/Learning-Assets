@@ -33,4 +33,3 @@ x + 1
 ## --video-solution--
 
 3
-

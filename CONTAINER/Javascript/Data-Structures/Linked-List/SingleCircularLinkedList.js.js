@@ -1,17 +1,17 @@
 class Node {
-  constructor (data, next = null) {
+  constructor(data, next = null) {
     this.data = data
     this.next = next
   }
 }
 
 class SinglyCircularLinkedList {
-  constructor () {
+  constructor() {
     this.head = null
     this.size = 0
   }
 
-  insert (data) {
+  insert(data) {
     const node = new Node(data)
 
     if (!this.head) {
@@ -32,7 +32,7 @@ class SinglyCircularLinkedList {
     }
   }
 
-  insertAt (index, data) {
+  insertAt(index, data) {
     const node = new Node(data)
 
     if (index < 0 || index > this.size) return
@@ -58,7 +58,7 @@ class SinglyCircularLinkedList {
     this.size++
   }
 
-  remove () {
+  remove() {
     if (!this.head) return
 
     let prev
@@ -73,7 +73,7 @@ class SinglyCircularLinkedList {
     this.size--
   }
 
-  printData () {
+  printData() {
     let count = 0
     let current = this.head
 

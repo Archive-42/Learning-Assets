@@ -51,10 +51,10 @@ Given a function (representing the tea type) and number of cups needed, the
 following function returns an array of strings (each representing a cup of
 a specific type of tea).
 */
-const getTea = (numOfCups) => {
+const getTea = numOfCups => {
   const teaCups = [];
 
-  for(let cups = 1; cups <= numOfCups; cups += 1) {
+  for (let cups = 1; cups <= numOfCups; cups += 1) {
     const teaCup = prepareTea();
     teaCups.push(teaCup);
   }
@@ -71,10 +71,10 @@ const tea4TeamFCC = null;
 ```js
 const prepareTea = () => 'greenTea';
 
-const getTea = (numOfCups) => {
+const getTea = numOfCups => {
   const teaCups = [];
 
-  for(let cups = 1; cups <= numOfCups; cups += 1) {
+  for (let cups = 1; cups <= numOfCups; cups += 1) {
     const teaCup = prepareTea();
     teaCups.push(teaCup);
   }
@@ -82,5 +82,5 @@ const getTea = (numOfCups) => {
   return teaCups;
 };
 
-const tea4TeamFCC = getTea(40); 
+const tea4TeamFCC = getTea(40);
 ```

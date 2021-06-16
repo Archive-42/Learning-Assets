@@ -25,7 +25,7 @@ The text ` Outdoor` should be located directly to the right of your new `radio` 
 ```js
 const radioButtons = [...$('input')];
 assert(
-  radioButtons.filter((btn) =>
+  radioButtons.filter(btn =>
     btn.nextSibling.nodeValue.replace(/\s+/g, ' ').match(/ Outdoor/i)
   ).length
 );
@@ -34,9 +34,9 @@ assert(
 Your new radio button and associated label should be below the first one. You have them in the wrong order.
 
 ```js
-const collection = [
-  ...document.querySelectorAll('input[type="radio"]')
-].map((node) => node.nextSibling.nodeValue.replace(/\s+/g, ''));
+const collection = [...document.querySelectorAll('input[type="radio"]')].map(
+  node => node.nextSibling.nodeValue.replace(/\s+/g, '')
+);
 assert(collection.indexOf('Indoor') < collection.indexOf('Outdoor'));
 ```
 
@@ -64,8 +64,15 @@ assert($('input')[1].id.match(/^outdoor$/));
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
       <section>
         <h2>Cat Lists</h2>
@@ -76,8 +83,11 @@ assert($('input')[1].id.match(/^outdoor$/));
           <li>lasagna</li>
         </ul>
         <figure>
-          <img src="https://bit.ly/fcc-lasagna" alt="A slice of lasagna on a plate.">
-          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-lasagna"
+            alt="A slice of lasagna on a plate."
+          />
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
         </figure>
         <h3>Top 3 things cats hate:</h3>
         <ol>
@@ -86,17 +96,25 @@ assert($('input')[1].id.match(/^outdoor$/));
           <li>other cats</li>
         </ol>
         <figure>
-          <img src="https://bit.ly/fcc-cats" alt="Five cats looking around a field.">
-          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-cats"
+            alt="Five cats looking around a field."
+          />
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
         </figure>
       </section>
       <section>
         <h2>Cat Form</h2>
         <form action="https://freecatphotoapp.com/submit-cat-photo">
---fcc-editable-region--
-          <label><input id="indoor" type="radio"> Indoor</label>
---fcc-editable-region--
-          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          --fcc-editable-region--
+          <label><input id="indoor" type="radio" /> Indoor</label>
+          --fcc-editable-region--
+          <input
+            type="text"
+            name="catphotourl"
+            placeholder="cat photo URL"
+            required
+          />
           <button type="submit">Submit</button>
         </form>
       </section>
@@ -104,4 +122,3 @@ assert($('input')[1].id.match(/^outdoor$/));
   </body>
 </html>
 ```
-

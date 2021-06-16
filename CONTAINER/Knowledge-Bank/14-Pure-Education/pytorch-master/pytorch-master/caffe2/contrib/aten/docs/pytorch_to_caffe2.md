@@ -84,6 +84,7 @@ Attributes are suffixed with their type (`_f` for floats and `_i` for integers, 
 For methods, the first input is always the `this` Tensor in C++.
 To call methods of ATen's `Type` objects, you provide an additional string attribute
 that determines the type. For instance, `ones` creates a new constant tensor of all ones:
+
 ```
 class Type {
   ...
@@ -98,7 +99,6 @@ From PyTorch it can be created by adding the type as an additional attribute:
   def symbolic(graph, x):
     return graph.at("ones", type_s="float", size_i=[2,4])
 ```
-
 
 Generally ATen operators are polymorphic across input types, and work on both the CPU and CUDA.
 

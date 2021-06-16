@@ -23,7 +23,7 @@ assert($('#display-body')[0].contains($('div.background-buildings')[0]));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -40,8 +40,7 @@ assert($('#display-body')[0].contains($('div.background-buildings')[0]));
     </style>
   </head>
 
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -49,7 +48,7 @@ assert($('#display-body')[0].contains($('div.background-buildings')[0]));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>

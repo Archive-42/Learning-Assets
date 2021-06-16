@@ -13,7 +13,7 @@ dashedName: add-classes-with-d3
 `attr()` 方法和 `style()` 的使用方法一样。 它使用逗号分隔值，并且可以使用回调函数。 下面是给选中元素添加 `container` class 的例子：
 
 ```js
-selection.attr("class", "container");
+selection.attr('class', 'container');
 ```
 
 请注意，当你需要添加 class 时，`class` 参数保持不变，只有 `container` 参数会发生变化。
@@ -53,15 +53,10 @@ assert(code.match(/\.attr/g));
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("div")
-      .data(dataset)
-      .enter()
-      .append("div")
-      // Add your code below this line
+    d3.select('body').selectAll('div').data(dataset).enter().append('div');
+    // Add your code below this line
 
-
-
-      // Add your code above this line
+    // Add your code above this line
   </script>
 </body>
 ```
@@ -81,13 +76,14 @@ assert(code.match(/\.attr/g));
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("div")
+    d3.select('body')
+      .selectAll('div')
       .data(dataset)
       .enter()
-      .append("div")
+      .append('div')
       // Add your code below this line
-      .attr("class","bar");
-      // Add your code above this line
+      .attr('class', 'bar');
+    // Add your code above this line
   </script>
 </body>
 ```

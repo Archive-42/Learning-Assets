@@ -11,14 +11,14 @@ dashedName: use-bracket-notation-to-find-the-first-character-in-a-string
 
 方括号表示法（<dfn>Bracket notation</dfn>）是一种在字符串中的特定 index（索引）处获取字符的方法。
 
-大多数现代编程语言，如JavaScript，不同于人类从 1 开始计数。 它们是从 0 开始计数。 这被称为基于零（<dfn>Zero-based</dfn>）的索引。
+大多数现代编程语言，如 JavaScript，不同于人类从 1 开始计数。 它们是从 0 开始计数。 这被称为基于零（<dfn>Zero-based</dfn>）的索引。
 
 例如，单词 `Charles` 的索引 0 的字符是 `C`。 所以在 `var firstName = "Charles"` 中，你可以使用 `firstName[0]` 来获得第一个位置上的字符。
 
 示例：
 
 ```js
-var firstName = "Charles";
+var firstName = 'Charles';
 var firstLetter = firstName[0];
 ```
 
@@ -49,15 +49,17 @@ assert(code.match(/firstLetterOfLastName\s*?=\s*?lastName\[.*?\]/));
 ## --after-user-code--
 
 ```js
-(function(v){return v;})(firstLetterOfLastName);
+(function (v) {
+  return v;
+})(firstLetterOfLastName);
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var firstLetterOfLastName = "";
-var lastName = "Lovelace";
+var firstLetterOfLastName = '';
+var lastName = 'Lovelace';
 
 // Only change code below this line
 firstLetterOfLastName = lastName; // Change this line
@@ -66,8 +68,8 @@ firstLetterOfLastName = lastName; // Change this line
 # --solutions--
 
 ```js
-var firstLetterOfLastName = "";
-var lastName = "Lovelace";
+var firstLetterOfLastName = '';
+var lastName = 'Lovelace';
 
 // Only change code below this line
 firstLetterOfLastName = lastName[0];

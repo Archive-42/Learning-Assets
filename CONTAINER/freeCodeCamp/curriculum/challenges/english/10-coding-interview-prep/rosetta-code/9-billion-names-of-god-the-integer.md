@@ -8,7 +8,7 @@ dashedName: 9-billion-names-of-god-the-integer
 
 # --description--
 
-This task is a variation of the [short story by Arthur C. Clarke](<https://en.wikipedia.org/wiki/The Nine Billion Names of God#Plot_summary> "wp: The Nine Billion Names of God#Plot_summary").
+This task is a variation of the [short story by Arthur C. Clarke](<https://en.wikipedia.org/wiki/The Nine Billion Names of God#Plot_summary> 'wp: The Nine Billion Names of God#Plot_summary').
 
 (Solvers should be aware of the consequences of completing this task.)
 
@@ -90,7 +90,6 @@ assert.equal(numberOfNames(123), 2552338241);
 
 ```js
 function numberOfNames(num) {
-
   return true;
 }
 ```
@@ -99,15 +98,18 @@ function numberOfNames(num) {
 
 ```js
 function numberOfNames(num) {
-  const cache = [
-    [1]
-  ];
+  const cache = [[1]];
   for (let l = cache.length; l < num + 1; l++) {
     let Aa;
     let Mi;
     const r = [0];
     for (let x = 1; x < l + 1; x++) {
-      r.push(r[r.length - 1] + (Aa = cache[l - x < 0 ? cache.length - (l - x) : l - x])[(Mi = Math.min(x, l - x)) < 0 ? Aa.length - Mi : Mi]);
+      r.push(
+        r[r.length - 1] +
+          (Aa = cache[l - x < 0 ? cache.length - (l - x) : l - x])[
+            (Mi = Math.min(x, l - x)) < 0 ? Aa.length - Mi : Mi
+          ]
+      );
     }
     cache.push(r);
   }

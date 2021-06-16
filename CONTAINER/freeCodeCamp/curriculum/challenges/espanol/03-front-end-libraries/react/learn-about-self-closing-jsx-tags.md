@@ -47,7 +47,7 @@ assert(Enzyme.shallow(JSX).find('hr').length === 1);
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(JSX, document.getElementById('root'))
+ReactDOM.render(JSX, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -66,10 +66,10 @@ const JSX = (
 
 ```jsx
 const JSX = (
-<div>
-  <h2>Welcome to React!</h2> <br />
-  <p>Be sure to close all tags!</p>
-  <hr />
-</div>
+  <div>
+    <h2>Welcome to React!</h2> <br />
+    <p>Be sure to close all tags!</p>
+    <hr />
+  </div>
 );
 ```

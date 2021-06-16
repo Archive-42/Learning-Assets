@@ -15,8 +15,8 @@ You can specify the lower and upper number of patterns with <dfn>quantity specif
 For example, to match only the letter `a` appearing between `3` and `5` times in the string `ah`, your regex would be `/a{3,5}h/`.
 
 ```js
-let A4 = "aaaah";
-let A2 = "aah";
+let A4 = 'aaaah';
+let A2 = 'aah';
 let multipleA = /a{3,5}h/;
 multipleA.test(A4);
 multipleA.test(A2);
@@ -77,7 +77,7 @@ assert(!ohRegex.test('Ohhhhhhh no'));
 ## --seed-contents--
 
 ```js
-let ohStr = "Ohhh no";
+let ohStr = 'Ohhh no';
 let ohRegex = /change/; // Change this line
 let result = ohRegex.test(ohStr);
 ```
@@ -85,7 +85,7 @@ let result = ohRegex.test(ohStr);
 # --solutions--
 
 ```js
-let ohStr = "Ohhh no";
+let ohStr = 'Ohhh no';
 let ohRegex = /Oh{3,6} no/; // Change this line
 let result = ohRegex.test(ohStr);
 ```

@@ -41,4 +41,3 @@ print(np.full_like(a, 100))
 ## --video-solution--
 
 2
-

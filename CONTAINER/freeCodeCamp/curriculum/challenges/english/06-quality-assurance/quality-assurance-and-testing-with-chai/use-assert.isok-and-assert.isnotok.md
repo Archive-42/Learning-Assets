@@ -23,12 +23,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#3` in the `Basic Assert
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -37,12 +37,12 @@ All tests should pass.
 You should choose the correct method for the first assertion - `isOk` vs. `isNotOk`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'isNotOk', 'Null is falsy');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,12 +51,12 @@ You should choose the correct method for the first assertion - `isOk` vs. `isNot
 You should choose the correct method for the second assertion - `isOk` vs. `isNotOk`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'isOk', 'A string is truthy');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -65,12 +65,12 @@ You should choose the correct method for the second assertion - `isOk` vs. `isNo
 You should choose the correct method for the third assertion - `isOk` vs. `isNotOk`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'isOk', 'true is truthy');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

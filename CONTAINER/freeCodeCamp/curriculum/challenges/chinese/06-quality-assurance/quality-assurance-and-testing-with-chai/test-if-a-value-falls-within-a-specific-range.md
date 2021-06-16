@@ -27,12 +27,12 @@ dashedName: test-if-a-value-falls-within-a-specific-range
 不应有未通过的测试
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -41,9 +41,9 @@ dashedName: test-if-a-value-falls-within-a-specific-range
 应该为第一个断言选择正确的范围——`approximately(actual, expected, range)`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'approximately');
       assert.equal(
         data.assertions[0].args[2],
@@ -51,7 +51,7 @@ dashedName: test-if-a-value-falls-within-a-specific-range
         "weirdNumbers(0.5) is in the range (0.5, 1.5]. It's within 1 +/- 0.5"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -60,9 +60,9 @@ dashedName: test-if-a-value-falls-within-a-specific-range
 应该为第二个断言选择正确的范围——`approximately(actual, expected, range)`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'approximately');
       assert.equal(
         data.assertions[1].args[2],
@@ -70,7 +70,7 @@ dashedName: test-if-a-value-falls-within-a-specific-range
         "weirdNumbers(0.2) is in the range (0.2, 1.2]. It's within 1 +/- 0.8"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

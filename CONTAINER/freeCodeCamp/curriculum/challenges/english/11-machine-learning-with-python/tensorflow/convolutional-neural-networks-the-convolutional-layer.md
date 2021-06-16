@@ -27,4 +27,3 @@ Input size, input padding, and stride.
 ## --video-solution--
 
 1
-

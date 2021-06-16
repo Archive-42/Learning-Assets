@@ -24,8 +24,7 @@ describe('The Document Metadata', () => {
     },
     mathjax: {
       selector: 'body script[id="mathjax"]',
-      src:
-        'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML'
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML'
     }
   };
   it('landing page has correct <meta> for description', () => {

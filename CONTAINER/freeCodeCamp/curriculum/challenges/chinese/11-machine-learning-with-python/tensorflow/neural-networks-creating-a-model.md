@@ -47,4 +47,3 @@ C: `dense`
 ## --video-solution--
 
 1
-

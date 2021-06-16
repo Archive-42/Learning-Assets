@@ -70,7 +70,7 @@ assert(
 The `authReducer` function should handle multiple action types with a `switch` statement.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     getUserInput('index').toString().includes('switch') &&
       getUserInput('index').toString().includes('case') &&
@@ -89,7 +89,6 @@ const defaultState = {
 
 const authReducer = (state = defaultState, action) => {
   // Change code below this line
-
   // Change code above this line
 };
 
@@ -98,13 +97,13 @@ const store = Redux.createStore(authReducer);
 const loginUser = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 
 const logoutUser = () => {
   return {
     type: 'LOGOUT'
-  }
+  };
 };
 ```
 
@@ -116,24 +115,20 @@ const defaultState = {
 };
 
 const authReducer = (state = defaultState, action) => {
-
   switch (action.type) {
-
     case 'LOGIN':
       return {
         authenticated: true
-      }
+      };
 
     case 'LOGOUT':
       return {
         authenticated: false
-      }
+      };
 
     default:
       return state;
-
   }
-
 };
 
 const store = Redux.createStore(authReducer);
@@ -141,12 +136,12 @@ const store = Redux.createStore(authReducer);
 const loginUser = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 
 const logoutUser = () => {
   return {
     type: 'LOGOUT'
-  }
+  };
 };
 ```

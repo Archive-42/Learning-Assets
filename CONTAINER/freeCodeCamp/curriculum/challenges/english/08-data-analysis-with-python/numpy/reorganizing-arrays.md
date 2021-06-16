@@ -46,4 +46,3 @@ print(b)
 ## --video-solution--
 
 1
-

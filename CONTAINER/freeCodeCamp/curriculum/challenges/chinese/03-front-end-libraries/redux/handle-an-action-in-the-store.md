@@ -14,7 +14,7 @@ Redux 的另一个关键原则是 `state` 是只读的。 换句话说，`reduce
 
 # --instructions--
 
-代码编辑器中具有前面的示例以及一个 `reducer` 函数。 需要完善 `reducer` 函数的内容，使得它如果收到类型为`'LOGIN'`的action，它将返回一个将 `login` 设置为 `true` 的 state 对象。 否则，它就返回当前的 `state`。 请注意，当前 `state` 和 dispatch 的 `action` 将被传递给 reducer，因此可以使用 `action.type` 直接获取 action 的类型。
+代码编辑器中具有前面的示例以及一个 `reducer` 函数。 需要完善 `reducer` 函数的内容，使得它如果收到类型为`'LOGIN'`的 action，它将返回一个将 `login` 设置为 `true` 的 state 对象。 否则，它就返回当前的 `state`。 请注意，当前 `state` 和 dispatch 的 `action` 将被传递给 reducer，因此可以使用 `action.type` 直接获取 action 的类型。
 
 # --hints--
 
@@ -66,7 +66,6 @@ const defaultState = {
 
 const reducer = (state = defaultState, action) => {
   // Change code below this line
-
   // Change code above this line
 };
 
@@ -75,7 +74,7 @@ const store = Redux.createStore(reducer);
 const loginAction = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 ```
 
@@ -87,15 +86,11 @@ const defaultState = {
 };
 
 const reducer = (state = defaultState, action) => {
-
   if (action.type === 'LOGIN') {
-    return {login: true}
+    return { login: true };
+  } else {
+    return state;
   }
-
-  else {
-    return state
-  }
-
 };
 
 const store = Redux.createStore(reducer);
@@ -103,6 +98,6 @@ const store = Redux.createStore(reducer);
 const loginAction = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 ```

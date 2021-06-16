@@ -26,11 +26,11 @@ Test 1
 ```html
 <!DOCTYPE html>
 <html>
---fcc-editable-region--
+  --fcc-editable-region--
   <head>
     <title>Camper Cafe Menu</title>
   </head>
---fcc-editable-region--
-<html>
+  --fcc-editable-region--
+  <html></html>
+</html>
 ```
-

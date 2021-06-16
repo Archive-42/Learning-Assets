@@ -4,8 +4,7 @@ title: 使用 jQuery class 选择器选择元素
 challengeType: 6
 forumTopicId: 18316
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: target-elements-by-class-using-jquery
 ---
 
@@ -24,7 +23,7 @@ jQuery 的 `.addClass()` 方法用来给标签添加类。
 例如，在 `document ready function` 中添加下面的代码，使所有类为 `text-primary` 的标签抖动：
 
 ```js
-$(".text-primary").addClass("animated shake");
+$('.text-primary').addClass('animated shake');
 ```
 
 # --hints--
@@ -47,8 +46,8 @@ assert(!code.match(/class\.\*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
   });
 </script>
 
@@ -81,9 +80,9 @@ assert(!code.match(/class\.\*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
   });
 </script>
 

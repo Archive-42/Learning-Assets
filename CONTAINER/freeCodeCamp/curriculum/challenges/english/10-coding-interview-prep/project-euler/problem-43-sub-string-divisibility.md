@@ -35,21 +35,19 @@ assert(Array.isArray(substringDivisibility()));
 `substringDivisibility()` should return [ 1430952867, 1460357289, 1406357289, 4130952867, 4160357289, 4106357289 ].
 
 ```js
-assert.sameMembers(substringDivisibility(), [
-  1430952867,
-  1460357289,
-  1406357289,
-  4130952867,
-  4160357289,
-  4106357289
-]);
+assert.sameMembers(
+  substringDivisibility(),
+  [1430952867, 1460357289, 1406357289, 4130952867, 4160357289, 4106357289]
+);
 ```
 
 You should not copy and return the array.
 
 ```js
 assert(
-  !code.match(/(1430952867)|(1460357289)|(1406357289)|(4130952867)|(4160357289)|(4106357289)/)
+  !code.match(
+    /(1430952867)|(1460357289)|(1406357289)|(4130952867)|(4160357289)|(4106357289)/
+  )
 );
 ```
 
@@ -59,7 +57,6 @@ assert(
 
 ```js
 function substringDivisibility() {
-
   return [];
 }
 

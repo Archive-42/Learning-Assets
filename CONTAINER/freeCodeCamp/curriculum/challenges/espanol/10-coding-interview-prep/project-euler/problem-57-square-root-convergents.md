@@ -46,7 +46,6 @@ assert.strictEqual(squareRootConvergents(), 153);
 
 ```js
 function squareRootConvergents() {
-
   return true;
 }
 

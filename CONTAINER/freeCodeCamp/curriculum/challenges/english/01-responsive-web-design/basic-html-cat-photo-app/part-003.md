@@ -38,7 +38,7 @@ Your `p` element should be below the `h2` element. You have them in the wrong or
 
 ```js
 const collection = [...document.querySelectorAll('h2,p')].map(
-  (node) => node.nodeName
+  node => node.nodeName
 );
 assert(collection.indexOf('H2') < collection.indexOf('P'));
 ```
@@ -51,10 +51,9 @@ assert(collection.indexOf('H2') < collection.indexOf('P'));
 <html>
   <body>
     <h1>CatPhotoApp</h1>
---fcc-editable-region--
+    --fcc-editable-region--
     <h2>Cat Photos</h2>
---fcc-editable-region--
+    --fcc-editable-region--
   </body>
 </html>
 ```
-

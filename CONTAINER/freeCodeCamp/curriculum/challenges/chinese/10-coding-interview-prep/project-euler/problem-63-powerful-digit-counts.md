@@ -32,7 +32,6 @@ assert.strictEqual(powerfulDigitCounts(), 49);
 
 ```js
 function powerfulDigitCounts() {
-
   return true;
 }
 

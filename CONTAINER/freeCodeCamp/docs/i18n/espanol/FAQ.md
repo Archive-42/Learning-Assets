@@ -73,7 +73,7 @@ Thanks in advance for being polite and patient. Remember – this community is r
 If you have queries about the stack, architecture of the codebase, translations, or anything else feel free to reach out to our staff.
 
 | Personal              | Enviar mensaje en el Foro                                                    |
-|:--------------------- |:---------------------------------------------------------------------------- |
+| :-------------------- | :--------------------------------------------------------------------------- |
 | Ahmad Abdolsaheb      | [@abdolsa](https://forum.freecodecamp.org/u/abdolsa)                         |
 | Kristofer Koishigawa  | [@scissorsneedfoodtoo](https://forum.freecodecamp.org/u/scissorsneedfoodtoo) |
 | Miya Liu              | [@miyaliu](https://chinese.freecodecamp.org/forum/u/miyaliu)                 |

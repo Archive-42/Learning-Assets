@@ -1,35 +1,35 @@
-const mongoose = require('mongoose')
-const cuid = require('cuid')
-const connect = require('./exercises/connect')
-const url = 'mongodb://localhost:27017/intro-mongodb-testing'
+const mongoose = require("mongoose");
+const cuid = require("cuid");
+const connect = require("./exercises/connect");
+const url = "mongodb://localhost:27017/intro-mongodb-testing";
 
 global.newId = () => {
-  return mongoose.Types.ObjectId()
-}
+  return mongoose.Types.ObjectId();
+};
 
-beforeEach(async done => {
-  const db = cuid()
+beforeEach(async (done) => {
+  const db = cuid();
   function clearDB() {
     for (var i in mongoose.connection.collections) {
-      mongoose.connection.collections[i].remove(function() {})
+      mongoose.connection.collections[i].remove(function () {});
     }
-    return done()
+    return done();
   }
   if (mongoose.connection.readyState === 0) {
     try {
-      await connect(url + db)
-      clearDB()
+      await connect(url + db);
+      clearDB();
     } catch (e) {
-      throw e
+      throw e;
     }
   } else {
-    clearDB()
+    clearDB();
   }
-})
-afterEach(done => {
-  mongoose.disconnect()
-  return done()
-})
-afterAll(done => {
-  return done()
-})
+});
+afterEach((done) => {
+  mongoose.disconnect();
+  return done();
+});
+afterAll((done) => {
+  return done();
+});

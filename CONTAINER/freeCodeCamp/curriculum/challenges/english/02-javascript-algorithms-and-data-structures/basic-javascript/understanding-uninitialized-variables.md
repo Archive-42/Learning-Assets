@@ -50,7 +50,9 @@ assert(
 ## --after-user-code--
 
 ```js
-(function(a,b,c){ return "a = " + a + ", b = " + b + ", c = '" + c + "'"; })(a,b,c);
+(function (a, b, c) {
+  return 'a = ' + a + ', b = ' + b + ", c = '" + c + "'";
+})(a, b, c);
 ```
 
 ## --seed-contents--
@@ -64,7 +66,7 @@ var c;
 
 a = a + 1;
 b = b + 5;
-c = c + " String!";
+c = c + ' String!';
 ```
 
 # --solutions--
@@ -72,8 +74,8 @@ c = c + " String!";
 ```js
 var a = 5;
 var b = 10;
-var c = "I am a";
+var c = 'I am a';
 a = a + 1;
 b = b + 5;
-c = c + " String!";
+c = c + ' String!';
 ```

@@ -24,7 +24,7 @@ La consola mostrará los valores de `a` y `b` como `1, 2`.
 A la variable `a` se le asigna el primer valor del arreglo, y a `b` se le asigna el segundo valor del arreglo. También podemos acceder al valor en cualquier índice de un arreglo con la desestructuración usando comas para alcanzar el índice deseado:
 
 ```js
-const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
 console.log(a, b, c);
 ```
 
@@ -59,13 +59,15 @@ assert(/\[\s*(\w)\s*,\s*(\w)\s*\]\s*=\s*\[\s*\2\s*,\s*\1\s*\]/g.test(code));
 ## --seed-contents--
 
 ```js
-let a = 8, b = 6;
+let a = 8,
+  b = 6;
 // Only change code below this line
 ```
 
 # --solutions--
 
 ```js
-let a = 8, b = 6;
+let a = 8,
+  b = 6;
 [a, b] = [b, a];
 ```

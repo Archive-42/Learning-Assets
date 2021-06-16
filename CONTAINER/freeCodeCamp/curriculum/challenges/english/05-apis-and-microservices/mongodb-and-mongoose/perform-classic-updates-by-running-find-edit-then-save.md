@@ -21,13 +21,13 @@ Modify the `findEditThenSave` function to find a person by `_id` (use any of the
 Find-edit-update an item should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/find-edit-save', {
     name: 'Poldo',
     age: 40,
     favoriteFoods: ['spaghetti']
   }).then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'Poldo', 'item.name is not what is expected');
       assert.equal(data.age, 40, 'item.age is not what expected');
       assert.deepEqual(
@@ -37,7 +37,7 @@ Find-edit-update an item should succeed
       );
       assert.equal(data.__v, 1, 'The item should be previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -26,13 +26,9 @@ assert(
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
+  <head> </head>
 
-  
-  </head>
-
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -45,7 +41,6 @@ assert(
     <title>D3 Dashboard</title>
   </head>
 
-  <body>
-  </body>
+  <body></body>
 </html>
 ```

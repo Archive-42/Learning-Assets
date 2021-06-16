@@ -37,7 +37,7 @@ assert(Cat.next.element === 'Dog');
 ## --seed-contents--
 
 ```js
-var Node = function(element) {
+var Node = function (element) {
   this.element = element;
   this.next = null;
 };

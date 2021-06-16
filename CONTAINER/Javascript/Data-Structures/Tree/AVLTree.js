@@ -13,9 +13,9 @@
  * RETURN > 0 if a > b
  * MUST RETURN 0 if a == b
  */
-let utils;
-(function (_utils) {
-  function comparator () {
+let utils
+;(function (_utils) {
+  function comparator() {
     return function (v1, v2) {
       if (v1 < v2) {
         return -1
@@ -36,7 +36,7 @@ let utils;
  * If no argument is sent it uses utils.comparator
  */
 const AVLTree = (function () {
-  function _avl (comp) {
+  function _avl(comp) {
     /** @public compartor function */
     this._comp = undefined
     if (comp !== undefined) {
@@ -58,12 +58,18 @@ const AVLTree = (function () {
   }
   // get height of a node
   const getH = function (node) {
-    if (node == null) { return 0 }
+    if (node == null) {
+      return 0
+    }
     return node._height
   }
   // height difference or balance factor of a node
   const getHDiff = function (node) {
-    if (node == null) { return 0 } else { return getH(node._left) - getH(node._right) }
+    if (node == null) {
+      return 0
+    } else {
+      return getH(node._left) - getH(node._right)
+    }
   }
   // update height of a node based on children's heights
   const updateH = function (node) {
@@ -144,7 +150,8 @@ const AVLTree = (function () {
   const del = function (root, _val, tree) {
     if (root == null) {
       return root
-    } else if (tree._comp(root._val, _val) === 0) { // key found case
+    } else if (tree._comp(root._val, _val) === 0) {
+      // key found case
       if (root._left === null && root._right === null) {
         root = null
         tree.size--
@@ -229,12 +236,12 @@ const AVLTree = (function () {
     return true
   }
   return _avl
-}());
+})()
 
 /**
  * A Code for Testing the AVLTree
  */
-(function test () {
+;(function test() {
   const newAVL = new AVLTree()
   const size = Math.floor(Math.random() * 1000000)
   let uniques = 0

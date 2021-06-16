@@ -14,9 +14,9 @@ dashedName: use-a-template-engines-powers
 
 建议大家在 [Pug 的 README](https://github.com/pugjs/pug) 里看看它的语法和用法，这样你写出的代码会相对简练。 另外要注意，Pug 使用缩进来表示嵌套的代码块。
 
-在 pug 的 'index.pug' 文件中，我们使用了 *title* 和 *message* 两个变量。
+在 pug 的 'index.pug' 文件中，我们使用了 _title_ 和 _message_ 两个变量。
 
-为了从服务器传递这些信息，你需要给 *res.render* 的第二个参数传入一个对象，其中包含变量对应的值。 比如，如果你想传递对象 `{title: 'Hello', message: 'Please login'}` 到你的主页，
+为了从服务器传递这些信息，你需要给 _res.render_ 的第二个参数传入一个对象，其中包含变量对应的值。 比如，如果你想传递对象 `{title: 'Hello', message: 'Please login'}` 到你的主页，
 
 看起来应该像这样：`res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login'});`。现在刷新页面，你应该看到那些值就像在 index.pug 文件中一样被渲染在页面上正确的位置。
 
@@ -27,16 +27,16 @@ dashedName: use-a-template-engines-powers
 Pug 应正确地展示变量。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /pug-variable("|')>Please login/gi,
         'Your projects home page should now be rendered by pug with the projects .pug file unaltered'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

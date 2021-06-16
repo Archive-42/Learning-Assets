@@ -30,7 +30,6 @@ assert.strictEqual(diophantineTwo(), 9350130049860600);
 
 ```js
 function diophantineTwo() {
-
   return true;
 }
 

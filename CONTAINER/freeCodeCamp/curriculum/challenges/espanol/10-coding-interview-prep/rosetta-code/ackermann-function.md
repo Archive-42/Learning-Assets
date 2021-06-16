@@ -57,9 +57,7 @@ assert(ack(3, 3) === 61);
 ## --seed-contents--
 
 ```js
-function ack(m, n) {
-
-}
+function ack(m, n) {}
 ```
 
 # --solutions--

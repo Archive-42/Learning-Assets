@@ -12,21 +12,22 @@ Now we need to allow a new user on our site to register an account. On the `res.
 
 The logic of the registration route should be as follows: Register the new user > Authenticate the new user > Redirect to /profile
 
-The logic of step 1, registering the new user, should be as follows: Query database with a findOne command > if user is returned then it exists and redirect back to home *OR* if user is undefined and no error occurs then 'insertOne' into the database with the username and password, and, as long as no errors occur, call *next* to go to step 2, authenticating the new user, which we've already written the logic for in our POST */login* route.
+The logic of step 1, registering the new user, should be as follows: Query database with a findOne command > if user is returned then it exists and redirect back to home _OR_ if user is undefined and no error occurs then 'insertOne' into the database with the username and password, and, as long as no errors occur, call _next_ to go to step 2, authenticating the new user, which we've already written the logic for in our POST _/login_ route.
 
 ```js
-app.route('/register')
-  .post((req, res, next) => {
-    myDataBase.findOne({ username: req.body.username }, function(err, user) {
+app.route('/register').post(
+  (req, res, next) => {
+    myDataBase.findOne({ username: req.body.username }, function (err, user) {
       if (err) {
         next(err);
       } else if (user) {
         res.redirect('/');
       } else {
-        myDataBase.insertOne({
-          username: req.body.username,
-          password: req.body.password
-        },
+        myDataBase.insertOne(
+          {
+            username: req.body.username,
+            password: req.body.password
+          },
           (err, doc) => {
             if (err) {
               res.redirect('/');
@@ -36,29 +37,29 @@ app.route('/register')
               next(null, doc.ops[0]);
             }
           }
-        )
+        );
       }
-    })
+    });
   },
-    passport.authenticate('local', { failureRedirect: '/' }),
-    (req, res, next) => {
-      res.redirect('/profile');
-    }
-  );
+  passport.authenticate('local', { failureRedirect: '/' }),
+  (req, res, next) => {
+    res.redirect('/profile');
+  }
+);
 ```
 
 Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/b230a5b3bbc89b1fa0ce32a2aa7b083e).
 
-**NOTE:** From this point onwards, issues can arise relating to the use of the *picture-in-picture* browser. If you are using an online IDE which offers a preview of the app within the editor, it is recommended to open this preview in a new tab.
+**NOTE:** From this point onwards, issues can arise relating to the use of the _picture-in-picture_ browser. If you are using an online IDE which offers a preview of the app within the editor, it is recommended to open this preview in a new tab.
 
 # --hints--
 
 You should register route and display on home.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /showRegistration:( |)true/gi,
@@ -70,7 +71,7 @@ You should register route and display on home.
         'You should have a route accepted a post request on register that querys the db with findone and the query being username: req.body.username'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -79,7 +80,7 @@ You should register route and display on home.
 Registering should work.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const url = getUserInput('url');
   const user = `freeCodeCampTester${Date.now()}`;
   const xhttp = new XMLHttpRequest();
@@ -107,7 +108,7 @@ async (getUserInput) => {
 Login should work.
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const url = getUserInput('url');
   const user = `freeCodeCampTester${Date.now()}`;
   const xhttpReg = new XMLHttpRequest();
@@ -156,16 +157,16 @@ async (getUserInput) => {
 Logout should work.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/logout',
     type: 'GET',
     xhrFields: { withCredentials: true }
   }).then(
-    (data) => {
+    data => {
       assert.match(data, /Home/gi, 'Logout should redirect to home');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -174,21 +175,21 @@ Logout should work.
 Profile should no longer work after logout.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/profile',
     type: 'GET',
     crossDomain: true,
     xhrFields: { withCredentials: true }
   }).then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /Home/gi,
         'Profile should redirect to home when we are logged out now again'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

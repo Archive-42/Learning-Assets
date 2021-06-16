@@ -15,9 +15,9 @@ Cuando se alcanza una sentencia `return`, la ejecución de la función actual se
 
 ```js
 function myFun() {
-  console.log("Hello");
-  return "World";
-  console.log("byebye")
+  console.log('Hello');
+  return 'World';
+  console.log('byebye');
 }
 myFun();
 ```
@@ -84,21 +84,19 @@ assert(abTest(0, 0) === 0);
 function abTest(a, b) {
   // Only change code below this line
 
-
-
   // Only change code above this line
 
   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
 
-abTest(2,2);
+abTest(2, 2);
 ```
 
 # --solutions--
 
 ```js
 function abTest(a, b) {
-  if(a < 0 || b < 0) {
+  if (a < 0 || b < 0) {
     return undefined;
   }
   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));

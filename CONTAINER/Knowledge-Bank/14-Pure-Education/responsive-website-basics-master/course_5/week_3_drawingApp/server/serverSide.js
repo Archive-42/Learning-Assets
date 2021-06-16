@@ -1,7 +1,7 @@
-points = new Meteor.Collection('pointsCollection');
+points = new Meteor.Collection("pointsCollection");
 
 Meteor.methods({
-  'clear': function () {
+  clear: function () {
     points.remove({});
-  }
+  },
 });

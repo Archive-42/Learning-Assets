@@ -23,7 +23,7 @@ do {
 上面的示例行为类似于其他类型的循环，由此产生的数组将看起来像 `[0, 1, 2, 3, 4]`。 然而，`do...while` 不同于其他循环的地方，是第一次循环检查失败时的行为。 让我们看看代码中的区别：这里是一个常规的 `while` 循环，只要 `i < 5`，就会在循环中运行代码：
 
 ```js
-var ourArray = []; 
+var ourArray = [];
 var i = 5;
 while (i < 5) {
   ourArray.push(i);
@@ -34,7 +34,7 @@ while (i < 5) {
 这个例子中，定义了一个空数组 `ourArray` 以及一个值为 5 的 `i` 。 当执行 `while` 循环时，因为 `i` 不小于 5，所以循环条件为 `false`，循环内的代码将不会执行。 `ourArray` 最终没有添加任何内容，因此示例中的所有代码执行完时，ourArray 仍然是`[]`。 现在，看一下 `do...while` 循环。
 
 ```js
-var ourArray = []; 
+var ourArray = [];
 var i = 5;
 do {
   ourArray.push(i);
@@ -73,7 +73,11 @@ assert.equal(i, 11);
 ## --after-user-code--
 
 ```js
-if(typeof myArray !== "undefined"){(function(){return myArray;})();}
+if (typeof myArray !== 'undefined') {
+  (function () {
+    return myArray;
+  })();
+}
 ```
 
 ## --seed-contents--
@@ -98,5 +102,5 @@ var i = 10;
 do {
   myArray.push(i);
   i++;
-} while (i < 5)
+} while (i < 5);
 ```

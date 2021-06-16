@@ -38,4 +38,3 @@ print(lst)
 ## --video-solution--
 
 1
-

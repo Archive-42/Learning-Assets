@@ -57,7 +57,6 @@ assert.strictEqual(distinctPrimeFactors(4, 4), 134043);
 
 ```js
 function distinctPrimeFactors(targetNumPrimes, targetConsecutive) {
-
   return true;
 }
 
@@ -92,7 +91,9 @@ function distinctPrimeFactors(targetNumPrimes, targetConsecutive) {
       }
     }
 
-    if (n > 1) { factors++; }
+    if (n > 1) {
+      factors++;
+    }
 
     return factors;
   }

@@ -15,9 +15,9 @@ dashedName: match-letters-of-the-alphabet
 例如，要匹配小写字母 `a` 到 `e`，你可以使用 `[a-e]`。
 
 ```js
-let catStr = "cat";
-let batStr = "bat";
-let matStr = "mat";
+let catStr = 'cat';
+let batStr = 'bat';
+let matStr = 'mat';
 let bgRegex = /[a-e]at/;
 catStr.match(bgRegex);
 batStr.match(bgRegex);
@@ -57,7 +57,7 @@ assert(alphabetRegex.flags.match(/i/).length == 1);
 ## --seed-contents--
 
 ```js
-let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let quoteSample = 'The quick brown fox jumps over the lazy dog.';
 let alphabetRegex = /change/; // Change this line
 let result = alphabetRegex; // Change this line
 ```
@@ -65,7 +65,7 @@ let result = alphabetRegex; // Change this line
 # --solutions--
 
 ```js
-let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let quoteSample = 'The quick brown fox jumps over the lazy dog.';
 let alphabetRegex = /[a-z]/gi; // Change this line
 let result = quoteSample.match(alphabetRegex); // Change this line
 ```

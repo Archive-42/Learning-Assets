@@ -88,7 +88,9 @@ assert($('h1').css('color') === 'rgb(255, 192, 203)');
     color: blue;
   }
 </style>
-<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">
+  Hello World!
+</h1>
 ```
 
 # --solutions--
@@ -110,5 +112,7 @@ assert($('h1').css('color') === 'rgb(255, 192, 203)');
     color: blue;
   }
 </style>
-<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">
+  Hello World!
+</h1>
 ```

@@ -13,9 +13,7 @@ Right now, everything you have is in your `server.js` file. This can lead to har
 Both should start with the following code:
 
 ```js
-module.exports = function (app, myDataBase) {
-
-}
+module.exports = function (app, myDataBase) {};
 ```
 
 Now, in the top of your server file, require these files like so: `const routes = require('./routes.js');` Right after you establish a successful connection with the database, instantiate each of them like so: `routes(app, myDataBase)`
@@ -33,9 +31,9 @@ Submit your page when you think you've got it right. If you're running into erro
 Modules should be present.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /require\s*\(('|")\.\/routes(\.js)?\1\)/gi,
@@ -47,7 +45,7 @@ Modules should be present.
         'Your new modules should be called after your connection to the database'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

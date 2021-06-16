@@ -14,8 +14,8 @@ Just as we can build a string over multiple lines out of string <dfn>literals</d
 Example:
 
 ```js
-var anAdjective = "awesome!";
-var ourStr = "freeCodeCamp is ";
+var anAdjective = 'awesome!';
+var ourStr = 'freeCodeCamp is ';
 ourStr += anAdjective;
 ```
 
@@ -44,14 +44,14 @@ assert(code.match(/myStr\s*\+=\s*someAdjective\s*/).length > 0);
 ## --after-user-code--
 
 ```js
-(function(){
+(function () {
   var output = [];
-  if(typeof someAdjective === 'string') {
+  if (typeof someAdjective === 'string') {
     output.push('someAdjective = "' + someAdjective + '"');
   } else {
     output.push('someAdjective is not a string');
   }
-  if(typeof myStr === 'string') {
+  if (typeof myStr === 'string') {
     output.push('myStr = "' + myStr + '"');
   } else {
     output.push('myStr is not a string');
@@ -66,13 +66,13 @@ assert(code.match(/myStr\s*\+=\s*someAdjective\s*/).length > 0);
 // Change code below this line
 
 var someAdjective;
-var myStr = "Learning to code is ";
+var myStr = 'Learning to code is ';
 ```
 
 # --solutions--
 
 ```js
-var someAdjective = "neat";
-var myStr = "Learning to code is ";
+var someAdjective = 'neat';
+var myStr = 'Learning to code is ';
 myStr += someAdjective;
 ```

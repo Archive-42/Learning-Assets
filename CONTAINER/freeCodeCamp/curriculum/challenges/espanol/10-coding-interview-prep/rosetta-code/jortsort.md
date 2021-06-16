@@ -67,9 +67,7 @@ assert.equal(jortsort([1, 1, 1, 1, 1]), true);
 ## --seed-contents--
 
 ```js
-function jortsort(array) {
-
-}
+function jortsort(array) {}
 ```
 
 # --solutions--
@@ -78,7 +76,9 @@ function jortsort(array) {
 function jortsort(array) {
   // sort the array
   var originalArray = array.slice(0);
-  array.sort( function(a,b){return a - b} );
+  array.sort(function (a, b) {
+    return a - b;
+  });
 
   // compare to see if it was originally sorted
   for (var i = 0; i < originalArray.length; ++i) {
@@ -86,5 +86,5 @@ function jortsort(array) {
   }
 
   return true;
-};
+}
 ```

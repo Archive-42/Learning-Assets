@@ -20,9 +20,11 @@ sayName: function() {return "The name of this duck is " + duck.name + ".";}
 
 ```js
 let duck = {
-  name: "Aflac",
+  name: 'Aflac',
   numLegs: 2,
-  sayName: function() {return "The name of this duck is " + this.name + ".";}
+  sayName: function () {
+    return 'The name of this duck is ' + this.name + '.';
+  }
 };
 ```
 
@@ -52,9 +54,11 @@ assert(code.match(/this\.numLegs/g));
 
 ```js
 let dog = {
-  name: "Spot",
+  name: 'Spot',
   numLegs: 4,
-  sayLegs: function() {return "This dog has " + dog.numLegs + " legs.";}
+  sayLegs: function () {
+    return 'This dog has ' + dog.numLegs + ' legs.';
+  }
 };
 
 dog.sayLegs();
@@ -64,9 +68,9 @@ dog.sayLegs();
 
 ```js
 let dog = {
-  name: "Spot",
+  name: 'Spot',
   numLegs: 4,
-  sayLegs () {
+  sayLegs() {
     return 'This dog has ' + this.numLegs + ' legs.';
   }
 };

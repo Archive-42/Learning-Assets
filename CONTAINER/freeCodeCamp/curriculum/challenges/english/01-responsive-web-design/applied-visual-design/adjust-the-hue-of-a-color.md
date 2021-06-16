@@ -70,7 +70,7 @@ assert($('.blue').css('background-color') == 'rgb(0, 0, 255)');
 ```html
 <style>
   body {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
   .green {
@@ -102,7 +102,7 @@ assert($('.blue').css('background-color') == 'rgb(0, 0, 255)');
 ```html
 <style>
   body {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
   .green {
@@ -110,7 +110,7 @@ assert($('.blue').css('background-color') == 'rgb(0, 0, 255)');
   }
 
   .cyan {
-    background-color:   hsl(180, 100%, 50%);
+    background-color: hsl(180, 100%, 50%);
   }
 
   .blue {

@@ -31,6 +31,6 @@ db.collection.mapReduce(
   // Specify what to do with the output: in this case we will insert it
   // into a new collectoin called "map_reduce_example_output":
   {
-    out: "map_reduce_example_output"
+    out: "map_reduce_example_output",
   }
 );

@@ -65,9 +65,7 @@ assert.equal(isLeapYear(1800), false);
 ## --seed-contents--
 
 ```js
-function isLeapYear(year) {
-
-}
+function isLeapYear(year) {}
 ```
 
 # --solutions--

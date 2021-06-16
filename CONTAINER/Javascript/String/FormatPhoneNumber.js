@@ -3,12 +3,12 @@
 
 const formatPhoneNumber = (numbers) => {
   const numbersString = numbers.toString()
-  if ((numbersString.length !== 10) || isNaN(numbersString)) {
+  if (numbersString.length !== 10 || isNaN(numbersString)) {
     // return "Invalid phone number."
     throw new TypeError('Invalid phone number.')
   }
   const arr = '(XXX) XXX-XXXX'.split('')
-  Array.from(numbersString).forEach(n => {
+  Array.from(numbersString).forEach((n) => {
     arr[arr.indexOf('X')] = n
   })
   return arr.join('')

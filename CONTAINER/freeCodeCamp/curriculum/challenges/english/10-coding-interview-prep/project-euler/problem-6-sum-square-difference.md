@@ -52,7 +52,6 @@ assert.strictEqual(sumSquareDifference(100), 25164150);
 
 ```js
 function sumSquareDifference(n) {
-
   return true;
 }
 
@@ -62,17 +61,17 @@ sumSquareDifference(100);
 # --solutions--
 
 ```js
-const sumSquareDifference = (number)=>{
-  let squareOfSum = Math.pow(sumOfArithmeticSeries(1,1,number),2);
+const sumSquareDifference = number => {
+  let squareOfSum = Math.pow(sumOfArithmeticSeries(1, 1, number), 2);
   let sumOfSquare = sumOfSquareOfNumbers(number);
- return squareOfSum - sumOfSquare;
+  return squareOfSum - sumOfSquare;
+};
+
+function sumOfArithmeticSeries(a, d, n) {
+  return (n / 2) * (2 * a + (n - 1) * d);
 }
 
-function sumOfArithmeticSeries(a,d,n){
-  return (n/2)*(2*a+(n-1)*d);
-}
-
-function sumOfSquareOfNumbers(n){
- return (n*(n+1)*(2*n+1))/6;
+function sumOfSquareOfNumbers(n) {
+  return (n * (n + 1) * (2 * n + 1)) / 6;
 }
 ```

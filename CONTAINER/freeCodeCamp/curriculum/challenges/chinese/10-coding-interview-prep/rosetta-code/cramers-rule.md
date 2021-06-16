@@ -68,16 +68,21 @@ const matrices = [
     [1, -3, -4]
   ]
 ];
-const freeTerms = [[-3, -32, -47, 49], [3, -1, 2]];
+const freeTerms = [
+  [-3, -32, -47, 49],
+  [3, -1, 2]
+];
 
-const answers = [[2, -12, -4, 1], [1, 1, -1]];
+const answers = [
+  [2, -12, -4, 1],
+  [1, 1, -1]
+];
 ```
 
 ## --seed-contents--
 
 ```js
 function cramersRule(matrix, freeTerms) {
-
   return true;
 }
 ```
@@ -134,9 +139,15 @@ function detr(m) {
 
   for (j = 0; j < n - 1; j++) {
     k = j;
-    for (let i = j + 1; i < n; i++) { if (Math.abs(A[i][j]) > Math.abs(A[k][j])) { k = i; } }
+    for (let i = j + 1; i < n; i++) {
+      if (Math.abs(A[i][j]) > Math.abs(A[k][j])) {
+        k = i;
+      }
+    }
     if (k !== j) {
-      const temp = A[k]; A[k] = A[j]; A[j] = temp;
+      const temp = A[k];
+      A[k] = A[j];
+      A[j] = temp;
       ret *= -1;
     }
     const Aj = A[j];
@@ -148,9 +159,13 @@ function detr(m) {
         Ai[k] -= Aj[k] * alpha;
         Ai[k1] -= Aj[k1] * alpha;
       }
-      if (k !== n) { Ai[k] -= Aj[k] * alpha; }
+      if (k !== n) {
+        Ai[k] -= Aj[k] * alpha;
+      }
     }
-    if (Aj[j] === 0) { return 0; }
+    if (Aj[j] === 0) {
+      return 0;
+    }
     ret *= Aj[j];
   }
   return Math.round(ret * A[j][j] * 100) / 100;

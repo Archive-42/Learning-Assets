@@ -23,16 +23,16 @@ Use `helmet.frameguard()` passing with the configuration object `{action: 'deny'
 helmet.frameguard() middleware should be mounted correctly
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       assert.include(
         data.appStack,
         'frameguard',
         'helmet.frameguard() middleware is not mounted correctly'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -41,13 +41,13 @@ helmet.frameguard() middleware should be mounted correctly
 helmet.frameguard() 'action' should be set to 'DENY'
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       assert.property(data.headers, 'x-frame-options');
       assert.equal(data.headers['x-frame-options'], 'DENY');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

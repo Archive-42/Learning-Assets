@@ -1,12 +1,12 @@
 # Asynchronous programming
 
-So far we have been doing *synchronous programming*. Synchronous program execution is quite simple: a program starts at the first line, then each line is executed until the program reaches the end. Each time a function is called, the program waits for the function to return before continuing to the next line.
+So far we have been doing _synchronous programming_. Synchronous program execution is quite simple: a program starts at the first line, then each line is executed until the program reaches the end. Each time a function is called, the program waits for the function to return before continuing to the next line.
 
 In asynchronous programming, the execution of a function is usually non-blocking. In other words, each time you call a function it returns immediately. However, that function does not necessarily gets executed right way. Instead, there is usually a mechanism (called the "scheduler") which is responsible for the future execution of the function.
 
 The problem with asynchronous programming is that a program may end before any asynchronous function starts. A common solution for this is for asynchronous functions to return "futures" or "promises". These are objects that represent the state of execution of an async function. Finally, asynchronous programming frameworks typically have mechanisms to block or wait for those async functions to end based on those "future" objects.
 
-Since Python 3.6, the "asyncio" module combined with the *async* and *await* keyword allows us to implement what is called *co-operative multitasking programs*. In this type of programming, a coroutine function voluntarily yields control to another coroutine function when idle or when waiting for some input.
+Since Python 3.6, the "asyncio" module combined with the _async_ and _await_ keyword allows us to implement what is called _co-operative multitasking programs_. In this type of programming, a coroutine function voluntarily yields control to another coroutine function when idle or when waiting for some input.
 
 Consider the following asynchronous function that squares a number and sleeps for one second before returning. Asynchronous functions are declared with **async def**. Ignore the **await** keyword for now:
 
@@ -52,7 +52,7 @@ results = loop.run_until_complete(asyncio.gather(
 print(results)
 ```
 
-Basically, we  use ``asyncio.gather(*tasks)`` to inform the loop to wait for all tasks to finish. Since the coroutines will start at almost the same time, the program will run for only 1 second. Asyncio **gather()** won't necessarily run the coroutines by order although it will return an ordered list of results.
+Basically, we use `asyncio.gather(*tasks)` to inform the loop to wait for all tasks to finish. Since the coroutines will start at almost the same time, the program will run for only 1 second. Asyncio **gather()** won't necessarily run the coroutines by order although it will return an ordered list of results.
 
 ```Python
 $ python3 python_async.py
@@ -65,7 +65,7 @@ End square 3
 [1, 4, 9]
 ```
 
-Sometimes results may be needed as soon as they are available. For that we can use a second coroutine that deals with each result using ``asyncio.as_completed()``:
+Sometimes results may be needed as soon as they are available. For that we can use a second coroutine that deals with each result using `asyncio.as_completed()`:
 
 ```Python
 (...)

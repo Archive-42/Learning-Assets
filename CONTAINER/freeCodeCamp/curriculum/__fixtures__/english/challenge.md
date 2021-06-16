@@ -7,6 +7,7 @@ forumTopicId: 12345
 ---
 
 ## Description
+
 <section id='description'>
 Welcome to freeCodeCamp's HTML coding challenges. These will walk you through web development step-by-step.
 First, you'll start by building a simple web page using HTML. You can edit code in your code editor, which is embedded into this web page.
@@ -21,23 +22,25 @@ Each challenge has tests you can run at any time by clicking the "Run tests" but
 </section>
 
 ## Instructions
+
 <section id='instructions'>
 To pass the test on this challenge, change your <code>h1</code> element's text to say "Hello World".
 </section>
 
 ## Tests
+
 <section id='tests'>
 
 ```yml
 tests:
   - text: Your <code>h1</code> element should have the text "Hello World".
     testString: assert.isTrue((/hello(\s)+world/gi).test($('h1').text()));
-
 ```
 
 </section>
 
 ## Challenge Seed
+
 <section id='challengeSeed'>
 
 <div id='html-seed'>
@@ -48,11 +51,10 @@ tests:
 
 </div>
 
-
-
 </section>
 
 ## Solution
+
 <section id='solution'>
 
 ```html

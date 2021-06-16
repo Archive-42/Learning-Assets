@@ -27,8 +27,8 @@ Object.prototype.isPrototypeOf(Bird.prototype);
 ¿Por qué sería útil? Quizás recuerdes el método `hasOwnProperty` del desafío pasado:
 
 ```js
-let duck = new Bird("Donald");
-duck.hasOwnProperty("name");
+let duck = new Bird('Donald');
+duck.hasOwnProperty('name');
 ```
 
 El método `hasOwnProperty` se define en `Object.prototype` al cual se puede acceder con `Bird.prototype`, al que se puede acceder con `duck`. Este es un ejemplo de la cadena `prototype`. En esta cadena `prototype`, `Bird` es el `supertype` de `duck` mientras que `duck` es el `subtype`. `Object` es un `supertype` de `Bird` y `duck`. `Object` es un `supertype` de todos los objetos en JavaScript. Por lo tanto, cualquier objeto puede utilizar el método `hasOwnProperty`.
@@ -68,7 +68,7 @@ Dog.prototype.isPrototypeOf(beagle);  // yields true
 function Dog(name) {
   this.name = name;
 }
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 Dog.prototype.isPrototypeOf(beagle);
 Object.prototype.isPrototypeOf(Dog.prototype);
 ```

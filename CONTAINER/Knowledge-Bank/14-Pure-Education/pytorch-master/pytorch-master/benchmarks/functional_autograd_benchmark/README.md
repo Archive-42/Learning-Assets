@@ -42,7 +42,8 @@ popd
 ```
 
 ### Files in this folder:
+
 - `functional_autograd_benchmark.py` is the main entry point to run the benchmark.
 - `compare.py` is the entry point to run the comparison script that generates a markdown table.
-- `torchaudio_models.py` and `torchvision_models.py`  contains code extracted from torchaudio and torchvision to be able to run the models without having a specific version of these libraries installed.
+- `torchaudio_models.py` and `torchvision_models.py` contains code extracted from torchaudio and torchvision to be able to run the models without having a specific version of these libraries installed.
 - `ppl_models.py`, `vision_models.py` and `audio_text_models.py` contain all the getter functions used for the benchmark.

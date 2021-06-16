@@ -11,14 +11,14 @@ dashedName: balanced-brackets
 Determine whether a generated string of brackets is balanced; that is, whether it consists entirely of pairs of opening/closing brackets (in that order), none of which mis-nest.
 
 **Examples:**
-| Input                     | Output |
+| Input | Output |
 | ------------------------- | ------ |
-| <code>\[]</code> | true   |
-| <code>]\[</code> | false  |
-| <code>[][]</code> | true   |
-| <code>]\[]</code> | false  |
-| <code>\[]]\[\[]</code> | false  |
-| <code>\[\[\[\[]]]]</code> | true   |
+| <code>\[]</code> | true |
+| <code>]\[</code> | false |
+| <code>[][]</code> | true |
+| <code>]\[]</code> | false |
+| <code>\[]]\[\[]</code> | false |
+| <code>\[\[\[\[]]]]</code> | true |
 
 # --hints--
 
@@ -167,7 +167,6 @@ const testCases = [
 
 ```js
 function isBalanced(str) {
-
   return true;
 }
 ```

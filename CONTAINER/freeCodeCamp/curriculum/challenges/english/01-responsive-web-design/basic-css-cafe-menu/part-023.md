@@ -49,7 +49,8 @@ Test 1
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -67,4 +68,3 @@ div {
   width: 300px;
 }
 ```
-

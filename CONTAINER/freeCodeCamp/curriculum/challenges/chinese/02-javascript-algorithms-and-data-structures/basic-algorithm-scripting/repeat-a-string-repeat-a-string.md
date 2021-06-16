@@ -69,7 +69,7 @@ function repeatStringNumTimes(str, num) {
   return str;
 }
 
-repeatStringNumTimes("abc", 3);
+repeatStringNumTimes('abc', 3);
 ```
 
 # --solutions--
@@ -77,8 +77,8 @@ repeatStringNumTimes("abc", 3);
 ```js
 function repeatStringNumTimes(str, num) {
   if (num < 1) return '';
-  return num === 1 ? str : str + repeatStringNumTimes(str, num-1);
+  return num === 1 ? str : str + repeatStringNumTimes(str, num - 1);
 }
 
-repeatStringNumTimes("abc", 3);
+repeatStringNumTimes('abc', 3);
 ```

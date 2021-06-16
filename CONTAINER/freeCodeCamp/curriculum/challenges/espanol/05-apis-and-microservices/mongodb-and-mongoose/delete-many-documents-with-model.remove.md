@@ -21,7 +21,7 @@ Modify the `removeManyPeople` function to delete all the people whose name is wi
 Deleting many items at once should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/_api/remove-many-people',
     type: 'POST',
@@ -31,7 +31,7 @@ Deleting many items at once should succeed
       { name: 'Mary', age: 21, favoriteFoods: ['steak'] }
     ])
   }).then(
-    (data) => {
+    data => {
       assert.isTrue(!!data.ok, 'The mongo stats are not what expected');
       assert.equal(
         data.n,
@@ -40,7 +40,7 @@ Deleting many items at once should succeed
       );
       assert.equal(data.count, 0, 'the db items count is not what expected');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

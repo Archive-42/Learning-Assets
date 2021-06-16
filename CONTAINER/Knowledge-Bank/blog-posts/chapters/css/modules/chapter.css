@@ -1,5 +1,3 @@
-
-
 .chap {
   color: mediumseagreen;
   /* line-height: 0.2rem; */
@@ -10,7 +8,7 @@
 }
 
 .num {
-  font-variation-settings: 'wght' 600;
+  font-variation-settings: "wght" 600;
   font-size: 5rem;
   line-height: 3.5rem;
   text-align: right;

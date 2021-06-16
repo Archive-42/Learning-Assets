@@ -19,7 +19,7 @@ Bird.prototype = Object.create(Animal.prototype);
 Recuerda que el prototipo `prototype` es como la "receta" para crear un objeto. En cierto modo, la receta de `Bird` ahora incluye todos los "ingredientes" clave de `Animal`.
 
 ```js
-let duck = new Bird("Donald");
+let duck = new Bird('Donald');
 duck.eat();
 ```
 
@@ -42,19 +42,18 @@ assert(Animal.prototype.isPrototypeOf(Dog.prototype));
 ## --seed-contents--
 
 ```js
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 
-function Dog() { }
+function Dog() {}
 
 // Only change code below this line
-
 
 let beagle = new Dog();
 ```
@@ -62,16 +61,16 @@ let beagle = new Dog();
 # --solutions--
 
 ```js
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 
-function Dog() { }
+function Dog() {}
 Dog.prototype = Object.create(Animal.prototype);
 
 let beagle = new Dog();

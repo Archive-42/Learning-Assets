@@ -13,25 +13,25 @@ dashedName: replace-loops-using-recursion
 La recursión es el concepto que una función puede expresarse en términos de sí misma. Para ayudar a comprender esto, comienza pensando en la siguiente tarea: multiplica los primeros `n` elementos de un arreglo para crear el producto de esos elementos. Usando un bucle `for`, puedes hacer esto:
 
 ```js
-  function multiply(arr, n) {
-    var product = 1;
-    for (var i = 0; i < n; i++) {
-        product *= arr[i];
-    }
-    return product;
+function multiply(arr, n) {
+  var product = 1;
+  for (var i = 0; i < n; i++) {
+    product *= arr[i];
   }
+  return product;
+}
 ```
 
 Sin embargo, nota que `multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]`. Esto significa que puedes reescribir `multiply` en términos de sí misma y que nunca necesites hacer uso de un bucle.
 
 ```js
-  function multiply(arr, n) {
-    if (n <= 0) {
-      return 1;
-    } else {
-      return multiply(arr, n - 1) * arr[n - 1];
-    }
+function multiply(arr, n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return multiply(arr, n - 1) * arr[n - 1];
   }
+}
 ```
 
 La versión recursiva de `multiply` se desglosa así. En el <dfn>caso base</dfn>, donde `n <= 0`, devuelve 1. Para valores más grandes de `n`, se llama a sí misma, pero con `n - 1`. Esa llamada de función se evalúa de la misma manera, llamando a `multiply` otra vez hasta que `n <= 0`. En este punto, todas las funciones pueden devolver y la `multiply` original devuelve la respuesta.
@@ -65,17 +65,13 @@ assert.equal(sum([2, 3, 4, 5], 3), 9);
 Tu código no debe depender de ningún tipo de bluces (`for` o `while`) o funciones de orden alto tales como `forEach`, `map`, `filter`, o `reduce`.).
 
 ```js
-assert(
-  !code.match(/for|while|forEach|map|filter|reduce/g)
-);
+assert(!code.match(/for|while|forEach|map|filter|reduce/g));
 ```
 
 Debes usar recursión para resolver este problema.
 
 ```js
-assert(
-  sum.toString().match(/sum\(.*\)/g).length > 1
-);
+assert(sum.toString().match(/sum\(.*\)/g).length > 1);
 ```
 
 # --seed--
@@ -85,7 +81,6 @@ assert(
 ```js
 function sum(arr, n) {
   // Only change code below this line
-
   // Only change code above this line
 }
 ```
@@ -95,7 +90,7 @@ function sum(arr, n) {
 ```js
 function sum(arr, n) {
   // Only change code below this line
-  if(n <= 0) {
+  if (n <= 0) {
     return 0;
   } else {
     return sum(arr, n - 1) + arr[n - 1];

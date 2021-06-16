@@ -31,16 +31,16 @@ Submit your page when you think you've got it right. If you're running into erro
 You should correctly add a Pug render variable to /profile.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /username:( |)req.user.username/gi,
         'You should be passing the variable username with req.user.username into the render function of the profile page'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

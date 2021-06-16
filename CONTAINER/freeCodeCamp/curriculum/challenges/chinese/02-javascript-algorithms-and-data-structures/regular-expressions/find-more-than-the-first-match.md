@@ -11,7 +11,7 @@ dashedName: find-more-than-the-first-match
 到目前为止，只能提取或搜寻一次模式匹配。
 
 ```js
-let testStr = "Repeat, Repeat, Repeat";
+let testStr = 'Repeat, Repeat, Repeat';
 let ourRegex = /Repeat/;
 testStr.match(ourRegex);
 ```
@@ -71,7 +71,7 @@ assert(result.length == 2);
 ## --seed-contents--
 
 ```js
-let twinkleStar = "Twinkle, twinkle, little star";
+let twinkleStar = 'Twinkle, twinkle, little star';
 let starRegex = /change/; // Change this line
 let result = twinkleStar; // Change this line
 ```
@@ -79,7 +79,7 @@ let result = twinkleStar; // Change this line
 # --solutions--
 
 ```js
-let twinkleStar = "Twinkle, twinkle, little star";
+let twinkleStar = 'Twinkle, twinkle, little star';
 let starRegex = /twinkle/gi;
 let result = twinkleStar.match(starRegex);
 ```

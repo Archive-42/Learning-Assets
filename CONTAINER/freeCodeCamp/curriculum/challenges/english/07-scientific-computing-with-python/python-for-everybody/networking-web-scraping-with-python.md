@@ -53,4 +53,3 @@ GrunkleStan
 ## --video-solution--
 
 3
-

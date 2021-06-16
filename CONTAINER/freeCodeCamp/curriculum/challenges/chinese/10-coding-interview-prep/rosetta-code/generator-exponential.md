@@ -71,36 +71,34 @@ assert.equal(exponentialGenerator(25), 784);
 ## --seed-contents--
 
 ```js
-function exponentialGenerator(n) {
-
-}
+function exponentialGenerator(n) {}
 ```
 
 # --solutions--
 
 ```js
-function exponentialGenerator(n){
+function exponentialGenerator(n) {
   function* PowersGenerator(m) {
-    var n=0;
-    while(1) {
-        yield Math.pow(n, m);
-        n += 1;
+    var n = 0;
+    while (1) {
+      yield Math.pow(n, m);
+      n += 1;
     }
   }
 
-  function* FilteredGenerator(g, f){
+  function* FilteredGenerator(g, f) {
     var value = g.next().value;
     var filter = f.next().value;
-    while(1) {
-        if( value < filter ) {
-            yield value;
-            value = g.next().value;
-        } else if ( value > filter ) {
-            filter = f.next().value;
-        } else {
-            value = g.next().value;
-            filter = f.next().value;
-        }
+    while (1) {
+      if (value < filter) {
+        yield value;
+        value = g.next().value;
+      } else if (value > filter) {
+        filter = f.next().value;
+      } else {
+        value = g.next().value;
+        filter = f.next().value;
+      }
     }
   }
 
@@ -109,8 +107,8 @@ function exponentialGenerator(n){
 
   var filtered = FilteredGenerator(squares, cubes);
 
-  var curr=0;
-  for(var i=0;i<n;i++) curr=filtered.next();
+  var curr = 0;
+  for (var i = 0; i < n; i++) curr = filtered.next();
 
   return curr.value;
 }

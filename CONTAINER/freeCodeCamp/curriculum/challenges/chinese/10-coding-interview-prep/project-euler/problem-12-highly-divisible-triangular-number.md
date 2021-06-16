@@ -70,7 +70,6 @@ assert.strictEqual(divisibleTriangleNumber(500), 76576500);
 
 ```js
 function divisibleTriangleNumber(n) {
-
   return true;
 }
 
@@ -85,18 +84,17 @@ function divisibleTriangleNumber(n) {
   let counter = 1;
   let triangleNumber = counter++;
 
-
- while (noOfFactors(triangleNumber) < n) {
-   triangleNumber += counter++;
- }
-return triangleNumber;
+  while (noOfFactors(triangleNumber) < n) {
+    triangleNumber += counter++;
+  }
+  return triangleNumber;
 }
 
 function noOfFactors(num) {
   const primeFactors = getPrimeFactors(num);
   let prod = 1;
-  for(let p in primeFactors) {
-    prod *= (primeFactors[p] + 1)
+  for (let p in primeFactors) {
+    prod *= primeFactors[p] + 1;
   }
   return prod;
 }
@@ -112,7 +110,7 @@ function getPrimeFactors(num) {
     if (n % p === 0) {
       const curr = primes[p];
       if (curr) {
-        primes[p]++
+        primes[p]++;
       } else {
         primes[p] = 1;
       }
@@ -122,16 +120,16 @@ function getPrimeFactors(num) {
     }
   }
 
-  while(p === 2 && p <= n) {
+  while (p === 2 && p <= n) {
     checkAndUpdate(1);
   }
 
   while (p <= n && p <= sqrt) {
     checkAndUpdate(2);
   }
-  if(Object.keys(primes).length === 0) {
+  if (Object.keys(primes).length === 0) {
     primes[num] = 1;
-  } else if(n !== 1) {
+  } else if (n !== 1) {
     primes[n] = 1;
   }
   return primes;

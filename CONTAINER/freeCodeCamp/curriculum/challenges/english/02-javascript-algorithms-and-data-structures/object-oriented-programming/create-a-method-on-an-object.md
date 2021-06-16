@@ -14,9 +14,11 @@ Methods are properties that are functions. This adds different behavior to an ob
 
 ```js
 let duck = {
-  name: "Aflac",
+  name: 'Aflac',
   numLegs: 2,
-  sayName: function() {return "The name of this duck is " + duck.name + ".";}
+  sayName: function () {
+    return 'The name of this duck is ' + duck.name + '.';
+  }
 };
 duck.sayName();
 ```
@@ -47,9 +49,8 @@ assert(dog.sayLegs() === 'This dog has 4 legs.');
 
 ```js
 let dog = {
-  name: "Spot",
-  numLegs: 4,
-
+  name: 'Spot',
+  numLegs: 4
 };
 
 dog.sayLegs();
@@ -59,9 +60,9 @@ dog.sayLegs();
 
 ```js
 let dog = {
-  name: "Spot",
+  name: 'Spot',
   numLegs: 4,
-  sayLegs () {
+  sayLegs() {
     return 'This dog has ' + this.numLegs + ' legs.';
   }
 };

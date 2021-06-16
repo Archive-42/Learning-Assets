@@ -1,7 +1,7 @@
 # Cómo trabajar en la documentación
 
 > [!NOTE] Recuerda que no necesitas configurar nada para trabajar en el contenido de la documentación.
-> 
+>
 > To work on the contributing guidelines, you can edit or add files in the `docs` directory [available here](https://github.com/freeCodeCamp/freeCodeCamp/tree/main/docs). Cuando tus cambios se fusionen, estarán disponibles automáticamente en la página web.
 
 ## Estructura del sitio

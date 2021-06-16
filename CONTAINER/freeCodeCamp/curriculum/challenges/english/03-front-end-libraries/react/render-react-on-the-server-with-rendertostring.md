@@ -21,7 +21,7 @@ The `renderToString()` method is provided on `ReactDOMServer`, which is availabl
 The `App` component should render to a string using `ReactDOMServer.renderToString`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     getUserInput('index')
       .replace(/ /g, '')
@@ -35,13 +35,17 @@ The `App` component should render to a string using `ReactDOMServer.renderToStri
 ## --before-user-code--
 
 ```jsx
-var ReactDOMServer = { renderToString(x) { return null; } };
+var ReactDOMServer = {
+  renderToString(x) {
+    return null;
+  }
+};
 ```
 
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -52,9 +56,9 @@ class App extends React.Component {
     super(props);
   }
   render() {
-    return <div/>
+    return <div />;
   }
-};
+}
 
 // Change code below this line
 ```
@@ -67,10 +71,10 @@ class App extends React.Component {
     super(props);
   }
   render() {
-    return <div/>
+    return <div />;
   }
-};
+}
 
 // Change code below this line
-ReactDOMServer.renderToString(<App/>);
+ReactDOMServer.renderToString(<App />);
 ```

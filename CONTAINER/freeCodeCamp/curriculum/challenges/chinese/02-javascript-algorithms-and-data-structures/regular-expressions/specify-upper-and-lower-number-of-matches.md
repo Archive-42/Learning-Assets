@@ -15,8 +15,8 @@ dashedName: specify-upper-and-lower-number-of-matches
 例如，要匹配出现 `3` 到 `5` 次字母 `a` 的在字符串 `ah`，正则表达式应为`/a{3,5}h/`。
 
 ```js
-let A4 = "aaaah";
-let A2 = "aah";
+let A4 = 'aaaah';
+let A2 = 'aah';
 let multipleA = /a{3,5}h/;
 multipleA.test(A4);
 multipleA.test(A2);
@@ -77,7 +77,7 @@ assert(!ohRegex.test('Ohhhhhhh no'));
 ## --seed-contents--
 
 ```js
-let ohStr = "Ohhh no";
+let ohStr = 'Ohhh no';
 let ohRegex = /change/; // Change this line
 let result = ohRegex.test(ohStr);
 ```
@@ -85,7 +85,7 @@ let result = ohRegex.test(ohStr);
 # --solutions--
 
 ```js
-let ohStr = "Ohhh no";
+let ohStr = 'Ohhh no';
 let ohRegex = /Oh{3,6} no/; // Change this line
 let result = ohRegex.test(ohStr);
 ```

@@ -150,9 +150,7 @@ assert.deepEqual(
 ## --seed-contents--
 
 ```js
-function clip(subjectPolygon, clipPolygon) {
-
-}
+function clip(subjectPolygon, clipPolygon) {}
 ```
 
 # --solutions--
@@ -160,12 +158,12 @@ function clip(subjectPolygon, clipPolygon) {
 ```js
 function clip(subjectPolygon, clipPolygon) {
   var cp1, cp2, s, e, i, j;
-  var inside = function(p) {
+  var inside = function (p) {
     return (
       (cp2[0] - cp1[0]) * (p[1] - cp1[1]) > (cp2[1] - cp1[1]) * (p[0] - cp1[0])
     );
   };
-  var intersection = function() {
+  var intersection = function () {
     var dc = [cp1[0] - cp2[0], cp1[1] - cp2[1]],
       dp = [s[0] - e[0], s[1] - e[1]],
       n1 = cp1[0] * cp2[1] - cp1[1] * cp2[0],

@@ -19,11 +19,11 @@ delete ourDog.bark;
 
 ```js
 var ourDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["everything!"],
-  "bark": "bow-wow"
+  name: 'Camper',
+  legs: 4,
+  tails: 1,
+  friends: ['everything!'],
+  bark: 'bow-wow'
 };
 
 delete ourDog.bark;
@@ -63,7 +63,9 @@ assert(code.match(/"tails": 1/g).length > 0);
 ## --after-user-code--
 
 ```js
-(function(z){return z;})(myDog);
+(function (z) {
+  return z;
+})(myDog);
 ```
 
 ## --seed-contents--
@@ -71,11 +73,11 @@ assert(code.match(/"tails": 1/g).length > 0);
 ```js
 // Setup
 var myDog = {
-  "name": "Happy Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"],
-  "bark": "woof"
+  name: 'Happy Coder',
+  legs: 4,
+  tails: 1,
+  friends: ['freeCodeCamp Campers'],
+  bark: 'woof'
 };
 
 // Only change code below this line
@@ -85,11 +87,11 @@ var myDog = {
 
 ```js
 var myDog = {
-  "name": "Happy Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"],
-  "bark": "woof"
+  name: 'Happy Coder',
+  legs: 4,
+  tails: 1,
+  friends: ['freeCodeCamp Campers'],
+  bark: 'woof'
 };
 delete myDog.tails;
 ```

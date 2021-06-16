@@ -16,8 +16,8 @@ dashedName: concatenating-strings-with-the-plus-equals-operator
 例如：
 
 ```js
-var ourStr = "I come first. ";
-ourStr += "I come second.";
+var ourStr = 'I come first. ';
+ourStr += 'I come second.';
 ```
 
 `ourStr` 现在内容为字符串 `I come first. I come second.`
@@ -45,8 +45,8 @@ assert(code.match(/myStr\s*\+=\s*(["']).*\1/g));
 ## --after-user-code--
 
 ```js
-(function(){
-  if(typeof myStr === 'string') {
+(function () {
+  if (typeof myStr === 'string') {
     return 'myStr = "' + myStr + '"';
   } else {
     return 'myStr is not a string';
@@ -65,6 +65,6 @@ var myStr;
 # --solutions--
 
 ```js
-var myStr = "This is the first sentence. ";
-myStr += "This is the second sentence.";
+var myStr = 'This is the first sentence. ';
+myStr += 'This is the second sentence.';
 ```

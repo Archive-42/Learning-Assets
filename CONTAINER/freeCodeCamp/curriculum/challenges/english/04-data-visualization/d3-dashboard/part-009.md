@@ -39,18 +39,16 @@ assert(/margin\s*:\s*auto\s*(;|})/g.test(dashboard));
 
 ```html
 <style>
-body {
-  background-color: #ccc;
-}
+  body {
+    background-color: #ccc;
+  }
 
-.dashboard {
-  width: 980px;
-  height: 500px;
-  background-color: white;
-  box-shadow: 5px 5px 5px 5px #888;
-
-
-}
+  .dashboard {
+    width: 980px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px #888;
+  }
 </style>
 ```
 
@@ -58,16 +56,16 @@ body {
 
 ```html
 <style>
-body {
-  background-color: #ccc;
-}
+  body {
+    background-color: #ccc;
+  }
 
-.dashboard {
-  width: 980px;
-  height: 500px;
-  background-color: white;
-  box-shadow: 5px 5px 5px 5px #888;
-  margin: auto;
-}
+  .dashboard {
+    width: 980px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px #888;
+    margin: auto;
+  }
 </style>
 ```

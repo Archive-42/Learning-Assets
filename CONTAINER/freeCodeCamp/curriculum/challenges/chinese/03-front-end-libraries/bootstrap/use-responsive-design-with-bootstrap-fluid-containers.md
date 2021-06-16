@@ -17,7 +17,12 @@ Bootstrap 会根据屏幕大小来动态调整 HTML 元素的大小————�
 任何 Web 应用，都可以通过添加如下代码到 HTML 顶部来引入 Bootstrap 。
 
 ```html
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous"
+/>
 ```
 
 不过在这里，已经预先为此页面添加了上述代码。 注意使用 `>` 或者 `/>` 两种方式闭合 `link` 标签都是可行的。
@@ -45,7 +50,11 @@ assert(
 `style` 结束标签后面的所有 HTML 元素都应该被嵌套在 `.container-fluid` 里面。
 
 ```js
-assert($('.container-fluid').children().length >= 8 && !$('.container-fluid').has("style").length && !$('.container-fluid').has("link").length);
+assert(
+  $('.container-fluid').children().length >= 8 &&
+    !$('.container-fluid').has('style').length &&
+    !$('.container-fluid').has('link').length
+);
 ```
 
 # --seed--
@@ -53,7 +62,11 @@ assert($('.container-fluid').children().length >= 8 && !$('.container-fluid').ha
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -84,7 +97,12 @@ assert($('.container-fluid').children().length >= 8 && !$('.container-fluid').ha
 
 <p>Click here for <a href="#">cat photos</a>.</p>
 
-<a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+<a href="#"
+  ><img
+    class="smaller-image thick-green-border"
+    src="https://bit.ly/fcc-relaxing-cat"
+    alt="A cute orange cat lying on its back."
+/></a>
 
 <p>Things cats love:</p>
 <ul>
@@ -99,12 +117,12 @@ assert($('.container-fluid').children().length >= 8 && !$('.container-fluid').ha
   <li>other cats</li>
 </ol>
 <form action="https://freecatphotoapp.com/submit-cat-photo">
-  <label><input type="radio" name="indoor-outdoor"> Indoor</label>
-  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
-  <label><input type="checkbox" name="personality"> Loving</label>
-  <label><input type="checkbox" name="personality"> Lazy</label>
-  <label><input type="checkbox" name="personality"> Crazy</label>
-  <input type="text" placeholder="cat photo URL" required>
+  <label><input type="radio" name="indoor-outdoor" /> Indoor</label>
+  <label><input type="radio" name="indoor-outdoor" /> Outdoor</label>
+  <label><input type="checkbox" name="personality" /> Loving</label>
+  <label><input type="checkbox" name="personality" /> Lazy</label>
+  <label><input type="checkbox" name="personality" /> Crazy</label>
+  <input type="text" placeholder="cat photo URL" required />
   <button type="submit">Submit</button>
 </form>
 ```
@@ -112,7 +130,11 @@ assert($('.container-fluid').children().length >= 8 && !$('.container-fluid').ha
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -141,30 +163,35 @@ assert($('.container-fluid').children().length >= 8 && !$('.container-fluid').ha
 <div class="container-fluid">
   <h2 class="red-text">CatPhotoApp</h2>
 
-<p>Click here for <a href="#">cat photos</a>.</p>
+  <p>Click here for <a href="#">cat photos</a>.</p>
 
-<a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      class="smaller-image thick-green-border"
+      src="https://bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
-<p>Things cats love:</p>
-<ul>
-  <li>cat nip</li>
-  <li>laser pointers</li>
-  <li>lasagna</li>
-</ul>
-<p>Top 3 things cats hate:</p>
-<ol>
-  <li>flea treatment</li>
-  <li>thunder</li>
-  <li>other cats</li>
-</ol>
-<form action="https://freecatphotoapp.com/submit-cat-photo">
-  <label><input type="radio" name="indoor-outdoor"> Indoor</label>
-  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
-  <label><input type="checkbox" name="personality"> Loving</label>
-  <label><input type="checkbox" name="personality"> Lazy</label>
-  <label><input type="checkbox" name="personality"> Crazy</label>
-  <input type="text" placeholder="cat photo URL" required>
-  <button type="submit">Submit</button>
-</form>
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
+    <label><input type="radio" name="indoor-outdoor" /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label>
+    <label><input type="checkbox" name="personality" /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Crazy</label>
+    <input type="text" placeholder="cat photo URL" required />
+    <button type="submit">Submit</button>
+  </form>
 </div>
 ```

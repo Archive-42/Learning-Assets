@@ -13,7 +13,7 @@ React provides useful type-checking features to verify that components receive p
 It's considered a best practice to set `propTypes` when you know the type of a prop ahead of time. You can define a `propTypes` property for a component in the same way you defined `defaultProps`. Doing this will check that props of a given key are present with a given type. Here's an example to require the type `function` for a prop called `handleClick`:
 
 ```js
-MyComponent.propTypes = { handleClick: PropTypes.func.isRequired }
+MyComponent.propTypes = { handleClick: PropTypes.func.isRequired };
 ```
 
 In the example above, the `PropTypes.func` part checks that `handleClick` is a function. Adding `isRequired` tells React that `handleClick` is a required property for that component. You will see a warning if that prop isn't provided. Also notice that `func` represents `function`. Among the seven JavaScript primitive types, `function` and `boolean` (written as `bool`) are the only two that use unusual spelling. In addition to the primitive types, there are other types available. For example, you can check that a prop is a React element. Please refer to the [documentation](https://reactjs.org/docs/jsx-in-depth.html#specifying-the-react-element-type) for all of the options.
@@ -51,7 +51,7 @@ assert(
 The `Items` component should include a `propTypes` check to require a value for `quantity` and ensure that its value is a number.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       const noWhiteSpace = __helpers.removeWhiteSpace(getUserInput('index'));
@@ -76,14 +76,14 @@ var PropTypes = {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<ShoppingCart />, document.getElementById('root'))
+ReactDOM.render(<ShoppingCart />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
 
 ```jsx
-const Items = (props) => {
-  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+const Items = props => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>;
 };
 
 // Change code below this line
@@ -99,16 +99,16 @@ class ShoppingCart extends React.Component {
     super(props);
   }
   render() {
-    return <Items />
+    return <Items />;
   }
-};
+}
 ```
 
 # --solutions--
 
 ```jsx
-const Items = (props) => {
-  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+const Items = props => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>;
 };
 
 // Change code below this line
@@ -126,7 +126,7 @@ class ShoppingCart extends React.Component {
     super(props);
   }
   render() {
-    return <Items />
+    return <Items />;
   }
-};
+}
 ```

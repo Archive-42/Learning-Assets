@@ -12,13 +12,14 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-family: Raleway, Futura Lt BT, Calibri Light, sans-serif;
-  font-variation-settings: 'wght' 600;
+  font-variation-settings: "wght" 600;
   font-size: 0.8rem;
 }
 .in-this-chapter ul {
   margin: 0;
   list-style-type: none;
-  font-family: Raleway, Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif
+  font-family: Raleway, Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS",
+    sans-serif;
 }
 .in-this-chapter ul li {
   margin: 0.8rem 0;

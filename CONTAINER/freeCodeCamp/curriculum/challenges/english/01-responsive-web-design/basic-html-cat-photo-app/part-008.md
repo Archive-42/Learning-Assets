@@ -49,11 +49,10 @@ assert(!/\<img\s+src\s*=\s*https:\/\/bit\.ly\/fcc-relaxing-cat/.test(code));
       <h2>Cat Photos</h2>
       <!-- TODO: Add link to cat photos -->
       <p>Click here to view more cat photos.</p>
---fcc-editable-region--
-      <img>
---fcc-editable-region--
+      --fcc-editable-region--
+      <img />
+      --fcc-editable-region--
     </main>
   </body>
 </html>
 ```
-

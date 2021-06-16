@@ -35,4 +35,3 @@ What is used to indicate a new line in a string?
 ## --video-solution--
 
 1
-

@@ -65,7 +65,7 @@ function pairElement(str) {
   return str;
 }
 
-pairElement("GCG");
+pairElement('GCG');
 ```
 
 # --solutions--
@@ -78,6 +78,8 @@ lookup.C = 'G';
 lookup.G = 'C';
 
 function pairElement(str) {
- return str.split('').map(function(p) {return [p, lookup[p]];});
+  return str.split('').map(function (p) {
+    return [p, lookup[p]];
+  });
 }
 ```

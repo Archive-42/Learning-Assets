@@ -1,13 +1,13 @@
-var assert    = require('assert');
-var factorial = require('../../solutions/javascript/factorial');
+var assert = require("assert");
+var factorial = require("../../solutions/javascript/factorial");
 
-describe('factorial', function () {
+describe("factorial", function () {
   // We have multiple factorial solutions to test, so loop through them
   Object.keys(factorial).forEach(function (name) {
     // Set the value in the object as the current solution to work against
     var solution = factorial[name];
     // Use the name as part of the assertion name
-    it(name + ' solution returns factorials', function () {
+    it(name + " solution returns factorials", function () {
       // Bunch of simple assertions we know to be true
       assert.equal(solution(1), 1);
       assert.equal(solution(2), 2);

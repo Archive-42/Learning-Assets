@@ -119,6 +119,6 @@ let foods = {
 };
 
 foods['bananas'] = 13;
-foods['grapes']  = 35;
+foods['grapes'] = 35;
 foods['strawberries'] = 27;
 ```

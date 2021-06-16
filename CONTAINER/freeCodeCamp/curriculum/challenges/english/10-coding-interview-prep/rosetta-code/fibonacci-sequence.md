@@ -55,16 +55,16 @@ assert.equal(fibonacci(10), 55);
 ## --seed-contents--
 
 ```js
-function fibonacci(n) {
-
-}
+function fibonacci(n) {}
 ```
 
 # --solutions--
 
 ```js
 function fibonacci(n) {
-  let a = 0, b = 1, t;
+  let a = 0,
+    b = 1,
+    t;
   while (--n >= 0) {
     t = a;
     a = b;

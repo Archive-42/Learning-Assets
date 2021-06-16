@@ -13,7 +13,7 @@ Now that you've written both the `mapStateToProps()` and the `mapDispatchToProps
 To use this method, pass in the functions as arguments, and immediately call the result with your component. This syntax is a little unusual and looks like:
 
 ```js
-connect(mapStateToProps, mapDispatchToProps)(MyComponent)
+connect(mapStateToProps, mapDispatchToProps)(MyComponent);
 ```
 
 **Note:** If you want to omit one of the arguments to the `connect` method, you pass `null` in its place.
@@ -70,37 +70,37 @@ const store = Redux.createStore(
 class AppWrapper extends React.Component {
   render() {
     return (
-      <ReactRedux.Provider store = {store}>
-        <ConnectedComponent/>
+      <ReactRedux.Provider store={store}>
+        <ConnectedComponent />
       </ReactRedux.Provider>
     );
   }
-};
-ReactDOM.render(<AppWrapper />, document.getElementById('root'))
+}
+ReactDOM.render(<AppWrapper />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
 
 ```jsx
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: 'ADD',
     message: message
-  }
+  };
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     messages: state
-  }
+  };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    submitNewMessage: (message) => {
+    submitNewMessage: message => {
       dispatch(addMessage(message));
     }
-  }
+  };
 };
 
 class Presentational extends React.Component {
@@ -108,9 +108,9 @@ class Presentational extends React.Component {
     super(props);
   }
   render() {
-    return <h3>This is a Presentational Component</h3>
+    return <h3>This is a Presentational Component</h3>;
   }
-};
+}
 
 const connect = ReactRedux.connect;
 // Change code below this line
@@ -119,25 +119,25 @@ const connect = ReactRedux.connect;
 # --solutions--
 
 ```jsx
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: 'ADD',
     message: message
-  }
+  };
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     messages: state
-  }
+  };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    submitNewMessage: (message) => {
+    submitNewMessage: message => {
       dispatch(addMessage(message));
     }
-  }
+  };
 };
 
 class Presentational extends React.Component {
@@ -145,12 +145,15 @@ class Presentational extends React.Component {
     super(props);
   }
   render() {
-    return <h3>This is a Presentational Component</h3>
+    return <h3>This is a Presentational Component</h3>;
   }
-};
+}
 
 const connect = ReactRedux.connect;
 // Change code below this line
 
-const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(Presentational);
+const ConnectedComponent = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Presentational);
 ```

@@ -15,8 +15,8 @@ Para utilizar el método `.match()`, aplica el método a una cadena y pasa la ex
 Este es un ejemplo:
 
 ```js
-"Hello, World!".match(/Hello/);
-let ourStr = "Regular expressions";
+'Hello, World!'.match(/Hello/);
+let ourStr = 'Regular expressions';
 let ourRegex = /expressions/;
 ourStr.match(ourRegex);
 ```

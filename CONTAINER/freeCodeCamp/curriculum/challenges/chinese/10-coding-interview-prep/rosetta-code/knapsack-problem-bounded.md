@@ -153,9 +153,7 @@ assert.equal(
 ## --seed-contents--
 
 ```js
-function findBestPack(data, maxweight) {
-
-}
+function findBestPack(data, maxweight) {}
 ```
 
 # --solutions--

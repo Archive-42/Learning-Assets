@@ -29,7 +29,7 @@ let camper = 'David';
 你可以在浏览器的控制台里看见这个错误。 与 `var` 不同的是，当使用 `let` 的时候，同一名字的变量只能被声明一次。 请注意 `"use strict"`。 这代表着开启了严格模式，用于检测常见的代码错误以及“不安全”的行为， 例如：
 
 ```js
-"use strict";
+'use strict';
 x = 3.14;
 ```
 
@@ -44,7 +44,7 @@ x = 3.14;
 代码中不应有 `var`
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/var/g));
+getUserInput => assert(!getUserInput('index').match(/var/g));
 ```
 
 `catName` 变量的值应该为 `Oliver`
@@ -67,11 +67,10 @@ assert(quote === 'Oliver says Meow!');
 var catName;
 var quote;
 function catTalk() {
-  "use strict";
+  'use strict';
 
-  catName = "Oliver";
-  quote = catName + " says Meow!";
-
+  catName = 'Oliver';
+  quote = catName + ' says Meow!';
 }
 catTalk();
 ```

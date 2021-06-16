@@ -17,7 +17,7 @@ jQuery 有一个 `.prop()` 方法，可以用其调整标签的属性。
 下面是禁用所有的按钮的代码：
 
 ```js
-$("button").prop("disabled", true);
+$('button').prop('disabled', true);
 ```
 
 仅禁用 `target1` 按钮。
@@ -52,9 +52,8 @@ assert(!code.match(/disabled[^<]*>/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
   });
 </script>
 
@@ -87,10 +86,9 @@ assert(!code.match(/disabled[^<]*>/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
   });
 </script>
 

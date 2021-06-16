@@ -21,16 +21,16 @@ Serve the object `{"message": "Hello json"}` as a response, in JSON format, to G
 The endpoint `/json` should serve the json object `{"message": "Hello json"}`
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/json').then(
-    (data) => {
+    data => {
       assert.equal(
         data.message,
         'Hello json',
         "The '/json' endpoint does not serve the right data"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

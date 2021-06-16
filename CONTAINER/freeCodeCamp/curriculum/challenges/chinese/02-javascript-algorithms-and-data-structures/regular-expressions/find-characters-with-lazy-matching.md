@@ -47,7 +47,7 @@ assert(!myRegex.source.match('h1'));
 ## --seed-contents--
 
 ```js
-let text = "<h1>Winter is coming</h1>";
+let text = '<h1>Winter is coming</h1>';
 let myRegex = /<.*>/; // Change this line
 let result = text.match(myRegex);
 ```
@@ -55,7 +55,7 @@ let result = text.match(myRegex);
 # --solutions--
 
 ```js
-let text = "<h1>Winter is coming</h1>";
+let text = '<h1>Winter is coming</h1>';
 let myRegex = /<.*?>/; // Change this line
 let result = text.match(myRegex);
 ```

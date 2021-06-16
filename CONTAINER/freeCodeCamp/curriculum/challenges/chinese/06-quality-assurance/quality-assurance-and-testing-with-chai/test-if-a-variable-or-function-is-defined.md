@@ -19,12 +19,12 @@ dashedName: test-if-a-variable-or-function-is-defined
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -33,16 +33,16 @@ dashedName: test-if-a-variable-or-function-is-defined
 应该为第一个断言选择正确的方法：`isDefined` 或 `isUndefined`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'isDefined',
         'Null is not undefined'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,16 +51,16 @@ dashedName: test-if-a-variable-or-function-is-defined
 应该为第二个断言选择正确的方法：`isDefined` 或 `isUndefined`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'isUndefined',
         'Undefined is undefined'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -69,16 +69,16 @@ dashedName: test-if-a-variable-or-function-is-defined
 应该为第三个断言选择正确的方法：`isDefined` 或 `isUndefined`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[2].method,
         'isDefined',
         'A string is not undefined'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -46,7 +46,6 @@ assert.strictEqual(numberLetterCounts(1000), 21124);
 
 ```js
 function numberLetterCounts(limit) {
-
   return true;
 }
 
@@ -97,7 +96,7 @@ function numberLetterCounts(limit) {
       return dictionary[num];
     } else {
       const hundreds = Math.floor(num / 100);
-      const tens =  Math.floor((num / 10) % 10) * 10;
+      const tens = Math.floor((num / 10) % 10) * 10;
       const remainder = num % 10;
 
       let tempStr = '';

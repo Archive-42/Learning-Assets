@@ -9,10 +9,7 @@
   "superBlock": "javascript-algorithms-and-data-structures",
   "superOrder": 2,
   "challengeOrder": [
-    [
-      "587d7b8d367417b2b2512b5b",
-      "Learn About Functional Programming"
-    ],
+    ["587d7b8d367417b2b2512b5b", "Learn About Functional Programming"],
     [
       "587d7b8e367417b2b2512b5c",
       "Understand Functional Programming Terminology"
@@ -29,26 +26,17 @@
       "587d7b8e367417b2b2512b5f",
       "Pass Arguments to Avoid External Dependence in a Function"
     ],
-    [
-      "587d7b8f367417b2b2512b60",
-      "Refactor Global Variables Out of Functions"
-    ],
+    ["587d7b8f367417b2b2512b60", "Refactor Global Variables Out of Functions"],
     [
       "587d7b8f367417b2b2512b61",
       "Use the map Method to Extract Data from an Array"
     ],
-    [
-      "587d7b8f367417b2b2512b62",
-      "Implement map on a Prototype"
-    ],
+    ["587d7b8f367417b2b2512b62", "Implement map on a Prototype"],
     [
       "587d7b8f367417b2b2512b63",
       "Use the filter Method to Extract Data from an Array"
     ],
-    [
-      "587d7b8f367417b2b2512b64",
-      "Implement the filter Method on a Prototype"
-    ],
+    ["587d7b8f367417b2b2512b64", "Implement the filter Method on a Prototype"],
     [
       "587d7b90367417b2b2512b65",
       "Return Part of an Array Using the slice Method"
@@ -57,18 +45,12 @@
       "9d7123c8c441eeafaeb5bdef",
       "Remove Elements from an Array Using slice Instead of splice"
     ],
-    [
-      "587d7da9367417b2b2512b66",
-      "Combine Two Arrays Using the concat Method"
-    ],
+    ["587d7da9367417b2b2512b66", "Combine Two Arrays Using the concat Method"],
     [
       "587d7da9367417b2b2512b67",
       "Add Elements to the End of an Array Using concat Instead of push"
     ],
-    [
-      "587d7da9367417b2b2512b68",
-      "Use the reduce Method to Analyze Data"
-    ],
+    ["587d7da9367417b2b2512b68", "Use the reduce Method to Analyze Data"],
     [
       "587d7b88367417b2b2512b45",
       "Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem"

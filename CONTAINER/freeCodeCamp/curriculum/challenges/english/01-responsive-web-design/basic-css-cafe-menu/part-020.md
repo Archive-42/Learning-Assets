@@ -41,17 +41,17 @@ Test 1
       </section>
     </main>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
---fcc-editable-region--
-body {
+--fcc-editable-region-- body {
   background-color: brown;
 }
---fcc-editable-region--
-h1, h2, p {
+--fcc-editable-region-- h1,
+h2,
+p {
   text-align: center;
 }
 ```
-

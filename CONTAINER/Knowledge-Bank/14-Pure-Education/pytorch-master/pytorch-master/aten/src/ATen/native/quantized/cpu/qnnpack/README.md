@@ -1,4 +1,5 @@
 # QNNPACK
+
 QNNPACK (Quantized Neural Networks PACKage) is a mobile-optimized library for low-precision high-performance neural network inference. QNNPACK provides implementation of common neural network operators on quantized 8-bit tensors.
 
 QNNPACK is not intended to be directly used by machine learning researchers; instead it provides low-level performance primitives for high-level deep learning frameworks. As of today, QNNPACK is integrated in [PyTorch 1.0](https://github.com/pytorch/pytorch) with Caffe2 graph representation.
@@ -37,12 +38,13 @@ Users are recommended to use `scripts/build-local.sh` script to build QNNPACK fo
 To cross-compile for Android, set `$ANDROID_NDK` environment variable (where `$ANDROID_NDK` is the path to Android NDK directory, e.g. `/opt/android-ndk-r15c`) and use one of the scripts from the table below:
 
 | ABI         | Build script                     | Restrictions               |
-| ----------- | ---------------------------------| -------------------------- |
+| ----------- | -------------------------------- | -------------------------- |
 | armeabi-v7a | `scripts/build-android-armv7.sh` | Requires CPU with ARM NEON |
 | arm64-v8a   | `scripts/build-android-arm64.sh` |                            |
 | x86         | `scripts/build-android-x86.sh`   |                            |
 
 Notes:
+
 - On **armeabi-v7a** `pytorch_qnnp_initialize` will fail with `pytorch_qnnp_status_unsupported_hardware` if the mobile CPU does not support ARM NEON. Don't set `-DANDROID_ARM_NEON=1` for QNNPACK compilation as it can make `pytorch_qnnp_initialize` crash on CPUs without ARM NEON.
 
 ### Cross-compilation for iOS

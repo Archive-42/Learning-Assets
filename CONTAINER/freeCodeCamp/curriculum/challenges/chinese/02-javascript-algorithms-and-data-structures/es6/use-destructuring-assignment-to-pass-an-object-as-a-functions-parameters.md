@@ -13,18 +13,15 @@ dashedName: use-destructuring-assignment-to-pass-an-object-as-a-functions-parame
 请看以下代码：
 
 ```js
-const profileUpdate = (profileData) => {
+const profileUpdate = profileData => {
   const { name, age, nationality, location } = profileData;
-
-}
+};
 ```
 
 上面的操作解构了传给函数的对象。 这样的操作也可以直接在参数里完成：
 
 ```js
-const profileUpdate = ({ name, age, nationality, location }) => {
-
-}
+const profileUpdate = ({ name, age, nationality, location }) => {};
 ```
 
 当 `profileData` 被传递到上面的函数时，从函数参数中解构出值以在函数内使用。
@@ -74,7 +71,7 @@ const stats = {
 };
 
 // Only change code below this line
-const half = (stats) => (stats.max + stats.min) / 2.0; 
+const half = stats => (stats.max + stats.min) / 2.0;
 // Only change code above this line
 ```
 
@@ -90,5 +87,5 @@ const stats = {
   average: 35.85
 };
 
-const half = ( {max, min} ) => (max + min) / 2.0;
+const half = ({ max, min }) => (max + min) / 2.0;
 ```

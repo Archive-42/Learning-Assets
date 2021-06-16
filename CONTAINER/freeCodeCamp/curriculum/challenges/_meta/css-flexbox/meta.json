@@ -9,14 +9,8 @@
   "superBlock": "responsive-web-design",
   "superOrder": 1,
   "challengeOrder": [
-    [
-      "587d78ab367417b2b2512af0",
-      "Use display: flex to Position Two Boxes"
-    ],
-    [
-      "587d78ab367417b2b2512af1",
-      "Add Flex Superpowers to the Tweet Embed"
-    ],
+    ["587d78ab367417b2b2512af0", "Use display: flex to Position Two Boxes"],
+    ["587d78ab367417b2b2512af1", "Add Flex Superpowers to the Tweet Embed"],
     [
       "587d78ab367417b2b2512af2",
       "Use the flex-direction Property to Make a Row"
@@ -57,26 +51,14 @@
       "587d78ad367417b2b2512afb",
       "Use the flex-shrink Property to Shrink Items"
     ],
-    [
-      "587d78ae367417b2b2512afc",
-      "Use the flex-grow Property to Expand Items"
-    ],
+    ["587d78ae367417b2b2512afc", "Use the flex-grow Property to Expand Items"],
     [
       "587d78ae367417b2b2512afd",
       "Use the flex-basis Property to Set the Initial Size of an Item"
     ],
-    [
-      "587d78ae367417b2b2512afe",
-      "Use the flex Shorthand Property"
-    ],
-    [
-      "587d78ae367417b2b2512aff",
-      "Use the order Property to Rearrange Items"
-    ],
-    [
-      "587d78af367417b2b2512b00",
-      "Use the align-self Property"
-    ]
+    ["587d78ae367417b2b2512afe", "Use the flex Shorthand Property"],
+    ["587d78ae367417b2b2512aff", "Use the order Property to Rearrange Items"],
+    ["587d78af367417b2b2512b00", "Use the align-self Property"]
   ],
   "helpRoom": "Help",
   "fileName": "01-responsive-web-design/css-flexbox.json"

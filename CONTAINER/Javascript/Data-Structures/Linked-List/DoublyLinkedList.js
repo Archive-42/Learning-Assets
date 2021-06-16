@@ -1,5 +1,5 @@
 // Hamza chabchoub contribution for a university project
-function DoubleLinkedList () {
+function DoubleLinkedList() {
   const Node = function (element) {
     this.element = element
     this.next = null

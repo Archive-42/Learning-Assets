@@ -25,13 +25,13 @@ dashedName: add-a-license-to-your-package-json
 package.json 应该包含一个有效的“license”键
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert(packJson.license, '"license" is missing');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

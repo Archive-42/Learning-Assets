@@ -39,7 +39,7 @@ All of the `section` elements should be between the opening and closing tags of 
 
 ```js
 const childrenOfMain = [...document.querySelector('main').children];
-const sectionElemsFound = childrenOfMain.filter((child) => {
+const sectionElemsFound = childrenOfMain.filter(child => {
   return child.nodeName === 'SECTION';
 });
 assert(sectionElemsFound.length === 3);
@@ -61,38 +61,50 @@ assert($('main > section')[2].children.length === 0);
     <h1>CatPhotoApp</h1>
     <main>
       <section>
-      <h2>Cat Photos</h2>
-      <!-- TODO: Add link to cat photos -->
-      <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-      <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <h2>Cat Photos</h2>
+        <!-- TODO: Add link to cat photos -->
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
---fcc-editable-region--
+      --fcc-editable-region--
       <section>
-      <h2>Cat Lists</h2>
-      <h3>Things cats love:</h3>
-      <ul>
-        <li>cat nip</li>
-        <li>laser pointers</li>
-        <li>lasagna</li>
-      </ul>
-      <figure>
-        <img src="https://bit.ly/fcc-lasagna" alt="A slice of lasagna on a plate.">
-        <figcaption>Cats <em>love</em> lasagna.</figcaption>  
-      </figure>
-      <h3>Top 3 things cats hate:</h3>
-      <ol>
-        <li>flea treatment</li>
-        <li>thunder</li>
-        <li>other cats</li>
-      </ol>
-      <figure>
-        <img src="https://bit.ly/fcc-cats" alt="Five cats looking around a field.">
-        <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
-      </figure>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img
+            src="https://bit.ly/fcc-lasagna"
+            alt="A slice of lasagna on a plate."
+          />
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img
+            src="https://bit.ly/fcc-cats"
+            alt="Five cats looking around a field."
+          />
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
       </section>
---fcc-editable-region--
+      --fcc-editable-region--
     </main>
   </body>
 </html>
 ```
-

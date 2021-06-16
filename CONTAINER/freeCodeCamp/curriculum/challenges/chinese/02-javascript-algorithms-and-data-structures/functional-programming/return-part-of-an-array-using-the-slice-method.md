@@ -13,7 +13,7 @@ dashedName: return-part-of-an-array-using-the-slice-method
 举个例子：
 
 ```js
-var arr = ["Cat", "Dog", "Tiger", "Zebra"];
+var arr = ['Cat', 'Dog', 'Tiger', 'Zebra'];
 var newArray = arr.slice(1, 3);
 ```
 
@@ -74,11 +74,9 @@ assert(
 ```js
 function sliceArray(anim, beginSlice, endSlice) {
   // Only change code below this line
-
-
   // Only change code above this line
 }
-var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+var inputAnim = ['Cat', 'Dog', 'Tiger', 'Zebra', 'Ant'];
 sliceArray(inputAnim, 1, 3);
 ```
 
@@ -87,9 +85,9 @@ sliceArray(inputAnim, 1, 3);
 ```js
 function sliceArray(anim, beginSlice, endSlice) {
   // Only change code below this line
-  return anim.slice(beginSlice, endSlice)
+  return anim.slice(beginSlice, endSlice);
   // Only change code above this line
 }
-var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+var inputAnim = ['Cat', 'Dog', 'Tiger', 'Zebra', 'Ant'];
 sliceArray(inputAnim, 1, 3);
 ```

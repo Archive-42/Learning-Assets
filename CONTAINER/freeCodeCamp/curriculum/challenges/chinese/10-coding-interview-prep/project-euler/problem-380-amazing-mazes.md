@@ -30,7 +30,6 @@ assert.strictEqual(euler380(), Infinity);
 
 ```js
 function euler380() {
-
   return true;
 }
 

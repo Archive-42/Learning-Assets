@@ -14,7 +14,7 @@ El texto provisional es lo que se muestra en tu elemento de entrada `input` ante
 Puedes crear texto provisional así:
 
 ```html
-<input type="text" placeholder="this is placeholder text">
+<input type="text" placeholder="this is placeholder text" />
 ```
 
 **Nota:** Recuerda que los elementos `input` se cierran solos.
@@ -64,7 +64,11 @@ assert($('input[type=text]').length > 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -78,7 +82,7 @@ assert($('input[type=text]').length > 0);
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <input type="text">
+  <input type="text" />
 </main>
 ```
 
@@ -89,7 +93,11 @@ assert($('input[type=text]').length > 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -103,6 +111,6 @@ assert($('input[type=text]').length > 0);
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <input type="text" placeholder="cat photo URL">
+  <input type="text" placeholder="cat photo URL" />
 </main>
 ```

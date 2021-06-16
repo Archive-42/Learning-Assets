@@ -13,10 +13,10 @@ Como ya has visto, el comportamiento se comparte mediante una herencia. Sin emba
 Para objetos no relacionados es mejor utilizar <dfn>mixins</dfn>. Un "mixin" permite a otros objetos utilizar una colección de funciones.
 
 ```js
-let flyMixin = function(obj) {
-  obj.fly = function() {
-    console.log("Flying, wooosh!");
-  }
+let flyMixin = function (obj) {
+  obj.fly = function () {
+    console.log('Flying, wooosh!');
+  };
 };
 ```
 
@@ -24,12 +24,12 @@ El `flyMixin` toma a cualquier objeto y le da el método `fly`.
 
 ```js
 let bird = {
-  name: "Donald",
+  name: 'Donald',
   numLegs: 2
 };
 
 let plane = {
-  model: "777",
+  model: '777',
   numPassengers: 524
 };
 
@@ -78,13 +78,13 @@ assert(typeof boat.glide === 'function');
 
 ```js
 let bird = {
-  name: "Donald",
+  name: 'Donald',
   numLegs: 2
 };
 
 let boat = {
-  name: "Warrior",
-  type: "race-boat"
+  name: 'Warrior',
+  type: 'race-boat'
 };
 
 // Only change code below this line
@@ -94,15 +94,15 @@ let boat = {
 
 ```js
 let bird = {
-  name: "Donald",
+  name: 'Donald',
   numLegs: 2
 };
 
 let boat = {
-  name: "Warrior",
-  type: "race-boat"
+  name: 'Warrior',
+  type: 'race-boat'
 };
-function glideMixin (obj) {
+function glideMixin(obj) {
   obj.glide = () => 'Gliding!';
 }
 

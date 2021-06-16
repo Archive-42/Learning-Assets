@@ -15,7 +15,7 @@ Names for partials start with the underscore (`_`) character, which tells Sass i
 For example, if all your mixins are saved in a partial named "\_mixins.scss", and they are needed in the "main.scss" file, this is how to use them in the main file:
 
 ```scss
-@import 'mixins'
+@import 'mixins';
 ```
 
 Note that the underscore and file extension are not needed in the `import` statement - Sass understands it is a partial. Once a partial is imported into a file, all variables, mixins, and other code are available to use.

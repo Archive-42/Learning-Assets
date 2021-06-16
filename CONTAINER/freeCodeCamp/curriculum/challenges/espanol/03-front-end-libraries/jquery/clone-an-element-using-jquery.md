@@ -15,7 +15,7 @@ jQuery tiene una función llamada `clone()` que hace una copia de un elemento.
 Por ejemplo, si quisiéramos copìar `target2` de nuestro `left-well` a nuestro `right-well`, usaríamos:
 
 ```js
-$("#target2").clone().appendTo("#right-well");
+$('#target2').clone().appendTo('#right-well');
 ```
 
 ¿Notaste que esto implica usar dos funciones jQuery juntas? Esto es llamado <dfn>function chaining</dfn> (encadenamiento de funciones) y es una forma conveniente de hacer cosas con jQuery.
@@ -48,12 +48,11 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
   });
 </script>
 
@@ -86,12 +85,12 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
   });
 </script>
 

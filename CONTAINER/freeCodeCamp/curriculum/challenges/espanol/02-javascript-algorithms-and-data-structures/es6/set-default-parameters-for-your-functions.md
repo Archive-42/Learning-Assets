@@ -13,9 +13,9 @@ Para ayudarnos a crear funciones más flexibles, ES6 introduce <dfn>parametros p
 Echa un vistazo, al siguente código:
 
 ```js
-const greeting = (name = "Anonymous") => "Hello " + name;
+const greeting = (name = 'Anonymous') => 'Hello ' + name;
 
-console.log(greeting("John"));
+console.log(greeting('John'));
 console.log(greeting());
 ```
 

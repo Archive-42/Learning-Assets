@@ -14,13 +14,13 @@ dashedName: add-new-properties-to-a-javascript-object
 这里展示了如何给 `ourDog` 添加一个属性 `bark`：
 
 ```js
-ourDog.bark = "bow-wow";
+ourDog.bark = 'bow-wow';
 ```
 
 或者
 
 ```js
-ourDog["bark"] = "bow-wow";
+ourDog['bark'] = 'bow-wow';
 ```
 
 现在，当我们执行 `ourDog.bark` 时，就能得到他的叫声，`bow-wow`。
@@ -29,13 +29,13 @@ ourDog["bark"] = "bow-wow";
 
 ```js
 var ourDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["everything!"]
+  name: 'Camper',
+  legs: 4,
+  tails: 1,
+  friends: ['everything!']
 };
 
-ourDog.bark = "bow-wow";
+ourDog.bark = 'bow-wow';
 ```
 
 # --instructions--
@@ -61,7 +61,9 @@ assert(!/bark[^\n]:/.test(code));
 ## --after-user-code--
 
 ```js
-(function(z){return z;})(myDog);
+(function (z) {
+  return z;
+})(myDog);
 ```
 
 ## --seed-contents--
@@ -69,10 +71,10 @@ assert(!/bark[^\n]:/.test(code));
 ```js
 // Setup
 var myDog = {
-  "name": "Happy Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
+  name: 'Happy Coder',
+  legs: 4,
+  tails: 1,
+  friends: ['freeCodeCamp Campers']
 };
 
 // Only change code below this line
@@ -82,10 +84,10 @@ var myDog = {
 
 ```js
 var myDog = {
-  "name": "Happy Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
+  name: 'Happy Coder',
+  legs: 4,
+  tails: 1,
+  friends: ['freeCodeCamp Campers']
 };
-myDog.bark = "Woof Woof";
+myDog.bark = 'Woof Woof';
 ```

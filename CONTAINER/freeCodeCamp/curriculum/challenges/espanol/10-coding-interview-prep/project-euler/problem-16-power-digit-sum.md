@@ -44,7 +44,6 @@ assert.strictEqual(powerDigitSum(1000), 1366);
 
 ```js
 function powerDigitSum(exponent) {
-
   return true;
 }
 
@@ -76,8 +75,8 @@ function powerDigitSum(exponent) {
     }
   }
 
-  bigNum.forEach(function(num) {
-    return sum += num;
+  bigNum.forEach(function (num) {
+    return (sum += num);
   });
 
   return sum;

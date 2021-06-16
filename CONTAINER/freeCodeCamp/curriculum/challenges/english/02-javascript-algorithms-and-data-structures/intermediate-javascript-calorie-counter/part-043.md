@@ -43,15 +43,11 @@ assert(
           <legend>Sex</legend>
           <div>
             <input type="radio" name="sex" id="female" value="F" checked />
-            <label for="female">
-              Female (2,000 calories)
-            </label>
+            <label for="female"> Female (2,000 calories) </label>
 
             <div>
               <input type="radio" name="sex" id="male" value="M" />
-              <label for="male">
-                Male (2,500 calories)
-              </label>
+              <label for="male"> Male (2,500 calories) </label>
             </div>
           </div>
         </div>
@@ -67,15 +63,11 @@ assert(
           <input type="number" min="0" class="cal-control" id="lunch" /><br />
           Dinner <input type="number" min="0" class="cal-control" id="dinner" />
         </div>
-        <button type="button" class="btn-add" id="add">
-          Add Entry
-        </button>
+        <button type="button" class="btn-add" id="add">Add Entry</button>
         <button type="submit" class="btn-solid" id="calculate">
           Calculate
         </button>
-        <button type="button" class="btn-outline" id="clear">
-          Clear
-        </button>
+        <button type="button" class="btn-outline" id="clear">Clear</button>
       </form>
       <div id="output"></div>
     </div>

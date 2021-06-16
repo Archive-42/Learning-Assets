@@ -49,7 +49,7 @@ assert(
 The `Items` component should include a `propTypes` check to require a value for `quantity` and ensure that its value is a number.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       const noWhiteSpace = __helpers.removeWhiteSpace(getUserInput('index'));
@@ -74,14 +74,14 @@ var PropTypes = {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<ShoppingCart />, document.getElementById('root'))
+ReactDOM.render(<ShoppingCart />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
 
 ```jsx
-const Items = (props) => {
-  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+const Items = props => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>;
 };
 
 // Change code below this line
@@ -97,16 +97,16 @@ class ShoppingCart extends React.Component {
     super(props);
   }
   render() {
-    return <Items />
+    return <Items />;
   }
-};
+}
 ```
 
 # --solutions--
 
 ```jsx
-const Items = (props) => {
-  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+const Items = props => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>;
 };
 
 // Change code below this line
@@ -124,7 +124,7 @@ class ShoppingCart extends React.Component {
     super(props);
   }
   render() {
-    return <Items />
+    return <Items />;
   }
-};
+}
 ```

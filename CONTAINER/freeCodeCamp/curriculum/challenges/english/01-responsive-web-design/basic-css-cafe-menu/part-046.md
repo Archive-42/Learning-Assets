@@ -42,25 +42,31 @@ Test 1
         <section>
           <h2>Coffees</h2>
           <article class="item">
-            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+            <p class="flavor">French Vanilla</p>
+            <p class="price">3.00</p>
           </article>
           <article class="item">
-            <p class="flavor">Carmel Macchiato</p><p class="price">3.75</p>
+            <p class="flavor">Carmel Macchiato</p>
+            <p class="price">3.75</p>
           </article>
           <article class="item">
-            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+            <p class="flavor">Pumpkin Spice</p>
+            <p class="price">3.50</p>
           </article>
           <article class="item">
-            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+            <p class="flavor">Hazelnut</p>
+            <p class="price">4.00</p>
           </article>
           <article class="item">
-            <p class="flavor">Mocha</p><p class="price">4.50</p>
+            <p class="flavor">Mocha</p>
+            <p class="price">4.50</p>
           </article>
         </section>
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -95,4 +101,3 @@ h1, h2, p {
 }
 --fcc-editable-region--
 ```
-

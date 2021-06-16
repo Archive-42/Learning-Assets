@@ -126,16 +126,16 @@ assert.equal(eth_mult(63, 74), 4662);
 ## --seed-contents--
 
 ```js
-function eth_mult(a, b) {
-
-}
+function eth_mult(a, b) {}
 ```
 
 # --solutions--
 
 ```js
 function eth_mult(a, b) {
-  let sum = 0; a = [a]; b = [b];
+  let sum = 0;
+  a = [a];
+  b = [b];
 
   let half = a => a / 2,
     double = a => a * 2,

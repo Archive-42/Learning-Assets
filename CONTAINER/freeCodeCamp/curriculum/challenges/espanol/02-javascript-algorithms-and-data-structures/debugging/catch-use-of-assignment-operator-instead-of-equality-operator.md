@@ -19,10 +19,8 @@ El código siguiente asigna a `x` el valor de 2, que se evalúa como `true`. Cas
 ```js
 let x = 1;
 let y = 2;
-if (x = y) {
-
+if ((x = y)) {
 } else {
-
 }
 ```
 
@@ -53,12 +51,12 @@ assert(code.match(/x\s*?===?\s*?y/g));
 ```js
 let x = 7;
 let y = 9;
-let result = "to come";
+let result = 'to come';
 
-if(x = y) {
-  result = "Equal!";
+if ((x = y)) {
+  result = 'Equal!';
 } else {
-  result = "Not equal!";
+  result = 'Not equal!';
 }
 
 console.log(result);
@@ -69,12 +67,12 @@ console.log(result);
 ```js
 let x = 7;
 let y = 9;
-let result = "to come";
+let result = 'to come';
 
-if(x === y) {
- result = "Equal!";
+if (x === y) {
+  result = 'Equal!';
 } else {
- result = "Not equal!";
+  result = 'Not equal!';
 }
 
 console.log(result);

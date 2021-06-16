@@ -16,19 +16,19 @@ The most basic operator is the equality operator `==`. The equality operator com
 ```js
 function equalityTest(myVal) {
   if (myVal == 10) {
-     return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 ```
 
 If `myVal` is equal to `10`, the equality operator returns `true`, so the code in the curly braces will execute, and the function will return `Equal`. Otherwise, the function will return `Not Equal`. In order for JavaScript to compare two different <dfn>data types</dfn> (for example, `numbers` and `strings`), it must convert one type to another. This is known as Type Coercion. Once it does, however, it can compare terms as follows:
 
 ```js
-1   ==  1
-1   ==  2
-1   == '1'
-"3" ==  3
+1 == 1;
+1 == 2;
+1 == '1';
+'3' == 3;
 ```
 
 In order, these expressions would evaluate to `true`, `false`, `true`, and `true`.
@@ -70,10 +70,11 @@ assert(code.match(/==/g) && !code.match(/===/g));
 ```js
 // Setup
 function testEqual(val) {
-  if (val) { // Change this line
-    return "Equal";
+  if (val) {
+    // Change this line
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 
 testEqual(10);
@@ -84,8 +85,8 @@ testEqual(10);
 ```js
 function testEqual(val) {
   if (val == 12) {
-    return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 ```

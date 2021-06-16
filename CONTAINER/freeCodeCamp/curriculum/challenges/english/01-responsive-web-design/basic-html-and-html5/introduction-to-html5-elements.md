@@ -16,7 +16,7 @@ These tags give a descriptive structure to your HTML, make your HTML easier to r
 Example usage, a `main` element with two child elements nested inside it:
 
 ```html
-<main> 
+<main>
   <h1>Hello World</h1>
   <p>Hello Paragraph</p>
 </main>
@@ -84,7 +84,10 @@ assert(code.match(/<\/p>\s*?<\/main>/g));
 ```html
 <h2>CatPhotoApp</h2>
 
-<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p>
+  Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack
+  your ankles chase the red dot, hairball run catnip eat the grass sniff.
+</p>
 ```
 
 # --solutions--
@@ -92,7 +95,14 @@ assert(code.match(/<\/p>\s*?<\/main>/g));
 ```html
 <h2>CatPhotoApp</h2>
 <main>
-  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+  <p>
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff.
+  </p>
+  <p>
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+    rip the couch sleep in the sink fluffy fur catnip scratched.
+  </p>
 </main>
 ```

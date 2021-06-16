@@ -13,7 +13,7 @@ D3 has several methods that let you add and change elements in your document.
 The `select()` method selects one element from the document. It takes an argument for the name of the element you want and returns an HTML node for the first element in the document that matches the name. Here's an example:
 
 ```js
-const anchor = d3.select("a");
+const anchor = d3.select('a');
 ```
 
 The above example finds the first anchor tag on the page and saves an HTML node for it in the variable `anchor`. You can use the selection with other methods. The `d3` part of the example is a reference to the D3 object, which is how you access D3 methods.
@@ -27,9 +27,7 @@ The `text()` method either sets the text of the selected node, or gets the curre
 Here's an example that selects an unordered list, appends a list item, and adds text:
 
 ```js
-d3.select("ul")
-  .append("li")
-  .text("Very important item");
+d3.select('ul').append('li').text('Very important item');
 ```
 
 D3 allows you to chain several methods together with periods to perform a number of actions in a row.
@@ -85,8 +83,6 @@ assert(code.match(/\.text/g));
   <script>
     // Add your code below this line
 
-
-
     // Add your code above this line
   </script>
 </body>
@@ -97,9 +93,7 @@ assert(code.match(/\.text/g));
 ```html
 <body>
   <script>
-    d3.select("body")
-      .append("h1")
-      .text("Learning D3")
+    d3.select('body').append('h1').text('Learning D3');
   </script>
 </body>
 ```

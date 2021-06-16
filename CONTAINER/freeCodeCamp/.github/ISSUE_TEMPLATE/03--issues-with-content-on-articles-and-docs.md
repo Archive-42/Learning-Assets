@@ -4,7 +4,6 @@ about: Report issues with content on a specific article, like broken links, typo
 title: ''
 labels: 'type: bug, status: waiting triage'
 assignees: ''
-
 ---
 
 <!--
@@ -13,11 +12,8 @@ NOTE: If you want to become an author on freeCodeCamp, you can find everything h
 
 **Describe your problem and how to reproduce it:**
 
-
 **Add a Link to the page with the problem:**
 
-
 **Recommended fix, suggestions (how would you update it?):**
-
 
 **If possible, add a screenshot here (you can drag and drop, png, jpg, gif, etc. in this box):**

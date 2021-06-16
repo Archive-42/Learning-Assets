@@ -42,4 +42,3 @@ print(b)
 ## --video-solution--
 
 2
-

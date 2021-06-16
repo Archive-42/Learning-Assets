@@ -21,12 +21,12 @@ dashedName: test-if-an-object-has-a-property
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ dashedName: test-if-an-object-has-a-property
 应该为第一个断言选择正确的方法：`property` 或 `notProperty`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'notProperty',
         'A car has not wings'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ dashedName: test-if-an-object-has-a-property
 应该为第二个断言选择正确的方法：`property` 或 `notProperty`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'property',
         'planes have engines'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -71,12 +71,12 @@ dashedName: test-if-an-object-has-a-property
 应该为第三个断言选择正确的方法：`property` 或 `notProperty`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'property', 'Cars have wheels');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

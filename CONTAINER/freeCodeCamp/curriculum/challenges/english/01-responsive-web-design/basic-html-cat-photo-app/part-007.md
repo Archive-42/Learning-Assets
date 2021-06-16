@@ -35,7 +35,7 @@ Your `img` element should be below the `p` element. You have them in the wrong o
 
 ```js
 const collection = [...document.querySelectorAll('p,img')].map(
-  (node) => node.nodeName
+  node => node.nodeName
 );
 assert(collection.indexOf('P') < collection.indexOf('IMG'));
 ```
@@ -51,11 +51,10 @@ assert(collection.indexOf('P') < collection.indexOf('IMG'));
     <main>
       <h2>Cat Photos</h2>
       <!-- TODO: Add link to cat photos -->
---fcc-editable-region--
+      --fcc-editable-region--
       <p>Click here to view more cat photos.</p>
---fcc-editable-region--
+      --fcc-editable-region--
     </main>
   </body>
 </html>
 ```
-

@@ -13,7 +13,7 @@ A veces los elementos HTML reciben múltiples estilos que entran en conflicto en
 
 Por ejemplo, tu elemento `h1` no puede ser verde y rosado al mismo tiempo.
 
-Veamos qué ocurre cuando creamos una clase que hace que el texto sea rosado ("pink"), y luego se la aplicamos a un elemento. ¿*Sobreescribirá* nuestra clase la prioridad CSS `color: green;` del elemento `body`?
+Veamos qué ocurre cuando creamos una clase que hace que el texto sea rosado ("pink"), y luego se la aplicamos a un elemento. ¿_Sobreescribirá_ nuestra clase la prioridad CSS `color: green;` del elemento `body`?
 
 # --instructions--
 

@@ -12,7 +12,7 @@ dashedName: find-the-length-of-a-string
 Puedes encontrar la longitud de un valor de cadena (`String`) escribiendo `.length` después de la variable de cadena o literal de cadena.
 
 ```js
-console.log("Alan Peter".length);
+console.log('Alan Peter'.length);
 ```
 
 El valor `10` se mostrará en la consola.
@@ -53,7 +53,7 @@ assert(code.match(/=\s*lastName\.length/g) && !code.match(/lastName\s*=\s*8/));
 ```js
 // Setup
 var lastNameLength = 0;
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 
 // Only change code below this line
 
@@ -64,6 +64,6 @@ lastNameLength = lastName;
 
 ```js
 var lastNameLength = 0;
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 lastNameLength = lastName.length;
 ```

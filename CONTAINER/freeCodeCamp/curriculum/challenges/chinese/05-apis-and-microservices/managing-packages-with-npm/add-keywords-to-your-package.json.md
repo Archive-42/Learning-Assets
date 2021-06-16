@@ -27,13 +27,13 @@ dashedName: add-keywords-to-your-package-json
 package.json 应该有一个有效的“keywords”键
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert(packJson.keywords, '"keywords" is missing');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -42,13 +42,13 @@ package.json 应该有一个有效的“keywords”键
 “keywords”字段应该是一个数组
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.isArray(packJson.keywords, '"keywords" is not an array');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -57,9 +57,9 @@ package.json 应该有一个有效的“keywords”键
 “keywords”中应该包含关键词“freecodecamp”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.include(
         packJson.keywords,
@@ -67,7 +67,7 @@ package.json 应该有一个有效的“keywords”键
         '"keywords" does not include "freecodecamp"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

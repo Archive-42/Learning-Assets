@@ -1,0 +1,82 @@
+--RETRIEVING DATA---
+1. Selecting columns
+ - Orders query: Id,CustomerId,EmployeeId,ShipCity,ShipCountry
+ - Customers query: Id,ContactName,CompanyName
+ - Suppliers query: Id,ContactName,CompanyName
+ - Employees query: Id,FirstName,LastName,Region,HireDate,Title
+
+2. Filtering Via WHERE clauses
+ - Products query: Discontinued, Needs Reorder
+ - Customers query: Filter by ContactName, CustomerName using LIKE
+
+3. Sorting and Paging
+- Pagination for orders (limit, offset)
+- Sorting for orders
+- Pagination for customer orders
+- Sorting for customer orders
+
+--QUERYING ACROSS TABLES--
+
+4. Join
+- Order list
+- Product list
+- Order Details
+
+5. Aggregate Functions and GROUP BY
+- Order total
+- Supplier product list
+- Count of orders per employee
+- Count of orders per customer
+
+--MANIPULATING DATA---
+
+6. Creating and Destroying Records
+- Create an order
+- Delete an order
+
+7. Transactions
+- Order items
+
+8. Updating Records
+- Update an existing order
+
+--THE SCHEMA EVOLVES--
+
+9. Migrations & Indices
+- Order Indices: Customer, Employee
+- Order Detail Indices: Order, Product
+- Product Indices: Suppliers
+- Employee Indices: ReportsTo
+
+10. Constraints
+- Product Indices: UNIQUE[ProductId, OrderId]
+- Foreign Keys
+- NOT NULL
+
+--ADVANCED--
+
+11. Triggers
+- Set order.OrderDate on Transaction insert
+
+12. Views
+- Supplier List
+
+13. Prepared Statements
+- Get Order
+
+--MySQL/POSTGRES--
+
+14. PG/MySQL: JSON and Array column types
+
+15. PG/MySQL: Materialized Views
+
+16. PG/MySQL: Full Text Search
+
+17. PG/MySQL: Pub-Sub
+
+--DB Administration--
+
+19. Command Line & Backup
+
+19. Performance & Optimization
+

@@ -15,7 +15,7 @@ jQuery has a function called `.html()` that lets you add HTML tags and text with
 Here's how you would rewrite and emphasize the text of our heading:
 
 ```js
-$("h3").html("<em>jQuery Playground</em>");
+$('h3').html('<em>jQuery Playground</em>');
 ```
 
 jQuery also has a similar function called `.text()` that only alters text without adding tags. In other words, this function will not evaluate any HTML tags passed to it, but will instead treat it as the text you want to replace the existing content with.
@@ -66,9 +66,8 @@ assert(code.match(/\$\(\s*?(\"|\')#target4(\"|\')\s*?\)\.html\(/));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
   });
 </script>
 
@@ -101,9 +100,9 @@ assert(code.match(/\$\(\s*?(\"|\')#target4(\"|\')\s*?\)\.html\(/));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target4").html('<em>#target4</em>');
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target4').html('<em>#target4</em>');
   });
 </script>
 

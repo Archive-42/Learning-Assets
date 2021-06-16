@@ -15,10 +15,8 @@ dashedName: create-a-stateless-functional-component
 要用函数创建组件，只需编写一个返回 JSX 或 `null` 的 JavaScript 函数。 需要注意的一点是，React 要求你的函数名以大写字母开头。 下面是一个无状态功能组件的示例，该组件在 JSX 中分配一个 HTML 的 class：
 
 ```jsx
-const DemoComponent = function() {
-  return (
-    <div className='customClass' />
-  );
+const DemoComponent = function () {
+  return <div className='customClass' />;
 };
 ```
 
@@ -72,31 +70,24 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
+ReactDOM.render(<MyComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
 
 ```jsx
-const MyComponent = function() {
+const MyComponent = function () {
   // Change code below this line
-
-
-
   // Change code above this line
-}
+};
 ```
 
 # --solutions--
 
 ```jsx
-const MyComponent = function() {
+const MyComponent = function () {
   // Change code below this line
-  return (
-    <div>
-      Demo Solution
-    </div>
-  );
+  return <div>Demo Solution</div>;
   // Change code above this line
-}
+};
 ```

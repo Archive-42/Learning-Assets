@@ -4,8 +4,7 @@ title: 使用 jQuery id 选择器选择元素
 challengeType: 6
 forumTopicId: 18317
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: target-elements-by-id-using-jquery
 ---
 
@@ -22,7 +21,7 @@ dashedName: target-elements-by-id-using-jquery
 下面的代码的效果是使 id 为 `target6` 的 `button` 标签淡出：
 
 ```js
-$("#target6").addClass("animated fadeOut");
+$('#target6').addClass('animated fadeOut');
 ```
 
 # --hints--
@@ -54,10 +53,9 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
   });
 </script>
 
@@ -90,10 +88,10 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
   });
 </script>
 

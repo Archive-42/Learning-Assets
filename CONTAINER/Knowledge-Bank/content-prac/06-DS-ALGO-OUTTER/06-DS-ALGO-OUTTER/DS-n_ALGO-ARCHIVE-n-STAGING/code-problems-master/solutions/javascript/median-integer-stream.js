@@ -7,7 +7,7 @@ var LinkedList = function (value) {
 };
 
 LinkedList.prototype.append = function (value) {
-  var node  = new LinkedList(value);
+  var node = new LinkedList(value);
   node.prev = this;
   node.next = this.next;
   // Fix the linked list node references.
@@ -17,7 +17,7 @@ LinkedList.prototype.append = function (value) {
 };
 
 LinkedList.prototype.prepend = function (value) {
-  var node  = new LinkedList(value);
+  var node = new LinkedList(value);
   node.prev = this.prev;
   node.next = this;
   // Fix the linked list node references.
@@ -42,7 +42,7 @@ module.exports = function () {
       if (number > this._median.value) {
         while (node && node.value < number) {
           prevNode = node;
-          node     = node.next;
+          node = node.next;
         }
         (node || prevNode).append(number);
         // Increment the counter of right nodes.
@@ -50,7 +50,7 @@ module.exports = function () {
       } else {
         while (node && node.value > number) {
           prevNode = node;
-          node     = node.prev;
+          node = node.prev;
         }
         (node || prevNode).prepend(number);
         // Increment the counter of left nodes.
@@ -76,12 +76,12 @@ module.exports = function () {
         return this._median.value;
       }
 
-      return (this._median.value + (this._median.prev.value)) / 2;
+      return (this._median.value + this._median.prev.value) / 2;
     },
     // Hold the median node in the list.
     _median: null,
     // Keep track of how many left and right nodes have been.
     _left: 0,
-    _right: 0
+    _right: 0,
   };
 };

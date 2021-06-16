@@ -13,7 +13,7 @@ Los desafíos anteriores demostraron que las expresiones regulares pueden ser ut
 En un desafío anterior, usaste el carácter caret (`^`) dentro de un conjunto de caracteres para crear un conjunto de caracteres en la forma `[^thingsThatWillNotBeMatched]`. Fuera de un conjunto de caracteres, el caret es utilizado para buscar patrones al principio de las cadenas.
 
 ```js
-let firstString = "Ricky is first and can be found.";
+let firstString = 'Ricky is first and can be found.';
 let firstRegex = /^Ricky/;
 firstRegex.test(firstString);
 let notFirst = "You can't find Ricky now.";
@@ -57,7 +57,7 @@ assert(!calRegex.test('Ricky and Cal both like racing.'));
 ## --seed-contents--
 
 ```js
-let rickyAndCal = "Cal and Ricky both like racing.";
+let rickyAndCal = 'Cal and Ricky both like racing.';
 let calRegex = /change/; // Change this line
 let result = calRegex.test(rickyAndCal);
 ```
@@ -65,7 +65,7 @@ let result = calRegex.test(rickyAndCal);
 # --solutions--
 
 ```js
-let rickyAndCal = "Cal and Ricky both like racing.";
+let rickyAndCal = 'Cal and Ricky both like racing.';
 let calRegex = /^Cal/; // Change this line
 let result = calRegex.test(rickyAndCal);
 ```

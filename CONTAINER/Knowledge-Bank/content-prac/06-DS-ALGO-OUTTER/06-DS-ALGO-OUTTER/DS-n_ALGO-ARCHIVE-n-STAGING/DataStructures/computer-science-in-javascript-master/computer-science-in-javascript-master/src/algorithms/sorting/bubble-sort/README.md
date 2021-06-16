@@ -20,7 +20,7 @@ const { bubbleSort } = require("@humanwhocodes/bubble-sort");
 const items = [1, 5, 2];
 const result = bubbleSort(items);
 
-console.log(result);        // [1, 2, 5]
+console.log(result); // [1, 2, 5]
 ```
 
 ## Note on Code Style

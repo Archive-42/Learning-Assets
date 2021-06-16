@@ -43,7 +43,7 @@ assert(
 `Items` 组件应该有一个 `{ quantity: 10 }` 的 prop，该 prop 是从 `ShoppingCart` 组件传递过去的。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       const mockedComponent = Enzyme.mount(React.createElement(ShoppingCart));
@@ -62,51 +62,59 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<ShoppingCart />, document.getElementById('root'))
+ReactDOM.render(<ShoppingCart />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
 
 ```jsx
-const Items = (props) => {
-  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
-}
+const Items = props => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>;
+};
 
 Items.defaultProps = {
   quantity: 0
-}
+};
 
 class ShoppingCart extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    { /* Change code below this line */ }
-    return <Items />
-    { /* Change code above this line */ }
+    {
+      /* Change code below this line */
+    }
+    return <Items />;
+    {
+      /* Change code above this line */
+    }
   }
-};
+}
 ```
 
 # --solutions--
 
 ```jsx
-const Items = (props) => {
-  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
-}
+const Items = props => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>;
+};
 
 Items.defaultProps = {
   quantity: 0
-}
+};
 
 class ShoppingCart extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    { /* Change code below this line */ }
-    return <Items quantity = {10} />
-    { /* Change code above this line */ }
+    {
+      /* Change code below this line */
+    }
+    return <Items quantity={10} />;
+    {
+      /* Change code above this line */
+    }
   }
-};
+}
 ```

@@ -67,7 +67,8 @@ true
  * @param value Brightness-value of the color.
  * @return The tuple of RGB-components.
  */
-function hsvToRgb (hue, saturation, value) { // eslint-disable-line no-unused-vars
+function hsvToRgb(hue, saturation, value) {
+  // eslint-disable-line no-unused-vars
   if (hue < 0 || hue > 360) {
     throw new Error('hue should be between 0 and 360')
   }
@@ -82,7 +83,7 @@ function hsvToRgb (hue, saturation, value) { // eslint-disable-line no-unused-va
 
   const chroma = value * saturation
   const hueSection = hue / 60
-  const secondLargestComponent = chroma * (1 - Math.abs(hueSection % 2 - 1))
+  const secondLargestComponent = chroma * (1 - Math.abs((hueSection % 2) - 1))
   const matchValue = value - chroma
 
   return getRgbBySection(hueSection, chroma, matchValue, secondLargestComponent)
@@ -96,7 +97,8 @@ function hsvToRgb (hue, saturation, value) { // eslint-disable-line no-unused-va
  * @param blue Blue-component of the color.
  * @return The tuple of HSV-components.
  */
-function rgbToHsv (red, green, blue) { // eslint-disable-line no-unused-vars
+function rgbToHsv(red, green, blue) {
+  // eslint-disable-line no-unused-vars
   if (red < 0 || red > 255) {
     throw new Error('red should be between 0 and 255')
   }
@@ -132,7 +134,8 @@ function rgbToHsv (red, green, blue) { // eslint-disable-line no-unused-vars
   return [hue, saturation, value]
 }
 
-function approximatelyEqualHsv (hsv1, hsv2) { // eslint-disable-line no-unused-vars
+function approximatelyEqualHsv(hsv1, hsv2) {
+  // eslint-disable-line no-unused-vars
   const bHue = Math.abs(hsv1[0] - hsv2[0]) < 0.2
   const bSaturation = Math.abs(hsv1[1] - hsv2[1]) < 0.002
   const bValue = Math.abs(hsv1[2] - hsv2[2]) < 0.002
@@ -140,9 +143,13 @@ function approximatelyEqualHsv (hsv1, hsv2) { // eslint-disable-line no-unused-v
   return bHue && bSaturation && bValue
 }
 
-function getRgbBySection (
-  hueSection, chroma, matchValue, secondLargestComponent) {
-  function convertToInt (input) {
+function getRgbBySection(
+  hueSection,
+  chroma,
+  matchValue,
+  secondLargestComponent
+) {
+  function convertToInt(input) {
     return Math.round(255 * input)
   }
 

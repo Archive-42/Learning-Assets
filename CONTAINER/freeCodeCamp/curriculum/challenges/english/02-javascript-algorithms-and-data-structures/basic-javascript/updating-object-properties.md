@@ -15,10 +15,10 @@ For example, let's look at `ourDog`:
 
 ```js
 var ourDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["everything!"]
+  name: 'Camper',
+  legs: 4,
+  tails: 1,
+  friends: ['everything!']
 };
 ```
 
@@ -47,7 +47,9 @@ assert(/"name": "Coder"/.test(code));
 ## --after-user-code--
 
 ```js
-(function(z){return z;})(myDog);
+(function (z) {
+  return z;
+})(myDog);
 ```
 
 ## --seed-contents--
@@ -55,10 +57,10 @@ assert(/"name": "Coder"/.test(code));
 ```js
 // Setup
 var myDog = {
-  "name": "Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
+  name: 'Coder',
+  legs: 4,
+  tails: 1,
+  friends: ['freeCodeCamp Campers']
 };
 
 // Only change code below this line
@@ -68,10 +70,10 @@ var myDog = {
 
 ```js
 var myDog = {
-  "name": "Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
+  name: 'Coder',
+  legs: 4,
+  tails: 1,
+  friends: ['freeCodeCamp Campers']
 };
-myDog.name = "Happy Coder";
+myDog.name = 'Happy Coder';
 ```

@@ -12,7 +12,7 @@ Encuentra el múltiplo común más pequeño de los parámetros proporcionados qu
 
 El rango será un arreglo de dos números que no necesariamente estarán en orden numérico.
 
-Por ejemplo, si se dan 1 y 3, encuentra el múltiplo común más pequeño de 1 y 3 que también es dividido por todos los números *entre* 1 y 3. La respuesta sería 6.
+Por ejemplo, si se dan 1 y 3, encuentra el múltiplo común más pequeño de 1 y 3 que también es dividido por todos los números _entre_ 1 y 3. La respuesta sería 6.
 
 # --hints--
 
@@ -61,26 +61,27 @@ function smallestCommons(arr) {
   return arr;
 }
 
-
-smallestCommons([1,5]);
+smallestCommons([1, 5]);
 ```
 
 # --solutions--
 
 ```js
 function gcd(a, b) {
-    while (b !== 0) {
-        a = [b, b = a % b][0];
-    }
-    return a;
+  while (b !== 0) {
+    a = [b, (b = a % b)][0];
+  }
+  return a;
 }
 
 function lcm(a, b) {
-    return (a * b) / gcd(a, b);
+  return (a * b) / gcd(a, b);
 }
 
 function smallestCommons(arr) {
-  arr.sort(function(a,b) {return a-b;});
+  arr.sort(function (a, b) {
+    return a - b;
+  });
   var rng = [];
   for (var i = arr[0]; i <= arr[1]; i++) {
     rng.push(i);

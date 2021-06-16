@@ -31,7 +31,7 @@ assert(
 );
 ```
 
-dispatch 一个 action creator 是 `addNoteText` 的action `ADD_NOTE`，应将 `state` 更新为 action creator 传递的字符串。
+dispatch 一个 action creator 是 `addNoteText` 的 action `ADD_NOTE`，应将 `state` 更新为 action creator 传递的字符串。
 
 ```js
 assert(
@@ -52,7 +52,7 @@ assert(
 const ADD_NOTE = 'ADD_NOTE';
 
 const notesReducer = (state = 'Initial State', action) => {
-  switch(action.type) {
+  switch (action.type) {
     // Change code below this line
 
     // Change code above this line
@@ -61,9 +61,8 @@ const notesReducer = (state = 'Initial State', action) => {
   }
 };
 
-const addNoteText = (note) => {
+const addNoteText = note => {
   // Change code below this line
-
   // Change code above this line
 };
 
@@ -80,7 +79,7 @@ console.log(store.getState());
 const ADD_NOTE = 'ADD_NOTE';
 
 const notesReducer = (state = 'Initial State', action) => {
-  switch(action.type) {
+  switch (action.type) {
     // Change code below this line
     case ADD_NOTE:
       return action.text;
@@ -90,12 +89,12 @@ const notesReducer = (state = 'Initial State', action) => {
   }
 };
 
-const addNoteText = (note) => {
+const addNoteText = note => {
   // Change code below this line
   return {
     type: ADD_NOTE,
     text: note
-  }
+  };
   // Change code above this line
 };
 

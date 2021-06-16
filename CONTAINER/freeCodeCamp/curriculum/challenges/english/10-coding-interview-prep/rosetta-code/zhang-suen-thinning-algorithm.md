@@ -155,7 +155,8 @@ const imageForTests = [
   ' ########     ####### ######    ################## ###### ',
   ' ########     ####### ######      ################ ###### ',
   ' ########     ####### ######         ############# ###### ',
-  '                                                          '];
+  '                                                          '
+];
 const expected = [
   '                                                          ',
   '                                                          ',
@@ -200,11 +201,10 @@ const testImage = [
   ' ########     ####### ######    ################## ###### ',
   ' ########     ####### ######      ################ ###### ',
   ' ########     ####### ######         ############# ###### ',
-  '                                                          '];
+  '                                                          '
+];
 
-function thinImage(image) {
-
-}
+function thinImage(image) {}
 ```
 
 # --solutions--
@@ -216,12 +216,30 @@ function Point(x, y) {
 }
 
 const ZhangSuen = (function () {
-  function ZhangSuen() {
-  }
+  function ZhangSuen() {}
 
-  ZhangSuen.nbrs = [[0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1], [0, -1]];
+  ZhangSuen.nbrs = [
+    [0, -1],
+    [1, -1],
+    [1, 0],
+    [1, 1],
+    [0, 1],
+    [-1, 1],
+    [-1, 0],
+    [-1, -1],
+    [0, -1]
+  ];
 
-  ZhangSuen.nbrGroups = [[[0, 2, 4], [2, 4, 6]], [[0, 2, 6], [0, 4, 6]]];
+  ZhangSuen.nbrGroups = [
+    [
+      [0, 2, 4],
+      [2, 4, 6]
+    ],
+    [
+      [0, 2, 6],
+      [0, 4, 6]
+    ]
+  ];
 
   ZhangSuen.toWhite = [];
 
@@ -264,13 +282,16 @@ const ZhangSuen = (function () {
         ZhangSuen.grid[p.y][p.x] = ' ';
       }
       ZhangSuen.toWhite = [];
-    } while ((firstStep || hasChanged));
+    } while (firstStep || hasChanged);
   };
 
   ZhangSuen.numNeighbors = function (r, c) {
     let count = 0;
     for (let i = 0; i < ZhangSuen.nbrs.length - 1; i++) {
-      if (ZhangSuen.grid[r + ZhangSuen.nbrs[i][1]][c + ZhangSuen.nbrs[i][0]] === '#') {
+      if (
+        ZhangSuen.grid[r + ZhangSuen.nbrs[i][1]][c + ZhangSuen.nbrs[i][0]] ===
+        '#'
+      ) {
         count++;
       }
     }
@@ -280,8 +301,15 @@ const ZhangSuen = (function () {
   ZhangSuen.numTransitions = function (r, c) {
     let count = 0;
     for (let i = 0; i < ZhangSuen.nbrs.length - 1; i++) {
-      if (ZhangSuen.grid[r + ZhangSuen.nbrs[i][1]][c + ZhangSuen.nbrs[i][0]] === ' ') {
-        if (ZhangSuen.grid[r + ZhangSuen.nbrs[i + 1][1]][c + ZhangSuen.nbrs[i + 1][0]] === '#') {
+      if (
+        ZhangSuen.grid[r + ZhangSuen.nbrs[i][1]][c + ZhangSuen.nbrs[i][0]] ===
+        ' '
+      ) {
+        if (
+          ZhangSuen.grid[r + ZhangSuen.nbrs[i + 1][1]][
+            c + ZhangSuen.nbrs[i + 1][0]
+          ] === '#'
+        ) {
           count++;
         }
       }
@@ -313,7 +341,7 @@ const ZhangSuen = (function () {
     return result;
   };
   return ZhangSuen;
-}());
+})();
 
 function thinImage(image) {
   return ZhangSuen.main(image);

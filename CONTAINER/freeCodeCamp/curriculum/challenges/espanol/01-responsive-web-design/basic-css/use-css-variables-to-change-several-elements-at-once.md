@@ -50,7 +50,6 @@ assert(
 ```html
 <style>
   .penguin {
-
     /* Only change code below this line */
     --penguin-skin: black;
     --penguin-belly: gray;
@@ -218,7 +217,7 @@ assert(
   }
 
   body {
-    background:#c6faf1;
+    background: #c6faf1;
   }
 
   .penguin * {
@@ -253,5 +252,11 @@ assert(
 # --solutions--
 
 ```html
-<style>.penguin {--penguin-skin: gray; --penguin-belly: white; --penguin-beak: orange;}</style>
+<style>
+  .penguin {
+    --penguin-skin: gray;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+</style>
 ```

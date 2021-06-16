@@ -15,8 +15,8 @@ dashedName: match-numbers-and-letters-of-the-alphabet
 此外，还可以在单个字符集中组合一系列字母和数字。
 
 ```js
-let jennyStr = "Jenny8675309";
-let myRegex = /[a-z0-9]/ig;
+let jennyStr = 'Jenny8675309';
+let myRegex = /[a-z0-9]/gi;
 jennyStr.match(myRegex);
 ```
 
@@ -49,7 +49,7 @@ assert(myRegex.flags.match(/i/).length == 1);
 ## --seed-contents--
 
 ```js
-let quoteSample = "Blueberry 3.141592653s are delicious.";
+let quoteSample = 'Blueberry 3.141592653s are delicious.';
 let myRegex = /change/; // Change this line
 let result = myRegex; // Change this line
 ```
@@ -57,7 +57,7 @@ let result = myRegex; // Change this line
 # --solutions--
 
 ```js
-let quoteSample = "Blueberry 3.141592653s are delicious.";
+let quoteSample = 'Blueberry 3.141592653s are delicious.';
 let myRegex = /[h-s2-6]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
 ```

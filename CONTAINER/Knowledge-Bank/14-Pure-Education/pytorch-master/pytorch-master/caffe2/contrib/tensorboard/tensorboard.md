@@ -1,6 +1,6 @@
-# Using TensorBoard in ifbpy #
+# Using TensorBoard in ifbpy
 
-## Simple Example ##
+## Simple Example
 
 ```lang=py
 

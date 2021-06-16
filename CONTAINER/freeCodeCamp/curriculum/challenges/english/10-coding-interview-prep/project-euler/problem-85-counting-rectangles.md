@@ -34,7 +34,6 @@ assert.strictEqual(countingRectangles(), 2772);
 
 ```js
 function countingRectangles() {
-
   return true;
 }
 

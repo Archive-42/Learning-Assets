@@ -45,7 +45,7 @@ console.log(i);
 var printNumTwo;
 for (var i = 0; i < 3; i++) {
   if (i === 2) {
-    printNumTwo = function() {
+    printNumTwo = function () {
       return i;
     };
   }
@@ -61,7 +61,7 @@ console.log(printNumTwo());
 let printNumTwo;
 for (let i = 0; i < 3; i++) {
   if (i === 2) {
-    printNumTwo = function() {
+    printNumTwo = function () {
       return i;
     };
   }
@@ -85,13 +85,13 @@ console.log(i);
 代码中不应该出现 `var`。
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/var/g));
+getUserInput => assert(!getUserInput('index').match(/var/g));
 ```
 
 `if` 语句中声明的变量 `i` 应该等于字符串 `block scope`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     getUserInput('index').match(/(i\s*=\s*).*\s*.*\s*.*\1('|")block\s*scope\2/g)
   );

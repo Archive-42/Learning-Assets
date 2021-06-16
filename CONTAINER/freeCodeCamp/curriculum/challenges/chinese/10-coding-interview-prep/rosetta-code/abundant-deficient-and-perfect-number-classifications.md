@@ -61,9 +61,7 @@ const solution = [15043, 4, 4953];
 ## --seed-contents--
 
 ```js
-function getDPA(num) {
-
-}
+function getDPA(num) {}
 ```
 
 # --solutions--
@@ -76,7 +74,7 @@ function getDPA(num) {
     const e = Math.sqrt(n);
     for (let d = 2; d < e; d += 1) {
       if (n % d === 0) {
-        ds += d + (n / d);
+        ds += d + n / d;
       }
     }
     if (n % e === 0) {

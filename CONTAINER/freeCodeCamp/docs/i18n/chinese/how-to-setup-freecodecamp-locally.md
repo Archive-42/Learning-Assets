@@ -3,9 +3,9 @@ Follow these guidelines for setting up freeCodeCamp locally on your system. This
 Some of these contribution workflows – like fixing bugs in the codebase or curriculum – need you to run freeCodeCamp locally on your computer.
 
 > [!TIP] If you are not interested in setting up freeCodeCamp locally, consider using Gitpod, a free online dev environment.
-> 
+>
 > [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/freeCodeCamp/freeCodeCamp)
-> 
+>
 > (Starts a ready-to-code dev environment for freeCodeCamp in your browser.)
 
 ### How to prepare your local machine
@@ -62,7 +62,7 @@ Once you have the prerequisites installed, you need to prepare your development 
 This is essential, as it allows you to work on your own copy of freeCodeCamp on GitHub, or to download (clone) your repository to work on locally. Later, you will be able to request changes to be pulled into the main repository from your fork via a pull request (PR).
 
 > [!TIP] The main repository at `https://github.com/freeCodeCamp/freeCodeCamp` is often referred to as the `upstream` repository.
-> 
+>
 > Your fork at `https://github.com/YOUR_USER_NAME/freeCodeCamp` is often referred to as the `origin` repository. `YOUR_USER_NAME` would be replaced with your GitHub username.
 
 **Follow these steps to fork the `https://github.com/freeCodeCamp/freeCodeCamp` repository:**
@@ -87,7 +87,7 @@ This is essential, as it allows you to work on your own copy of freeCodeCamp on 
 [Cloning](https://help.github.com/articles/cloning-a-repository/) is where you **download** a copy of a repository from a `remote` location that is either owned by you or by someone else. In your case, this remote location is your `fork` of freeCodeCamp's repository that should be available at `https://github.com/YOUR_USER_NAME/freeCodeCamp`. (`YOUR_USER_NAME` would be replaced with your GitHub user name.)
 
 > [!WARNING] If you are working on a WSL2 Linux Distro, you might get performance and stability issues by running this project in a folder which is shared between Windows and WSL2 (e.g. `/mnt/c/Users/`). Therefore we recommend to clone this repo into a folder which is mainly used by your WSL2 Linux Distro and not directly shared with Windows (e.g. `~/PROJECTS/`).
-> 
+>
 > See [this GitHub Issue](https://github.com/freeCodeCamp/freeCodeCamp/issues/40632) for further Information about this problem.
 
 Run these commands on your local machine:
@@ -154,9 +154,9 @@ If you do run into issues, first perform a web search for your issue and see if 
 And as always, feel free to ask questions on the ['Contributors' category on our forum](https://forum.freecodecamp.org/c/contributors) or [our chat server](https://chat.freecodecamp.org/home).
 
 > [!TIP] You may skip running freeCodeCamp locally if you are simply editing files. For instance, performing a `rebase`, or resolving `merge` conflicts.
-> 
+>
 > You can always return to this part of the instructions later. You should **only** skip this step if you do not need to run the apps on your machine.
-> 
+>
 > [Skip to making changes](#making-changes-locally).
 
 ### Configuring dependencies
@@ -281,7 +281,7 @@ Follow these steps:
 2. Sync the latest changes from the freeCodeCamp upstream `main` branch to your local main branch:
 
    > [!WARNING] If you have any outstanding pull request that you made from the `main` branch of your fork, you will lose them at the end of this step.
-   > 
+   >
    > You should ensure your pull request is merged by a moderator before performing this step. To avoid this scenario, you should **always** work on a branch other than the `main`.
 
    This step **will sync the latest changes** from the main repository of freeCodeCamp. It is important that you rebase your branch on top of the latest `upstream/main` as often as possible to avoid conflicts later.
@@ -478,7 +478,7 @@ It is recommended to research your specific issue on resources such as Google, S
 If you are on a different OS and/or are still running into issues, see [getting help](#getting-help).
 
 > [!WARNING]
-> 
+>
 > Please avoid creating GitHub issues for prerequisite issues. They are out of the scope of this project.
 
 ### Issues with the UI, Fonts, build errors, etc.

@@ -20,11 +20,11 @@ Cuando la condición se evalúa como `true`, el programa ejecuta el comando dent
 **Ejemplo**
 
 ```js
-function test (myCondition) {
+function test(myCondition) {
   if (myCondition) {
-     return "It was true";
+    return 'It was true';
   }
-  return "It was false";
+  return 'It was false';
 }
 test(true);
 test(false);
@@ -32,7 +32,7 @@ test(false);
 
 `test(true)` devuelve la cadena `It was true` y `test(false)` devuelve la cadena `It was false`.
 
-Cuando `test` es llamada con un valor de `true`, la sentencia `if` evalúa `myCondition` (mi condición) para ver si es `true` o no. Puesto que es `true`, la función devuelve `It was true`. Cuando llamamos a `test` con un valor de `false`, `myCondition` *no* es `true`, la sentencia dentro de las llaves no se ejecuta y la función devuelve `It was false`.
+Cuando `test` es llamada con un valor de `true`, la sentencia `if` evalúa `myCondition` (mi condición) para ver si es `true` o no. Puesto que es `true`, la función devuelve `It was true`. Cuando llamamos a `test` con un valor de `false`, `myCondition` _no_ es `true`, la sentencia dentro de las llaves no se ejecuta y la función devuelve `It was false`.
 
 # --instructions--
 
@@ -77,11 +77,7 @@ assert(trueOrFalse(false) === 'No, that was false');
 ```js
 function trueOrFalse(wasThatTrue) {
   // Only change code below this line
-
-
-
   // Only change code above this line
-
 }
 ```
 
@@ -90,8 +86,8 @@ function trueOrFalse(wasThatTrue) {
 ```js
 function trueOrFalse(wasThatTrue) {
   if (wasThatTrue) {
-    return "Yes, that was true";
+    return 'Yes, that was true';
   }
-  return "No, that was false";
+  return 'No, that was false';
 }
 ```

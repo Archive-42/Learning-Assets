@@ -14,7 +14,7 @@ Unlike strings, the entries of arrays are <dfn>mutable</dfn> and can be changed 
 **Example**
 
 ```js
-var ourArray = [50,40,30];
+var ourArray = [50, 40, 30];
 ourArray[0] = 15;
 ```
 
@@ -66,14 +66,18 @@ assert(
 ## --after-user-code--
 
 ```js
-if(typeof myArray !== "undefined"){(function(){return myArray;})();}
+if (typeof myArray !== 'undefined') {
+  (function () {
+    return myArray;
+  })();
+}
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var myArray = [18,64,99];
+var myArray = [18, 64, 99];
 
 // Only change code below this line
 ```
@@ -81,6 +85,6 @@ var myArray = [18,64,99];
 # --solutions--
 
 ```js
-var myArray = [18,64,99];
+var myArray = [18, 64, 99];
 myArray[0] = 45;
 ```

@@ -29,12 +29,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#4` in the `Basic Assert
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -43,12 +43,12 @@ All tests should pass.
 You should choose the correct method for the first assertion - `isTrue` vs. `isNotTrue`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'isTrue', 'True is true');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -57,16 +57,16 @@ You should choose the correct method for the first assertion - `isTrue` vs. `isN
 You should choose the correct method for the second assertion - `isTrue` vs. `isNotTrue`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'isTrue',
         'Double negation of a truthy value is true'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -75,16 +75,16 @@ You should choose the correct method for the second assertion - `isTrue` vs. `is
 You should choose the correct method for the third assertion - `isTrue` vs. `isNotTrue`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[2].method,
         'isNotTrue',
         'A truthy object is not true - neither is a false one'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

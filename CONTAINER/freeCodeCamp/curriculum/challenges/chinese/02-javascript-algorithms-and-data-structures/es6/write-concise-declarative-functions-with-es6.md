@@ -12,8 +12,8 @@ dashedName: write-concise-declarative-functions-with-es6
 
 ```js
 const person = {
-  name: "Taylor",
-  sayHello: function() {
+  name: 'Taylor',
+  sayHello: function () {
     return `Hello! My name is ${this.name}.`;
   }
 };
@@ -23,7 +23,7 @@ const person = {
 
 ```js
 const person = {
-  name: "Taylor",
+  name: 'Taylor',
   sayHello() {
     return `Hello! My name is ${this.name}.`;
   }
@@ -39,7 +39,7 @@ const person = {
 不应使用传统的函数定义方法。
 
 ```js
-(getUserInput) => assert(!code.match(/function/));
+getUserInput => assert(!code.match(/function/));
 ```
 
 `setGear` 应是一个声明函数。
@@ -64,7 +64,7 @@ assert(new bicycle.setGear(48).gear === 48);
 // Only change code below this line
 const bicycle = {
   gear: 2,
-  setGear: function(newGear) {
+  setGear: function (newGear) {
     this.gear = newGear;
   }
 };

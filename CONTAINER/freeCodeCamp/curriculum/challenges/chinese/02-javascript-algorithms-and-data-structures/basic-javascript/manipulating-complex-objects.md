@@ -16,15 +16,11 @@ dashedName: manipulating-complex-objects
 ```js
 var ourMusic = [
   {
-    "artist": "Daft Punk",
-    "title": "Homework",
-    "release_year": 1997,
-    "formats": [ 
-      "CD", 
-      "Cassette", 
-      "LP"
-    ],
-    "gold": true
+    artist: 'Daft Punk',
+    title: 'Homework',
+    release_year: 1997,
+    formats: ['CD', 'Cassette', 'LP'],
+    gold: true
   }
 ];
 ```
@@ -36,11 +32,7 @@ var ourMusic = [
   "artist": "Daft Punk",
   "title": "Homework",
   "release_year": 1997,
-  "formats": [ 
-    "CD",
-    "Cassette",
-    "LP"
-  ],
+  "formats": ["CD", "Cassette", "LP"],
   "gold": true
 }
 ```
@@ -125,7 +117,12 @@ assert(
 ## --after-user-code--
 
 ```js
-(function(x){ if (Array.isArray(x)) { return JSON.stringify(x); } return "myMusic is not an array"})(myMusic);
+(function (x) {
+  if (Array.isArray(x)) {
+    return JSON.stringify(x);
+  }
+  return 'myMusic is not an array';
+})(myMusic);
 ```
 
 ## --seed-contents--
@@ -133,15 +130,11 @@ assert(
 ```js
 var myMusic = [
   {
-    "artist": "Billy Joel",
-    "title": "Piano Man",
-    "release_year": 1973,
-    "formats": [
-      "CD",
-      "8T",
-      "LP"
-    ],
-    "gold": true
+    artist: 'Billy Joel',
+    title: 'Piano Man',
+    release_year: 1973,
+    formats: ['CD', '8T', 'LP'],
+    gold: true
   }
   // Add a record here
 ];
@@ -152,25 +145,17 @@ var myMusic = [
 ```js
 var myMusic = [
   {
-    "artist": "Billy Joel",
-    "title": "Piano Man",
-    "release_year": 1973,
-    "formats": [
-      "CS",
-      "8T",
-      "LP" ],
-    "gold": true
+    artist: 'Billy Joel',
+    title: 'Piano Man',
+    release_year: 1973,
+    formats: ['CS', '8T', 'LP'],
+    gold: true
   },
   {
-    "artist": "ABBA",
-    "title": "Ring Ring",
-    "release_year": 1973,
-    "formats": [
-      "CS",
-      "8T",
-      "LP",
-    "CD",
-  ]
+    artist: 'ABBA',
+    title: 'Ring Ring',
+    release_year: 1973,
+    formats: ['CS', '8T', 'LP', 'CD']
   }
 ];
 ```

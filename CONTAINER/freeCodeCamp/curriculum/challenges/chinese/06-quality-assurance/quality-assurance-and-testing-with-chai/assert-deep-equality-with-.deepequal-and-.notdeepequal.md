@@ -21,12 +21,12 @@ dashedName: assert-deep-equality-with--deepequal-and--notdeepequal
 不应有未通过的测试
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ dashedName: assert-deep-equality-with--deepequal-and--notdeepequal
 请为第一个断言选择正确的方法 — `deepEqual` 或 `notDeepEqual`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'deepEqual',
         'The order of the keys does not matter'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ dashedName: assert-deep-equality-with--deepequal-and--notdeepequal
 请为第二个断言选择正确的方法 — `deepEqual` 或 `notDeepEqual`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'notDeepEqual',
         'The position of elements within an array does matter'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

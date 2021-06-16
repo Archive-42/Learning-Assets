@@ -2,9 +2,9 @@
  * Author: Surendra Kumar
  * DFS Algorithm implementation in JavaScript
  * DFS Algorithm for traversing or searching graph data structures.
-*/
+ */
 
-function traverseDFS (root) {
+function traverseDFS(root) {
   const stack = [root]
   const res = []
 
@@ -24,7 +24,7 @@ function traverseDFS (root) {
   return res.reverse()
 }
 
-function searchDFS (tree, value) {
+function searchDFS(tree, value) {
   const stack = []
 
   stack.push(tree[0])

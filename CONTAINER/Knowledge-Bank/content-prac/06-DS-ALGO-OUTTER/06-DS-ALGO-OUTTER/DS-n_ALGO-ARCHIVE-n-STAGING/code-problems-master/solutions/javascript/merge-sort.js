@@ -1,15 +1,17 @@
 // Sort the array by breaking it down into smaller chunks
-module.exports = function mergeSort (array, compare) {
+module.exports = function mergeSort(array, compare) {
   // If's not an array or an array of just one element, it's already sorted
-  if (!Array.isArray(array) || array.length < 2) { return array; }
+  if (!Array.isArray(array) || array.length < 2) {
+    return array;
+  }
 
   var length = array.length,
-      middle = Math.floor(length * 0.5),
-      left   = array.slice(0, middle),
-      right  = array.slice(middle, length);
+    middle = Math.floor(length * 0.5),
+    left = array.slice(0, middle),
+    right = array.slice(middle, length);
 
   // Create a compare func if not passed in
-  if (typeof compare !== 'function') {
+  if (typeof compare !== "function") {
     compare = function (a, b) {
       return a > b ? 1 : -1;
     };

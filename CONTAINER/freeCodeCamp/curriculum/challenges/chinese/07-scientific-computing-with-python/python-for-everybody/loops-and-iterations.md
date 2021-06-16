@@ -48,4 +48,3 @@ while True:
 ## --video-solution--
 
 1
-

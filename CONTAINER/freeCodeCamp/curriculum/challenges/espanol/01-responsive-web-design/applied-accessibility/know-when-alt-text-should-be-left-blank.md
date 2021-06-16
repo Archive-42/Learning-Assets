@@ -14,7 +14,7 @@ En el último desafío, aprendiste que es obligatorio incluir un atributo `alt` 
 Cuando una imagen ya se explica con el contenido de texto o no agrega significado a una página, `img` todavía necesita un atributo `alt`, pero se puede establecer en una cadena vacía. Aquí hay un ejemplo:
 
 ```html
-<img src="visualDecoration.jpeg" alt="">
+<img src="visualDecoration.jpeg" alt="" />
 ```
 
 Las imágenes de fondo generalmente también caen bajo la etiqueta "decorativa". Sin embargo, normalmente se aplican con reglas CSS y, por lo tanto, no forman parte del proceso de lectores de pantalla del lenguaje de marcado.
@@ -50,7 +50,7 @@ assert($('img').attr('alt') == '');
   <p>To Come...</p>
 </article>
 
-<img src="samuraiSwords.jpeg">
+<img src="samuraiSwords.jpeg" />
 
 <article>
   <h2>Is Chuck Norris a Cat Person?</h2>
@@ -67,7 +67,7 @@ assert($('img').attr('alt') == '');
   <p>To Come...</p>
 </article>
 
-<img src="samuraiSwords.jpeg" alt="">
+<img src="samuraiSwords.jpeg" alt="" />
 
 <article>
   <h2>Is Chuck Norris a Cat Person?</h2>

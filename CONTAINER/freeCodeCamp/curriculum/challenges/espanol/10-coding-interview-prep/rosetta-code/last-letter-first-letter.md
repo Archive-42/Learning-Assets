@@ -140,9 +140,7 @@ assert.deepEqual(
 ## --seed-contents--
 
 ```js
-function findLongestChain(items) {
-
-}
+function findLongestChain(items) {}
 ```
 
 # --solutions--
@@ -155,9 +153,9 @@ function findLongestChain(items) {
     this.last_char = last_char;
   }
 
-  var items_len = items.length
+  var items_len = items.length;
   var refs_len = items_len;
-  var refs = []
+  var refs = [];
 
   // enough space for all items
   var longest_path_refs_len = 0;

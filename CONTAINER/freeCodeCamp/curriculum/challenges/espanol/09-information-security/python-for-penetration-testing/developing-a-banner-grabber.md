@@ -40,4 +40,3 @@ B: `int(port)`
 ## --video-solution--
 
 3
-

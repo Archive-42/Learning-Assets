@@ -4,8 +4,7 @@ title: 使用 jQuery 选择偶数元素
 challengeType: 6
 forumTopicId: 18318
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: target-even-elements-using-jquery
 ---
 
@@ -18,7 +17,7 @@ dashedName: target-even-elements-using-jquery
 下面的代码展示了选取所有 `target` class 元素的奇数元素并设置 sheke 效果：
 
 ```js
-$(".target:odd").addClass("animated shake");
+$('.target:odd').addClass('animated shake');
 ```
 
 尝试选取所有 `target` class 元素的偶数元素并给它们设置 `animated` 和 `shake` class。 请记住， **偶数**指的是基于零系统的元素的位置。
@@ -56,17 +55,16 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
-    $("#left-well").children().css("color", "green");
-    $(".target:nth-child(2)").addClass("animated bounce");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
+    $('#right-well').children().css('color', 'orange');
+    $('#left-well').children().css('color', 'green');
+    $('.target:nth-child(2)').addClass('animated bounce');
   });
 </script>
 
@@ -99,17 +97,17 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
-    $("#left-well").children().css("color", "green");
-    $(".target:nth-child(2)").addClass("animated bounce");
-    $(".target:even").addClass("animated shake");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
+    $('#right-well').children().css('color', 'orange');
+    $('#left-well').children().css('color', 'green');
+    $('.target:nth-child(2)').addClass('animated bounce');
+    $('.target:even').addClass('animated shake');
   });
 </script>
 

@@ -78,17 +78,14 @@ assert(code.match(/100%\s*?{[\s\S]*?left:\s*?-25px(;[\s\S]*?|\s*?)}/gi));
     0% {
       background-color: blue;
       top: 0px;
-
     }
     50% {
       background-color: green;
       top: 50px;
-
     }
     100% {
       background-color: yellow;
       top: 0px;
-
     }
   }
 </style>

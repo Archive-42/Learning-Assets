@@ -10,16 +10,16 @@ dashedName: personal-library
 
 构建一个 JavaScript 的全栈应用，在功能上与这个应用相似：<https://personal-library.freecodecamp.rocks/>。 可以采用下面的任意一种方式完成这个挑战：
 
--   克隆 [这个 GitHub 仓库](https://github.com/freeCodeCamp/boilerplate-project-library) 并在本地完成项目。
--   使用 [repl.it 上的初始化项目](https://repl.it/github/freeCodeCamp/boilerplate-project-library) 来完成项目。
--   使用一个你喜欢的站点生成器来完成项目。 需要确定包含了我们 GitHub 仓库的所有文件。
+- 克隆 [这个 GitHub 仓库](https://github.com/freeCodeCamp/boilerplate-project-library) 并在本地完成项目。
+- 使用 [repl.it 上的初始化项目](https://repl.it/github/freeCodeCamp/boilerplate-project-library) 来完成项目。
+- 使用一个你喜欢的站点生成器来完成项目。 需要确定包含了我们 GitHub 仓库的所有文件。
 
 完成本项目后，请将一个正常运行的 demo（项目演示）托管在可以公开访问的平台。 然后在 `Solution Link` 框中提交你的项目 URL。 此外，还可以将项目的源码提交到 `GitHub Link` 中。
 
 # --instructions--
 
 1.  将的 MongoDB 连接字符串添加到 `.env` 中（没有引号），`DB`  
-   示例： `DB=mongodb://admin:pass@1234.mlab.com:1234/fccpersonallib`
+    示例： `DB=mongodb://admin:pass@1234.mlab.com:1234/fccpersonallib`
 2.  在 `.env` 文件中设置 `NODE_ENV` 为 `test`中，没有引号
 3.  需要在 `routes/api.js` 中创建所有路由
 4.  在 `tests/2_functional-tests.js` 中创建所有的功能测试
@@ -29,17 +29,17 @@ dashedName: personal-library
 提交自己的项目，而不是示例的 URL。
 
 ```js
-(getUserInput) => {
+getUserInput => {
   assert(
     !/.*\/personal-library\.freecodecamp\.rocks/.test(getUserInput('url'))
   );
 };
 ```
 
-可以发送 <b>POST</b> 请求到 `/api/books`，带有 `title` 作为表单数据的一部分，来添加一本书。  返回的响应将是一个包含 `title` 和唯一的 `_id` 作为键的对象。  如果 `title` 未包含在请求中，返回的响应应该是字符串 `missing required field title`。
+可以发送 <b>POST</b> 请求到 `/api/books`，带有 `title` 作为表单数据的一部分，来添加一本书。 返回的响应将是一个包含 `title` 和唯一的 `_id` 作为键的对象。 如果 `title` 未包含在请求中，返回的响应应该是字符串 `missing required field title`。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let data1 = await $.post(getUserInput('url') + '/api/books', {
       title: 'Faux Book 1'
@@ -60,7 +60,7 @@ async (getUserInput) => {
 可以向 `/api/books` 发送 <b>GET</b> 请求，并返回代表所有书的 JSON 响应。 JSON 响应应该是一个包含有 `title`、`_id` 和 `commentcount` 属性的对象数组 。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let url = getUserInput('url') + '/api/books';
     let a = $.post(url, { title: 'Faux Book A' });
@@ -70,7 +70,7 @@ async (getUserInput) => {
       let data = await $.get(url);
       assert.isArray(data);
       assert.isAtLeast(data.length, 3);
-      data.forEach((book) => {
+      data.forEach(book => {
         assert.isObject(book);
         assert.property(book, 'title');
         assert.isString(book.title);
@@ -88,7 +88,7 @@ async (getUserInput) => {
 可以发送 <b>GET</b> 请求到 `/api/books/{_id}` 来检索一本书的单个对象，返回属性 `title`、`_id` 和 `comments` 数组 (如果没有评论，则展示空数组)。 如果找不到书, 返回字符串 `no book exists`。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let url = getUserInput('url') + '/api/books';
     let noBook = await $.get(url + '/5f665eb46e296f6b9b6a504d');
@@ -112,7 +112,7 @@ async (getUserInput) => {
 可以发送一个 <b>POST</b> 请求，其中包含 `comment` 作为表单正文数据，请求到 `/api/books/{_id}` 以便将评论添加到书中。 返回的响应将是书对象，在先前测试中 <b>GET</b> `/api/books/{_id}` 类似。 如果请求中没有包含 `comment` ，返回字符串 `missing required field comment`。 如果找不到书, 返回字符串 `no book exists`。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let url = getUserInput('url') + '/api/books';
     let commentTarget = await $.post(url, { title: 'Notable Book' });
@@ -129,7 +129,7 @@ async (getUserInput) => {
     assert.property(bookCom2, 'title');
     assert.property(bookCom2, 'comments');
     assert.lengthOf(bookCom2.comments, 2);
-    bookCom2.comments.forEach((comment) => {
+    bookCom2.comments.forEach(comment => {
       assert.isString(comment);
       assert.oneOf(comment, ['This book is fab!', 'I did not care for it']);
     });
@@ -150,7 +150,7 @@ async (getUserInput) => {
 可以向 `/api/books/{_id}` 发送 <b>DELETE</b> 请求，从收藏中删除一本书。 如果成功，返回的响应将是字符串 `delete successful`。 如果找不到书, 返回字符串 `no book exists`。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     let url = getUserInput('url') + '/api/books';
     let deleteTarget = await $.post(url, { title: 'Deletable Book' });
@@ -174,7 +174,7 @@ async (getUserInput) => {
 可以向 `/api/books` 发送 <b>DELETE</b> 请求来删除数据库中的所有书籍。 如果成功，返回的响应将是字符串 `'complete delete successful`。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     const deleteAll = await $.ajax({
       url: getUserInput('url') + '/api/books',
@@ -191,12 +191,12 @@ async (getUserInput) => {
 所有 10 项功能测试都已完成并通过。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   try {
     const getTests = await $.get(getUserInput('url') + '/_api/get-tests');
     assert.isArray(getTests);
     assert.isAtLeast(getTests.length, 10, 'At least 10 tests passed');
-    getTests.forEach((test) => {
+    getTests.forEach(test => {
       assert.equal(test.state, 'passed', 'Test in Passed State');
       assert.isAtLeast(
         test.assertions.length,

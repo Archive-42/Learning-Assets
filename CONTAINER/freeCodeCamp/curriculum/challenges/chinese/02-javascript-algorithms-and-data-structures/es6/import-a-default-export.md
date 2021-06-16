@@ -11,7 +11,7 @@ dashedName: import-a-default-export
 在上一个挑战里，学习了 `export default` 的用法。 还需要一种 `import` 的语法来导入默认的导出。 在下面的例子里，`add` 是 `math_functions.js` 文件的默认导出。 以下是如何导入它：
 
 ```js
-import add from "./math_functions.js";
+import add from './math_functions.js';
 ```
 
 这个语法有一处特别的地方， 被导入的 `add` 值没有被花括号（`{}`）所包围。 `add` 只是一个变量的名字，对应 `math_functions.js` 文件的任何默认导出值。 在导入默认导出时，可以使用任何名字。
@@ -33,16 +33,15 @@ assert(code.match(/import\s+subtract\s+from\s+('|")\.\/math_functions\.js\1/g));
 ## --seed-contents--
 
 ```js
-
 // Only change code above this line
 
-subtract(7,4);
+subtract(7, 4);
 ```
 
 # --solutions--
 
 ```js
-import subtract from "./math_functions.js";
+import subtract from './math_functions.js';
 
-subtract(7,4);
+subtract(7, 4);
 ```

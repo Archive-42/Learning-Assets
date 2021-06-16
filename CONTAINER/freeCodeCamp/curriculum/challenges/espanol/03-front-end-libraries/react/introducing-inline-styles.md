@@ -72,7 +72,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<Colorful />, document.getElementById('root'))
+ReactDOM.render(<Colorful />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -80,11 +80,9 @@ ReactDOM.render(<Colorful />, document.getElementById('root'))
 ```jsx
 class Colorful extends React.Component {
   render() {
-    return (
-      <div>Big Red</div>
-    );
+    return <div>Big Red</div>;
   }
-};
+}
 ```
 
 # --solutions--
@@ -92,9 +90,7 @@ class Colorful extends React.Component {
 ```jsx
 class Colorful extends React.Component {
   render() {
-    return (
-      <div style={{color: "red", fontSize: 72}}>Big Red</div>
-    );
+    return <div style={{ color: 'red', fontSize: 72 }}>Big Red</div>;
   }
-};
+}
 ```

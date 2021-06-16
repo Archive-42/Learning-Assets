@@ -43,4 +43,3 @@ C: `next_state`
 ## --video-solution--
 
 1
-

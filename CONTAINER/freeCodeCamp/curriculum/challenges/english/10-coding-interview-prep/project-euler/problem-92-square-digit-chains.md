@@ -41,7 +41,6 @@ assert.strictEqual(squareDigitChains(), 8581146);
 
 ```js
 function squareDigitChains() {
-
   return true;
 }
 

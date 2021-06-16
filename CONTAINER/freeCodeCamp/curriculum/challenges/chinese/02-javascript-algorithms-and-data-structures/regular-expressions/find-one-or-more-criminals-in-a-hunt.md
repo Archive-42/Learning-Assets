@@ -15,19 +15,19 @@ dashedName: find-one-or-more-criminals-in-a-hunt
 当字母`z`在一行中出现一次或连续多次时，正则表达式`/z+/`会匹配到它。 它会在以下所有字符串中找到匹配项：
 
 ```js
-"z"
-"zzzzzz"
-"ABCzzzz"
-"zzzzABC"
-"abczzzzzzzzzzzzzzzzzzzzzabc"
+'z';
+'zzzzzz';
+'ABCzzzz';
+'zzzzABC';
+'abczzzzzzzzzzzzzzzzzzzzzabc';
 ```
 
 但是它不会在以下字符串中找到匹配项，因为它们中没有字母`z`：
 
 ```js
-""
-"ABC"
-"abcabc"
+'';
+'ABC';
+'abcabc';
 ```
 
 # --instructions--

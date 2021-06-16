@@ -4,7 +4,7 @@
 
 ```css
 body {
-  etc: ''
+  etc: '';
 }
 ```
 
@@ -16,8 +16,7 @@ body {
 
 ```html
 <html>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -45,15 +44,13 @@ function teardown(params) {
 }
 ```
 
-
 # --solutions--
 
 ::id{#html-key}
 
 ```html
 <html>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -74,7 +71,7 @@ var x = 'y';
 ```html
 <html>
   <body>
-  solution number two
+    solution number two
   </body>
 </html>
 ```
@@ -95,8 +92,7 @@ var x = 'y';
 
 ```html
 <html>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

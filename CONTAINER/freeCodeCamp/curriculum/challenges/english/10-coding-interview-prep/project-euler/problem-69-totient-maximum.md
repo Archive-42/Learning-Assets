@@ -50,7 +50,6 @@ assert.strictEqual(totientMaximum(), 510510);
 
 ```js
 function totientMaximum() {
-
   return true;
 }
 

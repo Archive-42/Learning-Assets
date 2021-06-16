@@ -5,14 +5,14 @@ module.exports = function (array, compare) {
   }
 
   var swap = function (array, first, second) {
-    var temp      = array[first];
-    array[first]  = array[second];
+    var temp = array[first];
+    array[first] = array[second];
     array[second] = temp;
     return array;
   };
 
   // Create a compare func if not passed in
-  if (typeof compare !== 'function') {
+  if (typeof compare !== "function") {
     compare = function (a, b) {
       return a > b ? 1 : -1;
     };

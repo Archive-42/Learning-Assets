@@ -15,7 +15,7 @@ jQuery 有一个 `appendTo()` 方法，可以选取 HTML 标签并将其添加�
 例如，如果要把 `target4` 从 right well 移到 left well，可以设置如下：
 
 ```js
-$("#target4").appendTo("#left-well");
+$('#target4').appendTo('#left-well');
 ```
 
 把 `target2` 元素从 `left-well` 移动到 `right-well`。
@@ -46,11 +46,10 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
   });
 </script>
 
@@ -83,11 +82,11 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
   });
 </script>
 

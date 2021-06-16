@@ -15,7 +15,8 @@ For example, when a user clicks the `Get Message` button, it changes the text of
 This works by adding the following code within the click event:
 
 ```js
-document.getElementsByClassName('message')[0].textContent="Here is the message";
+document.getElementsByClassName('message')[0].textContent =
+  'Here is the message';
 ```
 
 # --instructions--
@@ -40,20 +41,18 @@ assert(
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    document.getElementById('getMessage').onclick = function(){
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('getMessage').onclick = function () {
       // Add your code below this line
-
-
       // Add your code above this line
-    }
+    };
   });
 </script>
 
 <style>
   body {
     text-align: center;
-    font-family: "Helvetica", sans-serif;
+    font-family: 'Helvetica', sans-serif;
   }
   h1 {
     font-size: 2em;
@@ -72,19 +71,15 @@ assert(
     padding: 5px 10px 8px 10px;
   }
   button:hover {
-    background-color: #0F5897;
-    border: 1px solid #0F5897;
+    background-color: #0f5897;
+    border: 1px solid #0f5897;
   }
 </style>
 
 <h1>Cat Photo Finder</h1>
-<p class="message box">
-  The message will go here
-</p>
+<p class="message box">The message will go here</p>
 <p>
-  <button id="getMessage">
-    Get Message
-  </button>
+  <button id="getMessage">Get Message</button>
 </p>
 ```
 
@@ -92,19 +87,20 @@ assert(
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded',function(){
-    document.getElementById('getMessage').onclick = function(){
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('getMessage').onclick = function () {
       // Add your code below this line
-      document.getElementsByClassName('message')[0].textContent = "Here is the message";
+      document.getElementsByClassName('message')[0].textContent =
+        'Here is the message';
       // Add your code above this line
-    }
+    };
   });
 </script>
 
 <style>
   body {
     text-align: center;
-    font-family: "Helvetica", sans-serif;
+    font-family: 'Helvetica', sans-serif;
   }
   h1 {
     font-size: 2em;
@@ -123,18 +119,14 @@ assert(
     padding: 5px 10px 8px 10px;
   }
   button:hover {
-    background-color: #0F5897;
-    border: 1px solid #0F5897;
+    background-color: #0f5897;
+    border: 1px solid #0f5897;
   }
 </style>
 
 <h1>Cat Photo Finder</h1>
-<p class="message">
-  The message will go here
-</p>
+<p class="message">The message will go here</p>
 <p>
-  <button id="getMessage">
-    Get Message
-  </button>
+  <button id="getMessage">Get Message</button>
 </p>
 ```

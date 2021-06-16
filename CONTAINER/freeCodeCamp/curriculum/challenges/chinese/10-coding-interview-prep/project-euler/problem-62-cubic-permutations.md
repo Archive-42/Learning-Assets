@@ -32,7 +32,6 @@ assert.strictEqual(cubicPermutations(), 127035954683);
 
 ```js
 function cubicPermutations() {
-
   return true;
 }
 

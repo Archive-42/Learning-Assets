@@ -14,7 +14,7 @@ dashedName: know-when-alt-text-should-be-left-blank
 在图片已经有了文字说明，或者仅仅为了美化页面的情况下，`img` 仍然需要一个 `alt` 属性，但可以设置为空字符串。 例如：
 
 ```html
-<img src="visualDecoration.jpeg" alt="">
+<img src="visualDecoration.jpeg" alt="" />
 ```
 
 比如，背景图片通常起装饰作用。 但这些图片通常都是通过 CSS 规则而非 HTML 引入的，因此屏幕阅读器毋需读取。
@@ -50,7 +50,7 @@ assert($('img').attr('alt') == '');
   <p>To Come...</p>
 </article>
 
-<img src="samuraiSwords.jpeg">
+<img src="samuraiSwords.jpeg" />
 
 <article>
   <h2>Is Chuck Norris a Cat Person?</h2>
@@ -67,7 +67,7 @@ assert($('img').attr('alt') == '');
   <p>To Come...</p>
 </article>
 
-<img src="samuraiSwords.jpeg" alt="">
+<img src="samuraiSwords.jpeg" alt="" />
 
 <article>
   <h2>Is Chuck Norris a Cat Person?</h2>

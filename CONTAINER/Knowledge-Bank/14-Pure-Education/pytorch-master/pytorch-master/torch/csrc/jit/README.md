@@ -7,6 +7,7 @@ learn more about the JIT from a user perspective, please consult our
 [tutorials](https://pytorch.org/tutorials/beginner/Intro_to_TorchScript_tutorial.html).
 
 A brief summary of the source tree:
+
 - `OVERVIEW.md`: High-level technical overview of the JIT.
 - `frontend/`: Taking PyTorch modules in Python and translating them into the
   JIT IR.
@@ -26,5 +27,6 @@ A brief summary of the source tree:
 **Refer** to each folder for more in-depth documentation.
 
 Other relevant parts of the codebase not contained here:
+
 - `aten/src/ATen/core`: contains JIT code re-used by other elements of the
   runtime system (eager, mobile, etc.)

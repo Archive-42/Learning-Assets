@@ -31,4 +31,3 @@ What is the best practice for how many times a piece of string data should be st
 ## --video-solution--
 
 2
-

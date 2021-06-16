@@ -11,7 +11,7 @@ dashedName: match-literal-strings
 在上一个挑战中，使用正则表达式 `/Hello/` 搜索到了字符串 `Hello`。 那个正则表达式在字符串中搜寻 `Hello` 的文字匹配。 下面是另一个在字符串中搜寻 `Kevin` 的示例：
 
 ```js
-let testStr = "Hello, my name is Kevin.";
+let testStr = 'Hello, my name is Kevin.';
 let testRegex = /Kevin/;
 testRegex.test(testStr);
 ```
@@ -58,7 +58,7 @@ assert(!/\/.*\/i/.test(code));
 ## --seed-contents--
 
 ```js
-let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoIsHiding = 'Somewhere Waldo is hiding in this text.';
 let waldoRegex = /search/; // Change this line
 let result = waldoRegex.test(waldoIsHiding);
 ```
@@ -66,7 +66,7 @@ let result = waldoRegex.test(waldoIsHiding);
 # --solutions--
 
 ```js
-let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoIsHiding = 'Somewhere Waldo is hiding in this text.';
 let waldoRegex = /Waldo/; // Change this line
 let result = waldoRegex.test(waldoIsHiding);
 ```

@@ -60,7 +60,6 @@ assert(digitnPowers(5) == 443839);
 
 ```js
 function digitnPowers(n) {
-
   return n;
 }
 

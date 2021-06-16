@@ -14,7 +14,7 @@ El carácter de comodín `.` coincidirá con cualquier carácter único. El como
 
 ```js
 let humStr = "I'll hum a song";
-let hugStr = "Bear hug";
+let hugStr = 'Bear hug';
 let huRegex = /hu./;
 huRegex.test(humStr);
 huRegex.test(hugStr);

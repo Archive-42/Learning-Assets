@@ -15,7 +15,7 @@ In the same way you can add classes to an element with jQuery's `addClass()` fun
 Here's how you would do this for a specific button:
 
 ```js
-$("#target2").removeClass("btn-default");
+$('#target2').removeClass('btn-default');
 ```
 
 Let's remove the `btn-default` class from all of our `button` elements.
@@ -50,11 +50,10 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
   });
 </script>
 
@@ -87,11 +86,11 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-    $("button").removeClass("btn-default");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
+    $('button').removeClass('btn-default');
   });
 </script>
 

@@ -109,7 +109,6 @@ assert.equal(new Num(5).toString(), '5');
 
 ```js
 function Num(n) {
-
   return n;
 }
 ```
@@ -127,6 +126,10 @@ function Num(n) {
 
   this._value = +n;
 }
-Num.prototype.valueOf = function() { return this._value; };
-Num.prototype.toString = function () { return this._value.toString(); };
+Num.prototype.valueOf = function () {
+  return this._value;
+};
+Num.prototype.toString = function () {
+  return this._value.toString();
+};
 ```

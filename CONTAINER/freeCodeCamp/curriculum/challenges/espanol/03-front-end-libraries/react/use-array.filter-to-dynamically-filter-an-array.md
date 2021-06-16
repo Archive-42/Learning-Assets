@@ -43,7 +43,7 @@ assert(
 ```js
 (() => {
   const comp = Enzyme.mount(React.createElement(MyComponent));
-  const users = (bool) => ({
+  const users = bool => ({
     users: [
       { username: 'Jeff', online: bool },
       { username: 'Alan', online: bool },
@@ -86,7 +86,7 @@ assert(
 ```js
 (() => {
   const comp = Enzyme.mount(React.createElement(MyComponent));
-  const users = (bool) => ({
+  const users = bool => ({
     users: [
       { username: 'Jeff', online: bool },
       { username: 'Alan', online: bool },

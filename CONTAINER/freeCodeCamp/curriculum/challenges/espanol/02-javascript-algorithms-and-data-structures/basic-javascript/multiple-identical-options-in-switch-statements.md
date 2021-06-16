@@ -12,15 +12,15 @@ dashedName: multiple-identical-options-in-switch-statements
 Si la sentencia `break` es omitida en un caso (`case`) de una sentencia `switch`, las siguientes sentencias `case` serán ejecutadas hasta encontrar un `break`. Si tienes múltiples entradas con la misma salida, puedes representarlas en una sentencia `switch` como esta:
 
 ```js
-var result = "";
-switch(val) {
+var result = '';
+switch (val) {
   case 1:
   case 2:
   case 3:
-    result = "1, 2, or 3";
+    result = '1, 2, or 3';
     break;
   case 4:
-    result = "4 alone";
+    result = '4 alone';
 }
 ```
 
@@ -109,10 +109,8 @@ assert(code.match(/case/g).length === 9);
 
 ```js
 function sequentialSizes(val) {
-  var answer = "";
+  var answer = '';
   // Only change code below this line
-
-
 
   // Only change code above this line
   return answer;
@@ -125,23 +123,23 @@ sequentialSizes(1);
 
 ```js
 function sequentialSizes(val) {
-  var answer = "";
+  var answer = '';
 
-  switch(val) {
+  switch (val) {
     case 1:
     case 2:
     case 3:
-      answer = "Low";
+      answer = 'Low';
       break;
     case 4:
     case 5:
     case 6:
-      answer = "Mid";
+      answer = 'Mid';
       break;
     case 7:
     case 8:
     case 9:
-      answer = "High";
+      answer = 'High';
   }
 
   return answer;

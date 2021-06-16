@@ -6,7 +6,16 @@
  * https://www.techiedelight.com/flood-fill-algorithm/).
  */
 
-const neighbors = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]]
+const neighbors = [
+  [-1, -1],
+  [-1, 0],
+  [-1, 1],
+  [0, -1],
+  [0, 1],
+  [1, -1],
+  [1, 0],
+  [1, 1]
+]
 
 const black = [0, 0, 0]
 const green = [0, 255, 0]
@@ -31,18 +40,20 @@ white
 */
 
 /**
-* Implements the flood fill algorithm through a breadth-first approach using a queue.
-*
-* @param rgbData The image to which the algorithm is applied.
-* @param location The start location on the image.
-* @param targetColor The old color to be replaced.
-* @param replacementColor The new color to replace the old one.
-*/
-function breadthFirstSearch (rgbData, location, targetColor, replacementColor) {
-  if (location[0] < 0 ||
+ * Implements the flood fill algorithm through a breadth-first approach using a queue.
+ *
+ * @param rgbData The image to which the algorithm is applied.
+ * @param location The start location on the image.
+ * @param targetColor The old color to be replaced.
+ * @param replacementColor The new color to replace the old one.
+ */
+function breadthFirstSearch(rgbData, location, targetColor, replacementColor) {
+  if (
+    location[0] < 0 ||
     location[0] >= rgbData.length ||
     location[1] < 0 ||
-    location[1] >= rgbData[0].length) {
+    location[1] >= rgbData[0].length
+  ) {
     throw new Error('location should point to a pixel within the rgbData')
   }
 
@@ -55,18 +66,20 @@ function breadthFirstSearch (rgbData, location, targetColor, replacementColor) {
 }
 
 /**
-* Implements the flood fill algorithm through a depth-first approach using recursion.
-*
-* @param rgbData The image to which the algorithm is applied.
-* @param location The start location on the image.
-* @param targetColor The old color to be replaced.
-* @param replacementColor The new color to replace the old one.
-*/
-function depthFirstSearch (rgbData, location, targetColor, replacementColor) {
-  if (location[0] < 0 ||
+ * Implements the flood fill algorithm through a depth-first approach using recursion.
+ *
+ * @param rgbData The image to which the algorithm is applied.
+ * @param location The start location on the image.
+ * @param targetColor The old color to be replaced.
+ * @param replacementColor The new color to replace the old one.
+ */
+function depthFirstSearch(rgbData, location, targetColor, replacementColor) {
+  if (
+    location[0] < 0 ||
     location[0] >= rgbData.length ||
     location[1] < 0 ||
-    location[1] >= rgbData[0].length) {
+    location[1] >= rgbData[0].length
+  ) {
     throw new Error('location should point to a pixel within the rgbData')
   }
 
@@ -74,15 +87,21 @@ function depthFirstSearch (rgbData, location, targetColor, replacementColor) {
 }
 
 /**
-* Utility-function to implement the breadth-first loop
-*
-* @param rgbData The image to which the algorithm is applied.
-* @param location The start location on the image.
-* @param targetColor The old color to be replaced.
-* @param replacementColor The new color to replace the old one.
-* @param queue The locations that still need to be visited.
-*/
-function breadthFirstFill (rgbData, location, targetColor, replacementColor, queue) {
+ * Utility-function to implement the breadth-first loop
+ *
+ * @param rgbData The image to which the algorithm is applied.
+ * @param location The start location on the image.
+ * @param targetColor The old color to be replaced.
+ * @param replacementColor The new color to replace the old one.
+ * @param queue The locations that still need to be visited.
+ */
+function breadthFirstFill(
+  rgbData,
+  location,
+  targetColor,
+  replacementColor,
+  queue
+) {
   const currentLocation = queue[0]
   queue.shift()
 
@@ -100,14 +119,14 @@ function breadthFirstFill (rgbData, location, targetColor, replacementColor, que
 }
 
 /**
-* Utility-function to implement the depth-first loop
-*
-* @param rgbData The image to which the algorithm is applied.
-* @param location The start location on the image.
-* @param targetColor The old color to be replaced.
-* @param replacementColor The new color to replace the old one.
-*/
-function depthFirstFill (rgbData, location, targetColor, replacementColor) {
+ * Utility-function to implement the depth-first loop
+ *
+ * @param rgbData The image to which the algorithm is applied.
+ * @param location The start location on the image.
+ * @param targetColor The old color to be replaced.
+ * @param replacementColor The new color to replace the old one.
+ */
+function depthFirstFill(rgbData, location, targetColor, replacementColor) {
   if (rgbData[location[0]][location[1]] === targetColor) {
     rgbData[location[0]][location[1]] = replacementColor
 
@@ -122,11 +141,11 @@ function depthFirstFill (rgbData, location, targetColor, replacementColor) {
 }
 
 /**
-* Generates the rgbData-matrix for the tests
-*
-* @return example rgbData-matrix
-*/
-function generateTestRgbData () {
+ * Generates the rgbData-matrix for the tests
+ *
+ * @return example rgbData-matrix
+ */
+function generateTestRgbData() {
   const layout = [
     [violet, violet, green, green, black, green, green],
     [violet, green, green, black, green, green, green],
@@ -150,30 +169,42 @@ function generateTestRgbData () {
 }
 
 /**
-* Utility-function to test the function "breadthFirstSearch"
-*
-* @param fillLocation The start location on the image where the flood fill is applied.
-* @param targetColor The old color to be replaced.
-* @param replacementColor The new color to replace the old one.
-* @param testLocation The location of the color to be checked.
-* @return The color at testLocation
-*/
-function testBreadthFirst (fillLocation, targetColor, replacementColor, testLocation) {// eslint-disable-line
+ * Utility-function to test the function "breadthFirstSearch"
+ *
+ * @param fillLocation The start location on the image where the flood fill is applied.
+ * @param targetColor The old color to be replaced.
+ * @param replacementColor The new color to replace the old one.
+ * @param testLocation The location of the color to be checked.
+ * @return The color at testLocation
+ */
+function testBreadthFirst(
+  fillLocation,
+  targetColor,
+  replacementColor,
+  testLocation
+) {
+  // eslint-disable-line
   const rgbData = generateTestRgbData()
   breadthFirstSearch(rgbData, fillLocation, targetColor, replacementColor)
   return rgbData[testLocation[0]][testLocation[1]]
 }
 
 /**
-* Utility-function to test the function "depthFirstSearch"
-*
-* @param fillLocation The start location on the image where the flood fill is applied.
-* @param targetColor The old color to be replaced.
-* @param replacementColor The new color to replace the old one.
-* @param testLocation The location of the color to be checked.
-* @return The color at testLocation
-*/
-function testDepthFirst (fillLocation, targetColor, replacementColor, testLocation) {// eslint-disable-line
+ * Utility-function to test the function "depthFirstSearch"
+ *
+ * @param fillLocation The start location on the image where the flood fill is applied.
+ * @param targetColor The old color to be replaced.
+ * @param replacementColor The new color to replace the old one.
+ * @param testLocation The location of the color to be checked.
+ * @return The color at testLocation
+ */
+function testDepthFirst(
+  fillLocation,
+  targetColor,
+  replacementColor,
+  testLocation
+) {
+  // eslint-disable-line
   const rgbData = generateTestRgbData()
   depthFirstSearch(rgbData, fillLocation, targetColor, replacementColor)
   return rgbData[testLocation[0]][testLocation[1]]

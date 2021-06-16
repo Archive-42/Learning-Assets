@@ -42,7 +42,9 @@ assert(/processed\s*=\s*processArg\(\s*7\s*\)/.test(code));
 ## --after-user-code--
 
 ```js
-(function(){return "processed = " + processed})();
+(function () {
+  return 'processed = ' + processed;
+})();
 ```
 
 ## --seed-contents--

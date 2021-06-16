@@ -50,7 +50,7 @@ assert.deepEqual(translatePigLatin('algorithm'), 'algorithmway');
 assert.deepEqual(translatePigLatin('eight'), 'eightway');
 ```
 
-Should handle words where the first vowel comes in the middle of the word.  `translatePigLatin("schwartz")` should return the string `artzschway`.
+Should handle words where the first vowel comes in the middle of the word. `translatePigLatin("schwartz")` should return the string `artzschway`.
 
 ```js
 assert.deepEqual(translatePigLatin('schwartz'), 'artzschway');
@@ -71,14 +71,14 @@ function translatePigLatin(str) {
   return str;
 }
 
-translatePigLatin("consonant");
+translatePigLatin('consonant');
 ```
 
 # --solutions--
 
 ```js
 function translatePigLatin(str) {
-  if (isVowel(str.charAt(0))) return str + "way";
+  if (isVowel(str.charAt(0))) return str + 'way';
   var front = [];
   str = str.split('');
   while (str.length && !isVowel(str[0])) {

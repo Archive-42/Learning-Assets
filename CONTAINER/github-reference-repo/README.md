@@ -87,14 +87,14 @@ git clean -f -x/git clean -fx     # To remove ignored and non-ignored files perm
 
 git config --global --list                   # lists the git configuration for all repos
 git config --global --edit                   # opens an editor to edit the git config file
-git config --global alias.<handle> <command> # add git aliases to speed up workflow , eg. if  handle is st and command is status then running git st would execute git status 
+git config --global alias.<handle> <command> # add git aliases to speed up workflow , eg. if  handle is st and command is status then running git st would execute git status
 
 
 .gitignore
 # is a file including names of stuff that you don"t want to be staged or tracked.
 # You usually keep your local files like database, media, and etc here.
 # You can find good resources online about ignoring specific files in your project files.
-# .gitignore is also get ignored 
+# .gitignore is also get ignored
 .git
 # is a hidden directory in repo directory including git files. It is created after "git init".
 
@@ -155,10 +155,6 @@ git config --global alias.<handle> <command> # add git aliases to speed up workf
 
 - To pull down changes that your partner pushed to the repo you simply have to run:
   - `git pull` - this will fetch the most recent updates!
-
-
-
-
 
 ## **Gitting Started with Git**
 

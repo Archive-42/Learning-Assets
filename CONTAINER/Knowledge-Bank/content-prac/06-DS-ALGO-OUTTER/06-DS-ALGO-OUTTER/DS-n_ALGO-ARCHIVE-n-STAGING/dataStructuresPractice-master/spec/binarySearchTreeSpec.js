@@ -1,11 +1,11 @@
-describe("binarySearchTree", function() {
+describe("binarySearchTree", function () {
   var binarySearchTree;
 
-  beforeEach(function() {
+  beforeEach(function () {
     binarySearchTree = makeBinarySearchTree();
   });
 
-  it("should have methods named 'insert', 'contains', and 'depthFirstLog", function() {
+  it("should have methods named 'insert', 'contains', and 'depthFirstLog", function () {
     expect(binarySearchTree.children).toEqual(jasmine.any(Function));
     expect(binarySearchTree.contains).toEqual(jasmine.any(Function));
     expect(binarySearchTree.depthFirstLog).toEqual(jasmine.any(Function));

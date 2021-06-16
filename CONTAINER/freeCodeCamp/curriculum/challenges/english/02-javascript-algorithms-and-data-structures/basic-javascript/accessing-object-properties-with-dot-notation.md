@@ -17,14 +17,15 @@ Here is a sample of using dot notation (`.`) to read an object's property:
 
 ```js
 var myObj = {
-  prop1: "val1",
-  prop2: "val2"
+  prop1: 'val1',
+  prop2: 'val2'
 };
 var prop1val = myObj.prop1;
 var prop2val = myObj.prop2;
 ```
 
 `prop1val` would have a value of the string `val1`, and `prop2val` would have a value of the string `val2`.
+
 # --instructions--
 
 Read in the property values of `testObj` using dot notation. Set the variable `hatValue` equal to the object's property `hat` and set the variable `shirtValue` equal to the object's property `shirt`.
@@ -66,7 +67,9 @@ assert(code.match(/testObj\.\w+/g).length > 1);
 ## --after-user-code--
 
 ```js
-(function(a,b) { return "hatValue = '" + a + "', shirtValue = '" + b + "'"; })(hatValue,shirtValue);
+(function (a, b) {
+  return "hatValue = '" + a + "', shirtValue = '" + b + "'";
+})(hatValue, shirtValue);
 ```
 
 ## --seed-contents--
@@ -74,24 +77,24 @@ assert(code.match(/testObj\.\w+/g).length > 1);
 ```js
 // Setup
 var testObj = {
-  "hat": "ballcap",
-  "shirt": "jersey",
-  "shoes": "cleats"
+  hat: 'ballcap',
+  shirt: 'jersey',
+  shoes: 'cleats'
 };
 
 // Only change code below this line
 
-var hatValue = testObj;      // Change this line
-var shirtValue = testObj;    // Change this line
+var hatValue = testObj; // Change this line
+var shirtValue = testObj; // Change this line
 ```
 
 # --solutions--
 
 ```js
 var testObj = {
-  "hat": "ballcap",
-  "shirt": "jersey",
-  "shoes": "cleats"
+  hat: 'ballcap',
+  shirt: 'jersey',
+  shoes: 'cleats'
 };
 
 var hatValue = testObj.hat;
