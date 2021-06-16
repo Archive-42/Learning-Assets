@@ -29,7 +29,7 @@ console.log(countup(5));
 
 The value `[1, 2, 3, 4, 5]` will be displayed in the console.
 
-At first, this seems counterintuitive since the value of `n` *decreases*, but the values in the final array are *increasing*. This happens because the push happens last, after the recursive call has returned. At the point where `n` is pushed into the array, `countup(n - 1)` has already been evaluated and returned `[1, 2, ..., n - 1]`.
+At first, this seems counterintuitive since the value of `n` _decreases_, but the values in the final array are _increasing_. This happens because the push happens last, after the recursive call has returned. At the point where `n` is pushed into the array, `countup(n - 1)` has already been evaluated and returned `[1, 2, ..., n - 1]`.
 
 # --instructions--
 
@@ -58,17 +58,13 @@ assert.deepStrictEqual(countdown(5), [5, 4, 3, 2, 1]);
 Your code should not rely on any kind of loops (`for`, `while` or higher order functions such as `forEach`, `map`, `filter`, and `reduce`).
 
 ```js
-assert(
-  !code.match(/for|while|forEach|map|filter|reduce/g)
-);
+assert(!code.match(/for|while|forEach|map|filter|reduce/g));
 ```
 
 You should use recursion to solve this problem.
 
 ```js
-assert(
-  countdown.toString().match(/countdown\s*\(.+\)/)
-);
+assert(countdown.toString().match(/countdown\s*\(.+\)/));
 ```
 
 # --seed--
@@ -77,7 +73,7 @@ assert(
 
 ```js
 // Only change code below this line
-function countdown(n){
+function countdown(n) {
   return;
 }
 // Only change code above this line
@@ -86,7 +82,7 @@ function countdown(n){
 # --solutions--
 
 ```js
-function countdown(n){
-   return n < 1 ? [] : [n].concat(countdown(n - 1));
+function countdown(n) {
+  return n < 1 ? [] : [n].concat(countdown(n - 1));
 }
 ```

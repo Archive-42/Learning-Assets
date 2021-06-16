@@ -27,4 +27,3 @@ If your data is text or sound based.
 ## --video-solution--
 
 1
-

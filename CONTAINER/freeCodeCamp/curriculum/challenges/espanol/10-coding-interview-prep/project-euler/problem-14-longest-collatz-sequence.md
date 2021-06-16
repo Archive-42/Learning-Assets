@@ -74,7 +74,6 @@ assert.strictEqual(longestCollatzSequence(1000000), 837799);
 
 ```js
 function longestCollatzSequence(limit) {
-
   return true;
 }
 
@@ -97,7 +96,7 @@ function longestCollatzSequence(limit) {
   return longest;
 }
 
-const knownSequence = { '1': 1 };
+const knownSequence = { 1: 1 };
 
 function colLen(n) {
   if (knownSequence[n]) {

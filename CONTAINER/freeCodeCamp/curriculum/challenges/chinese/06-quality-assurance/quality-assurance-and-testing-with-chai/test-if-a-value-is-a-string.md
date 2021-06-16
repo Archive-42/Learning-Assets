@@ -21,12 +21,12 @@ dashedName: test-if-a-value-is-a-string
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ dashedName: test-if-a-value-is-a-string
 应该为第一个断言选择正确的方法：`isString` 或 `isNotString`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'isNotString',
         'A float number is not a string'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ dashedName: test-if-a-value-is-a-string
 应该为第二个断言选择正确的方法：`isString` 或 `isNotString`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'isString',
         'environment vars are strings (or undefined)'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -71,12 +71,12 @@ dashedName: test-if-a-value-is-a-string
 应该为第三个断言选择正确的方法：`isString` 或 `isNotString`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'isString', 'A JSON is a string');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

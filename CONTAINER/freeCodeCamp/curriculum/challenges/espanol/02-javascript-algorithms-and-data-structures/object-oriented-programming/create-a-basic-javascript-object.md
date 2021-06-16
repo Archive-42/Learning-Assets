@@ -18,7 +18,7 @@ Los objetos en JavaScript son usados para modelar objetos del mundo real, dándo
 
 ```js
 let duck = {
-  name: "Aflac",
+  name: 'Aflac',
   numLegs: 2
 };
 ```
@@ -54,9 +54,7 @@ assert(typeof dog.numLegs === 'number');
 ## --seed-contents--
 
 ```js
-let dog = {
-
-};
+let dog = {};
 ```
 
 # --solutions--

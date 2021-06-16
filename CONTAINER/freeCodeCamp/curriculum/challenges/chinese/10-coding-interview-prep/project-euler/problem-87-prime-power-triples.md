@@ -39,7 +39,6 @@ assert.strictEqual(primePowerTriples(), 1097343);
 
 ```js
 function primePowerTriples() {
-
   return true;
 }
 

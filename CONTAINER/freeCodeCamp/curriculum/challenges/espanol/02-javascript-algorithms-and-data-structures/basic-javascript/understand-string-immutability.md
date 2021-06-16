@@ -14,15 +14,15 @@ En JavaScript, los valores de cadena (`String`) son <dfn>inmutables</dfn>, lo qu
 Por ejemplo, el siguiente código:
 
 ```js
-var myStr = "Bob";
-myStr[0] = "J";
+var myStr = 'Bob';
+myStr[0] = 'J';
 ```
 
-no puede cambiar el valor de `myStr` a `Job`, porque el contenido de `myStr` no puede ser alterado. Ten en cuenta que esto *no* significa que `myStr` no puede cambiarse, solo que los caracteres individuales de una <dfn>cadena literal</dfn> no pueden ser cambiados. La única forma de cambiar `myStr` sería asignarla con una nueva cadena, como esta:
+no puede cambiar el valor de `myStr` a `Job`, porque el contenido de `myStr` no puede ser alterado. Ten en cuenta que esto _no_ significa que `myStr` no puede cambiarse, solo que los caracteres individuales de una <dfn>cadena literal</dfn> no pueden ser cambiados. La única forma de cambiar `myStr` sería asignarla con una nueva cadena, como esta:
 
 ```js
-var myStr = "Bob";
-myStr = "Job";
+var myStr = 'Bob';
+myStr = 'Job';
 ```
 
 # --instructions--
@@ -48,23 +48,25 @@ assert(/myStr = "Jello World"/.test(code));
 ## --after-user-code--
 
 ```js
-(function(v){return "myStr = " + v;})(myStr);
+(function (v) {
+  return 'myStr = ' + v;
+})(myStr);
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var myStr = "Jello World";
+var myStr = 'Jello World';
 
 // Only change code below this line
-myStr[0] = "H"; // Change this line
+myStr[0] = 'H'; // Change this line
 // Only change code above this line
 ```
 
 # --solutions--
 
 ```js
-var myStr = "Jello World";
-myStr = "Hello World";
+var myStr = 'Jello World';
+myStr = 'Hello World';
 ```

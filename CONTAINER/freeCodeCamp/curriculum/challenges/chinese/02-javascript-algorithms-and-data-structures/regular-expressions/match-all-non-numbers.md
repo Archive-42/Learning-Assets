@@ -71,7 +71,7 @@ assert('2001: A Space Odyssey'.match(noNumRegex).length == 17);
 ## --seed-contents--
 
 ```js
-let movieName = "2001: A Space Odyssey";
+let movieName = '2001: A Space Odyssey';
 let noNumRegex = /change/; // Change this line
 let result = movieName.match(noNumRegex).length;
 ```
@@ -79,7 +79,7 @@ let result = movieName.match(noNumRegex).length;
 # --solutions--
 
 ```js
-let movieName = "2001: A Space Odyssey";
+let movieName = '2001: A Space Odyssey';
 let noNumRegex = /\D/g; // Change this line
 let result = movieName.match(noNumRegex).length;
 ```

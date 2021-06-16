@@ -59,9 +59,7 @@ assert.equal(strip('123\tabc\u0007DEF\u007F+-*/€æŧðłþ'), '123abcDEF+-*/')
 ## --seed-contents--
 
 ```js
-function strip(s) {
-
-}
+function strip(s) {}
 ```
 
 # --solutions--
@@ -70,7 +68,7 @@ function strip(s) {
 function strip(s) {
   return s
     .split('')
-    .filter(function(x) {
+    .filter(function (x) {
       var n = x.charCodeAt(0);
 
       return 31 < n && 127 > n;

@@ -35,7 +35,6 @@ assert(code.match(/margin:\s*?auto;/g));
     background-color: blue;
     height: 100px;
     width: 100px;
-
   }
 </style>
 <div></div>

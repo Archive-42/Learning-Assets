@@ -60,18 +60,16 @@ function Dog(name) {
   this.name = name;
 }
 
-
-
 // Only change code above this line
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 ```
 
 # --solutions--
 
 ```js
-function Dog (name) {
+function Dog(name) {
   this.name = name;
 }
 Dog.prototype.numLegs = 4;
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 ```

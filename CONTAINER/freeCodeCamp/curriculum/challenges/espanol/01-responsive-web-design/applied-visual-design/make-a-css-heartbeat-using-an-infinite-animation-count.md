@@ -48,7 +48,6 @@ assert($('.back').css('animation-iteration-count') == 'infinite');
     background: white;
     animation-name: backdiv;
     animation-duration: 1s;
-
   }
 
   .heart {
@@ -64,11 +63,10 @@ assert($('.back').css('animation-iteration-count') == 'infinite');
     transform: rotate(-45deg);
     animation-name: beat;
     animation-duration: 1s;
-
   }
   .heart:after {
     background-color: pink;
-    content: "";
+    content: '';
     border-radius: 50%;
     position: absolute;
     width: 50px;
@@ -78,7 +76,7 @@ assert($('.back').css('animation-iteration-count') == 'infinite');
   }
   .heart:before {
     background-color: pink;
-    content: "";
+    content: '';
     border-radius: 50%;
     position: absolute;
     width: 50px;
@@ -101,7 +99,6 @@ assert($('.back').css('animation-iteration-count') == 'infinite');
       transform: scale(0.6) rotate(-45deg);
     }
   }
-
 </style>
 <div class="back"></div>
 <div class="heart"></div>
@@ -142,7 +139,7 @@ assert($('.back').css('animation-iteration-count') == 'infinite');
   }
   .heart:after {
     background-color: pink;
-    content: "";
+    content: '';
     border-radius: 50%;
     position: absolute;
     width: 50px;
@@ -152,7 +149,7 @@ assert($('.back').css('animation-iteration-count') == 'infinite');
   }
   .heart:before {
     background-color: pink;
-    content: "";
+    content: '';
     border-radius: 50%;
     position: absolute;
     width: 50px;

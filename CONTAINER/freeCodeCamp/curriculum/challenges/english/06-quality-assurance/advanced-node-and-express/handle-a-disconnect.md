@@ -29,12 +29,12 @@ Submit your page when you think you've got it right. If you're running into erro
 Server should handle the event disconnect from a socket.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(data, /socket.on.*('|")disconnect('|")/gi, '');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -43,16 +43,16 @@ Server should handle the event disconnect from a socket.
 Your client should be listening for 'user count' event.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/client.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.on.*('|")user count('|")/gi,
         'Your client should be connection to server with the connection defined as socket'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

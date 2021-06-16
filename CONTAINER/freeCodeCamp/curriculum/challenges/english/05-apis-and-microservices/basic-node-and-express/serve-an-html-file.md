@@ -11,7 +11,7 @@ dashedName: serve-an-html-file
 You can respond to requests with a file using the `res.sendFile(path)` method. You can put it inside the `app.get('/', ...)` route handler. Behind the scenes, this method will set the appropriate headers to instruct your browser on how to handle the file you want to send, according to its type. Then it will read and send the file. This method needs an absolute file path. We recommend you to use the Node global variable `__dirname` to calculate the path like this:
 
 ```js
-absolutePath = __dirname + relativePath/file.ext
+absolutePath = __dirname + relativePath / file.ext;
 ```
 
 # --instructions--
@@ -25,16 +25,16 @@ Send the `/views/index.html` file as a response to GET requests to the `/` path.
 Your app should serve the file views/index.html
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url')).then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /<h1>.*<\/h1>/,
         'Your app does not serve the expected HTML'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

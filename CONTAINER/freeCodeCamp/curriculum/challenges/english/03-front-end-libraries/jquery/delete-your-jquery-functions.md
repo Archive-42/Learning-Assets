@@ -56,11 +56,10 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
   });
 </script>
 
@@ -93,9 +92,7 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-
-  });
+  $(document).ready(function () {});
 </script>
 
 <!-- Only change code above this line -->

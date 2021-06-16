@@ -10,7 +10,7 @@ dashedName: confirm-the-ending
 
 Evalúa si una cadena (primer argumento, `str`) termina con la cadena de destino dada (segundo argumento, `target`).
 
-Este desafío *puede* resolverse con el método `.endsWith()`, que fue introducido en ES2015. Pero para el propósito de este desafío, nos gustaría que usaras uno de los métodos de subcadena de JavaScript en su lugar.
+Este desafío _puede_ resolverse con el método `.endsWith()`, que fue introducido en ES2015. Pero para el propósito de este desafío, nos gustaría que usaras uno de los métodos de subcadena de JavaScript en su lugar.
 
 # --hints--
 
@@ -99,7 +99,7 @@ function confirmEnding(str, target) {
   return str;
 }
 
-confirmEnding("Bastian", "n");
+confirmEnding('Bastian', 'n');
 ```
 
 # --solutions--
@@ -109,5 +109,5 @@ function confirmEnding(str, target) {
   return str.substring(str.length - target.length) === target;
 }
 
-confirmEnding("Bastian", "n");
+confirmEnding('Bastian', 'n');
 ```

@@ -15,7 +15,7 @@ jQuery 有一个 `children()` 方法，可以访问被选取标签的子标签�
 下面的代码展示了用 `children()` 方法把 `left-well` 标签的子标签的颜色设置成 `blue`（蓝色）：
 
 ```js
-$("#left-well").children().css("color", "blue")
+$('#left-well').children().css('color', 'blue');
 ```
 
 # --instructions--
@@ -48,14 +48,13 @@ assert(code.match(/<div class="well" id="right-well">/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
   });
 </script>
 
@@ -88,14 +87,14 @@ assert(code.match(/<div class="well" id="right-well">/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
+    $('#right-well').children().css('color', 'orange');
   });
 </script>
 

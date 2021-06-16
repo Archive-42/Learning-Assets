@@ -12,12 +12,12 @@ In the following example, the `Bird` constructor defines two properties: `name` 
 
 ```js
 function Bird(name) {
-  this.name  = name;
+  this.name = name;
   this.numLegs = 2;
 }
 
-let duck = new Bird("Donald");
-let canary = new Bird("Tweety");
+let duck = new Bird('Donald');
+let canary = new Bird('Tweety');
 ```
 
 `name` and `numLegs` are called <dfn>own properties</dfn>, because they are defined directly on the instance object. That means that `duck` and `canary` each has its own separate copy of these properties. In fact every instance of `Bird` will have its own copy of these properties. The following code adds all of the own properties of `duck` to the array `ownProps`:
@@ -26,7 +26,7 @@ let canary = new Bird("Tweety");
 let ownProps = [];
 
 for (let property in duck) {
-  if(duck.hasOwnProperty(property)) {
+  if (duck.hasOwnProperty(property)) {
     ownProps.push(property);
   }
 }
@@ -74,7 +74,7 @@ function Bird(name) {
   this.numLegs = 2;
 }
 
-let canary = new Bird("Tweety");
+let canary = new Bird('Tweety');
 let ownProps = [];
 // Only change code below this line
 ```
@@ -87,8 +87,8 @@ function Bird(name) {
   this.numLegs = 2;
 }
 
-let canary = new Bird("Tweety");
-function getOwnProps (obj) {
+let canary = new Bird('Tweety');
+function getOwnProps(obj) {
   const props = [];
 
   for (let prop in obj) {

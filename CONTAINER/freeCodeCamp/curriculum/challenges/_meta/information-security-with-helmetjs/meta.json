@@ -9,10 +9,7 @@
   "superBlock": "information-security",
   "superOrder": 9,
   "challengeOrder": [
-    [
-      "587d8247367417b2b2512c36",
-      "Install and Require Helmet"
-    ],
+    ["587d8247367417b2b2512c36", "Install and Require Helmet"],
     [
       "587d8247367417b2b2512c37",
       "Hide Potentially Dangerous Information Using helmet.hidePoweredBy()"
@@ -53,18 +50,9 @@
       "587d8249367417b2b2512c40",
       "Configure Helmet Using the ‘parent’ helmet() Middleware"
     ],
-    [
-      "58a25bcef9fc0f352b528e7c",
-      "Understand BCrypt Hashes"
-    ],
-    [
-      "58a25bcff9fc0f352b528e7d",
-      "Hash and Compare Passwords Asynchronously"
-    ],
-    [
-      "58a25bcff9fc0f352b528e7e",
-      "Hash and Compare Passwords Synchronously"
-    ]
+    ["58a25bcef9fc0f352b528e7c", "Understand BCrypt Hashes"],
+    ["58a25bcff9fc0f352b528e7d", "Hash and Compare Passwords Asynchronously"],
+    ["58a25bcff9fc0f352b528e7e", "Hash and Compare Passwords Synchronously"]
   ],
   "helpRoom": "HelpBackend",
   "fileName": "06-information-security-and-quality-assurance/helmetjs.json"

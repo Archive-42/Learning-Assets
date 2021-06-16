@@ -42,4 +42,3 @@ print("Smallest:", smallest)
 ## --video-solution--
 
 3
-

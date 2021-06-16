@@ -98,9 +98,7 @@ assert.equal(soundex('Lukasiewicz'), 'L222');
 ## --seed-contents--
 
 ```js
-function soundex(s) {
-
-}
+function soundex(s) {}
 ```
 
 # --solutions--
@@ -138,10 +136,10 @@ function soundex(s) {
   r =
     f +
     a
-      .map(function(v, i, a) {
+      .map(function (v, i, a) {
         return codes[v];
       })
-      .filter(function(v, i, a) {
+      .filter(function (v, i, a) {
         return i === 0 ? v !== codes[f] : v !== a[i - 1];
       })
       .join('');

@@ -19,13 +19,13 @@ Use the `helmet.noSniff()` method on your server.
 helmet.noSniff() middleware should be mounted correctly
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       assert.include(data.appStack, 'nosniff');
       assert.equal(data.headers['x-content-type-options'], 'nosniff');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

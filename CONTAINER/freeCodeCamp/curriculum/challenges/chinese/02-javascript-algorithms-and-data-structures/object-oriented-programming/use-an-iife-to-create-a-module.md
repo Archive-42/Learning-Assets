@@ -12,13 +12,13 @@ dashedName: use-an-iife-to-create-a-module
 
 ```js
 function glideMixin(obj) {
-  obj.glide = function() {
-    console.log("Gliding on the water");
+  obj.glide = function () {
+    console.log('Gliding on the water');
   };
 }
 function flyMixin(obj) {
-  obj.fly = function() {
-    console.log("Flying, wooosh!");
+  obj.fly = function () {
+    console.log('Flying, wooosh!');
   };
 }
 ```
@@ -28,17 +28,17 @@ function flyMixin(obj) {
 ```js
 let motionModule = (function () {
   return {
-    glideMixin: function(obj) {
-      obj.glide = function() {
-        console.log("Gliding on the water");
+    glideMixin: function (obj) {
+      obj.glide = function () {
+        console.log('Gliding on the water');
       };
     },
-    flyMixin: function(obj) {
-      obj.fly = function() {
-        console.log("Flying, wooosh!");
+    flyMixin: function (obj) {
+      obj.fly = function () {
+        console.log('Flying, wooosh!');
       };
     }
-  }
+  };
 })();
 ```
 
@@ -78,14 +78,14 @@ assert(typeof funModule.singMixin === 'function');
 ## --seed-contents--
 
 ```js
-let isCuteMixin = function(obj) {
-  obj.isCute = function() {
+let isCuteMixin = function (obj) {
+  obj.isCute = function () {
     return true;
   };
 };
-let singMixin = function(obj) {
-  obj.sing = function() {
-    console.log("Singing to an awesome tune");
+let singMixin = function (obj) {
+  obj.sing = function () {
+    console.log('Singing to an awesome tune');
   };
 };
 ```
@@ -99,7 +99,7 @@ const funModule = (function () {
       obj.isCute = () => true;
     },
     singMixin: obj => {
-      obj.sing = () => console.log("Singing to an awesome tune");
+      obj.sing = () => console.log('Singing to an awesome tune');
     }
   };
 })();

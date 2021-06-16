@@ -32,7 +32,6 @@ assert.strictEqual(powerfulDigitSum(), 972);
 
 ```js
 function powerfulDigitSum() {
-
   return true;
 }
 

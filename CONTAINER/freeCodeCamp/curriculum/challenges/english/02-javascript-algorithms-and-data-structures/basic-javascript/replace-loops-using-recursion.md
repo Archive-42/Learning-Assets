@@ -13,25 +13,25 @@ dashedName: replace-loops-using-recursion
 Recursion is the concept that a function can be expressed in terms of itself. To help understand this, start by thinking about the following task: multiply the first `n` elements of an array to create the product of those elements. Using a `for` loop, you could do this:
 
 ```js
-  function multiply(arr, n) {
-    var product = 1;
-    for (var i = 0; i < n; i++) {
-        product *= arr[i];
-    }
-    return product;
+function multiply(arr, n) {
+  var product = 1;
+  for (var i = 0; i < n; i++) {
+    product *= arr[i];
   }
+  return product;
+}
 ```
 
 However, notice that `multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]`. That means you can rewrite `multiply` in terms of itself and never need to use a loop.
 
 ```js
-  function multiply(arr, n) {
-    if (n <= 0) {
-      return 1;
-    } else {
-      return multiply(arr, n - 1) * arr[n - 1];
-    }
+function multiply(arr, n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return multiply(arr, n - 1) * arr[n - 1];
   }
+}
 ```
 
 The recursive version of `multiply` breaks down like this. In the <dfn>base case</dfn>, where `n <= 0`, it returns 1. For larger values of `n`, it calls itself, but with `n - 1`. That function call is evaluated in the same way, calling `multiply` again until `n <= 0`. At this point, all the functions can return and the original `multiply` returns the answer.
@@ -65,17 +65,13 @@ assert.equal(sum([2, 3, 4, 5], 3), 9);
 Your code should not rely on any kind of loops (`for` or `while` or higher order functions such as `forEach`, `map`, `filter`, or `reduce`.).
 
 ```js
-assert(
-  !code.match(/for|while|forEach|map|filter|reduce/g)
-);
+assert(!code.match(/for|while|forEach|map|filter|reduce/g));
 ```
 
 You should use recursion to solve this problem.
 
 ```js
-assert(
-  sum.toString().match(/sum\(.*\)/g).length > 1
-);
+assert(sum.toString().match(/sum\(.*\)/g).length > 1);
 ```
 
 # --seed--
@@ -85,7 +81,6 @@ assert(
 ```js
 function sum(arr, n) {
   // Only change code below this line
-
   // Only change code above this line
 }
 ```
@@ -95,7 +90,7 @@ function sum(arr, n) {
 ```js
 function sum(arr, n) {
   // Only change code below this line
-  if(n <= 0) {
+  if (n <= 0) {
     return 0;
   } else {
     return sum(arr, n - 1) + arr[n - 1];

@@ -34,7 +34,6 @@ assert(
 ```html
 <style>
   body {
-
   }
 </style>
 ```
@@ -44,7 +43,7 @@ assert(
 ```html
 <style>
   body {
-    background: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+    background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png');
   }
 </style>
 ```

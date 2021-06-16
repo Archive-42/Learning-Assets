@@ -59,41 +59,35 @@ assert.deepEqual(lascii('t', 'z'), results[4]);
 ## --after-user-code--
 
 ```js
-let results=[
-  [ 'a', 'b', 'c', 'd' ],
-  [ 'c', 'd', 'e', 'f', 'g', 'h', 'i' ],
-  [ 'm', 'n', 'o', 'p', 'q' ],
-  [ 'k', 'l', 'm', 'n' ],
-  [ 't', 'u', 'v', 'w', 'x', 'y', 'z' ]
-]
+let results = [
+  ['a', 'b', 'c', 'd'],
+  ['c', 'd', 'e', 'f', 'g', 'h', 'i'],
+  ['m', 'n', 'o', 'p', 'q'],
+  ['k', 'l', 'm', 'n'],
+  ['t', 'u', 'v', 'w', 'x', 'y', 'z']
+];
 ```
 
 ## --seed-contents--
 
 ```js
-function lascii(cFrom, cTo) {
-
-}
+function lascii(cFrom, cTo) {}
 ```
 
 # --solutions--
 
 ```js
 function lascii(cFrom, cTo) {
-
   function cRange(cFrom, cTo) {
     var iStart = cFrom.charCodeAt(0);
 
-    return Array.apply(
-      null, Array(cTo.charCodeAt(0) - iStart + 1)
-    ).map(function (_, i) {
-
-      return String.fromCharCode(iStart + i);
-
-    });
+    return Array.apply(null, Array(cTo.charCodeAt(0) - iStart + 1)).map(
+      function (_, i) {
+        return String.fromCharCode(iStart + i);
+      }
+    );
   }
 
   return cRange(cFrom, cTo);
-
 }
 ```

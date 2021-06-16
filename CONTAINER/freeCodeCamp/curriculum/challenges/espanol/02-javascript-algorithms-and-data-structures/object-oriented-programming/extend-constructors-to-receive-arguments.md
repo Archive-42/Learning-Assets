@@ -12,8 +12,8 @@ Los constructores de `Bird` y `Dog` del último desafío funcionaron bien. Sin e
 
 ```js
 let swan = new Bird();
-swan.name = "Carlos";
-swan.color = "white";
+swan.name = 'Carlos';
+swan.color = 'white';
 ```
 
 Supongamos que estabas escribiendo un programa para hacer seguimiento de cientos o incluso miles de aves diferentes en un aviario. Tardaría mucho tiempo en crear todas las aves, para luego cambiar las propiedades a diferentes valores para cada una. Para crear más fácilmente diferentes objetos `Bird`, puedes diseñar tu constructor de aves para aceptar parámetros:
@@ -29,9 +29,9 @@ function Bird(name, color) {
 Luego pasa los valores como argumentos para definir cada ave única en el constructor `Bird`: `let cardinal = new Bird("Bruce", "red");` Esto genera una nueva instancia de `Bird` con propiedades `name` y `color` que tienen como valor `Bruce` y `red`, respectivamente. La propiedad `numLegs` aún está establecida en 2. El `cardinal` tiene estas propiedades:
 
 ```js
-cardinal.name
-cardinal.color
-cardinal.numLegs
+cardinal.name;
+cardinal.color;
+cardinal.numLegs;
 ```
 
 El constructor es más flexible. Ahora es posible definir las propiedades para cada `Bird` en el momento que se crea. Esta es una manera en que los constructores de JavaScript son tan útiles. Estos agrupan objetos basados en características y comportamiento compartidos, y definen un plano que automatiza su creación.
@@ -71,15 +71,13 @@ assert(terrier instanceof Dog);
 ## --seed-contents--
 
 ```js
-function Dog() {
-
-}
+function Dog() {}
 ```
 
 # --solutions--
 
 ```js
-function Dog (name, color) {
+function Dog(name, color) {
   this.numLegs = 4;
   this.name = name;
   this.color = color;

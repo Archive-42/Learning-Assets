@@ -38,7 +38,6 @@ assert.strictEqual(euler156(), 21295121502550);
 
 ```js
 function euler156() {
-
   return true;
 }
 

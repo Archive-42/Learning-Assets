@@ -21,13 +21,13 @@ Modify the `findAndUpdate` function to find a person by `Name` and set the perso
 findOneAndUpdate an item should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/find-one-update', {
     name: 'Dorian Gray',
     age: 35,
     favoriteFoods: ['unknown']
   }).then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'Dorian Gray', 'item.name is not what expected');
       assert.equal(data.age, 20, 'item.age is not what expected');
       assert.deepEqual(
@@ -41,7 +41,7 @@ findOneAndUpdate an item should succeed
         'findOneAndUpdate does not increment version by design!'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

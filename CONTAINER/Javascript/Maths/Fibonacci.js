@@ -72,14 +72,18 @@ const FibonacciDpWithoutRecursion = (number) => {
 // Using Matrix exponentiation to find n-th fibonacci in O(log n) time
 
 const copyMatrix = (A) => {
-  return A.map(row => row.map(cell => cell))
+  return A.map((row) => row.map((cell) => cell))
 }
 
 const Identity = (size) => {
-  const I = Array(size).fill(null).map(() => Array(size).fill())
-  return I.map((row, rowIdx) => row.map((_col, colIdx) => {
-    return rowIdx === colIdx ? 1 : 0
-  }))
+  const I = Array(size)
+    .fill(null)
+    .map(() => Array(size).fill())
+  return I.map((row, rowIdx) =>
+    row.map((_col, colIdx) => {
+      return rowIdx === colIdx ? 1 : 0
+    })
+  )
 }
 
 // A of size (l x m) and B of size (m x n)
@@ -90,7 +94,9 @@ const matrixMultiply = (A, B) => {
   const l = A.length
   const m = B.length
   const n = B[0].length // Assuming non-empty matrices
-  const C = Array(l).fill(null).map(() => Array(n).fill())
+  const C = Array(l)
+    .fill(null)
+    .map(() => Array(n).fill())
   for (let i = 0; i < l; i++) {
     for (let j = 0; j < n; j++) {
       C[i][j] = 0
@@ -141,10 +147,7 @@ const FibonacciMatrixExpo = (n) => {
     [1, 0]
   ]
   const poweredA = matrixExpo(A, n - 1) // A raised to the power n-1
-  let F = [
-    [1],
-    [0]
-  ]
+  let F = [[1], [0]]
   F = matrixMultiply(poweredA, F)
   return F[0][0]
 }

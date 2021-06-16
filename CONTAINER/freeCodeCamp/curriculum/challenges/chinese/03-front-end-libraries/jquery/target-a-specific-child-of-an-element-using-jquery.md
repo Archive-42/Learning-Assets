@@ -4,8 +4,7 @@ title: 使用 jQuery 选择元素的特定子元素
 challengeType: 6
 forumTopicId: 18315
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: target-a-specific-child-of-an-element-using-jquery
 ---
 
@@ -20,7 +19,7 @@ jQuery 可以用 CSS 选择器（CSS Selectors）选取标签。 `target:nth-chi
 下面的代码展示了给每个区域（well）的第 3 个标签设置弹跳（bounce）动画效果：
 
 ```js
-$(".target:nth-child(3)").addClass("animated bounce");
+$('.target:nth-child(3)').addClass('animated bounce');
 ```
 
 给 well 元素的第二个子元素添加弹跳（bounce）动画效果。 你必须选择具有 `target` class 的元素子项。
@@ -65,15 +64,14 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
+    $('#right-well').children().css('color', 'orange');
   });
 </script>
 
@@ -106,15 +104,15 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#right-well").children().css("color", "orange");
-    $(".target:nth-child(2)").addClass("animated bounce");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
+    $('#right-well').children().css('color', 'orange');
+    $('.target:nth-child(2)').addClass('animated bounce');
   });
 </script>
 

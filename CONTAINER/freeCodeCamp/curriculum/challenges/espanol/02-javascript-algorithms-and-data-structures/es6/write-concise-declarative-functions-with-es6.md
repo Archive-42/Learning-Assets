@@ -12,8 +12,8 @@ Al definir funciones dentro de objetos en ES5, tenemos que utilizar la palabra c
 
 ```js
 const person = {
-  name: "Taylor",
-  sayHello: function() {
+  name: 'Taylor',
+  sayHello: function () {
     return `Hello! My name is ${this.name}.`;
   }
 };
@@ -23,7 +23,7 @@ Con ES6, puedes eliminar la palabra clave `function` y los dos puntos al definir
 
 ```js
 const person = {
-  name: "Taylor",
+  name: 'Taylor',
   sayHello() {
     return `Hello! My name is ${this.name}.`;
   }
@@ -39,7 +39,7 @@ Refactoriza la función `setGear` dentro del objeto `bicycle` para que utilice l
 La expresión tradicional "function" no debe ser utilizada.
 
 ```js
-(getUserInput) => assert(!code.match(/function/));
+getUserInput => assert(!code.match(/function/));
 ```
 
 `setGear` debe ser una función declarativa.
@@ -64,7 +64,7 @@ assert(new bicycle.setGear(48).gear === 48);
 // Only change code below this line
 const bicycle = {
   gear: 2,
-  setGear: function(newGear) {
+  setGear: function (newGear) {
     this.gear = newGear;
   }
 };

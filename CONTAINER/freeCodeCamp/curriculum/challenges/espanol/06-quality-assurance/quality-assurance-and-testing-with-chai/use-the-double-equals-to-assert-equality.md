@@ -21,12 +21,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#5` in the `Equality` su
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ All tests should pass.
 You should choose the correct method for the first assertion - `equal` vs. `notEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'equal',
         'Numbers are coerced into strings with == '
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ You should choose the correct method for the first assertion - `equal` vs. `notE
 You should choose the correct method for the second assertion - `equal` vs. `notEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'notEqual',
         ' == compares object references'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -71,16 +71,16 @@ You should choose the correct method for the second assertion - `equal` vs. `not
 You should choose the correct method for the third assertion - `equal` vs. `notEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[2].method,
         'equal',
         "6 * '2' is 12 ! It should be equal to '12'"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -89,12 +89,12 @@ You should choose the correct method for the third assertion - `equal` vs. `notE
 You should choose the correct method for the fourth assertion - `equal` vs. `notEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[3].method, 'notEqual', "6 + '2' is '62'...");
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

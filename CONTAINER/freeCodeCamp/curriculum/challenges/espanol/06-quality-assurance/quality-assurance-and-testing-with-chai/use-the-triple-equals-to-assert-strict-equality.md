@@ -21,12 +21,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#6` in the `Equality` su
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ All tests should pass.
 You should choose the correct method for the first assertion - `strictEqual` vs. `notStrictEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'notStrictEqual',
         'with strictEqual the type must match'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,12 +53,12 @@ You should choose the correct method for the first assertion - `strictEqual` vs.
 You should choose the correct method for the second assertion - `strictEqual` vs. `notStrictEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'strictEqual', '3*2 = 6...');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -67,16 +67,16 @@ You should choose the correct method for the second assertion - `strictEqual` vs
 You should choose the correct method for the third assertion - `strictEqual` vs. `notStrictEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[2].method,
         'strictEqual',
         "6 * '2' is 12. Types match !"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -85,16 +85,16 @@ You should choose the correct method for the third assertion - `strictEqual` vs.
 You should choose the correct method for the fourth assertion - `strictEqual` vs. `notStrictEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[3].method,
         'notStrictEqual',
         'Even if they have the same elements, the Arrays are notStrictEqual'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

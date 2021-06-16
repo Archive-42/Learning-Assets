@@ -86,7 +86,6 @@ assert.strictEqual(powerfulDigitCounts(21), 1);
 
 ```js
 function powerfulDigitCounts(n) {
-
   return true;
 }
 

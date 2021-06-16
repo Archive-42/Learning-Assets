@@ -18,7 +18,7 @@ JavaScript 中的对象可以用来描述现实世界中的物体，并赋予他
 
 ```js
 let duck = {
-  name: "Aflac",
+  name: 'Aflac',
   numLegs: 2
 };
 ```
@@ -54,9 +54,7 @@ assert(typeof dog.numLegs === 'number');
 ## --seed-contents--
 
 ```js
-let dog = {
-
-};
+let dog = {};
 ```
 
 # --solutions--

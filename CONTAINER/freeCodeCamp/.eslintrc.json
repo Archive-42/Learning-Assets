@@ -7,10 +7,7 @@
   },
   "parser": "babel-eslint",
   "root": true,
-  "extends": [
-    "./.eslintrc-base.json",
-    "prettier"
-  ],
+  "extends": ["./.eslintrc-base.json", "prettier"],
   "plugins": [
     "react",
     "import",
@@ -30,14 +27,8 @@
   "settings": {
     "react": {
       "version": "16.4.2",
-      "import/ignore": [
-        "node_modules",
-        "\\.json$"
-      ],
-      "import/extensions": [
-        ".js",
-        ".jsx"
-      ]
+      "import/ignore": ["node_modules", "\\.json$"],
+      "import/extensions": [".js", ".jsx"]
     }
   }
 }

@@ -47,7 +47,7 @@ console.log(power);
 
 ```js
 function raiseToPower(b, e) {
- return Math.pow(b, e);
+  return Math.pow(b, e);
 }
 
 let base = 2;

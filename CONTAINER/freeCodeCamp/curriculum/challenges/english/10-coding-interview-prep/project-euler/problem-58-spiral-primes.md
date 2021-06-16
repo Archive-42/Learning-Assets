@@ -56,7 +56,6 @@ assert.strictEqual(spiralPrimes(10), 26241);
 
 ```js
 function spiralPrimes(percent) {
-
   return true;
 }
 

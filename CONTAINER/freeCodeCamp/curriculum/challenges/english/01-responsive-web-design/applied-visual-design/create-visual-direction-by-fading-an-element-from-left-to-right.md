@@ -35,7 +35,6 @@ assert(
 
 ```html
 <style>
-
   #ball {
     width: 70px;
     height: 70px;
@@ -43,11 +42,7 @@ assert(
     position: fixed;
     left: 20%;
     border-radius: 50%;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     animation-name: fade;
     animation-duration: 3s;
   }
@@ -55,10 +50,8 @@ assert(
   @keyframes fade {
     50% {
       left: 60%;
-
     }
   }
-
 </style>
 
 <div id="ball"></div>
@@ -75,11 +68,7 @@ assert(
     position: fixed;
     left: 20%;
     border-radius: 50%;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     animation-name: fade;
     animation-duration: 3s;
   }

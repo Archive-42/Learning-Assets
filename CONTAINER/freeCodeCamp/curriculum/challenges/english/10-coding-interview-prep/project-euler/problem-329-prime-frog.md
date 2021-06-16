@@ -34,7 +34,6 @@ assert.strictEqual(euler329(), 199740353 / 29386561536000);
 
 ```js
 function euler329() {
-
   return true;
 }
 

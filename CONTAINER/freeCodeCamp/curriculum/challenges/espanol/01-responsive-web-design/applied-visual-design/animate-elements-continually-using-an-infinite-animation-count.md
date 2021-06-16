@@ -35,24 +35,19 @@ assert($('#ball').css('animation-iteration-count') == 'infinite');
 
 ```html
 <style>
-
   #ball {
     width: 100px;
     height: 100px;
     margin: 50px auto;
     position: relative;
     border-radius: 50%;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     animation-name: bounce;
     animation-duration: 1s;
     animation-iteration-count: 3;
   }
 
-  @keyframes bounce{
+  @keyframes bounce {
     0% {
       top: 0px;
     }
@@ -79,17 +74,13 @@ assert($('#ball').css('animation-iteration-count') == 'infinite');
     margin: 50px auto;
     position: relative;
     border-radius: 50%;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     animation-name: bounce;
     animation-duration: 1s;
     animation-iteration-count: infinite;
   }
 
-  @keyframes bounce{
+  @keyframes bounce {
     0% {
       top: 0px;
     }

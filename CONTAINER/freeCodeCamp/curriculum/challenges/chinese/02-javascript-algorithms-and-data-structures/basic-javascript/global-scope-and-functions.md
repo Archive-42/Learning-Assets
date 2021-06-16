@@ -17,7 +17,7 @@ dashedName: global-scope-and-functions
 
 使用 `var`，在函数外声明一个全局变量 `myGlobal`， 并给它一个初始值 `10`。
 
-在函数 `fun1` 的内部，***不***使用 `var` 关键字，声明 `oopsGlobal`，并给它赋值为 `5`。
+在函数 `fun1` 的内部，**_不_**使用 `var` 关键字，声明 `oopsGlobal`，并给它赋值为 `5`。
 
 # --hints--
 
@@ -50,19 +50,19 @@ assert(typeof oopsGlobal != 'undefined' && oopsGlobal === 5);
 ## --before-user-code--
 
 ```js
-var logOutput = "";
-var originalConsole = console
+var logOutput = '';
+var originalConsole = console;
 function capture() {
-    var nativeLog = console.log;
-    console.log = function (message) {
-        logOutput = message;
-        if(nativeLog.apply) {
-          nativeLog.apply(originalConsole, arguments);
-        } else {
-          var nativeMsg = Array.prototype.slice.apply(arguments).join(' ');
-          nativeLog(nativeMsg);
-        }
-    };
+  var nativeLog = console.log;
+  console.log = function (message) {
+    logOutput = message;
+    if (nativeLog.apply) {
+      nativeLog.apply(originalConsole, arguments);
+    } else {
+      var nativeMsg = Array.prototype.slice.apply(arguments).join(' ');
+      nativeLog(nativeMsg);
+    }
+  };
 }
 
 function uncapture() {
@@ -78,7 +78,9 @@ capture();
 fun1();
 fun2();
 uncapture();
-(function() { return logOutput || "console.log never called"; })();
+(function () {
+  return logOutput || 'console.log never called';
+})();
 ```
 
 ## --seed-contents--
@@ -86,21 +88,19 @@ uncapture();
 ```js
 // Declare the myGlobal variable below this line
 
-
 function fun1() {
   // Assign 5 to oopsGlobal Here
-
 }
 
 // Only change code above this line
 
 function fun2() {
-  var output = "";
-  if (typeof myGlobal != "undefined") {
-    output += "myGlobal: " + myGlobal;
+  var output = '';
+  if (typeof myGlobal != 'undefined') {
+    output += 'myGlobal: ' + myGlobal;
   }
-  if (typeof oopsGlobal != "undefined") {
-    output += " oopsGlobal: " + oopsGlobal;
+  if (typeof oopsGlobal != 'undefined') {
+    output += ' oopsGlobal: ' + oopsGlobal;
   }
   console.log(output);
 }
@@ -116,12 +116,12 @@ function fun1() {
 }
 
 function fun2() {
-  var output = "";
-  if(typeof myGlobal != "undefined") {
-    output += "myGlobal: " + myGlobal;
+  var output = '';
+  if (typeof myGlobal != 'undefined') {
+    output += 'myGlobal: ' + myGlobal;
   }
-  if(typeof oopsGlobal != "undefined") {
-    output += " oopsGlobal: " + oopsGlobal;
+  if (typeof oopsGlobal != 'undefined') {
+    output += ' oopsGlobal: ' + oopsGlobal;
   }
   console.log(output);
 }

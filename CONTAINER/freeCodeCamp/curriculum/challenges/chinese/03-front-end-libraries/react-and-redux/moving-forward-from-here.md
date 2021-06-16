@@ -23,7 +23,7 @@ dashedName: moving-forward-from-here
 应该将 `Now I know React and Redux!` 这一消息应输出到控制台。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     /console\s*\.\s*log\s*\(\s*('|"|`)Now I know React and Redux!\1\s*\)/.test(
       getUserInput('index')

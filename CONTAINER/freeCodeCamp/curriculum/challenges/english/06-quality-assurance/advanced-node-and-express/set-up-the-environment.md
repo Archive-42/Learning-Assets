@@ -17,9 +17,9 @@ const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 ```
 
-Now that the *http* server is mounted on the *express app*, you need to listen from the *http* server. Change the line with `app.listen` to `http.listen`.
+Now that the _http_ server is mounted on the _express app_, you need to listen from the _http_ server. Change the line with `app.listen` to `http.listen`.
 
-The first thing needing to be handled is listening for a new connection from the client. The <dfn>on</dfn> keyword does just that- listen for a specific event. It requires 2 arguments: a string containing the title of the event that's emitted, and a function with which the data is passed though. In the case of our connection listener, we use *socket* to define the data in the second argument. A socket is an individual client who is connected.
+The first thing needing to be handled is listening for a new connection from the client. The <dfn>on</dfn> keyword does just that- listen for a specific event. It requires 2 arguments: a string containing the title of the event that's emitted, and a function with which the data is passed though. In the case of our connection listener, we use _socket_ to define the data in the second argument. A socket is an individual client who is connected.
 
 To listen for connections to your server, add the following within your database connection:
 
@@ -49,9 +49,9 @@ Submit your page when you think you've got it right. If you're running into erro
 `socket.io` should be a dependency.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -59,7 +59,7 @@ Submit your page when you think you've got it right. If you're running into erro
         'Your project should list "socket.io" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -68,16 +68,16 @@ Submit your page when you think you've got it right. If you're running into erro
 You should correctly require and instantiate `http` as `http`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /http.*=.*require.*('|")http\1/gi,
         'Your project should list "http" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -86,16 +86,16 @@ You should correctly require and instantiate `http` as `http`.
 You should correctly require and instantiate `socket.io` as `io`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /io.*=.*require.*('|")socket.io\1.*http/gi,
         'You should correctly require and instantiate socket.io as io.'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -104,16 +104,16 @@ You should correctly require and instantiate `socket.io` as `io`.
 Socket.IO should be listening for connections.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /io.on.*('|")connection\1.*socket/gi,
         'io should listen for "connection" and socket should be the 2nd arguments variable'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -122,16 +122,16 @@ Socket.IO should be listening for connections.
 Your client should connect to your server.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/client.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.*=.*io/gi,
         'Your client should be connection to server with the connection defined as socket'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

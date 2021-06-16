@@ -2,7 +2,7 @@ name: Build PyTorch nightly Docker image and push to GitHub Container Registry
 on:
   schedule:
     # Push the nightly docker daily at 1 PM UTC
-    - cron: '0 13 * * *'
+    - cron: "0 13 * * *"
   # Have the ability to trigger this job manually using the API as well
   workflow_dispatch:
 

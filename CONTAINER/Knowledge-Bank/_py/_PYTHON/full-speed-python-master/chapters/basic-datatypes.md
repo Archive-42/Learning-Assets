@@ -53,13 +53,13 @@ However, multiplication works as repetition:
 
 ## Exercises with numbers
 
-1.  Try the following mathematical calculations and guess what is happening: \((3 / 2)\), \((3 // 2)\), \((3 \% 2)\), \((3**2)\).
+1.  Try the following mathematical calculations and guess what is happening: \((3 / 2)\), \((3 // 2)\), \((3 \% 2)\), \((3\*\*2)\).
 
     Suggestion: check the Python library reference at <https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex>.
 
 2.  Calculate the average of the following sequences of numbers: (2, 4), (4, 8, 9), (12, 14/6, 15)
 
-3.  The volume of a sphere is given by (4/3 * pi * r^3). Calculate the volume of a sphere of radius 5. Suggestion: create a variable named "pi" with the value of 3.1415.
+3.  The volume of a sphere is given by (4/3 _ pi _ r^3). Calculate the volume of a sphere of radius 5. Suggestion: create a variable named "pi" with the value of 3.1415.
 
 4.  Use the modulo operator (%) to check which of the following numbers is even or odd: (1, 5, 20, 60/7).
 

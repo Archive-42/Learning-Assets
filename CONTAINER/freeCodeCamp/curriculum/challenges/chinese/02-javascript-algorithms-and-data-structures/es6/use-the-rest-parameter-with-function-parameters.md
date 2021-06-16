@@ -14,10 +14,10 @@ ES6 推出了用于函数参数的 <dfn>rest 操作符</dfn>帮助我们创建�
 
 ```js
 function howMany(...args) {
-  return "You have passed " + args.length + " arguments.";
+  return 'You have passed ' + args.length + ' arguments.';
 }
 console.log(howMany(0, 1, 2));
-console.log(howMany("string", null, [1, 2, 3], { }));
+console.log(howMany('string', null, [1, 2, 3], {}));
 ```
 
 控制台将显示字符串 `You have passed 3 arguments.` 和 `You have passed 4 arguments.`。
@@ -68,7 +68,7 @@ assert(__helpers.removeWhiteSpace(code).match(/sum=\(\.\.\.args\)=>/));
 const sum = (x, y, z) => {
   const args = [x, y, z];
   return args.reduce((a, b) => a + b, 0);
-}
+};
 ```
 
 # --solutions--
@@ -76,5 +76,5 @@ const sum = (x, y, z) => {
 ```js
 const sum = (...args) => {
   return args.reduce((a, b) => a + b, 0);
-}
+};
 ```

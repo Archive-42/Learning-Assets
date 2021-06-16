@@ -25,9 +25,9 @@ Remove the moment package from your dependencies.
 "dependencies" should not include "moment"
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.notProperty(
         packJson.dependencies,
@@ -35,7 +35,7 @@ Remove the moment package from your dependencies.
         '"dependencies" still includes "moment"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

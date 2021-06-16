@@ -8,7 +8,7 @@ dashedName: set-of-real-numbers
 
 # --description--
 
-All real numbers form the uncountable set ℝ. Among its subsets, relatively simple are the convex sets, each expressed as a range between two real numbers *a* and *b* where *a* ≤ *b*. There are actually four cases for the meaning of "between", depending on open or closed boundary:
+All real numbers form the uncountable set ℝ. Among its subsets, relatively simple are the convex sets, each expressed as a range between two real numbers _a_ and _b_ where _a_ ≤ _b_. There are actually four cases for the meaning of "between", depending on open or closed boundary:
 
 <ul>
   <li>[<i>a</i>, <i>b</i>]: {<i>x</i> | <i>a</i> ≤ <i>x</i> and <i>x</i> ≤ <i>b</i> }</li>
@@ -17,7 +17,7 @@ All real numbers form the uncountable set ℝ. Among its subsets, relatively sim
   <li>(<i>a</i>, <i>b</i>]: {<i>x</i> | <i>a</i> < <i>x</i> and <i>x</i> ≤ <i>b</i> }</li>
 </ul>
 
-Note that if *a* = *b*, of the four only \[*a*, *a*] would be non-empty.
+Note that if _a_ = _b_, of the four only \[_a_, _a_] would be non-empty.
 
 **Task**
 
@@ -152,9 +152,7 @@ assert.deepEqual(
 ## --seed-contents--
 
 ```js
-function realSet(set1, set2, operation, values) {
-
-}
+function realSet(set1, set2, operation, values) {}
 ```
 
 # --solutions--
@@ -170,13 +168,13 @@ function realSet(set1, set2, operation, values) {
 
   function Predicate(test) {
     this.test = test;
-    this.or = function(other) {
+    this.or = function (other) {
       return new Predicate(t => this.test(t) || other.test(t));
     };
-    this.and = function(other) {
+    this.and = function (other) {
       return new Predicate(t => this.test(t) && other.test(t));
     };
-    this.negate = function() {
+    this.negate = function () {
       return new Predicate(t => !this.test(t));
     };
   }
@@ -202,11 +200,11 @@ function realSet(set1, set2, operation, values) {
       });
     }
 
-    this.contains = function(d) {
+    this.contains = function (d) {
       return this.predicate.test(d);
     };
 
-    this.union = function(other) {
+    this.union = function (other) {
       var low2 = Math.min(this.low, other.low);
       var high2 = Math.max(this.high, other.high);
       return new RealSet(low2, high2, null, d =>
@@ -214,7 +212,7 @@ function realSet(set1, set2, operation, values) {
       );
     };
 
-    this.intersect = function(other) {
+    this.intersect = function (other) {
       var low2 = Math.min(this.low, other.low);
       var high2 = Math.max(this.high, other.high);
       return new RealSet(low2, high2, null, d =>
@@ -222,7 +220,7 @@ function realSet(set1, set2, operation, values) {
       );
     };
 
-    this.subtract = function(other) {
+    this.subtract = function (other) {
       return new RealSet(this.low, this.high, null, d =>
         this.predicate.and(other.predicate.negate()).test(d)
       );
@@ -231,7 +229,7 @@ function realSet(set1, set2, operation, values) {
   set1 = new RealSet(set1.low, set1.high, set1.rangeType);
   set2 = new RealSet(set2.low, set2.high, set2.rangeType);
   var result = [];
-  values.forEach(function(value) {
+  values.forEach(function (value) {
     result.push(set1[operation](set2).contains(value));
   });
   return result;

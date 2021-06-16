@@ -72,7 +72,6 @@ assert.strictEqual(countLychrelNumbers(10000), 249);
 
 ```js
 function countLychrelNumbers(num) {
-
   return true;
 }
 
@@ -82,11 +81,11 @@ countLychrelNumbers(10000);
 # --solutions--
 
 ```js
-const countLychrelNumbers = (size) => {
-  const numReverse = (num) => {
+const countLychrelNumbers = size => {
+  const numReverse = num => {
     return Number(num.toString().split('').reverse().join(''));
   };
-  const isPalin = (num) => {
+  const isPalin = num => {
     if (numReverse(num) === num) {
       return true;
     }
@@ -109,5 +108,5 @@ const countLychrelNumbers = (size) => {
     }
   }
   return total;
-}
+};
 ```

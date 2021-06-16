@@ -11,7 +11,7 @@ You can add style to an element by specifying it in the `style` element and sett
 
 ```css
 element {
- property: value;
+  property: value;
 }
 ```
 
@@ -35,10 +35,9 @@ Test 1
   <head>
     <meta charset="utf-8" />
     <title>Camper Cafe Menu</title>
---fcc-editable-region--
-    <style>
-    </style>
---fcc-editable-region--
+    --fcc-editable-region--
+    <style></style>
+    --fcc-editable-region--
   </head>
   <body>
     <header>
@@ -51,6 +50,6 @@ Test 1
       </section>
     </main>
   </body>
-<html>
+  <html></html>
+</html>
 ```
-

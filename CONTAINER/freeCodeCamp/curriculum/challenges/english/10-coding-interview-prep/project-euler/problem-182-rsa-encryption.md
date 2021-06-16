@@ -38,7 +38,7 @@ For any given `p` and `q`, find the sum of all values of `e`, `1 < e < φ(p,q)` 
 `RSAEncryption` should be a function.
 
 ```js
-assert(typeof RSAEncryption === 'function')
+assert(typeof RSAEncryption === 'function');
 ```
 
 `RSAEncryption` should return a number.
@@ -71,7 +71,6 @@ assert.strictEqual(RSAEncryption(19, 37), 17766);
 
 ```js
 function RSAEncryption(p, q) {
-
   return true;
 }
 
@@ -82,32 +81,29 @@ RSAEncryption(19, 37);
 
 ```js
 function gcd(a, b) {
-    if (b)
-        return gcd(b, a % b);
-    else
-        return a;
+  if (b) return gcd(b, a % b);
+  else return a;
 }
 
 function RSAEncryption(p, q) {
-    let phi = (p - 1) * (q - 1);
+  let phi = (p - 1) * (q - 1);
 
-    let best = Number.MAX_SAFE_INTEGER;
-    let sum = 0;
+  let best = Number.MAX_SAFE_INTEGER;
+  let sum = 0;
 
-    for (let e = 0; e < phi; ++e) {
-        if (!(gcd(e, phi) == 1))
-            continue;
+  for (let e = 0; e < phi; ++e) {
+    if (!(gcd(e, phi) == 1)) continue;
 
-        let msg = (gcd(p - 1, e - 1) + 1) * (gcd(q - 1, e - 1) + 1);
+    let msg = (gcd(p - 1, e - 1) + 1) * (gcd(q - 1, e - 1) + 1);
 
-        if (best == msg) {
-            sum += e;
-        } else if (best > msg) {
-            best = msg;
-            sum = e;
-        }
+    if (best == msg) {
+      sum += e;
+    } else if (best > msg) {
+      best = msg;
+      sum = e;
     }
+  }
 
-    return sum;
+  return sum;
 }
 ```

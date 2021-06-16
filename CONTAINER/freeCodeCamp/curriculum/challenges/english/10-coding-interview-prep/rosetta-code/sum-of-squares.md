@@ -59,9 +59,7 @@ assert.equal(sumsq([12, 33, 26, 18, 1, 16, 3]), 2499);
 ## --seed-contents--
 
 ```js
-function sumsq(array) {
-
-}
+function sumsq(array) {}
 ```
 
 # --solutions--

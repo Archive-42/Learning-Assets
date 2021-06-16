@@ -52,7 +52,6 @@ assert(lexicographicPermutations(999999) == 2783915460);
 
 ```js
 function lexicographicPermutations(n) {
-
   return n;
 }
 

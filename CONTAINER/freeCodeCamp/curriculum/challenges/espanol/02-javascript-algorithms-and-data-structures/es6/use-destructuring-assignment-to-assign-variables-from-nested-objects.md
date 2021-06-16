@@ -14,7 +14,7 @@ Usando un objeto similar a los ejemplos anteriores:
 
 ```js
 const user = {
-  johnDoe: { 
+  johnDoe: {
     age: 34,
     email: 'johnDoe@freeCodeCamp.com'
   }
@@ -24,13 +24,17 @@ const user = {
 Así es como se extraen los valores de propiedades de objetos y se los asigna a variables con el mismo nombre:
 
 ```js
-const { johnDoe: { age, email }} = user;
+const {
+  johnDoe: { age, email }
+} = user;
 ```
 
 Y así es como se puede asignar los valores de las propiedades de un objeto a variables con diferentes nombres:
 
 ```js
-const { johnDoe: { age: userAge, email: userEmail }} = user;
+const {
+  johnDoe: { age: userAge, email: userEmail }
+} = user;
 ```
 
 # --instructions--
@@ -102,5 +106,7 @@ const LOCAL_FORECAST = {
   tomorrow: { low: 68, high: 80 }
 };
 
-const { today: { low: lowToday, high: highToday }} = LOCAL_FORECAST;
+const {
+  today: { low: lowToday, high: highToday }
+} = LOCAL_FORECAST;
 ```

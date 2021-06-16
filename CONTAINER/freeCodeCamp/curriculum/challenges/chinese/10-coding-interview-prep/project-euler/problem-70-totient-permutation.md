@@ -34,7 +34,6 @@ assert.strictEqual(totientPermutation(), 8319823);
 
 ```js
 function totientPermutation() {
-
   return true;
 }
 

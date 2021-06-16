@@ -46,4 +46,3 @@ C: `False`
 ## --video-solution--
 
 1
-

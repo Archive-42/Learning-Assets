@@ -21,16 +21,16 @@ HTML 服务器提供 HTML 服务，而 API 提供数据服务。 <dfn>REST</dfn>
 访问端口 `/json` 应该返回一个 json 对象 `{"message": "Hello json"}`
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/json').then(
-    (data) => {
+    data => {
       assert.equal(
         data.message,
         'Hello json',
         "The '/json' endpoint does not serve the right data"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

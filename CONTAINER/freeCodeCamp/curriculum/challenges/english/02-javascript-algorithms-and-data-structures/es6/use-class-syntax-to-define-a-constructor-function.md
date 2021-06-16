@@ -15,9 +15,9 @@ It should be noted that the `class` syntax is just syntax, and not a full-fledge
 In ES5, we usually define a `constructor` function and use the `new` keyword to instantiate an object.
 
 ```js
-var SpaceShuttle = function(targetPlanet){
+var SpaceShuttle = function (targetPlanet) {
   this.targetPlanet = targetPlanet;
-}
+};
 var zeus = new SpaceShuttle('Jupiter');
 ```
 

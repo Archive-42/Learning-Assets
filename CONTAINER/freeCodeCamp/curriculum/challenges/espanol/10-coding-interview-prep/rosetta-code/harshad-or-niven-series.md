@@ -10,7 +10,7 @@ dashedName: harshad-or-niven-series
 
 The Harshad or Niven numbers are positive integers ≥ 1 that are divisible by the sum of their digits.
 
-For example, `42` is a [Harshad number](https://rosettacode.org/wiki/Harshad_or_Niven_series "Harshad or Niven series") as `42` is divisible by `(4 + 2)` without remainder.
+For example, `42` is a [Harshad number](https://rosettacode.org/wiki/Harshad_or_Niven_series 'Harshad or Niven series') as `42` is divisible by `(4 + 2)` without remainder.
 
 Assume that the series is defined as the numbers in increasing order.
 
@@ -40,7 +40,9 @@ assert.deepEqual(isHarshadOrNiven(), res);
 
 ```js
 const res = {
-  firstTwenty: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 18, 20, 21, 24, 27, 30, 36, 40, 42],
+  firstTwenty: [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 18, 20, 21, 24, 27, 30, 36, 40, 42
+  ],
   firstOver1000: 1002
 };
 ```

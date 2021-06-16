@@ -31,9 +31,9 @@ dashedName: expand-your-project-with-external-packages-from-npm
 “dependencies”应该包含“moment”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -41,7 +41,7 @@ dashedName: expand-your-project-with-external-packages-from-npm
         '"dependencies" does not include "moment"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -50,9 +50,9 @@ dashedName: expand-your-project-with-external-packages-from-npm
 “moment”的版本应该是“2.14.0”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.match(
         packJson.dependencies.moment,
@@ -60,7 +60,7 @@ dashedName: expand-your-project-with-external-packages-from-npm
         'Wrong version of "moment" installed. It should be 2.14.0'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

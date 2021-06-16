@@ -15,7 +15,8 @@
 i {
   color: gray;
 }
-code, dt {
+code,
+dt {
   color: mediumseagreen;
   font: 0.8rem Consolas, monospace;
 }

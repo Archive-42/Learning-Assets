@@ -24,6 +24,7 @@ assert(/<!DOCTYPE\s+html\s*>/gi.test(code));
 ## --seed-contents--
 
 ```html
+
 ```
 
 # --solutions--

@@ -25,16 +25,16 @@ HTML 服务器通常有一个或多个用户可以访问的目录。 你可以�
 应用应该将资源文件从 `/public` 目录发送到 `/public` 路径
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/style.css').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /body\s*\{[^\}]*\}/,
         'Your app does not serve static assets'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

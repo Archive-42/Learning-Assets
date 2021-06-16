@@ -13,25 +13,25 @@ En JavaScript, usualmente no necesitas nombrar tus funciones, especialmente cuan
 Para lograr esto, por lo general se usa la siguiente sintaxis:
 
 ```js
-const myFunc = function() {
-  const myVar = "value";
+const myFunc = function () {
+  const myVar = 'value';
   return myVar;
-}
+};
 ```
 
 ES6 nos proporciona el azúcar sintáctico, para no tener que escribir funciones anónimas de este modo. En su lugar, puedes usar la **sintaxis de función flecha**:
 
 ```js
 const myFunc = () => {
-  const myVar = "value";
+  const myVar = 'value';
   return myVar;
-}
+};
 ```
 
 Cuando la función no posee cuerpo y sólo tiene un valor de retorno, la sintaxis de "función de flecha", te permite omitir la palabra clave `return`, así como los corchetes que rodean el código. Esto ayuda a simplificar las funciones más pequeñas en sentencias de una sola línea:
 
 ```js
-const myFunc = () => "value";
+const myFunc = () => 'value';
 ```
 
 Este código todavía devolverá la cadena `value` por defecto.
@@ -45,13 +45,13 @@ Reescribe la función asignada a la variable `magic`, la cual devuelve una `new 
 Debes reemplazar la palabra clave `var`.
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/var/g));
+getUserInput => assert(!getUserInput('index').match(/var/g));
 ```
 
 `magic` debe ser una variable constante (utilizando `const`).
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/const\s+magic/g));
+getUserInput => assert(getUserInput('index').match(/const\s+magic/g));
 ```
 
 `magic` debe ser una función (`function`).
@@ -69,7 +69,7 @@ assert(magic().setHours(0, 0, 0, 0) === new Date().setHours(0, 0, 0, 0));
 La palabra clave `function` no debe ser usada.
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/function/g));
+getUserInput => assert(!getUserInput('index').match(/function/g));
 ```
 
 # --seed--
@@ -77,7 +77,7 @@ La palabra clave `function` no debe ser usada.
 ## --seed-contents--
 
 ```js
-var magic = function() {
+var magic = function () {
   return new Date();
 };
 ```

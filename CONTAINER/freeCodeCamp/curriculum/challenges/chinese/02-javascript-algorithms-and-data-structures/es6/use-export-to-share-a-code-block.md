@@ -13,7 +13,7 @@ dashedName: use-export-to-share-a-code-block
 ```js
 export const add = (x, y) => {
   return x + y;
-}
+};
 ```
 
 上面是导出单个函数常用方法，还可以这样导出：
@@ -21,7 +21,7 @@ export const add = (x, y) => {
 ```js
 const add = (x, y) => {
   return x + y;
-}
+};
 
 export { add };
 ```
@@ -63,23 +63,23 @@ assert(
 ## --seed-contents--
 
 ```js
-const uppercaseString = (string) => {
+const uppercaseString = string => {
   return string.toUpperCase();
-}
+};
 
-const lowercaseString = (string) => {
-  return string.toLowerCase()
-}
+const lowercaseString = string => {
+  return string.toLowerCase();
+};
 ```
 
 # --solutions--
 
 ```js
-export const uppercaseString = (string) => {
+export const uppercaseString = string => {
   return string.toUpperCase();
-}
+};
 
-export const lowercaseString = (string) => {
-  return string.toLowerCase()
-}
+export const lowercaseString = string => {
+  return string.toLowerCase();
+};
 ```

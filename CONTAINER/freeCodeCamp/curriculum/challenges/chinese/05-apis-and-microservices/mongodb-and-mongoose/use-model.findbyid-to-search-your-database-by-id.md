@@ -19,9 +19,9 @@ dashedName: use-model-findbyid-to-search-your-database-by-id
 应成功地根据 Id 找到对应的数据
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/find-by-id').then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'test', 'item.name is not what expected');
       assert.equal(data.age, 0, 'item.age is not what expected');
       assert.deepEqual(
@@ -31,7 +31,7 @@ dashedName: use-model-findbyid-to-search-your-database-by-id
       );
       assert.equal(data.__v, 0, 'The item should be not previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

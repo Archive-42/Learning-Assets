@@ -47,4 +47,3 @@ a[1, 2] = 20
 ## --video-solution--
 
 3
-

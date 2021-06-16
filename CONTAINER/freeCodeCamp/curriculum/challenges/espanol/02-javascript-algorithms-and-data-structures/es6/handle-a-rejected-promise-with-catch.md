@@ -11,9 +11,7 @@ dashedName: handle-a-rejected-promise-with-catch
 `catch` es el método utilizado cuando tu promesa ha sido rechazada. Se ejecuta inmediatamente, después de que se llama al método `reject` de una promesa. A continuación la sintaxis:
 
 ```js
-myPromise.catch(error => {
-
-});
+myPromise.catch(error => {});
 ```
 
 `error` es el argumento pasado al método `reject`.
@@ -54,7 +52,9 @@ assert(
 ## --after-user-code--
 
 ```js
-const errorIsParameter = /\.catch\((function\(error\){|error|\(error\)=>)/.test(__helpers.removeWhiteSpace(code));
+const errorIsParameter = /\.catch\((function\(error\){|error|\(error\)=>)/.test(
+  __helpers.removeWhiteSpace(code)
+);
 ```
 
 ## --seed-contents--
@@ -64,10 +64,10 @@ const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer is set to false to represent an unsuccessful response from a server
   let responseFromServer = false;
 
-  if(responseFromServer) {
-    resolve("We got the data");
-  } else {  
-    reject("Data not received");
+  if (responseFromServer) {
+    resolve('We got the data');
+  } else {
+    reject('Data not received');
   }
 });
 
@@ -83,10 +83,10 @@ const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer is set to false to represent an unsuccessful response from a server
   let responseFromServer = false;
 
-  if(responseFromServer) {
-    resolve("We got the data");
-  } else {  
-    reject("Data not received");
+  if (responseFromServer) {
+    resolve('We got the data');
+  } else {
+    reject('Data not received');
   }
 });
 

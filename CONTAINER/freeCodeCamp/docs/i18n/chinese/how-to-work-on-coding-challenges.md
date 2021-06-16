@@ -32,7 +32,6 @@ Before you work on the curriculum, you would need to set up some tooling to help
 ## Challenge Template
 
 ````md
-
 ---
 id: Unique identifier (alphanumerical, MongoDB_id)
 title: 'Challenge Title'
@@ -46,9 +45,8 @@ forumTopicId: 12345
 Challenge description text, in markdown
 
 ```html
-<div>
-  example code
-</div>
+<div>example code</div>
+```
 ````
 
 # --instructions--
@@ -89,9 +87,7 @@ Boilerplate code to render to the editor. This section should only contain code 
 
 ```html
 <body>
-  <p class="main-text">
-    Hello world!
-  </p>
+  <p class="main-text">Hello world!</p>
 </body>
 ```
 
@@ -153,7 +149,6 @@ More answers
 ## --video-solution--
 
 The number for the correct answer goes here.
-
 
 ````
 
@@ -257,9 +252,11 @@ Here are specific formatting guidelines for challenge text and examples:
 
 - Language keywords go in `` \` `` backticks. For example, HTML tag names or CSS property names.
 - References to code parts (i.e. function, method, or variable names) should be wrapped in `` \` `` backticks. See example below:
+
 ```md
 Use `parseInt` to convert the variable `realNumber` into an integer.
 ```
+
 - References to file names and path directories (e.g. `package.json`, `src/components`) should be wrapped in `` \` `` backticks.
 - Multi-line code blocks **must be preceded by an empty line**. The next line must start with three backticks followed immediately by one of the [supported languages](https://prismjs.com/#supported-languages). To complete the code block, you must start a new line which only has three backticks and **another empty line**. See example below:
 - Whitespace matters in Markdown, so we recommend that you make it visible in your editor.
@@ -267,12 +264,14 @@ Use `parseInt` to convert the variable `realNumber` into an integer.
 **Note:** If you are going to use an example code in YAML, use `yaml` instead of `yml` for the language to the right of the backticks.
 
 The following is an example of code:
+
 ````md
 ```{language}
 
 [YOUR CODE HERE]
-
+```
 ````
+
 ````
 
 - Additional information in the form of a note should be surrounded by blank lines, and formatted: `**Note:** Rest of note text...`
@@ -335,7 +334,7 @@ class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: "Hello"
+      text: 'Hello'
     };
     // Change code below this line
 
@@ -343,33 +342,34 @@ class MyComponent extends React.Component {
   }
   handleClick() {
     this.setState({
-      text: "You clicked!"
+      text: 'You clicked!'
     });
   }
   render() {
     return (
       <div>
-        { /* Change code below this line */ }
+        {/* Change code below this line */}
         <button>Click Me</button>
-        { /* Change code above this line */ }
+        {/* Change code above this line */}
         <h1>{this.state.text}</h1>
       </div>
     );
   }
-};
+}
 ```
 
 ### Translation of seed code comments
 
-There are separate comment dictionaries for each language. The [English version of the comment dictionary](/curriculum/dictionaries/english/comments.js) is the basis for the translations found in the corresponding non-English versions of the files. The non-English version of the Chinese comment dictionary would be located at `/curriculum/dictionaries/chinese/comments.js`.  Each dictionary consists of an array of objects with a unique `id` property and a `text` property.  Only the `text` should be modified to encompass the translation of the corresponding English comment.
+There are separate comment dictionaries for each language. The [English version of the comment dictionary](/curriculum/dictionaries/english/comments.js) is the basis for the translations found in the corresponding non-English versions of the files. The non-English version of the Chinese comment dictionary would be located at `/curriculum/dictionaries/chinese/comments.js`. Each dictionary consists of an array of objects with a unique `id` property and a `text` property. Only the `text` should be modified to encompass the translation of the corresponding English comment.
 
-Some comments may contain a word/phrase that should not be translated. For example, variable names or proper library names like "React" should not be translated.  See the comment below as an example. The word `myGlobal` should not be translated.
+Some comments may contain a word/phrase that should not be translated. For example, variable names or proper library names like "React" should not be translated. See the comment below as an example. The word `myGlobal` should not be translated.
 
 ```text
 Declare the myGlobal variable below this line
 ```
+
 > [!NOTE]
-> 
+>
 > We are working on an integration to make it possible to work on i18n for the comment dictionary.
 
 ## Hints and Solutions
@@ -427,6 +427,7 @@ Hint goes here
 function myFunc() {
   console.log('Hello World!');
 }
+```
 ````
 
 #### Code Explanation
@@ -444,13 +445,13 @@ function myFunc() {
 
 ## Testing Challenges
 
-Before you [create a pull request](how-to-open-a-pull-request.md) for your changes, you need to validate that the changes you have made do not inadvertently cause problems with the challenge. 
+Before you [create a pull request](how-to-open-a-pull-request.md) for your changes, you need to validate that the changes you have made do not inadvertently cause problems with the challenge.
 
 1. To test all challenges run the below command from the root directory
 
 ````
 npm run test:curriculum
-``` 
+```
 
 2. You can also test a block or a superblock of challenges with these commands
 
@@ -478,7 +479,7 @@ You are also able to test one challenge individually by performing the following
 Once you have verified that each challenge you've worked on passes the tests, [please create a pull request](https://github.com/freeCodeCamp/freeCodeCamp/blob/main/docs/how-to-open-a-pull-request.md).
 
 > [!TIP] You can set the environment variable `LOCALE` in the `.env` to the language of the challenge(s) you need to test.
-> 
+>
 > The currently accepted values are `english` and `chinese`, with `english` being set by default.
 
 ### Useful Links
@@ -488,3 +489,4 @@ Creating and Editing Challenges:
 1. [Challenge types](https://github.com/freeCodeCamp/freeCodeCamp/blob/main/client/utils/challengeTypes.js#L1-L13) - what the numeric challenge type values mean (enum).
 
 2. [Contributing to FreeCodeCamp - Writing ES6 Challenge Tests](https://www.youtube.com/watch?v=iOdD84OSfAE#t=2h49m55s) - a video following [Ethan Arrowood](https://twitter.com/ArrowoodTech) as he contributes to the old version of the curriculum.
+````

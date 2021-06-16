@@ -27,4 +27,3 @@ It indicates how the two tables are to be joined.
 ## --video-solution--
 
 3
-

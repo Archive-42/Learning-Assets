@@ -81,9 +81,7 @@ assert.equal(isCusip('5949181'), false);
 ## --seed-contents--
 
 ```js
-function isCusip(s) {
-
-}
+function isCusip(s) {}
 ```
 
 # --solutions--

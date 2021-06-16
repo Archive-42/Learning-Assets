@@ -113,7 +113,11 @@ const findFirstTenDigitsOfSum = () => {
     return current
   }, 0)
 
-  return sum.toLocaleString('fullwide', { useGrouping: false }).split('').slice(0, 10).join('')
+  return sum
+    .toLocaleString('fullwide', { useGrouping: false })
+    .split('')
+    .slice(0, 10)
+    .join('')
 }
 
 console.log(findFirstTenDigitsOfSum())

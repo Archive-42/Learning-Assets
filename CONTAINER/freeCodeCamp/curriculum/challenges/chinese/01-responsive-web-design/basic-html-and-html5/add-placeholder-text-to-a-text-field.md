@@ -14,7 +14,7 @@ dashedName: add-placeholder-text-to-a-text-field
 你可以像这样创建一个占位符：
 
 ```html
-<input type="text" placeholder="this is placeholder text">
+<input type="text" placeholder="this is placeholder text" />
 ```
 
 **注意：**别忘了 `input` 元素是 "自闭和标签"，即不需要结束标签。
@@ -64,7 +64,11 @@ assert($('input[type=text]').length > 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -78,7 +82,7 @@ assert($('input[type=text]').length > 0);
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <input type="text">
+  <input type="text" />
 </main>
 ```
 
@@ -89,7 +93,11 @@ assert($('input[type=text]').length > 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -103,6 +111,6 @@ assert($('input[type=text]').length > 0);
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <input type="text" placeholder="cat photo URL">
+  <input type="text" placeholder="cat photo URL" />
 </main>
 ```

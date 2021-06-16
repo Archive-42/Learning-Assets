@@ -11,7 +11,7 @@ dashedName: send-and-display-chat-messages
 It's time you start allowing clients to send a chat message to the server to emit to all the clients! In your `client.js` file, you should see there is already a block of code handling when the message form is submitted.
 
 ```js
-$('form').submit(function() {
+$('form').submit(function () {
   /*logic*/
 });
 ```
@@ -35,16 +35,16 @@ Submit your page when you think you've got it right. If you're running into erro
 Server should listen for `'chat message'` and then emit it properly.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.on.*('|")chat message('|")[^]*io.emit.*('|")chat message('|").*name.*message/gis,
         'Your server should listen to the socket for "chat message" then emit to all users "chat message" with name and message in the data object'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -53,16 +53,16 @@ Server should listen for `'chat message'` and then emit it properly.
 Client should properly handle and display the new data from event `'chat message'`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/client.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.on.*('|")chat message('|")[^]*messages.*li/gis,
         'You should append a list item to #messages on your client within the "chat message" event listener to display the new message'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

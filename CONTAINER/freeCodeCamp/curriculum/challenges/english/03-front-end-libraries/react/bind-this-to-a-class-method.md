@@ -52,7 +52,7 @@ Clicking the `button` element should run the `handleClick` method and set the st
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
   const first = () => {
@@ -74,7 +74,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
+ReactDOM.render(<MyComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -84,7 +84,7 @@ class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: "Hello"
+      text: 'Hello'
     };
     // Change code below this line
 
@@ -92,20 +92,20 @@ class MyComponent extends React.Component {
   }
   handleClick() {
     this.setState({
-      text: "You clicked!"
+      text: 'You clicked!'
     });
   }
   render() {
     return (
       <div>
-        { /* Change code below this line */ }
+        {/* Change code below this line */}
         <button>Click Me</button>
-        { /* Change code above this line */ }
+        {/* Change code above this line */}
         <h1>{this.state.text}</h1>
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -115,22 +115,22 @@ class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: "Hello"
+      text: 'Hello'
     };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
     this.setState({
-      text: "You clicked!"
+      text: 'You clicked!'
     });
   }
   render() {
     return (
       <div>
-        <button onClick = {this.handleClick}>Click Me</button>
+        <button onClick={this.handleClick}>Click Me</button>
         <h1>{this.state.text}</h1>
       </div>
     );
   }
-};
+}
 ```

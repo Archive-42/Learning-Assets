@@ -1,12 +1,12 @@
-var Stack = module.exports = function () {
-  this.head   = null;
+var Stack = (module.exports = function () {
+  this.head = null;
   this.length = 0;
-};
+});
 
 Stack.prototype.push = function (value) {
   var node = {
     value: value,
-    next: null
+    next: null,
   };
 
   if (!this.head) {
@@ -16,12 +16,14 @@ Stack.prototype.push = function (value) {
     this.head = node;
   }
 
-  return this.length += 1;
+  return (this.length += 1);
 };
 
 Stack.prototype.pop = function () {
   // If there is no head node, return `undefined`
-  if (!this.head) { return; }
+  if (!this.head) {
+    return;
+  }
 
   var node = this.head;
 

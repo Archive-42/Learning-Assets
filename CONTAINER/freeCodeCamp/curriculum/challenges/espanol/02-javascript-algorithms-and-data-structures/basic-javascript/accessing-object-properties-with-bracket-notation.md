@@ -17,13 +17,13 @@ Aquí hay un ejemplo de cómo usar la notación de corchetes para leer la propie
 
 ```js
 var myObj = {
-  "Space Name": "Kirk",
-  "More Space": "Spock",
-  "NoSpace": "USS Enterprise"
+  'Space Name': 'Kirk',
+  'More Space': 'Spock',
+  NoSpace: 'USS Enterprise'
 };
-myObj["Space Name"];
+myObj['Space Name'];
 myObj['More Space'];
-myObj["NoSpace"];
+myObj['NoSpace'];
 ```
 
 `myObj["Space Name"]` sería la cadena `Kirk`, `myObj['More Space']` sería la cadena `Spock`, y `myObj["NoSpace"]` sería la cadena `USS Enterprise`.
@@ -71,7 +71,9 @@ assert(code.match(/testObj\s*?\[('|")[^'"]+\1\]/g).length > 1);
 ## --after-user-code--
 
 ```js
-(function(a,b) { return "entreeValue = '" + a + "', drinkValue = '" + b + "'"; })(entreeValue,drinkValue);
+(function (a, b) {
+  return "entreeValue = '" + a + "', drinkValue = '" + b + "'";
+})(entreeValue, drinkValue);
 ```
 
 ## --seed-contents--
@@ -79,25 +81,25 @@ assert(code.match(/testObj\s*?\[('|")[^'"]+\1\]/g).length > 1);
 ```js
 // Setup
 var testObj = {
-  "an entree": "hamburger",
-  "my side": "veggies",
-  "the drink": "water"
+  'an entree': 'hamburger',
+  'my side': 'veggies',
+  'the drink': 'water'
 };
 
 // Only change code below this line
 
-var entreeValue = testObj;   // Change this line
-var drinkValue = testObj;    // Change this line
+var entreeValue = testObj; // Change this line
+var drinkValue = testObj; // Change this line
 ```
 
 # --solutions--
 
 ```js
 var testObj = {
-  "an entree": "hamburger",
-  "my side": "veggies",
-  "the drink": "water"
+  'an entree': 'hamburger',
+  'my side': 'veggies',
+  'the drink': 'water'
 };
-var entreeValue = testObj["an entree"];
+var entreeValue = testObj['an entree'];
 var drinkValue = testObj['the drink'];
 ```

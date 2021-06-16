@@ -14,7 +14,7 @@ dashedName: store-multiple-values-in-one-variable-using-javascript-arrays
 以左方括号开始定义一个数组，以右方括号结束，里面每个元素之间用逗号隔开，例如：
 
 ```js
-var sandwich = ["peanut butter", "jelly", "bread"]
+var sandwich = ['peanut butter', 'jelly', 'bread'];
 ```
 
 # --instructions--
@@ -46,7 +46,9 @@ assert(typeof myArray[1] !== 'undefined' && typeof myArray[1] == 'number');
 ## --after-user-code--
 
 ```js
-(function(z){return z;})(myArray);
+(function (z) {
+  return z;
+})(myArray);
 ```
 
 ## --seed-contents--
@@ -59,5 +61,5 @@ var myArray = [];
 # --solutions--
 
 ```js
-var myArray = ["The Answer", 42];
+var myArray = ['The Answer', 42];
 ```

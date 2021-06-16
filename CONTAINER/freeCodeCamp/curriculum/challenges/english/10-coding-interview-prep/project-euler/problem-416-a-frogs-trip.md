@@ -1,6 +1,6 @@
 ---
 id: 5900f50e1000cf542c510020
-title: 'Problem 416: A frog''s trip'
+title: "Problem 416: A frog's trip"
 challengeType: 5
 forumTopicId: 302085
 dashedName: problem-416-a-frogs-trip
@@ -28,7 +28,6 @@ assert.strictEqual(euler416(), 898082747);
 
 ```js
 function euler416() {
-
   return true;
 }
 

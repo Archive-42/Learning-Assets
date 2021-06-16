@@ -17,7 +17,7 @@ jQuery tiene una función llamada `.prop()` que te permite ajustar las propiedad
 Así es como deshabilitarías todos los botones:
 
 ```js
-$("button").prop("disabled", true);
+$('button').prop('disabled', true);
 ```
 
 Deshabilita solo el botón `target1`.
@@ -52,9 +52,8 @@ assert(!code.match(/disabled[^<]*>/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
   });
 </script>
 
@@ -87,10 +86,9 @@ assert(!code.match(/disabled[^<]*>/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
   });
 </script>
 

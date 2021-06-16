@@ -77,20 +77,23 @@ assert($('#submit').attr('tabindex') == '2');
   <form>
     <label for="search">Search:</label>
 
-
-    <input type="search" name="search" id="search">
-    <input type="submit" name="submit" value="Submit" id="submit">
-
-
+    <input type="search" name="search" id="search" />
+    <input type="submit" name="submit" value="Submit" id="submit" />
   </form>
   <h2>Inspirational Quotes</h2>
   <blockquote>
-    <p>&ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br>
-    - Chuck Norris</p>
+    <p>
+      &ldquo;There's no Theory of Evolution, just a list of creatures I've
+      allowed to live.&rdquo;<br />
+      - Chuck Norris
+    </p>
   </blockquote>
   <blockquote>
-    <p>&ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br>
-    - TMNT</p>
+    <p>
+      &ldquo;Wise men say forgiveness is divine, but never pay full price for
+      late pizza.&rdquo;<br />
+      - TMNT
+    </p>
   </blockquote>
   <footer>&copy; 2018 Camper Cat</footer>
 </body>
@@ -127,20 +130,29 @@ assert($('#submit').attr('tabindex') == '2');
   <form>
     <label for="search">Search:</label>
 
-
-    <input tabindex="1" type="search" name="search" id="search">
-    <input tabindex="2" type="submit" name="submit" value="Submit" id="submit">
-
-
+    <input tabindex="1" type="search" name="search" id="search" />
+    <input
+      tabindex="2"
+      type="submit"
+      name="submit"
+      value="Submit"
+      id="submit"
+    />
   </form>
   <h2>Inspirational Quotes</h2>
   <blockquote>
-    <p>&ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br>
-    - Chuck Norris</p>
+    <p>
+      &ldquo;There's no Theory of Evolution, just a list of creatures I've
+      allowed to live.&rdquo;<br />
+      - Chuck Norris
+    </p>
   </blockquote>
   <blockquote>
-    <p>&ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br>
-    - TMNT</p>
+    <p>
+      &ldquo;Wise men say forgiveness is divine, but never pay full price for
+      late pizza.&rdquo;<br />
+      - TMNT
+    </p>
   </blockquote>
   <footer>&copy; 2018 Camper Cat</footer>
 </body>

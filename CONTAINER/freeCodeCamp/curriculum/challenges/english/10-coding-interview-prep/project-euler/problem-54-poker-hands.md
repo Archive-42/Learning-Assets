@@ -1074,7 +1074,6 @@ const handsArr = [
 
 ```js
 function pokerHands(arr) {
-
   return true;
 }
 

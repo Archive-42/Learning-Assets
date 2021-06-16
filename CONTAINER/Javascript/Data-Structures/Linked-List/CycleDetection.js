@@ -3,7 +3,7 @@
  * https://en.wikipedia.org/wiki/Cycle_detection
  */
 
-function main () {
+function main() {
   /*
   Problem Statement:
   Given head, the head of a linked list, determine if the linked list has a cycle in it.

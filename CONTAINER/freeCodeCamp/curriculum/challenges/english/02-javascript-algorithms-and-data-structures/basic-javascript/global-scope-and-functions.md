@@ -17,7 +17,7 @@ Variables which are used without the `var` keyword are automatically created in 
 
 Using `var`, declare a global variable named `myGlobal` outside of any function. Initialize it with a value of `10`.
 
-Inside function `fun1`, assign `5` to `oopsGlobal` ***without*** using the `var` keyword.
+Inside function `fun1`, assign `5` to `oopsGlobal` **_without_** using the `var` keyword.
 
 # --hints--
 
@@ -50,19 +50,19 @@ assert(typeof oopsGlobal != 'undefined' && oopsGlobal === 5);
 ## --before-user-code--
 
 ```js
-var logOutput = "";
-var originalConsole = console
+var logOutput = '';
+var originalConsole = console;
 function capture() {
-    var nativeLog = console.log;
-    console.log = function (message) {
-        logOutput = message;
-        if(nativeLog.apply) {
-          nativeLog.apply(originalConsole, arguments);
-        } else {
-          var nativeMsg = Array.prototype.slice.apply(arguments).join(' ');
-          nativeLog(nativeMsg);
-        }
-    };
+  var nativeLog = console.log;
+  console.log = function (message) {
+    logOutput = message;
+    if (nativeLog.apply) {
+      nativeLog.apply(originalConsole, arguments);
+    } else {
+      var nativeMsg = Array.prototype.slice.apply(arguments).join(' ');
+      nativeLog(nativeMsg);
+    }
+  };
 }
 
 function uncapture() {
@@ -78,7 +78,9 @@ capture();
 fun1();
 fun2();
 uncapture();
-(function() { return logOutput || "console.log never called"; })();
+(function () {
+  return logOutput || 'console.log never called';
+})();
 ```
 
 ## --seed-contents--
@@ -86,21 +88,19 @@ uncapture();
 ```js
 // Declare the myGlobal variable below this line
 
-
 function fun1() {
   // Assign 5 to oopsGlobal Here
-
 }
 
 // Only change code above this line
 
 function fun2() {
-  var output = "";
-  if (typeof myGlobal != "undefined") {
-    output += "myGlobal: " + myGlobal;
+  var output = '';
+  if (typeof myGlobal != 'undefined') {
+    output += 'myGlobal: ' + myGlobal;
   }
-  if (typeof oopsGlobal != "undefined") {
-    output += " oopsGlobal: " + oopsGlobal;
+  if (typeof oopsGlobal != 'undefined') {
+    output += ' oopsGlobal: ' + oopsGlobal;
   }
   console.log(output);
 }
@@ -116,12 +116,12 @@ function fun1() {
 }
 
 function fun2() {
-  var output = "";
-  if(typeof myGlobal != "undefined") {
-    output += "myGlobal: " + myGlobal;
+  var output = '';
+  if (typeof myGlobal != 'undefined') {
+    output += 'myGlobal: ' + myGlobal;
   }
-  if(typeof oopsGlobal != "undefined") {
-    output += " oopsGlobal: " + oopsGlobal;
+  if (typeof oopsGlobal != 'undefined') {
+    output += ' oopsGlobal: ' + oopsGlobal;
   }
   console.log(output);
 }

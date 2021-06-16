@@ -11,7 +11,7 @@ dashedName: match-literal-strings
 In the last challenge, you searched for the word `Hello` using the regular expression `/Hello/`. That regex searched for a literal match of the string `Hello`. Here's another example searching for a literal match of the string `Kevin`:
 
 ```js
-let testStr = "Hello, my name is Kevin.";
+let testStr = 'Hello, my name is Kevin.';
 let testRegex = /Kevin/;
 testRegex.test(testStr);
 ```
@@ -58,7 +58,7 @@ assert(!/\/.*\/i/.test(code));
 ## --seed-contents--
 
 ```js
-let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoIsHiding = 'Somewhere Waldo is hiding in this text.';
 let waldoRegex = /search/; // Change this line
 let result = waldoRegex.test(waldoIsHiding);
 ```
@@ -66,7 +66,7 @@ let result = waldoRegex.test(waldoIsHiding);
 # --solutions--
 
 ```js
-let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoIsHiding = 'Somewhere Waldo is hiding in this text.';
 let waldoRegex = /Waldo/; // Change this line
 let result = waldoRegex.test(waldoIsHiding);
 ```

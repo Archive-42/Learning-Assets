@@ -112,9 +112,7 @@ assert.equal(
 ## --seed-contents--
 
 ```js
-function knapsackUnbounded(items, maxweight, maxvolume) {
-
-}
+function knapsackUnbounded(items, maxweight, maxvolume) {}
 ```
 
 # --solutions--

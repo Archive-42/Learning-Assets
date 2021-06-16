@@ -15,9 +15,9 @@ Para especificar un cierto número de patrones, simplemente pon ese número entr
 Por ejemplo, para que coincida con la palabra `hah` solo con la letra `a` `3` veces, tu expresión regular sera `/ha{3}h/`.
 
 ```js
-let A4 = "haaaah";
-let A3 = "haaah";
-let A100 = "h" + "a".repeat(100) + "h";
+let A4 = 'haaaah';
+let A3 = 'haaah';
+let A100 = 'h' + 'a'.repeat(100) + 'h';
 let multipleHA = /ha{3}h/;
 multipleHA.test(A4);
 multipleHA.test(A3);
@@ -78,7 +78,7 @@ assert(!timRegex.test('Ti' + 'm'.repeat(30) + 'ber'));
 ## --seed-contents--
 
 ```js
-let timStr = "Timmmmber";
+let timStr = 'Timmmmber';
 let timRegex = /change/; // Change this line
 let result = timRegex.test(timStr);
 ```
@@ -86,7 +86,7 @@ let result = timRegex.test(timStr);
 # --solutions--
 
 ```js
-let timStr = "Timmmmber";
+let timStr = 'Timmmmber';
 let timRegex = /Tim{4}ber/; // Change this line
 let result = timRegex.test(timStr);
 ```

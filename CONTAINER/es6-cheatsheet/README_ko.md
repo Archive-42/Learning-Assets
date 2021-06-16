@@ -29,14 +29,14 @@ ES2015(ES6)의 Tip & Tricks, 좋은 활용사례들과 코드 예제들이 포�
 다음은 `var`를 활용한 예제입니다.
 
 ```javascript
-var snack = '허니버터칩';
+var snack = "허니버터칩";
 
 function getFood(food) {
-    if (food) {
-        var snack = '스윙칩';
-        return snack;
-    }
+  if (food) {
+    var snack = "스윙칩";
     return snack;
+  }
+  return snack;
 }
 
 getFood(false); // undefined
@@ -45,14 +45,14 @@ getFood(false); // undefined
 그러나, `var` 대신 `let`을 사용하면 다음과 같이 동작합니다.
 
 ```javascript
-let snack = '허니버터칩';
+let snack = "허니버터칩";
 
 function getFood(food) {
-    if (food) {
-        let snack = '스윙칩';
-        return snack;
-    }
+  if (food) {
+    let snack = "스윙칩";
     return snack;
+  }
+  return snack;
 }
 
 getFood(false); // '허니버터칩'
@@ -65,7 +65,7 @@ getFood(false); // '허니버터칩'
 ```javascript
 console.log(x);
 
-let x = 'hi'; // ReferenceError: x is not defined
+let x = "hi"; // ReferenceError: x is not defined
 ```
 
 > **Best Practice**: 더 조심스럽게 리팩토링하기 위해서 레거시 코드 내에 `var`선언을 남겨두세요. 새로운 코드베이스에서 작업하게 될 때, 변수 사용을 위해서 `let`을 사용하고, 상수 사용을 위해서 `const`를 사용하세요.
@@ -78,8 +78,8 @@ let x = 'hi'; // ReferenceError: x is not defined
 
 ```javascript
 (function () {
-    var food = '허니버터칩';
-}());
+  var food = "허니버터칩";
+})();
 
 console.log(food); // Reference Error
 ```
@@ -88,8 +88,8 @@ ES6 블록을 사용하는 경우,
 
 ```javascript
 {
-    let food = '허니버터칩';
-};
+  let food = "허니버터칩";
+}
 
 console.log(food); // Reference Error
 ```
@@ -102,13 +102,13 @@ console.log(food); // Reference Error
 
 ```javascript
 function Person(name) {
-    this.name = name;
+  this.name = name;
 }
 
 Person.prototype.prefixName = function (arr) {
-    return arr.map(function (character) {
-        return this.name + character; // Cannot read property 'name' of undefined
-    });
+  return arr.map(function (character) {
+    return this.name + character; // Cannot read property 'name' of undefined
+  });
 };
 ```
 
@@ -116,14 +116,14 @@ Person.prototype.prefixName = function (arr) {
 
 ```javascript
 function Person(name) {
-    this.name = name;
+  this.name = name;
 }
 
 Person.prototype.prefixName = function (arr) {
-    var that = this; // this의 문맥을 저장합니다.
-    return arr.map(function (character) {
-        return that.name + character;
-    });
+  var that = this; // this의 문맥을 저장합니다.
+  return arr.map(function (character) {
+    return that.name + character;
+  });
 };
 ```
 
@@ -131,13 +131,13 @@ Person.prototype.prefixName = function (arr) {
 
 ```javascript
 function Person(name) {
-    this.name = name;
+  this.name = name;
 }
 
 Person.prototype.prefixName = function (arr) {
-    return arr.map(function (character) {
-        return this.name + character;
-    }, this);
+  return arr.map(function (character) {
+    return this.name + character;
+  }, this);
 };
 ```
 
@@ -145,13 +145,15 @@ Person.prototype.prefixName = function (arr) {
 
 ```javascript
 function Person(name) {
-    this.name = name;
+  this.name = name;
 }
 
 Person.prototype.prefixName = function (arr) {
-    return arr.map(function (character) {
-        return this.name + character;
-    }.bind(this));
+  return arr.map(
+    function (character) {
+      return this.name + character;
+    }.bind(this)
+  );
 };
 ```
 
@@ -159,11 +161,11 @@ Person.prototype.prefixName = function (arr) {
 
 ```javascript
 function Person(name) {
-    this.name = name;
+  this.name = name;
 }
 
 Person.prototype.prefixName = function (arr) {
-    return arr.map(character => this.name + character);
+  return arr.map((character) => this.name + character);
 };
 ```
 
@@ -172,12 +174,14 @@ Person.prototype.prefixName = function (arr) {
 또한 애로우 펑션은 간단한 값을 리턴하는 함수(함수 표현식)가 필요할 때 사용하면 더욱 간결합니다.
 
 ```javascript
-var squares = arr.map(function (x) { return x * x }); // 함수 표현식
+var squares = arr.map(function (x) {
+  return x * x;
+}); // 함수 표현식
 ```
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
-const squares = arr.map(x => x * x); // 간결한 구현을 위한 애로우 펑션
+const squares = arr.map((x) => x * x); // 간결한 구현을 위한 애로우 펑션
 ```
 
 > **Best Practice**: 가능하다면 함수 표현식 대신 **애로우 펑션**을 활용하세요.
@@ -191,8 +195,8 @@ ES6에서는 표준 라이브러리가 크게 확장되었습니다. 이러한 �
 ### .includes( )
 
 ```javascript
-var string = 'food';
-var substring = 'foo';
+var string = "food";
+var substring = "foo";
 
 console.log(string.indexOf(substring) > -1);
 ```
@@ -200,8 +204,8 @@ console.log(string.indexOf(substring) > -1);
 문자열 포함 여부를 구현하기 위해서 리턴 값이 `-1`보다 큰 지 체크하는 것 대신, 간단하게 불린 값을 리턴하는 `.includes()` 메소드를 사용할 수 있습니다.
 
 ```javascript
-const string = 'food';
-const substring = 'foo';
+const string = "food";
+const substring = "foo";
 
 console.log(string.includes(substring)); // true
 ```
@@ -210,11 +214,11 @@ console.log(string.includes(substring)); // true
 
 ```javascript
 function repeat(string, count) {
-    var strings = [];
-    while(strings.length < count) {
-        strings.push(string);
-    }
-    return strings.join('');
+  var strings = [];
+  while (strings.length < count) {
+    strings.push(string);
+  }
+  return strings.join("");
 }
 ```
 
@@ -222,7 +226,7 @@ ES6에서는 이제 간결하게 구현할 수 있습니다.
 
 ```javascript
 // String.repeat(numberOfRepetitions)
-'야옹'.repeat(3); // '야옹야옹야옹'
+"야옹".repeat(3); // '야옹야옹야옹'
 ```
 
 ### 템플릿 리터럴
@@ -230,7 +234,7 @@ ES6에서는 이제 간결하게 구현할 수 있습니다.
 **템플릿 리터럴**을 사용하면 명시적인 문자열 이스케이프를 사용하지 않아도 특수문자를 포함한 문자열을 구축할 수 있습니다.
 
 ```javascript
-var text = "이 문자열은 이스케이프 된 \"큰 따옴표\"를 포함합니다.";
+var text = '이 문자열은 이스케이프 된 "큰 따옴표"를 포함합니다.';
 ```
 
 ```javascript
@@ -240,16 +244,18 @@ let text = `이 문자열은 이스케이프 된 "큰 따옴표"를 포함합니
 **템플릿 리터럴**은 문자열과 값을 연결시키는 문자열 Interpolation도 지원합니다.
 
 ```javascript
-var name = '나비';
+var name = "나비";
 var age = 13;
 
-console.log('제 고양이의 이름은 ' + name + '이고, 나이는 ' + age + '살 입니다.');
+console.log(
+  "제 고양이의 이름은 " + name + "이고, 나이는 " + age + "살 입니다."
+);
 ```
 
 더 간단하게 구현하면,
 
 ```javascript
-const name = '나비';
+const name = "나비";
 const age = 13;
 
 console.log(`제 고양이의 이름은 ${name}이고, 나이는 ${age}살 입니다.`);
@@ -258,30 +264,21 @@ console.log(`제 고양이의 이름은 ${name}이고, 나이는 ${age}살 입�
 ES5에서는 개행을 구현하기 위해서 다음과 같이 했습니다.
 
 ```javascript
-var text = (
-    '고양이\n' +
-    '강아지\n' +
-    '투니버스'
-);
+var text = "고양이\n" + "강아지\n" + "투니버스";
 ```
 
 혹은 이렇게,
 
 ```javascript
-var text = [
-    '고양이',
-    '강아지',
-    '투니버스'
-].join('\n');
+var text = ["고양이", "강아지", "투니버스"].join("\n");
 ```
 
 **템플릿 리터럴**은 명시적으로 표시하지 않아도 개행을 보존합니다.
 
 ```javascript
-let text = ( `고양이
+let text = `고양이
 강아지
-투니버스`
-);
+투니버스`;
 ```
 
 뿐만 아니라, **템플릿 리터럴**은 표현식에도 접근할 수 있습니다.
@@ -317,14 +314,14 @@ console.log(b); // 2
 ### 객체 Destructuring
 
 ```javascript
-var luke = { occupation: 'jedi', father: 'anakin' };
+var luke = { occupation: "jedi", father: "anakin" };
 var occupation = luke.occupation; // 'jedi'
 var father = luke.father; // 'anakin'
 ```
 
 ```javascript
-let luke = { occupation: 'jedi', father: 'anakin' };
-let {occupation, father} = luke;
+let luke = { occupation: "jedi", father: "anakin" };
+let { occupation, father } = luke;
 
 console.log(occupation); // 'jedi'
 console.log(father); // 'anakin'
@@ -340,9 +337,9 @@ ES6 이전엔, 클라이언트 단은 [Browserify](http://browserify.org/), **No
 
 ```javascript
 module.exports = 1;
-module.exports = { foo: 'bar' };
-module.exports = ['foo', 'bar'];
-module.exports = function bar () {};
+module.exports = { foo: "bar" };
+module.exports = ["foo", "bar"];
+module.exports = function bar() {};
 ```
 
 ### ES6의 모듈 내보내기
@@ -358,11 +355,11 @@ export let age  = 25;​​
 
 ```javascript
 function sumTwo(a, b) {
-    return a + b;
+  return a + b;
 }
 
 function sumThree(a, b, c) {
-    return a + b + c;
+  return a + b + c;
 }
 
 export { sumTwo, sumThree };
@@ -372,11 +369,11 @@ export { sumTwo, sumThree };
 
 ```javascript
 export function sumTwo(a, b) {
-    return a + b;
+  return a + b;
 }
 
 export function sumThree(a, b, c) {
-    return a + b + c;
+  return a + b + c;
 }
 ```
 
@@ -384,16 +381,16 @@ export function sumThree(a, b, c) {
 
 ```javascript
 function sumTwo(a, b) {
-    return a + b;
+  return a + b;
 }
 
 function sumThree(a, b, c) {
-    return a + b + c;
+  return a + b + c;
 }
 
 let api = {
-    sumTwo,
-    sumThree
+  sumTwo,
+  sumThree,
 };
 
 export default api;
@@ -405,13 +402,12 @@ export default api;
 
 > **Best Practice**: `export default`메소드는 항상 모듈 코드의 **마지막**에 위치해야 합니다. 그래야 내보내는 것이 무엇인지 분명해지며, 내보내는 값의 이름을 확인하는 시간을 절약할 수 있습니다. 그 이상으로, CommonJS의 일반적인 관행은 단일 값이나 객체를 내보내는 것입니다. 이런 컨벤션을 따름으로서, 코드의 가독성을 좋게 만들 수 있고 CommonJS와 ES6 모듈을 모두 사용할 수 있게 됩니다.
 
-
 ### ES6의 모듈 불러오기(import)
 
 ES6에서는 다양한 방식으로 모듈을 불러올 수 있습니다. 다음과 같이 파일 전체를 불러올 수 있습니다.
 
 ```javascript
-import 'underscore';
+import "underscore";
 ```
 
 > 이렇게 단순히 파일 전체를 불러오면 그 파일의 최상단에서 불러온 모든 코드가 실행된다는 점에 유의하시기 바랍니다.
@@ -419,35 +415,35 @@ import 'underscore';
 파이썬하고 유사한 지정 불러오기(named import)를 사용할 수 있습니다.
 
 ```javascript
-import { sumTwo, sumThree } from 'math/addition';
+import { sumTwo, sumThree } from "math/addition";
 ```
 
 다음과 같이 불러온 모듈의 이름을 새로 작성할 수도 있습니다.
 
 ```javascript
 import {
-    sumTwo as addTwoNumbers,
-    sumThree as sumThreeNumbers
-} from 'math/addition';
+  sumTwo as addTwoNumbers,
+  sumThree as sumThreeNumbers,
+} from "math/addition";
 ```
 
 거기에 더해서, **모두 불러오기**(네임스페이스 불러오기)도 가능합니다.
 
 ```javascript
-import * as util from 'math/addition';
+import * as util from "math/addition";
 ```
 
 마지막으로, 모듈에서 값들의 리스트를 불러올 수도 있습니다.
 
 ```javascript
-import * as additionUtil from 'math/addition';
+import * as additionUtil from "math/addition";
 const { sumTwo, sumThree } = additionUtil;
 ```
 
 디폴트 모듈은 다음과 같이 불러올 수 있습니다.
 
 ```javascript
-import api from 'math/addition';
+import api from "math/addition";
 // 위 코드는 이렇게 표현할 수도 있습니다: import { default as api } from 'math/addition';
 ```
 
@@ -461,20 +457,20 @@ export { foo as default, foo1, foo2 };
 이 모듈은 아래와 같이 불러올 수 있습니다.
 
 ```javascript
-import foo, { foo1, foo2 } from 'foos';
+import foo, { foo1, foo2 } from "foos";
 ```
 
 React처럼 CommonJS 문법을 사용해 내보낸 모듈을 불러올 때는 다음과 같이 쓰면 됩니다.
 
 ```javascript
-import React from 'react';
+import React from "react";
 const { Component, PropTypes } = React;
 ```
 
 다음과 같이 더욱 간결해질 수도 있습니다.
 
 ```javascript
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from "react";
 ```
 
 > **Note**: 내보내지는 값은 참조되는 것이 아니라 **바인딩**되는 것입니다. 그러므로, 어떤 모듈의 변수 바인딩을 바꾸게 되면 내보낸 모듈 내에서만 바뀌게 됩니다. 이렇게 내보낸 모듈의 값의 인터페이스를 바꾸는 것은 피하세요.
@@ -489,17 +485,17 @@ ES5에서는 **디폴트 값(default values)**이나 **정의되지 않은 인�
 
 ```javascript
 function addTwoNumbers(x, y) {
-    x = x || 0;
-    y = y || 0;
-    return x + y;
+  x = x || 0;
+  y = y || 0;
+  return x + y;
 }
 ```
 
 ES6에서는 함수 내 파라미터의 디폴트 값을 간단하게 설정할 수 있습니다.
 
 ```javascript
-function addTwoNumbers(x=0, y=0) {
-    return x + y;
+function addTwoNumbers(x = 0, y = 0) {
+  return x + y;
 }
 ```
 
@@ -515,9 +511,9 @@ ES5에서는 인수의 숫자가 가변적인 경우 다음과 같이 처리했�
 
 ```javascript
 function logArguments() {
-    for (var i=0; i < arguments.length; i++) {
-        console.log(arguments[i]);
-    }
+  for (var i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+  }
 }
 ```
 
@@ -525,9 +521,9 @@ function logArguments() {
 
 ```javascript
 function logArguments(...args) {
-    for (let arg of args) {
-        console.log(arg);
-    }
+  for (let arg of args) {
+    console.log(arg);
+  }
 }
 ```
 
@@ -537,28 +533,30 @@ ES5의 네임드 파라미터를 처리하는 방법 중 하나는 jQuery에서 
 
 ```javascript
 function initializeCanvas(options) {
-    var height = options.height || 600;
-    var width  = options.width  || 400;
-    var lineStroke = options.lineStroke || 'black';
+  var height = options.height || 600;
+  var width = options.width || 400;
+  var lineStroke = options.lineStroke || "black";
 }
 ```
 
 파라미터에 destructuring을 사용하면 같은 기능을 구현할 수 있습니다.
 
 ```javascript
-function initializeCanvas(
-    { height=600, width=400, lineStroke='black'}) {
-        // 여기에서 height, width, lineStroke 변수를 사용합니다.
-    }
+function initializeCanvas({ height = 600, width = 400, lineStroke = "black" }) {
+  // 여기에서 height, width, lineStroke 변수를 사용합니다.
+}
 ```
 
 만약 모든 파라미터를 선택적으로 넘기고 싶다면, 다음과 같이 빈 객체로 destructuring 하면 됩니다.
 
 ```javascript
-function initializeCanvas(
-    { height=600, width=400, lineStroke='black'} = {}) {
-        // ...
-    }
+function initializeCanvas({
+  height = 600,
+  width = 400,
+  lineStroke = "black",
+} = {}) {
+  // ...
+}
 ```
 
 ### 전개 연산자(Spread Operator)
@@ -578,8 +576,8 @@ Math.max(...[-1, 100, 9001, -32]); // 9001
 다음과 같이 직관적인 문법을 통해 쉽게 배열 리터럴을 합칠 수도 있습니다.
 
 ```javascript
-let cities = ['서울', '부산'];
-let places = ['여수', ...cities, '제주']; // ['여수', '서울', '부산', '제주']
+let cities = ["서울", "부산"];
+let places = ["여수", ...cities, "제주"]; // ['여수', '서울', '부산', '제주']
 ```
 
 <sup>[(목차로 돌아가기)](#목차)</sup>
@@ -590,13 +588,13 @@ ES6 이전에는, 생성자 함수(constructor)를 만들고 프로토타입을 
 
 ```javascript
 function Person(name, age, gender) {
-    this.name   = name;
-    this.age    = age;
-    this.gender = gender;
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
 }
 
 Person.prototype.incrementAge = function () {
-    return this.age += 1;
+  return (this.age += 1);
 };
 ```
 
@@ -604,17 +602,17 @@ Person.prototype.incrementAge = function () {
 
 ```javascript
 function Personal(name, age, gender, occupation, hobby) {
-    Person.call(this, name, age, gender);
-    this.occupation = occupation;
-    this.hobby = hobby;
+  Person.call(this, name, age, gender);
+  this.occupation = occupation;
+  this.hobby = hobby;
 }
 
 Personal.prototype = Object.create(Person.prototype);
 Personal.prototype.constructor = Personal;
 Personal.prototype.incrementAge = function () {
-    Person.prototype.incrementAge.call(this);
-    this.age += 20;
-    console.log(this.age);
+  Person.prototype.incrementAge.call(this);
+  this.age += 20;
+  console.log(this.age);
 };
 ```
 
@@ -622,15 +620,15 @@ ES6는 이런 간단한 구현을 위해 편리한 문법을 제공합니다. �
 
 ```javascript
 class Person {
-    constructor(name, age, gender) {
-        this.name   = name;
-        this.age    = age;
-        this.gender = gender;
-    }
+  constructor(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
 
-    incrementAge() {
-      this.age += 1;
-    }
+  incrementAge() {
+    this.age += 1;
+  }
 }
 ```
 
@@ -638,17 +636,17 @@ class Person {
 
 ```javascript
 class Personal extends Person {
-    constructor(name, age, gender, occupation, hobby) {
-        super(name, age, gender);
-        this.occupation = occupation;
-        this.hobby = hobby;
-    }
+  constructor(name, age, gender, occupation, hobby) {
+    super(name, age, gender);
+    this.occupation = occupation;
+    this.hobby = hobby;
+  }
 
-    incrementAge() {
-        super.incrementAge();
-        this.age += 20;
-        console.log(this.age);
-    }
+  incrementAge() {
+    super.incrementAge();
+    this.age += 20;
+    console.log(this.age);
+  }
 }
 ```
 
@@ -668,45 +666,44 @@ class Personal extends Person {
 const refreshComponent = Symbol();
 
 React.Component.prototype[refreshComponent] = () => {
-    // do something
-}
+  // do something
+};
 ```
-
 
 ### Symbol.for(key)
 
 `Symbol.for(key)`는 여전히 고유하고 수정 불가능한 심볼을 생성하지만, 전역적으로 사용 가능합니다. `Symbol.for(key)`를 두 번 호출하면 두 번 다 같은 심볼 인스턴스를 반환합니다. 주의하세요. `Symbol(description)`에서는 그렇지 않습니다.
 
 ```javascript
-Symbol('foo') === Symbol('foo') // false
-Symbol.for('foo') === Symbol('foo') // false
-Symbol.for('foo') === Symbol.for('foo') // true
+Symbol("foo") === Symbol("foo"); // false
+Symbol.for("foo") === Symbol("foo"); // false
+Symbol.for("foo") === Symbol.for("foo"); // true
 ```
 
 일반적으로 심볼, 특히 `Symbol.for(key)`은 상호 운용성을 위해 사용합니다. 상호 운용성은 몇 가지 알려진 인터페이스를 포함하는 서드 파티 라이브러리의 객체에 인자로 심볼 멤버 형태의 코드를 사용함으로서 만족될 수 있습니다. 예를 들면,
 
 ```javascript
 function reader(obj) {
-    const specialRead = Symbol.for('specialRead');
-    if (obj[specialRead]) {
-        const reader = obj[specialRead]();
-        // do something with reader
-    } else {
-        throw new TypeError('객체를 읽을 수 없습니다.');
-    }
+  const specialRead = Symbol.for("specialRead");
+  if (obj[specialRead]) {
+    const reader = obj[specialRead]();
+    // do something with reader
+  } else {
+    throw new TypeError("객체를 읽을 수 없습니다.");
+  }
 }
 ```
 
 또 다른 라이브러리에선 이렇게 할 수 있습니다.
 
 ```javascript
-const specialRead = Symbol.for('specialRead');
+const specialRead = Symbol.for("specialRead");
 
 class SomeReadableType {
-    [specialRead]() {
-        const reader = createSomeReaderFrom(this);
-        return reader;
-    }
+  [specialRead]() {
+    const reader = createSomeReaderFrom(this);
+    return reader;
+  }
 }
 ```
 
@@ -715,12 +712,13 @@ class SomeReadableType {
 <sup>[(목차로 돌아가기)](#목차)</sup>
 
 ## 맵(Map)
+
 **맵**은 자바스크립트에서 자주 필요한 데이터 구조입니다. ES6 이전엔 객체를 이용해서 **해시** 맵을 생성했습니다.
 
 ```javascript
 var map = new Object();
-map[key1] = 'value1';
-map[key2] = 'value2';
+map[key1] = "value1";
+map[key2] = "value2";
 ```
 
 하지만, 이 방법은 특정 프로퍼티 이름으로 인한 예상치 못한 함수 오버라이드(override)로부터 안전하지 않습니다.
@@ -743,16 +741,16 @@ let map = new Map();
 
 ```javascript
 let map = new Map([
-    ['이름', '현섭'],
-    [true, 'false'],
-    [1, '하나'],
-    [{}, '객체'],
-    [function () {}, '함수']
+  ["이름", "현섭"],
+  [true, "false"],
+  [1, "하나"],
+  [{}, "객체"],
+  [function () {}, "함수"],
 ]);
 
 for (let key of map.keys()) {
-    console.log(typeof key);
-    // > string, boolean, number, object, function
+  console.log(typeof key);
+  // > string, boolean, number, object, function
 }
 ```
 
@@ -762,7 +760,7 @@ for (let key of map.keys()) {
 
 ```javascript
 for (let [key, value] of map.entries()) {
-    console.log(key, value);
+  console.log(key, value);
 }
 ```
 
@@ -774,13 +772,13 @@ ES6 이전에는 private 데이터를 저장하기 위해서 많은 방법을 �
 
 ```javascript
 class Person {
-    constructor(age) {
-        this._age = age;
-    }
+  constructor(age) {
+    this._age = age;
+  }
 
-    _incrementAge() {
-        this._age += 1;
-    }
+  _incrementAge() {
+    this._age += 1;
+  }
 }
 ```
 
@@ -789,17 +787,17 @@ class Person {
 ```javascript
 let _age = new WeakMap();
 class Person {
-    constructor(age) {
-        _age.set(this, age);
-    }
+  constructor(age) {
+    _age.set(this, age);
+  }
 
-    incrementAge() {
-        let age = _age.get(this) + 1;
-        _age.set(this, age);
-        if (age > 50) {
-            console.log('중년의 위기');
-        }
+  incrementAge() {
+    let age = _age.get(this) + 1;
+    _age.set(this, age);
+    if (age > 50) {
+      console.log("중년의 위기");
     }
+  }
 }
 ```
 
@@ -815,10 +813,10 @@ Private 데이터를 저장하기 위해 위크맵을 사용해서 좋은 점은
 
 ```javascript
 let map = new WeakMap();
-let el  = document.getElementById('someElement');
+let el = document.getElementById("someElement");
 
 // 요소에 대한 약한 참조(weak reference)를 저장
-map.set(el, '참조');
+map.set(el, "참조");
 
 // 요소의 값에 접근
 let value = map.get(el); // '참조'
@@ -842,15 +840,15 @@ Promise는 다음과 같이 수평적인 코드(콜백 지옥)의 형태를 바�
 
 ```javascript
 func1(function (value1) {
-    func2(value1, function (value2) {
-        func3(value2, function (value3) {
-            func4(value3, function (value4) {
-                func5(value4, function (value5) {
-                    // Do something with value 5
-                });
-            });
+  func2(value1, function (value2) {
+    func3(value2, function (value3) {
+      func4(value3, function (value4) {
+        func5(value4, function (value5) {
+          // Do something with value 5
         });
+      });
     });
+  });
 });
 ```
 
@@ -858,20 +856,20 @@ func1(function (value1) {
 
 ```javascript
 func1(value1)
-    .then(func2)
-    .then(func3)
-    .then(func4)
-    .then(func5, value5 => {
-        // Do something with value 5
-    });
+  .then(func2)
+  .then(func3)
+  .then(func4)
+  .then(func5, (value5) => {
+    // Do something with value 5
+  });
 ```
 
 ES6 이전엔, [bluebird](https://github.com/petkaantonov/bluebird) 혹은 [Q](https://github.com/kriskowal/q)같은 라이브러리를 사용했었습니다. 이제는 Promise가 네이티브로 지원됩니다.
 
 ```javascript
 new Promise((resolve, reject) =>
-    reject(new Error('Promise가 제대로 동작하지 않았습니다!')))
-        .catch(reason => console.log(reason));
+  reject(new Error("Promise가 제대로 동작하지 않았습니다!"))
+).catch((reason) => console.log(reason));
 ```
 
 Promise가 제대로 동작(**fulfill**)했을 때 호출되는 **resolve** 메소드와 Promise가 제대로 동작하지 않(**rejected**)았을 때 호출되는 **reject** 메소드를 이용해 Promise를 다룰 수 있습니다.
@@ -881,15 +879,15 @@ Promise가 제대로 동작(**fulfill**)했을 때 호출되는 **resolve** 메�
 아래는 Promise를 사용하는 실질적인 예제입니다.
 
 ```javascript
-var request = require('request');
+var request = require("request");
 
 return new Promise((resolve, reject) => {
   request.get(url, (error, response, body) => {
     if (body) {
-        resolve(JSON.parse(body));
-      } else {
-        resolve({});
-      }
+      resolve(JSON.parse(body));
+    } else {
+      resolve({});
+    }
   });
 });
 ```
@@ -898,27 +896,25 @@ return new Promise((resolve, reject) => {
 
 ```javascript
 let urls = [
-  '/api/commits',
-  '/api/issues/opened',
-  '/api/issues/assigned',
-  '/api/issues/completed',
-  '/api/issues/comments',
-  '/api/pullrequests'
+  "/api/commits",
+  "/api/issues/opened",
+  "/api/issues/assigned",
+  "/api/issues/completed",
+  "/api/issues/comments",
+  "/api/pullrequests",
 ];
 
 let promises = urls.map((url) => {
   return new Promise((resolve, reject) => {
-    $.ajax({ url: url })
-      .done((data) => {
-        resolve(data);
-      });
+    $.ajax({ url: url }).done((data) => {
+      resolve(data);
+    });
   });
 });
 
-Promise.all(promises)
-  .then((results) => {
-    // Do something with results of all our promises
- });
+Promise.all(promises).then((results) => {
+  // Do something with results of all our promises
+});
 ```
 
 <sup>[(목차로 돌아가기)](#목차)</sup>
@@ -943,15 +939,16 @@ var generator = sillyGenerator();
 > console.log(generator.next()); // { value: 3, done: false }
 > console.log(generator.next()); // { value: 4, done: false }
 ```
+
 [next](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next)를 사용하면 제너레이터를 전진시키고 새로운 표현식을 계산합니다. 위의 예제는 극히 부자연스럽지만, 다음과 같이 제너레이터는 비동기적인 코드를 동기적인 방식으로 작성하는데에 활용할 수 있습니다.
 
 ```javascript
 // 제너레이터를 이용해 비동기 동작을 숨김
 
 function request(url) {
-    getJSON(url, function(response) {
-        generator.next(response);
-    });
+  getJSON(url, function (response) {
+    generator.next(response);
+  });
 }
 ```
 
@@ -959,10 +956,10 @@ function request(url) {
 
 ```javascript
 function* getData() {
-    var entry1 = yield request('http://some_api/item1');
-    var data1  = JSON.parse(entry1);
-    var entry2 = yield request('http://some_api/item2');
-    var data2  = JSON.parse(entry2);
+  var entry1 = yield request("http://some_api/item1");
+  var data1 = JSON.parse(entry1);
+  var entry2 = yield request("http://some_api/item2");
+  var data2 = JSON.parse(entry2);
 }
 ```
 
@@ -972,9 +969,9 @@ function* getData() {
 
 ```javascript
 function request(url) {
-    return new Promise((resolve, reject) => {
-        getJSON(url, resolve);
-    });
+  return new Promise((resolve, reject) => {
+    getJSON(url, resolve);
+  });
 }
 ```
 
@@ -982,13 +979,13 @@ function request(url) {
 
 ```javascript
 function iterateGenerator(gen) {
-    var generator = gen();
-    (function iterate(val) {
-        var ret = generator.next();
-        if(!ret.done) {
-            ret.value.then(iterate);
-        }
-    })();
+  var generator = gen();
+  (function iterate(val) {
+    var ret = generator.next();
+    if (!ret.done) {
+      ret.value.then(iterate);
+    }
+  })();
 }
 ```
 
@@ -996,10 +993,10 @@ Promise를 통해 제너레이터를 보완함으로서, Promise의 `.catch`와 
 
 ```javascript
 iterateGenerator(function* getData() {
-    var entry1 = yield request('http://some_api/item1');
-    var data1  = JSON.parse(entry1);
-    var entry2 = yield request('http://some_api/item2');
-    var data2  = JSON.parse(entry2);
+  var entry1 = yield request("http://some_api/item1");
+  var data1 = JSON.parse(entry1);
+  var entry2 = yield request("http://some_api/item2");
+  var data2 = JSON.parse(entry2);
 });
 ```
 
@@ -1012,11 +1009,11 @@ iterateGenerator(function* getData() {
 사실 `async await`는 곧 나올 ES2016의 기능이지만, 제너레이터와 Promise를 같이써야 할 수 있었던 것들을 더 적은 노력으로 가능하게 합니다.
 
 ```javascript
-var request = require('request');
+var request = require("request");
 
 function getJSON(url) {
-  return new Promise(function(resolve, reject) {
-    request(url, function(error, response, body) {
+  return new Promise(function (resolve, reject) {
+    request(url, function (error, response, body) {
       resolve(body);
     });
   });
@@ -1040,64 +1037,64 @@ ES6는 getter와 setter 함수를 지원하기 시작했습니다. 다음 예제
 
 ```javascript
 class Employee {
+  constructor(name) {
+    this._name = name;
+  }
 
-    constructor(name) {
-        this._name = name;
+  get name() {
+    if (this._name) {
+      return this._name.toUpperCase() + " 양";
+    } else {
+      return undefined;
     }
+  }
 
-    get name() {
-      if(this._name) {
-        return this._name.toUpperCase() + ' 양';
-      } else {
-        return undefined;
-      }
+  set name(newName) {
+    if (newName == this._name) {
+      console.log("이미 같은 이름을 쓰고 있습니다.");
+    } else if (newName) {
+      this._name = newName;
+    } else {
+      return false;
     }
-
-    set name(newName) {
-      if (newName == this._name) {
-        console.log('이미 같은 이름을 쓰고 있습니다.');
-      } else if (newName) {
-        this._name = newName;
-      } else {
-        return false;
-      }
-    }
+  }
 }
 
 var emp = new Employee("솔지");
 
 // 내부적으로 get 메소드를 활용
 if (emp.name) {
-  console.log(emp.name);  // 솔지 양
+  console.log(emp.name); // 솔지 양
 }
 
 // 내부적으로 setter를 활용
 emp.name = "EXID 솔지";
-console.log(emp.name);  // EXID 솔지 양
+console.log(emp.name); // EXID 솔지 양
 ```
 
 가장 최근의 브라우저들은 객체의 getter와 setter 함수를 지원합니다. set/get 전에 리스너와 전처리작업을 추가하여 계산된 프로퍼티를 위해 getter와 settter를 활용할 수 있습니다.
 
 ```javascript
 var person = {
-  firstName: '솔지',
-  lastName: '허',
+  firstName: "솔지",
+  lastName: "허",
   get fullName() {
-      console.log('이름 Get');
-      return this.lastName + ' ' + this.firstName;
+    console.log("이름 Get");
+    return this.lastName + " " + this.firstName;
   },
-  set fullName (name) {
-      console.log('이름 Set');
-      var words = name.toString().split(' ');
-      this.lastName = words[0] || '';
-      this.firstName = words[1] || '';
-  }
-}
+  set fullName(name) {
+    console.log("이름 Set");
+    var words = name.toString().split(" ");
+    this.lastName = words[0] || "";
+    this.firstName = words[1] || "";
+  },
+};
 
 person.fullName; // 허 솔지
-person.fullName = 'EXID 솔지';
+person.fullName = "EXID 솔지";
 person.fullName; // EXID 솔지
 ```
+
 <sup>[(목차로 돌아가기)](#목차)</sup>
 
 ## License

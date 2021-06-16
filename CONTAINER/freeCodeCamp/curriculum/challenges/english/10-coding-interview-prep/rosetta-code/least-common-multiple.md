@@ -8,11 +8,11 @@ dashedName: least-common-multiple
 
 # --description--
 
-The least common multiple of 12 and 18 is 36, because 12 is a factor (12 × 3 = 36), and 18 is a factor (18 × 2 = 36), and there is no positive integer less than 36 that has both factors. As a special case, if either *m* or *n* is zero, then the least common multiple is zero. One way to calculate the least common multiple is to iterate all the multiples of *m*, until you find one that is also a multiple of *n*. If you already have *gcd* for [greatest common divisor](<https://rosettacode.org/wiki/greatest common divisor>), then this formula calculates *lcm*. ( \\operatorname{lcm}(m, n) = \\frac{|m \\times n|}{\\operatorname{gcd}(m, n)} )
+The least common multiple of 12 and 18 is 36, because 12 is a factor (12 × 3 = 36), and 18 is a factor (18 × 2 = 36), and there is no positive integer less than 36 that has both factors. As a special case, if either _m_ or _n_ is zero, then the least common multiple is zero. One way to calculate the least common multiple is to iterate all the multiples of _m_, until you find one that is also a multiple of _n_. If you already have _gcd_ for [greatest common divisor](<https://rosettacode.org/wiki/greatest common divisor>), then this formula calculates _lcm_. ( \\operatorname{lcm}(m, n) = \\frac{|m \\times n|}{\\operatorname{gcd}(m, n)} )
 
 # --instructions--
 
-Compute the least common multiple of an array of integers. Given *m* and *n*, the least common multiple is the smallest positive integer that has both *m* and *n* as factors.
+Compute the least common multiple of an array of integers. Given _m_ and _n_, the least common multiple is the smallest positive integer that has both _m_ and _n_ as factors.
 
 # --hints--
 
@@ -63,9 +63,7 @@ assert.equal(LCM([-50, 25, -45, -18, 90, 447]), 67050);
 ## --seed-contents--
 
 ```js
-function LCM(A) {
-
-}
+function LCM(A) {}
 ```
 
 # --solutions--

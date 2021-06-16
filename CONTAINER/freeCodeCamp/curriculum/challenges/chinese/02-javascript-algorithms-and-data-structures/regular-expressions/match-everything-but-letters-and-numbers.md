@@ -14,8 +14,8 @@ dashedName: match-everything-but-letters-and-numbers
 
 ```js
 let shortHand = /\W/;
-let numbers = "42%";
-let sentence = "Coding!";
+let numbers = '42%';
+let sentence = 'Coding!';
 numbers.match(shortHand);
 sentence.match(shortHand);
 ```
@@ -64,7 +64,7 @@ assert(
 );
 ```
 
-你的正则表达式应该在字符串 `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.` 中找到12个非字母数字字符。
+你的正则表达式应该在字符串 `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.` 中找到 12 个非字母数字字符。
 
 ```js
 assert(
@@ -78,7 +78,7 @@ assert(
 ## --seed-contents--
 
 ```js
-let quoteSample = "The five boxing wizards jump quickly.";
+let quoteSample = 'The five boxing wizards jump quickly.';
 let nonAlphabetRegex = /change/; // Change this line
 let result = quoteSample.match(nonAlphabetRegex).length;
 ```
@@ -86,7 +86,7 @@ let result = quoteSample.match(nonAlphabetRegex).length;
 # --solutions--
 
 ```js
-let quoteSample = "The five boxing wizards_jump quickly.";
+let quoteSample = 'The five boxing wizards_jump quickly.';
 let nonAlphabetRegex = /\W/g; // Change this line
 let result = quoteSample.match(nonAlphabetRegex).length;
 ```

@@ -70,29 +70,19 @@ assert.deepEqual(gnomeSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 `gnomeSort([12, 33, 26, 18, 1, 16, 38])` should return `[1, 12, 16, 18, 26, 33, 38]`.
 
 ```js
-assert.deepEqual(gnomeSort([12, 33, 26, 18, 1, 16, 38]), [
-  1,
-  12,
-  16,
-  18,
-  26,
-  33,
-  38
-]);
+assert.deepEqual(
+  gnomeSort([12, 33, 26, 18, 1, 16, 38]),
+  [1, 12, 16, 18, 26, 33, 38]
+);
 ```
 
 `gnomeSort([3, 39, 48, 16, 1, 4, 29])` should return `[1, 3, 4, 16, 29, 39, 48]`.
 
 ```js
-assert.deepEqual(gnomeSort([3, 39, 48, 16, 1, 4, 29]), [
-  1,
-  3,
-  4,
-  16,
-  29,
-  39,
-  48
-]);
+assert.deepEqual(
+  gnomeSort([3, 39, 48, 16, 1, 4, 29]),
+  [1, 3, 4, 16, 29, 39, 48]
+);
 ```
 
 # --seed--
@@ -100,9 +90,7 @@ assert.deepEqual(gnomeSort([3, 39, 48, 16, 1, 4, 29]), [
 ## --seed-contents--
 
 ```js
-function gnomeSort(a) {
-
-}
+function gnomeSort(a) {}
 ```
 
 # --solutions--

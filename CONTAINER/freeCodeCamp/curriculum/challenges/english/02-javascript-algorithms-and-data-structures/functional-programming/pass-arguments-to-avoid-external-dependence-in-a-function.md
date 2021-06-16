@@ -56,9 +56,7 @@ assert(__newValue === 5);
 var fixedValue = 4;
 
 // Only change code below this line
-function incrementer () {
-
-
+function incrementer() {
   // Only change code above this line
 }
 ```
@@ -70,11 +68,9 @@ function incrementer () {
 var fixedValue = 4;
 
 // Only change code below this line
-function incrementer (fixedValue) {
+function incrementer(fixedValue) {
   return fixedValue + 1;
 
   // Only change code above this line
 }
-
-  
 ```

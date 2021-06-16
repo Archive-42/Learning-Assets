@@ -45,7 +45,6 @@ assert.strictEqual(arithmeticExpressions(), 1258);
 
 ```js
 function arithmeticExpressions() {
-
   return true;
 }
 

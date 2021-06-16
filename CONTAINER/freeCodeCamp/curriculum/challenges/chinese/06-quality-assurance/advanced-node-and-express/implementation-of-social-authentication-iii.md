@@ -8,7 +8,7 @@ dashedName: implementation-of-social-authentication-iii
 
 # --description--
 
-验证策略的最后一部分是处理从 GitHub 返回的个人信息。 如果用户存在，我们就需要从数据库中读取用户数据并在 profile 页面加载；否则，我们需要把用户信息添加到数据库。 GitHub 在用户信息中为我们提供了独一无二的 *id*，我们可以通过序列化的 id 在数据库中搜索用户（已实现）。 以下是这个逻辑的实现示例，我们应该把它传到新策略的第二个参数，就是目前 `console.log(profile);` 的下方：
+验证策略的最后一部分是处理从 GitHub 返回的个人信息。 如果用户存在，我们就需要从数据库中读取用户数据并在 profile 页面加载；否则，我们需要把用户信息添加到数据库。 GitHub 在用户信息中为我们提供了独一无二的 _id_，我们可以通过序列化的 id 在数据库中搜索用户（已实现）。 以下是这个逻辑的实现示例，我们应该把它传到新策略的第二个参数，就是目前 `console.log(profile);` 的下方：
 
 ```js
 myDataBase.findOneAndUpdate(
@@ -49,9 +49,9 @@ myDataBase.findOneAndUpdate(
 GitHub 策略应配置完成。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/auth.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /GitHubStrategy[^]*myDataBase/gi,
@@ -63,7 +63,7 @@ GitHub 策略应配置完成。
         'Strategy should return the callback function "cb"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

@@ -1,4 +1,4 @@
-var makeQueue = function(){
+var makeQueue = function () {
   var storage = {};
 
   var start = 0;
@@ -6,19 +6,19 @@ var makeQueue = function(){
 
   var queue = {};
 
-  queue.enqueue = function(value){
+  queue.enqueue = function (value) {
     storage[end++] = value;
   };
 
-  queue.dequeue = function(){
-    if(end > start){
+  queue.dequeue = function () {
+    if (end > start) {
       var temp = storage[start++];
       return temp;
     }
   };
 
-  queue.size = function(){
-    return end-start;
+  queue.size = function () {
+    return end - start;
   };
 
   return queue;

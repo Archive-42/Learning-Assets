@@ -51,7 +51,6 @@ assert.strictEqual(cubeDigitPairs(), 1217);
 
 ```js
 function cubeDigitPairs() {
-
   return true;
 }
 

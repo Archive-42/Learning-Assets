@@ -20,8 +20,8 @@ dashedName: practice-comparing-different-values
 **提示** 在 JavaScript 中，你可以使用 `typeof` 运算符确定变量或值的类型，如下所示：
 
 ```js
-typeof 3
-typeof '3'
+typeof 3;
+typeof '3';
 ```
 
 `typeof 3` 返回字符串 `number`，`typeof '3'` 返回字符串 `string`。
@@ -57,22 +57,23 @@ assert(code.match(/===/g));
 ```js
 // Setup
 function compareEquality(a, b) {
-  if (a == b) { // Change this line
-    return "Equal";
+  if (a == b) {
+    // Change this line
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 
-compareEquality(10, "10");
+compareEquality(10, '10');
 ```
 
 # --solutions--
 
 ```js
-function compareEquality(a,b) {
+function compareEquality(a, b) {
   if (a === b) {
-    return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 ```

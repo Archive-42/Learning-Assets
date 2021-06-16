@@ -56,18 +56,7 @@ assert.equal(
 ```js
 assert.equal(
   standardDeviation([
-    271,
-    354,
-    296,
-    301,
-    333,
-    326,
-    285,
-    298,
-    327,
-    316,
-    287,
-    314
+    271, 354, 296, 301, 333, 326, 285, 298, 327, 316, 287, 314
   ]),
   22.631
 );
@@ -78,9 +67,7 @@ assert.equal(
 ## --seed-contents--
 
 ```js
-function standardDeviation(arr) {
-
-}
+function standardDeviation(arr) {}
 ```
 
 # --solutions--
@@ -90,7 +77,7 @@ function standardDeviation(arr) {
   var sum = 0,
     sum_sq = 0,
     n = arr.length;
-  arr.forEach(function(e) {
+  arr.forEach(function (e) {
     sum += e;
     sum_sq += e * e;
   });

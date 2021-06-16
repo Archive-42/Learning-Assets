@@ -24,7 +24,7 @@ assert(!/background-color/g.test(bb1dStyle));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -47,7 +47,8 @@ assert(!/background-color/g.test(bb1dStyle));
         overflow: hidden;
       }
 
-      .background-buildings, .foreground-buildings {
+      .background-buildings,
+      .foreground-buildings {
         width: 100%;
         height: 100%;
         display: flex;
@@ -56,7 +57,7 @@ assert(!/background-color/g.test(bb1dStyle));
         position: absolute;
         top: 0;
       }
-      
+
       /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
       .bb1 {
         width: 10%;
@@ -69,11 +70,11 @@ assert(!/background-color/g.test(bb1dStyle));
       .bb1a {
         width: 70%;
       }
-  
+
       .bb1b {
         width: 80%;
       }
-  
+
       .bb1c {
         width: 90%;
       }
@@ -83,18 +84,18 @@ assert(!/background-color/g.test(bb1dStyle));
         height: 70%;
         background-color: var(--building-color1);
         background: linear-gradient(
-            orange,
-            var(--building-color1),
-            var(--window-color1)
-          );
+          orange,
+          var(--building-color1),
+          var(--window-color1)
+        );
       }
 
       .bb1-window {
         height: 10%;
         background: linear-gradient(
-            var(--building-color1),
-            var(--window-color1)
-          );
+          var(--building-color1),
+          var(--window-color1)
+        );
       }
 
       .bb2 {
@@ -133,7 +134,7 @@ assert(!/background-color/g.test(bb1dStyle));
         height: 35%;
         background-color: var(--building-color1);
       }
-  
+
       .fb4 {
         width: 8%;
         height: 45%;
@@ -141,7 +142,7 @@ assert(!/background-color/g.test(bb1dStyle));
         position: relative;
         left: 10%;
       }
-      
+
       .fb5 {
         width: 10%;
         height: 33%;
@@ -197,7 +198,7 @@ assert(!/background-color/g.test(bb1dStyle));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -220,7 +221,8 @@ assert(!/background-color/g.test(bb1dStyle));
         overflow: hidden;
       }
 
-      .background-buildings, .foreground-buildings {
+      .background-buildings,
+      .foreground-buildings {
         width: 100%;
         height: 100%;
         display: flex;
@@ -229,7 +231,7 @@ assert(!/background-color/g.test(bb1dStyle));
         position: absolute;
         top: 0;
       }
-      
+
       /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
       .bb1 {
         width: 10%;
@@ -242,11 +244,11 @@ assert(!/background-color/g.test(bb1dStyle));
       .bb1a {
         width: 70%;
       }
-  
+
       .bb1b {
         width: 80%;
       }
-  
+
       .bb1c {
         width: 90%;
       }
@@ -255,18 +257,18 @@ assert(!/background-color/g.test(bb1dStyle));
         width: 100%;
         height: 70%;
         background: linear-gradient(
-            orange,
-            var(--building-color1),
-            var(--window-color1)
-          );
+          orange,
+          var(--building-color1),
+          var(--window-color1)
+        );
       }
 
       .bb1-window {
         height: 10%;
         background: linear-gradient(
-            var(--building-color1),
-            var(--window-color1)
-          );
+          var(--building-color1),
+          var(--window-color1)
+        );
       }
 
       .bb2 {
@@ -305,7 +307,7 @@ assert(!/background-color/g.test(bb1dStyle));
         height: 35%;
         background-color: var(--building-color1);
       }
-  
+
       .fb4 {
         width: 8%;
         height: 45%;
@@ -313,7 +315,7 @@ assert(!/background-color/g.test(bb1dStyle));
         position: relative;
         left: 10%;
       }
-      
+
       .fb5 {
         width: 10%;
         height: 33%;

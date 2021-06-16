@@ -102,66 +102,63 @@ assert(
 ## --after-user-code--
 
 ```js
-DoublyLinkedList.prototype = Object.assign(
-  DoublyLinkedList.prototype,
-  {
-    add(data) {
-      if (this.head == null) {
-        this.head = new Node(data, null);
-        this.tail = this.head;
-      } else {
-        var node = this.head;
-        var prev = null;
-        while (node.next != null) {
-          prev = node;
-          node = node.next;
-        };
-        var newNode = new Node(data, node);
-        node.next = newNode;
-        this.tail = newNode;
-      };
-    },
-    print() {
-      if (this.head == null) {
-        return null;
-      } else {
-        var result = new Array();
-        var node = this.head;
-        while (node.next != null) {
-          result.push(node.data);
-          node = node.next;
-        };
+DoublyLinkedList.prototype = Object.assign(DoublyLinkedList.prototype, {
+  add(data) {
+    if (this.head == null) {
+      this.head = new Node(data, null);
+      this.tail = this.head;
+    } else {
+      var node = this.head;
+      var prev = null;
+      while (node.next != null) {
+        prev = node;
+        node = node.next;
+      }
+      var newNode = new Node(data, node);
+      node.next = newNode;
+      this.tail = newNode;
+    }
+  },
+  print() {
+    if (this.head == null) {
+      return null;
+    } else {
+      var result = new Array();
+      var node = this.head;
+      while (node.next != null) {
         result.push(node.data);
-        return result;
-      };
-    },
-    printReverse() {
-      if (this.tail == null) {
-        return null;
-      } else {
-        var result = new Array();
-        var node = this.tail;
-        while (node.prev != null) {
-          result.push(node.data);
-          node = node.prev;
-        };
+        node = node.next;
+      }
+      result.push(node.data);
+      return result;
+    }
+  },
+  printReverse() {
+    if (this.tail == null) {
+      return null;
+    } else {
+      var result = new Array();
+      var node = this.tail;
+      while (node.prev != null) {
         result.push(node.data);
-        return result;
-      };
+        node = node.prev;
+      }
+      result.push(node.data);
+      return result;
     }
   }
-);
+});
 ```
 
 ## --seed-contents--
 
 ```js
-var Node = function(data, prev) {
+var Node = function (data, prev) {
   this.data = data;
   this.prev = prev;
   this.next = null;
 };
-var DoublyLinkedList = function() {
+var DoublyLinkedList = function () {
   this.head = null;
   this.tail = null;
   // Only change code below this line
@@ -173,33 +170,33 @@ var DoublyLinkedList = function() {
 # --solutions--
 
 ```js
-  var Node = function(data, prev) {
-    this.data = data;
-    this.prev = prev;
-    this.next = null;
-  };
-  var DoublyLinkedList = function() {
-    this.head = null;
-    this.tail = null;
+var Node = function (data, prev) {
+  this.data = data;
+  this.prev = prev;
+  this.next = null;
+};
+var DoublyLinkedList = function () {
+  this.head = null;
+  this.tail = null;
 
-    this.reverse = function() {
-      if (!this.head || !this.head.next) {
-        return this.head
-      }
-
-      let tail;
-      let temp;
-      let current = this.head;
-      while(current !== null) {
-        if(!tail) tail = current;
-        temp = current.prev;
-        current.prev = current.next;
-        current.next = temp;
-        current = current.prev;
-      }
-
-      this.head = temp.prev;
-      this.tail = tail
+  this.reverse = function () {
+    if (!this.head || !this.head.next) {
+      return this.head;
     }
+
+    let tail;
+    let temp;
+    let current = this.head;
+    while (current !== null) {
+      if (!tail) tail = current;
+      temp = current.prev;
+      current.prev = current.next;
+      current.next = temp;
+      current = current.prev;
+    }
+
+    this.head = temp.prev;
+    this.tail = tail;
   };
+};
 ```

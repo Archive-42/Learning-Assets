@@ -31,16 +31,16 @@ Use the `app.get()` method to serve the string "Hello Express" to GET requests m
 Your app should serve the string 'Hello Express'
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url')).then(
-    (data) => {
+    data => {
       assert.equal(
         data,
         'Hello Express',
         'Your app does not serve the text "Hello Express"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

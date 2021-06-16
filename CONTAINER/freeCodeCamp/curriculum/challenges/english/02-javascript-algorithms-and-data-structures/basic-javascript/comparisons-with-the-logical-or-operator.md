@@ -17,21 +17,21 @@ The pattern below should look familiar from prior waypoints:
 
 ```js
 if (num > 10) {
-  return "No";
+  return 'No';
 }
 if (num < 5) {
-  return "No";
+  return 'No';
 }
-return "Yes";
+return 'Yes';
 ```
 
 will return `Yes` only if `num` is between `5` and `10` (5 and 10 included). The same logic can be written as:
 
 ```js
 if (num > 10 || num < 5) {
-  return "No";
+  return 'No';
 }
-return "Yes";
+return 'Yes';
 ```
 
 # --instructions--
@@ -109,15 +109,15 @@ function testLogicalOr(val) {
   // Only change code below this line
 
   if (val) {
-    return "Outside";
+    return 'Outside';
   }
 
   if (val) {
-    return "Outside";
+    return 'Outside';
   }
 
   // Only change code above this line
-  return "Inside";
+  return 'Inside';
 }
 
 testLogicalOr(15);
@@ -128,8 +128,8 @@ testLogicalOr(15);
 ```js
 function testLogicalOr(val) {
   if (val < 10 || val > 20) {
-    return "Outside";
+    return 'Outside';
   }
-  return "Inside";
+  return 'Inside';
 }
 ```

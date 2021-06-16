@@ -16,7 +16,7 @@ dashedName: pass-state-as-props-to-child-components
 
 # --instructions--
 
-`MyApp` 组件是有状态的，并将 `Navbar` 组件渲染为子组件。 将 `state` 的 `name` 属性向下传递给子组件，然后在 `h1` 中显示该 `name` ，h1 是 `Navbar` render方法的一部分。 `name` 应该显示在文本 `Hello, my name is:` 后面。
+`MyApp` 组件是有状态的，并将 `Navbar` 组件渲染为子组件。 将 `state` 的 `name` 属性向下传递给子组件，然后在 `h1` 中显示该 `name` ，h1 是 `Navbar` render 方法的一部分。 `name` 应该显示在文本 `Hello, my name is:` 后面。
 
 # --hints--
 
@@ -38,7 +38,7 @@ assert(
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyApp));
   const setState = () => {
@@ -54,7 +54,7 @@ async () => {
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyApp));
   const navH1Before = mockedComponent.find('Navbar').find('h1').text();
@@ -72,7 +72,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyApp />, document.getElementById('root'))
+ReactDOM.render(<MyApp />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -83,18 +83,18 @@ class MyApp extends React.Component {
     super(props);
     this.state = {
       name: 'CamperBot'
-    }
+    };
   }
   render() {
     return (
-       <div>
-         {/* Change code below this line */}
-         <Navbar />
-         {/* Change code above this line */}
-       </div>
+      <div>
+        {/* Change code below this line */}
+        <Navbar />
+        {/* Change code above this line */}
+      </div>
     );
   }
-};
+}
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -102,14 +102,14 @@ class Navbar extends React.Component {
   }
   render() {
     return (
-    <div>
-      {/* Change code below this line */}
-      <h1>Hello, my name is: </h1>
-      {/* Change code above this line */}
-    </div>
+      <div>
+        {/* Change code below this line */}
+        <h1>Hello, my name is: </h1>
+        {/* Change code above this line */}
+      </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -120,26 +120,26 @@ class MyApp extends React.Component {
     super(props);
     this.state = {
       name: 'CamperBot'
-    }
+    };
   }
   render() {
     return (
-       <div>
-         <Navbar name={this.state.name}/>
-       </div>
+      <div>
+        <Navbar name={this.state.name} />
+      </div>
     );
   }
-};
+}
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-    <div>
-      <h1>Hello, my name is: {this.props.name}</h1>
-    </div>
+      <div>
+        <h1>Hello, my name is: {this.props.name}</h1>
+      </div>
     );
   }
-};
+}
 ```

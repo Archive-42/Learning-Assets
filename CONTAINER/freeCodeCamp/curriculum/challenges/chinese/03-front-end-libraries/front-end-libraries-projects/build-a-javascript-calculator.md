@@ -18,7 +18,7 @@ dashedName: build-a-javascript-calculator
 
 **需求 2：** 计算器应该包含 10 个具有如下 id 属性的可以点击的元素，每个元素的文本内容对应 0-9 的数字：`id="zero"`、`id="one"`、`id="two"`、`id="three"`、`id="four"`、`id="five"`、`id="six"`、`id="seven"`、`id="eight"`、`id="nine"`。
 
-**需求 3：** 计算器应该包含四个可以点击的元素，文本内容对应4个主要数学运算符，且应具有如下 id 属性： `id="add"`, `id="subtract"`, `id="multiply"`, `id="divide"`。
+**需求 3：** 计算器应该包含四个可以点击的元素，文本内容对应 4 个主要数学运算符，且应具有如下 id 属性： `id="add"`, `id="subtract"`, `id="multiply"`, `id="divide"`。
 
 **需求 4：** 计算器应该包含一个可点击的 `.`（小数点）符号，对应的 `id="decimal"`。
 
@@ -48,8 +48,8 @@ dashedName: build-a-javascript-calculator
 
 **示例：** `3 + 5 x 6 - 2 / 4 =`
 
--   **立即执行逻辑：** `11.5`
--   **公式／表达式逻辑：** `32.5`
+- **立即执行逻辑：** `11.5`
+- **公式／表达式逻辑：** `32.5`
 
 你可以<a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>使用这个 CodePen 模板</a>，点击 `Save` 即可创建你自己的项目。 或者可以在任何喜欢的环境中使用以下 CDN 链接来运行测试：`https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`。
 

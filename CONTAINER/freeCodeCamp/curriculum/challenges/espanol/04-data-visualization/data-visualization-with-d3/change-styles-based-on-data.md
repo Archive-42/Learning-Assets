@@ -13,7 +13,7 @@ D3 is about visualization and presentation of data. It's likely you'll want to c
 For example, you may want to color a data point blue if it has a value less than 20, and red otherwise. You can use a callback function in the `style()` method and include the conditional logic. The callback function uses the `d` parameter to represent the data point:
 
 ```js
-selection.style("color", (d) => {
+selection.style('color', d => {
   /* Logic that returns the color based on a condition */
 });
 ```
@@ -92,16 +92,15 @@ assert($('h2').eq(8).css('color') == 'rgb(255, 0, 0)');
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("h2")
+    d3.select('body')
+      .selectAll('h2')
       .data(dataset)
       .enter()
-      .append("h2")
-      .text((d) => (d + " USD"))
-      // Add your code below this line
+      .append('h2')
+      .text(d => d + ' USD');
+    // Add your code below this line
 
-
-
-      // Add your code above this line
+    // Add your code above this line
   </script>
 </body>
 ```
@@ -113,12 +112,13 @@ assert($('h2').eq(8).css('color') == 'rgb(255, 0, 0)');
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("h2")
+    d3.select('body')
+      .selectAll('h2')
       .data(dataset)
       .enter()
-      .append("h2")
-      .text((d) => (d + " USD"))
-      .style("color", (d) => d < 20 ? "red" : "green")
+      .append('h2')
+      .text(d => d + ' USD')
+      .style('color', d => (d < 20 ? 'red' : 'green'));
   </script>
 </body>
 ```

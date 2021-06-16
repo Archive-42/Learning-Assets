@@ -1,5 +1,4 @@
 commands:
-
   calculate_docker_image_tag:
     description: "Calculates the docker image tag"
     steps:

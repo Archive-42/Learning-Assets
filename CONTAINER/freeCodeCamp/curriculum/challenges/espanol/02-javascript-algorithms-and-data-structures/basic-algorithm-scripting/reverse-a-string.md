@@ -49,7 +49,7 @@ function reverseString(str) {
   return str;
 }
 
-reverseString("hello");
+reverseString('hello');
 ```
 
 # --solutions--
@@ -59,5 +59,5 @@ function reverseString(str) {
   return str.split('').reverse().join('');
 }
 
-reverseString("hello");
+reverseString('hello');
 ```

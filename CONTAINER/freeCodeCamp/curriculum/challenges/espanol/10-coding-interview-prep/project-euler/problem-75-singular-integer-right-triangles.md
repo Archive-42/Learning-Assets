@@ -47,7 +47,6 @@ assert.strictEqual(singularIntRightTriangles(), 161667);
 
 ```js
 function singularIntRightTriangles() {
-
   return true;
 }
 

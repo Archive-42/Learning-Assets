@@ -12,21 +12,21 @@ Collection of classic computer science paradigms, algorithms, and approaches wri
 
 The most recent packages are found in these directories:
 
-* `src` - the implementation source code
-* `tests` - tests for the implementation source code
+- `src` - the implementation source code
+- `tests` - tests for the implementation source code
 
 These directories contain **old** implementations that will be replaced eventually, they are just here to avoid confusing people who find this repo through the old blog posts:
 
-* `data-structures` - data structure implementations that have not been updated yet
-* `encodings` - encoding implementations that have not been updated yet
-* `algorithms` - miscellanous algorithm implementations that have not been updated yet
+- `data-structures` - data structure implementations that have not been updated yet
+- `encodings` - encoding implementations that have not been updated yet
+- `algorithms` - miscellanous algorithm implementations that have not been updated yet
 
 As I update these, implementations will move from these folders into `src`.
 
 ## Branches
 
-* **2009** - the branch containing all of the original implementations as reflected in my 2009 blog post series.
-* **master** - the branch where I'm updating the original implementations to use ECMAScript 2018 and later features.
+- **2009** - the branch containing all of the original implementations as reflected in my 2009 blog post series.
+- **master** - the branch where I'm updating the original implementations to use ECMAScript 2018 and later features.
 
 ## Installing
 
@@ -57,9 +57,9 @@ These are the most recent blog posts covering the most recent version of the cod
 
 ### Data Structures
 
-* [Linked List](https://humanwhocodes.com/blog/2019/01/computer-science-in-javascript-linked-list/)
-* [Doubly-Linked List](https://humanwhocodes.com/blog/2019/02/computer-science-in-javascript-doubly-linked-lists/)
-* [Circular Doubly-Linked List](https://humanwhocodes.com/blog/2019/03/computer-science-in-javascript-circular-doubly-linked-lists/)
+- [Linked List](https://humanwhocodes.com/blog/2019/01/computer-science-in-javascript-linked-list/)
+- [Doubly-Linked List](https://humanwhocodes.com/blog/2019/02/computer-science-in-javascript-doubly-linked-lists/)
+- [Circular Doubly-Linked List](https://humanwhocodes.com/blog/2019/03/computer-science-in-javascript-circular-doubly-linked-lists/)
 
 ## Original Blog Posts
 
@@ -67,20 +67,20 @@ At some point I will update these blog posts for the new implementations. For no
 
 ### Data Structures
 
-* Binary Search Tree: [Part 1](https://humanwhocodes.com/blog/2009/06/09/computer-science-in-javascript-binary-search-tree-part-1/), [Part 2](https://humanwhocodes.com/blog/2009/06/16/computer-science-in-javascript-binary-search-tree-part-2/)
-* [Doubly Linked List](https://humanwhocodes.com/blog/2009/04/21/computer-science-in-javascript-doubly-linked-lists/)
-* [Linked List](https://humanwhocodes.com/blog/2009/04/13/computer-science-in-javascript-linked-list/)
+- Binary Search Tree: [Part 1](https://humanwhocodes.com/blog/2009/06/09/computer-science-in-javascript-binary-search-tree-part-1/), [Part 2](https://humanwhocodes.com/blog/2009/06/16/computer-science-in-javascript-binary-search-tree-part-2/)
+- [Doubly Linked List](https://humanwhocodes.com/blog/2009/04/21/computer-science-in-javascript-doubly-linked-lists/)
+- [Linked List](https://humanwhocodes.com/blog/2009/04/13/computer-science-in-javascript-linked-list/)
 
 ### Sorting Algorithms
 
-* [Bubble Sort](https://humanwhocodes.com/blog/2009/05/26/computer-science-in-javascript-bubble-sort/)
-* [Selection Sort](https://humanwhocodes.com/blog/2009/09/08/computer-science-in-javascript-selection-sort/)
+- [Bubble Sort](https://humanwhocodes.com/blog/2009/05/26/computer-science-in-javascript-bubble-sort/)
+- [Selection Sort](https://humanwhocodes.com/blog/2009/09/08/computer-science-in-javascript-selection-sort/)
 
 ### Other Algorithms
 
-* [Base64 Encoding](https://humanwhocodes.com/blog/2009/12/08/computer-science-in-javascript-base64-encoding/)
-* [Binary Search](https://humanwhocodes.com/blog/2009/09/01/computer-science-in-javascript-binary-search/)
-* [Credit Card Number Validation](https://humanwhocodes.com/blog/2009/08/04/computer-science-in-javascript-credit-card-number-validation/)
+- [Base64 Encoding](https://humanwhocodes.com/blog/2009/12/08/computer-science-in-javascript-base64-encoding/)
+- [Binary Search](https://humanwhocodes.com/blog/2009/09/01/computer-science-in-javascript-binary-search/)
+- [Credit Card Number Validation](https://humanwhocodes.com/blog/2009/08/04/computer-science-in-javascript-credit-card-number-validation/)
 
 ## Note on Code Style
 

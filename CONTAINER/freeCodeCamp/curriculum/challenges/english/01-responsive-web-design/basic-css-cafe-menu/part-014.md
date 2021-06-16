@@ -10,7 +10,8 @@ dashedName: part-14
 You now have three type selectors with the exact same styling. You can add the same group of styles to many elements by separating the selectors with commas like this:
 
 ```css
-selector1, selector2 {
+selector1,
+selector2 {
   property: value;
 }
 ```
@@ -35,7 +36,7 @@ Test 1
   <head>
     <meta charset="utf-8" />
     <title>Camper Cafe Menu</title>
---fcc-editable-region--
+    --fcc-editable-region--
     <style>
       h1 {
         text-align: center;
@@ -47,7 +48,7 @@ Test 1
         text-align: center;
       }
     </style>
---fcc-editable-region--
+    --fcc-editable-region--
   </head>
   <body>
     <header>
@@ -60,6 +61,6 @@ Test 1
       </section>
     </main>
   </body>
-<html>
+  <html></html>
+</html>
 ```
-

@@ -8,7 +8,7 @@ dashedName: towers-of-hanoi
 
 # --description--
 
-Solve the [Towers of Hanoi](https://en.wikipedia.org/wiki/Towers_of_Hanoi "wp: Towers_of_Hanoi") problem.
+Solve the [Towers of Hanoi](https://en.wikipedia.org/wiki/Towers_of_Hanoi 'wp: Towers_of_Hanoi') problem.
 
 Your solution should accept the number of discs as the first parameters, and three string used to identify each of the three stacks of discs, for example `towerOfHanoi(4, 'A', 'B', 'C')`. The function should return an array of arrays containing the list of moves, source -> destination.
 
@@ -54,16 +54,34 @@ assert.deepEqual(towerOfHanoi(7, 'A', 'B', 'C').slice(0, 10), res7First10Moves);
 
 ```js
 const res3 = towerOfHanoi(3, 'A', 'B', 'C');
-const res3Moves = [['A', 'B'], ['A', 'C'], ['B', 'C'], ['A', 'B'], ['C', 'A'], ['C', 'B'], ['A', 'B']];
+const res3Moves = [
+  ['A', 'B'],
+  ['A', 'C'],
+  ['B', 'C'],
+  ['A', 'B'],
+  ['C', 'A'],
+  ['C', 'B'],
+  ['A', 'B']
+];
 const res5 = towerOfHanoi(5, 'X', 'Y', 'Z');
-const res7First10Moves = [['A', 'B'], ['A', 'C'], ['B', 'C'], ['A', 'B'], ['C', 'A'], ['C', 'B'], ['A', 'B'], ['A', 'C'], ['B', 'C'], ['B', 'A']];
+const res7First10Moves = [
+  ['A', 'B'],
+  ['A', 'C'],
+  ['B', 'C'],
+  ['A', 'B'],
+  ['C', 'A'],
+  ['C', 'B'],
+  ['A', 'B'],
+  ['A', 'C'],
+  ['B', 'C'],
+  ['B', 'A']
+];
 ```
 
 ## --seed-contents--
 
 ```js
 function towerOfHanoi(n, a, b, c) {
-
   return [[]];
 }
 ```

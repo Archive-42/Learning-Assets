@@ -17,10 +17,7 @@
       "587d7b83367417b2b2512b37",
       "Understanding the Differences between the freeCodeCamp and Browser Console"
     ],
-    [
-      "587d7b84367417b2b2512b34",
-      "Use typeof to Check the Type of a Variable"
-    ],
+    ["587d7b84367417b2b2512b34", "Use typeof to Check the Type of a Variable"],
     [
       "587d7b84367417b2b2512b35",
       "Catch Misspelled Variable and Function Names"
@@ -45,10 +42,7 @@
       "587d7b85367417b2b2512b3a",
       "Catch Arguments Passed in the Wrong Order When Calling a Function"
     ],
-    [
-      "587d7b86367417b2b2512b3b",
-      "Catch Off By One Errors When Using Indexing"
-    ],
+    ["587d7b86367417b2b2512b3b", "Catch Off By One Errors When Using Indexing"],
     [
       "587d7b86367417b2b2512b3c",
       "Use Caution When Reinitializing Variables Inside a Loop"

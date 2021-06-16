@@ -38,7 +38,6 @@ assert.strictEqual(countingFractions(), 303963552391);
 
 ```js
 function countingFractions() {
-
   return true;
 }
 

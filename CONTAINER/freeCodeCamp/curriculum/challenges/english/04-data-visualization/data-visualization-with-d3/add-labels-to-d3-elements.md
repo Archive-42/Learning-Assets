@@ -88,32 +88,30 @@ assert($('text').eq(8).text() == '9' && $('text').eq(8).attr('y') == '70');
     const w = 500;
     const h = 100;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("rect")
-       .data(dataset)
-       .enter()
-       .append("rect")
-       .attr("x", (d, i) => i * 30)
-       .attr("y", (d, i) => h - 3 * d)
-       .attr("width", 25)
-       .attr("height", (d, i) => 3 * d)
-       .attr("fill", "navy");
+    svg
+      .selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('x', (d, i) => i * 30)
+      .attr('y', (d, i) => h - 3 * d)
+      .attr('width', 25)
+      .attr('height', (d, i) => 3 * d)
+      .attr('fill', 'navy');
 
-    svg.selectAll("text")
-       .data(dataset)
-       .enter()
-       // Add your code below this line
+    svg.selectAll('text').data(dataset).enter();
+    // Add your code below this line
 
-
-
-
-       // Add your code above this line
+    // Add your code above this line
   </script>
-<body>
+  <body></body>
+</body>
 ```
 
 # --solutions--
@@ -126,28 +124,32 @@ assert($('text').eq(8).text() == '9' && $('text').eq(8).attr('y') == '70');
     const w = 500;
     const h = 100;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("rect")
-       .data(dataset)
-       .enter()
-       .append("rect")
-       .attr("x", (d, i) => i * 30)
-       .attr("y", (d, i) => h - 3 * d)
-       .attr("width", 25)
-       .attr("height", (d, i) => 3 * d)
-       .attr("fill", "navy");
+    svg
+      .selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('x', (d, i) => i * 30)
+      .attr('y', (d, i) => h - 3 * d)
+      .attr('width', 25)
+      .attr('height', (d, i) => 3 * d)
+      .attr('fill', 'navy');
 
-    svg.selectAll("text")
-       .data(dataset)
-       .enter()
-       .append("text")
-       .attr("x", (d, i) => i * 30)
-       .attr("y", (d, i) => h - (3 * d) - 3)
-       .text((d) => d)
+    svg
+      .selectAll('text')
+      .data(dataset)
+      .enter()
+      .append('text')
+      .attr('x', (d, i) => i * 30)
+      .attr('y', (d, i) => h - 3 * d - 3)
+      .text(d => d);
   </script>
-<body>
+  <body></body>
+</body>
 ```

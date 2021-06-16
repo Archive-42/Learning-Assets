@@ -5,7 +5,7 @@ describe('Testing the maxCharacter function', () => {
     expect(() => maxCharacter(123)).toThrow()
   })
   it('Check the max character in string', () => {
-    const theString = 'I can\'t do that'
+    const theString = "I can't do that"
     const maxChar = maxCharacter(theString)
     expect(maxChar).toBe('t')
   })

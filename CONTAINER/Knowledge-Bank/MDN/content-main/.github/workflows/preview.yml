@@ -3,9 +3,9 @@ name: Preview
 on:
   pull_request:
     paths:
-    - package.json
-    - yarn.lock
-    - .github/workflows/preview.yml
+      - package.json
+      - yarn.lock
+      - .github/workflows/preview.yml
 
 jobs:
   build:

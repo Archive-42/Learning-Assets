@@ -47,4 +47,3 @@ if 0 == x:
 ## --video-solution--
 
 4
-

@@ -34,13 +34,11 @@ Second hint with <code>code</code>
 // more test code
 ```
 
-
 # --seed--
 
 ```html
 <html>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

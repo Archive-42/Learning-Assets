@@ -14,7 +14,7 @@ Cuando estás definiendo una cadena debes comenzar y terminar con una comilla si
 En JavaScript, puedes <dfn>escapar</dfn> una comilla de considerarse un final de cadena colocando una <dfn>barra invertida</dfn> (`\`) delante de la comilla.
 
 ```js
-var sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+var sampleStr = 'Alan said, "Peter is learning JavaScript".';
 ```
 
 Esto indica a JavaScript que la siguiente comilla no es el final de la cadena, sino que debería aparecer dentro de la cadena. Así que si imprimieras esto en la consola, obtendrías:
@@ -42,7 +42,9 @@ assert(code.match(/\\"/g).length === 4 && code.match(/[^\\]"/g).length === 2);
 La variable myStr debe contener la cadena: `I am a "double quoted" string inside "double quotes".`
 
 ```js
-assert(/I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(myStr));
+assert(
+  /I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(myStr)
+);
 ```
 
 # --seed--
@@ -50,11 +52,11 @@ assert(/I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(mySt
 ## --after-user-code--
 
 ```js
-(function(){
-  if(typeof myStr === 'string') {
-    console.log("myStr = \"" + myStr + "\"");
+(function () {
+  if (typeof myStr === 'string') {
+    console.log('myStr = "' + myStr + '"');
   } else {
-    console.log("myStr is undefined");
+    console.log('myStr is undefined');
   }
 })();
 ```
@@ -62,11 +64,11 @@ assert(/I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(mySt
 ## --seed-contents--
 
 ```js
-var myStr = ""; // Change this line
+var myStr = ''; // Change this line
 ```
 
 # --solutions--
 
 ```js
-var myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+var myStr = 'I am a "double quoted" string inside "double quotes".';
 ```

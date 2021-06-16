@@ -1,0 +1,24 @@
+{
+  "sqlite": {
+    "driver": "sqlite3",
+    "filename": "./dev.sqlite"
+  },
+  "pg": {
+    "driver": "pg",
+    "port": 5432,
+    "user": "northwind_user",
+    "password": "theWindi$bl0wing",
+    "host": "localhost",
+    "database": "northwind",
+    "schema": "public"
+  },
+  "mysql": {
+    "driver": "mysql",
+    "port": 3306,
+    "user": "northwind_user",
+    "password": "theWindi$bl0wing",
+    "host": "localhost",
+    "database": "northwind",
+    "multipleStatements": true
+  }
+}

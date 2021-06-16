@@ -10,7 +10,7 @@ dashedName: sorting-algorithmsbead-sort
 
 Sort an array of positive integers using the [Bead Sort Algorithm](https://en.wikipedia.org/wiki/Bead_sort).
 
-A *bead sort* is also known as a *gravity sort*.
+A _bead sort_ is also known as a _gravity sort_.
 
 The algorithm has O(S), where S is the sum of the integers in the input set: Each bead is moved individually.
 
@@ -51,29 +51,19 @@ assert.deepEqual(beadSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 `beadSort([12, 33, 26, 18, 1, 16, 38])` should return `[1, 12, 16, 18, 26, 33, 38]`.
 
 ```js
-assert.deepEqual(beadSort([12, 33, 26, 18, 1, 16, 38]), [
-  1,
-  12,
-  16,
-  18,
-  26,
-  33,
-  38
-]);
+assert.deepEqual(
+  beadSort([12, 33, 26, 18, 1, 16, 38]),
+  [1, 12, 16, 18, 26, 33, 38]
+);
 ```
 
 `beadSort([3, 39, 48, 16, 1, 4, 29])` should return `[1, 3, 4, 16, 29, 39, 48]`.
 
 ```js
-assert.deepEqual(beadSort([3, 39, 48, 16, 1, 4, 29]), [
-  1,
-  3,
-  4,
-  16,
-  29,
-  39,
-  48
-]);
+assert.deepEqual(
+  beadSort([3, 39, 48, 16, 1, 4, 29]),
+  [1, 3, 4, 16, 29, 39, 48]
+);
 ```
 
 # --seed--
@@ -81,9 +71,7 @@ assert.deepEqual(beadSort([3, 39, 48, 16, 1, 4, 29]), [
 ## --seed-contents--
 
 ```js
-function beadSort(arr) {
-
-}
+function beadSort(arr) {}
 ```
 
 # --solutions--
@@ -116,7 +104,7 @@ function beadSort(arr) {
     for (
       var j = 0;
       j < max &&
-      (function(c) {
+      (function (c) {
         return c.charCodeAt == null ? c : c.charCodeAt(0);
       })(grid[arr.length - 1 - i][j]) == '*'.charCodeAt(0);
       j++

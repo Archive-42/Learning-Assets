@@ -34,4 +34,3 @@ A header, a footer, and the contents of "romeo.txt".
 ## --video-solution--
 
 1
-

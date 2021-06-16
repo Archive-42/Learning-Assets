@@ -27,4 +27,3 @@ Which of the following functions creates a socket object?
 ## --video-solution--
 
 3
-

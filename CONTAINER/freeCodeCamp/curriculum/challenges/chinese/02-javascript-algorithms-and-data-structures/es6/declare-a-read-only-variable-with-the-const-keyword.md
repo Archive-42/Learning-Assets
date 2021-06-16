@@ -13,8 +13,8 @@ dashedName: declare-a-read-only-variable-with-the-const-keyword
 `const` 拥有 `let` 的所有优点，不同的是，通过 `const` 声明的变量是只读的。 这意味着通过 `const` 声明的变量只能被赋值一次，而不能被再次赋值。
 
 ```js
-const FAV_PET = "Cats";
-FAV_PET = "Dogs";
+const FAV_PET = 'Cats';
+FAV_PET = 'Dogs';
 ```
 
 控制台将由于给 `FAV_PET` 重新赋值而显示错误。
@@ -32,25 +32,25 @@ FAV_PET = "Dogs";
 代码中不应有 `var`。
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/var/g));
+getUserInput => assert(!getUserInput('index').match(/var/g));
 ```
 
 `SENTENCE` 应该是使用 `const` 声明的常量。
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/(const SENTENCE)/g));
+getUserInput => assert(getUserInput('index').match(/(const SENTENCE)/g));
 ```
 
 `i` 应该是使用 `let`声明的。
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/(let i)/g));
+getUserInput => assert(getUserInput('index').match(/(let i)/g));
 ```
 
 `console.log` 应该修改为用于打印 `SENTENCE` 变量。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(getUserInput('index').match(/console\.log\(\s*SENTENCE\s*\)\s*;?/g));
 ```
 
@@ -60,30 +60,26 @@ FAV_PET = "Dogs";
 
 ```js
 function printManyTimes(str) {
-
   // Only change code below this line
 
-  var sentence = str + " is cool!";
-  for (var i = 0; i < str.length; i+=2) {
+  var sentence = str + ' is cool!';
+  for (var i = 0; i < str.length; i += 2) {
     console.log(sentence);
   }
 
   // Only change code above this line
-
 }
-printManyTimes("freeCodeCamp");
+printManyTimes('freeCodeCamp');
 ```
 
 # --solutions--
 
 ```js
 function printManyTimes(str) {
-
-  const SENTENCE = str + " is cool!";
-  for (let i = 0; i < str.length; i+=2) {
+  const SENTENCE = str + ' is cool!';
+  for (let i = 0; i < str.length; i += 2) {
     console.log(SENTENCE);
   }
-
 }
-printManyTimes("freeCodeCamp");
+printManyTimes('freeCodeCamp');
 ```

@@ -21,12 +21,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#7` in the `Equality` su
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ All tests should pass.
 You should choose the correct method for the first assertion - `deepEqual` vs. `notDeepEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'deepEqual',
         'The order of the keys does not matter'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ You should choose the correct method for the first assertion - `deepEqual` vs. `
 You should choose the correct method for the second assertion - `deepEqual` vs. `notDeepEqual`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'notDeepEqual',
         'The position of elements within an array does matter'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

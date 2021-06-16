@@ -25,12 +25,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#1` in the `Basic Assert
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -39,12 +39,12 @@ All tests should pass.
 You should choose the correct method for the first assertion - `isNull` vs. `isNotNull`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'isNull', 'Null is null');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,12 +53,12 @@ You should choose the correct method for the first assertion - `isNull` vs. `isN
 You should choose the correct method for the second assertion - `isNull` vs. `isNotNull`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'isNotNull', '1 is not null');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

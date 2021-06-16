@@ -16,10 +16,10 @@ Like the equality operator, the greater than or equal to operator will convert d
 **Examples**
 
 ```js
-6   >=  6
-7   >= '3'
-2   >=  3
-'7' >=  9
+6 >= 6;
+7 >= '3';
+2 >= 3;
+'7' >= 9;
 ```
 
 In order, these expressions would evaluate to `true`, `true`, `false`, and `false`.
@@ -84,15 +84,17 @@ assert(code.match(/val\s*>=\s*('|")*\d+('|")*/g).length > 1);
 
 ```js
 function testGreaterOrEqual(val) {
-  if (val) {  // Change this line
-    return "20 or Over";
+  if (val) {
+    // Change this line
+    return '20 or Over';
   }
 
-  if (val) {  // Change this line
-    return "10 or Over";
+  if (val) {
+    // Change this line
+    return '10 or Over';
   }
 
-  return "Less than 10";
+  return 'Less than 10';
 }
 
 testGreaterOrEqual(10);
@@ -102,14 +104,16 @@ testGreaterOrEqual(10);
 
 ```js
 function testGreaterOrEqual(val) {
-  if (val >= 20) {  // Change this line
-    return "20 or Over";
+  if (val >= 20) {
+    // Change this line
+    return '20 or Over';
   }
 
-  if (val >= 10) {  // Change this line
-    return "10 or Over";
+  if (val >= 10) {
+    // Change this line
+    return '10 or Over';
   }
 
-  return "Less than 10";
+  return 'Less than 10';
 }
 ```

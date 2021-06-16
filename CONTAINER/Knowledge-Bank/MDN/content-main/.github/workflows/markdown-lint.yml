@@ -5,10 +5,9 @@ on:
     branches:
       - main
     paths:
-      - '*.md'
-      - 'rfcs/**/*.md'
+      - "*.md"
+      - "rfcs/**/*.md"
       - .github/workflows/markdown-lint.yml
-
 
 jobs:
   docs:

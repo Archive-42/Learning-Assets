@@ -12,7 +12,7 @@ dashedName: target-the-same-element-with-multiple-jquery-selectors
 
 Now you know three ways of targeting elements: by type: `$("button")`, by class: `$(".btn")`, and by id `$("#target1")`.
 
-Although it is possible to add multiple classes in a single `.addClass()` call, let's add them to the same element in *three separate ways*.
+Although it is possible to add multiple classes in a single `.addClass()` call, let's add them to the same element in _three separate ways_.
 
 Using `.addClass()`, add only one class at a time to the same element, three different ways:
 
@@ -75,9 +75,7 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-
-  });
+  $(document).ready(function () {});
 </script>
 
 <!-- Only change code above this line -->
@@ -109,10 +107,10 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated");
-    $(".btn").addClass("shake");
-    $("#target1").addClass("btn-primary");
+  $(document).ready(function () {
+    $('button').addClass('animated');
+    $('.btn').addClass('shake');
+    $('#target1').addClass('btn-primary');
   });
 </script>
 

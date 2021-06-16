@@ -12,17 +12,25 @@ The last challenge showed how the `@for` directive uses a starting and ending va
 
 ```scss
 @each $color in blue, red, green {
-  .#{$color}-text {color: $color;}
+  .#{$color}-text {
+    color: $color;
+  }
 }
 ```
 
 A map has slightly different syntax. Here's an example:
 
 ```scss
-$colors: (color1: blue, color2: red, color3: green);
+$colors: (
+  color1: blue,
+  color2: red,
+  color3: green
+);
 
 @each $key, $color in $colors {
-  .#{$color}-text {color: $color;}
+  .#{$color}-text {
+    color: $color;
+  }
 }
 ```
 
@@ -77,10 +85,7 @@ assert($('.red-bg').css('background-color') == 'rgb(255, 0, 0)');
 ## --seed-contents--
 
 ```html
-<style type='text/scss'>
-
-
-
+<style type="text/scss">
   div {
     height: 200px;
     width: 200px;
@@ -95,10 +100,11 @@ assert($('.red-bg').css('background-color') == 'rgb(255, 0, 0)');
 # --solutions--
 
 ```html
-<style type='text/scss'>
-
+<style type="text/scss">
   @each $color in blue, black, red {
-    .#{$color}-bg {background-color: $color;}
+    .#{$color}-bg {
+      background-color: $color;
+    }
   }
 
   div {
@@ -115,12 +121,17 @@ assert($('.red-bg').css('background-color') == 'rgb(255, 0, 0)');
 ---
 
 ```html
-<style type='text/scss'>
-
-  $colors: (color1: blue, color2: black, color3: red);
+<style type="text/scss">
+  $colors: (
+    color1: blue,
+    color2: black,
+    color3: red
+  );
 
   @each $key, $color in $colors {
-    .#{$color}-bg {background-color: $color;}
+    .#{$color}-bg {
+      background-color: $color;
+    }
   }
 
   div {

@@ -10,7 +10,7 @@ dashedName: implementation-of-social-authentication-ii
 
 设置 GitHub 验证的最后一步是创建策略本身。 为此，你需要在项目中添加 “passport-github” 依赖，并在 `auth.js` 中 请求它，作为 `GithubStrategy`，像这样：`const GitHubStrategy = require('passport-github').Strategy;`。 别忘了请求和配置 `dotenv`，使用你的环境变量。
 
-为了设置 GitHub 策略，我们需要在 Passport 中使用实例化的 `GitHubStrategy`，它可以接收两个参数：一个对象（包括 `clientID`、`clientSecret` 和 `callbackURL`），以及一个回调函数。在这个回调函数中，我们要处理验证成功时，判断用户是否已经在数据库中存在的逻辑，以及在用户数据库对象中最初保存哪些字段。 这种处理方式适用于绝大部分第三方验证策略，但有些策略会需要我们提供更多的信息，详情请参考相关策略的 GitHub README。 例如，Google 的验证策略会要求你提供一个 *scope*，用于标示用户成功登录后，你需要从返回的对象中获取那些信息。以及，这也需要经过用户同意，你才可以获取到。 你可以在[这里](https://github.com/jaredhanson/passport-github/)了解当前我们使用的验证策略的用法，不过我们也会在 freeCodeCamp 课程中进行详细讲解。
+为了设置 GitHub 策略，我们需要在 Passport 中使用实例化的 `GitHubStrategy`，它可以接收两个参数：一个对象（包括 `clientID`、`clientSecret` 和 `callbackURL`），以及一个回调函数。在这个回调函数中，我们要处理验证成功时，判断用户是否已经在数据库中存在的逻辑，以及在用户数据库对象中最初保存哪些字段。 这种处理方式适用于绝大部分第三方验证策略，但有些策略会需要我们提供更多的信息，详情请参考相关策略的 GitHub README。 例如，Google 的验证策略会要求你提供一个 _scope_，用于标示用户成功登录后，你需要从返回的对象中获取那些信息。以及，这也需要经过用户同意，你才可以获取到。 你可以在[这里](https://github.com/jaredhanson/passport-github/)了解当前我们使用的验证策略的用法，不过我们也会在 freeCodeCamp 课程中进行详细讲解。
 
 你的新策略应该这样去实现：
 
@@ -36,9 +36,9 @@ passport.use(new GitHubStrategy({
 应正确添加依赖 passport-github。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -46,7 +46,7 @@ passport.use(new GitHubStrategy({
         'Your project should list "passport-github" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -55,16 +55,16 @@ passport.use(new GitHubStrategy({
 应正确请求依赖 passport-github。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/auth.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /require.*("|')passport-github("|')/gi,
         'You should have required passport-github'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -73,9 +73,9 @@ passport.use(new GitHubStrategy({
 到目前为止，Github 策略应正确设置。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/auth.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /passport\.use.*new GitHubStrategy/gi,
@@ -97,7 +97,7 @@ passport.use(new GitHubStrategy({
         'You should use process.env.GITHUB_CLIENT_ID'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

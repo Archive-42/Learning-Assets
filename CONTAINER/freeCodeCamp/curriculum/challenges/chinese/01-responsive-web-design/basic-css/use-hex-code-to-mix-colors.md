@@ -109,16 +109,16 @@ assert(code.match(/\.orange-text\s*?{\s*?color:\s*?#FFA500\s*?;\s*?}/gi));
 ```html
 <style>
   .red-text {
-    color: #FF0000;
+    color: #ff0000;
   }
   .green-text {
-    color: #00FF00;
+    color: #00ff00;
   }
   .dodger-blue-text {
-    color: #1E90FF;
+    color: #1e90ff;
   }
   .orange-text {
-    color: #FFA500;
+    color: #ffa500;
   }
 </style>
 

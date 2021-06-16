@@ -42,7 +42,6 @@ assert.strictEqual(pandigitalMultiples(), 932718654);
 
 ```js
 function pandigitalMultiples() {
-
   return true;
 }
 
@@ -53,7 +52,6 @@ pandigitalMultiples();
 
 ```js
 function pandigitalMultiples() {
-
   function get9DigitConcatenatedProduct(num) {
     // returns false if concatenated product is not 9 digits
     let concatenatedProduct = num.toString();
@@ -82,8 +80,11 @@ function pandigitalMultiples() {
 
   let largestNum = 0;
   for (let i = 9999; i >= 9000; i--) {
-    const concatenatedProduct =  get9DigitConcatenatedProduct(i);
-    if (is1to9Pandigital(concatenatedProduct) && concatenatedProduct > largestNum) {
+    const concatenatedProduct = get9DigitConcatenatedProduct(i);
+    if (
+      is1to9Pandigital(concatenatedProduct) &&
+      concatenatedProduct > largestNum
+    ) {
       largestNum = parseInt(concatenatedProduct);
       break;
     }

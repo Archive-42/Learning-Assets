@@ -11,9 +11,9 @@ dashedName: inherit-behaviors-from-a-supertype
 In the previous challenge, you created a `supertype` called `Animal` that defined behaviors shared by all animals:
 
 ```js
-function Animal() { }
-Animal.prototype.eat = function() {
-  console.log("nom nom nom");
+function Animal() {}
+Animal.prototype.eat = function () {
+  console.log('nom nom nom');
 };
 ```
 
@@ -93,12 +93,12 @@ assert(beagle instanceof Animal);
 ## --seed-contents--
 
 ```js
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 
@@ -111,12 +111,12 @@ let beagle; // Change this line
 # --solutions--
 
 ```js
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 let duck = Object.create(Animal.prototype);

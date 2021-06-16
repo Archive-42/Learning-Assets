@@ -42,16 +42,16 @@ const { name, age } = user;
 应该移除 ES5 赋值语句。
 
 ```js
-assert(
-  !code.match(/today\s*=\s*HIGH_TEMPERATURES\.(today|tomorrow)/g)
-);
+assert(!code.match(/today\s*=\s*HIGH_TEMPERATURES\.(today|tomorrow)/g));
 ```
 
 应该使用解构赋值创建 `today` 变量。
 
 ```js
 assert(
-  code.match(/(var|let|const)\s*{\s*(today[^}]*|[^,]*,\s*today)\s*}\s*=\s*HIGH_TEMPERATURES(;|\s+|\/\/)/g)
+  code.match(
+    /(var|let|const)\s*{\s*(today[^}]*|[^,]*,\s*today)\s*}\s*=\s*HIGH_TEMPERATURES(;|\s+|\/\/)/g
+  )
 );
 ```
 
@@ -59,7 +59,9 @@ assert(
 
 ```js
 assert(
-  code.match(/(var|let|const)\s*{\s*(tomorrow[^}]*|[^,]*,\s*tomorrow)\s*}\s*=\s*HIGH_TEMPERATURES(;|\s+|\/\/)/g)
+  code.match(
+    /(var|let|const)\s*{\s*(tomorrow[^}]*|[^,]*,\s*tomorrow)\s*}\s*=\s*HIGH_TEMPERATURES(;|\s+|\/\/)/g
+  )
 );
 ```
 

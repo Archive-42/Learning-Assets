@@ -63,30 +63,25 @@ assert.equal(fizzBuzz()[12], 13);
 ## --seed-contents--
 
 ```js
-function fizzBuzz() {
-
-}
+function fizzBuzz() {}
 ```
 
 # --solutions--
 
 ```js
 function fizzBuzz() {
-    let res=[];
-    for (let i =1; i < 101; i++) {
-        if (i % 3 === 0  && i % 5 === 0) {
-            res.push("FizzBuzz");
-        }
-        else if (i % 3 === 0) {
-            res.push("Fizz");
-        }
-        else if (i % 5 === 0) {
-            res.push("Buzz");
-        } 
-        else {
-            res.push(i);
-        }
+  let res = [];
+  for (let i = 1; i < 101; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      res.push('FizzBuzz');
+    } else if (i % 3 === 0) {
+      res.push('Fizz');
+    } else if (i % 5 === 0) {
+      res.push('Buzz');
+    } else {
+      res.push(i);
     }
-    return res;
+  }
+  return res;
 }
 ```

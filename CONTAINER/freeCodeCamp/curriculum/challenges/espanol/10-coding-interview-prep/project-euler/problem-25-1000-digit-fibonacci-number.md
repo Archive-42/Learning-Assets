@@ -58,7 +58,6 @@ assert.strictEqual(digitFibonacci(20), 93);
 
 ```js
 function digitFibonacci(n) {
-
   return n;
 }
 
@@ -68,8 +67,8 @@ digitFibonacci(20);
 # --solutions--
 
 ```js
-const digitFibonacci = (n) => {
-  const digits = (num) => {
+const digitFibonacci = n => {
+  const digits = num => {
     return num.toString().length;
   };
   let f1 = 1;

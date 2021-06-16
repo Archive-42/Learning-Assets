@@ -88,20 +88,20 @@ class Set {
   size() {
     return this.length;
   }
-  // This is our union method 
+  // This is our union method
   union(set) {
     const newSet = new Set();
     this.values().forEach(value => {
       newSet.add(value);
-    })
+    });
     set.values().forEach(value => {
       newSet.add(value);
-    })
+    });
 
     return newSet;
   }
   // Only change code below this line
-  
+
   // Only change code above this line
 }
 ```
@@ -151,10 +151,10 @@ class Set {
     const newSet = new Set();
     this.values().forEach(value => {
       newSet.add(value);
-    })
+    });
     set.values().forEach(value => {
       newSet.add(value);
-    })
+    });
 
     return newSet;
   }
@@ -176,7 +176,7 @@ class Set {
       if (largeSet.dictionary[value]) {
         newSet.add(value);
       }
-    })
+    });
 
     return newSet;
   }

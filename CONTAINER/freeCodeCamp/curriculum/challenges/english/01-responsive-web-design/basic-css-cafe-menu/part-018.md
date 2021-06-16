@@ -30,13 +30,13 @@ Test 1
 ```html
 <!DOCTYPE html>
 <html>
---fcc-editable-region--
+  --fcc-editable-region--
   <head>
     <meta charset="utf-8" />
     <title>Camper Cafe Menu</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
---fcc-editable-region--
+  --fcc-editable-region--
   <body>
     <header>
       <h1>CAMPER CAFE</h1>
@@ -48,12 +48,14 @@ Test 1
       </section>
     </main>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 ```
-

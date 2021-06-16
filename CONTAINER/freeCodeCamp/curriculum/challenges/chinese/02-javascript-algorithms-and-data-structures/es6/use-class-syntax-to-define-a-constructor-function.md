@@ -15,9 +15,9 @@ ES6 提供了一个新的创建对象的语法，使用关键字 <dfn>class</dfn
 在 ES5 里面，我们通常会定义一个构造函数 `constructor`，然后使用 `new` 关键字来实例化一个对象：
 
 ```js
-var SpaceShuttle = function(targetPlanet){
+var SpaceShuttle = function (targetPlanet) {
   this.targetPlanet = targetPlanet;
-}
+};
 var zeus = new SpaceShuttle('Jupiter');
 ```
 

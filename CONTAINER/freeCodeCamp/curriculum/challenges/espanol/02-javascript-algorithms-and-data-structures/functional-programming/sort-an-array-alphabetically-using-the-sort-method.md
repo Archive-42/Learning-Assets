@@ -14,7 +14,7 @@ Por ejemplo:
 
 ```js
 function ascendingOrder(arr) {
-  return arr.sort(function(a, b) {
+  return arr.sort(function (a, b) {
     return a - b;
   });
 }
@@ -25,7 +25,7 @@ Esto devolvería el valor de `[1, 2, 3, 4, 5]`.
 
 ```js
 function reverseAlpha(arr) {
-  return arr.sort(function(a, b) {
+  return arr.sort(function (a, b) {
     return a === b ? 0 : a < b ? 1 : -1;
   });
 }
@@ -82,11 +82,9 @@ assert(
 ```js
 function alphabeticalOrder(arr) {
   // Only change code below this line
-
-
   // Only change code above this line
 }
-alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+alphabeticalOrder(['a', 'd', 'c', 'a', 'z', 'g']);
 ```
 
 # --solutions--
@@ -97,5 +95,5 @@ function alphabeticalOrder(arr) {
   return arr.sort();
   // Only change code above this line
 }
-alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+alphabeticalOrder(['a', 'd', 'c', 'a', 'z', 'g']);
 ```

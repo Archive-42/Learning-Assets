@@ -27,21 +27,16 @@ assert(
 
 ```html
 <!DOCTYPE html>
-<html>
-  
-</html>
+<html></html>
 ```
 
 # --solutions--
 
 ```html
 <!DOCTYPE html>
-<html>    
-  <head>
-    
-  </head>
+<html>
+  <head> </head>
 
-  <body>
-  </body>
+  <body></body>
 </html>
 ```

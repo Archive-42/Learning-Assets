@@ -16,19 +16,19 @@ dashedName: comparison-with-the-equality-operator
 ```js
 function equalityTest(myVal) {
   if (myVal == 10) {
-     return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 ```
 
 如果 `myVal` 等于 `10`，相等运算符会返回 `true`，因此大括号里面的代码会被执行，函数将返回 `Equal`。 否则，函数返回 `Not Equal`。 在 JavaScript 中，为了让两个不同的<dfn>数据类型</dfn>（例如 `numbers` 和 `strings`）的值可以作比较，它必须把一种类型转换为另一种类型。 这叫作 “类型强制转换”。 转换之后，可以像下面这样来比较：
 
 ```js
-1   ==  1
-1   ==  2
-1   == '1'
-"3" ==  3
+1 == 1;
+1 == 2;
+1 == '1';
+'3' == 3;
 ```
 
 按顺序，这些表达式会返回 `true`、`false`、`true`、`true`。
@@ -70,10 +70,11 @@ assert(code.match(/==/g) && !code.match(/===/g));
 ```js
 // Setup
 function testEqual(val) {
-  if (val) { // Change this line
-    return "Equal";
+  if (val) {
+    // Change this line
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 
 testEqual(10);
@@ -84,8 +85,8 @@ testEqual(10);
 ```js
 function testEqual(val) {
   if (val == 12) {
-    return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 ```

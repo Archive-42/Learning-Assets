@@ -27,13 +27,10 @@ assert(
 
 ```html
 <!DOCTYPE html>
-<html>    
-  <head>
-    
-  </head>
+<html>
+  <head> </head>
 
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -41,13 +38,12 @@ assert(
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style></style>
   </head>
 
-  <body>
-  </body>
+  <body></body>
 </html>
 ```

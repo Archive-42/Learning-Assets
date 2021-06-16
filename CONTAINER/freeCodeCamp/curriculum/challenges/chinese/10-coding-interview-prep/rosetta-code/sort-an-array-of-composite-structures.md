@@ -100,17 +100,15 @@ assert.deepEqual(
 ## --seed-contents--
 
 ```js
-function sortByKey(arr) {
-
-}
+function sortByKey(arr) {}
 ```
 
 # --solutions--
 
 ```js
-function sortByKey (arr) {
-  return arr.sort(function(a, b) {
-    return a.key - b.key
+function sortByKey(arr) {
+  return arr.sort(function (a, b) {
+    return a.key - b.key;
   });
 }
 ```

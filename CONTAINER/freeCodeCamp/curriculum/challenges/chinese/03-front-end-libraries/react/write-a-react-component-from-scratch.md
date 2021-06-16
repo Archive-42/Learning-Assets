@@ -21,7 +21,7 @@ dashedName: write-a-react-component-from-scratch
 应该有一个名为 `MyComponent` 的 React 组件。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     __helpers
       .removeWhiteSpace(getUserInput('index'))
@@ -78,7 +78,7 @@ class MyComponent extends React.Component {
       </div>
     );
   }
-};
+}
 
 ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));
 ```

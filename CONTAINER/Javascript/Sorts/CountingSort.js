@@ -8,7 +8,7 @@
  * Animated Visual: https://www.cs.usfca.edu/~galles/visualization/CountingSort.html
  */
 
-function countingSort (arr, min, max) {
+function countingSort(arr, min, max) {
   let i
   let z = 0
   const count = []
@@ -31,8 +31,8 @@ function countingSort (arr, min, max) {
 }
 
 /**
-* Implementation of Counting Sort
-*/
+ * Implementation of Counting Sort
+ */
 const array = [3, 0, 2, 5, 4, 1]
 // Before Sort
 console.log('\n- Before Sort | Implementation of Counting Sort -')

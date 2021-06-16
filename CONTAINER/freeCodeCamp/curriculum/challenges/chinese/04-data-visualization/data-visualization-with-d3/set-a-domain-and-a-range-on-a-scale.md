@@ -19,11 +19,11 @@ dashedName: set-a-domain-and-a-range-on-a-scale
 ```js
 scale.domain([50, 480]);
 scale.range([10, 500]);
-scale(50)
-scale(480)
-scale(325)
-scale(750)
-d3.scaleLinear()
+scale(50);
+scale(480);
+scale(325);
+scale(750);
+d3.scaleLinear();
 ```
 
 按顺序，将在控制台中显示以下值：`10`、`500`、`323.37` 和 `807.67`。
@@ -78,13 +78,9 @@ assert($('h2').text() == '-102');
     // Add your code below this line
     const scale = d3.scaleLinear();
 
-
-
     // Add your code above this line
     const output = scale(50);
-    d3.select("body")
-      .append("h2")
-      .text(output);
+    d3.select('body').append('h2').text(output);
   </script>
 </body>
 ```
@@ -95,12 +91,10 @@ assert($('h2').text() == '-102');
 <body>
   <script>
     const scale = d3.scaleLinear();
-    scale.domain([250, 500])
-    scale.range([10, 150])
+    scale.domain([250, 500]);
+    scale.range([10, 150]);
     const output = scale(50);
-    d3.select("body")
-      .append("h2")
-      .text(output);
+    d3.select('body').append('h2').text(output);
   </script>
 </body>
 ```

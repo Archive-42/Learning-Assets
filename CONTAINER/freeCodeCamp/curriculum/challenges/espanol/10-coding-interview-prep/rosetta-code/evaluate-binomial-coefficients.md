@@ -57,9 +57,7 @@ assert.equal(binom(12, 8), 495);
 ## --seed-contents--
 
 ```js
-function binom(n, k) {
-
-}
+function binom(n, k) {}
 ```
 
 # --solutions--

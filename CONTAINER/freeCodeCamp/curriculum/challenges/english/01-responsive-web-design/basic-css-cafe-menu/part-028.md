@@ -31,9 +31,9 @@ Test 1
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
---fcc-editable-region--
+    --fcc-editable-region--
     <div>
---fcc-editable-region--
+      --fcc-editable-region--
       <header>
         <h1>CAMPER CAFE</h1>
         <p>Est. 2020</p>
@@ -45,7 +45,8 @@ Test 1
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -55,7 +56,9 @@ body {
   */
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 
@@ -66,4 +69,3 @@ h1, h2, p {
   margin-right: auto;
 }
 ```
-

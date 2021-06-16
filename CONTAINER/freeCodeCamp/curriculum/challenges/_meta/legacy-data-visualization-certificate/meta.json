@@ -9,10 +9,7 @@
   "superBlock": "certificates",
   "superOrder": 12,
   "challengeOrder": [
-    [
-      "561add10cb82ac39a17513bc",
-      "Legacy Data Visualization Certificate"
-    ]
+    ["561add10cb82ac39a17513bc", "Legacy Data Visualization Certificate"]
   ],
   "isPrivate": true,
   "fileName": "12-certificates/legacy-data-visualization-certificate.json"

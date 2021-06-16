@@ -47,7 +47,6 @@ const arr2 = [1, 2, 4, 4, 1];
 
 ```js
 function mode(arr) {
-
   return true;
 }
 ```
@@ -68,8 +67,7 @@ function mode(arr) {
 
     if (counter[el] === max) {
       result.push(el);
-    }
-    else if (counter[el] > max) {
+    } else if (counter[el] > max) {
       max = counter[el];
       result = [el];
     }

@@ -14,7 +14,7 @@ Las variables del siguiente ejemplo son diferentes:
 
 ```js
 function myFunction() {
-  return "You rock!";
+  return 'You rock!';
 }
 let varOne = myFunction;
 let varTwo = myFunction();
@@ -59,9 +59,9 @@ console.log(result);
 
 ```js
 function getNine() {
- let x = 6;
- let y = 3;
- return x + y;
+  let x = 6;
+  let y = 3;
+  return x + y;
 }
 
 let result = getNine();

@@ -17,25 +17,25 @@ Bird.prototype.numLegs = 2;
 This becomes tedious after more than a few properties.
 
 ```js
-Bird.prototype.eat = function() {
-  console.log("nom nom nom");
-}
+Bird.prototype.eat = function () {
+  console.log('nom nom nom');
+};
 
-Bird.prototype.describe = function() {
-  console.log("My name is " + this.name);
-}
+Bird.prototype.describe = function () {
+  console.log('My name is ' + this.name);
+};
 ```
 
 A more efficient way is to set the `prototype` to a new object that already contains the properties. This way, the properties are added all at once:
 
 ```js
 Bird.prototype = {
-  numLegs: 2, 
-  eat: function() {
-    console.log("nom nom nom");
+  numLegs: 2,
+  eat: function () {
+    console.log('nom nom nom');
   },
-  describe: function() {
-    console.log("My name is " + this.name);
+  describe: function () {
+    console.log('My name is ' + this.name);
   }
 };
 ```
@@ -81,7 +81,6 @@ function Dog(name) {
 
 Dog.prototype = {
   // Only change code below this line
-
 };
 ```
 
@@ -92,11 +91,11 @@ function Dog(name) {
   this.name = name;
 }
 Dog.prototype = {
-numLegs: 4,
-  eat () {
+  numLegs: 4,
+  eat() {
     console.log('nom nom nom');
   },
-  describe () {
+  describe() {
     console.log('My name is ' + this.name);
   }
 };

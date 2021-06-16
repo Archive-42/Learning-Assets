@@ -82,14 +82,14 @@ assert(
 
 ```jsx
 var PropTypes = {
-   string: { isRequired: true }
+  string: { isRequired: true }
 };
 ```
 
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<CampSite />, document.getElementById('root'))
+ReactDOM.render(<CampSite />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -102,11 +102,11 @@ class CampSite extends React.Component {
   render() {
     return (
       <div>
-        <Camper/>
+        <Camper />
       </div>
     );
   }
-};
+}
 // Change code below this line
 ```
 
@@ -120,19 +120,19 @@ class CampSite extends React.Component {
   render() {
     return (
       <div>
-        <Camper/>
+        <Camper />
       </div>
     );
   }
-};
+}
 // Change code below this line
 
-const Camper = (props) => {
-   return (
-     <div>
-       <p>{props.name}</p>
-     </div>
-   );
+const Camper = props => {
+  return (
+    <div>
+      <p>{props.name}</p>
+    </div>
+  );
 };
 
 Camper.propTypes = {

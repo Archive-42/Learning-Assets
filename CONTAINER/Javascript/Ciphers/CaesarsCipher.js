@@ -11,7 +11,7 @@
  * @param {String} str - string to be decrypted
  * @return {String} decrypted string
  */
-function rot13 (str) {
+function rot13(str) {
   const response = []
   const strLength = str.length
 

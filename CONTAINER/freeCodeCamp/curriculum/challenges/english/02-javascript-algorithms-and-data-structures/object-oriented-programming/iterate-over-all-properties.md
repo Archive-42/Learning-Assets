@@ -12,12 +12,12 @@ You have now seen two kinds of properties: <dfn>own properties</dfn> and `protot
 
 ```js
 function Bird(name) {
-  this.name = name;  //own property
+  this.name = name; //own property
 }
 
 Bird.prototype.numLegs = 2; // prototype property
 
-let duck = new Bird("Donald");
+let duck = new Bird('Donald');
 ```
 
 Here is how you add `duck`'s own properties to the array `ownProps` and `prototype` properties to the array `prototypeProps`:
@@ -27,7 +27,7 @@ let ownProps = [];
 let prototypeProps = [];
 
 for (let property in duck) {
-  if(duck.hasOwnProperty(property)) {
+  if (duck.hasOwnProperty(property)) {
     ownProps.push(property);
   } else {
     prototypeProps.push(property);
@@ -75,7 +75,7 @@ function Dog(name) {
 
 Dog.prototype.numLegs = 4;
 
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 
 let ownProps = [];
 let prototypeProps = [];
@@ -92,7 +92,7 @@ function Dog(name) {
 
 Dog.prototype.numLegs = 4;
 
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 
 let ownProps = [];
 let prototypeProps = [];

@@ -37,14 +37,13 @@ assert($('#right').css('float') == 'right');
 <head>
   <style>
     #left {
-
       width: 50%;
     }
     #right {
-
       width: 40%;
     }
-    aside, section {
+    aside,
+    section {
       padding: 2px;
       background-color: #ccc;
     }
@@ -78,7 +77,8 @@ assert($('#right').css('float') == 'right');
       float: right;
       width: 40%;
     }
-    aside, section {
+    aside,
+    section {
       padding: 2px;
       background-color: #ccc;
     }

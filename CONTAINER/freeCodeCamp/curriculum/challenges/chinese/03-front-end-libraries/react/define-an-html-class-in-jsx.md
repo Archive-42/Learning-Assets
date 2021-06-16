@@ -39,7 +39,7 @@ assert.strictEqual(JSX.props.className, 'myDiv');
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(JSX, document.getElementById('root'))
+ReactDOM.render(JSX, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -56,7 +56,8 @@ const JSX = (
 
 ```jsx
 const JSX = (
-<div className = 'myDiv'>
-  <h1>Add a class to this div</h1>
-</div>);
+  <div className='myDiv'>
+    <h1>Add a class to this div</h1>
+  </div>
+);
 ```

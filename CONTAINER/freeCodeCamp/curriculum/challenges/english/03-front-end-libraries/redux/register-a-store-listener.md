@@ -32,13 +32,15 @@ assert(
 There should be a listener function subscribed to the store using `store.subscribe`.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/store\s*\.\s*subscribe\(/gm));
+getUserInput =>
+  assert(getUserInput('index').match(/store\s*\.\s*subscribe\(/gm));
 ```
 
 The `store.subscribe` should receive a function.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/(\s*function\s*)|(\s*\(\s*\)\s*=>)/gm)) 
+getUserInput =>
+  assert(getUserInput('index').match(/(\s*function\s*)|(\s*\(\s*\)\s*=>)/gm));
 ```
 
 The callback to `store.subscribe` should also increment the global `count` variable as the store is updated.
@@ -61,7 +63,7 @@ count = 0;
 const ADD = 'ADD';
 
 const reducer = (state = 0, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD:
       return state + 1;
     default:
@@ -78,11 +80,11 @@ let count = 0;
 
 // Change code above this line
 
-store.dispatch({type: ADD});
+store.dispatch({ type: ADD });
 console.log(count);
-store.dispatch({type: ADD});
+store.dispatch({ type: ADD });
 console.log(count);
-store.dispatch({type: ADD});
+store.dispatch({ type: ADD });
 console.log(count);
 ```
 
@@ -92,7 +94,7 @@ console.log(count);
 const ADD = 'ADD';
 
 const reducer = (state = 0, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD:
       return state + 1;
     default:
@@ -101,18 +103,16 @@ const reducer = (state = 0, action) => {
 };
 
 const store = Redux.createStore(reducer);
- let count = 0;
+let count = 0;
 // Change code below this line
 
-store.subscribe( () =>
- {
- count++;
- }
-);
+store.subscribe(() => {
+  count++;
+});
 
 // Change code above this line
 
-store.dispatch({type: ADD});
-store.dispatch({type: ADD});
-store.dispatch({type: ADD});
+store.dispatch({ type: ADD });
+store.dispatch({ type: ADD });
+store.dispatch({ type: ADD });
 ```

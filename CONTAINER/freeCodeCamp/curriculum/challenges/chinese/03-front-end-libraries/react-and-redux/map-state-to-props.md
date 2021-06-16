@@ -61,9 +61,9 @@ const state = [];
 
 // Change code below this line
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     messages: state
-  }
+  };
 };
 ```

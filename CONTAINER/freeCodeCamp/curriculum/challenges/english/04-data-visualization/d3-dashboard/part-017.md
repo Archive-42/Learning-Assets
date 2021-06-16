@@ -10,7 +10,7 @@ dashedName: part-17
 When you added the D3 library earlier, it put an object named `d3` in your project with a bunch of functions. One of them is `select`; you can use dot notation to access this and the other functions from the object. Create a new variable named `lineGraph` and use `d3.select` to select the `.dashboard` element. Here's an example of something similar:
 
 ```js
-const variableName = d3.select('.className')
+const variableName = d3.select('.className');
 ```
 
 # --hints--
@@ -58,16 +58,16 @@ assert(lineGraph._groups[0][0] === $('.dashboard')[0]);
 
 ```html
 <script>
-  const data = [ 
-    { year: 2012, followers: { twitter: 2594, tumblr:  401, instagram:   83 }},
-    { year: 2013, followers: { twitter: 3049, tumblr:  440, instagram:  192 }},
-    { year: 2014, followers: { twitter: 3511, tumblr:  415, instagram:  511 }},
-    { year: 2015, followers: { twitter: 3619, tumblr:  492, instagram: 1014 }},
-    { year: 2016, followers: { twitter: 4046, tumblr:  543, instagram: 2066 }},
-    { year: 2017, followers: { twitter: 3991, tumblr:  701, instagram: 3032 }},
-    { year: 2018, followers: { twitter: 3512, tumblr: 1522, instagram: 4512 }},
-    { year: 2019, followers: { twitter: 3274, tumblr: 1989, instagram: 4715 }},
-    { year: 2020, followers: { twitter: 2845, tumblr: 2040, instagram: 4801 }}
+  const data = [
+    { year: 2012, followers: { twitter: 2594, tumblr: 401, instagram: 83 } },
+    { year: 2013, followers: { twitter: 3049, tumblr: 440, instagram: 192 } },
+    { year: 2014, followers: { twitter: 3511, tumblr: 415, instagram: 511 } },
+    { year: 2015, followers: { twitter: 3619, tumblr: 492, instagram: 1014 } },
+    { year: 2016, followers: { twitter: 4046, tumblr: 543, instagram: 2066 } },
+    { year: 2017, followers: { twitter: 3991, tumblr: 701, instagram: 3032 } },
+    { year: 2018, followers: { twitter: 3512, tumblr: 1522, instagram: 4512 } },
+    { year: 2019, followers: { twitter: 3274, tumblr: 1989, instagram: 4715 } },
+    { year: 2020, followers: { twitter: 2845, tumblr: 2040, instagram: 4801 } }
   ];
 </script>
 <script>
@@ -77,8 +77,6 @@ assert(lineGraph._groups[0][0] === $('.dashboard')[0]);
     twitterColor = '#7cd9d1',
     tumblrColor = '#f6dd71',
     instagramColor = '#fd9b98';
-
-
 </script>
 ```
 
@@ -86,16 +84,16 @@ assert(lineGraph._groups[0][0] === $('.dashboard')[0]);
 
 ```html
 <script>
-  const data = [ 
-    { year: 2012, followers: { twitter: 2594, tumblr:  401, instagram:   83 }},
-    { year: 2013, followers: { twitter: 3049, tumblr:  440, instagram:  192 }},
-    { year: 2014, followers: { twitter: 3511, tumblr:  415, instagram:  511 }},
-    { year: 2015, followers: { twitter: 3619, tumblr:  492, instagram: 1014 }},
-    { year: 2016, followers: { twitter: 4046, tumblr:  543, instagram: 2066 }},
-    { year: 2017, followers: { twitter: 3991, tumblr:  701, instagram: 3032 }},
-    { year: 2018, followers: { twitter: 3512, tumblr: 1522, instagram: 4512 }},
-    { year: 2019, followers: { twitter: 3274, tumblr: 1989, instagram: 4715 }},
-    { year: 2020, followers: { twitter: 2845, tumblr: 2040, instagram: 4801 }}
+  const data = [
+    { year: 2012, followers: { twitter: 2594, tumblr: 401, instagram: 83 } },
+    { year: 2013, followers: { twitter: 3049, tumblr: 440, instagram: 192 } },
+    { year: 2014, followers: { twitter: 3511, tumblr: 415, instagram: 511 } },
+    { year: 2015, followers: { twitter: 3619, tumblr: 492, instagram: 1014 } },
+    { year: 2016, followers: { twitter: 4046, tumblr: 543, instagram: 2066 } },
+    { year: 2017, followers: { twitter: 3991, tumblr: 701, instagram: 3032 } },
+    { year: 2018, followers: { twitter: 3512, tumblr: 1522, instagram: 4512 } },
+    { year: 2019, followers: { twitter: 3274, tumblr: 1989, instagram: 4715 } },
+    { year: 2020, followers: { twitter: 2845, tumblr: 2040, instagram: 4801 } }
   ];
 </script>
 <script>
@@ -106,8 +104,6 @@ assert(lineGraph._groups[0][0] === $('.dashboard')[0]);
     tumblrColor = '#f6dd71',
     instagramColor = '#fd9b98';
 
-  const lineGraph = d3.select('.dashboard')
-
-
+  const lineGraph = d3.select('.dashboard');
 </script>
 ```

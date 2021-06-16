@@ -16,7 +16,7 @@ Remember that computers start counting at `0`, so the first character is actuall
 Example:
 
 ```js
-var firstName = "Ada";
+var firstName = 'Ada';
 var secondLetterOfFirstName = firstName[1];
 ```
 
@@ -47,14 +47,16 @@ assert(code.match(/thirdLetterOfLastName\s*?=\s*?lastName\[.*?\]/));
 ## --after-user-code--
 
 ```js
-(function(v){return v;})(thirdLetterOfLastName);
+(function (v) {
+  return v;
+})(thirdLetterOfLastName);
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 
 // Only change code below this line
 var thirdLetterOfLastName = lastName; // Change this line
@@ -63,6 +65,6 @@ var thirdLetterOfLastName = lastName; // Change this line
 # --solutions--
 
 ```js
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 var thirdLetterOfLastName = lastName[2];
 ```

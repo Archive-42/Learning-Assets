@@ -1,16 +1,16 @@
 exports.traversal = function (element, className) {
-  var found  = [];
-  var search = ' ' + className + ' ';
+  var found = [];
+  var search = " " + className + " ";
 
-  (function traverse (node) {
+  (function traverse(node) {
     // Loop through all the child nodes
     for (var i = 0; i < node.childNodes.length; i++) {
-      var currentNode  = node.childNodes[i];
+      var currentNode = node.childNodes[i];
       var currentClass = currentNode.className;
 
       // Check if the class name exists within the current nodes class
       // I believe I learnt of this technique from jQuery source code.
-      if (currentClass && ~(' ' + currentClass + ' ').indexOf(search)) {
+      if (currentClass && ~(" " + currentClass + " ").indexOf(search)) {
         found.push(currentNode);
       }
 
@@ -25,9 +25,9 @@ exports.traversal = function (element, className) {
 exports.regexp = function (element, className) {
   // This function takes an easier approach, using a regular expression and
   // getting all elements straight up using the asterisk selector.
-  var found    = [];
-  var regex    = new RegExp('(^| )' + className + '($| )');
-  var elements = element.getElementsByTagName('*');
+  var found = [];
+  var regex = new RegExp("(^| )" + className + "($| )");
+  var elements = element.getElementsByTagName("*");
 
   // Loop through all the elements checking the class names against the
   // regular expression - when it suceeds just push it into the output array.

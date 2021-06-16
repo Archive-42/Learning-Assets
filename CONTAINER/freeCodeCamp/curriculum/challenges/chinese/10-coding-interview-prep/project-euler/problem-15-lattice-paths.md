@@ -46,7 +46,6 @@ assert.strictEqual(latticePaths(20), 137846528820);
 
 ```js
 function latticePaths(gridSize) {
-
   return true;
 }
 
@@ -60,7 +59,7 @@ function latticePaths(gridSize) {
   let paths = 1;
 
   for (let i = 0; i < gridSize; i++) {
-    paths *= (2 * gridSize) - i;
+    paths *= 2 * gridSize - i;
     paths /= i + 1;
   }
   return paths;

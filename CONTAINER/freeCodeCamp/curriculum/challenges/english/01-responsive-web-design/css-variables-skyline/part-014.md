@@ -24,7 +24,7 @@ assert(/--building-color1\s*:\s*#999\s*(;|\s*})/g.test(bb1style));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -56,12 +56,12 @@ assert(/--building-color1\s*:\s*#999\s*(;|\s*})/g.test(bb1style));
         width: 70%;
         height: 10%;
       }
-  
+
       .bb1b {
         width: 80%;
         height: 10%;
       }
-  
+
       .bb1c {
         width: 90%;
         height: 10%;
@@ -91,7 +91,7 @@ assert(/--building-color1\s*:\s*#999\s*(;|\s*})/g.test(bb1style));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -124,12 +124,12 @@ assert(/--building-color1\s*:\s*#999\s*(;|\s*})/g.test(bb1style));
         width: 70%;
         height: 10%;
       }
-  
+
       .bb1b {
         width: 80%;
         height: 10%;
       }
-  
+
       .bb1c {
         width: 90%;
         height: 10%;

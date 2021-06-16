@@ -14,7 +14,7 @@ dashedName: escaping-literal-quotes-in-strings
 在 JavaScript 中，可以通过在引号前面使用<dfn>反斜杠</dfn>（`\`）来<dfn>转义</dfn>引号。
 
 ```js
-var sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+var sampleStr = 'Alan said, "Peter is learning JavaScript".';
 ```
 
 有了转义符号，JavaScript 就知道这个单引号或双引号并不是字符串的结尾，而是字符串内的字符。 所以，上面的字符串打印到控制台的结果为：
@@ -42,7 +42,9 @@ assert(code.match(/\\"/g).length === 4 && code.match(/[^\\]"/g).length === 2);
 变量 myStr 应该包含字符串 `I am a "double quoted" string inside "double quotes".`
 
 ```js
-assert(/I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(myStr));
+assert(
+  /I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(myStr)
+);
 ```
 
 # --seed--
@@ -50,11 +52,11 @@ assert(/I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(mySt
 ## --after-user-code--
 
 ```js
-(function(){
-  if(typeof myStr === 'string') {
-    console.log("myStr = \"" + myStr + "\"");
+(function () {
+  if (typeof myStr === 'string') {
+    console.log('myStr = "' + myStr + '"');
   } else {
-    console.log("myStr is undefined");
+    console.log('myStr is undefined');
   }
 })();
 ```
@@ -62,11 +64,11 @@ assert(/I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(mySt
 ## --seed-contents--
 
 ```js
-var myStr = ""; // Change this line
+var myStr = ''; // Change this line
 ```
 
 # --solutions--
 
 ```js
-var myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+var myStr = 'I am a "double quoted" string inside "double quotes".';
 ```

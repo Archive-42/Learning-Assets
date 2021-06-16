@@ -41,7 +41,6 @@ assert.strictEqual(countingSummations(), 190569291);
 
 ```js
 function countingSummations() {
-
   return true;
 }
 

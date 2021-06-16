@@ -14,11 +14,11 @@ El operador menor que (`<`) compara los valores de dos números. Si el número a
 **Ejemplos**
 
 ```js
-2   < 5
-'3' < 7
-5   < 5
-3   < 2
-'8' < 4
+2 < 5;
+'3' < 7;
+5 < 5;
+3 < 2;
+'8' < 4;
 ```
 
 En orden, estas expresiones se evaluarían como `true`, `true`, `false`, `false` y `false`.
@@ -77,15 +77,17 @@ assert(code.match(/val\s*<\s*('|")*\d+('|")*/g).length > 1);
 
 ```js
 function testLessThan(val) {
-  if (val) {  // Change this line
-    return "Under 25";
+  if (val) {
+    // Change this line
+    return 'Under 25';
   }
 
-  if (val) {  // Change this line
-    return "Under 55";
+  if (val) {
+    // Change this line
+    return 'Under 55';
   }
 
-  return "55 or Over";
+  return '55 or Over';
 }
 
 testLessThan(10);
@@ -95,14 +97,16 @@ testLessThan(10);
 
 ```js
 function testLessThan(val) {
-  if (val < 25) {  // Change this line
-    return "Under 25";
+  if (val < 25) {
+    // Change this line
+    return 'Under 25';
   }
 
-  if (val < 55) {  // Change this line
-    return "Under 55";
+  if (val < 55) {
+    // Change this line
+    return 'Under 55';
   }
 
-  return "55 or Over";
+  return '55 or Over';
 }
 ```

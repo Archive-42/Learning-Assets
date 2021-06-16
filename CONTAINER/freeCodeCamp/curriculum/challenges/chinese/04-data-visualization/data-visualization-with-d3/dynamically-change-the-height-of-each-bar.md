@@ -11,9 +11,7 @@ dashedName: dynamically-change-the-height-of-each-bar
 和动态设置 `x` 值一样，也可以把每个条形的高度设置成数组中数据点的值。
 
 ```js
-selection.attr("property", (d, i) => {
-
-})
+selection.attr('property', (d, i) => {});
 ```
 
 `d` 是数据点值，`i` 是数组中数据点的索引。
@@ -92,25 +90,24 @@ assert($('rect').eq(8).attr('height') == '27');
     const w = 500;
     const h = 100;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("rect")
-       .data(dataset)
-       .enter()
-       .append("rect")
-       .attr("x", (d, i) => i * 30)
-       .attr("y", 0)
-       .attr("width", 25)
-       .attr("height", (d, i) => {
-         // Add your code below this line
-
-
-
-         // Add your code above this line
-       });
+    svg
+      .selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('x', (d, i) => i * 30)
+      .attr('y', 0)
+      .attr('width', 25)
+      .attr('height', (d, i) => {
+        // Add your code below this line
+        // Add your code above this line
+      });
   </script>
 </body>
 ```
@@ -125,21 +122,23 @@ assert($('rect').eq(8).attr('height') == '27');
     const w = 500;
     const h = 100;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("rect")
-       .data(dataset)
-       .enter()
-       .append("rect")
-       .attr("x", (d, i) => i * 30)
-       .attr("y", 0)
-       .attr("width", 25)
-       .attr("height", (d, i) => {
-         return d * 3
-       });
+    svg
+      .selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('x', (d, i) => i * 30)
+      .attr('y', 0)
+      .attr('width', 25)
+      .attr('height', (d, i) => {
+        return d * 3;
+      });
   </script>
 </body>
 ```

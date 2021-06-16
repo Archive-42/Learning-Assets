@@ -2,18 +2,24 @@ body {
   /* Page grid setup */
   display: grid;
   grid:
-      [header-start] "header header" max-content
-      [content-start] "content side" max-content
-      [footer-start] "footer footer" max-content
-      / [main-start] 70% [side-start] 25%;
+    [header-start] "header header" max-content
+    [content-start] "content side" max-content
+    [footer-start] "footer footer" max-content
+    / [main-start] 70% [side-start] 25%;
   column-gap: 5%;
   row-gap: 8rem;
 }
 
 /* Grid cell containers */
-.l-header { grid-area: header; }
-main { grid-area: content; }
-.l-sidebar { grid-area: side; }
+.l-header {
+  grid-area: header;
+}
+main {
+  grid-area: content;
+}
+.l-sidebar {
+  grid-area: side;
+}
 
 /* Chapter title */
 .l-chapter {
@@ -21,7 +27,7 @@ main { grid-area: content; }
   grid:
     [chap-start] "title chap" max-content
     [num-start] "title num" 5rem
-    /[title-start] 70% [chap-num-start] 30%;
+    / [title-start] 70% [chap-num-start] 30%;
   width: auto;
   margin: 0;
 }

@@ -71,7 +71,7 @@ assert('2001: A Space Odyssey'.match(numRegex).length == 4);
 ## --seed-contents--
 
 ```js
-let movieName = "2001: A Space Odyssey";
+let movieName = '2001: A Space Odyssey';
 let numRegex = /change/; // Change this line
 let result = movieName.match(numRegex).length;
 ```
@@ -79,7 +79,7 @@ let result = movieName.match(numRegex).length;
 # --solutions--
 
 ```js
-let movieName = "2001: A Space Odyssey";
+let movieName = '2001: A Space Odyssey';
 let numRegex = /\d/g; // Change this line
 let result = movieName.match(numRegex).length;
 ```

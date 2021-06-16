@@ -8,7 +8,7 @@
  * Wikipedia: https://en.wikipedia.org/wiki/Cycle_sort
  */
 
-function cycleSort (list) {
+function cycleSort(list) {
   let writes = 0
   for (let cycleStart = 0; cycleStart < list.length; cycleStart++) {
     let value = list[cycleStart]
@@ -55,8 +55,8 @@ function cycleSort (list) {
 }
 
 /**
-* Implementation of Cycle Sort
-*/
+ * Implementation of Cycle Sort
+ */
 const array = [5, 6, 7, 8, 1, 2, 12, 14]
 // Before Sort
 console.log('\n- Before Sort | Implementation of Cycle Sort -')

@@ -8,7 +8,6 @@ These exercises have been used extensively in my web development and distributed
 
 The source of this book is available on github (https://github.com/joaoventura/full-speed-python). I welcome any pull requests to correct misspellings, suggest new exercises or to provide clarification of the current content.
 
-
 ## Building
 
 Run `make pdf` or `make epub` to build the books.

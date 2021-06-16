@@ -19,12 +19,12 @@ dashedName: test-if-a-value-is-an-array
 不应有未通过的测试
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -33,16 +33,16 @@ dashedName: test-if-a-value-is-an-array
 请选择正确的断言——`isArray` 或 `isNotArray`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'isArray',
         'String.prototype.split() returns an Array'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,16 +51,16 @@ dashedName: test-if-a-value-is-an-array
 请选择正确的断言——`isArray` 或 `isNotArray`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'isNotArray',
         'Array.prototype.indexOf() returns a number'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

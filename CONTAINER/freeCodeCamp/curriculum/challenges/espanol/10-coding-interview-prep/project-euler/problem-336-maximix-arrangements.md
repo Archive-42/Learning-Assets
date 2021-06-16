@@ -36,7 +36,6 @@ assert.strictEqual(euler336(), CAGBIHEFJDK);
 
 ```js
 function euler336() {
-
   return true;
 }
 

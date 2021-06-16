@@ -59,13 +59,12 @@ assert(code.match(/<div class="well" id="left-well">/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
   });
 </script>
 
@@ -100,13 +99,13 @@ assert(code.match(/<div class="well" id="left-well">/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
   });
 </script>
 

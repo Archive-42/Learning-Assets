@@ -19,7 +19,7 @@ dashedName: make-motion-more-natural-using-a-bezier-curve
 cubic-bezier(0.3, 0.4, 0.5, 1.6);
 ```
 
-注意 y2 的值是大于 1 的。 虽然贝塞尔曲线是在 1*1 的坐标系统内，x 值只能在 0 到 1，但是 y 值是可以大于 1 的。 这样才能模拟杂耍球运动。
+注意 y2 的值是大于 1 的。 虽然贝塞尔曲线是在 1\*1 的坐标系统内，x 值只能在 0 到 1，但是 y 值是可以大于 1 的。 这样才能模拟杂耍球运动。
 
 # --instructions--
 

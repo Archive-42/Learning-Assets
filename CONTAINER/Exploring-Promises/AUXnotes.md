@@ -1,4 +1,3 @@
-
 ## FAQ
 
 ### How can I run 100 async/promise-returning functions with only 5 running at once?
@@ -35,14 +34,12 @@ Let's say you want to fetch some data, process it, and return both the data and 
 The common approach would be to nest the promises:
 
 ```js
-const getData = id =>
-	Storage
-		.find(id)
-		.then(data => {
-			return process(data).then(result => {
-				return prepare(data, result);
-			});
-		});
+const getData = (id) =>
+  Storage.find(id).then((data) => {
+    return process(data).then((result) => {
+      return prepare(data, result);
+    });
+  });
 ```
 
 But we can take advantage of `Promise.all`:
@@ -55,12 +52,12 @@ const getData = id =>
 		.then(([data, result]) => prepare(data, result));
 ```
 
-And even simpler with [async functions](https://www.2ality.com/2016/02/async-functions.html): *(Requires Babel or Node.js 8)*
+And even simpler with [async functions](https://www.2ality.com/2016/02/async-functions.html): _(Requires Babel or Node.js 8)_
 
 ```js
-const getData = async id => {
-	const data = await Storage.find(id);
-	return prepare(data, await process(data));
+const getData = async (id) => {
+  const data = await Storage.find(id);
+  return prepare(data, await process(data));
 };
 ```
 
@@ -70,8 +67,8 @@ Bluebird:
 
 ```js
 Promise.resolve([1, 2]).spread((one, two) => {
-	console.log(one, two);
-	//=> 1 2
+  console.log(one, two);
+  //=> 1 2
 });
 ```
 
@@ -79,8 +76,8 @@ Instead, use [destructuring](https://developer.mozilla.org/en/docs/Web/JavaScrip
 
 ```js
 Promise.resolve([1, 2]).then(([one, two]) => {
-	console.log(one, two);
-	//=> 1 2
+  console.log(one, two);
+  //=> 1 2
 });
 ```
 
@@ -90,7 +87,7 @@ Bluebird:
 
 ```js
 Promise.join(p1, p2, p3, (r1, r2, r3) => {
-	// …
+  // …
 });
 ```
 
@@ -109,26 +106,26 @@ Here you would like to only run the `onlyRunConditional` promises if `conditiona
 
 ```js
 alwaysRun1()
-	.then(() => alwaysRun2())
-	.then(conditional => conditional || somehowBreakTheChain())
-	.then(() => onlyRunConditional1())
-	.then(() => onlyRunConditional2())
-	.then(() => onlyRunConditional3())
-	.then(() => onlyRunConditional4())
-	.then(() => alwaysRun3());
+  .then(() => alwaysRun2())
+  .then((conditional) => conditional || somehowBreakTheChain())
+  .then(() => onlyRunConditional1())
+  .then(() => onlyRunConditional2())
+  .then(() => onlyRunConditional3())
+  .then(() => onlyRunConditional4())
+  .then(() => alwaysRun3());
 ```
 
 You could implement the above by [abusing the promise rejection mechanism](https://github.com/sindresorhus/p-break). However, it would be better to branch out the chain instead. Promises can not only be chained, but also nested and unnested.
 
 ```js
 const runConditional = () =>
-	onlyRunConditional1()
-		.then(() => onlyRunConditional2())
-		.then(() => onlyRunConditional3())
-		.then(() => onlyRunConditional4());
+  onlyRunConditional1()
+    .then(() => onlyRunConditional2())
+    .then(() => onlyRunConditional3())
+    .then(() => onlyRunConditional4());
 
 alwaysRun1()
-	.then(() => alwaysRun2())
-	.then(conditional => conditional && runConditional())
-	.then(() => alwaysRun3());
+  .then(() => alwaysRun2())
+  .then((conditional) => conditional && runConditional())
+  .then(() => alwaysRun3());
 ```

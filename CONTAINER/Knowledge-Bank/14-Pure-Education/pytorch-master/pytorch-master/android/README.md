@@ -7,6 +7,7 @@ Demo applications with code walk-through can be find in [this github repo](https
 ## Publishing
 
 ##### Release
+
 Release artifacts are published to jcenter:
 
 ```
@@ -25,6 +26,7 @@ dependencies {
 Nightly(snapshots) builds are published every night from `master` branch to [nexus sonatype snapshots repository](https://oss.sonatype.org/#nexus-search;quick~pytorch_android)
 
 To use them repository must be specified explicitly:
+
 ```
 repositories {
     maven {
@@ -39,6 +41,7 @@ dependencies {
     ...
 }
 ```
+
 The current nightly(snapshots) version is the value of `VERSION_NAME` in `gradle.properties` in current folder, at this moment it is `1.8.0-SNAPSHOT`.
 
 ## Building PyTorch Android from Source
@@ -46,6 +49,7 @@ The current nightly(snapshots) version is the value of `VERSION_NAME` in `gradle
 In some cases you might want to use a local build of pytorch android, for example you may build custom libtorch binary with another set of operators or to make local changes.
 
 For this you can use `./scripts/build_pytorch_android.sh` script.
+
 ```
 git clone https://github.com/pytorch/pytorch.git
 cd pytorch
@@ -72,7 +76,6 @@ They are specified as environment variables:
 
 `GRADLE_HOME` - path to [gradle](https://gradle.org/releases/)
 
-
 After successful build you should see the result as aar file:
 
 ```
@@ -82,6 +85,7 @@ pytorch_android_torchvision/build/outputs/aar/pytorch_android.aar
 ```
 
 It can be used directly in android projects, as a gradle dependency:
+
 ```
 allprojects {
     repositories {
@@ -100,6 +104,7 @@ dependencies {
     implementation 'com.facebook.fbjni:fbjni-java-only:0.0.3'
 }
 ```
+
 We also have to add all transitive dependencies of our aars.
 As `pytorch_android` [depends](https://github.com/pytorch/pytorch/blob/master/android/pytorch_android/build.gradle#L62-L63) on `'com.android.support:appcompat-v7:28.0.0'`, `'com.facebook.soloader:nativeloader:0.8.0'` and 'com.facebook.fbjni:fbjni-java-only:0.0.3', we need to add them.
 (In case of using maven dependencies they are added automatically from `pom.xml`).
@@ -111,6 +116,7 @@ You can check out [test app example](https://github.com/pytorch/pytorch/blob/mas
 In some cases, you may want to use libtorch from your android native build.
 You can do it without building libtorch android, using native libraries from PyTorch android gradle dependency.
 For that, you will need to add the next lines to your gradle build.
+
 ```
 android {
 ...
@@ -165,7 +171,6 @@ The added task will unpack them to gradle build directory.
 
 In your native build you can link to them adding these lines to your CMakeLists.txt:
 
-
 ```
 # Relative path of gradle build directory to CMakeLists.txt
 set(build_DIR ${CMAKE_SOURCE_DIR}/build)
@@ -191,9 +196,11 @@ target_link_libraries(${PROJECT_NAME}
   ${FBJNI_LIBRARY})
 
 ```
+
 If your CMakeLists.txt file is located in the same directory as your build.gradle, `set(build_DIR ${CMAKE_SOURCE_DIR}/build)` should work for you. But if you have another location of it, you may need to change it.
 
 After that, you can use libtorch C++ API from your native code.
+
 ```
 #include <string>
 #include <ATen/NativeFunctions.h>

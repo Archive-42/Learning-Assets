@@ -17,8 +17,11 @@ HTML5 引入了 `figure` 标签以及与之相关的 `figcaption` 标签。 它�
 
 ```html
 <figure>
-  <img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick">
-  <br>
+  <img
+    src="roundhouseDestruction.jpeg"
+    alt="Photo of Camper Cat executing a roundhouse kick"
+  />
+  <br />
   <figcaption>
     Master Camper Cat demonstrates proper form of a roundhouse kick.
   </figcaption>
@@ -88,30 +91,41 @@ assert(
   </header>
   <main>
     <section>
-
       <!-- Only change code below this line -->
       <div>
         <!-- Stacked bar chart will go here -->
-        <br>
-        <p>Breakdown per week of time to spend training in stealth, combat, and weapons.</p>
+        <br />
+        <p>
+          Breakdown per week of time to spend training in stealth, combat, and
+          weapons.
+        </p>
       </div>
       <!-- Only change code above this line -->
-
     </section>
     <section id="stealth">
       <h2>Stealth &amp; Agility Training</h2>
-      <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+      <article>
+        <h3>Climb foliage quickly using a minimum spanning tree approach</h3>
+      </article>
       <article><h3>No training is NP-complete without parkour</h3></article>
     </section>
     <section id="combat">
       <h2>Combat Training</h2>
-      <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
-      <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+      <article>
+        <h3>Dispatch multiple enemies with multithreaded tactics</h3>
+      </article>
+      <article>
+        <h3>Goodbye world: 5 proven ways to knock out an opponent</h3>
+      </article>
     </section>
     <section id="weapons">
       <h2>Weapons Training</h2>
-      <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
-      <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+      <article>
+        <h3>Swords: the best tool to literally divide and conquer</h3>
+      </article>
+      <article>
+        <h3>Breadth-first or depth-first in multi-weapon training?</h3>
+      </article>
     </section>
   </main>
   <footer>&copy; 2018 Camper Cat</footer>
@@ -136,24 +150,37 @@ assert(
     <section>
       <figure>
         <!-- Stacked bar chart will go here -->
-        <br>
-        <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>
+        <br />
+        <figcaption>
+          Breakdown per week of time to spend training in stealth, combat, and
+          weapons.
+        </figcaption>
       </figure>
     </section>
     <section id="stealth">
       <h2>Stealth &amp; Agility Training</h2>
-      <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+      <article>
+        <h3>Climb foliage quickly using a minimum spanning tree approach</h3>
+      </article>
       <article><h3>No training is NP-complete without parkour</h3></article>
     </section>
     <section id="combat">
       <h2>Combat Training</h2>
-      <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
-      <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+      <article>
+        <h3>Dispatch multiple enemies with multithreaded tactics</h3>
+      </article>
+      <article>
+        <h3>Goodbye world: 5 proven ways to knock out an opponent</h3>
+      </article>
     </section>
     <section id="weapons">
       <h2>Weapons Training</h2>
-      <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
-      <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+      <article>
+        <h3>Swords: the best tool to literally divide and conquer</h3>
+      </article>
+      <article>
+        <h3>Breadth-first or depth-first in multi-weapon training?</h3>
+      </article>
     </section>
   </main>
   <footer>&copy; 2018 Camper Cat</footer>

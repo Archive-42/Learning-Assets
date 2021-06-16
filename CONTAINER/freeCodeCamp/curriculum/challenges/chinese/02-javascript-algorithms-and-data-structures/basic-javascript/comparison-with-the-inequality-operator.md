@@ -9,16 +9,16 @@ dashedName: comparison-with-the-inequality-operator
 
 # --description--
 
-不相等运算符（`!=`）与相等运算符是相反的。 这意味着严格不相等并返回 `false` 的地方，用严格相等运算符会返回 `true`，*反之亦然*。 与相等运算符类似，不相等运算符在比较的时候也会转换值的数据类型。
+不相等运算符（`!=`）与相等运算符是相反的。 这意味着严格不相等并返回 `false` 的地方，用严格相等运算符会返回 `true`，_反之亦然_。 与相等运算符类似，不相等运算符在比较的时候也会转换值的数据类型。
 
 **例如**
 
 ```js
-1 !=  2
-1 != "1"
-1 != '1'
-1 != true
-0 != false
+1 != 2;
+1 != '1';
+1 != '1';
+1 != true;
+0 != false;
 ```
 
 按顺序，这些表达式会返回 `true`、`false`、`false`、`false` 和 `false`。
@@ -72,10 +72,11 @@ assert(code.match(/(?!!==)!=/));
 ```js
 // Setup
 function testNotEqual(val) {
-  if (val) { // Change this line
-    return "Not Equal";
+  if (val) {
+    // Change this line
+    return 'Not Equal';
   }
-  return "Equal";
+  return 'Equal';
 }
 
 testNotEqual(10);
@@ -86,8 +87,8 @@ testNotEqual(10);
 ```js
 function testNotEqual(val) {
   if (val != 99) {
-    return "Not Equal";
+    return 'Not Equal';
   }
-  return "Equal";
+  return 'Equal';
 }
 ```

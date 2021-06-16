@@ -1,4 +1,4 @@
-function change (coins, amount) {
+function change(coins, amount) {
   const combinations = new Array(amount + 1).fill(0)
   combinations[0] = 1
 
@@ -12,7 +12,7 @@ function change (coins, amount) {
   return combinations[amount]
 }
 
-function minimumCoins (coins, amount) {
+function minimumCoins(coins, amount) {
   // minimumCoins[i] will store the minimum coins needed for amount i
   const minimumCoins = new Array(amount + 1).fill(0)
 
@@ -26,7 +26,10 @@ function minimumCoins (coins, amount) {
       const coin = coins[j]
       if (coin <= i) {
         const subRes = minimumCoins[i - coin]
-        if (subRes !== Number.MAX_SAFE_INTEGER && subRes + 1 < minimumCoins[i]) {
+        if (
+          subRes !== Number.MAX_SAFE_INTEGER &&
+          subRes + 1 < minimumCoins[i]
+        ) {
           minimumCoins[i] = subRes + 1
         }
       }
@@ -35,11 +38,21 @@ function minimumCoins (coins, amount) {
   return minimumCoins[amount]
 }
 
-function main () {
+function main() {
   const amount = 12
   const coins = [2, 4, 5]
-  console.log('Number of combinations of getting change for ' + amount + ' is: ' + change(coins, amount))
-  console.log('Minimum number of coins required for amount :' + amount + ' is: ' + minimumCoins(coins, amount))
+  console.log(
+    'Number of combinations of getting change for ' +
+      amount +
+      ' is: ' +
+      change(coins, amount)
+  )
+  console.log(
+    'Minimum number of coins required for amount :' +
+      amount +
+      ' is: ' +
+      minimumCoins(coins, amount)
+  )
 }
 
 main()

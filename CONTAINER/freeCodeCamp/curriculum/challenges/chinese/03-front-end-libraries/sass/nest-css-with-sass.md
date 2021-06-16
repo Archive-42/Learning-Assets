@@ -40,7 +40,6 @@ nav {
     }
   }
 }
-
 ```
 
 # --instructions--
@@ -64,9 +63,8 @@ assert(
 ## --seed-contents--
 
 ```html
-<style type='text/scss'>
+<style type="text/scss">
   .blog-post {
-
   }
   h1 {
     text-align: center;
@@ -86,7 +84,7 @@ assert(
 # --solutions--
 
 ```html
-<style type='text/scss'>
+<style type="text/scss">
   .blog-post {
     h1 {
       text-align: center;

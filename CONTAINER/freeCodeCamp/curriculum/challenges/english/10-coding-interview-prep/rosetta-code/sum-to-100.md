@@ -8,7 +8,7 @@ dashedName: sum-to-100
 
 # --description--
 
-Find solutions to the *sum to one hundred* puzzle.
+Find solutions to the _sum to one hundred_ puzzle.
 
 Add (insert) the mathematical operators **+** or **─** (plus or minus) before any of the digits in the decimal numeric string **123456789** such that the resulting mathematical expression adds up to a particular sum (in this iconic case, **100**).
 
@@ -85,28 +85,26 @@ assert.deepEqual(sumTo100(197), [
 ## --seed-contents--
 
 ```js
-function sumTo100(n) {
-
-}
+function sumTo100(n) {}
 ```
 
 # --solutions--
 
 ```js
 function sumTo100(n) {
-  var permutationsWithRepetition = function(n, as) {
+  var permutationsWithRepetition = function (n, as) {
     return as.length > 0
       ? foldl1(curry(cartesianProduct)(as), replicate(n, as))
       : [];
   };
 
-  var cartesianProduct = function(xs, ys) {
+  var cartesianProduct = function (xs, ys) {
     return [].concat.apply(
       [],
-      xs.map(function(x) {
+      xs.map(function (x) {
         return [].concat.apply(
           [],
-          ys.map(function(y) {
+          ys.map(function (y) {
             return [[x].concat(y)];
           })
         );
@@ -114,25 +112,25 @@ function sumTo100(n) {
     );
   };
 
-  var curry = function(f) {
-    return function(a) {
-      return function(b) {
+  var curry = function (f) {
+    return function (a) {
+      return function (b) {
         return f(a, b);
       };
     };
   };
 
-  var flip = function(f) {
-    return function(a, b) {
+  var flip = function (f) {
+    return function (a, b) {
       return f.apply(null, [b, a]);
     };
   };
 
-  var foldl1 = function(f, xs) {
+  var foldl1 = function (f, xs) {
     return xs.length > 0 ? xs.slice(1).reduce(f, xs[0]) : [];
   };
 
-  var replicate = function(n, a) {
+  var replicate = function (n, a) {
     var v = [a],
       o = [];
     if (n < 1) return o;
@@ -144,9 +142,9 @@ function sumTo100(n) {
     return o.concat(v);
   };
 
-  var asSum = function(xs) {
+  var asSum = function (xs) {
     var dct = xs.reduceRight(
-      function(a, sign, i) {
+      function (a, sign, i) {
         var d = i + 1; //  zero-based index to [1-9] positions
         if (sign !== 0) {
           // Sum increased, digits cleared
@@ -171,8 +169,8 @@ function sumTo100(n) {
     );
   };
 
-  var asString = function(xs) {
-    var ns = xs.reduce(function(a, sign, i) {
+  var asString = function (xs) {
+    var ns = xs.reduce(function (a, sign, i) {
       var d = (i + 1).toString();
       return sign === 0 ? a + d : a + (sign > 0 ? '+' : '-') + d;
     }, '');
@@ -181,7 +179,7 @@ function sumTo100(n) {
   };
 
   var universe = permutationsWithRepetition(9, [0, 1, -1])
-    .filter(function(x) {
+    .filter(function (x) {
       return x[0] !== 1 && asSum(x) === n;
     })
     .map(asString);

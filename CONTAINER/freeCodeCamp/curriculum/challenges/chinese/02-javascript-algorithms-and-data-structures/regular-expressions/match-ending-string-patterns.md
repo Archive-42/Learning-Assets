@@ -13,10 +13,10 @@ dashedName: match-ending-string-patterns
 可以使用正则表达式的美元符号 `$` 来搜寻字符串的结尾。
 
 ```js
-let theEnding = "This is a never ending story";
+let theEnding = 'This is a never ending story';
 let storyRegex = /story$/;
 storyRegex.test(theEnding);
-let noEnding = "Sometimes a story will have to end";
+let noEnding = 'Sometimes a story will have to end';
 storyRegex.test(noEnding);
 ```
 
@@ -51,7 +51,7 @@ assert(lastRegex.test('The last car on a train is the caboose'));
 ## --seed-contents--
 
 ```js
-let caboose = "The last car on a train is the caboose";
+let caboose = 'The last car on a train is the caboose';
 let lastRegex = /change/; // Change this line
 let result = lastRegex.test(caboose);
 ```
@@ -59,7 +59,7 @@ let result = lastRegex.test(caboose);
 # --solutions--
 
 ```js
-let caboose = "The last car on a train is the caboose";
+let caboose = 'The last car on a train is the caboose';
 let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose);
 ```

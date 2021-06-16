@@ -1,7 +1,4 @@
-
-
-
- {#main}
+{#main}
 WHAT IS AN ALGORITHM? {#what-is-an-algorithm .titles}
 =====================
 
@@ -17,28 +14,25 @@ might be able to solve.
 An example of a simple algorithm could be one used by a coffee maker, it
 might look something like this:
 
- {.code-div}
-                        
+{.code-div}
+
         if (clock.getTime() == 7am){
             coffeMaker.boilWater();
-            
+
             if(water.isBoiled()){
                 coffeMaker.addCoffee();
                 coffeMaker.pourCoffee();
             }
-            
+
         } else{
             coffeMaker.doNothing();
-        }                   
-                        
-                    
+        }
 
 
- {.division}
 
+{.division}
 
-ALGORITHM EFFICIENCY {#algorithm-efficiency .titles}
-====================
+# ALGORITHM EFFICIENCY {#algorithm-efficiency .titles}
 
 Algorithm efficiency is the study of the amount of resources used by an
 algorithm. The less resources used by the algorithm the more efficient
@@ -56,6 +50,4 @@ needs to solve a problem.
 **Complexity theory:** a study of algorithm performance based on cost
 functions of statement counts.
 
- {.division}
-
-
+{.division}

@@ -8,7 +8,7 @@ dashedName: amicable-pairs
 
 # --description--
 
-Two integers $N$ and $M$ are said to be [amicable pairs](<https://en.wikipedia.org/wiki/Amicable numbers> "wp: Amicable numbers") if $N \\neq M$ and the sum of the [proper divisors](<https://rosettacode.org/wiki/Proper divisors> "Proper divisors") of $N$ ($\\mathrm{sum}(\\mathrm{propDivs}(N))$) $= M$ as well as $\\mathrm{sum}(\\mathrm{propDivs}(M)) = N$.
+Two integers $N$ and $M$ are said to be [amicable pairs](<https://en.wikipedia.org/wiki/Amicable numbers> 'wp: Amicable numbers') if $N \\neq M$ and the sum of the [proper divisors](<https://rosettacode.org/wiki/Proper divisors> 'Proper divisors') of $N$ ($\\mathrm{sum}(\\mathrm{propDivs}(N))$) $= M$ as well as $\\mathrm{sum}(\\mathrm{propDivs}(M)) = N$.
 
 **Example:**
 
@@ -76,7 +76,6 @@ const answer20000 = [
 
 ```js
 function amicablePairsUpTo(maxNum) {
-
   return true;
 }
 ```
@@ -87,15 +86,11 @@ function amicablePairsUpTo(maxNum) {
 // amicablePairsUpTo :: Int -> [(Int, Int)]
 function amicablePairsUpTo(maxNum) {
   return range(1, maxNum)
-    .map(x => properDivisors(x)
-      .reduce((a, b) => a + b, 0))
+    .map(x => properDivisors(x).reduce((a, b) => a + b, 0))
     .reduce((a, m, i, lst) => {
       const n = i + 1;
 
-      return (m > n) && lst[m - 1] === n ?
-        a.concat([
-          [n, m]
-        ]) : a;
+      return m > n && lst[m - 1] === n ? a.concat([[n, m]]) : a;
     }, []);
 }
 
@@ -106,21 +101,26 @@ function properDivisors(n) {
   const rRoot = Math.sqrt(n);
   const intRoot = Math.floor(rRoot);
   const blnPerfectSquare = rRoot === intRoot;
-  const lows = range(1, intRoot)
-  .filter(x => (n % x) === 0);
+  const lows = range(1, intRoot).filter(x => n % x === 0);
 
-  return lows.concat(lows.slice(1)
-    .map(x => n / x)
-    .reverse()
-    .slice(blnPerfectSquare | 0));
+  return lows.concat(
+    lows
+      .slice(1)
+      .map(x => n / x)
+      .reverse()
+      .slice(blnPerfectSquare | 0)
+  );
 }
 
 // Int -> Int -> Maybe Int -> [Int]
 function range(m, n, step) {
   const d = (step || 1) * (n >= m ? 1 : -1);
 
-  return Array.from({
-    length: Math.floor((n - m) / d) + 1
-  }, (_, i) => m + (i * d));
+  return Array.from(
+    {
+      length: Math.floor((n - m) / d) + 1
+    },
+    (_, i) => m + i * d
+  );
 }
 ```

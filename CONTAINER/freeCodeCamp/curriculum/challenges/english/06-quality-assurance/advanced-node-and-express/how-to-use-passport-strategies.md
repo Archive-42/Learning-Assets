@@ -25,9 +25,9 @@ Submit your page when you think you've got it right. If you're running into erro
 All steps should be correctly implemented in the server.js.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /showLogin:( |)true/gi,
@@ -44,7 +44,7 @@ All steps should be correctly implemented in the server.js.
         'You should have a route for login which accepts a POST and passport.authenticates local'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -53,16 +53,16 @@ All steps should be correctly implemented in the server.js.
 A POST request to /login should correctly redirect to /.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/login').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /Looks like this page is being rendered from Pug into HTML!/gi,
         'A login attempt at this point should redirect to the homepage since we do not have any registered users'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

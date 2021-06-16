@@ -13,7 +13,7 @@ Aprendiste a buscar espacios en blanco usando `\s`, con una `s` en minúscula. T
 Busca caracteres que no sean espacios en blanco usando `\S`, la cual es una `s` mayúscula. Este patrón no coincidirá con los caracteres de espacios en blanco, retorno de carro, tabulaciones, alimentación de formulario y saltos de línea. Puedes pensar que es similar a la clase de caracteres `[^ \r\t\f\n\v]`.
 
 ```js
-let whiteSpace = "Whitespace. Whitespace everywhere!"
+let whiteSpace = 'Whitespace. Whitespace everywhere!';
 let nonSpaceRegex = /\S/g;
 whiteSpace.match(nonSpaceRegex).length;
 ```
@@ -64,7 +64,7 @@ assert('MindYourPersonalSpace'.match(countNonWhiteSpace).length == 21);
 ## --seed-contents--
 
 ```js
-let sample = "Whitespace is important in separating words";
+let sample = 'Whitespace is important in separating words';
 let countNonWhiteSpace = /change/; // Change this line
 let result = sample.match(countNonWhiteSpace);
 ```
@@ -72,7 +72,7 @@ let result = sample.match(countNonWhiteSpace);
 # --solutions--
 
 ```js
-let sample = "Whitespace is important in separating words";
+let sample = 'Whitespace is important in separating words';
 let countNonWhiteSpace = /\S/g; // Change this line
 let result = sample.match(countNonWhiteSpace);
 ```

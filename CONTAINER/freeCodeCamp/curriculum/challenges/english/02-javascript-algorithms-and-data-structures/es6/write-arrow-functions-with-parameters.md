@@ -11,7 +11,7 @@ dashedName: write-arrow-functions-with-parameters
 Just like a regular function, you can pass arguments into an arrow function.
 
 ```js
-const doubler = (item) => item * 2;
+const doubler = item => item * 2;
 doubler(4);
 ```
 
@@ -41,13 +41,13 @@ Rewrite the `myConcat` function which appends contents of `arr2` to `arr1` so th
 You should replace the `var` keyword.
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/var/g));
+getUserInput => assert(!getUserInput('index').match(/var/g));
 ```
 
 `myConcat` should be a constant variable (by using `const`).
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/const\s+myConcat/g));
+getUserInput => assert(getUserInput('index').match(/const\s+myConcat/g));
 ```
 
 `myConcat` should be an arrow function with two parameters
@@ -68,7 +68,7 @@ assert.deepEqual(myConcat([1, 2], [3, 4, 5]), [1, 2, 3, 4, 5]);
 The `function` keyword should not be used.
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/function/g));
+getUserInput => assert(!getUserInput('index').match(/function/g));
 ```
 
 # --seed--
@@ -76,7 +76,7 @@ The `function` keyword should not be used.
 ## --seed-contents--
 
 ```js
-var myConcat = function(arr1, arr2) {
+var myConcat = function (arr1, arr2) {
   return arr1.concat(arr2);
 };
 
@@ -86,7 +86,7 @@ console.log(myConcat([1, 2], [3, 4, 5]));
 # --solutions--
 
 ```js
-const myConcat = (arr1, arr2) =>  {
+const myConcat = (arr1, arr2) => {
   return arr1.concat(arr2);
 };
 

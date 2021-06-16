@@ -13,18 +13,15 @@ In some cases, you can destructure the object in a function argument itself.
 Consider the code below:
 
 ```js
-const profileUpdate = (profileData) => {
+const profileUpdate = profileData => {
   const { name, age, nationality, location } = profileData;
-
-}
+};
 ```
 
 This effectively destructures the object sent into the function. This can also be done in-place:
 
 ```js
-const profileUpdate = ({ name, age, nationality, location }) => {
-
-}
+const profileUpdate = ({ name, age, nationality, location }) => {};
 ```
 
 When `profileData` is passed to the above function, the values are destructured from the function parameter for use within the function.
@@ -74,7 +71,7 @@ const stats = {
 };
 
 // Only change code below this line
-const half = (stats) => (stats.max + stats.min) / 2.0; 
+const half = stats => (stats.max + stats.min) / 2.0;
 // Only change code above this line
 ```
 
@@ -90,5 +87,5 @@ const stats = {
   average: 35.85
 };
 
-const half = ( {max, min} ) => (max + min) / 2.0;
+const half = ({ max, min }) => (max + min) / 2.0;
 ```

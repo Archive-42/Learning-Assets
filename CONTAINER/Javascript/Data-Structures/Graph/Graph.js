@@ -1,17 +1,17 @@
 class Graph {
-  constructor () {
+  constructor() {
     this.adjacencyMap = {}
   }
 
-  addVertex (v) {
+  addVertex(v) {
     this.adjacencyMap[v] = []
   }
 
-  containsVertex (vertex) {
-    return typeof (this.adjacencyMap[vertex]) !== 'undefined'
+  containsVertex(vertex) {
+    return typeof this.adjacencyMap[vertex] !== 'undefined'
   }
 
-  addEdge (v, w) {
+  addEdge(v, w) {
     let result = false
     if (this.containsVertex(v) && this.containsVertex(w)) {
       this.adjacencyMap[v].push(w)
@@ -21,12 +21,14 @@ class Graph {
     return result
   }
 
-  printGraph () {
+  printGraph() {
     const keys = Object.keys(this.adjacencyMap)
     for (const i of keys) {
       const values = this.adjacencyMap[i]
       let vertex = ''
-      for (const j of values) { vertex += j + ' ' }
+      for (const j of values) {
+        vertex += j + ' '
+      }
       console.log(i + ' -> ' + vertex)
     }
   }
@@ -36,7 +38,7 @@ class Graph {
    *
    * @param {number} source The source vertex to start BFS.
    */
-  bfs (source) {
+  bfs(source) {
     const queue = []
     const visited = new Set()
     queue.unshift([source, 0]) // level of source is 0
@@ -48,7 +50,8 @@ class Graph {
       queue.shift() // remove the front of the queue
       console.log(`Visited node ${node} at level ${level}.`)
       for (const next of this.adjacencyMap[node]) {
-        if (!visited.has(next)) { // not visited
+        if (!visited.has(next)) {
+          // not visited
           queue.unshift([next, level + 1]) // level 1 more than current
           visited.add(next)
         }

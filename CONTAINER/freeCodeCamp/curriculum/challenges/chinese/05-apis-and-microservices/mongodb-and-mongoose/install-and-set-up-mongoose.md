@@ -33,13 +33,13 @@ mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }
 “mongodb” 应在 package.json 中作为依赖项定义。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/file/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(packJson.dependencies, 'mongodb');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -48,13 +48,13 @@ mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }
 “mongoose” 应在 package.json 中作为依赖项定义。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/file/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(packJson.dependencies, 'mongoose');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -63,12 +63,12 @@ mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }
 应使用 “mongoose” 连接数据库。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/is-mongoose-ok').then(
-    (data) => {
+    data => {
       assert.isTrue(data.isMongooseOk, 'mongoose is not connected');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

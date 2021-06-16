@@ -20,7 +20,7 @@ parseInt(string, radix);
 这是一个示例：
 
 ```js
-var a = parseInt("11", 2);
+var a = parseInt('11', 2);
 ```
 
 变量 radix 表示 `11` 是在二进制系统中。 这个示例将字符串 `11` 转换为整数 `3`。
@@ -66,11 +66,9 @@ assert.isNaN(convertToInteger('JamesBond'));
 ## --seed-contents--
 
 ```js
-function convertToInteger(str) {
+function convertToInteger(str) {}
 
-}
-
-convertToInteger("10011");
+convertToInteger('10011');
 ```
 
 # --solutions--

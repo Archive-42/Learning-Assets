@@ -4,8 +4,7 @@
 
 ```html
 <html>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -19,15 +18,13 @@ body {
 var x = 'y';
 ```
 
-
 # --solutions--
 
 ::id{#html-key}
 
 ```html
 <html>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

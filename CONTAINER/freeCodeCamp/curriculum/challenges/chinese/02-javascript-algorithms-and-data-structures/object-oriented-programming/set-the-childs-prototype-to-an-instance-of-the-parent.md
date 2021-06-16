@@ -19,7 +19,7 @@ Bird.prototype = Object.create(Animal.prototype);
 请记住，`prototype` 类似于创建对象的“配方”。 从某种意义上来说，`Bird` 对象的配方包含了 `Animal` 的所有关键“成分”。
 
 ```js
-let duck = new Bird("Donald");
+let duck = new Bird('Donald');
 duck.eat();
 ```
 
@@ -42,19 +42,18 @@ assert(Animal.prototype.isPrototypeOf(Dog.prototype));
 ## --seed-contents--
 
 ```js
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 
-function Dog() { }
+function Dog() {}
 
 // Only change code below this line
-
 
 let beagle = new Dog();
 ```
@@ -62,16 +61,16 @@ let beagle = new Dog();
 # --solutions--
 
 ```js
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 
-function Dog() { }
+function Dog() {}
 Dog.prototype = Object.create(Animal.prototype);
 
 let beagle = new Dog();

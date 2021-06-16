@@ -11,7 +11,7 @@ dashedName: lock-an-element-to-its-parent-with-absolute-positioning
 
 The next option for the CSS `position` property is `absolute`, which locks the element in place relative to its parent container. Unlike the `relative` position, this removes the element from the normal flow of the document, so surrounding items ignore it. The CSS offset properties (top or bottom and left or right) are used to adjust the position.
 
-One nuance with absolute positioning is that it will be locked relative to its closest *positioned* ancestor. If you forget to add a position rule to the parent item, (this is typically done using `position: relative;`), the browser will keep looking up the chain and ultimately default to the `body` tag.
+One nuance with absolute positioning is that it will be locked relative to its closest _positioned_ ancestor. If you forget to add a position rule to the parent item, (this is typically done using `position: relative;`), the browser will keep looking up the chain and ultimately default to the `body` tag.
 
 # --instructions--
 
@@ -44,9 +44,6 @@ assert($('#searchbar').css('right') == '50px');
 ```html
 <style>
   #searchbar {
-
-
-
   }
   section {
     position: relative;
@@ -57,8 +54,8 @@ assert($('#searchbar').css('right') == '50px');
   <section>
     <form id="searchbar">
       <label for="search">Search:</label>
-      <input type="search" id="search" name="search">
-      <input type="submit" name="submit" value="Go!">
+      <input type="search" id="search" name="search" />
+      <input type="submit" name="submit" value="Go!" />
     </form>
   </section>
 </body>
@@ -82,8 +79,8 @@ assert($('#searchbar').css('right') == '50px');
   <section>
     <form id="searchbar">
       <label for="search">Search:</label>
-      <input type="search" id="search" name="search">
-      <input type="submit" name="submit" value="Go!">
+      <input type="search" id="search" name="search" />
+      <input type="submit" name="submit" value="Go!" />
     </form>
   </section>
 </body>

@@ -56,7 +56,6 @@ assert.strictEqual(smallestMult(20), 232792560);
 
 ```js
 function smallestMult(n) {
-
   return true;
 }
 
@@ -66,16 +65,16 @@ smallestMult(20);
 # --solutions--
 
 ```js
-function smallestMult(n){
+function smallestMult(n) {
   function gcd(a, b) {
-    return b === 0 ? a : gcd(b, a%b); // Euclidean algorithm
+    return b === 0 ? a : gcd(b, a % b); // Euclidean algorithm
   }
 
   function lcm(a, b) {
-    return a * b / gcd(a, b);
+    return (a * b) / gcd(a, b);
   }
   var result = 1;
-  for(var i = 2; i <= n; i++) {
+  for (var i = 2; i <= n; i++) {
     result = lcm(result, i);
   }
   return result;

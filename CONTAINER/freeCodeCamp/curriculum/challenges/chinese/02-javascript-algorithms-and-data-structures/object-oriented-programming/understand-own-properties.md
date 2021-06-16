@@ -12,12 +12,12 @@ dashedName: understand-own-properties
 
 ```js
 function Bird(name) {
-  this.name  = name;
+  this.name = name;
   this.numLegs = 2;
 }
 
-let duck = new Bird("Donald");
-let canary = new Bird("Tweety");
+let duck = new Bird('Donald');
+let canary = new Bird('Tweety');
 ```
 
 `name` 和 `numLegs` 被叫做 <dfn>自身属性</dfn>，因为它们是直接在实例对象上定义的。 这就意味着 `duck` 和 `canary` 这两个对象分别拥有这些属性的独立副本。 事实上，`Bird` 的所有实例都将拥有这些属性的独立副本。 下面的代码将 `duck` 的所有自身属性都存到一个叫作 `ownProps` 的数组里面：
@@ -26,7 +26,7 @@ let canary = new Bird("Tweety");
 let ownProps = [];
 
 for (let property in duck) {
-  if(duck.hasOwnProperty(property)) {
+  if (duck.hasOwnProperty(property)) {
     ownProps.push(property);
   }
 }
@@ -74,7 +74,7 @@ function Bird(name) {
   this.numLegs = 2;
 }
 
-let canary = new Bird("Tweety");
+let canary = new Bird('Tweety');
 let ownProps = [];
 // Only change code below this line
 ```
@@ -87,8 +87,8 @@ function Bird(name) {
   this.numLegs = 2;
 }
 
-let canary = new Bird("Tweety");
-function getOwnProps (obj) {
+let canary = new Bird('Tweety');
+function getOwnProps(obj) {
   const props = [];
 
   for (let prop in obj) {

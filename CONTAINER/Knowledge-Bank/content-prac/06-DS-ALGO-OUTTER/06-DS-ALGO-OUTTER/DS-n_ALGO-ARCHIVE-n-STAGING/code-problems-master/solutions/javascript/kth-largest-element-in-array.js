@@ -1,7 +1,7 @@
 module.exports = function (k, array) {
   // I believe we can store it in a hash to achieve an O(n) complexity
-  var hash  = {},
-      count = 0;
+  var hash = {},
+    count = 0;
 
   // Loop through each of the array items putting the values as keys in the hash
   array.forEach(function (num) {

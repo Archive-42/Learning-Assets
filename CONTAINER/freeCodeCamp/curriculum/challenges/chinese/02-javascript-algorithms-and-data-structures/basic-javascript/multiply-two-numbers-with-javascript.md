@@ -44,7 +44,9 @@ assert(/\*/.test(code));
 ## --after-user-code--
 
 ```js
-(function(z){return 'product = '+z;})(product);
+(function (z) {
+  return 'product = ' + z;
+})(product);
 ```
 
 ## --seed-contents--

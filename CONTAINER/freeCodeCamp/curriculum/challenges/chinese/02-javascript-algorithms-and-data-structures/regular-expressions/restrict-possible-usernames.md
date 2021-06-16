@@ -12,13 +12,13 @@ dashedName: restrict-possible-usernames
 
 需要检索数据库中的所有用户名。 以下是用户在创建用户名时必须遵守的一些简单规则。
 
-1) 用户名只能是数字字母字符。
+1. 用户名只能是数字字母字符。
 
-2) 用户名中的数字必须在最后。 数字可以有零个或多个。 用户名不能以数字开头。
+2. 用户名中的数字必须在最后。 数字可以有零个或多个。 用户名不能以数字开头。
 
-3) 用户名字母可以是小写字母和大写字母。
+3. 用户名字母可以是小写字母和大写字母。
 
-4) 用户名长度必须至少为两个字符。 两位用户名只能使用字母。
+4. 用户名长度必须至少为两个字符。 两位用户名只能使用字母。
 
 # --instructions--
 
@@ -101,7 +101,7 @@ assert(userCheck.test('AB1'));
 你的正则表达式不应匹配字符串 `J%4`
 
 ```js
-assert(!userCheck.test('J%4'))
+assert(!userCheck.test('J%4'));
 ```
 
 # --seed--
@@ -109,7 +109,7 @@ assert(!userCheck.test('J%4'))
 ## --seed-contents--
 
 ```js
-let username = "JackOfAllTrades";
+let username = 'JackOfAllTrades';
 let userCheck = /change/; // Change this line
 let result = userCheck.test(username);
 ```
@@ -117,7 +117,7 @@ let result = userCheck.test(username);
 # --solutions--
 
 ```js
-let username = "JackOfAllTrades";
+let username = 'JackOfAllTrades';
 const userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i;
 let result = userCheck.test(username);
 ```

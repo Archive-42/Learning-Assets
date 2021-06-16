@@ -25,12 +25,12 @@ Hint: in the `'self'` keyword, the single quotes are part of the keyword itself,
 helmet.contentSecurityPolicy() middleware should be mounted correctly
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       assert.include(data.appStack, 'csp');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -39,9 +39,9 @@ helmet.contentSecurityPolicy() middleware should be mounted correctly
 Your csp config is not correct. defaultSrc should be ["'self'"] and scriptSrc should be ["'self'", 'trusted-cdn.com']
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       var cspHeader = Object.keys(data.headers).filter(function (k) {
         return (
           k === 'content-security-policy' ||
@@ -54,7 +54,7 @@ Your csp config is not correct. defaultSrc should be ["'self'"] and scriptSrc sh
         "default-src 'self'; script-src 'self' trusted-cdn.com"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

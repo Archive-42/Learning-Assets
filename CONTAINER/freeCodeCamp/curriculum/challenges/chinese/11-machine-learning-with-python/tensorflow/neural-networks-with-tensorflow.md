@@ -27,4 +27,3 @@ all the neurons in the current layer are connected to every neuron in the previo
 ## --video-solution--
 
 3
-

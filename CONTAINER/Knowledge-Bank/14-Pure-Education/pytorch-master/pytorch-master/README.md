@@ -1,8 +1,9 @@
 ![PyTorch Logo](https://github.com/pytorch/pytorch/blob/master/docs/source/_static/img/pytorch-logo-dark.png)
 
---------------------------------------------------------------------------------
+---
 
 PyTorch is a Python package that provides two high-level features:
+
 - Tensor computation (like NumPy) with strong GPU acceleration
 - Deep neural networks built on a tape-based autograd system
 
@@ -20,30 +21,29 @@ You can reuse your favorite Python packages such as NumPy, SciPy, and Cython to 
 - [Releases and Contributing](#releases-and-contributing)
 - [The Team](#the-team)
 
-| System | 3.6 | 3.7 | 3.8 |
-| :---: | :---: | :---: | :--: |
-| Linux CPU | [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-master/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-master/) | [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-master/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-master/) | <center>—</center> |
-| Linux GPU | [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-master/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-master/) | [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-master/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-master/) | <center>—</center> |
-| Windows CPU / GPU | <center>—</center> | [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-builds/job/pytorch-win-ws2016-cuda9-cudnn7-py3-trigger/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-builds/job/pytorch-win-ws2016-cuda9-cudnn7-py3-trigger/) |  <center>—</center> |
-| Linux (ppc64le) CPU | <center>—</center> | [![Build Status](https://powerci.osuosl.org/job/pytorch-master-nightly-py3-linux-ppc64le/badge/icon)](https://powerci.osuosl.org/job/pytorch-master-nightly-py3-linux-ppc64le/) | <center>—</center> |
-| Linux (ppc64le) GPU | <center>—</center> | [![Build Status](https://powerci.osuosl.org/job/pytorch-master-nightly-py3-linux-ppc64le-gpu/badge/icon)](https://powerci.osuosl.org/job/pytorch-master-nightly-py3-linux-ppc64le-gpu/) | <center>—</center> |
+|       System        |                                                                                                                             3.6                                                                                                                             |                                                                                                                             3.7                                                                                                                             |                                                                                                                             3.8                                                                                                                             |
+| :-----------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|      Linux CPU      |                                                             [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-master/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-master/)                                                             |                                                             [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-master/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-master/)                                                             |                                                                                                                     <center>—</center>                                                                                                                      |
+|      Linux GPU      |                                                             [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-master/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-master/)                                                             |                                                             [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-master/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-master/)                                                             |                                                                                                                     <center>—</center>                                                                                                                      |
+|  Windows CPU / GPU  |                                                                                                                     <center>—</center>                                                                                                                      |             [![Build Status](https://ci.pytorch.org/jenkins/job/pytorch-builds/job/pytorch-win-ws2016-cuda9-cudnn7-py3-trigger/badge/icon)](https://ci.pytorch.org/jenkins/job/pytorch-builds/job/pytorch-win-ws2016-cuda9-cudnn7-py3-trigger/)             |                                                                                                                     <center>—</center>                                                                                                                      |
+| Linux (ppc64le) CPU |                                                                                                                     <center>—</center>                                                                                                                      |                                       [![Build Status](https://powerci.osuosl.org/job/pytorch-master-nightly-py3-linux-ppc64le/badge/icon)](https://powerci.osuosl.org/job/pytorch-master-nightly-py3-linux-ppc64le/)                                       |                                                                                                                     <center>—</center>                                                                                                                      |
+| Linux (ppc64le) GPU |                                                                                                                     <center>—</center>                                                                                                                      |                                   [![Build Status](https://powerci.osuosl.org/job/pytorch-master-nightly-py3-linux-ppc64le-gpu/badge/icon)](https://powerci.osuosl.org/job/pytorch-master-nightly-py3-linux-ppc64le-gpu/)                                   |                                                                                                                     <center>—</center>                                                                                                                      |
 | Linux (aarch64) CPU | [![Build Status](http://openlabtesting.org:15000/badge?project=pytorch%2Fpytorch&job_name=pytorch-arm64-build-daily-master-py36)](https://status.openlabtesting.org/builds/builds?project=pytorch%2Fpytorch&job_name=pytorch-arm64-build-daily-master-py36) | [![Build Status](http://openlabtesting.org:15000/badge?project=pytorch%2Fpytorch&job_name=pytorch-arm64-build-daily-master-py37)](https://status.openlabtesting.org/builds/builds?project=pytorch%2Fpytorch&job_name=pytorch-arm64-build-daily-master-py37) | [![Build Status](http://openlabtesting.org:15000/badge?project=pytorch%2Fpytorch&job_name=pytorch-arm64-build-daily-master-py38)](https://status.openlabtesting.org/builds/builds?project=pytorch%2Fpytorch&job_name=pytorch-arm64-build-daily-master-py38) |
 
 See also the [ci.pytorch.org HUD](https://ezyang.github.io/pytorch-ci-hud/build/pytorch-master).
-
 
 ## More About PyTorch
 
 At a granular level, PyTorch is a library that consists of the following components:
 
-| Component | Description |
-| ---- | --- |
-| [**torch**](https://pytorch.org/docs/stable/torch.html) | a Tensor library like NumPy, with strong GPU support |
-| [**torch.autograd**](https://pytorch.org/docs/stable/autograd.html) | a tape-based automatic differentiation library that supports all differentiable Tensor operations in torch |
-| [**torch.jit**](https://pytorch.org/docs/stable/jit.html) | a compilation stack (TorchScript) to create serializable and optimizable models from PyTorch code  |
-| [**torch.nn**](https://pytorch.org/docs/stable/nn.html) | a neural networks library deeply integrated with autograd designed for maximum flexibility |
+| Component                                                                         | Description                                                                                                                             |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [**torch**](https://pytorch.org/docs/stable/torch.html)                           | a Tensor library like NumPy, with strong GPU support                                                                                    |
+| [**torch.autograd**](https://pytorch.org/docs/stable/autograd.html)               | a tape-based automatic differentiation library that supports all differentiable Tensor operations in torch                              |
+| [**torch.jit**](https://pytorch.org/docs/stable/jit.html)                         | a compilation stack (TorchScript) to create serializable and optimizable models from PyTorch code                                       |
+| [**torch.nn**](https://pytorch.org/docs/stable/nn.html)                           | a neural networks library deeply integrated with autograd designed for maximum flexibility                                              |
 | [**torch.multiprocessing**](https://pytorch.org/docs/stable/multiprocessing.html) | Python multiprocessing, but with magical memory sharing of torch Tensors across processes. Useful for data loading and Hogwild training |
-| [**torch.utils**](https://pytorch.org/docs/stable/data.html) | DataLoader and other utility functions for convenience |
+| [**torch.utils**](https://pytorch.org/docs/stable/data.html)                      | DataLoader and other utility functions for convenience                                                                                  |
 
 Usually, PyTorch is used either as:
 
@@ -127,13 +127,12 @@ You can write new neural network layers in Python using the torch API
 If you want to write your layers in C/C++, we provide a convenient extension API that is efficient and with minimal boilerplate.
 No wrapper code needs to be written. You can see [a tutorial here](https://pytorch.org/tutorials/advanced/cpp_extension.html) and [an example here](https://github.com/pytorch/extension-cpp).
 
-
 ## Installation
 
 ### Binaries
+
 Commands to install from binaries via Conda or pip wheels are on our website:
 [https://pytorch.org](https://pytorch.org)
-
 
 #### NVIDIA Jetson Platforms
 
@@ -146,7 +145,6 @@ Python wheels for NVIDIA's Jetson Nano, Jetson TX2, and Jetson AGX Xavier are av
 
 They require JetPack 4.2 and above, and [@dusty-nv](https://github.com/dusty-nv) maintains them
 
-
 ### From Source
 
 If you are installing from source, you will need Python 3.6.2 or later and a C++14 compiler. Also, we highly recommend installing an [Anaconda](https://www.anaconda.com/distribution/#download-section) environment.
@@ -155,37 +153,41 @@ You will get a high-quality BLAS library (MKL) and you get controlled dependency
 Once you have [Anaconda](https://www.anaconda.com/distribution/#download-section) installed, here are the instructions.
 
 If you want to compile with CUDA support, install
+
 - [NVIDIA CUDA](https://developer.nvidia.com/cuda-downloads) 9.2 or above
 - [NVIDIA cuDNN](https://developer.nvidia.com/cudnn) v7 or above
 - [Compiler](https://gist.github.com/ax3l/9489132) compatible with CUDA
-Note: You could refer to the [cuDNN Support Matrix](https://docs.nvidia.com/deeplearning/cudnn/pdf/cuDNN-Support-Matrix.pdf) for cuDNN versions with the various supported CUDA, CUDA driver and NVIDIA hardwares
+  Note: You could refer to the [cuDNN Support Matrix](https://docs.nvidia.com/deeplearning/cudnn/pdf/cuDNN-Support-Matrix.pdf) for cuDNN versions with the various supported CUDA, CUDA driver and NVIDIA hardwares
 
 If you want to disable CUDA support, export environment variable `USE_CUDA=0`.
 Other potentially useful environment variables may be found in `setup.py`.
 
 If you are building for NVIDIA's Jetson platforms (Jetson Nano, TX1, TX2, AGX Xavier), Instructions to install PyTorch for Jetson Nano are [available here](https://devtalk.nvidia.com/default/topic/1049071/jetson-nano/pytorch-for-jetson-nano/)
 
-
 #### Install Dependencies
 
 Common
+
 ```bash
 conda install numpy ninja pyyaml mkl mkl-include setuptools cmake cffi typing_extensions future six requests dataclasses
 ```
 
 On Linux
+
 ```bash
 # Add LAPACK support for the GPU if needed
 conda install -c pytorch magma-cuda110  # or the magma-cuda* that matches your CUDA version from https://anaconda.org/pytorch/repo
 ```
 
 On MacOS
+
 ```bash
 # Add these packages if torch.distributed is needed
 conda install pkg-config libuv
 ```
 
 On Windows
+
 ```bash
 # Add these packages if torch.distributed is needed.
 # Distributed package support on Windows is a prototype feature and is subject to changes.
@@ -193,6 +195,7 @@ conda install -c conda-forge libuv=1.39
 ```
 
 #### Get the PyTorch Source
+
 ```bash
 git clone --recursive https://github.com/pytorch/pytorch
 cd pytorch
@@ -202,7 +205,9 @@ git submodule update --init --recursive
 ```
 
 #### Install PyTorch
+
 On Linux
+
 ```bash
 export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 python setup.py install
@@ -219,6 +224,7 @@ error: command 'g++' failed with exit status 1
 This is caused by `ld` from Conda environment shadowing the system `ld`. You should use a newer version of Python that fixes this issue. The recommended Python version is 3.6.10+, 3.7.6+ and 3.8.1+.
 
 On macOS
+
 ```bash
 export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 MACOSX_DEPLOYMENT_TARGET=10.9 CC=clang CXX=clang++ python setup.py install
@@ -230,7 +236,6 @@ Each CUDA version only supports one particular XCode version. The following comb
 | ------------ | ------------- |
 | 10.0         | XCode 9.4     |
 | 10.1         | XCode 10.1    |
-
 
 On Windows
 
@@ -248,12 +253,12 @@ Currently, VS 2017 / 2019, and Ninja are supported as the generator of CMake. If
 <br/> If Ninja is selected as the generator, the latest MSVC will get selected as the underlying toolchain.
 
 CUDA, MSVC, and PyTorch versions are interdependent; please install matching versions from this table:
-| CUDA version | Newest supported VS version                             | PyTorch version |
+| CUDA version | Newest supported VS version | PyTorch version |
 | ------------ | ------------------------------------------------------- | --------------- |
-| 9.2          | Visual Studio 2017 Update 5 (15.5) (`_MSC_VER` <= 1912) |  0.4.1 ~ 1.5.1  |
-| 10.1         | Visual Studio 2019 (16.X) (`_MSC_VER` < 1930)           |  1.3.0 ~ 1.7.0  |
-| 10.2         | Visual Studio 2019 (16.X) (`_MSC_VER` < 1930)           |  1.5.0 ~ 1.7.0  |
-| 11.0         | Visual Studio 2019 (16.X) (`_MSC_VER` < 1930)           |      1.7.0      |
+| 9.2 | Visual Studio 2017 Update 5 (15.5) (`_MSC_VER` <= 1912) | 0.4.1 ~ 1.5.1 |
+| 10.1 | Visual Studio 2019 (16.X) (`_MSC_VER` < 1930) | 1.3.0 ~ 1.7.0 |
+| 10.2 | Visual Studio 2019 (16.X) (`_MSC_VER` < 1930) | 1.5.0 ~ 1.7.0 |
+| 11.0 | Visual Studio 2019 (16.X) (`_MSC_VER` < 1930) | 1.7.0 |
 
 Note: There's a [compilation issue](https://github.com/oneapi-src/oneDNN/issues/812) in several Visual Studio 2019 versions since 16.7.1, so please make sure your Visual Studio 2019 version is not in 16.7.1 ~ 16.7.5
 
@@ -261,7 +266,6 @@ Additional libraries such as
 [Magma](https://developer.nvidia.com/magma), [oneDNN, a.k.a MKLDNN or DNNL](https://github.com/oneapi-src/oneDNN), and [Sccache](https://github.com/mozilla/sccache) are often needed. Please refer to the [installation-helper](https://github.com/pytorch/pytorch/tree/master/.jenkins/pytorch/win-test-helpers/installation-helpers) to install them.
 
 You can refer to the [build_pytorch.bat](https://github.com/pytorch/pytorch/blob/master/.jenkins/pytorch/win-test-helpers/build_pytorch.bat) script for some other environment variables configurations
-
 
 ```cmd
 cmd
@@ -292,6 +296,7 @@ the following. For example, adjusting the pre-detected directories for CuDNN or 
 with such a step.
 
 On Linux
+
 ```bash
 export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 python setup.py build --cmake-only
@@ -299,6 +304,7 @@ ccmake build  # or cmake-gui build
 ```
 
 On macOS
+
 ```bash
 export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 MACOSX_DEPLOYMENT_TARGET=10.9 CC=clang CXX=clang++ python setup.py build --cmake-only
@@ -326,6 +332,7 @@ should increase shared memory size either with `--ipc=host` or `--shm-size` comm
 The `Dockerfile` is supplied to build images with Cuda support and cuDNN v7.
 You can pass `PYTHON_VERSION=x.y` make variable to specify which Python version is to be used by Miniconda, or leave it
 unset to use the default.
+
 ```bash
 make -f docker.Makefile
 # images are tagged as docker.io/${your_docker_username}/pytorch
@@ -340,21 +347,22 @@ readthedocs theme.
 cd docs/
 pip install -r requirements.txt
 ```
-You can then build the documentation by running ``make <format>`` from the
-``docs/`` folder. Run ``make`` to get a list of all available output formats.
 
-If you get a katex error run ```npm install katex```.  If it persists, try
-```npm install -g katex```
+You can then build the documentation by running `make <format>` from the
+`docs/` folder. Run `make` to get a list of all available output formats.
+
+If you get a katex error run `npm install katex`. If it persists, try
+`npm install -g katex`
 
 ### Previous Versions
 
 Installation instructions and binaries for previous PyTorch versions may be found
 on [Our Website](https://pytorch.org/previous-versions).
 
-
 ## Getting Started
 
 Three-pointers to get you started:
+
 - [Tutorials: get you started with understanding and using PyTorch](https://pytorch.org/tutorials/)
 - [Examples: easy to understand pytorch code across all domains](https://github.com/pytorch/examples)
 - [The API Reference](https://pytorch.org/docs/)
@@ -362,24 +370,25 @@ Three-pointers to get you started:
 
 ## Resources
 
-* [PyTorch.org](https://pytorch.org/)
-* [PyTorch Tutorials](https://pytorch.org/tutorials/)
-* [PyTorch Examples](https://github.com/pytorch/examples)
-* [PyTorch Models](https://pytorch.org/hub/)
-* [Intro to Deep Learning with PyTorch from Udacity](https://www.udacity.com/course/deep-learning-pytorch--ud188)
-* [Intro to Machine Learning with PyTorch from Udacity](https://www.udacity.com/course/intro-to-machine-learning-nanodegree--nd229)
-* [Deep Neural Networks with PyTorch from Coursera](https://www.coursera.org/learn/deep-neural-networks-with-pytorch)
-* [PyTorch Twitter](https://twitter.com/PyTorch)
-* [PyTorch Blog](https://pytorch.org/blog/)
-* [PyTorch YouTube](https://www.youtube.com/channel/UCWXI5YeOsh03QvJ59PMaXFw)
+- [PyTorch.org](https://pytorch.org/)
+- [PyTorch Tutorials](https://pytorch.org/tutorials/)
+- [PyTorch Examples](https://github.com/pytorch/examples)
+- [PyTorch Models](https://pytorch.org/hub/)
+- [Intro to Deep Learning with PyTorch from Udacity](https://www.udacity.com/course/deep-learning-pytorch--ud188)
+- [Intro to Machine Learning with PyTorch from Udacity](https://www.udacity.com/course/intro-to-machine-learning-nanodegree--nd229)
+- [Deep Neural Networks with PyTorch from Coursera](https://www.coursera.org/learn/deep-neural-networks-with-pytorch)
+- [PyTorch Twitter](https://twitter.com/PyTorch)
+- [PyTorch Blog](https://pytorch.org/blog/)
+- [PyTorch YouTube](https://www.youtube.com/channel/UCWXI5YeOsh03QvJ59PMaXFw)
 
 ## Communication
-* Forums: Discuss implementations, research, etc. https://discuss.pytorch.org
-* GitHub Issues: Bug reports, feature requests, install issues, RFCs, thoughts, etc.
-* Slack: The [PyTorch Slack](https://pytorch.slack.com/) hosts a primary audience of moderate to experienced PyTorch users and developers for general chat, online discussions, collaboration, etc. If you are a beginner looking for help, the primary medium is [PyTorch Forums](https://discuss.pytorch.org). If you need a slack invite, please fill this form: https://goo.gl/forms/PP1AGvNHpSaJP8to1
-* Newsletter: No-noise, a one-way email newsletter with important announcements about PyTorch. You can sign-up here: https://eepurl.com/cbG0rv
-* Facebook Page: Important announcements about PyTorch. https://www.facebook.com/pytorch
-* For brand guidelines, please visit our website at [pytorch.org](https://pytorch.org/)
+
+- Forums: Discuss implementations, research, etc. https://discuss.pytorch.org
+- GitHub Issues: Bug reports, feature requests, install issues, RFCs, thoughts, etc.
+- Slack: The [PyTorch Slack](https://pytorch.slack.com/) hosts a primary audience of moderate to experienced PyTorch users and developers for general chat, online discussions, collaboration, etc. If you are a beginner looking for help, the primary medium is [PyTorch Forums](https://discuss.pytorch.org). If you need a slack invite, please fill this form: https://goo.gl/forms/PP1AGvNHpSaJP8to1
+- Newsletter: No-noise, a one-way email newsletter with important announcements about PyTorch. You can sign-up here: https://eepurl.com/cbG0rv
+- Facebook Page: Important announcements about PyTorch. https://www.facebook.com/pytorch
+- For brand guidelines, please visit our website at [pytorch.org](https://pytorch.org/)
 
 ## Releases and Contributing
 

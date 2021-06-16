@@ -44,18 +44,18 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<ShoppingCart />, document.getElementById('root'))
+ReactDOM.render(<ShoppingCart />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
 
 ```jsx
-const ShoppingCart = (props) => {
+const ShoppingCart = props => {
   return (
     <div>
       <h1>Shopping Cart Component</h1>
     </div>
-  )
+  );
 };
 // Change code below this line
 ```
@@ -63,16 +63,16 @@ const ShoppingCart = (props) => {
 # --solutions--
 
 ```jsx
-const ShoppingCart = (props) => {
+const ShoppingCart = props => {
   return (
     <div>
       <h1>Shopping Cart Component</h1>
     </div>
-  )
+  );
 };
 
 // Change code below this line
 ShoppingCart.defaultProps = {
   items: 0
-}
+};
 ```

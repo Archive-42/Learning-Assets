@@ -47,4 +47,4 @@ This will generate a histogram for the activations and store it in histogram.txt
 
 To implement an observer you must inherit from `ObserverBase` and implement the `Start` and `Stop` functions.
 
-Observers are instantiated with a `subject` of a generic type, such as a `Net` or `Operator`.  The observer framework is built to be generic enough to "observe" various other types, however.
+Observers are instantiated with a `subject` of a generic type, such as a `Net` or `Operator`. The observer framework is built to be generic enough to "observe" various other types, however.

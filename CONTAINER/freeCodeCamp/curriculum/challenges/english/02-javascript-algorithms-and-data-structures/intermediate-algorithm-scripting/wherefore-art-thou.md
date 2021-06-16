@@ -106,12 +106,18 @@ function whatIsInAName(collection, source) {
   var arr = [];
   // Only change code below this line
 
-
   // Only change code above this line
   return arr;
 }
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+whatIsInAName(
+  [
+    { first: 'Romeo', last: 'Montague' },
+    { first: 'Mercutio', last: null },
+    { first: 'Tybalt', last: 'Capulet' }
+  ],
+  { last: 'Capulet' }
+);
 ```
 
 # --solutions--
@@ -120,8 +126,12 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
 function whatIsInAName(collection, source) {
   var arr = [];
   var keys = Object.keys(source);
-  collection.forEach(function(e) {
-    if(keys.every(function(key) {return e[key] === source[key];})) {
+  collection.forEach(function (e) {
+    if (
+      keys.every(function (key) {
+        return e[key] === source[key];
+      })
+    ) {
       arr.push(e);
     }
   });

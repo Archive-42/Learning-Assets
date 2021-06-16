@@ -11,8 +11,7 @@ A media query can be used to change styles based on certain conditions, and they
 
 ```css
 @media (condition) {
-
-}  
+}
 ```
 
 Add an empty media query at the bottom of your stylesheet with a condition of `max-width: 1000px`. Styles added in here will take effect when the document size is 1000px wide or less.
@@ -31,7 +30,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -56,7 +55,8 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         overflow: hidden;
       }
 
-      .background-buildings, .foreground-buildings {
+      .background-buildings,
+      .foreground-buildings {
         width: 100%;
         height: 100%;
         display: flex;
@@ -65,7 +65,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         position: absolute;
         top: 0;
       }
-      
+
       .building-wrap {
         display: flex;
         flex-direction: column;
@@ -80,12 +80,12 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
 
       .sky {
         background: radial-gradient(
-            closest-corner circle at 15% 15%,
-            #ffcf33,
-            #ffcf33 20%,
-            #ffff66 21%,
-            #bbeeff 100%
-          );
+          closest-corner circle at 15% 15%,
+          #ffcf33,
+          #ffcf33 20%,
+          #ffff66 21%,
+          #bbeeff 100%
+        );
       }
 
       /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
@@ -97,11 +97,11 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
       .bb1a {
         width: 70%;
       }
-  
+
       .bb1b {
         width: 80%;
       }
-  
+
       .bb1c {
         width: 90%;
       }
@@ -110,17 +110,17 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         width: 100%;
         height: 70%;
         background: linear-gradient(
-            var(--building-color1) 50%,
-            var(--window-color1)
-          );
+          var(--building-color1) 50%,
+          var(--window-color1)
+        );
       }
 
       .bb1-window {
         height: 10%;
         background: linear-gradient(
-            var(--building-color1),
-            var(--window-color1)
-          );
+          var(--building-color1),
+          var(--window-color1)
+        );
       }
 
       .bb2 {
@@ -138,22 +138,22 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         width: 100%;
         height: 100%;
         background: repeating-linear-gradient(
-            var(--building-color2),
-            var(--building-color2) 6%,
-            var(--window-color2) 6%,
-            var(--window-color2) 9%
-          );
+          var(--building-color2),
+          var(--building-color2) 6%,
+          var(--window-color2) 6%,
+          var(--window-color2) 9%
+        );
       }
-      
+
       .bb3 {
         width: 10%;
         height: 55%;
         background: repeating-linear-gradient(
-            90deg,
-            var(--building-color3),
-            var(--building-color3),
-            var(--window-color3) 15%
-          );
+          90deg,
+          var(--building-color3),
+          var(--building-color3),
+          var(--window-color3) 15%
+        );
       }
 
       .bb4 {
@@ -172,7 +172,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         height: 5%;
         background-color: var(--building-color4);
       }
-  
+
       .bb4c {
         width: 100%;
         height: 85%;
@@ -202,7 +202,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         height: 10%;
         background-color: var(--building-color4);
       }
-  
+
       .fb1c {
         width: 100%;
         height: 80%;
@@ -212,13 +212,9 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
             var(--building-color4) 10%,
             transparent 10%,
             transparent 15%
-          ),
-          repeating-linear-gradient(
-            var(--building-color4),
-            var(--building-color4) 10%,
-            var(--window-color4) 10%,
-            var(--window-color4) 90%
-          );
+          ), repeating-linear-gradient(var(--building-color4), var(
+                --building-color4
+              ) 10%, var(--window-color4) 10%, var(--window-color4) 90%);
       }
 
       .fb2 {
@@ -249,13 +245,13 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         width: 10%;
         height: 35%;
       }
-  
+
       .fb3a {
         width: 80%;
         height: 15%;
         background-color: var(--building-color1);
       }
-  
+
       .fb3b {
         width: 100%;
         height: 35%;
@@ -287,7 +283,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         display: flex;
         flex-wrap: wrap;
       }
-      
+
       .fb4-window {
         width: 30%;
         height: 10%;
@@ -306,14 +302,9 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
             var(--building-color2) 5%,
             transparent 5%,
             transparent 10%
-          ),
-          repeating-linear-gradient(
-            90deg,
-            var(--building-color2),
-            var(--building-color2) 12%,
-            var(--window-color2) 12%,
-            var(--window-color2) 44%
-          );
+          ), repeating-linear-gradient(90deg, var(--building-color2), var(
+                --building-color2
+              ) 12%, var(--window-color2) 12%, var(--window-color2) 44%);
       }
 
       .fb6 {
@@ -325,13 +316,9 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
             var(--building-color3) 10%,
             transparent 10%,
             transparent 30%
-          ),
-          repeating-linear-gradient(
-            var(--building-color3),
-            var(--building-color3) 10%,
-            var(--window-color3) 10%,
-            var(--window-color3) 30%
-          );
+          ), repeating-linear-gradient(var(--building-color3), var(
+                --building-color3
+              ) 10%, var(--window-color3) 10%, var(--window-color3) 30%);
       }
     </style>
   </head>
@@ -417,7 +404,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -442,7 +429,8 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         overflow: hidden;
       }
 
-      .background-buildings, .foreground-buildings {
+      .background-buildings,
+      .foreground-buildings {
         width: 100%;
         height: 100%;
         display: flex;
@@ -451,7 +439,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         position: absolute;
         top: 0;
       }
-      
+
       .building-wrap {
         display: flex;
         flex-direction: column;
@@ -466,12 +454,12 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
 
       .sky {
         background: radial-gradient(
-            closest-corner circle at 15% 15%,
-            #ffcf33,
-            #ffcf33 20%,
-            #ffff66 21%,
-            #bbeeff 100%
-          );
+          closest-corner circle at 15% 15%,
+          #ffcf33,
+          #ffcf33 20%,
+          #ffff66 21%,
+          #bbeeff 100%
+        );
       }
 
       /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
@@ -483,11 +471,11 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
       .bb1a {
         width: 70%;
       }
-  
+
       .bb1b {
         width: 80%;
       }
-  
+
       .bb1c {
         width: 90%;
       }
@@ -496,17 +484,17 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         width: 100%;
         height: 70%;
         background: linear-gradient(
-            var(--building-color1) 50%,
-            var(--window-color1)
-          );
+          var(--building-color1) 50%,
+          var(--window-color1)
+        );
       }
 
       .bb1-window {
         height: 10%;
         background: linear-gradient(
-            var(--building-color1),
-            var(--window-color1)
-          );
+          var(--building-color1),
+          var(--window-color1)
+        );
       }
 
       .bb2 {
@@ -524,22 +512,22 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         width: 100%;
         height: 100%;
         background: repeating-linear-gradient(
-            var(--building-color2),
-            var(--building-color2) 6%,
-            var(--window-color2) 6%,
-            var(--window-color2) 9%
-          );
+          var(--building-color2),
+          var(--building-color2) 6%,
+          var(--window-color2) 6%,
+          var(--window-color2) 9%
+        );
       }
-      
+
       .bb3 {
         width: 10%;
         height: 55%;
         background: repeating-linear-gradient(
-            90deg,
-            var(--building-color3),
-            var(--building-color3),
-            var(--window-color3) 15%
-          );
+          90deg,
+          var(--building-color3),
+          var(--building-color3),
+          var(--window-color3) 15%
+        );
       }
 
       .bb4 {
@@ -558,7 +546,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         height: 5%;
         background-color: var(--building-color4);
       }
-  
+
       .bb4c {
         width: 100%;
         height: 85%;
@@ -588,7 +576,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         height: 10%;
         background-color: var(--building-color4);
       }
-  
+
       .fb1c {
         width: 100%;
         height: 80%;
@@ -598,13 +586,9 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
             var(--building-color4) 10%,
             transparent 10%,
             transparent 15%
-          ),
-          repeating-linear-gradient(
-            var(--building-color4),
-            var(--building-color4) 10%,
-            var(--window-color4) 10%,
-            var(--window-color4) 90%
-          );
+          ), repeating-linear-gradient(var(--building-color4), var(
+                --building-color4
+              ) 10%, var(--window-color4) 10%, var(--window-color4) 90%);
       }
 
       .fb2 {
@@ -635,13 +619,13 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         width: 10%;
         height: 35%;
       }
-  
+
       .fb3a {
         width: 80%;
         height: 15%;
         background-color: var(--building-color1);
       }
-  
+
       .fb3b {
         width: 100%;
         height: 35%;
@@ -673,7 +657,7 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
         display: flex;
         flex-wrap: wrap;
       }
-      
+
       .fb4-window {
         width: 30%;
         height: 10%;
@@ -692,14 +676,9 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
             var(--building-color2) 5%,
             transparent 5%,
             transparent 10%
-          ),
-          repeating-linear-gradient(
-            90deg,
-            var(--building-color2),
-            var(--building-color2) 12%,
-            var(--window-color2) 12%,
-            var(--window-color2) 44%
-          );
+          ), repeating-linear-gradient(90deg, var(--building-color2), var(
+                --building-color2
+              ) 12%, var(--window-color2) 12%, var(--window-color2) 44%);
       }
 
       .fb6 {
@@ -711,17 +690,12 @@ assert(/\@media\s*\(\s*max-width\s*:\s*1000px\s*\)\s*{\s*}/g.test(code));
             var(--building-color3) 10%,
             transparent 10%,
             transparent 30%
-          ),
-          repeating-linear-gradient(
-            var(--building-color3),
-            var(--building-color3) 10%,
-            var(--window-color3) 10%,
-            var(--window-color3) 30%
-          );
+          ), repeating-linear-gradient(var(--building-color3), var(
+                --building-color3
+              ) 10%, var(--window-color3) 10%, var(--window-color3) 30%);
       }
 
       @media (max-width: 1000px) {
-        
       }
     </style>
   </head>

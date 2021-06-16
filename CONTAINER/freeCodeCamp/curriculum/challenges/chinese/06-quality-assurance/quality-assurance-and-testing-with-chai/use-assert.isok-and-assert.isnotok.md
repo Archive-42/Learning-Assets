@@ -23,12 +23,12 @@ dashedName: use-assert-isok-and-assert-isnotok
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -37,12 +37,12 @@ dashedName: use-assert-isok-and-assert-isnotok
 应该第一个断言选择正确的方法：`isOk` 或 `isNotOk`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'isNotOk', 'Null is falsy');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,12 +51,12 @@ dashedName: use-assert-isok-and-assert-isnotok
 应该第二个断言选择正确的方法：`isOk` 或 `isNotOk`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'isOk', 'A string is truthy');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -65,12 +65,12 @@ dashedName: use-assert-isok-and-assert-isnotok
 应该第三个断言选择正确的方法：`isOk` 或 `isNotOk`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[2].method, 'isOk', 'true is truthy');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

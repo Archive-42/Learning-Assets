@@ -21,13 +21,13 @@ dashedName: perform-classic-updates-by-running-find-edit-then-save
 应成功地对一条数据进行查找、编辑和更新
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/find-edit-save', {
     name: 'Poldo',
     age: 40,
     favoriteFoods: ['spaghetti']
   }).then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'Poldo', 'item.name is not what is expected');
       assert.equal(data.age, 40, 'item.age is not what expected');
       assert.deepEqual(
@@ -37,7 +37,7 @@ dashedName: perform-classic-updates-by-running-find-edit-then-save
       );
       assert.equal(data.__v, 1, 'The item should be previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

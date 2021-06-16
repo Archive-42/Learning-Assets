@@ -21,12 +21,12 @@ dashedName: use-regular-expressions-to-test-a-string
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ dashedName: use-regular-expressions-to-test-a-string
 应该为第一个断言选择正确的方法：`match` 或 `notMatch`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'match',
         "'# name:John Doe, age:35' matches the regex"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ dashedName: use-regular-expressions-to-test-a-string
 应该为第二个断言选择正确的方法：`match` 或 `notMatch`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'notMatch',
         "'# name:Paul Smith III, age:twenty-four' does not match the regex (the age must be numeric)"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

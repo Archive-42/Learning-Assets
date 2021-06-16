@@ -40,16 +40,16 @@ assert(/src\s*=\s*('|")\s*(\.\/)?dashboard.js\s*\1/gi.test(script));
   }
 </style>
 <script>
-  const data = [ 
-    { year: 2012, followers: { twitter: 2594, tumblr:  401, instagram:   83 }},
-    { year: 2013, followers: { twitter: 3049, tumblr:  440, instagram:  192 }},
-    { year: 2014, followers: { twitter: 3511, tumblr:  415, instagram:  511 }},
-    { year: 2015, followers: { twitter: 3619, tumblr:  492, instagram: 1014 }},
-    { year: 2016, followers: { twitter: 4046, tumblr:  543, instagram: 2066 }},
-    { year: 2017, followers: { twitter: 3991, tumblr:  701, instagram: 3032 }},
-    { year: 2018, followers: { twitter: 3512, tumblr: 1522, instagram: 4512 }},
-    { year: 2019, followers: { twitter: 3274, tumblr: 1989, instagram: 4715 }},
-    { year: 2020, followers: { twitter: 2845, tumblr: 2040, instagram: 4801 }}
+  const data = [
+    { year: 2012, followers: { twitter: 2594, tumblr: 401, instagram: 83 } },
+    { year: 2013, followers: { twitter: 3049, tumblr: 440, instagram: 192 } },
+    { year: 2014, followers: { twitter: 3511, tumblr: 415, instagram: 511 } },
+    { year: 2015, followers: { twitter: 3619, tumblr: 492, instagram: 1014 } },
+    { year: 2016, followers: { twitter: 4046, tumblr: 543, instagram: 2066 } },
+    { year: 2017, followers: { twitter: 3991, tumblr: 701, instagram: 3032 } },
+    { year: 2018, followers: { twitter: 3512, tumblr: 1522, instagram: 4512 } },
+    { year: 2019, followers: { twitter: 3274, tumblr: 1989, instagram: 4715 } },
+    { year: 2020, followers: { twitter: 2845, tumblr: 2040, instagram: 4801 } }
   ];
 </script>
 ```
@@ -61,15 +61,13 @@ assert(/src\s*=\s*('|")\s*(\.\/)?dashboard.js\s*\1/gi.test(script));
 <html>
   <head>
     <title>D3 Dashboard</title>
-    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./dashboard.css" />
     <script src="./d3-5.9.2.min.js"></script>
     <script src="./data.js"></script>
   </head>
 
   <body>
     <div class="dashboard"></div>
-
-    
   </body>
 </html>
 ```
@@ -81,7 +79,7 @@ assert(/src\s*=\s*('|")\s*(\.\/)?dashboard.js\s*\1/gi.test(script));
 <html>
   <head>
     <title>D3 Dashboard</title>
-    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./dashboard.css" />
     <script src="./d3-5.9.2.min.js"></script>
     <script src="./data.js"></script>
   </head>

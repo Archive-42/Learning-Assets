@@ -31,7 +31,7 @@ And if `n₀` = 55 we get:
 110 + 011 = 121,  a palindrome!
 ```
 
-Notice that the check for a palindrome happens *after* an addition.
+Notice that the check for a palindrome happens _after_ an addition.
 
 Some starting numbers seem to go on forever; the recurrence relation for 196 has been calculated for millions of repetitions forming numbers with millions of digits, without forming a palindrome. These numbers that do not end in a palindrome are called **Lychrel numbers**.
 
@@ -41,7 +41,7 @@ For the purposes of this task a Lychrel number is any starting number that does 
 
 Any integer produced in the sequence of a Lychrel number is also a Lychrel number.
 
-In general, any sequence from one Lychrel number *might* converge to join the sequence from a prior Lychrel number candidate; for example the sequences for the numbers 196 and then 689 begin:
+In general, any sequence from one Lychrel number _might_ converge to join the sequence from a prior Lychrel number candidate; for example the sequences for the numbers 196 and then 689 begin:
 
 ```bash
     196
@@ -121,9 +121,7 @@ assert.equal(isLychrel(7059), true);
 ## --seed-contents--
 
 ```js
-function isLychrel(n) {
-
-}
+function isLychrel(n) {}
 ```
 
 # --solutions--
@@ -131,13 +129,7 @@ function isLychrel(n) {
 ```js
 function isLychrel(n) {
   function reverse(num) {
-    return parseInt(
-      num
-        .toString()
-        .split('')
-        .reverse()
-        .join('')
-    );
+    return parseInt(num.toString().split('').reverse().join(''));
   }
 
   var i;

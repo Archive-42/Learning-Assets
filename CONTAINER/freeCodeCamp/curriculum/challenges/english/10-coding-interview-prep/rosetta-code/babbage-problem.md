@@ -8,7 +8,7 @@ dashedName: babbage-problem
 
 # --description--
 
-[Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage "wp: Charles_Babbage"), looking ahead to the sorts of problems his Analytical Engine would be able to solve, gave this example:
+[Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage 'wp: Charles_Babbage'), looking ahead to the sorts of problems his Analytical Engine would be able to solve, gave this example:
 
 <blockquote>
   What is the smallest positive integer whose square ends in the digits 269,696?
@@ -51,7 +51,6 @@ const answer = 25264;
 
 ```js
 function babbage(babbageNum, endDigits) {
-
   return true;
 }
 ```
@@ -61,7 +60,9 @@ function babbage(babbageNum, endDigits) {
 ```js
 function babbage(babbageAns, endDigits) {
   const babbageNum = Math.pow(babbageAns, 2);
-  const babbageStartDigits = parseInt(babbageNum.toString().replace('269696', ''));
+  const babbageStartDigits = parseInt(
+    babbageNum.toString().replace('269696', '')
+  );
   let answer = 99736;
 
   // count down from this answer and save any sqrt int result. return lowest one

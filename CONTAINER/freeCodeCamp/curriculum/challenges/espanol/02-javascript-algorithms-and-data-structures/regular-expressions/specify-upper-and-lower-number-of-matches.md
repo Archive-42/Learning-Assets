@@ -15,8 +15,8 @@ Puedes especificar el número inferior y superior de patrones utilizando <dfn>es
 Por ejemplo, para que coincida con la letra `a` si aparece entre `3` y `5` veces en la cadena `ah`, la expresión regular debe ser `/a{3,5}h/`.
 
 ```js
-let A4 = "aaaah";
-let A2 = "aah";
+let A4 = 'aaaah';
+let A2 = 'aah';
 let multipleA = /a{3,5}h/;
 multipleA.test(A4);
 multipleA.test(A2);
@@ -77,7 +77,7 @@ assert(!ohRegex.test('Ohhhhhhh no'));
 ## --seed-contents--
 
 ```js
-let ohStr = "Ohhh no";
+let ohStr = 'Ohhh no';
 let ohRegex = /change/; // Change this line
 let result = ohRegex.test(ohStr);
 ```
@@ -85,7 +85,7 @@ let result = ohRegex.test(ohStr);
 # --solutions--
 
 ```js
-let ohStr = "Ohhh no";
+let ohStr = 'Ohhh no';
 let ohRegex = /Oh{3,6} no/; // Change this line
 let result = ohRegex.test(ohStr);
 ```

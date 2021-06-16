@@ -31,16 +31,16 @@ DELETE=> 删除一个资源。
 测试 1：你的 API 接口应该使用正确的名字来响应
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/name', { first: 'Mick', last: 'Jagger' }).then(
-    (data) => {
+    data => {
       assert.equal(
         data.name,
         'Mick Jagger',
         'Test 1: "POST /name" route does not behave as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -49,19 +49,19 @@ DELETE=> 删除一个资源。
 测试 2：你的 API 接口应该使用正确的名字来响应
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/name', {
     first: 'Keith',
     last: 'Richards'
   }).then(
-    (data) => {
+    data => {
       assert.equal(
         data.name,
         'Keith Richards',
         'Test 2: "POST /name" route does not behave as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

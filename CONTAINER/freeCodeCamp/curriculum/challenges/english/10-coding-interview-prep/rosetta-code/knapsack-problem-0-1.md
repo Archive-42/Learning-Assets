@@ -145,9 +145,7 @@ assert.equal(
 ## --seed-contents--
 
 ```js
-function knapsack(items, maxweight) {
-
-}
+function knapsack(items, maxweight) {}
 ```
 
 # --solutions--
@@ -155,23 +153,23 @@ function knapsack(items, maxweight) {
 ```js
 function knapsack(items, maxweight) {
   var _ = {
-    max: function(e) {
+    max: function (e) {
       var mx = e[0];
-      e.forEach(function(f) {
+      e.forEach(function (f) {
         if (mx < f) mx = f;
       });
       return mx;
     },
-    map: function(array, func) {
+    map: function (array, func) {
       return array.map(func);
     },
-    isUndefined: function(a) {
+    isUndefined: function (a) {
       if (a) {
         return false;
       }
       return true;
     },
-    range: function(start, end, step) {
+    range: function (start, end, step) {
       var a = [];
       var f = (f = (i, end) => i < end);
       if (start > end) f = (i, end) => i > end;
@@ -187,23 +185,23 @@ function knapsack(items, maxweight) {
   var _p = _.max(_.map(items, valuefn));
   var _k = (_epsilon * _p) / items.length;
 
-  var _memo = (function() {
+  var _memo = (function () {
     var _mem = {};
-    var _key = function(i, w) {
+    var _key = function (i, w) {
       return i + '::' + w;
     };
     return {
-      get: function(i, w) {
+      get: function (i, w) {
         return _mem[_key(i, w)];
       },
-      put: function(i, w, r) {
+      put: function (i, w, r) {
         _mem[_key(i, w)] = r;
         return r;
       }
     };
   })();
 
-  var _m = function(i, w) {
+  var _m = function (i, w) {
     i = Math.round(i);
     w = Math.round(w);
 
@@ -247,7 +245,7 @@ function knapsack(items, maxweight) {
   var scaled = _m(items.length - 1, maxweight);
 
   var val = 0;
-  scaled.items.forEach(function(e) {
+  scaled.items.forEach(function (e) {
     val += e.value;
   });
   return val;

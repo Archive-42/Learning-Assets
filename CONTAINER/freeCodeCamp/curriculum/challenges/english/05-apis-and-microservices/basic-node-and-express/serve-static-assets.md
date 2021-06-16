@@ -25,16 +25,16 @@ Now your app should be able to serve a CSS stylesheet. Note that the `/public/st
 Your app should serve asset files from the `/public` directory to the `/public` path
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/style.css').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /body\s*\{[^\}]*\}/,
         'Your app does not serve static assets'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

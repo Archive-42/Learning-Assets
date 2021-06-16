@@ -1,13 +1,15 @@
-module.exports = function nextPalindrome (number) {
-  var numberString = ('' + number),
-      numberLength = numberString.length,
-      oddDigits    = numberLength & 1,
-      leftHalf     = numberString.substr(0, ~~(numberLength / 2)),
-      middleNumber = numberString.charAt(Math.ceil(numberLength / 2)),
-      increment, newNumber, reverseString;
+module.exports = function nextPalindrome(number) {
+  var numberString = "" + number,
+    numberLength = numberString.length,
+    oddDigits = numberLength & 1,
+    leftHalf = numberString.substr(0, ~~(numberLength / 2)),
+    middleNumber = numberString.charAt(Math.ceil(numberLength / 2)),
+    increment,
+    newNumber,
+    reverseString;
 
   reverseString = function (string) {
-    return string.length > 1 ? string.split('').reverse().join('') : string;
+    return string.length > 1 ? string.split("").reverse().join("") : string;
   };
 
   if (oddDigits) {
@@ -22,7 +24,7 @@ module.exports = function nextPalindrome (number) {
     return newNumber;
   }
 
-  if (middleNumber === '9') {
+  if (middleNumber === "9") {
     return nextPalindrome(+numberString[0] * Math.pow(10, numberLength));
   } else {
     return newNumber + increment;

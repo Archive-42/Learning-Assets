@@ -20,6 +20,7 @@ myVar = 16 / 2;
 ```
 
 现在，变量 `myVar` 的值为 `8`。
+
 # --instructions--
 
 改变数值 `0` 来让变量 `quotient` 的值等于 `2`。
@@ -43,7 +44,9 @@ assert(/\d+\s*\/\s*\d+/.test(code));
 ## --after-user-code--
 
 ```js
-(function(z){return 'quotient = '+z;})(quotient);
+(function (z) {
+  return 'quotient = ' + z;
+})(quotient);
 ```
 
 ## --seed-contents--

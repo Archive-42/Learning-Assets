@@ -82,18 +82,19 @@ assert.deepEqual(taxicabNumbers(39).slice(20, 29), res39From20To29);
 const res4 = [1729, 4104, 13832, 20683];
 const res25 = [
   1729, 4104, 13832, 20683, 32832, 39312, 40033, 46683, 64232, 65728, 110656,
-  110808, 134379, 149389, 165464, 171288, 195841, 216027, 216125, 262656, 314496, 320264, 327763,
-  373464, 402597
+  110808, 134379, 149389, 165464, 171288, 195841, 216027, 216125, 262656,
+  314496, 320264, 327763, 373464, 402597
 ];
 
-const res39From20To29 = [314496, 320264, 327763, 373464, 402597, 439101, 443889, 513000, 513856];
+const res39From20To29 = [
+  314496, 320264, 327763, 373464, 402597, 439101, 443889, 513000, 513856
+];
 ```
 
 ## --seed-contents--
 
 ```js
 function taxicabNumbers(n) {
-
   return true;
 }
 ```
@@ -128,7 +129,8 @@ function taxicabNumbers(nNumbers) {
   const res = [];
   Object.keys(s3s).forEach(s3 => {
     const abs = s3s[s3];
-    if (abs.length >= 2) { // No two cube pairs found
+    if (abs.length >= 2) {
+      // No two cube pairs found
       i += 1;
       if (i <= nNumbers) {
         res.push(s3);

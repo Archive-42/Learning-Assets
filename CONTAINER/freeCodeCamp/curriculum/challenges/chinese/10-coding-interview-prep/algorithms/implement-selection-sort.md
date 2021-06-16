@@ -26,23 +26,7 @@ assert(typeof selectionSort == 'function');
 assert(
   isSorted(
     selectionSort([
-      1,
-      4,
-      2,
-      8,
-      345,
-      123,
-      43,
-      32,
-      5643,
-      63,
-      123,
-      43,
-      2,
-      55,
-      1,
-      234,
-      92
+      1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92
     ])
   )
 );
@@ -53,23 +37,7 @@ assert(
 ```js
 assert.sameMembers(
   selectionSort([
-    1,
-    4,
-    2,
-    8,
-    345,
-    123,
-    43,
-    32,
-    5643,
-    63,
-    123,
-    43,
-    2,
-    55,
-    1,
-    234,
-    92
+    1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92
   ]),
   [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]
 );
@@ -86,16 +54,14 @@ assert(isBuiltInSortUsed());
 ## --after-user-code--
 
 ```js
-function isSorted(a){
-  for(let i = 0; i < a.length - 1; i++)
-    if(a[i] > a[i + 1])
-      return false;
+function isSorted(a) {
+  for (let i = 0; i < a.length - 1; i++) if (a[i] > a[i + 1]) return false;
   return true;
 }
 
-function isBuiltInSortUsed(){
+function isBuiltInSortUsed() {
   let sortUsed = false;
-  Array.prototype.sort = () => sortUsed = true;
+  Array.prototype.sort = () => (sortUsed = true);
   selectionSort([0, 1]);
   return !sortUsed;
 }
@@ -110,17 +76,18 @@ function selectionSort(array) {
   // Only change code above this line
 }
 
-
-selectionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]);
+selectionSort([
+  1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92
+]);
 ```
 
 # --solutions--
 
 ```js
 function selectionSort(array) {
-  for (let i = 0; i < array.length-1; i++) {
+  for (let i = 0; i < array.length - 1; i++) {
     let minimumIndex = i;
-    for (let j = i+1; j < array.length; j++){
+    for (let j = i + 1; j < array.length; j++) {
       if (array[j] < array[minimumIndex]) {
         minimumIndex = j;
       }
@@ -129,6 +96,6 @@ function selectionSort(array) {
     array[minimumIndex] = array[i];
     array[i] = value;
   }
-    return array;
+  return array;
 }
 ```

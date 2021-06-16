@@ -19,7 +19,7 @@ The previous challenges covered a lot about creating and composing JSX elements,
 You use **custom HTML attributes** created by you and supported by React to be passed to the component. In this case, the created property `user` is passed to the component `Welcome`. Since `Welcome` is a stateless functional component, it has access to this value like so:
 
 ```jsx
-const Welcome = (props) => <h1>Hello, {props.user}!</h1>
+const Welcome = props => <h1>Hello, {props.user}!</h1>;
 ```
 
 It is standard to call this value `props` and when dealing with stateless functional components, you basically consider it as an argument to a function which returns JSX. You can access the value of the argument in the function body. With class components, you will see this is a little different.
@@ -100,18 +100,18 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<Calendar />, document.getElementById('root'))
+ReactDOM.render(<Calendar />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
 
 ```jsx
-const CurrentDate = (props) => {
+const CurrentDate = props => {
   return (
     <div>
-      { /* Change code below this line */ }
+      {/* Change code below this line */}
       <p>The current date is: </p>
-      { /* Change code above this line */ }
+      {/* Change code above this line */}
     </div>
   );
 };
@@ -124,24 +124,24 @@ class Calendar extends React.Component {
     return (
       <div>
         <h3>What date is it?</h3>
-        { /* Change code below this line */ }
+        {/* Change code below this line */}
         <CurrentDate />
-        { /* Change code above this line */ }
+        {/* Change code above this line */}
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
 
 ```jsx
-const CurrentDate = (props) => {
+const CurrentDate = props => {
   return (
     <div>
-      { /* Change code below this line */ }
+      {/* Change code below this line */}
       <p>The current date is: {props.date}</p>
-      { /* Change code above this line */ }
+      {/* Change code above this line */}
     </div>
   );
 };
@@ -154,11 +154,11 @@ class Calendar extends React.Component {
     return (
       <div>
         <h3>What date is it?</h3>
-        { /* Change code below this line */ }
+        {/* Change code below this line */}
         <CurrentDate date={Date()} />
-        { /* Change code above this line */ }
+        {/* Change code above this line */}
       </div>
     );
   }
-};
+}
 ```

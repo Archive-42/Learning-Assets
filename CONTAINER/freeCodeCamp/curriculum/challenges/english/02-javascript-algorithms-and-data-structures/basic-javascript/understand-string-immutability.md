@@ -14,15 +14,15 @@ In JavaScript, `String` values are <dfn>immutable</dfn>, which means that they c
 For example, the following code:
 
 ```js
-var myStr = "Bob";
-myStr[0] = "J";
+var myStr = 'Bob';
+myStr[0] = 'J';
 ```
 
-cannot change the value of `myStr` to `Job`, because the contents of `myStr` cannot be altered. Note that this does *not* mean that `myStr` cannot be changed, just that the individual characters of a <dfn>string literal</dfn> cannot be changed. The only way to change `myStr` would be to assign it with a new string, like this:
+cannot change the value of `myStr` to `Job`, because the contents of `myStr` cannot be altered. Note that this does _not_ mean that `myStr` cannot be changed, just that the individual characters of a <dfn>string literal</dfn> cannot be changed. The only way to change `myStr` would be to assign it with a new string, like this:
 
 ```js
-var myStr = "Bob";
-myStr = "Job";
+var myStr = 'Bob';
+myStr = 'Job';
 ```
 
 # --instructions--
@@ -48,23 +48,25 @@ assert(/myStr = "Jello World"/.test(code));
 ## --after-user-code--
 
 ```js
-(function(v){return "myStr = " + v;})(myStr);
+(function (v) {
+  return 'myStr = ' + v;
+})(myStr);
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var myStr = "Jello World";
+var myStr = 'Jello World';
 
 // Only change code below this line
-myStr[0] = "H"; // Change this line
+myStr[0] = 'H'; // Change this line
 // Only change code above this line
 ```
 
 # --solutions--
 
 ```js
-var myStr = "Jello World";
-myStr = "Hello World";
+var myStr = 'Jello World';
+myStr = 'Hello World';
 ```

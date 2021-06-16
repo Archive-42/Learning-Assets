@@ -8,7 +8,7 @@ dashedName: symmetric-difference
 
 # --description--
 
-Given two [set](https://rosettacode.org/wiki/set)s *A* and *B*, compute $(A \\setminus B) \\cup (B \\setminus A).$ That is, enumerate the items that are in *A* or *B* but not both. This set is called the [symmetric difference](https://en.wikipedia.org/wiki/Symmetric difference) of *A* and *B*. In other words: $(A \\cup B) \\setminus (A \\cap B)$ (the set of items that are in at least one of *A* or *B* minus the set of items that are in both *A* and *B*).
+Given two [set](https://rosettacode.org/wiki/set)s _A_ and _B_, compute $(A \\setminus B) \\cup (B \\setminus A).$ That is, enumerate the items that are in _A_ or _B_ but not both. This set is called the [symmetric difference](https://en.wikipedia.org/wiki/Symmetric difference) of _A_ and _B_. In other words: $(A \\cup B) \\setminus (A \\cap B)$ (the set of items that are in at least one of _A_ or _B_ minus the set of items that are in both _A_ and _B_).
 
 # --instructions--
 
@@ -56,13 +56,10 @@ assert.deepEqual(symmetricDifference([1, 2, 3], [3, 4]), [1, 2, 4]);
 `symmetricDifference([1, 2, 3, 4, 5], [3, 4, 8, 7])` should return `[1, 2, 5, 7, 8]`.
 
 ```js
-assert.deepEqual(symmetricDifference([1, 2, 3, 4, 5], [3, 4, 8, 7]), [
-  1,
-  2,
-  5,
-  7,
-  8
-]);
+assert.deepEqual(
+  symmetricDifference([1, 2, 3, 4, 5], [3, 4, 8, 7]),
+  [1, 2, 5, 7, 8]
+);
 ```
 
 `symmetricDifference([1, 2, 3, 4, 5, 6, 7, 8], [1, 3, 5, 6, 7, 8, 9])` should return `[2, 4, 9]`.
@@ -77,12 +74,10 @@ assert.deepEqual(
 `symmetricDifference([1, 2, 4, 7, 9], [2, 3, 7, 8, 9])` should return `[1, 3, 4, 8]`.
 
 ```js
-assert.deepEqual(symmetricDifference([1, 2, 4, 7, 9], [2, 3, 7, 8, 9]), [
-  1,
-  3,
-  4,
-  8
-]);
+assert.deepEqual(
+  symmetricDifference([1, 2, 4, 7, 9], [2, 3, 7, 8, 9]),
+  [1, 3, 4, 8]
+);
 ```
 
 # --seed--
@@ -90,9 +85,7 @@ assert.deepEqual(symmetricDifference([1, 2, 4, 7, 9], [2, 3, 7, 8, 9]), [
 ## --seed-contents--
 
 ```js
-function symmetricDifference(A, B) {
-
-}
+function symmetricDifference(A, B) {}
 ```
 
 # --solutions--
@@ -100,7 +93,7 @@ function symmetricDifference(A, B) {
 ```js
 function symmetricDifference(A, B) {
   function relative_complement(A, B) {
-    return A.filter(function(elem) {
+    return A.filter(function (elem) {
       return B.indexOf(elem) == -1;
     });
   }

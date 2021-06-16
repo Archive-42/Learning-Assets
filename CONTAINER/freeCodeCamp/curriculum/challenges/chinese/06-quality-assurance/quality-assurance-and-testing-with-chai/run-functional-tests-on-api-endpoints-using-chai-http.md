@@ -47,12 +47,12 @@ suite('GET /hello?name=[name] => "hello [name]"', function () {
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -61,14 +61,14 @@ suite('GET /hello?name=[name] => "hello [name]"', function () {
 应测试 “res.status” 是否为 200。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'equal');
       assert.equal(data.assertions[0].args[0], 'res.status');
       assert.equal(data.assertions[0].args[1], '200');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -77,14 +77,14 @@ suite('GET /hello?name=[name] => "hello [name]"', function () {
 应测试 “res.text“ 是否为 ”hello Guest“。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'equal');
       assert.equal(data.assertions[1].args[0], 'res.text');
       assert.match(data.assertions[1].args[1], /('|")hello Guest\1/);
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

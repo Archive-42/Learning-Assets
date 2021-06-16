@@ -16,7 +16,7 @@ El primer tipo de bucle que aprenderemos se llama bucle `while` porque ejecuta u
 ```js
 var ourArray = [];
 var i = 0;
-while(i < 5) {
+while (i < 5) {
   ourArray.push(i);
   i++;
 }
@@ -49,7 +49,11 @@ assert.deepEqual(myArray, [5, 4, 3, 2, 1, 0]);
 ## --after-user-code--
 
 ```js
-if(typeof myArray !== "undefined"){(function(){return myArray;})();}
+if (typeof myArray !== 'undefined') {
+  (function () {
+    return myArray;
+  })();
+}
 ```
 
 ## --seed-contents--
@@ -66,7 +70,7 @@ var myArray = [];
 ```js
 var myArray = [];
 var i = 5;
-while(i >= 0) {
+while (i >= 0) {
   myArray.push(i);
   i--;
 }

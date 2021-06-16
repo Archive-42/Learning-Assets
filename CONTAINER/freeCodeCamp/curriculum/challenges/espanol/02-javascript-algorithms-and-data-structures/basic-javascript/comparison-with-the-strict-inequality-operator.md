@@ -9,14 +9,14 @@ dashedName: comparison-with-the-strict-inequality-operator
 
 # --description--
 
-El operador de estricta desigualdad `!==` es el opuesto lógico del operador de estricta igualdad. Esto significa "Estrictamente Desigual", y devuelve `false` cuando la comparación de estricta igualdad devolvería `true` y *vice versa*. El operador de estricta desigualdad no convertirá los tipos de datos.
+El operador de estricta desigualdad `!==` es el opuesto lógico del operador de estricta igualdad. Esto significa "Estrictamente Desigual", y devuelve `false` cuando la comparación de estricta igualdad devolvería `true` y _vice versa_. El operador de estricta desigualdad no convertirá los tipos de datos.
 
 **Ejemplos**
 
 ```js
-3 !==  3
-3 !== '3'
-4 !==  3
+3 !== 3;
+3 !== '3';
+4 !== 3;
 ```
 
 En orden, estas expresiones se evaluarían como `false`, `true` y `true`.
@@ -64,10 +64,11 @@ assert(code.match(/(val\s*!==\s*\d+)|(\d+\s*!==\s*val)/g).length > 0);
 ```js
 // Setup
 function testStrictNotEqual(val) {
-  if (val) { // Change this line
-    return "Not Equal";
+  if (val) {
+    // Change this line
+    return 'Not Equal';
   }
-  return "Equal";
+  return 'Equal';
 }
 
 testStrictNotEqual(10);
@@ -78,8 +79,8 @@ testStrictNotEqual(10);
 ```js
 function testStrictNotEqual(val) {
   if (val !== 17) {
-    return "Not Equal";
+    return 'Not Equal';
   }
-  return "Equal";
+  return 'Equal';
 }
 ```

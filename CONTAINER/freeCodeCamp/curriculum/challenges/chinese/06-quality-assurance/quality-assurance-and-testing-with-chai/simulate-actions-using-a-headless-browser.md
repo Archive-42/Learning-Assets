@@ -42,7 +42,7 @@ const browser = new Browser();
 然后，通过以下代码，使用 `suiteSetup` 钩子把 `browser` 指向 `/` 路由：
 
 ```js
-suiteSetup(function(done) {
+suiteSetup(function (done) {
   return browser.visit('/', done);
 });
 ```
@@ -52,14 +52,14 @@ suiteSetup(function(done) {
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=functional').then(
-    (data) => {
-      data.slice(0, 4).forEach((test) => {
+    data => {
+      data.slice(0, 4).forEach(test => {
         assert.equal(test.state, 'passed');
-      })
+      });
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

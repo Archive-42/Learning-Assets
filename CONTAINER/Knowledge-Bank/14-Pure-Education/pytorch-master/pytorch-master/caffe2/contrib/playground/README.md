@@ -1,18 +1,19 @@
 # Playground for Caffe2 Models
 
-Playground is created to allow modelers to reuse the components of their models.  It is based on data parallel model of Caffe2.  Playground provide a framework that takes care of regular trainer iteration procedures and abstracting out APIs that allows user to apply customized model components of their own.  User can swap / exchange /reuse these components without rewriting the whole training script.  Once the components are in place, user can use parameterized launch command to drive their experiments.  This will be convenient for creating large amount of experiments with different components defined for each of them.  It may be used as a tool to explore different model architect / algorithms like optimizer / momentum / learning rate / batch normalization parameters.
+Playground is created to allow modelers to reuse the components of their models. It is based on data parallel model of Caffe2. Playground provide a framework that takes care of regular trainer iteration procedures and abstracting out APIs that allows user to apply customized model components of their own. User can swap / exchange /reuse these components without rewriting the whole training script. Once the components are in place, user can use parameterized launch command to drive their experiments. This will be convenient for creating large amount of experiments with different components defined for each of them. It may be used as a tool to explore different model architect / algorithms like optimizer / momentum / learning rate / batch normalization parameters.
 
 Playground project highlight:
-1. parameter driven: no need to create py script for each experiment, just swap components using parameters.  Very customizable, add your own component and add your opts in the command as you want.
-2. All models follows a typical way of train/testing epoch iteration.  Many aspects can be customized, example: run epoch by loss instead of predetermined iteration
+
+1. parameter driven: no need to create py script for each experiment, just swap components using parameters. Very customizable, add your own component and add your opts in the command as you want.
+2. All models follows a typical way of train/testing epoch iteration. Many aspects can be customized, example: run epoch by loss instead of predetermined iteration
 3. customizable components, trained metrics, also specified with parameters
 4. gpu or cpu training supported
 5. parallel training on multiple host supported
 6. checkpoint, pre-trained model helps with recover interrupted / failed experiment
 
-
 ### Example Usage
-Playground comes with a resnet example, located in resnetdemo folder.  To see how playground works, do the following:
+
+Playground comes with a resnet example, located in resnetdemo folder. To see how playground works, do the following:
 
 1. make sure your caffe2 build successful with openCV and lmdb dependencies supported.
 
@@ -107,14 +108,13 @@ $ python caffe2/contrib/playground/AnyExpOnTerm.py --parameters-json '{
 
 5. now you can switch to different components that supplied in resnetdemo folder like so:
 
-   "forward_pass_py":"caffe2_resnet50_default_forward", --> "explicit_resnet_forward"  (which is a resnet model that allow you specify layers with "model_param"."num_layer")
+   "forward_pass_py":"caffe2_resnet50_default_forward", --> "explicit_resnet_forward" (which is a resnet model that allow you specify layers with "model_param"."num_layer")
 
    and/or
 
    "parameter_update_py":"caffe2_resnet50_default_param_update", --> "explicit_resnet_param_update"
 
    playground should be able to launch training epochs and give you results
-
 
 ### General Usage Guideline
 
@@ -124,31 +124,30 @@ $ python caffe2/contrib/playground/AnyExpOnTerm.py --parameters-json '{
 
 3. other module dependent opts can be changed or removed: the rest of the opts.
 
-4. specify any additional opts depends on your modules' need, directly add them into the command line opts dictionary and no need to change any py code.  You should create your module to make sure they knows how to handle these new opts.  You access your own opts in such a manner:  self.opt['your_own_arg']['your_own_sub_arg']
+4. specify any additional opts depends on your modules' need, directly add them into the command line opts dictionary and no need to change any py code. You should create your module to make sure they knows how to handle these new opts. You access your own opts in such a manner: self.opt['your_own_arg']['your_own_sub_arg']
 
-5. checkpoint is performed at the end of each epoch by default and generated model file can be find in log.  Each checkpoint can be used as pre-trained model to start new experiment.  Make sure new experiment is compatible with pre-trained model if you specified it.  For example, gpu experiment and cpu experiment can not share checkpoint, because the blob names are different.  Any experiments with different blob names can not share checkpoint.
+5. checkpoint is performed at the end of each epoch by default and generated model file can be find in log. Each checkpoint can be used as pre-trained model to start new experiment. Make sure new experiment is compatible with pre-trained model if you specified it. For example, gpu experiment and cpu experiment can not share checkpoint, because the blob names are different. Any experiments with different blob names can not share checkpoint.
 
-6. The metric and plots are reported when experiment finish running.  Intermediate results are reported in the log of the CreateTrainerAndRunManyEpochs operator as iteration goes on.
+6. The metric and plots are reported when experiment finish running. Intermediate results are reported in the log of the CreateTrainerAndRunManyEpochs operator as iteration goes on.
 
-7. if num_gpus is specified, the trainer will try to use gpu.  if num_gpus = 0, the trainer will use cpu to train.  For gpu training, batch_per_device are typically 32, for cpu training, batch_per_device is normally set to 2 with num_cpus higher like 8 or 16 depends on your machines' configuration.
+7. if num_gpus is specified, the trainer will try to use gpu. if num_gpus = 0, the trainer will use cpu to train. For gpu training, batch_per_device are typically 32, for cpu training, batch_per_device is normally set to 2 with num_cpus higher like 8 or 16 depends on your machines' configuration.
 
-8. if train on single host, let "num_shards" = 1,  if multiple hosts, specify your "num_shards" and start parallelized training from each shards similarly to the resnet50_trainer.py example in caffe2/python/examples/ folder.
-
+8. if train on single host, let "num_shards" = 1, if multiple hosts, specify your "num_shards" and start parallelized training from each shards similarly to the resnet50_trainer.py example in caffe2/python/examples/ folder.
 
 ### Develop Your Own Components
 
 1. Create a folder for your own experiment under caffe2/contrib/playground/ and go to this folder.
 
-2. Create a base model file, for example IN1kResnet.py.  In this script you need to implement init function and in it, instantiate your train/test model and give them to self.train_model and self.test_model.  In this base model class, you can also chose to override other functions you'd like to customize, for example if you want to iterate according to accuracy instead of fixed number of loops, override list_of_epochs(), and list_of_epoch_iters()
+2. Create a base model file, for example IN1kResnet.py. In this script you need to implement init function and in it, instantiate your train/test model and give them to self.train_model and self.test_model. In this base model class, you can also chose to override other functions you'd like to customize, for example if you want to iterate according to accuracy instead of fixed number of loops, override list_of_epochs(), and list_of_epoch_iters()
 
-3. Create component py scripts implementing the generators arguments of data_parallel_model.Parallelize().  Total four of them: input_builder_fun, forward_pass_builder_fun,  one of param_update_builder_fun or optimizer_builder_fun, and rendezvous.  This is where you can switch between different components. Examples: for the demo IN1k_resnet experiments, I created two different forward function: explicit_resnet_forward.py and caffe2_resnet50_default_forward.py.  Both implemented the API "gen_param_update_builder_fun", which is abstract method in the framework class AnyExp.py
+3. Create component py scripts implementing the generators arguments of data_parallel_model.Parallelize(). Total four of them: input_builder_fun, forward_pass_builder_fun, one of param_update_builder_fun or optimizer_builder_fun, and rendezvous. This is where you can switch between different components. Examples: for the demo IN1k_resnet experiments, I created two different forward function: explicit_resnet_forward.py and caffe2_resnet50_default_forward.py. Both implemented the API "gen_param_update_builder_fun", which is abstract method in the framework class AnyExp.py
 
-4. Next import the module components you created into module_map.py.  This import is needed to include these packages during building.  Give imported module a module name, normally if module is just a simple file contains some functions, just use the py script file name.  If the module contains class and the class is needed for module input, name it with the class name, examples are the meter classes like compute_loss.  When launching your experiment, in opts for the term “xxx_py” fill in the name you chose in module_map.py.  Playground will find your module and load it.
+4. Next import the module components you created into module_map.py. This import is needed to include these packages during building. Give imported module a module name, normally if module is just a simple file contains some functions, just use the py script file name. If the module contains class and the class is needed for module input, name it with the class name, examples are the meter classes like compute_loss. When launching your experiment, in opts for the term “xxx_py” fill in the name you chose in module_map.py. Playground will find your module and load it.
 
-5. Create as many modules as you need.  Then when you perform your experiment, specify the module you want in opts correspondingly and you can run your experiment with ease.
+5. Create as many modules as you need. Then when you perform your experiment, specify the module you want in opts correspondingly and you can run your experiment with ease.
 
-6. In the demo, the opts item “gen_output_py” uses output_generator.py , which provides a minimum way to generating final experimental result, stored in the form of a dict.  It will allow user to do whatever visualization with these data after the training is finished.
+6. In the demo, the opts item “gen_output_py” uses output_generator.py , which provides a minimum way to generating final experimental result, stored in the form of a dict. It will allow user to do whatever visualization with these data after the training is finished.
 
-7. Customize your experimental result.  A meter interface is provided to implement your own metrics calculators.  Example compute_loss.py and compute_topk_accuracy.py.  For training metrics, results are calculated right away in each iteration.  For testing metrics, results are accumulated for the whole loop and finally calculated after test iteration finishes.  Once your have your meter class defined, you can start defining what metrics to report in your opts['output']['metrics'] list.  The name you give to your metrics can later be used when you define your plots.  The Playground will always record throughput metrics secs_per_train and samples_per_sec.
+7. Customize your experimental result. A meter interface is provided to implement your own metrics calculators. Example compute_loss.py and compute_topk_accuracy.py. For training metrics, results are calculated right away in each iteration. For testing metrics, results are accumulated for the whole loop and finally calculated after test iteration finishes. Once your have your meter class defined, you can start defining what metrics to report in your opts['output']['metrics'] list. The name you give to your metrics can later be used when you define your plots. The Playground will always record throughput metrics secs_per_train and samples_per_sec.
 
-8. an additional_override_py option is provided for the modules to allow user override any existing methods defined in the main framework AnyExp.py.  This make it easy to shut down part of the model to focus on remaining modules for experimenting or debugging.  An example is given as override_no_test_model_no_checkpoint.py, which turns off checkpointing and does neither prepare nor run test model.
+8. an additional_override_py option is provided for the modules to allow user override any existing methods defined in the main framework AnyExp.py. This make it easy to shut down part of the model to focus on remaining modules for experimenting or debugging. An example is given as override_no_test_model_no_checkpoint.py, which turns off checkpointing and does neither prepare nor run test model.

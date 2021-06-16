@@ -48,9 +48,9 @@ assert.strictEqual(specialPythagoreanTriplet(1000), 31875000);
 
 ```js
 function specialPythagoreanTriplet(n) {
- let sumOfabc = n;
+  let sumOfabc = n;
 
- return true;
+  return true;
 }
 
 specialPythagoreanTriplet(1000);
@@ -59,16 +59,16 @@ specialPythagoreanTriplet(1000);
 # --solutions--
 
 ```js
-const specialPythagoreanTriplet = (n)=>{
- let sumOfabc = n;
- let a,b,c;
- for(a = 1; a<=sumOfabc/3; a++){
- for(b = a+1; b<=sumOfabc/2; b++){
- c = Math.sqrt(a*a+b*b);
- if((a+b+c) == sumOfabc){
- return a*b*c;
- }
- }
- }
-}
+const specialPythagoreanTriplet = n => {
+  let sumOfabc = n;
+  let a, b, c;
+  for (a = 1; a <= sumOfabc / 3; a++) {
+    for (b = a + 1; b <= sumOfabc / 2; b++) {
+      c = Math.sqrt(a * a + b * b);
+      if (a + b + c == sumOfabc) {
+        return a * b * c;
+      }
+    }
+  }
+};
 ```

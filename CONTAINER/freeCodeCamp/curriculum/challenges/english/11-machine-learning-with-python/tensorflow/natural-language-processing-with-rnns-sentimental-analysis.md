@@ -47,4 +47,3 @@ C: `LSTM`
 ## --video-solution--
 
 3
-

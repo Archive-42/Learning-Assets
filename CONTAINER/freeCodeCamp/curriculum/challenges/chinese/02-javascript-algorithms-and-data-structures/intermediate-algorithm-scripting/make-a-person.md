@@ -11,12 +11,12 @@ dashedName: make-a-person
 用以下方法填充对象构造函数：
 
 ```js
-getFirstName()
-getLastName()
-getFullName()
-setFirstName(first)
-setLastName(last)
-setFullName(firstAndLast)
+getFirstName();
+getLastName();
+getFullName();
+setFirstName(first);
+setLastName(last);
+setFullName(firstAndLast);
 ```
 
 运行测试以查看每个方法的预期输出。 方法接收一个参数，因此必须要有一个参数，并且其类型应该为字符串。 这些方法必须是与对象交互的唯一可用方法。
@@ -131,19 +131,19 @@ assert.strictEqual(
 ## --after-user-code--
 
 ```js
-if(bob){
-  bob = new Person("Bob Ross");
+if (bob) {
+  bob = new Person('Bob Ross');
 }
 ```
 
 ## --seed-contents--
 
 ```js
-var Person = function(firstAndLast) {
+var Person = function (firstAndLast) {
   // Only change code below this line
   // Complete the method below and implement the others similarly
-  this.getFullName = function() {
-    return "";
+  this.getFullName = function () {
+    return '';
   };
   return firstAndLast;
 };
@@ -155,39 +155,37 @@ bob.getFullName();
 # --solutions--
 
 ```js
-var Person = function(firstAndLast) {
-
+var Person = function (firstAndLast) {
   var firstName, lastName;
 
   function updateName(str) {
-    firstName = str.split(" ")[0];
-    lastName = str.split(" ")[1];
+    firstName = str.split(' ')[0];
+    lastName = str.split(' ')[1];
   }
 
   updateName(firstAndLast);
 
-  this.getFirstName = function(){
+  this.getFirstName = function () {
     return firstName;
   };
 
-  this.getLastName = function(){
+  this.getLastName = function () {
     return lastName;
   };
 
-  this.getFullName = function(){
-    return firstName + " " + lastName;
+  this.getFullName = function () {
+    return firstName + ' ' + lastName;
   };
 
-  this.setFirstName = function(str){
+  this.setFirstName = function (str) {
     firstName = str;
   };
 
-
-  this.setLastName = function(str){
+  this.setLastName = function (str) {
     lastName = str;
   };
 
-  this.setFullName = function(str){
+  this.setFullName = function (str) {
     updateName(str);
   };
 };

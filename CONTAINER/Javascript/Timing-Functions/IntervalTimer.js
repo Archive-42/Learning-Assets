@@ -12,8 +12,7 @@ class IntervalTimer {
    * @param callBack The callback function to be executed.
    * @return {IntervalTimer} If exists, the existing object.
    */
-  constructor (interval = 10,
-    callBack = () => {}) {
+  constructor(interval = 10, callBack = () => {}) {
     this.prevInterval = 0
     if (this.instance == null) {
       this.interval = interval
@@ -27,7 +26,7 @@ class IntervalTimer {
   /**
    * @description Starts the timer.
    */
-  startTimer () {
+  startTimer() {
     this.timer = setInterval(this.callBack, this.interval)
   }
 
@@ -35,7 +34,7 @@ class IntervalTimer {
    * @description Resets the timer.
    * @return {number} Elapsed time in milliseconds.
    */
-  resetTimer () {
+  resetTimer() {
     clearInterval(this.timer)
     this.callBack = () => {}
     return this.getElapsedTime()
@@ -44,7 +43,7 @@ class IntervalTimer {
   /**
    * @return {number} Elapsed time in milliseconds since reset.
    */
-  getElapsedTime (offset = 0) {
+  getElapsedTime(offset = 0) {
     this.timeElapsed = this.timer - this.prevInterval
     this.prevInterval = this.timer
     return this.timeElapsed - offset
@@ -53,7 +52,7 @@ class IntervalTimer {
   /**
    * @return {number} Elapsed time since start.
    */
-  getRunTime () {
+  getRunTime() {
     return this.timer
   }
 }

@@ -10,10 +10,10 @@ All operators that are part of the public API of PyTorch are defined in `native_
 
 There’s four main use cases
 
-* You’re writing a new operator that isn’t supposed to be part of the public PyTorch API.
-* You’re writing a new operator but don’t want to change the core pytorch code base, say you’re developing a shared library with operators.
-* You’re writing a C++ extension for PyTorch or you’re using inline c++ in your .py model files.
-* You’re writing a backend library like XLA or MSNPU that adds new kernels to all operators defined in `native_functions.yaml`.
+- You’re writing a new operator that isn’t supposed to be part of the public PyTorch API.
+- You’re writing a new operator but don’t want to change the core pytorch code base, say you’re developing a shared library with operators.
+- You’re writing a C++ extension for PyTorch or you’re using inline c++ in your .py model files.
+- You’re writing a backend library like XLA or MSNPU that adds new kernels to all operators defined in `native_functions.yaml`.
 
 For these use cases, the custom operator API is the better solution.
 
@@ -21,9 +21,9 @@ For these use cases, the custom operator API is the better solution.
 
 If you’re just using the custom operator API to add new kernels for existing operators (e.g. the XLA/MSNPU example above), then you’re fine and don’t pay any price. If, however, you define a new operator purely using the custom op API, i.e. your operator never shows up in `native_functions.yaml`, then you need to be aware of a few caveats.
 
-* It will not get a C++ API generated. There will not be `Tensor::your_op()` methods or `at::your_op()` functions to call your operator.
-* The API for calling the operator from Python looks a little bit different. It needs to be called through `torch.ops.your_op()` instead of `torch._C`.
-* Setting up autograd for custom operators is harder. You don’t get it automatically but need to use `torch::autograd::Function` to implement autograd ([example](https://github.com/pytorch/pytorch/blob/d762ad09df7f5808196b0e2e417b6592e0d30a30/test/cpp/api/autograd.cpp#L126-L152)). Note also that `torch::autograd::Function` does not work together with dispatch yet, so if you have different kernels for different backends (say CPU and CUDA), you need to manually write if/else statements for that.
+- It will not get a C++ API generated. There will not be `Tensor::your_op()` methods or `at::your_op()` functions to call your operator.
+- The API for calling the operator from Python looks a little bit different. It needs to be called through `torch.ops.your_op()` instead of `torch._C`.
+- Setting up autograd for custom operators is harder. You don’t get it automatically but need to use `torch::autograd::Function` to implement autograd ([example](https://github.com/pytorch/pytorch/blob/d762ad09df7f5808196b0e2e417b6592e0d30a30/test/cpp/api/autograd.cpp#L126-L152)). Note also that `torch::autograd::Function` does not work together with dispatch yet, so if you have different kernels for different backends (say CPU and CUDA), you need to manually write if/else statements for that.
 
 ## Writing custom operators
 
@@ -170,13 +170,13 @@ static auto registry = torch::RegisterOperators()
 
 The kernel function can take any of the following types as inputs or outputs:
 
-* `at::Tensor`
-* `double` (note: `float` is not supported)
-* `int64_t` (note: other integer types like `int`, `uint64_t`, `int32_t`, `...` are not supported)
-* `bool`
-* `std::string`
-* `at::Scalar` (this is a type that can hold either an integer or a floating point value)
-* `at::optional<T>` with T being any type from the list above
+- `at::Tensor`
+- `double` (note: `float` is not supported)
+- `int64_t` (note: other integer types like `int`, `uint64_t`, `int32_t`, `...` are not supported)
+- `bool`
+- `std::string`
+- `at::Scalar` (this is a type that can hold either an integer or a floating point value)
+- `at::optional<T>` with T being any type from the list above
 
 The kernel function can take and return list inputs by using `torch::List<T>`. `T` must be one of the supported types from above excluding `at::Scalar`.
 
@@ -189,7 +189,7 @@ If you need another type, it might work but not be officially supported (yet). P
 ### Overloads
 
 When multiple kernels are registered for the same operator, they must have the same schema or registration will fail.
-*Note: This also includes schema properties like annotations or default arguments. If one kernel specifies a schema with annotations or a default argument, all kernels for this operator must do this. Schemas automatically inferred from kernel functions will not have annotations or default arguments. This means to use annotations or default arguments, all kernels for this operator must explicitly specify the schema.*
+_Note: This also includes schema properties like annotations or default arguments. If one kernel specifies a schema with annotations or a default argument, all kernels for this operator must do this. Schemas automatically inferred from kernel functions will not have annotations or default arguments. This means to use annotations or default arguments, all kernels for this operator must explicitly specify the schema._
 
 If you want to reuse the same operator name for a different schema, you can use overloads. Overloads must be named and the name is appended to the operator name after a dot:
 
@@ -250,7 +250,7 @@ Note that this doesn't autogenerate a caffe2 operator schema for you (yet). If t
 
 Also, there's some requirements on the operator schema for it to be callable from caffe2. Some of these restrictions are just because the functionality isn't implemented. If you have a use case that is blocked by them, please reach out to Sebastian Messmer.
 
-* There must be either one or more arguments of type `Tensor`, or one argument of type `Tensor[]`. You cannot have both `Tensor` and `Tensor[]`.
-* Except for `Tensor` or `Tensor[]`, only arguments of type `int`, `double` and `bool` are supported. These can be in any position in the argument list and will be read from the caffe2 operator arguments, based on the argument name in the operator schema.
-* We do not support lists (`int[]`, `double[]` or `bool[]`) or optionals (`int?`, `double?`, `bool?`) yet.
-* The operator must return a single `Tensor` or multiple tensors as in `(Tensor, Tensor, Tensor)`. It cannot return a list `Tensor[]`, optional `Tensor?` or any primitive types.
+- There must be either one or more arguments of type `Tensor`, or one argument of type `Tensor[]`. You cannot have both `Tensor` and `Tensor[]`.
+- Except for `Tensor` or `Tensor[]`, only arguments of type `int`, `double` and `bool` are supported. These can be in any position in the argument list and will be read from the caffe2 operator arguments, based on the argument name in the operator schema.
+- We do not support lists (`int[]`, `double[]` or `bool[]`) or optionals (`int?`, `double?`, `bool?`) yet.
+- The operator must return a single `Tensor` or multiple tensors as in `(Tensor, Tensor, Tensor)`. It cannot return a list `Tensor[]`, optional `Tensor?` or any primitive types.

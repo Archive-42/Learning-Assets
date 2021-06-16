@@ -50,10 +50,10 @@ It provides several useful "aliases":
 The macro takes three arguments:
 
 1. Quantized data type. This will define what the "aliases" are.
-In the example above, the resulting tensor will be the same as the `qa.scalar_type()`.
+   In the example above, the resulting tensor will be the same as the `qa.scalar_type()`.
 2. Function name. This argument is currently used for error reporting.
 3. Implementation lambda. The main implementation should sit in the body of this lambda.
-it should also use the aliases for the quantized data types instead of the explicit data types.
+   it should also use the aliases for the quantized data types instead of the explicit data types.
 
 ### Step 1. Define the schema
 
@@ -103,8 +103,8 @@ In that case, modification would look as:
 ```yaml
 - func: xand(Tensor a, Tensor b) -> Tensor
   dispatch:
-    CPU: _xand_cpu     # Assume this existed
-    CUDA: _xand_cuda   # Assume this existed
+    CPU: _xand_cpu # Assume this existed
+    CUDA: _xand_cuda # Assume this existed
     QuantizedCPU: quantized_xand
 ```
 
@@ -139,7 +139,8 @@ Before the op can be used, it needs to be compiled.
 If the op is placed under `native/quantized/cpu`, this already done for you.
 However, if the location is changed, two files must be notified:
 
-- *`caffe2/aten/TARGETS`* -- You can follow the same example, and add your path in somewhere in that file. Notice in this file we places the path to the quantized source files:
+- _`caffe2/aten/TARGETS`_ -- You can follow the same example, and add your path in somewhere in that file. Notice in this file we places the path to the quantized source files:
+
 ```bash
 ATEN_NATIVE_CPP = glob([
 #...
@@ -147,8 +148,8 @@ ATEN_NATIVE_CPP = glob([
 ])
 ```
 
-- *`caffe2/aten/src/ATen/CMakeLists.txt`* -- Again, following the example, you must add your paths.
-The current quantization paths are added as
+- _`caffe2/aten/src/ATen/CMakeLists.txt`_ -- Again, following the example, you must add your paths.
+  The current quantization paths are added as
 
 ```bash
 FILE(GLOB native_quantized_cpp

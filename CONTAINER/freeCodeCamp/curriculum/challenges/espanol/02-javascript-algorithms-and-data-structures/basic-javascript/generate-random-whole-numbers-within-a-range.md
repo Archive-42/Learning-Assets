@@ -16,7 +16,7 @@ Para ello, definiremos un número mínimo `min` y un número máximo `max`.
 Esta es la fórmula que utilizaremos. Tómate un momento para leerla e intenta entender lo que este código está haciendo:
 
 ```js
-Math.floor(Math.random() * (max - min + 1)) + min
+Math.floor(Math.random() * (max - min + 1)) + min;
 ```
 
 # --instructions--
@@ -69,18 +69,18 @@ assert(
 ```js
 var calcMin = 100;
 var calcMax = -100;
-for(var i = 0; i < 100; i++) {
-  var result = randomRange(5,15);
+for (var i = 0; i < 100; i++) {
+  var result = randomRange(5, 15);
   calcMin = Math.min(calcMin, result);
   calcMax = Math.max(calcMax, result);
 }
-(function(){
-  if(typeof myRandom === 'number') {
-    return "myRandom = " + myRandom;
+(function () {
+  if (typeof myRandom === 'number') {
+    return 'myRandom = ' + myRandom;
   } else {
-    return "myRandom undefined";
+    return 'myRandom undefined';
   }
-})()
+})();
 ```
 
 ## --seed-contents--

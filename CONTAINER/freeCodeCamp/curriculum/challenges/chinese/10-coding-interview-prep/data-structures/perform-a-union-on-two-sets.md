@@ -144,10 +144,10 @@ class Set {
     const newSet = new Set();
     this.values().forEach(value => {
       newSet.add(value);
-    })
+    });
     set.values().forEach(value => {
       newSet.add(value);
-    })
+    });
 
     return newSet;
   }

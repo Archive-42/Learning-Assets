@@ -33,11 +33,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -50,7 +60,6 @@ assert(
     grid-gap: 10px;
     /* Only change code below this line */
 
-    
     /* Only change code above this line */
   }
 </style>
@@ -67,5 +76,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {justify-items: center;}</style>
+<style>
+  .container {
+    justify-items: center;
+  }
+</style>
 ```

@@ -1044,13 +1044,13 @@
   use_c10_dispatcher: hacky_wrapper_for_legacy_signatures
 
 - func: conv1d.padding(Tensor input, Tensor weight, Tensor? bias=None, int[1] stride=1, str padding="valid", int[1] dilation=1, int groups=1) -> Tensor
-  cpp_no_default_args: ['bias', 'stride', 'padding']
+  cpp_no_default_args: ["bias", "stride", "padding"]
 
 - func: conv2d.padding(Tensor input, Tensor weight, Tensor? bias=None, int[2] stride=1, str padding="valid", int[2] dilation=1, int groups=1) -> Tensor
-  cpp_no_default_args: ['bias', 'stride', 'padding']
+  cpp_no_default_args: ["bias", "stride", "padding"]
 
 - func: conv3d.padding(Tensor input, Tensor weight, Tensor? bias=None, int[3] stride=1, str padding="valid", int[3] dilation=1, int groups=1) -> Tensor
-  cpp_no_default_args: ['bias', 'stride', 'padding']
+  cpp_no_default_args: ["bias", "stride", "padding"]
 
 - func: conv_tbc(Tensor self, Tensor weight, Tensor bias, int pad=0) -> Tensor
   dispatch:
@@ -1491,7 +1491,6 @@
 # applying indices = indices.contiguous().
 # The backward functions apply a check that these input tensors are contiguous.
 
-
 - func: _embedding_bag_forward_only(Tensor weight, Tensor indices, Tensor offsets, bool scale_grad_by_freq=False, int mode=0, bool sparse=False, Tensor? per_sample_weights=None, bool include_last_offset=False) -> (Tensor, Tensor, Tensor, Tensor)
   use_c10_dispatcher: hacky_wrapper_for_legacy_signatures
   dispatch:
@@ -1676,13 +1675,13 @@
     CPU, CUDA: expm1_out
 
 - func: expand(Tensor(a) self, int[] size, *, bool implicit=False) -> Tensor(a)
-  variants: method  # This is method-only to match the previous tensor API. In the future we could make this a function too.
+  variants: method # This is method-only to match the previous tensor API. In the future we could make this a function too.
   device_guard: False
   dispatch:
     DefaultBackend: expand
 
 - func: expand_as(Tensor(a) self, Tensor other) -> Tensor(a)
-  variants: method  # This is method-only to match the previous tensor API. In the future we could make this a function too.
+  variants: method # This is method-only to match the previous tensor API. In the future we could make this a function too.
   device_guard: False
 
 - func: eye(int n, *, ScalarType? dtype=None, Layout? layout=None, Device? device=None, bool? pin_memory=None) -> Tensor
@@ -2128,7 +2127,7 @@
 - func: mkldnn_linear_backward_input(int[] input_size, Tensor grad_output, Tensor weight) -> Tensor
   use_c10_dispatcher: hacky_wrapper_for_legacy_signatures
   dispatch:
-      MkldnnCPU: mkldnn_linear_backward_input
+    MkldnnCPU: mkldnn_linear_backward_input
 
 - func: mkldnn_linear_backward_weights(Tensor grad_output, Tensor input, Tensor weight, bool bias_defined) -> (Tensor, Tensor)
   use_c10_dispatcher: hacky_wrapper_for_legacy_signatures
@@ -2887,7 +2886,7 @@
   variants: function
 
 - func: permute(Tensor(a) self, int[] dims) -> Tensor(a)
-  variants: method  # This is method-only to match the previous tensor API. In the future we could make this a function too.
+  variants: method # This is method-only to match the previous tensor API. In the future we could make this a function too.
   dispatch:
     DefaultBackend: permute
 
@@ -3117,7 +3116,7 @@
   use_c10_dispatcher: hacky_wrapper_for_legacy_signatures
 
 - func: repeat(Tensor self, int[] repeats) -> Tensor
-  variants: method  # This is method-only to match the previous tensor API. In the future we could make this a function too.
+  variants: method # This is method-only to match the previous tensor API. In the future we could make this a function too.
   dispatch:
     DefaultBackend: repeat
 
@@ -4809,9 +4808,7 @@
 # Quantized RNN layers
 # - func: quantized_lstm(Tensor input, Tensor[] hx, Tensor[] params, bool has_biases, int num_layers, float dropout, bool train, bool bidirectional, bool batch_first, *, ScalarType? dtype=None, bool use_dynamic=False) -> (Tensor, Tensor, Tensor)
 
-
 # - func: quantized_lstm.data(Tensor data, Tensor batch_sizes, Tensor[] hx, Tensor[] params, bool has_biases, int num_layers, float dropout, bool train, bool bidirectional, *, ScalarType? dtype=None, bool use_dynamic=False) -> (Tensor, Tensor, Tensor)
-
 
 # Quantized GRU layers
 
@@ -9264,5 +9261,5 @@
 
 # Note: this function is only for testing.
 - func: _test_ambiguous_defaults.b(Tensor dummy, int a=2, str b="2") -> Tensor
-  cpp_no_default_args: ['a', 'b']
+  cpp_no_default_args: ["a", "b"]
   python_module: nn

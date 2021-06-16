@@ -14,7 +14,7 @@ dashedName: check-radio-buttons-and-checkboxes-by-default
 在一个 input 元素里面添加 `checked` 这个词，即可实现。 例如:
 
 ```html
-<input type="radio" name="test-name" checked>
+<input type="radio" name="test-name" checked />
 ```
 
 # --instructions--
@@ -44,7 +44,11 @@ assert($('input[type="checkbox"]').prop('checked'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -59,12 +63,32 @@ assert($('input[type="checkbox"]').prop('checked'));
     <li>other cats</li>
   </ol>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
-    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
-    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving"> Loving</label>
-    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
-    <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label for="indoor"
+      ><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" />
+      Indoor</label
+    >
+    <label for="outdoor"
+      ><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor" />
+      Outdoor</label
+    ><br />
+    <label for="loving"
+      ><input id="loving" type="checkbox" name="personality" value="loving" />
+      Loving</label
+    >
+    <label for="lazy"
+      ><input id="lazy" type="checkbox" name="personality" value="lazy" />
+      Lazy</label
+    >
+    <label for="energetic"
+      ><input
+        id="energetic"
+        type="checkbox"
+        name="personality"
+        value="energetic"
+      />
+      Energetic</label
+    ><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -77,7 +101,11 @@ assert($('input[type="checkbox"]').prop('checked'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -92,12 +120,44 @@ assert($('input[type="checkbox"]').prop('checked'));
     <li>other cats</li>
   </ol>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
-    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
-    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
-    <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label for="indoor"
+      ><input
+        id="indoor"
+        type="radio"
+        name="indoor-outdoor"
+        value="indoor"
+        checked
+      />
+      Indoor</label
+    >
+    <label for="outdoor"
+      ><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor" />
+      Outdoor</label
+    ><br />
+    <label for="loving"
+      ><input
+        id="loving"
+        type="checkbox"
+        name="personality"
+        value="loving"
+        checked
+      />
+      Loving</label
+    >
+    <label for="lazy"
+      ><input id="lazy" type="checkbox" name="personality" value="lazy" />
+      Lazy</label
+    >
+    <label for="energetic"
+      ><input
+        id="energetic"
+        type="checkbox"
+        name="personality"
+        value="energetic"
+      />
+      Energetic</label
+    ><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

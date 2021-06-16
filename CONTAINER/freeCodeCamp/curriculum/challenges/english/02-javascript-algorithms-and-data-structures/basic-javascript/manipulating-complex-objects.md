@@ -16,15 +16,11 @@ Here's an example of a complex data structure:
 ```js
 var ourMusic = [
   {
-    "artist": "Daft Punk",
-    "title": "Homework",
-    "release_year": 1997,
-    "formats": [ 
-      "CD", 
-      "Cassette", 
-      "LP"
-    ],
-    "gold": true
+    artist: 'Daft Punk',
+    title: 'Homework',
+    release_year: 1997,
+    formats: ['CD', 'Cassette', 'LP'],
+    gold: true
   }
 ];
 ```
@@ -36,11 +32,7 @@ This is an array which contains one object inside. The object has various pieces
   "artist": "Daft Punk",
   "title": "Homework",
   "release_year": 1997,
-  "formats": [ 
-    "CD",
-    "Cassette",
-    "LP"
-  ],
+  "formats": ["CD", "Cassette", "LP"],
   "gold": true
 }
 ```
@@ -68,13 +60,17 @@ assert(myMusic.length > 1);
 The elements in the `myMusic` array should be objects
 
 ```js
-myMusic.forEach(object => {assert.typeOf(object, 'object')})
+myMusic.forEach(object => {
+  assert.typeOf(object, 'object');
+});
 ```
 
 Your object in `myMusic` should have at least 4 properties
 
 ```js
-myMusic.forEach(object => {assert(Object.keys(object).length > 3); });
+myMusic.forEach(object => {
+  assert(Object.keys(object).length > 3);
+});
 ```
 
 Your object in `myMusic` should contain the property `artist` which is a string
@@ -82,8 +78,8 @@ Your object in `myMusic` should contain the property `artist` which is a string
 ```js
 myMusic.forEach(object => {
   assert.containsAllKeys(object, ['artist']);
-  assert.typeOf(object.artist, 'string')
-})
+  assert.typeOf(object.artist, 'string');
+});
 ```
 
 Your object in `myMusic` should contain the property `title` which is a string
@@ -91,8 +87,8 @@ Your object in `myMusic` should contain the property `title` which is a string
 ```js
 myMusic.forEach(object => {
   assert.containsAllKeys(object, ['title']);
-  assert.typeOf(object.title, 'string')
-})
+  assert.typeOf(object.title, 'string');
+});
 ```
 
 Your object in `myMusic` should contain the property `release_year` which is a number
@@ -100,8 +96,8 @@ Your object in `myMusic` should contain the property `release_year` which is a n
 ```js
 myMusic.forEach(object => {
   assert.containsAllKeys(object, ['release_year']);
-  assert.typeOf(object.release_year, 'number')
-})
+  assert.typeOf(object.release_year, 'number');
+});
 ```
 
 Your object in `myMusic` should contain a `formats` property which is an array
@@ -109,8 +105,8 @@ Your object in `myMusic` should contain a `formats` property which is an array
 ```js
 myMusic.forEach(object => {
   assert.containsAllKeys(object, ['formats']);
-  assert.typeOf(object.formats, 'array')
-})
+  assert.typeOf(object.formats, 'array');
+});
 ```
 
 `formats` should be an array of strings with at least two elements
@@ -118,10 +114,10 @@ myMusic.forEach(object => {
 ```js
 myMusic.forEach(object => {
   object.formats.forEach(format => {
-    assert.typeOf(format, 'string')
+    assert.typeOf(format, 'string');
   });
-  assert.isAtLeast(object.formats.length, 2)
-})
+  assert.isAtLeast(object.formats.length, 2);
+});
 ```
 
 # --seed--
@@ -129,7 +125,12 @@ myMusic.forEach(object => {
 ## --after-user-code--
 
 ```js
-(function(x){ if (Array.isArray(x)) { return JSON.stringify(x); } return "myMusic is not an array"})(myMusic);
+(function (x) {
+  if (Array.isArray(x)) {
+    return JSON.stringify(x);
+  }
+  return 'myMusic is not an array';
+})(myMusic);
 ```
 
 ## --seed-contents--
@@ -137,15 +138,11 @@ myMusic.forEach(object => {
 ```js
 var myMusic = [
   {
-    "artist": "Billy Joel",
-    "title": "Piano Man",
-    "release_year": 1973,
-    "formats": [
-      "CD",
-      "8T",
-      "LP"
-    ],
-    "gold": true
+    artist: 'Billy Joel',
+    title: 'Piano Man',
+    release_year: 1973,
+    formats: ['CD', '8T', 'LP'],
+    gold: true
   }
 ];
 ```
@@ -155,25 +152,17 @@ var myMusic = [
 ```js
 var myMusic = [
   {
-    "artist": "Billy Joel",
-    "title": "Piano Man",
-    "release_year": 1973,
-    "formats": [
-      "CS",
-      "8T",
-      "LP" ],
-    "gold": true
+    artist: 'Billy Joel',
+    title: 'Piano Man',
+    release_year: 1973,
+    formats: ['CS', '8T', 'LP'],
+    gold: true
   },
   {
-    "artist": "ABBA",
-    "title": "Ring Ring",
-    "release_year": 1973,
-    "formats": [
-      "CS",
-      "8T",
-      "LP",
-    "CD",
-  ]
+    artist: 'ABBA',
+    title: 'Ring Ring',
+    release_year: 1973,
+    formats: ['CS', '8T', 'LP', 'CD']
   }
 ];
 ```

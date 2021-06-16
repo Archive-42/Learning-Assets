@@ -45,7 +45,7 @@ assert(source.every((v, i) => v === i + 1) && source.length === 10);
 不应该使用 `Array.slice()`。
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/slice/g));
+getUserInput => assert(!getUserInput('index').match(/slice/g));
 ```
 
 应该对 `list` 进行解构赋值。
@@ -63,7 +63,7 @@ assert(
 ## --seed-contents--
 
 ```js
-const source = [1,2,3,4,5,6,7,8,9,10];
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function removeFirstTwo(list) {
   // Only change code below this line
   const arr = list; // Change this line
@@ -76,7 +76,7 @@ const arr = removeFirstTwo(source);
 # --solutions--
 
 ```js
-const source = [1,2,3,4,5,6,7,8,9,10];
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function removeFirstTwo(list) {
   const [, , ...arr] = list;
   return arr;

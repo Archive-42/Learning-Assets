@@ -36,7 +36,7 @@ The three `li` elements should be nested inside the `ol` element.
 ```js
 assert(
   [...document.querySelectorAll('li')].filter(
-    (item) => item.parentNode.nodeName === 'OL'
+    item => item.parentNode.nodeName === 'OL'
   ).length === 3
 );
 ```
@@ -46,8 +46,8 @@ You should have three `li` elements with the text `flea treatment`, `thunder` an
 ```js
 assert.deepStrictEqual(
   [...document.querySelectorAll('li')]
-    .filter((item) => item.parentNode.nodeName === 'OL')
-    .map((item) => item.innerText.toLowerCase())
+    .filter(item => item.parentNode.nodeName === 'OL')
+    .map(item => item.innerText.toLowerCase())
     .sort((a, b) => a.localeCompare(b)),
   ['flea treatment', 'other cats', 'thunder']
 );
@@ -65,8 +65,15 @@ assert.deepStrictEqual(
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
       <section>
         <h2>Cat Lists</h2>
@@ -77,16 +84,17 @@ assert.deepStrictEqual(
           <li>lasagna</li>
         </ul>
         <figure>
-          <img src="https://bit.ly/fcc-lasagna" alt="A slice of lasagna on a plate.">
-          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-lasagna"
+            alt="A slice of lasagna on a plate."
+          />
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
         </figure>
---fcc-editable-region--
+        --fcc-editable-region--
         <h3>Top 3 things cats hate:</h3>
---fcc-editable-region--
+        --fcc-editable-region--
       </section>
     </main>
-
   </body>
 </html>
 ```
-

@@ -11,12 +11,12 @@ dashedName: make-a-person
 Completa el constructor de objetos con los siguientes métodos:
 
 ```js
-getFirstName()
-getLastName()
-getFullName()
-setFirstName(first)
-setLastName(last)
-setFullName(firstAndLast)
+getFirstName();
+getLastName();
+getFullName();
+setFirstName(first);
+setLastName(last);
+setFullName(firstAndLast);
 ```
 
 Ejecuta las pruebas para ver el resultado esperado para cada método. Los métodos que toman un argumento deben aceptar sólo un argumento y tiene que ser una cadena. Estos métodos deben ser el único medio disponible para interactuar con el objeto.
@@ -131,19 +131,19 @@ assert.strictEqual(
 ## --after-user-code--
 
 ```js
-if(bob){
-  bob = new Person("Bob Ross");
+if (bob) {
+  bob = new Person('Bob Ross');
 }
 ```
 
 ## --seed-contents--
 
 ```js
-var Person = function(firstAndLast) {
+var Person = function (firstAndLast) {
   // Only change code below this line
   // Complete the method below and implement the others similarly
-  this.getFullName = function() {
-    return "";
+  this.getFullName = function () {
+    return '';
   };
   return firstAndLast;
 };
@@ -155,39 +155,37 @@ bob.getFullName();
 # --solutions--
 
 ```js
-var Person = function(firstAndLast) {
-
+var Person = function (firstAndLast) {
   var firstName, lastName;
 
   function updateName(str) {
-    firstName = str.split(" ")[0];
-    lastName = str.split(" ")[1];
+    firstName = str.split(' ')[0];
+    lastName = str.split(' ')[1];
   }
 
   updateName(firstAndLast);
 
-  this.getFirstName = function(){
+  this.getFirstName = function () {
     return firstName;
   };
 
-  this.getLastName = function(){
+  this.getLastName = function () {
     return lastName;
   };
 
-  this.getFullName = function(){
-    return firstName + " " + lastName;
+  this.getFullName = function () {
+    return firstName + ' ' + lastName;
   };
 
-  this.setFirstName = function(str){
+  this.setFirstName = function (str) {
     firstName = str;
   };
 
-
-  this.setLastName = function(str){
+  this.setLastName = function (str) {
     lastName = str;
   };
 
-  this.setFullName = function(str){
+  this.setFullName = function (str) {
     updateName(str);
   };
 };

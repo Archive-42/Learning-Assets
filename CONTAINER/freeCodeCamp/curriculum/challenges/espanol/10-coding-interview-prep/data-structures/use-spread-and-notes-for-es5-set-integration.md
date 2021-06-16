@@ -15,9 +15,9 @@ Do you remember the ES6 spread operator `...`?
 Let's create a Set, and check out the spread function.
 
 ```js
-var set = new Set([1,2,3]);
-var setToArr = [...set]
-console.log(setToArr) // returns [ 1, 2, 3 ]
+var set = new Set([1, 2, 3]);
+var setToArr = [...set];
+console.log(setToArr); // returns [ 1, 2, 3 ]
 ```
 
 # --instructions--
@@ -44,16 +44,16 @@ assert(
 ## --seed-contents--
 
 ```js
-function checkSet(set){
-   // Only change code below this line
-
-   // Only change code above this line
+function checkSet(set) {
+  // Only change code below this line
+  // Only change code above this line
 }
 ```
 
 # --solutions--
 
 ```js
-function checkSet(set){
-return [...set];}
+function checkSet(set) {
+  return [...set];
+}
 ```

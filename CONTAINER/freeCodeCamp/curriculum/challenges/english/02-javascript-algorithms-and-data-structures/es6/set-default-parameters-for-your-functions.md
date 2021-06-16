@@ -13,9 +13,9 @@ In order to help us create more flexible functions, ES6 introduces <dfn>default 
 Check out this code:
 
 ```js
-const greeting = (name = "Anonymous") => "Hello " + name;
+const greeting = (name = 'Anonymous') => 'Hello ' + name;
 
-console.log(greeting("John"));
+console.log(greeting('John'));
 console.log(greeting());
 ```
 

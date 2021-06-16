@@ -25,9 +25,9 @@ dashedName: how-to-use-passport-strategies
 server.js 中应正确执行所有步骤。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /showLogin:( |)true/gi,
@@ -44,7 +44,7 @@ server.js 中应正确执行所有步骤。
         'You should have a route for login which accepts a POST and passport.authenticates local'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -53,16 +53,16 @@ server.js 中应正确执行所有步骤。
 到 /login 的 POST 请求应重定向到 /。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/login').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /Looks like this page is being rendered from Pug into HTML!/gi,
         'A login attempt at this point should redirect to the homepage since we do not have any registered users'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

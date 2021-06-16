@@ -36,7 +36,7 @@ assert(
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -80,7 +80,7 @@ assert(
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -109,12 +109,12 @@ assert(
         width: 70%;
         height: 10%;
       }
-  
+
       .bb1b {
         width: 80%;
         height: 10%;
       }
-  
+
       .bb1c {
         width: 90%;
         height: 10%;

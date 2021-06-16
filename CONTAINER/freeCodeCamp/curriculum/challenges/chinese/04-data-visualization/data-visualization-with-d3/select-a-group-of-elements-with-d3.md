@@ -11,7 +11,7 @@ dashedName: select-a-group-of-elements-with-d3
 `selectAll()` 方法选择一组元素。 它以 HTML 节点数组的形式返回该文本中所有匹配所输入字符串的对象。 以下是一个选择文本中所有锚标签的例子：
 
 ```js
-const anchors = d3.selectAll("a");
+const anchors = d3.selectAll('a');
 ```
 
 像 `select()` 方法一样，`selectAll()` 也支持链式调用，你可以在它之后调用其他方法。
@@ -58,8 +58,6 @@ assert(code.match(/\.selectAll/g));
   <script>
     // Add your code below this line
 
-
-
     // Add your code above this line
   </script>
 </body>
@@ -75,8 +73,7 @@ assert(code.match(/\.selectAll/g));
     <li>Example</li>
   </ul>
   <script>
-    d3.selectAll("li")
-      .text("list item")
+    d3.selectAll('li').text('list item');
   </script>
 </body>
 ```

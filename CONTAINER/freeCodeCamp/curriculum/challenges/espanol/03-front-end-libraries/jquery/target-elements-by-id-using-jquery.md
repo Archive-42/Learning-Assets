@@ -4,8 +4,7 @@ title: Target Elements by id Using jQuery
 challengeType: 6
 forumTopicId: 18317
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: target-elements-by-id-using-jquery
 ---
 
@@ -52,10 +51,9 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
   });
 </script>
 
@@ -88,10 +86,10 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
   });
 </script>
 

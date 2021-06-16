@@ -27,4 +27,3 @@ It figures out which pages contain the most important content.
 ## --video-solution--
 
 1
-

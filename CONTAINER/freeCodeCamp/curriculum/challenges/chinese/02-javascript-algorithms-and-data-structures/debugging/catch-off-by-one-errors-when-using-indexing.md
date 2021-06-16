@@ -13,7 +13,7 @@ dashedName: catch-off-by-one-errors-when-using-indexing
 当使用将索引范围作为参数的字符串或数组方法时，阅读相关的文档并了解参数中的索引的包含性（即是否考虑进返回值中）很重要。 以下是一些错误的示例：
 
 ```js
-let alphabet = "abcdefghijklmnopqrstuvwxyz";
+let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 let len = alphabet.length;
 for (let i = 0; i <= len; i++) {
   console.log(alphabet[i]);
@@ -64,11 +64,11 @@ assert(!code.match(/i\s*?<=\s*?len;/g));
 
 ```js
 function countToFive() {
-  let firstFive = "12345";
+  let firstFive = '12345';
   let len = firstFive.length;
   // Only change code below this line
   for (let i = 1; i <= len; i++) {
-  // Only change code above this line
+    // Only change code above this line
     console.log(firstFive[i]);
   }
 }
@@ -80,13 +80,13 @@ countToFive();
 
 ```js
 function countToFive() {
- let firstFive = "12345";
- let len = firstFive.length;
- // Only change code below this line
- for (let i = 0; i < len; i++) {
- // Only change code above this line
-   console.log(firstFive[i]);
- }
+  let firstFive = '12345';
+  let len = firstFive.length;
+  // Only change code below this line
+  for (let i = 0; i < len; i++) {
+    // Only change code above this line
+    console.log(firstFive[i]);
+  }
 }
 
 countToFive();

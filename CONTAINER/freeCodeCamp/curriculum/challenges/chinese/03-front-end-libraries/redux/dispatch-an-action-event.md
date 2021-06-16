@@ -38,7 +38,7 @@ assert(store.getState().login === false);
 `store.dispatch()` 方法应该被用于 dispatch 一个类型为 `LOGIN` 的 action。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       let noWhiteSpace = getUserInput('index').replace(/\s/g, '');
@@ -55,14 +55,12 @@ assert(store.getState().login === false);
 ## --seed-contents--
 
 ```js
-const store = Redux.createStore(
-  (state = {login: false}) => state
-);
+const store = Redux.createStore((state = { login: false }) => state);
 
 const loginAction = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 
 // Dispatch the action here:
@@ -71,14 +69,12 @@ const loginAction = () => {
 # --solutions--
 
 ```js
-const store = Redux.createStore(
-  (state = {login: false}) => state
-);
+const store = Redux.createStore((state = { login: false }) => state);
 
 const loginAction = () => {
   return {
     type: 'LOGIN'
-  }
+  };
 };
 
 store.dispatch(loginAction());

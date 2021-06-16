@@ -157,12 +157,12 @@ temp = thermos.temperature; // 26 in Celsius
 ```js
 class Thermostat {
   constructor(fahrenheit) {
-    this._tempInCelsius = 5/9 * (fahrenheit - 32);
+    this._tempInCelsius = (5 / 9) * (fahrenheit - 32);
   }
-  get temperature(){
+  get temperature() {
     return this._tempInCelsius;
   }
-  set temperature(newTemp){
+  set temperature(newTemp) {
     this._tempInCelsius = newTemp;
   }
 }

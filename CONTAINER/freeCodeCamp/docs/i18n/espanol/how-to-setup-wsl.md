@@ -1,9 +1,9 @@
 # Configurar freeCodeCamp en el subsistema de Windows para Linux (WSL)
 
 > [!NOTE] Antes de seguir estas instrucciones asegúrate de que tu sistema cumple con los requisitos
-> 
+>
 > **WSL 2**: Windows 10 64-bit (Versión 2004, Build 19041 o superior) - disponible para todas las distribuciones incluyendo Windows 10 Home.
-> 
+>
 > **Docker Desktop para Windows**: Vea los requisitos correspondientes para [Windows 10 Pro](https://docs.docker.com/docker-for-windows/install/#system-requirements) y [Windows 10 Home](https://docs.docker.com/docker-for-windows/install-windows-home/#system-requirements)
 
 Esta guía cubre algunos pasos comunes con la configuración de WSL2. Una vez resueltos algunos de los problemas comunes con WSL2, debería ser capaz de seguir nuestra guía de configuración local para trabajar con freeCodeCamp en Windows ejecutando una distribución WSL como Ubuntu.
@@ -17,7 +17,7 @@ Siga las instrucciones de la [documentación oficial](https://docs.microsoft.com
 1. Recomendamos usar Ubuntu-18.04 o superior con WSL2.
 
    > [!NOTE]
-   > 
+   >
    > Aunque usted puede utilizar otras distribuciones no basadas en debian, todas vienen con sus propios complicaciones y están más allá del alcance de esta guía.
 
 2. Actualizar las dependencias del sistema operativo
@@ -118,7 +118,7 @@ npm install -g npm@latest
 Ahora que ha instalado los requisitos previos, siga [nuestra guía de configuración local](https://contribute.freecodecamp.org/#/how-to-setup-freecodecamp-locally) para clonar, instalar y configurar freeCodeCamp localmente en su máquina.
 
 > [!WARNING]
-> 
+>
 > Tenga en cuenta que en este momento la configuración para las pruebas de Cypress (y las necesidades relacionadas con la interfaz de usuario) es un trabajo en curso. Aún así deberías poder trabajar en la mayor parte del código base.
 
 ## Enlaces útiles

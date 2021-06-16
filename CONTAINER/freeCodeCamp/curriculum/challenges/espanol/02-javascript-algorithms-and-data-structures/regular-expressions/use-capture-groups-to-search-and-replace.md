@@ -13,9 +13,9 @@ La búsqueda es útil. Sin embargo, puedes hacer que la búsqueda sea aún más 
 Puedes buscar y reemplazar texto en una cadena usando `.replace()` en una cadena. Las entradas para `.replace()` son primero el patrón de expresiones regulares que deseas buscar. El segundo parámetro es la cadena para reemplazar la coincidencia o una función para hacer algo.
 
 ```js
-let wrongText = "The sky is silver.";
+let wrongText = 'The sky is silver.';
 let silverRegex = /silver/;
-wrongText.replace(silverRegex, "blue");
+wrongText.replace(silverRegex, 'blue');
 ```
 
 La llamada `replace` devolverá la cadena `The sky is blue.`.
@@ -23,7 +23,7 @@ La llamada `replace` devolverá la cadena `The sky is blue.`.
 También puedes acceder a grupos de captura en la cadena de reemplazo con signos de dólar. (`$`).
 
 ```js
-"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+'Code Camp'.replace(/(\w+)\s(\w+)/, '$2 $1');
 ```
 
 La llamada `replace` devolverá la cadena `Camp Code`.
@@ -72,17 +72,17 @@ assert(new RegExp(fixRegex.source + '|').exec('').length - 1 >= 3);
 ## --seed-contents--
 
 ```js
-let str = "one two three";
+let str = 'one two three';
 let fixRegex = /change/; // Change this line
-let replaceText = ""; // Change this line
+let replaceText = ''; // Change this line
 let result = str.replace(fixRegex, replaceText);
 ```
 
 # --solutions--
 
 ```js
-let str = "one two three";
+let str = 'one two three';
 let fixRegex = /(\w+) (\w+) (\w+)/g; // Change this line
-let replaceText = "$3 $2 $1"; // Change this line
+let replaceText = '$3 $2 $1'; // Change this line
 let result = str.replace(fixRegex, replaceText);
 ```

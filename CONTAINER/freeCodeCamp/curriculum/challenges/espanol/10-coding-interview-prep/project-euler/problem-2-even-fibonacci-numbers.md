@@ -76,7 +76,6 @@ assert.strictEqual(fiboEvenSum(4000000), 4613732);
 
 ```js
 function fiboEvenSum(n) {
-
   return true;
 }
 ```
@@ -84,7 +83,7 @@ function fiboEvenSum(n) {
 # --solutions--
 
 ```js
-const fiboEvenSum = (number) => {
+const fiboEvenSum = number => {
   if (number <= 1) {
     return 0;
   } else {

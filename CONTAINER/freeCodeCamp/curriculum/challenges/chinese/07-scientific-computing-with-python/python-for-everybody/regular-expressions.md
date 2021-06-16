@@ -35,4 +35,3 @@ Which regex matches only a white space character?
 ## --video-solution--
 
 2
-

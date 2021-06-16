@@ -27,4 +27,3 @@ There is no difference between the two methods.
 ## --video-solution--
 
 1
-

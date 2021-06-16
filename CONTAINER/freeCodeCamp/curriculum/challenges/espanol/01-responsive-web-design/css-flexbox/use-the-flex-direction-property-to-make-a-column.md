@@ -32,7 +32,6 @@ assert($('#box-container').css('flex-direction') == 'column');
   #box-container {
     display: flex;
     height: 500px;
-
   }
   #box-1 {
     background-color: dodgerblue;

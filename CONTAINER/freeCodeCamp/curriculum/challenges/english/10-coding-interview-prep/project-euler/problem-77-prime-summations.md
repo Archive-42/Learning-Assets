@@ -40,7 +40,6 @@ assert.strictEqual(primeSummations(), 71);
 
 ```js
 function primeSummations() {
-
   return true;
 }
 

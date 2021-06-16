@@ -8,9 +8,9 @@ dashedName: averagesroot-mean-square
 
 # --description--
 
-Compute the [Root mean square](<https://en.wikipedia.org/wiki/Root mean square> "wp: Root mean square") of the numbers 1 through 10 inclusive.
+Compute the [Root mean square](<https://en.wikipedia.org/wiki/Root mean square> 'wp: Root mean square') of the numbers 1 through 10 inclusive.
 
-The *root mean square* is also known by its initials RMS (or rms), and as the **quadratic mean**.
+The _root mean square_ is also known by its initials RMS (or rms), and as the **quadratic mean**.
 
 The RMS is calculated as the mean of the squares of the numbers, square-rooted:
 
@@ -42,9 +42,7 @@ const answer1 = 6.2048368229954285;
 ## --seed-contents--
 
 ```js
-function rms(arr) {
-
-}
+function rms(arr) {}
 ```
 
 # --solutions--

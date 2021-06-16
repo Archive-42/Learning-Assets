@@ -8,12 +8,12 @@ dashedName: data-analysis-example-b
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
+_Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead._
 
 More resources:
 
--   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/FreeCodeCamp-Pandas-Real-Life-Example)
--   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+- [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/FreeCodeCamp-Pandas-Real-Life-Example)
+- [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
 
 # --question--
 
@@ -36,4 +36,3 @@ Returns the first `n` rows based on the integer argument supplied.
 ## --video-solution--
 
 2
-

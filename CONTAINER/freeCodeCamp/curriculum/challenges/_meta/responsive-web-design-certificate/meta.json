@@ -9,10 +9,7 @@
   "superBlock": "certificates",
   "superOrder": 12,
   "challengeOrder": [
-    [
-      "561add10cb82ac38a17513bc",
-      "Responsive Web Design Certificate"
-    ]
+    ["561add10cb82ac38a17513bc", "Responsive Web Design Certificate"]
   ],
   "isPrivate": true,
   "fileName": "12-certificates/responsive-web-design-certificate.json"

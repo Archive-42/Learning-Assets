@@ -34,7 +34,6 @@ assert.strictEqual(arrangedProbability(), 756872327473);
 
 ```js
 function arrangedProbability() {
-
   return true;
 }
 

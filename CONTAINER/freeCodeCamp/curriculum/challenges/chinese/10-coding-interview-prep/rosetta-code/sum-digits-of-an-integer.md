@@ -72,9 +72,7 @@ assert.equal(sumDigits('999ABCXYZ'), 162);
 ## --seed-contents--
 
 ```js
-function sumDigits(n) {
-
-}
+function sumDigits(n) {}
 ```
 
 # --solutions--

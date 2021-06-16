@@ -9,16 +9,16 @@ dashedName: comparison-with-the-inequality-operator
 
 # --description--
 
-El operador de desigualdad (`!=`) es lo opuesto al operador de igualdad. Esto quiere decir que no es igual, y devuelve `false` cuando la comparación de igualdad devuelva `true` y *vice versa*. Al igual que el operador de igualdad, el operador de desigualdad convertirá los tipos de datos mientras los compara.
+El operador de desigualdad (`!=`) es lo opuesto al operador de igualdad. Esto quiere decir que no es igual, y devuelve `false` cuando la comparación de igualdad devuelva `true` y _vice versa_. Al igual que el operador de igualdad, el operador de desigualdad convertirá los tipos de datos mientras los compara.
 
 **Ejemplos**
 
 ```js
-1 !=  2
-1 != "1"
-1 != '1'
-1 != true
-0 != false
+1 != 2;
+1 != '1';
+1 != '1';
+1 != true;
+0 != false;
 ```
 
 En orden, estas expresiones se evaluarían como `true`, `false`, `false`, `false` y `false`.
@@ -72,10 +72,11 @@ assert(code.match(/(?!!==)!=/));
 ```js
 // Setup
 function testNotEqual(val) {
-  if (val) { // Change this line
-    return "Not Equal";
+  if (val) {
+    // Change this line
+    return 'Not Equal';
   }
-  return "Equal";
+  return 'Equal';
 }
 
 testNotEqual(10);
@@ -86,8 +87,8 @@ testNotEqual(10);
 ```js
 function testNotEqual(val) {
   if (val != 99) {
-    return "Not Equal";
+    return 'Not Equal';
   }
-  return "Equal";
+  return 'Equal';
 }
 ```

@@ -3,11 +3,13 @@
 Functions should return `void`.
 
 All functions should accept arguments in the following order. `...` represent any module-specific parameters or buffers, disregarding whether they are used for writing or reading. Arguments in `...` below should be ordered like this:
+
 ```
 [weight], [bias], [any buffers], [additional arguments], [optional arguments]
 ```
 
 ### Modules
+
 ```
 updateOutput: state, input, output, ...
 updateGradInput: state, input, gradOutput, gradInput, ...
@@ -15,6 +17,7 @@ accGradParameters: state, input, gradOutput, [gradWeight], [gradBias], ...
 ```
 
 e.g.
+
 ```C
 void THNN_(ClassNLLCriterion_updateGradInput)(
            THCState *state,
@@ -29,6 +32,7 @@ void THNN_(ClassNLLCriterion_updateGradInput)(
 ```
 
 ### Criterions
+
 ```
 updateOutput: state, input, target, output, ...
 updateGradInput: state, input, target, gradInput, ...

@@ -44,24 +44,18 @@ assert(
 ## --seed-contents--
 
 ```js
-function checkSet(arrToBeSet, checkValue){
-
-   // Only change code below this line
-
-   // Only change code above this line
-
+function checkSet(arrToBeSet, checkValue) {
+  // Only change code below this line
+  // Only change code above this line
 }
 ```
 
 # --solutions--
 
 ```js
-function checkSet(arrToBeSet, checkValue){
-var set = new Set(arrToBeSet);
-var result = [
-set.has(checkValue),
-set.size
-];
-return result;
+function checkSet(arrToBeSet, checkValue) {
+  var set = new Set(arrToBeSet);
+  var result = [set.has(checkValue), set.size];
+  return result;
 }
 ```

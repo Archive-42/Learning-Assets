@@ -55,7 +55,7 @@ The `GetInput` component should receive the `MyApp` state property `inputValue` 
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyApp));
   const state_1 = () => {
@@ -78,7 +78,7 @@ The `RenderInput` component should receive the `MyApp` state property `inputValu
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(MyApp));
   const state_1 = () => {
@@ -95,7 +95,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<MyApp />, document.getElementById('root'))
+ReactDOM.render(<MyApp />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -106,7 +106,7 @@ class MyApp extends React.Component {
     super(props);
     this.state = {
       inputValue: ''
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
@@ -116,14 +116,14 @@ class MyApp extends React.Component {
   }
   render() {
     return (
-       <div>
-        { /* Change code below this line */ }
+      <div>
+        {/* Change code below this line */}
 
-        { /* Change code above this line */ }
-       </div>
+        {/* Change code above this line */}
+      </div>
     );
   }
-};
+}
 
 class GetInput extends React.Component {
   constructor(props) {
@@ -133,13 +133,11 @@ class GetInput extends React.Component {
     return (
       <div>
         <h3>Get Input:</h3>
-        <input
-          value={this.props.input}
-          onChange={this.props.handleChange}/>
+        <input value={this.props.input} onChange={this.props.handleChange} />
       </div>
     );
   }
-};
+}
 
 class RenderInput extends React.Component {
   constructor(props) {
@@ -153,7 +151,7 @@ class RenderInput extends React.Component {
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -164,8 +162,8 @@ class MyApp extends React.Component {
     super(props);
     this.state = {
       inputValue: ''
-    }
-  this.handleChange = this.handleChange.bind(this);
+    };
+    this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
     this.setState({
@@ -174,16 +172,16 @@ class MyApp extends React.Component {
   }
   render() {
     return (
-       <div>
-         <GetInput
-           input={this.state.inputValue}
-           handleChange={this.handleChange}/>
-         <RenderInput
-           input={this.state.inputValue}/>
-       </div>
+      <div>
+        <GetInput
+          input={this.state.inputValue}
+          handleChange={this.handleChange}
+        />
+        <RenderInput input={this.state.inputValue} />
+      </div>
     );
   }
-};
+}
 
 class GetInput extends React.Component {
   constructor(props) {
@@ -193,13 +191,11 @@ class GetInput extends React.Component {
     return (
       <div>
         <h3>Get Input:</h3>
-        <input
-          value={this.props.input}
-          onChange={this.props.handleChange}/>
+        <input value={this.props.input} onChange={this.props.handleChange} />
       </div>
     );
   }
-};
+}
 
 class RenderInput extends React.Component {
   constructor(props) {
@@ -213,5 +209,5 @@ class RenderInput extends React.Component {
       </div>
     );
   }
-};
+}
 ```

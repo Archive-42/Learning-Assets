@@ -38,7 +38,6 @@ assert.strictEqual(rightTrianglesIntCoords(), 14234);
 
 ```js
 function rightTrianglesIntCoords() {
-
   return true;
 }
 

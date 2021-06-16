@@ -64,8 +64,7 @@ assert.equal(wrapped42.split('\n')[0], firstRow42);
 ## --after-user-code--
 
 ```js
-const text =
-`Wrap text using a more sophisticated algorithm such as the Knuth and Plass TeX algorithm.
+const text = `Wrap text using a more sophisticated algorithm such as the Knuth and Plass TeX algorithm.
 If your language provides this, you get easy extra credit,
 but you ''must reference documentation'' indicating that the algorithm
 is something better than a simple minimum length algorithm.`;
@@ -74,7 +73,7 @@ const wrapped80 = wrap(text, 80);
 const wrapped42 = wrap(text, 42);
 
 const firstRow80 =
-    'Wrap text using a more sophisticated algorithm such as the Knuth and Plass TeX';
+  'Wrap text using a more sophisticated algorithm such as the Knuth and Plass TeX';
 
 const firstRow42 = 'Wrap text using a more sophisticated';
 ```

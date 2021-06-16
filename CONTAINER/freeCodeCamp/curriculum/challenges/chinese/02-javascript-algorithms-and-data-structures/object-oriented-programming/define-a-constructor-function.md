@@ -14,8 +14,8 @@ dashedName: define-a-constructor-function
 
 ```js
 function Bird() {
-  this.name = "Albert";
-  this.color = "blue";
+  this.name = 'Albert';
+  this.color = 'blue';
   this.numLegs = 2;
 }
 ```
@@ -59,7 +59,7 @@ assert(typeof new Dog().numLegs === 'number');
 # --solutions--
 
 ```js
-function Dog (name, color, numLegs) {
+function Dog(name, color, numLegs) {
   this.name = 'name';
   this.color = 'color';
   this.numLegs = 4;

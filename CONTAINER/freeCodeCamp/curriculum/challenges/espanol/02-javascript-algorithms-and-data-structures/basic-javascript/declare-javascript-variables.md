@@ -45,7 +45,11 @@ assert(/var\s+myName\s*;/.test(code));
 ## --after-user-code--
 
 ```js
-if(typeof myName !== "undefined"){(function(v){return v;})(myName);}
+if (typeof myName !== 'undefined') {
+  (function (v) {
+    return v;
+  })(myName);
+}
 ```
 
 ## --seed-contents--

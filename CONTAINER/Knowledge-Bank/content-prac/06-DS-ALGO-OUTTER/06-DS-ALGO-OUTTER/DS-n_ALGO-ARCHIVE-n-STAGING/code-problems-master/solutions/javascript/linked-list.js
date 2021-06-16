@@ -1,11 +1,11 @@
-var LinkedList = module.exports = function (value) {
+var LinkedList = (module.exports = function (value) {
   this.value = value;
-  this.prev  = this;
-  this.next  = this;
-};
+  this.prev = this;
+  this.next = this;
+});
 
 LinkedList.prototype.appendNode = function (value) {
-  var node  = new LinkedList(value);
+  var node = new LinkedList(value);
   node.prev = this;
   node.next = this.next;
   // Fix the linked list references
@@ -14,7 +14,7 @@ LinkedList.prototype.appendNode = function (value) {
 };
 
 LinkedList.prototype.prependNode = function (value) {
-  var node  = new LinkedList(value);
+  var node = new LinkedList(value);
   node.prev = this.prev;
   node.next = this;
   // Fix the linked list references
@@ -32,7 +32,9 @@ LinkedList.prototype.removeNode = function () {
 };
 
 LinkedList.prototype.containsNode = function (value) {
-  if (this.value === value) { return true; }
+  if (this.value === value) {
+    return true;
+  }
 
   var node = this.next;
   // Loop through the connections until we hit ourselves again

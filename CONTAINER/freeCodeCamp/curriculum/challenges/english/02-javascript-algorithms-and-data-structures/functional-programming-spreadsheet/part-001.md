@@ -28,27 +28,29 @@ assert(code.replace(/\s/g, '').includes('constinfixToFunction={}'));
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Spreadsheet</title>
-  <style>
-    #container {
-      display: grid;
-      grid-template-columns: 50px repeat(10, 200px);
-      grid-template-rows: repeat(11, 30px);
-    }
-    .label {
-      background-color: lightgray;
-      text-align: center;
-      vertical-align: middle;
-      line-height: 30px;
-    }
-  </style>
-</head>
-<body>
-<div id="container">
-  <div></div>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spreadsheet</title>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: 50px repeat(10, 200px);
+        grid-template-rows: repeat(11, 30px);
+      }
+      .label {
+        background-color: lightgray;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div></div>
+    </div>
+  </body>
+</html>
 ```
 
 ## --after-user-code--
@@ -61,16 +63,13 @@ assert(code.replace(/\s/g, '').includes('constinfixToFunction={}'));
 ## --seed-contents--
 
 ```html
-<script>
-
-
-</script>
+<script></script>
 ```
 
 # --solutions--
 
 ```html
 <script>
-const infixToFunction = {};
+  const infixToFunction = {};
 </script>
 ```

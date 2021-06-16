@@ -112,9 +112,8 @@ class DonateForm extends Component {
     this.getDonationButtonLabel = this.getDonationButtonLabel.bind(this);
     this.handleSelectAmount = this.handleSelectAmount.bind(this);
     this.handleSelectDuration = this.handleSelectDuration.bind(this);
-    this.handleStripeCheckoutRedirect = this.handleStripeCheckoutRedirect.bind(
-      this
-    );
+    this.handleStripeCheckoutRedirect =
+      this.handleStripeCheckoutRedirect.bind(this);
     this.hideAmountOptionsCB = this.hideAmountOptionsCB.bind(this);
     this.resetDonation = this.resetDonation.bind(this);
     this.postStripeDonation = this.postStripeDonation.bind(this);
@@ -367,14 +366,8 @@ class DonateForm extends Component {
 
   renderModalForm() {
     const { donationAmount, donationDuration, stripe } = this.state;
-    const {
-      handleProcessing,
-      addDonation,
-      email,
-      theme,
-      t,
-      defaultTheme
-    } = this.props;
+    const { handleProcessing, addDonation, email, theme, t, defaultTheme } =
+      this.props;
     return (
       <Row>
         <Col lg={8} lgOffset={2} sm={10} smOffset={1} xs={12}>

@@ -31,12 +31,12 @@ Node 只是一个 JavaScript 环境。 与客户端 JavaScript 一样，你可�
 控制台应该输出 `"Hello World"`
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/hello-console').then(
-    (data) => {
+    data => {
       assert.isTrue(data.passed, '"Hello World" is not in the server console');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -40,13 +40,13 @@ Test 1
       </header>
       <main>
         <section>
---fcc-editable-region--
+          --fcc-editable-region--
           <h2>Coffees</h2>
           <article>
             <p class="flavor">French Vanilla</p>
             <p class="price">3.00</p>
           </article>
---fcc-editable-region--
+          --fcc-editable-region--
           <article>
             <p>Carmel Macchiato</p>
             <p>3.75</p>
@@ -67,7 +67,8 @@ Test 1
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -75,7 +76,9 @@ body {
   background-image: url(https://tinyurl.com/coffee-beans-fcc);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 
@@ -94,4 +97,3 @@ h1, h2, p {
   text-align: right;
 }
 ```
-

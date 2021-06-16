@@ -1,4 +1,3 @@
-
 promote_common: &promote_common
   docker:
     - image: pytorch/release

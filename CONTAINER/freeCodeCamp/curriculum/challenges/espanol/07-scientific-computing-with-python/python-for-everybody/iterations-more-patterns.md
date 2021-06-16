@@ -45,4 +45,3 @@ Which of these evaluates to False?
 ## --video-solution--
 
 2
-

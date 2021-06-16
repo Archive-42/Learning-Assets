@@ -19,12 +19,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#12` in the `Arrays` sui
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -33,16 +33,16 @@ All tests should pass.
 You should choose the correct method for the first assertion - `include` vs. `notInclude`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'notInclude',
         "It's summer in july..."
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,16 +51,16 @@ You should choose the correct method for the first assertion - `include` vs. `no
 You should choose the correct method for the second assertion - `include` vs. `notInclude`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'include',
         'JavaScript is a backend language !!'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -9,10 +9,7 @@
   "superBlock": "certificates",
   "superOrder": 12,
   "challengeOrder": [
-    [
-      "5e46fc95ac417301a38fb934",
-      "Data Analysis with Python Certificate"
-    ]
+    ["5e46fc95ac417301a38fb934", "Data Analysis with Python Certificate"]
   ],
   "isPrivate": true,
   "fileName": "12-certificates/data-analysis-with-python-v7-certificate.json"

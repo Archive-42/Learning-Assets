@@ -12,17 +12,17 @@ Euler's Totient function, φ(`n`) \[sometimes called the phi function], is used 
 
 <div style='margin-left: 4em;'>
 
-| !!crwdBlockTags_15_sgaTkcolBdwrc!! | Relatively Prime | φ(!!crwdBlockTags_16_sgaTkcolBdwrc!!) |!!crwdBlockTags_17_sgaTkcolBdwrc!!/φ(!!crwdBlockTags_18_sgaTkcolBdwrc!!) |
-| ------------ | ---------------- | --------------- | ---------------------------- |
-| 2            | 1                | 1               | 2                            |
-| 3            | 1,2              | 2               | 1.5                          |
-| 4            | 1,3              | 2               | 2                            |
-| 5            | 1,2,3,4          | 4               | 1.25                         |
-| 6            | 1,5              | 2               | 3                            |
-| 7            | 1,2,3,4,5,6      | 6               | 1.1666...                    |
-| 8            | 1,3,5,7          | 4               | 2                            |
-| 9            | 1,2,4,5,7,8      | 6               | 1.5                          |
-| 10           | 1,3,7,9          | 4               | 2.5                          |
+| !!crwdBlockTags_15_sgaTkcolBdwrc!! | Relatively Prime | φ(!!crwdBlockTags_16_sgaTkcolBdwrc!!) | !!crwdBlockTags_17_sgaTkcolBdwrc!!/φ(!!crwdBlockTags_18_sgaTkcolBdwrc!!) |
+| ---------------------------------- | ---------------- | ------------------------------------- | ------------------------------------------------------------------------ |
+| 2                                  | 1                | 1                                     | 2                                                                        |
+| 3                                  | 1,2              | 2                                     | 1.5                                                                      |
+| 4                                  | 1,3              | 2                                     | 2                                                                        |
+| 5                                  | 1,2,3,4          | 4                                     | 1.25                                                                     |
+| 6                                  | 1,5              | 2                                     | 3                                                                        |
+| 7                                  | 1,2,3,4,5,6      | 6                                     | 1.1666...                                                                |
+| 8                                  | 1,3,5,7          | 4                                     | 2                                                                        |
+| 9                                  | 1,2,4,5,7,8      | 6                                     | 1.5                                                                      |
+| 10                                 | 1,3,7,9          | 4                                     | 2.5                                                                      |
 
 </div>
 
@@ -50,7 +50,6 @@ assert.strictEqual(totientMaximum(), 510510);
 
 ```js
 function totientMaximum() {
-
   return true;
 }
 

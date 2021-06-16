@@ -15,9 +15,9 @@ dashedName: specify-only-the-lower-number-of-matches
 例如，要匹配至少出现 `3` 次字母 `a` 的字符串 `hah`，正则表达式应该是 `/ha{3,}h/`。
 
 ```js
-let A4 = "haaaah";
-let A2 = "haah";
-let A100 = "h" + "a".repeat(100) + "h";
+let A4 = 'haaaah';
+let A2 = 'haah';
+let A100 = 'h' + 'a'.repeat(100) + 'h';
 let multipleA = /ha{3,}h/;
 multipleA.test(A4);
 multipleA.test(A2);
@@ -79,7 +79,7 @@ assert('Hazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzah'.match(haRegex)[0].length === 34);
 ## --seed-contents--
 
 ```js
-let haStr = "Hazzzzah";
+let haStr = 'Hazzzzah';
 let haRegex = /change/; // Change this line
 let result = haRegex.test(haStr);
 ```
@@ -87,7 +87,7 @@ let result = haRegex.test(haStr);
 # --solutions--
 
 ```js
-let haStr = "Hazzzzah";
+let haStr = 'Hazzzzah';
 let haRegex = /Haz{4,}ah/; // Change this line
 let result = haRegex.test(haStr);
 ```

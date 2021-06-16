@@ -11,7 +11,7 @@ dashedName: understanding-case-sensitivity-in-variables
 
 En JavaScript todas las variables y nombres de función son sensibles a mayúsculas y minúsculas. Esto significa que la capitalización importa.
 
-`MYVAR` no es lo mismo que `MyVar` ni `myvar`. Es posible tener múltiples variables distintas con el mismo nombre pero diferente capitalización. Se recomienda encarecidamente que por el bien de la claridad, *no* utilices esta funcionalidad del lenguaje.
+`MYVAR` no es lo mismo que `MyVar` ni `myvar`. Es posible tener múltiples variables distintas con el mismo nombre pero diferente capitalización. Se recomienda encarecidamente que por el bien de la claridad, _no_ utilices esta funcionalidad del lenguaje.
 
 **Buena Práctica**
 
@@ -83,7 +83,7 @@ var TitleCaseOver;
 
 // Variable assignments
 STUDLYCAPVAR = 10;
-PRoperCAmelCAse = "A String";
+PRoperCAmelCAse = 'A String';
 tITLEcASEoVER = 9000;
 ```
 
@@ -95,6 +95,6 @@ var properCamelCase;
 var titleCaseOver;
 
 studlyCapVar = 10;
-properCamelCase = "A String";
+properCamelCase = 'A String';
 titleCaseOver = 9000;
 ```

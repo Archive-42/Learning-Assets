@@ -51,5 +51,5 @@ assert(
 ```js
 const action = {
   type: 'LOGIN'
-}
+};
 ```

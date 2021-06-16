@@ -13,9 +13,7 @@ React 中最重要的主题之一是 `state`。 state 包含应用程序需要�
 可以在类组件的 `constructor` 上声明 `state` 属性来在 React 组件中创建 state， 它在创建时使用 `state` 初始化组件。 `state` 属性必须设置为 JavaScript `object`（对象）。 声明如下：
 
 ```jsx
-this.state = {
-
-}
+this.state = {};
 ```
 
 可以在组件的整个生命周期内访问 `state` 对象， 可以更新它、在 UI 中渲染它，也可以将其作为 props 传递给子组件。 `state` 对象的使用可以很简单，亦可以很复杂，就看你怎么用了。 请注意，必须通过扩展 `React.Component` 来创建类组件，以便像这样创建 `state`。
@@ -90,7 +88,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<StatefulComponent />, document.getElementById('root'))
+ReactDOM.render(<StatefulComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -110,7 +108,7 @@ class StatefulComponent extends React.Component {
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -121,7 +119,7 @@ class StatefulComponent extends React.Component {
     super(props);
     this.state = {
       name: 'freeCodeCamp!'
-    }
+    };
   }
   render() {
     return (
@@ -130,5 +128,5 @@ class StatefulComponent extends React.Component {
       </div>
     );
   }
-};
+}
 ```
