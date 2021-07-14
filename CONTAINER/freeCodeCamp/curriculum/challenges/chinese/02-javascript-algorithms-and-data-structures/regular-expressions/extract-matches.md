@@ -15,8 +15,8 @@ dashedName: extract-matches
 请看下面的举例：
 
 ```js
-"Hello, World!".match(/Hello/);
-let ourStr = "Regular expressions";
+'Hello, World!'.match(/Hello/);
+let ourStr = 'Regular expressions';
 let ourRegex = /expressions/;
 ourStr.match(ourRegex);
 ```

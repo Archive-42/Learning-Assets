@@ -21,13 +21,13 @@ Use the `helmet.ieNoOpen()` method on your server.
 helmet.ieNoOpen() middleware should be mounted correctly
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       assert.include(data.appStack, 'ienoopen');
       assert.equal(data.headers['x-download-options'], 'noopen');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

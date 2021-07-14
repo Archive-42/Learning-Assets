@@ -16,20 +16,12 @@ dashedName: accessing-nested-arrays
 ```js
 var ourPets = [
   {
-    animalType: "cat",
-    names: [
-      "Meowzer",
-      "Fluffy",
-      "Kit-Cat"
-    ]
+    animalType: 'cat',
+    names: ['Meowzer', 'Fluffy', 'Kit-Cat']
   },
   {
-    animalType: "dog",
-    names: [
-      "Spot",
-      "Bowser",
-      "Frankie"
-    ]
+    animalType: 'dog',
+    names: ['Spot', 'Bowser', 'Frankie']
   }
 ];
 ourPets[0].names[1];
@@ -61,11 +53,11 @@ assert(/=\s*myPlants\[1\].list\[1\]/.test(code));
 ## --after-user-code--
 
 ```js
-(function(x) {
-  if(typeof x != 'undefined') {
-    return "secondTree = " + x;
+(function (x) {
+  if (typeof x != 'undefined') {
+    return 'secondTree = ' + x;
   }
-  return "secondTree is undefined";
+  return 'secondTree is undefined';
 })(secondTree);
 ```
 
@@ -75,26 +67,18 @@ assert(/=\s*myPlants\[1\].list\[1\]/.test(code));
 // Setup
 var myPlants = [
   {
-    type: "flowers",
-    list: [
-      "rose",
-      "tulip",
-      "dandelion"
-    ]
+    type: 'flowers',
+    list: ['rose', 'tulip', 'dandelion']
   },
   {
-    type: "trees",
-    list: [
-      "fir",
-      "pine",
-      "birch"
-    ]
+    type: 'trees',
+    list: ['fir', 'pine', 'birch']
   }
 ];
 
 // Only change code below this line
 
-var secondTree = ""; // Change this line
+var secondTree = ''; // Change this line
 ```
 
 # --solutions--
@@ -102,20 +86,12 @@ var secondTree = ""; // Change this line
 ```js
 var myPlants = [
   {
-    type: "flowers",
-    list: [
-      "rose",
-      "tulip",
-      "dandelion"
-    ]
+    type: 'flowers',
+    list: ['rose', 'tulip', 'dandelion']
   },
   {
-    type: "trees",
-    list: [
-      "fir",
-      "pine",
-      "birch"
-    ]
+    type: 'trees',
+    list: ['fir', 'pine', 'birch']
   }
 ];
 

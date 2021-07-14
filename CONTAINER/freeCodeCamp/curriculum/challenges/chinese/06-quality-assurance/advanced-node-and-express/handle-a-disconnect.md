@@ -29,12 +29,12 @@ socket.on('disconnect', () => {
 服务器应处理断开 socket 连接的事件。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(data, /socket.on.*('|")disconnect('|")/gi, '');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -43,16 +43,16 @@ socket.on('disconnect', () => {
 客户端应监听 “user count” 事件。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/client.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.on.*('|")user count('|")/gi,
         'Your client should be connection to server with the connection defined as socket'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

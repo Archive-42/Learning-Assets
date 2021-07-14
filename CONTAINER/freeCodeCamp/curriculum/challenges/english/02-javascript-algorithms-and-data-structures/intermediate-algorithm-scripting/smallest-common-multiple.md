@@ -12,7 +12,7 @@ Find the smallest common multiple of the provided parameters that can be evenly 
 
 The range will be an array of two numbers that will not necessarily be in numerical order.
 
-For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers *between* 1 and 3. The answer here would be 6.
+For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers _between_ 1 and 3. The answer here would be 6.
 
 # --hints--
 
@@ -61,26 +61,27 @@ function smallestCommons(arr) {
   return arr;
 }
 
-
-smallestCommons([1,5]);
+smallestCommons([1, 5]);
 ```
 
 # --solutions--
 
 ```js
 function gcd(a, b) {
-    while (b !== 0) {
-        a = [b, b = a % b][0];
-    }
-    return a;
+  while (b !== 0) {
+    a = [b, (b = a % b)][0];
+  }
+  return a;
 }
 
 function lcm(a, b) {
-    return (a * b) / gcd(a, b);
+  return (a * b) / gcd(a, b);
 }
 
 function smallestCommons(arr) {
-  arr.sort(function(a,b) {return a-b;});
+  arr.sort(function (a, b) {
+    return a - b;
+  });
   var rng = [];
   for (var i = arr[0]; i <= arr[1]; i++) {
     rng.push(i);

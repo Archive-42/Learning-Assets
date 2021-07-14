@@ -8,9 +8,9 @@ dashedName: farey-sequence
 
 # --description--
 
-The [Farey sequence](<https://en.wikipedia.org/wiki/Farey sequence> "wp: Farey sequence") <code>F<sub>n</sub></code> of order `n` is the sequence of completely reduced fractions between `0` and `1` which, when in lowest terms, have denominators less than or equal to `n`, arranged in order of increasing size.
+The [Farey sequence](<https://en.wikipedia.org/wiki/Farey sequence> 'wp: Farey sequence') <code>F<sub>n</sub></code> of order `n` is the sequence of completely reduced fractions between `0` and `1` which, when in lowest terms, have denominators less than or equal to `n`, arranged in order of increasing size.
 
-The *Farey sequence* is sometimes incorrectly called a *Farey series*.
+The _Farey sequence_ is sometimes incorrectly called a _Farey series_.
 
 Each Farey sequence:
 
@@ -81,29 +81,28 @@ assert.deepEqual(farey(5), [
 ## --seed-contents--
 
 ```js
-function farey(n) {
-
-}
+function farey(n) {}
 ```
 
 # --solutions--
 
 ```js
-function farey(n){
-    let farSeq=[];
-    for(let den = 1; den <= n; den++){
-        for(let num = 1; num < den; num++){
-            farSeq.push({
-                str:num+"/"+den,
-                val:num/den});
-        }
+function farey(n) {
+  let farSeq = [];
+  for (let den = 1; den <= n; den++) {
+    for (let num = 1; num < den; num++) {
+      farSeq.push({
+        str: num + '/' + den,
+        val: num / den
+      });
     }
-    farSeq.sort(function(a,b){
-        return a.val-b.val;
-    });
-    farSeq=farSeq.map(function(a){
-        return a.str;
-    });
-    return farSeq;
+  }
+  farSeq.sort(function (a, b) {
+    return a.val - b.val;
+  });
+  farSeq = farSeq.map(function (a) {
+    return a.str;
+  });
+  return farSeq;
 }
 ```

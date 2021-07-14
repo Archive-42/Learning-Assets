@@ -8,7 +8,7 @@ dashedName: check-for-the-presence-of-an-element-with-indexof
 
 # --description--
 
-Since arrays can be changed, or *mutated*, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with another built-in method, `indexOf()`, that allows us to quickly and easily check for the presence of an element on an array. `indexOf()` takes an element as a parameter, and when called, it returns the position, or index, of that element, or `-1` if the element does not exist on the array.
+Since arrays can be changed, or _mutated_, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with another built-in method, `indexOf()`, that allows us to quickly and easily check for the presence of an element on an array. `indexOf()` takes an element as a parameter, and when called, it returns the position, or index, of that element, or `-1` if the element does not exist on the array.
 
 For example:
 
@@ -77,7 +77,6 @@ assert.notStrictEqual(quickCheck.toString().search(/\.indexOf\(/), -1);
 ```js
 function quickCheck(arr, elem) {
   // Only change code below this line
-
   // Only change code above this line
 }
 
@@ -88,6 +87,6 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 ```js
 function quickCheck(arr, elem) {
-  return arr.indexOf(elem) >= 0; 
+  return arr.indexOf(elem) >= 0;
 }
 ```

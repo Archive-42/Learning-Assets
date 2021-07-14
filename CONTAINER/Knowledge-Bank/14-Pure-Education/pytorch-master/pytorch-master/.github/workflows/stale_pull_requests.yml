@@ -1,8 +1,8 @@
-name: 'Close stale pull requests'
+name: "Close stale pull requests"
 on:
   schedule:
     # TODO: Reduce frequency once we work through the backlog of pull requests
-    - cron: '0 * * * *'
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:

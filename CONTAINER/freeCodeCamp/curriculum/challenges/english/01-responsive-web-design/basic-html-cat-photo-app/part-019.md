@@ -40,19 +40,25 @@ assert(secondSectionLastElemNode.nodeName === 'UL');
     <h1>CatPhotoApp</h1>
     <main>
       <section>
-      <h2>Cat Photos</h2>
+        <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
       <section>
---fcc-editable-region--
+        --fcc-editable-region--
         <h2>Cat Lists</h2>
         <h3>Things cats love:</h3>
---fcc-editable-region--
+        --fcc-editable-region--
       </section>
     </main>
   </body>
 </html>
 ```
-

@@ -1,5 +1,5 @@
 - **Comenzando**
-  - [Introducción](index.md "Contribuye a la comunidad freeCodeCamp.org")
+  - [Introducción](index.md 'Contribuye a la comunidad freeCodeCamp.org')
   - [Preguntas más frecuentes](FAQ.md)
 - **Contribución de Código**
   - [Configurar freeCodeCamp localmente](how-to-setup-freecodecamp-locally.md)

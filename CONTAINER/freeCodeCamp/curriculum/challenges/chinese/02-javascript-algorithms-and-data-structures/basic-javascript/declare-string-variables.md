@@ -12,7 +12,7 @@ dashedName: declare-string-variables
 之前我们写过这样的代码：
 
 ```js
-var myName = "your name";
+var myName = 'your name';
 ```
 
 `"your name"` 被称作<dfn>字符串</dfn><dfn>字面量</dfn>。 这是一个字符串，因为它是一系列包含在单引号或双引号中的零或多个字符。
@@ -64,7 +64,11 @@ assert(
 ## --after-user-code--
 
 ```js
-if(typeof myFirstName !== "undefined" && typeof myLastName !== "undefined"){(function(){return myFirstName + ', ' + myLastName;})();}
+if (typeof myFirstName !== 'undefined' && typeof myLastName !== 'undefined') {
+  (function () {
+    return myFirstName + ', ' + myLastName;
+  })();
+}
 ```
 
 ## --seed-contents--
@@ -76,6 +80,6 @@ if(typeof myFirstName !== "undefined" && typeof myLastName !== "undefined"){(fun
 # --solutions--
 
 ```js
-var myFirstName = "Alan";
-var myLastName = "Turing";
+var myFirstName = 'Alan';
+var myLastName = 'Turing';
 ```

@@ -20,7 +20,9 @@ Read the [blog post](https://humanwhocodes.com/blog/2019/03/computer-science-in-
 Use CommonJS to get access to the `CircularDoublyLinkedList` constructor:
 
 ```js
-const { CircularDoublyLinkedList } = require("@humanwhocodes/circular-doubly-linked-list");
+const {
+  CircularDoublyLinkedList,
+} = require("@humanwhocodes/circular-doubly-linked-list");
 ```
 
 Each instance of `CircularDoublyLinkedList` has the following properties and methods:

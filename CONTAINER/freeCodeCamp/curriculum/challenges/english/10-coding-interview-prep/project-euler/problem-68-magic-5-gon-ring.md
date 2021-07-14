@@ -57,7 +57,6 @@ assert.strictEqual(magic5GonRing(), 6531031914842725);
 
 ```js
 function magic5GonRing() {
-
   return true;
 }
 

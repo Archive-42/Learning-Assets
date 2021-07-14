@@ -25,17 +25,13 @@ assert(Array.isArray(rangeOfNumbers(5, 10)));
 不能包含循环语句（`for` 或者 `while` 或者高阶函数比如 `forEach`、`map`、`filter` 或者 `reduce`）。
 
 ```js
-assert(
-  !code.match(/for|while|forEach|map|filter|reduce/g)
-);
+assert(!code.match(/for|while|forEach|map|filter|reduce/g));
 ```
 
 `rangeOfNumbers` 应该使用递归函数（调用自身）来完成这个挑战。
 
 ```js
-assert(
-  rangeOfNumbers.toString().match(/rangeOfNumbers\s*\(.+\)/)
-);
+assert(rangeOfNumbers.toString().match(/rangeOfNumbers\s*\(.+\)/));
 ```
 
 `rangeOfNumbers(1, 5)` 应该返回 `[1, 2, 3, 4, 5]`。
@@ -63,7 +59,7 @@ assert.deepStrictEqual(rangeOfNumbers(4, 4), [4]);
 ```js
 function rangeOfNumbers(startNum, endNum) {
   return [];
-};
+}
 ```
 
 # --solutions--

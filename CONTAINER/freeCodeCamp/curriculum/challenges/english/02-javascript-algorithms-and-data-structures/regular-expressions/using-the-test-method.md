@@ -15,7 +15,7 @@ If you want to find the word `the` in the string `The dog chased the cat`, you c
 JavaScript has multiple ways to use regexes. One way to test a regex is using the `.test()` method. The `.test()` method takes the regex, applies it to a string (which is placed inside the parentheses), and returns `true` or `false` if your pattern finds something or not.
 
 ```js
-let testStr = "freeCodeCamp";
+let testStr = 'freeCodeCamp';
 let testRegex = /Code/;
 testRegex.test(testStr);
 ```
@@ -45,7 +45,7 @@ assert(result === true);
 ## --seed-contents--
 
 ```js
-let myString = "Hello, World!";
+let myString = 'Hello, World!';
 let myRegex = /Hello/;
 let result = myRegex; // Change this line
 ```
@@ -53,7 +53,7 @@ let result = myRegex; // Change this line
 # --solutions--
 
 ```js
-let myString = "Hello, World!";
+let myString = 'Hello, World!';
 let myRegex = /Hello/;
 let result = myRegex.test(myString); // Change this line
 ```

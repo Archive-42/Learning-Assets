@@ -16,19 +16,19 @@ El operador más básico es el de igualdad `==`. El operador de igualdad compara
 ```js
 function equalityTest(myVal) {
   if (myVal == 10) {
-     return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 ```
 
 Si `myVal` es igual a `10`, el operador de igualdad devuelve `true`, así que el código dentro de los corchetes se ejecutará y la función devolverá `Equal`. De lo contrario, la función devolverá `Not Equal`. Para que JavaScript compare dos <dfn>tipos de datos</dfn> diferentes (por ejemplo, `numbers` y `strings`), tiene que convertir un tipo a otro. Esto se conoce como Coerción de Tipo. Sin embargo, una vez lo hace, puede comparar términos como se ve a continuación:
 
 ```js
-1   ==  1
-1   ==  2
-1   == '1'
-"3" ==  3
+1 == 1;
+1 == 2;
+1 == '1';
+'3' == 3;
 ```
 
 En orden, estas expresiones se evaluarían como `true`, `false`, `true` y `true`.
@@ -70,10 +70,11 @@ assert(code.match(/==/g) && !code.match(/===/g));
 ```js
 // Setup
 function testEqual(val) {
-  if (val) { // Change this line
-    return "Equal";
+  if (val) {
+    // Change this line
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 
 testEqual(10);
@@ -84,8 +85,8 @@ testEqual(10);
 ```js
 function testEqual(val) {
   if (val == 12) {
-    return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 ```

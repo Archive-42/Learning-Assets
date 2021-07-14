@@ -14,9 +14,9 @@ A JavaScript implementation of a binary search tree. This class uses the convent
 
 Additionally, this implementation follows the JavaScript `Set` interface for adding, detecting, and removing values:
 
-* `add(value)` to add a value into the tree
-* `has(value)` to detect if a value is in the tree
-* `delete(value)` to remove a value from the tree
+- `add(value)` to add a value into the tree
+- `has(value)` to detect if a value is in the tree
+- `delete(value)` to remove a value from the tree
 
 ## Usage
 

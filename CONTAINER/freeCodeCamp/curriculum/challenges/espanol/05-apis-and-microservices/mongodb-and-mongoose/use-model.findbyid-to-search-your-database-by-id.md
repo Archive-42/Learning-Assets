@@ -19,9 +19,9 @@ Modify the `findPersonById` to find the only person having a given `_id`, using 
 Find an item by Id should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/find-by-id').then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'test', 'item.name is not what expected');
       assert.equal(data.age, 0, 'item.age is not what expected');
       assert.deepEqual(
@@ -31,7 +31,7 @@ Find an item by Id should succeed
       );
       assert.equal(data.__v, 0, 'The item should be not previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -8,7 +8,7 @@ dashedName: give-sibling-elements-a-unique-key-attribute
 
 # --description--
 
-The last challenge showed how the `map` method is used to dynamically render a number of elements based on user input. However, there was an important piece missing from that example. When you create an array of elements, each one needs a `key` attribute set to a unique value. React uses these keys to keep track of which items are added, changed, or removed. This helps make the re-rendering process more efficient when the list is modified in any way.  
+The last challenge showed how the `map` method is used to dynamically render a number of elements based on user input. However, there was an important piece missing from that example. When you create an array of elements, each one needs a `key` attribute set to a unique value. React uses these keys to keep track of which items are added, changed, or removed. This helps make the re-rendering process more efficient when the list is modified in any way.
 
 **Note:** Keys only need to be unique between sibling elements, they don't need to be globally unique in your application.
 
@@ -93,7 +93,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<Frameworks />, document.getElementById('root'))
+ReactDOM.render(<Frameworks />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -113,12 +113,10 @@ function Frameworks() {
   return (
     <div>
       <h1>Popular Front End JavaScript Frameworks</h1>
-      <ul>
-        {renderFrameworks}
-      </ul>
+      <ul>{renderFrameworks}</ul>
     </div>
   );
-};
+}
 ```
 
 # --solutions--
@@ -134,14 +132,14 @@ const frontEndFrameworks = [
 ];
 
 function Frameworks() {
-  const renderFrameworks = frontEndFrameworks.map((fw, i) => <li key={i}>{fw}</li>);
+  const renderFrameworks = frontEndFrameworks.map((fw, i) => (
+    <li key={i}>{fw}</li>
+  ));
   return (
     <div>
       <h1>Popular Front End JavaScript Frameworks</h1>
-      <ul>
-        {renderFrameworks}
-      </ul>
+      <ul>{renderFrameworks}</ul>
     </div>
   );
-};
+}
 ```

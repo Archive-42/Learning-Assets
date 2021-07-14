@@ -20,7 +20,7 @@ Most HTML elements have an opening tag and a closing tag.
 Opening tags look like this:
 
 ```html
-<h1>
+<h1></h1>
 ```
 
 Closing tags look like this:

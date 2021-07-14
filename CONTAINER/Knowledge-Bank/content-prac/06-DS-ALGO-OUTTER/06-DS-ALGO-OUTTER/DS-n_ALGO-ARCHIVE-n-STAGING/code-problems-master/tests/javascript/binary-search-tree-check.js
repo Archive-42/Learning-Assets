@@ -1,32 +1,32 @@
-var assert = require('assert');
-var isBST  = require('../../solutions/javascript/binary-search-tree-check');
+var assert = require("assert");
+var isBST = require("../../solutions/javascript/binary-search-tree-check");
 
 var pass = {
   value: 8,
   left: {
     value: 3,
     left: {
-      value: 1
+      value: 1,
     },
     right: {
       value: 6,
       left: {
-        value: 4
+        value: 4,
       },
       right: {
-        value: 7
-      }
-    }
+        value: 7,
+      },
+    },
   },
   right: {
     value: 10,
     right: {
       value: 14,
       left: {
-        value: 13
-      }
-    }
-  }
+        value: 13,
+      },
+    },
+  },
 };
 
 var failLeft = {
@@ -34,31 +34,31 @@ var failLeft = {
   left: {
     value: 8,
     left: {
-      value: 9
+      value: 9,
     },
     right: {
-      value: 10
-    }
+      value: 10,
+    },
   },
   right: {
-    value: 12
-  }
+    value: 12,
+  },
 };
 
 var failRight = {
   value: 22,
   left: {
-    value: 19
+    value: 19,
   },
   right: {
     value: 29,
     left: {
-      value: 26
+      value: 26,
     },
     right: {
-      value: 27
-    }
-  }
+      value: 27,
+    },
+  },
 };
 
 var failDuplicate = {
@@ -66,15 +66,15 @@ var failDuplicate = {
   left: {
     value: 10,
     left: {
-      value: 7
+      value: 7,
     },
     right: {
-      value: 13
-    }
+      value: 13,
+    },
   },
   right: {
-    value: 15
-  }
+    value: 15,
+  },
 };
 
 var bstFalse = {
@@ -82,32 +82,32 @@ var bstFalse = {
   left: {
     value: 2,
     right: {
-      value: 10
-    }
+      value: 10,
+    },
   },
   right: {
-    value: 5
-  }
+    value: 5,
+  },
 };
 
-describe('binary search tree check', function () {
-  it('should pass a valid binary search tree', function () {
+describe("binary search tree check", function () {
+  it("should pass a valid binary search tree", function () {
     assert.ok(isBST(pass));
   });
 
-  it('should fail with a left subtree that is greater', function () {
+  it("should fail with a left subtree that is greater", function () {
     assert.ok(!isBST(failLeft));
   });
 
-  it('should fail with a right subtree that is smaller', function () {
+  it("should fail with a right subtree that is smaller", function () {
     assert.ok(!isBST(failRight));
   });
 
-  it('should fail with duplicate nodes', function () {
+  it("should fail with duplicate nodes", function () {
     assert.ok(!isBST(failDuplicate));
   });
 
-  it('should fail with bstFalse', function () {
+  it("should fail with bstFalse", function () {
     assert.ok(!isBST(bstFalse));
   });
 });

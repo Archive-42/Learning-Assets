@@ -19,7 +19,7 @@ dashedName: chain-search-query-helpers-to-narrow-search-results
 应该成功地链式调用辅助查询函数。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/_api/query-tools',
     type: 'POST',
@@ -31,7 +31,7 @@ dashedName: chain-search-query-helpers-to-narrow-search-results
       { name: 'Mario', age: 51, favoriteFoods: ['burrito', 'prosciutto'] }
     ])
   }).then(
-    (data) => {
+    data => {
       assert.isArray(data, 'the response should be an Array');
       assert.equal(
         data.length,
@@ -59,7 +59,7 @@ dashedName: chain-search-query-helpers-to-narrow-search-results
         'The returned second item name is not what expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

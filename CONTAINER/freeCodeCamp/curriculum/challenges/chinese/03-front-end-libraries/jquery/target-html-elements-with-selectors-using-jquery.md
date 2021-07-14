@@ -4,8 +4,7 @@ title: 使用 jQuery 选择器选择元素
 challengeType: 6
 forumTopicId: 18319
 required:
-  - 
-    link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: target-html-elements-with-selectors-using-jquery
 ---
 
@@ -20,7 +19,7 @@ jQuery 通常选取并操作带有<dfn>选择器（selector）</dfn>的 HTML 标
 比如，想要给 `button` 元素添加跳跃效果。 只需要在 document ready 函数内添加如下代码：
 
 ```js
-$("button").addClass("animated bounce");
+$('button').addClass('animated bounce');
 ```
 
 请注意，我们已经在后台引入了 jQuery 库和 Animate.css 库，所以你可以在编辑器里直接使用它们。 你将使用 jQuery 将 Animate.css `bounce` class 应用于 `button` 元素。
@@ -53,9 +52,7 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-
-  });
+  $(document).ready(function () {});
 </script>
 
 <!-- Only change code above this line -->
@@ -87,8 +84,8 @@ assert(
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
   });
 </script>
 

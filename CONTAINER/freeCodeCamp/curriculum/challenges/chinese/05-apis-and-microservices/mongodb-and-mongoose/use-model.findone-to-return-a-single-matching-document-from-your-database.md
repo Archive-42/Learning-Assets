@@ -19,13 +19,13 @@ dashedName: use-model-findone-to-return-a-single-matching-document-from-your-dat
 应成功地找到一个数据
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/find-one-by-food', {
     name: 'Gary',
     age: 46,
     favoriteFoods: ['chicken salad']
   }).then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'Gary', 'item.name is not what expected');
       assert.deepEqual(
         data.favoriteFoods,
@@ -34,7 +34,7 @@ dashedName: use-model-findone-to-return-a-single-matching-document-from-your-dat
       );
       assert.equal(data.__v, 0, 'The item should be not previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

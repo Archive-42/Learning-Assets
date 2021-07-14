@@ -31,4 +31,3 @@ Objects are one of the five standard data types.
 ## --video-solution--
 
 4
-

@@ -20,7 +20,7 @@ Let's override your `pink-text` and `blue-text` classes, and make your `h1` elem
 Give your `h1` element the `id` attribute of `orange-text`. Remember, id styles look like this:
 
 ```html
-<h1 id="orange-text">
+<h1 id="orange-text"></h1>
 ```
 
 Leave the `blue-text` and `pink-text` classes on your `h1` element.
@@ -117,7 +117,7 @@ assert($('h1').css('color') === 'rgb(255, 165, 0)');
   }
   #orange-text {
     color: orange;
-  }  
+  }
 </style>
-<h1 id="orange-text"  class="pink-text blue-text">Hello World!</h1>
+<h1 id="orange-text" class="pink-text blue-text">Hello World!</h1>
 ```

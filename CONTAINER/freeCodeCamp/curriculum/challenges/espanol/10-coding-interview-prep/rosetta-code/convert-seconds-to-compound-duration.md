@@ -19,10 +19,10 @@ Demonstrate that it passes the following three test-cases:
 
 <div style='font-size:115%; font-weight: bold;'>Test Cases</div>
 
-| Input number | Output number             |
-| ------------ | ------------------------- |
-| 7259         | <code>2 hr, 59 sec</code> |
-| 728640059    | <code>1 d</code> |
+| Input number | Output number                         |
+| ------------ | ------------------------------------- |
+| 7259         | <code>2 hr, 59 sec</code>             |
+| 728640059    | <code>1 d</code>                      |
 | 6000000      | <code>9 wk, 6 d, 10 hr, 40 min</code> |
 
 <div style="font-size:115%; font-weight: bold;">Details</div>
@@ -30,13 +30,13 @@ Demonstrate that it passes the following three test-cases:
   <li>
     The following five units should be used:
 
-| Unit   | Suffix used in Output | Conversion            |
-| ------ | --------------------- | --------------------- |
-| week   |!!crwdBlockTags_18_sgaTkcolBdwrc!!       | 1 week = 7 days       |
-| day    |!!crwdBlockTags_19_sgaTkcolBdwrc!!        | 1 day = 24 hours      |
-| hour   |!!crwdBlockTags_20_sgaTkcolBdwrc!!       | 1 hour = 60 minutes   |
-| minute |!!crwdBlockTags_21_sgaTkcolBdwrc!!      | 1 minute = 60 seconds |
-| second |!!crwdBlockTags_22_sgaTkcolBdwrc!!      | ---                   |
+| Unit   | Suffix used in Output              | Conversion            |
+| ------ | ---------------------------------- | --------------------- |
+| week   | !!crwdBlockTags_18_sgaTkcolBdwrc!! | 1 week = 7 days       |
+| day    | !!crwdBlockTags_19_sgaTkcolBdwrc!! | 1 day = 24 hours      |
+| hour   | !!crwdBlockTags_20_sgaTkcolBdwrc!! | 1 hour = 60 minutes   |
+| minute | !!crwdBlockTags_21_sgaTkcolBdwrc!! | 1 minute = 60 seconds |
+| second | !!crwdBlockTags_22_sgaTkcolBdwrc!! | ---                   |
 
   </li>
   <li>
@@ -89,7 +89,6 @@ const results = ['2 hr, 59 sec', '1 d', '9 wk, 6 d, 10 hr, 40 min'];
 
 ```js
 function convertSeconds(sec) {
-
   return true;
 }
 ```
@@ -102,27 +101,27 @@ function convertSeconds(sec) {
   // compoundDuration :: [String] -> Int -> String
   const compoundDuration = (labels, intSeconds) =>
     weekParts(intSeconds)
-    .map((v, i) => [v, labels[i]])
-    .reduce((a, x) =>
-      a.concat(x[0] ? [`${x[0]} ${x[1] || '?'}`] : []), []
-    )
-    .join(', ');
+      .map((v, i) => [v, labels[i]])
+      .reduce((a, x) => a.concat(x[0] ? [`${x[0]} ${x[1] || '?'}`] : []), [])
+      .join(', ');
 
-    // weekParts :: Int -> [Int]
-  const weekParts = intSeconds => [0, 7, 24, 60, 60]
-    .reduceRight((a, x) => {
-      const r = a.rem;
-      const mod = x !== 0 ? r % x : r;
+  // weekParts :: Int -> [Int]
+  const weekParts = intSeconds =>
+    [0, 7, 24, 60, 60].reduceRight(
+      (a, x) => {
+        const r = a.rem;
+        const mod = x !== 0 ? r % x : r;
 
-      return {
-        rem: (r - mod) / (x || 1),
-        parts: [mod].concat(a.parts)
-      };
-    }, {
-      rem: intSeconds,
-      parts: []
-    })
-    .parts;
+        return {
+          rem: (r - mod) / (x || 1),
+          parts: [mod].concat(a.parts)
+        };
+      },
+      {
+        rem: intSeconds,
+        parts: []
+      }
+    ).parts;
 
   return compoundDuration(localNames, sec);
 }

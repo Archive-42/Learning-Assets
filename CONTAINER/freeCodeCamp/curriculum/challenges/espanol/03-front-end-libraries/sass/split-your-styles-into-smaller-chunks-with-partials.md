@@ -17,7 +17,7 @@ For example, if all your mixins are saved in a partial named "\_mixins.scss", an
 ```scss
 // In the main.scss file
 
-@import 'mixins'
+@import 'mixins';
 ```
 
 Note that the underscore and file extension are not needed in the `import` statement - Sass understands it is a partial. Once a partial is imported into a file, all variables, mixins, and other code are available to use.

@@ -27,4 +27,3 @@ What is the correct command to install the Python 3 version of the `python-nmap`
 ## --video-solution--
 
 3
-

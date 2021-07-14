@@ -248,7 +248,7 @@ assert(
   }
 
   body {
-    background:#c6faf1;
+    background: #c6faf1;
   }
 
   .penguin * {
@@ -283,5 +283,18 @@ assert(
 # --solutions--
 
 ```html
-<style>.penguin-top {background: var(--penguin-skin);} .penguin-bottom {background: var(--penguin-skin);} .right-hand {background: var(--penguin-skin);} .left-hand {background: var(--penguin-skin);}</style>
+<style>
+  .penguin-top {
+    background: var(--penguin-skin);
+  }
+  .penguin-bottom {
+    background: var(--penguin-skin);
+  }
+  .right-hand {
+    background: var(--penguin-skin);
+  }
+  .left-hand {
+    background: var(--penguin-skin);
+  }
+</style>
 ```

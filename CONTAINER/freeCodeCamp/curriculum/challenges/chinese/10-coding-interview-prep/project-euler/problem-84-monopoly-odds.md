@@ -8,7 +8,7 @@ dashedName: problem-84-monopoly-odds
 
 # --description--
 
-In the game, *Monopoly*, the standard board is set up in the following way:
+In the game, _Monopoly_, the standard board is set up in the following way:
 
 <div style="text-align: center;">
   <table cellspacing="1" cellpadding="5" border="0" style="background-color: black; color: black;" align="center">
@@ -144,7 +144,6 @@ assert.strictEqual(monopolyOdds(), 101524);
 
 ```js
 function monopolyOdds() {
-
   return true;
 }
 

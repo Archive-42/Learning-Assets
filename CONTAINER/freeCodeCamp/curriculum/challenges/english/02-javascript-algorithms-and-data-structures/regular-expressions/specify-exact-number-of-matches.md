@@ -15,9 +15,9 @@ To specify a certain number of patterns, just have that one number between the c
 For example, to match only the word `hah` with the letter `a` `3` times, your regex would be `/ha{3}h/`.
 
 ```js
-let A4 = "haaaah";
-let A3 = "haaah";
-let A100 = "h" + "a".repeat(100) + "h";
+let A4 = 'haaaah';
+let A3 = 'haaah';
+let A100 = 'h' + 'a'.repeat(100) + 'h';
 let multipleHA = /ha{3}h/;
 multipleHA.test(A4);
 multipleHA.test(A3);
@@ -78,7 +78,7 @@ assert(!timRegex.test('Ti' + 'm'.repeat(30) + 'ber'));
 ## --seed-contents--
 
 ```js
-let timStr = "Timmmmber";
+let timStr = 'Timmmmber';
 let timRegex = /change/; // Change this line
 let result = timRegex.test(timStr);
 ```
@@ -86,7 +86,7 @@ let result = timRegex.test(timStr);
 # --solutions--
 
 ```js
-let timStr = "Timmmmber";
+let timStr = 'Timmmmber';
 let timRegex = /Tim{4}ber/; // Change this line
 let result = timRegex.test(timStr);
 ```

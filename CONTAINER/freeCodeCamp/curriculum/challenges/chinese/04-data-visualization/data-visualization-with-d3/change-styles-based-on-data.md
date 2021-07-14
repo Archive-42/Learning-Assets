@@ -13,9 +13,7 @@ D3 是关于可视化和展示数据的。 如果你想基于数据来改变元�
 例如，你想将值小于 20 的数据点设置为蓝色，其余设置为红色。 你可以在 `style()` 方法中使用包含条件逻辑的回调函数。 回调函数以 `d` 作为参数来表示一个数据点：
 
 ```js
-selection.style("color", (d) => {
-
-});
+selection.style('color', d => {});
 ```
 
 `style()` 方法不仅仅可以设置 `color`——它也适用于其他 CSS 属性。
@@ -91,16 +89,15 @@ assert($('h2').eq(8).css('color') == 'rgb(255, 0, 0)');
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("h2")
+    d3.select('body')
+      .selectAll('h2')
       .data(dataset)
       .enter()
-      .append("h2")
-      .text((d) => (d + " USD"))
-      // Add your code below this line
+      .append('h2')
+      .text(d => d + ' USD');
+    // Add your code below this line
 
-
-
-      // Add your code above this line
+    // Add your code above this line
   </script>
 </body>
 ```
@@ -112,12 +109,13 @@ assert($('h2').eq(8).css('color') == 'rgb(255, 0, 0)');
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("h2")
+    d3.select('body')
+      .selectAll('h2')
       .data(dataset)
       .enter()
-      .append("h2")
-      .text((d) => (d + " USD"))
-      .style("color", (d) => d < 20 ? "red" : "green")
+      .append('h2')
+      .text(d => d + ' USD')
+      .style('color', d => (d < 20 ? 'red' : 'green'));
   </script>
 </body>
 ```

@@ -31,16 +31,16 @@ a(href='/logout') Logout
 应在 Pug render 中给 /profile 传一个变量。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /username:( |)req.user.username/gi,
         'You should be passing the variable username with req.user.username into the render function of the profile page'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

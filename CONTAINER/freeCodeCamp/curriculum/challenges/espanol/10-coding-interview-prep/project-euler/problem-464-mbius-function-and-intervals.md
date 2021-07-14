@@ -36,7 +36,6 @@ assert.strictEqual(euler464(), 198775297232878);
 
 ```js
 function euler464() {
-
   return true;
 }
 

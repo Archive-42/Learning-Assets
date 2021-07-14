@@ -27,4 +27,3 @@ On a separate database server.
 ## --video-solution--
 
 1
-

@@ -19,7 +19,7 @@ Warning - When interacting with remote services, errors may occur!
 ```js
 /* Example */
 
-const someFunc = function(done) {
+const someFunc = function (done) {
   //... do something (risky) ...
   if (error) return done(error);
   done(null, result);
@@ -47,13 +47,13 @@ Now, create a model called `Person` from the `personSchema`.
 Creating an instance from a mongoose schema should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/mongoose-model', {
     name: 'Mike',
     age: 28,
     favoriteFoods: ['pizza', 'cheese']
   }).then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'Mike', '"model.name" is not what expected');
       assert.equal(data.age, '28', '"model.age" is not what expected');
       assert.isArray(
@@ -71,7 +71,7 @@ Creating an instance from a mongoose schema should succeed
         '"model.favoriteFoods" does not include the expected items'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -110,12 +110,11 @@ Here’s the code in JavaScript:
 
 Since we’re just doing DFS and looking at all the vertices along with their edges, we have a runtime of **O(V + E)** with a space complexity of **O(V + E)** as well.
 
-*   Directed graphs have edges that point from one vertex to another. One can only go one direction on an edge.
-*   Non-directed / bidirectional graphs have edges where you can go back and forth between vertices.
-*   Cyclic graphs are graphs with cycles. Basically, there is at least one path in the graph where a vertex can come back to itself.
-*   Acyclic graphs don’t have cycles.
-*   Directed acyclic graphs (DAGs) are specific names given to acyclic graphs.
-*   We can determine if a graph has a cycle by doing DFS and see if we re-explore a vertex that’s on our current exploration path.
-
+- Directed graphs have edges that point from one vertex to another. One can only go one direction on an edge.
+- Non-directed / bidirectional graphs have edges where you can go back and forth between vertices.
+- Cyclic graphs are graphs with cycles. Basically, there is at least one path in the graph where a vertex can come back to itself.
+- Acyclic graphs don’t have cycles.
+- Directed acyclic graphs (DAGs) are specific names given to acyclic graphs.
+- We can determine if a graph has a cycle by doing DFS and see if we re-explore a vertex that’s on our current exploration path.
 
 [Source](https://trykv.medium.com/algorithms-on-graphs-directed-graphs-and-cycle-detection-3982dfbd11f5)

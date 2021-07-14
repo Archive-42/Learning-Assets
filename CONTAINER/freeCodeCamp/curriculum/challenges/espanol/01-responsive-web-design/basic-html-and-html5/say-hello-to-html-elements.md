@@ -20,7 +20,7 @@ La mayoría de elementos HTML tienen una etiqueta de apertura y una etiqueta de 
 Las etiquetas de apertura se ven así:
 
 ```html
-<h1>
+<h1></h1>
 ```
 
 Las etiquetas de cierre se ven así:

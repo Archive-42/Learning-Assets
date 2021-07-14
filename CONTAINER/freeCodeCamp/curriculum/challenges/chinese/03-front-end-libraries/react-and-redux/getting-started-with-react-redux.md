@@ -34,7 +34,7 @@ assert(
 `DisplayMessages` 组件的构造函数应调用 `super`，传入 `props`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       const noWhiteSpace = __helpers.removeWhiteSpace(getUserInput('index'));
@@ -68,7 +68,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<DisplayMessages />, document.getElementById('root'))
+ReactDOM.render(<DisplayMessages />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -79,9 +79,9 @@ class DisplayMessages extends React.Component {
 
   // Change code above this line
   render() {
-    return <div />
+    return <div />;
   }
-};
+}
 ```
 
 # --solutions--
@@ -93,10 +93,10 @@ class DisplayMessages extends React.Component {
     this.state = {
       input: '',
       messages: []
-    }
+    };
   }
   render() {
-    return <div/>
+    return <div />;
   }
-};
+}
 ```

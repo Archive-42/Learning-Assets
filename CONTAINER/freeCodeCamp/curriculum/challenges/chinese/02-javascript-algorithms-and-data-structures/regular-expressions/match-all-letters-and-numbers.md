@@ -15,8 +15,8 @@ JavaScript 中与字母表匹配的最接近的元字符是`\w`。 这个缩写�
 ```js
 let longHand = /[A-Za-z0-9_]+/;
 let shortHand = /\w+/;
-let numbers = "42";
-let varNames = "important_var";
+let numbers = '42';
+let varNames = 'important_var';
 longHand.test(numbers);
 shortHand.test(numbers);
 longHand.test(varNames);
@@ -39,7 +39,7 @@ shortHand.test(varNames);
 assert(alphabetRegexV2.global);
 ```
 
-正则表达式应该使用元字符r `\w` 来匹配非字母字符。
+正则表达式应该使用元字符 r `\w` 来匹配非字母字符。
 
 ```js
 assert(/\\w/.test(alphabetRegexV2.source));
@@ -70,7 +70,7 @@ assert(
 );
 ```
 
-你的正则表达式应该在字符串 `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.` 中找到36个字母数字字符。
+你的正则表达式应该在字符串 `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.` 中找到 36 个字母数字字符。
 
 ```js
 assert(
@@ -84,7 +84,7 @@ assert(
 ## --seed-contents--
 
 ```js
-let quoteSample = "The five boxing wizards jump quickly.";
+let quoteSample = 'The five boxing wizards jump quickly.';
 let alphabetRegexV2 = /change/; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
 ```
@@ -92,7 +92,7 @@ let result = quoteSample.match(alphabetRegexV2).length;
 # --solutions--
 
 ```js
-let quoteSample = "The five boxing wizards jump quickly.";
+let quoteSample = 'The five boxing wizards jump quickly.';
 let alphabetRegexV2 = /\w/g; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
 ```

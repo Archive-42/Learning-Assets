@@ -34,12 +34,11 @@ Test 1
       <p>Est. 2020</p>
     </header>
     <main>
---fcc-editable-region--
-      <section>
-      </section>
---fcc-editable-region--
+      --fcc-editable-region--
+      <section></section>
+      --fcc-editable-region--
     </main>
   </body>
-<html>
+  <html></html>
+</html>
 ```
-

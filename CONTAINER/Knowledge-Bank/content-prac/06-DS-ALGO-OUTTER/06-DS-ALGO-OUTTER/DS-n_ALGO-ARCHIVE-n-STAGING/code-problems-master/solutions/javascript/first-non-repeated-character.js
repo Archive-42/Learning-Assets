@@ -1,6 +1,5 @@
 module.exports = function (string) {
-  var checkChar,
-      prevCharacter;
+  var checkChar, prevCharacter;
 
   checkChar = (function () {
     var repeated = false;
@@ -10,7 +9,9 @@ module.exports = function (string) {
         repeated = true;
       }
       if (prevCharacter && char !== prevCharacter) {
-        if (!repeated) { return true; }
+        if (!repeated) {
+          return true;
+        }
         repeated = false;
       }
       prevCharacter = char;
@@ -21,6 +22,8 @@ module.exports = function (string) {
 
   // Interate one extra time past the last character
   for (var i = 0; i <= string.length; i++) {
-    if (checkChar(string[i])) { return prevCharacter; }
+    if (checkChar(string[i])) {
+      return prevCharacter;
+    }
   }
 };

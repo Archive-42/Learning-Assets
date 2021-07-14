@@ -14,13 +14,13 @@ Una vez que el objeto está congelado, ya no puedes agregar, actualizar o borrar
 
 ```js
 let obj = {
-  name:"FreeCodeCamp",
-  review:"Awesome"
+  name: 'FreeCodeCamp',
+  review: 'Awesome'
 };
 Object.freeze(obj);
-obj.review = "bad";
-obj.newProp = "Test";
-console.log(obj); 
+obj.review = 'bad';
+obj.newProp = 'Test';
+console.log(obj);
 ```
 
 Las asignaciones `obj.review` y `obj.newProp` provocarán errores y la consola mostrará el valor `{ name: "FreeCodeCamp", review: "Awesome" }`.
@@ -34,20 +34,19 @@ En este desafío vas a utilizar `Object.freeze` para prevenir el cambio de const
 No debes reemplazar la palabra clave `const`.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/const/g));
+getUserInput => assert(getUserInput('index').match(/const/g));
 ```
 
 `MATH_CONSTANTS` debe ser una variable constante (utilizando `const`).
 
 ```js
-(getUserInput) =>
-  assert(getUserInput('index').match(/const\s+MATH_CONSTANTS/g));
+getUserInput => assert(getUserInput('index').match(/const\s+MATH_CONSTANTS/g));
 ```
 
 No debes modificar la declaración original de `MATH_CONSTANTS`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     getUserInput('index').match(
       /const\s+MATH_CONSTANTS\s+=\s+{\s+PI:\s+3.14\s+};/g
@@ -72,11 +71,10 @@ function freezeObj() {
   };
   // Only change code below this line
 
-
   // Only change code above this line
   try {
     MATH_CONSTANTS.PI = 99;
-  } catch(ex) {
+  } catch (ex) {
     console.log(ex);
   }
   return MATH_CONSTANTS.PI;
@@ -95,7 +93,7 @@ function freezeObj() {
 
   try {
     MATH_CONSTANTS.PI = 99;
-  } catch(ex) {
+  } catch (ex) {
     console.log(ex);
   }
   return MATH_CONSTANTS.PI;

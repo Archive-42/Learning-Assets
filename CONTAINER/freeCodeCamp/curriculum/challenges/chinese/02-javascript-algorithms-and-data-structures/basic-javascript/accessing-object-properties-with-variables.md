@@ -15,9 +15,11 @@ dashedName: accessing-object-properties-with-variables
 
 ```js
 var dogs = {
-  Fido: "Mutt",  Hunter: "Doberman",  Snoopie: "Beagle"
+  Fido: 'Mutt',
+  Hunter: 'Doberman',
+  Snoopie: 'Beagle'
 };
-var myDog = "Hunter";
+var myDog = 'Hunter';
 var myBreed = dogs[myDog];
 console.log(myBreed);
 ```
@@ -28,13 +30,13 @@ console.log(myBreed);
 
 ```js
 var someObj = {
-  propName: "John"
+  propName: 'John'
 };
 function propPrefix(str) {
-  var s = "prop";
+  var s = 'prop';
   return s + str;
 }
-var someProp = propPrefix("Name");
+var someProp = propPrefix('Name');
 console.log(someObj[someProp]);
 ```
 
@@ -89,7 +91,11 @@ assert(/testObj\s*?\[\s*playerNumber\s*\]/.test(code));
 ## --after-user-code--
 
 ```js
-if(typeof player !== "undefined"){(function(v){return v;})(player);}
+if (typeof player !== 'undefined') {
+  (function (v) {
+    return v;
+  })(player);
+}
 ```
 
 ## --seed-contents--
@@ -97,24 +103,24 @@ if(typeof player !== "undefined"){(function(v){return v;})(player);}
 ```js
 // Setup
 var testObj = {
-  12: "Namath",
-  16: "Montana",
-  19: "Unitas"
+  12: 'Namath',
+  16: 'Montana',
+  19: 'Unitas'
 };
 
 // Only change code below this line
 
-var playerNumber;       // Change this line
-var player = testObj;   // Change this line
+var playerNumber; // Change this line
+var player = testObj; // Change this line
 ```
 
 # --solutions--
 
 ```js
 var testObj = {
-  12: "Namath",
-  16: "Montana",
-  19: "Unitas"
+  12: 'Namath',
+  16: 'Montana',
+  19: 'Unitas'
 };
 var playerNumber = 16;
 var player = testObj[playerNumber];

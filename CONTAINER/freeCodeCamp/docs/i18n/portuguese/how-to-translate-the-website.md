@@ -45,10 +45,11 @@ import { useTranslation } from 'react-i18next';
 const { t } = useTranslation();
 
 // call the "t" function with a key from the JSON file:
-<p>{t('key')}</p> // more details below
+<p>{t('key')}</p>; // more details below
 ```
 
 ### Class Component
+
 ```js
 import { withTranslation } from 'react-i18next';
 
@@ -116,7 +117,7 @@ import { Trans } from 'react-i18next'
 </p>
 
 // in the JSON file:
-{ 
+{
   "fcc": {
     "greeting": "Welcome to <strong>freeCodeCamp</strong>"
   }
@@ -141,7 +142,7 @@ Other times, you will want to have certain text inside another element, an ancho
 </p>
 
 // in the JSON file:
-{ 
+{
   "check-forum": "Check out <0>our forum</0>."
 }
 

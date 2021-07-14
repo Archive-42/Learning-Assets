@@ -20,14 +20,14 @@ function unCurried(x, y) {
 }
 
 function curried(x) {
-  return function(y) {
+  return function (y) {
     return x + y;
-  }
+  };
 }
 
-const curried = x => y => x + y
+const curried = x => y => x + y;
 
-curried(1)(2)
+curried(1)(2);
 ```
 
 `curried(1)(2)` would return `3`.
@@ -86,8 +86,6 @@ assert(code.match(/[xyz]\s*?\+\s*?[xyz]\s*?\+\s*?[xyz]/g));
 ```js
 function add(x) {
   // Only change code below this line
-
-
   // Only change code above this line
 }
 add(10)(20)(30);
@@ -96,5 +94,5 @@ add(10)(20)(30);
 # --solutions--
 
 ```js
-const add = x => y => z => x + y + z
+const add = x => y => z => x + y + z;
 ```

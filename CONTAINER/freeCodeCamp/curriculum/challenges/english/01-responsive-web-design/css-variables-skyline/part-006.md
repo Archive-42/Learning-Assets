@@ -23,7 +23,7 @@ assert($('#display-body').css('box-sizing') === 'border-box');
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -33,8 +33,7 @@ assert($('#display-body').css('box-sizing') === 'border-box');
     </style>
   </head>
 
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -42,7 +41,7 @@ assert($('#display-body').css('box-sizing') === 'border-box');
 
 ```html
 <!DOCTYPE html>
-<html>    
+<html>
   <head>
     <title>freeCodeCamp Skyline Project</title>
     <style>
@@ -53,7 +52,6 @@ assert($('#display-body').css('box-sizing') === 'border-box');
     </style>
   </head>
 
-  <body>
-  </body>
+  <body></body>
 </html>
 ```

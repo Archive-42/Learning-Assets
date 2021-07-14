@@ -18,7 +18,7 @@ Esto lo aprendimos en el desafío anterior.
 
 <table class='table table-striped'><thead><tr><th>Código</th><th>Resultado</th></tr></thead><tbody><tr><td><code>\'</code></td><td>comilla simple</td></tr><tr><td><code>\"</code></td><td>comilla doble</td></tr><tr><td><code>\\</code></td><td>barra invertida</td></tr><tr><td><code>\n</code></td><td>línea nueva</td></tr><tr><td><code>\r</code></td><td>retorno de carro</td></tr><tr><td><code>\t</code></td><td>tabulación</td></tr><tr><td><code>\b</code></td><td>límite de palabra</td></tr><tr><td><code>\f</code></td><td>fuente de formulario</td></tr></tbody></table>
 
-*Ten en cuenta que la barra invertida en sí debe ser escapada para poder mostrarla como una barra invertida.*
+_Ten en cuenta que la barra invertida en sí debe ser escapada para poder mostrarla como una barra invertida._
 
 # --instructions--
 
@@ -81,9 +81,11 @@ assert(myStr === 'FirstLine\n\t\\SecondLine\nThirdLine');
 ## --after-user-code--
 
 ```js
-(function(){
-if (myStr !== undefined){
-console.log('myStr:\n' + myStr);}})();
+(function () {
+  if (myStr !== undefined) {
+    console.log('myStr:\n' + myStr);
+  }
+})();
 ```
 
 ## --seed-contents--
@@ -95,5 +97,5 @@ var myStr; // Change this line
 # --solutions--
 
 ```js
-var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+var myStr = 'FirstLine\n\t\\SecondLine\nThirdLine';
 ```

@@ -15,17 +15,23 @@ Add `passport-local` as a dependency and add it to your server as follows: `cons
 Now you will have to tell passport to **use** an instantiated LocalStrategy object with a few settings defined. Make sure this (as well as everything from this point on) is encapsulated in the database connection since it relies on it!
 
 ```js
-passport.use(new LocalStrategy(
-  function(username, password, done) {
+passport.use(
+  new LocalStrategy(function (username, password, done) {
     myDataBase.findOne({ username: username }, function (err, user) {
-      console.log('User '+ username +' attempted to log in.');
-      if (err) { return done(err); }
-      if (!user) { return done(null, false); }
-      if (password !== user.password) { return done(null, false); }
+      console.log('User ' + username + ' attempted to log in.');
+      if (err) {
+        return done(err);
+      }
+      if (!user) {
+        return done(null, false);
+      }
+      if (password !== user.password) {
+        return done(null, false);
+      }
       return done(null, user);
     });
-  }
-));
+  })
+);
 ```
 
 This is defining the process to use when we try to authenticate someone locally. First, it tries to find a user in our database with the username entered, then it checks for the password to match, then finally, if no errors have popped up that we checked for, like an incorrect password, the `user`'s object is returned and they are authenticated.
@@ -41,9 +47,9 @@ Submit your page when you think you've got it right. If you're running into erro
 Passport-local should be a dependency.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -51,7 +57,7 @@ Passport-local should be a dependency.
         'Your project should list "passport-local " as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -60,9 +66,9 @@ Passport-local should be a dependency.
 Passport-local should be correctly required and setup.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /require.*("|')passport-local("|')/gi,
@@ -79,7 +85,7 @@ Passport-local should be correctly required and setup.
         'Your new local strategy should use the findOne query to find a username based on the inputs'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

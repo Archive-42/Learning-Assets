@@ -92,10 +92,8 @@ assert(code.match(/break/g).length > 2);
 
 ```js
 function switchOfStuff(val) {
-  var answer = "";
+  var answer = '';
   // Only change code below this line
-
-
 
   // Only change code above this line
   return answer;
@@ -108,20 +106,20 @@ switchOfStuff(1);
 
 ```js
 function switchOfStuff(val) {
-  var answer = "";
+  var answer = '';
 
-  switch(val) {
-    case "a":
-      answer = "apple";
+  switch (val) {
+    case 'a':
+      answer = 'apple';
       break;
-    case "b":
-      answer = "bird";
+    case 'b':
+      answer = 'bird';
       break;
-    case "c":
-      answer = "cat";
+    case 'c':
+      answer = 'cat';
       break;
     default:
-      answer = "stuff";
+      answer = 'stuff';
   }
   return answer;
 }

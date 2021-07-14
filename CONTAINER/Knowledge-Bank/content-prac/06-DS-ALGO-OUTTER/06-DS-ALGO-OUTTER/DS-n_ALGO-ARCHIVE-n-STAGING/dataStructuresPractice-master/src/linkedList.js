@@ -1,27 +1,27 @@
 // Note: don't use an array to do this.
-var makeLinkedList = function(){
+var makeLinkedList = function () {
   var list = {};
   list.head = null;
   list.tail = null;
 
-  list.addToTail = function(val){
+  list.addToTail = function (val) {
     var temp = list.tail;
     list.tail = makeNode(val);
-    if(list.head === null){
-      (list.head = list.tail);
-    } else{
+    if (list.head === null) {
+      list.head = list.tail;
+    } else {
       temp.next = list.tail;
       list.tail.previous = temp;
     }
   };
 
-  list.removeHead = function(){
+  list.removeHead = function () {
     var result;
-    if(list.head === list.tail && (list.head.value)){
-       result = list.head.value;
-       list.head = null;
-       list.tail = null;
-    }else{
+    if (list.head === list.tail && list.head.value) {
+      result = list.head.value;
+      list.head = null;
+      list.tail = null;
+    } else {
       var temp = list.head;
       list.head = temp.next;
       list.head.previous = null;
@@ -30,52 +30,52 @@ var makeLinkedList = function(){
     return result;
   };
 
-  list.contains = function(val){
+  list.contains = function (val) {
     var result;
-    if(list.head){
-       result = list.head.contains(val);
-    } else{
+    if (list.head) {
+      result = list.head.contains(val);
+    } else {
       result = false;
     }
     return result;
   };
-  
-  list.addToHead = function(val){
+
+  list.addToHead = function (val) {
     var temp = list.head;
     list.head = makeNode(val);
     list.head.next = temp;
     temp.previous = list.head;
-  }
+  };
 
-  list.removeTail = function(){
+  list.removeTail = function () {
     var temp = list.tail;
     var result;
-    if(list.tail === list.head && list.tail.value){
+    if (list.tail === list.head && list.tail.value) {
       result = list.tail.value;
       list.tail = null;
-    } else{
+    } else {
       list.tail = temp.previous;
       result = temp.value;
       list.tail.next = null;
     }
-     return result;
-  }
+    return result;
+  };
   return list;
 };
 
-var makeNode = function(value){
+var makeNode = function (value) {
   var node = {};
   node.value = value;
   node.next = null;
   node.previous = null;
 
-  node.contains = function(val){
+  node.contains = function (val) {
     var result;
-    if(this.value === val){
+    if (this.value === val) {
       result = true;
-    } else if(this.next){
+    } else if (this.next) {
       result = this.next.contains(val);
-    } else{
+    } else {
       result = false;
     }
     return result;

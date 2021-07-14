@@ -10,7 +10,7 @@ the second letter becomes the second to last letter, and so on.
  * @param {String} str - string to be decrypted/encrypt
  * @return {String} decrypted/encrypted string
  */
-function Atbash (message) {
+function Atbash(message) {
   let decodedString = ''
   for (let i = 0; i < message.length; i++) {
     if (/[^a-zA-Z]/.test(message[i])) {

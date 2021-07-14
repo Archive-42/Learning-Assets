@@ -20,7 +20,7 @@ parseInt(string, radix);
 And here's an example:
 
 ```js
-var a = parseInt("11", 2);
+var a = parseInt('11', 2);
 ```
 
 The radix variable says that `11` is in the binary system, or base 2. This example converts the string `11` to an integer `3`.
@@ -66,11 +66,9 @@ assert.isNaN(convertToInteger('JamesBond'));
 ## --seed-contents--
 
 ```js
-function convertToInteger(str) {
+function convertToInteger(str) {}
 
-}
-
-convertToInteger("10011");
+convertToInteger('10011');
 ```
 
 # --solutions--

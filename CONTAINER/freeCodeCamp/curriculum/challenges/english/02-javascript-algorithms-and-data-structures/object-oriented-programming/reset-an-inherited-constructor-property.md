@@ -13,17 +13,17 @@ When an object inherits its `prototype` from another object, it also inherits th
 Here's an example:
 
 ```js
-function Bird() { }
+function Bird() {}
 Bird.prototype = Object.create(Animal.prototype);
 let duck = new Bird();
-duck.constructor
+duck.constructor;
 ```
 
 But `duck` and all instances of `Bird` should show that they were constructed by `Bird` and not `Animal`. To do so, you can manually set `Bird's` constructor property to the `Bird` object:
 
 ```js
 Bird.prototype.constructor = Bird;
-duck.constructor
+duck.constructor;
 ```
 
 # --instructions--
@@ -61,16 +61,14 @@ assert(beagle.constructor === Dog);
 ## --seed-contents--
 
 ```js
-function Animal() { }
-function Bird() { }
-function Dog() { }
+function Animal() {}
+function Bird() {}
+function Dog() {}
 
 Bird.prototype = Object.create(Animal.prototype);
 Dog.prototype = Object.create(Animal.prototype);
 
 // Only change code below this line
-
-
 
 let duck = new Bird();
 let beagle = new Dog();
@@ -79,9 +77,9 @@ let beagle = new Dog();
 # --solutions--
 
 ```js
-function Animal() { }
-function Bird() { }
-function Dog() { }
+function Animal() {}
+function Bird() {}
+function Dog() {}
 Bird.prototype = Object.create(Animal.prototype);
 Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;

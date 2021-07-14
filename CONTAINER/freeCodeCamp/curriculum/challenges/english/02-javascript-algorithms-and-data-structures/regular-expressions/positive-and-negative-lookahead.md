@@ -19,9 +19,9 @@ On the other hand, a negative lookahead will look to make sure the element in th
 Lookaheads are a bit confusing but some examples will help.
 
 ```js
-let quit = "qu";
-let noquit = "qt";
-let quRegex= /q(?=u)/;
+let quit = 'qu';
+let noquit = 'qt';
+let quRegex = /q(?=u)/;
 let qRegex = /q(?!u)/;
 quit.match(quRegex);
 noquit.match(qRegex);
@@ -32,7 +32,7 @@ Both of these `match` calls would return `["q"]`.
 A more practical use of lookaheads is to check two or more patterns in one string. Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number:
 
 ```js
-let password = "abc123";
+let password = 'abc123';
 let checkPass = /(?=\w{3,6})(?=\D*\d)/;
 checkPass.test(password);
 ```
@@ -102,7 +102,7 @@ assert(pwRegex.test('astr1on11aut'));
 ## --seed-contents--
 
 ```js
-let sampleWord = "astronaut";
+let sampleWord = 'astronaut';
 let pwRegex = /change/; // Change this line
 let result = pwRegex.test(sampleWord);
 ```
@@ -110,5 +110,5 @@ let result = pwRegex.test(sampleWord);
 # --solutions--
 
 ```js
-let pwRegex =  /(?=\w{6})(?=\w*\d{2})/;
+let pwRegex = /(?=\w{6})(?=\w*\d{2})/;
 ```

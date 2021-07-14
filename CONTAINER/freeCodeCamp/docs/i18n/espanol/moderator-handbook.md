@@ -299,7 +299,7 @@ Suppose you are helping people in the community consistently over time. In that 
 If you are approved, we will add you to our Moderator Teams on [GitHub](https://github.com/orgs/freeCodeCamp/teams/moderators), [forum](https://forum.freecodecamp.org/g/moderators), and chat etc.
 
 > [!NOTE] For GitHub: After you've been accepted as a moderator, you will receive a Github repository invitation. You'll need to head over towards [freeCodeCamp GitHub Organisation Invitation](https://github.com/orgs/freeCodeCamp/invitation) to be able to accept the invitation.
-> 
+>
 > This is required for us to be able to give you write access to some of our repositories.
 
 ## How we retire inactive moderators
@@ -409,6 +409,7 @@ git remote add upstream git://github.com/freeCodeCamp/freeCodeCamp.git
 git fetch upstream
 
 git pull upstream master
+```
 ````
 
 If you're using a GUI, you can simply `Add a new remote...` and use the link `git://github.com/freeCodeCamp/freeCodeCamp.git` from above.
@@ -418,6 +419,7 @@ Once you sync your fork and pass the build, we will be able to review your PR an
 ---
 
 Feel free to reference the [Syncing a Fork](https://help.github.com/articles/syncing-a-fork/) article on GitHub for more insight on how to keep your fork up-to-date with the upstream repository. 🔄
+
 ````
 
 ### Merge Conflicts

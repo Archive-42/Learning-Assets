@@ -15,8 +15,8 @@ To use the `.match()` method, apply the method on a string and pass in the regex
 Here's an example:
 
 ```js
-"Hello, World!".match(/Hello/);
-let ourStr = "Regular expressions";
+'Hello, World!'.match(/Hello/);
+let ourStr = 'Regular expressions';
 let ourRegex = /expressions/;
 ourStr.match(ourRegex);
 ```

@@ -13,11 +13,12 @@ El método `join` se utiliza para unir los elementos de un arreglo creando una c
 Aquí hay un ejemplo:
 
 ```js
-var arr = ["Hello", "World"];
-var str = arr.join(" ");
+var arr = ['Hello', 'World'];
+var str = arr.join(' ');
 ```
 
 `str` tendrá una cadena con valor `Hello World`.
+
 # --instructions--
 
 Utiliza el método `join` (entre otros) dentro de la función `sentensify` para hacer una oración a partir de las palabras en la cadena `str`. La función debe devolver una cadena. Por ejemplo, `I-like-Star-Wars` se convertiría en `I like Star Wars`. Para este desafío, no utilices el método `replace`.
@@ -72,11 +73,9 @@ assert(
 ```js
 function sentensify(str) {
   // Only change code below this line
-
-
   // Only change code above this line
 }
-sentensify("May-the-force-be-with-you");
+sentensify('May-the-force-be-with-you');
 ```
 
 # --solutions--

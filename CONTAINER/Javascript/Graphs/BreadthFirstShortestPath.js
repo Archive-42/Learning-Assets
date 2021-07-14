@@ -19,7 +19,7 @@ Doctests
 []
 */
 
-function breadthFirstShortestPath (graph, startNode, targetNode) {
+function breadthFirstShortestPath(graph, startNode, targetNode) {
   // check if startNode & targetNode are identical
   if (startNode === targetNode) {
     return [startNode]

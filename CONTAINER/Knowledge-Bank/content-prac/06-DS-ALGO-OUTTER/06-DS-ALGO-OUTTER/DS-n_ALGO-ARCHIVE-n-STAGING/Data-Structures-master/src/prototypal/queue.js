@@ -1,4 +1,4 @@
-var Queue = function(){
+var Queue = function () {
   var queue = Object.create(methods);
   queue._storage = {};
 
@@ -8,18 +8,18 @@ var Queue = function(){
   return queue;
 };
 
-  var methods = {};
-  methods.enqueue = function(value){
-    this._storage[this._end++] = value;
-  };
+var methods = {};
+methods.enqueue = function (value) {
+  this._storage[this._end++] = value;
+};
 
-  methods.dequeue = function(){
-    if(this._end > this._start){
-      var temp = this._storage[this._start++];
-      return temp;
-    }
-  };
+methods.dequeue = function () {
+  if (this._end > this._start) {
+    var temp = this._storage[this._start++];
+    return temp;
+  }
+};
 
-  methods.size = function(){
-    return this._end-this._start;
-  };
+methods.size = function () {
+  return this._end - this._start;
+};

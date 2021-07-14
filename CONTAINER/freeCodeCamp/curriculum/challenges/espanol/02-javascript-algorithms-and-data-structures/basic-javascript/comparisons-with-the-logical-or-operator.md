@@ -17,21 +17,21 @@ El patrón de abajo debería parecer familiar desde los puntos de referencia ant
 
 ```js
 if (num > 10) {
-  return "No";
+  return 'No';
 }
 if (num < 5) {
-  return "No";
+  return 'No';
 }
-return "Yes";
+return 'Yes';
 ```
 
 devolverá `Yes` sólo si `num` está entre `5` y `10` (5 y 10 incluidos). La misma lógica se puede escribir como:
 
 ```js
 if (num > 10 || num < 5) {
-  return "No";
+  return 'No';
 }
-return "Yes";
+return 'Yes';
 ```
 
 # --instructions--
@@ -109,15 +109,15 @@ function testLogicalOr(val) {
   // Only change code below this line
 
   if (val) {
-    return "Outside";
+    return 'Outside';
   }
 
   if (val) {
-    return "Outside";
+    return 'Outside';
   }
 
   // Only change code above this line
-  return "Inside";
+  return 'Inside';
 }
 
 testLogicalOr(15);
@@ -128,8 +128,8 @@ testLogicalOr(15);
 ```js
 function testLogicalOr(val) {
   if (val < 10 || val > 20) {
-    return "Outside";
+    return 'Outside';
   }
-  return "Inside";
+  return 'Inside';
 }
 ```

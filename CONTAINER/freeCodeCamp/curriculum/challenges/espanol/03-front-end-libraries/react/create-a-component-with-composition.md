@@ -10,16 +10,16 @@ dashedName: create-a-component-with-composition
 
 Now we will look at how we can compose multiple React components together. Imagine you are building an App and have created three components, a `Navbar`, `Dashboard`, and `Footer`.
 
-To compose these components together, you could create an `App` *parent* component which renders each of these three components as *children*. To render a component as a child in a React component, you include the component name written as a custom HTML tag in the JSX. For example, in the `render` method you could write:
+To compose these components together, you could create an `App` _parent_ component which renders each of these three components as _children_. To render a component as a child in a React component, you include the component name written as a custom HTML tag in the JSX. For example, in the `render` method you could write:
 
 ```jsx
 return (
- <App>
-  <Navbar />
-  <Dashboard />
-  <Footer />
- </App>
-)
+  <App>
+    <Navbar />
+    <Dashboard />
+    <Footer />
+  </App>
+);
 ```
 
 When React encounters a custom HTML tag that references another component (a component name wrapped in `< />` like in this example), it renders the markup for that component in the location of the tag. This should illustrate the parent/child relationship between the `App` component and the `Navbar`, `Dashboard`, and `Footer`.
@@ -73,7 +73,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<ParentComponent />, document.getElementById('root'))
+ReactDOM.render(<ParentComponent />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -95,14 +95,13 @@ class ParentComponent extends React.Component {
     return (
       <div>
         <h1>I am the parent</h1>
-        { /* Change code below this line */ }
+        {/* Change code below this line */}
 
-
-        { /* Change code above this line */ }
+        {/* Change code above this line */}
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -124,11 +123,11 @@ class ParentComponent extends React.Component {
     return (
       <div>
         <h1>I am the parent</h1>
-        { /* Change code below this line */ }
+        {/* Change code below this line */}
         <ChildComponent />
-        { /* Change code above this line */ }
+        {/* Change code above this line */}
       </div>
     );
   }
-};
+}
 ```

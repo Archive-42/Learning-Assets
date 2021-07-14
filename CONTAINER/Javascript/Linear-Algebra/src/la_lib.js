@@ -5,15 +5,15 @@
     The namespace LinearAlgebra contains useful classes and functions for dealing with
     linear algebra under JavaScript.
 */
-let LinearAlgebra;
-(function (LinearAlgebra) {
+let LinearAlgebra
+;(function (LinearAlgebra) {
   /*
         class: Vector
         This class represents a vector of arbitrary size and operations on it.
     */
   const Vector = /** @class */ (function () {
     // constructor
-    function Vector (N, comps) {
+    function Vector(N, comps) {
       if (comps === undefined) {
         comps = []
       }
@@ -62,7 +62,7 @@ let LinearAlgebra;
         const SIZE = this.size()
         const ans = new Vector(SIZE)
         for (let i = 0; i < SIZE; i++) {
-          ans.changeComponent(i, (this.components[i] + other.component(i)))
+          ans.changeComponent(i, this.components[i] + other.component(i))
         }
         return ans
       } else {
@@ -75,7 +75,7 @@ let LinearAlgebra;
         const SIZE = this.size()
         const ans = new Vector(SIZE)
         for (let i = 0; i < SIZE; i++) {
-          ans.changeComponent(i, (this.components[i] - other.component(i)))
+          ans.changeComponent(i, this.components[i] - other.component(i))
         }
         return ans
       } else {
@@ -100,7 +100,7 @@ let LinearAlgebra;
       const SIZE = this.size()
       const ans = new Vector(SIZE)
       for (let i = 0; i < SIZE; i++) {
-        ans.changeComponent(i, (this.components[i] * s))
+        ans.changeComponent(i, this.components[i] * s)
       }
       return ans
     }
@@ -159,11 +159,11 @@ let LinearAlgebra;
       return ans
     }
     return Vector
-  }()) // end of class Vector
+  })() // end of class Vector
   LinearAlgebra.Vector = Vector
   // -------------- global functions ---------------------------------
   // returns a unit basis vector of size N with a One on position 'pos'
-  function unitBasisVector (N, pos) {
+  function unitBasisVector(N, pos) {
     const ans = new Vector(N)
     for (let i = 0; i < N; i++) {
       if (i === pos) {
@@ -176,19 +176,19 @@ let LinearAlgebra;
   }
   LinearAlgebra.unitBasisVector = unitBasisVector
   // returns a random vector with integer components (between 'a' and 'b') of size N.
-  function randomVectorInt (N, a, b) {
+  function randomVectorInt(N, a, b) {
     const ans = new Vector(N)
     for (let i = 0; i < N; i++) {
-      ans.changeComponent(i, (Math.floor((Math.random() * b) + a)))
+      ans.changeComponent(i, Math.floor(Math.random() * b + a))
     }
     return ans
   }
   LinearAlgebra.randomVectorInt = randomVectorInt
   // returns a random vector with floating point components (between 'a' and 'b') of size N.
-  function randomVectorFloat (N, a, b) {
+  function randomVectorFloat(N, a, b) {
     const ans = new Vector(N)
     for (let i = 0; i < N; i++) {
-      ans.changeComponent(i, ((Math.random() * b) + a))
+      ans.changeComponent(i, Math.random() * b + a)
     }
     return ans
   }
@@ -200,7 +200,7 @@ let LinearAlgebra;
     */
   const Matrix = /** @class */ (function () {
     // constructor for zero-matrix or fix number matrix.
-    function Matrix (row, col, comps) {
+    function Matrix(row, col, comps) {
       if (comps === undefined) {
         comps = []
       }
@@ -264,12 +264,14 @@ let LinearAlgebra;
     }
     // matrix addition. returns the result.
     Matrix.prototype.add = function (other) {
-      if (this.rows === other.dimension()[0] &&
-        this.cols === other.dimension()[1]) {
+      if (
+        this.rows === other.dimension()[0] &&
+        this.cols === other.dimension()[1]
+      ) {
         const ans = new Matrix(this.rows, this.cols)
         for (let i = 0; i < this.rows; i++) {
           for (let j = 0; j < this.cols; j++) {
-            ans.changeComponent(i, j, (this.matrix[i][j] + other.component(i, j)))
+            ans.changeComponent(i, j, this.matrix[i][j] + other.component(i, j))
           }
         }
         return ans
@@ -281,8 +283,10 @@ let LinearAlgebra;
     Matrix.prototype.equal = function (other) {
       let ans = true
       const EPSILON = 0.001
-      if (this.rows === other.dimension()[0] &&
-        this.cols === other.dimension()[1]) {
+      if (
+        this.rows === other.dimension()[0] &&
+        this.cols === other.dimension()[1]
+      ) {
         for (let i = 0; i < this.rows; i++) {
           for (let j = 0; j < this.cols; j++) {
             if (Math.abs(this.matrix[i][j] - other.component(i, j)) > EPSILON) {
@@ -300,13 +304,13 @@ let LinearAlgebra;
       const ans = new Matrix(this.rows, this.cols)
       for (let i = 0; i < this.rows; i++) {
         for (let j = 0; j < this.cols; j++) {
-          ans.changeComponent(i, j, (this.matrix[i][j] * c))
+          ans.changeComponent(i, j, this.matrix[i][j] * c)
         }
       }
       return ans
     }
     return Matrix
-  }()) // end of class Matrix
+  })() // end of class Matrix
   LinearAlgebra.Matrix = Matrix
 })(LinearAlgebra || (LinearAlgebra = {})) // end of namespace LinearAlgebra
 

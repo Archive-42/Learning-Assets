@@ -12,7 +12,7 @@ Start up your Python REPL and let’s use the "math" module which provides acces
 4.799655442984406
 ```
 
-Functions are sequences of instructions that are executed when the function is invoked. The following defines the "do\_hello" function that prints two messages when invoked:
+Functions are sequences of instructions that are executed when the function is invoked. The following defines the "do_hello" function that prints two messages when invoked:
 
 ```Python
 >>> def do_hello():
@@ -24,7 +24,7 @@ Hello
 World
 ```
 
-Make sure that you insert a tab before both print expressions in the previous function. Tabs and spaces in Python are relevant and define that a block of code is somewhat dependent on a previous instruction. For instance, the print expressions are "inside" the "do\_hello" function therefore must have a tab.
+Make sure that you insert a tab before both print expressions in the previous function. Tabs and spaces in Python are relevant and define that a block of code is somewhat dependent on a previous instruction. For instance, the print expressions are "inside" the "do_hello" function therefore must have a tab.
 
 Functions can also receive parameters a return values (using the "return" keyword):
 
@@ -55,7 +55,7 @@ Use the Python documentation about the math module (<https://docs.python.org/3/l
 
 2.  Implement a function that returns the greatest of two numbers given as parameters. Use the "if" statement to compare both numbers: <https://docs.python.org/3/tutorial/controlflow.html#if-statements>.
 
-3.  Implement a function named "is\_divisible" that receives two parameters (named "a" and "b") and returns true if "a" can be divided by "b" or false otherwise. A number is divisible by another when the remainder of the division is zero. Use the modulo operator ("%").
+3.  Implement a function named "is_divisible" that receives two parameters (named "a" and "b") and returns true if "a" can be divided by "b" or false otherwise. A number is divisible by another when the remainder of the division is zero. Use the modulo operator ("%").
 
 4.  Create a function named "average" that computes the average value of a list passed as parameter to the function. Use the "sum" and "len" functions.
 
@@ -65,8 +65,8 @@ In computer programming, a recursive function is simply a function that calls it
 
 \begin{equation}
 f(x)=\begin{cases}
-    1, & \text{if $x=0$}.\\
-    x \times f(x-1), & \text{otherwise}.
+1, & \text{if $x=0$}.\\
+x \times f(x-1), & \text{otherwise}.
 \end{cases}
 \end{equation}
 
@@ -75,10 +75,10 @@ As an example, take the factorial of 5:
 \begin{equation}
 \begin{split}
 5! &= 5 \times 4! \\
-    &= 5 \times 4 \times 3! \\
-    &= 5 \times 4 \times 3 \times 2! \\
-    &= 5 \times 4 \times 3 \times 2 \times 1 \\
-    &= 120
+&= 5 \times 4 \times 3! \\
+&= 5 \times 4 \times 3 \times 2! \\
+&= 5 \times 4 \times 3 \times 2 \times 1 \\
+&= 120
 \end{split}
 \end{equation}
 
@@ -104,9 +104,9 @@ The trick with recursive functions is that there must be a "base" case where the
 
     \begin{equation}
     fib(n)=\begin{cases}
-        0, & \text{if $n=0$}.\\
-        1, & \text{if $n=1$}.\\
-        fib(n-1) + fib(n-2), & \text{otherwise}.
+    0, & \text{if $n=0$}.\\
+    1, & \text{if $n=1$}.\\
+    fib(n-1) + fib(n-2), & \text{otherwise}.
     \end{cases}
     \end{equation}
 

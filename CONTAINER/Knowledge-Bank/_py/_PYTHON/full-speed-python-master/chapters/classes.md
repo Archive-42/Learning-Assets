@@ -13,7 +13,7 @@ class Person:
           print("Hello, my name is %s!" % self.name)
 ```
 
-Most classes will need the constructor method ("\_\_init\_\_") to initialize the class’s attributes. In the previous case the constructor of the class receives the person’s name and age and stores that information in the class’s instance (referenced by the *self* keyword). Finally, "greet" method prints the name of the person as stored in a specific class instance (object).
+Most classes will need the constructor method ("\_\_init\_\_") to initialize the class’s attributes. In the previous case the constructor of the class receives the person’s name and age and stores that information in the class’s instance (referenced by the _self_ keyword). Finally, "greet" method prints the name of the person as stored in a specific class instance (object).
 
 Class instances are used through the instantiation of objects. Here’s how we can instantiate two objects:
 

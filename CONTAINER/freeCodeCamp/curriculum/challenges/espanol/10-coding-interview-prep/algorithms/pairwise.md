@@ -16,9 +16,9 @@ For example `pairwise([7, 9, 11, 13, 15], 20)` returns `6`. The pairs that sum t
 
 <div style='margin-left: 2em;'>
 
-| Index | 0 | 1 | 2  | 3  | 4  |
-| ----- | - | - | -- | -- | -- |
-| Value | 7 | 9 | 11 | 13 | 15 |
+| Index | 0   | 1   | 2   | 3   | 4   |
+| ----- | --- | --- | --- | --- | --- |
+| Value | 7   | 9   | 11  | 13  | 15  |
 
 </div>
 
@@ -73,7 +73,7 @@ function pairwise(arr, arg) {
   return arg;
 }
 
-pairwise([1,4,2,3,0,5], 7);
+pairwise([1, 4, 2, 3, 0, 5], 7);
 ```
 
 # --solutions--
@@ -81,9 +81,9 @@ pairwise([1,4,2,3,0,5], 7);
 ```js
 function pairwise(arr, arg) {
   var sum = 0;
-  arr.forEach(function(e, i, a) {
+  arr.forEach(function (e, i, a) {
     if (e != null) {
-      var diff = arg-e;
+      var diff = arg - e;
       a[i] = null;
       var dix = a.indexOf(diff);
       if (dix !== -1) {
@@ -96,5 +96,5 @@ function pairwise(arr, arg) {
   return sum;
 }
 
-pairwise([1,4,2,3,0,5], 7);
+pairwise([1, 4, 2, 3, 0, 5], 7);
 ```

@@ -20,6 +20,7 @@ myVar = 16 / 2;
 ```
 
 `myVar` ahora tiene el valor `8`.
+
 # --instructions--
 
 Cambia el `0` para que el `quotient` (cociente) sea igual a `2`.
@@ -43,7 +44,9 @@ assert(/\d+\s*\/\s*\d+/.test(code));
 ## --after-user-code--
 
 ```js
-(function(z){return 'quotient = '+z;})(quotient);
+(function (z) {
+  return 'quotient = ' + z;
+})(quotient);
 ```
 
 ## --seed-contents--

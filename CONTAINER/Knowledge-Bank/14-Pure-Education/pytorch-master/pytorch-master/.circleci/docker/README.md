@@ -16,6 +16,6 @@ Docker builds are now defined with `.circleci/cimodel/data/simple/docker_definit
 
 ## Contents
 
-* `build.sh` -- dispatch script to launch all builds
-* `common` -- scripts used to execute individual Docker build stages
-* `ubuntu-cuda` -- Dockerfile for Ubuntu image with CUDA support for nvidia-docker
+- `build.sh` -- dispatch script to launch all builds
+- `common` -- scripts used to execute individual Docker build stages
+- `ubuntu-cuda` -- Dockerfile for Ubuntu image with CUDA support for nvidia-docker

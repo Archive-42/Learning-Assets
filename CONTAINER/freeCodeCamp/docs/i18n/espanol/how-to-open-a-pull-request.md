@@ -9,9 +9,9 @@ Una pull request (PR) le permite enviar cambios desde su bifurcación en GitHub 
 Recomendamos usar [titulos y mensajes convencionales](https://www.conventionalcommits.org/) para tus commits y pull request. La convención tiene el siguiente formato:
 
 > `<tipo>([ámbito opcional]): <descripción>`
-> 
+>
 > Por ejemplo:
-> 
+>
 > `fix(learn): tests for the do...while loop challenge`
 
 Al abrir una Pull Request(PR), puedes utilizar la siguiente guía para determinar el tipo, ámbito (opcional) y descripción de la PR.
@@ -19,7 +19,7 @@ Al abrir una Pull Request(PR), puedes utilizar la siguiente guía para determina
 **Tipo:**
 
 | Tipo  | Cuándo seleccionar                                                                         |
-|:----- |:------------------------------------------------------------------------------------------ |
+| :---- | :----------------------------------------------------------------------------------------- |
 | fix   | Funcionalidades actualizadas o mejoradas, pruebas, redacción de la lección, etc.           |
 | feat  | Sólo si está añadiendo nuevas funcionalidades, pruebas, etc.                               |
 | chore | Cambios que no están relacionados con el código, las pruebas o la redacción de la lección. |
@@ -132,37 +132,37 @@ Cuando estás trabajando en características para nuestras próximas ramas del p
 
    a. Borra tu rama local después de realizar una copia de seguridad (si todavía la tienes localmente):
 
-      ```console
-      git checkout <pr-branch-name>
+   ```console
+   git checkout <pr-branch-name>
 
-      # ejemplo:
-      # git checkout feat/add-numpy-video-question
+   # ejemplo:
+   # git checkout feat/add-numpy-video-question
 
-      git checkout -b <backup-branch-name>
+   git checkout -b <backup-branch-name>
 
-      # ejemplo:
-      # git checkout -b backup-feat/add-numpy-video-question
+   # ejemplo:
+   # git checkout -b backup-feat/add-numpy-video-question
 
-      git branch -D <pr-branch-name>
-      ```
+   git branch -D <pr-branch-name>
+   ```
 
    b. O simplemente una copia de seguridad de su rama pr (si no la tiene localmente):
 
-      ```console
-      git checkout -b <backup-branch-name> origin/<pr-branch-name>
+   ```console
+   git checkout -b <backup-branch-name> origin/<pr-branch-name>
 
-      # ejemplo:
-      # git checkout -b backup-feat/add-numpy-video-question origin/feat/add-numpy-video-question
-      ```
+   # ejemplo:
+   # git checkout -b backup-feat/add-numpy-video-question origin/feat/add-numpy-video-question
+   ```
 
-4. Empezar con una pizarra limpia:
+3. Empezar con una pizarra limpia:
 
    ```console
    git checkout -b <pr-branch-name> next-python-projects
    git cherry-pick <commit-hash>
    ```
 
-5. Resuelve cualquier conflicto y limpia, instala pruebas de ejecución
+4. Resuelve cualquier conflicto y limpia, instala pruebas de ejecución
 
    ```console
    npm run clean
@@ -176,7 +176,7 @@ Cuando estás trabajando en características para nuestras próximas ramas del p
 
    ```
 
-6. Si todo se ve bien empuje hacia el PR
+5. Si todo se ve bien empuje hacia el PR
 
    ```console
    git push --force origin <pr-branch-name>

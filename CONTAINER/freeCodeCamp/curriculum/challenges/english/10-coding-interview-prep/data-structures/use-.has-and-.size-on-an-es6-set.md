@@ -13,7 +13,7 @@ Let's look at the .has and .size methods available on the ES6 Set object.
 First, create an ES6 Set
 
 ```js
-var set = new Set([1,2,3]);
+var set = new Set([1, 2, 3]);
 ```
 
 The .has method will check if the value is contained within the set.
@@ -50,24 +50,18 @@ assert(
 ## --seed-contents--
 
 ```js
-function checkSet(arrToBeSet, checkValue){
-
-   // Only change code below this line
-
-   // Only change code above this line
-
+function checkSet(arrToBeSet, checkValue) {
+  // Only change code below this line
+  // Only change code above this line
 }
 ```
 
 # --solutions--
 
 ```js
-function checkSet(arrToBeSet, checkValue){
-var set = new Set(arrToBeSet);
-var result = [
-set.has(checkValue),
-set.size
-];
-return result;
+function checkSet(arrToBeSet, checkValue) {
+  var set = new Set(arrToBeSet);
+  var result = [set.has(checkValue), set.size];
+  return result;
 }
 ```

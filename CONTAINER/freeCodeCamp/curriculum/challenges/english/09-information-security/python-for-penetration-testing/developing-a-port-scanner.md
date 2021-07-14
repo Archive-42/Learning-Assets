@@ -27,4 +27,3 @@ If there is an error or if no host is found, `.connect()` raises an exception wh
 ## --video-solution--
 
 3
-

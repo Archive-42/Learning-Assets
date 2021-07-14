@@ -12,7 +12,7 @@ Now that you have worked through a few challenges using higher-order functions l
 
 # --instructions--
 
-We have defined a function named `squareList`. You need to complete the code for the `squareList` function using any combination of `map()`, `filter()`, and `reduce()` so that it returns a new array containing only the square of *only* the positive integers (decimal numbers are not integers) when an array of real numbers is passed to it. An example of an array containing only real numbers is `[-3, 4.8, 5, 3, -3.2]`.
+We have defined a function named `squareList`. You need to complete the code for the `squareList` function using any combination of `map()`, `filter()`, and `reduce()` so that it returns a new array containing only the square of _only_ the positive integers (decimal numbers are not integers) when an array of real numbers is passed to it. An example of an array containing only real numbers is `[-3, 4.8, 5, 3, -3.2]`.
 
 **Note:** Your function should not use any kind of `for` or `while` loops or the `forEach()` function.
 
@@ -34,11 +34,7 @@ assert(!code.match(/for|while|forEach/g));
 `map`, `filter`, or `reduce` should be used.
 
 ```js
-assert(
-  __helpers
-    .removeWhiteSpace(code)
-    .match(/\.(map|filter|reduce)\(/g)
-);
+assert(__helpers.removeWhiteSpace(code).match(/\.(map|filter|reduce)\(/g));
 ```
 
 The function should return an `array`.
@@ -50,21 +46,19 @@ assert(Array.isArray(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])));
 `squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])` should return `[16, 1764, 36]`.
 
 ```js
-assert.deepStrictEqual(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]), [
-  16,
-  1764,
-  36
-]);
+assert.deepStrictEqual(
+  squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]),
+  [16, 1764, 36]
+);
 ```
 
 `squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3])` should return `[9, 100, 49]`.
 
 ```js
-assert.deepStrictEqual(squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]), [
-  9,
-  100,
-  49
-]);
+assert.deepStrictEqual(
+  squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]),
+  [9, 100, 49]
+);
 ```
 
 # --seed--

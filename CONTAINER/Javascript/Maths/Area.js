@@ -7,7 +7,7 @@
  */
 const surfaceAreaCube = (sideLength) => {
   validateNumericParam(sideLength, 'sideLength')
-  return (6.0 * sideLength ** 2.0)
+  return 6.0 * sideLength ** 2.0
 }
 
 /*
@@ -17,7 +17,7 @@ const surfaceAreaCube = (sideLength) => {
 */
 const surfaceAreaSphere = (radius) => {
   validateNumericParam(radius, 'radius')
-  return (4.0 * Math.PI * radius ** 2.0)
+  return 4.0 * Math.PI * radius ** 2.0
 }
 
 /*
@@ -28,7 +28,7 @@ const surfaceAreaSphere = (radius) => {
 const areaRectangle = (length, width) => {
   validateNumericParam(length, 'Length')
   validateNumericParam(width, 'Width')
-  return (width * length)
+  return width * length
 }
 
 /*
@@ -36,7 +36,7 @@ const areaRectangle = (length, width) => {
 */
 const areaSquare = (sideLength) => {
   validateNumericParam(sideLength, 'side length')
-  return (sideLength ** 2)
+  return sideLength ** 2
 }
 
 /*
@@ -57,7 +57,7 @@ const areaTriangle = (base, height) => {
 const areaParallelogram = (base, height) => {
   validateNumericParam(base, 'Base')
   validateNumericParam(height, 'Height')
-  return (base * height)
+  return base * height
 }
 
 /*
@@ -67,7 +67,7 @@ const areaTrapezium = (base1, base2, height) => {
   validateNumericParam(base1, 'Base One')
   validateNumericParam(base2, 'Base Two')
   validateNumericParam(height, 'Height')
-  return 1.0 / 2.0 * (base1 + base2) * height
+  return (1.0 / 2.0) * (base1 + base2) * height
 }
 
 /*
@@ -75,7 +75,7 @@ const areaTrapezium = (base1, base2, height) => {
 */
 const areaCircle = (radius) => {
   validateNumericParam(radius, 'Radius')
-  return (Math.PI * radius ** 2)
+  return Math.PI * radius ** 2
 }
 
 /*
@@ -85,7 +85,7 @@ const areaCircle = (radius) => {
 const areaRhombus = (diagonal1, diagonal2) => {
   validateNumericParam(diagonal1, 'diagonal one')
   validateNumericParam(diagonal2, 'diagonal two')
-  return (1 / 2 * diagonal1 * diagonal2)
+  return (1 / 2) * diagonal1 * diagonal2
 }
 
 const validateNumericParam = (param, paramName = 'param') => {
@@ -96,4 +96,14 @@ const validateNumericParam = (param, paramName = 'param') => {
   }
 }
 
-export { surfaceAreaCube, surfaceAreaSphere, areaRectangle, areaSquare, areaTriangle, areaParallelogram, areaTrapezium, areaCircle, areaRhombus }
+export {
+  surfaceAreaCube,
+  surfaceAreaSphere,
+  areaRectangle,
+  areaSquare,
+  areaTriangle,
+  areaParallelogram,
+  areaTrapezium,
+  areaCircle,
+  areaRhombus
+}

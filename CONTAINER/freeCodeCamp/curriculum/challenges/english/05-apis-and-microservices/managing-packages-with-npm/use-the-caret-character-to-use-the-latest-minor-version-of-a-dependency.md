@@ -29,9 +29,9 @@ Use the caret (`^`) to prefix the version of moment in your dependencies and all
 "dependencies" should include "moment"
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -39,7 +39,7 @@ Use the caret (`^`) to prefix the version of moment in your dependencies and all
         '"dependencies" does not include "moment"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -48,9 +48,9 @@ Use the caret (`^`) to prefix the version of moment in your dependencies and all
 "moment" version should match "^2.x.x"
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.match(
         packJson.dependencies.moment,
@@ -58,7 +58,7 @@ Use the caret (`^`) to prefix the version of moment in your dependencies and all
         'Wrong version of "moment". It should be ^2.10.2'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

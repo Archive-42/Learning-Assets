@@ -87,9 +87,7 @@ assert.equal(sternBrocot(10), 39);
 ## --seed-contents--
 
 ```js
-function sternBrocot(num) {
-
-}
+function sternBrocot(num) {}
 ```
 
 # --solutions--

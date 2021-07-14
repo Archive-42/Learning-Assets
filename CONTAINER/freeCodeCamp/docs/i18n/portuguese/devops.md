@@ -103,7 +103,7 @@ Currently, only members on the developer team can push to the production branche
    ```
 
    > [!NOTE] You will not be able to force push and if you have re-written the history in anyway these commands will error out.
-   > 
+   >
    > If they do, you may have done something incorrectly and you should just start over.
 
 The above steps will automatically trigger a run on the build pipeline for the `prod-staging` branch. Once the build is complete, the artifacts are saved as `.zip` files in a cold storage to be retrieved and used later.
@@ -115,7 +115,7 @@ The release pipeline is triggered automatically when a fresh artifact is availab
 The process is mostly the same as the staging platforms, with a few extra checks in place. This is just to make sure, we do not break anything on freeCodeCamp.org which can see hundreds of users using it at any moment.
 
 | Do NOT execute these commands unless you have verified that everything is working on the staging platform. You should not bypass or skip any testing on staging before proceeding further. |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                                                                                                                                                                                            |
 
 1. Make sure your `prod-staging` branch is pristine and in sync with the upstream.
@@ -135,7 +135,7 @@ The process is mostly the same as the staging platforms, with a few extra checks
    ```
 
    > [!NOTE] You will not be able to force push and if you have re-written the history in anyway these commands will error out.
-   > 
+   >
    > If they do, you may have done something incorrectly and you should just start over.
 
 The above steps will automatically trigger a run on the build pipeline for the `prod-current` branch. Once a build artifact is ready, it will trigger a run on the release pipeline.
@@ -149,7 +149,7 @@ If the changes are working nicely and have been tested on the staging platform, 
 For staff use:
 
 | Check your email for a direct link or [go to the release dashboard](https://dev.azure.com/freeCodeCamp-org/freeCodeCamp/_release) after the build run is complete. |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                                                                                                                                                                    |
 
 Once one of the staff members approves a release, the pipeline will push the changes live to freeCodeCamp.org's production CDN and API servers.
@@ -159,7 +159,7 @@ Once one of the staff members approves a release, the pipeline will push the cha
 Here is the current test, build and deployment status of the codebase.
 
 | Branch                                                                           | Unit Tests                                                                                                                                                                                                                       | Integration Tests                                                                                                                                                                                                        | Builds & Deployments                                                                                                              |
-|:-------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |:--------------------------------------------------------------------------------------------------------------------------------- |
+| :------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
 | [`main`](https://github.com/freeCodeCamp/freeCodeCamp/tree/main)                 | [![Node.js CI](https://github.com/freeCodeCamp/freeCodeCamp/workflows/Node.js%20CI/badge.svg?branch=main)](https://github.com/freeCodeCamp/freeCodeCamp/actions?query=workflow%3A%22Node.js+CI%22)                               | [![Cypress E2E Tests](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ke77ns/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/ke77ns/analytics/runs-over-time)         | -                                                                                                                                 |
 | [`prod-staging`](https://github.com/freeCodeCamp/freeCodeCamp/tree/prod-staging) | [![Node.js CI](https://github.com/freeCodeCamp/freeCodeCamp/workflows/Node.js%20CI/badge.svg?branch=prod-staging)](https://github.com/freeCodeCamp/freeCodeCamp/actions?query=workflow%3A%22Node.js+CI%22+branch%3Aprod-staging) | [![Cypress E2E Tests](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ke77ns/prod-staging&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/ke77ns/analytics/runs-over-time) | [Azure Pipelines](https://dev.azure.com/freeCodeCamp-org/freeCodeCamp/_dashboards/dashboard/d59f36b9-434a-482d-8dbd-d006b71713d4) |
 | [`prod-current`](https://github.com/freeCodeCamp/freeCodeCamp/tree/prod-staging) | [![Node.js CI](https://github.com/freeCodeCamp/freeCodeCamp/workflows/Node.js%20CI/badge.svg?branch=prod-current)](https://github.com/freeCodeCamp/freeCodeCamp/actions?query=workflow%3A%22Node.js+CI%22+branch%3Aprod-current) | [![Cypress E2E Tests](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ke77ns/prod-current&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/ke77ns/analytics/runs-over-time) | [Azure Pipelines](https://dev.azure.com/freeCodeCamp-org/freeCodeCamp/_dashboards/dashboard/d59f36b9-434a-482d-8dbd-d006b71713d4) |
@@ -178,7 +178,7 @@ We thank you for reporting bugs that you encounter and help in making freeCodeCa
 Currently a public beta testing version is available at:
 
 | Application | Language | URL                                      |
-|:----------- |:-------- |:---------------------------------------- |
+| :---------- | :------- | :--------------------------------------- |
 | Learn       | English  | <https://www.freecodecamp.dev>           |
 |             | Espanol  | <https://www.freecodecamp.dev/espanol>   |
 |             | Chinese  | <https://chinese.freecodecamp.dev>       |
@@ -188,7 +188,7 @@ Currently a public beta testing version is available at:
 | API         | -        | `https://api.freecodecamp.dev`           |
 
 > [!NOTE] The domain name is different than **`freeCodeCamp.org`**. This is intentional to prevent search engine indexing and avoid confusion for regular users of the platform.
-> 
+>
 > The above list not exhaustive of all the applications that we provision. Also not all language variants are deployed in staging to conserve resources.
 
 ### Identifying the current version of the platforms
@@ -228,7 +228,7 @@ You may send an email to `dev[at]freecodecamp.org` if you have any queries. As a
 # Flight Manual - Server Maintenance
 
 > [!WARNING]
-> 
+>
 > 1. The guide applies to the **freeCodeCamp Staff members only**.
 > 2. These instructions should not be considered exhaustive, please use caution.
 
@@ -297,7 +297,7 @@ We are working on creating our IaC setup, and while that is in works you can use
 You should keep the VMs up to date by performing updates and upgrades. This will ensure that the virtual machine is patched with latest security fixes.
 
 > [!WARNING] Before you run these commands:
-> 
+>
 > - Make sure that the VM has been provisioned completely and there is no post-install steps running.
 > - If you are updating packages on a VM that is already serving an application, make sure the app has been stopped / saved. Package updates will cause network bandwidth, memory and/or CPU usage spikes leading to outages on running applications.
 
@@ -557,24 +557,26 @@ Provisioning VMs with the Code
 
    Start placeholder instances for the web client, these will be updated with artifacts from the Azure pipeline.
 
-   > Todo: This setup needs to move to S3 or Azure Blob storage 
-   > 
+   > Todo: This setup needs to move to S3 or Azure Blob storage
+   >
    > ```console
-   echo "serve -c ../../serve.json www -p 50505" >> client-start-primary.sh
-   chmod +x client-start-primary.sh
-   pm2 delete client-primary
-   pm2 start  ./client-start-primary.sh --name client-primary
-   echo "serve -c ../../serve.json www -p 52525" >> client-start-secondary.sh
-   chmod +x client-start-secondary.sh
-   pm2 delete client-secondary
-   pm2 start  ./client-start-secondary.sh --name client-secondary
-```
+   > echo "serve -c ../../serve.json www -p 50505" >> client-start-primary.sh
+   > chmod +x client-start-primary.sh
+   > pm2 delete client-primary
+   > pm2 start  ./client-start-primary.sh --name client-primary
+   > echo "serve -c ../../serve.json www -p 52525" >> client-start-secondary.sh
+   > chmod +x client-start-secondary.sh
+   > pm2 delete client-secondary
+   > pm2 start  ./client-start-secondary.sh --name client-secondary
+   > ```
+
+````
 
 ### Logging and Monitoring
 
 ```console
 pm2 logs
-```
+````
 
 ```console
 pm2 monit

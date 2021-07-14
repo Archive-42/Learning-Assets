@@ -51,7 +51,6 @@ assert(splitCoconuts(7) === 823537);
 
 ```js
 function splitCoconuts(intSailors) {
-
   return true;
 }
 ```
@@ -81,7 +80,9 @@ function splitCoconutsHelper(intNuts, intSailors, intDepth) {
 
   if (nDepth) {
     return splitCoconutsHelper(
-      intNuts - portion - remain, intSailors, nDepth - 1
+      intNuts - portion - remain,
+      intSailors,
+      nDepth - 1
     );
   }
 

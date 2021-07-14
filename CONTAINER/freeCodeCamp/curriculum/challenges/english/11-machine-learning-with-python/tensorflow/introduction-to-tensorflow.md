@@ -35,4 +35,3 @@ Constant
 ## --video-solution--
 
 2
-

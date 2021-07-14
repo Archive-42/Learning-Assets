@@ -50,7 +50,6 @@ assert.strictEqual(primeSummation(2000000), 142913828922);
 
 ```js
 function primeSummation(n) {
-
   return true;
 }
 
@@ -61,17 +60,19 @@ primeSummation(2000000);
 
 ```js
 function primeSummation(n) {
-  if (n < 3) { return 0 };
+  if (n < 3) {
+    return 0;
+  }
   let nums = [0, 0, 2];
-  for (let i = 3; i < n; i += 2){
+  for (let i = 3; i < n; i += 2) {
     nums.push(i);
     nums.push(0);
   }
   let sum = 2;
-  for (let i = 3; i < n; i += 2){
-    if (nums[i] !== 0){
+  for (let i = 3; i < n; i += 2) {
+    if (nums[i] !== 0) {
       sum += nums[i];
-      for (let j = i*i; j < n; j += i){
+      for (let j = i * i; j < n; j += i) {
         nums[j] = 0;
       }
     }

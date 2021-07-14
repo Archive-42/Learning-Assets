@@ -39,7 +39,7 @@ Array.prototype.shuffle = function () {
  * rearranges the array until it is sorted.
  * For more information see: https://en.wikipedia.org/wiki/Bogosort
  */
-function bogoSort (items) {
+function bogoSort(items) {
   while (!items.isSorted()) {
     items.shuffle()
   }

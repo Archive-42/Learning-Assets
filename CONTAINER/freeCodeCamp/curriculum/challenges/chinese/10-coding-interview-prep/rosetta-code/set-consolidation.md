@@ -8,7 +8,7 @@ dashedName: set-consolidation
 
 # --description--
 
-Given two sets of items then if any item is common to any set then the result of applying *consolidation* to those sets is a set of sets whose contents is:
+Given two sets of items then if any item is common to any set then the result of applying _consolidation_ to those sets is a set of sets whose contents is:
 
 <ul>
   <li>The two input sets if no common item exists between the two input sets of items.</li>
@@ -94,9 +94,7 @@ assert.deepEqual(setConsolidation(['HIK', 'AB', 'CD', 'DB', 'FGH']), [
 ## --seed-contents--
 
 ```js
-function setConsolidation(sets) {
-
-}
+function setConsolidation(sets) {}
 ```
 
 # --solutions--
@@ -104,7 +102,7 @@ function setConsolidation(sets) {
 ```js
 function setConsolidation(sets) {
   function addAll(l1, l2) {
-    l2.forEach(function(e) {
+    l2.forEach(function (e) {
       if (l1.indexOf(e) == -1) l1.push(e);
     });
   }
@@ -120,14 +118,14 @@ function setConsolidation(sets) {
           var x = r[j];
           {
             if (
-              !(function(c1, c2) {
+              !(function (c1, c2) {
                 for (var i = 0; i < c1.length; i++) {
                   if (c2.indexOf(c1[i]) >= 0) return false;
                 }
                 return true;
               })(s, x)
             ) {
-              (function(l1, l2) {
+              (function (l1, l2) {
                 addAll(l1, l2);
               })(s, x);
             } else {
@@ -151,14 +149,14 @@ function setConsolidation(sets) {
         var x = arr1[i];
         {
           if (
-            !(function(c1, c2) {
+            !(function (c1, c2) {
               for (var i = 0; i < c1.length; i++) {
                 if (c2.indexOf(c1[i]) >= 0) return false;
               }
               return true;
             })(r[0], x)
           ) {
-            (function(l1, l2) {
+            (function (l1, l2) {
               return l1.push.apply(l1, l2);
             })(r[0], x);
           } else {
@@ -175,7 +173,7 @@ function setConsolidation(sets) {
     for (var i = 0; i < set.length; i++) {
       r.push([]);
       for (var j = 0; j < set[i].length; j++)
-        (function(s, e) {
+        (function (s, e) {
           if (s.indexOf(e) == -1) {
             s.push(e);
             return true;
@@ -187,7 +185,7 @@ function setConsolidation(sets) {
     return r;
   }
 
-  var h1 = consolidate(hashSetList(sets)).map(function(e) {
+  var h1 = consolidate(hashSetList(sets)).map(function (e) {
     e.sort();
     return e;
   });

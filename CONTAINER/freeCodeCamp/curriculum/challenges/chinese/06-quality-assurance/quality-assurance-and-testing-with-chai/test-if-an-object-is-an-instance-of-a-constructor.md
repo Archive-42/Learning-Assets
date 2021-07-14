@@ -21,12 +21,12 @@ dashedName: test-if-an-object-is-an-instance-of-a-constructor
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ dashedName: test-if-an-object-is-an-instance-of-a-constructor
 应该为第一个断言选择正确的方法：`instanceOf` 或 `notInstanceOf`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'notInstanceOf',
         'myCar is not an instance of Plane'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ dashedName: test-if-an-object-is-an-instance-of-a-constructor
 应该为第二个断言选择正确的方法：`instanceOf` 或 `notInstanceOf`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'instanceOf',
         'airlinePlane is an instance of Plane'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -71,16 +71,16 @@ dashedName: test-if-an-object-is-an-instance-of-a-constructor
 应该为第三个断言选择正确的方法：`instanceOf` 或 `notInstanceOf`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[2].method,
         'instanceOf',
         'everything is an Object in JavaScript...'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -89,16 +89,16 @@ dashedName: test-if-an-object-is-an-instance-of-a-constructor
 应该为第四个断言选择正确的方法：`instanceOf` 或 `notInstanceOf`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[3].method,
         'notInstanceOf',
         'myCar.wheels is not an instance of String'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

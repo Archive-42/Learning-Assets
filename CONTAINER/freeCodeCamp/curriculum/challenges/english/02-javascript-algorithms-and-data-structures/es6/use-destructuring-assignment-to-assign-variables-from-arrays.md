@@ -24,7 +24,7 @@ The console will display the values of `a` and `b` as `1, 2`.
 The variable `a` is assigned the first value of the array, and `b` is assigned the second value of the array. We can also access the value at any index in an array with destructuring by using commas to reach the desired index:
 
 ```js
-const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
 console.log(a, b, c);
 ```
 
@@ -59,13 +59,15 @@ assert(/\[\s*(\w)\s*,\s*(\w)\s*\]\s*=\s*\[\s*\2\s*,\s*\1\s*\]/g.test(code));
 ## --seed-contents--
 
 ```js
-let a = 8, b = 6;
+let a = 8,
+  b = 6;
 // Only change code below this line
 ```
 
 # --solutions--
 
 ```js
-let a = 8, b = 6;
+let a = 8,
+  b = 6;
 [a, b] = [b, a];
 ```

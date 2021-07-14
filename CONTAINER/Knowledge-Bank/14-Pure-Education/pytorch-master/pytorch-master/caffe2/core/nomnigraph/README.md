@@ -2,7 +2,6 @@
 
 nomnigraph is caffe2's graph transformation subsystem
 
-
 ## Usage
 
 The output of `caffe2::convertToNNModule(caffe2::NetDef)` (found in `caffe2/opt`) is an `NNModule`.
@@ -12,14 +11,16 @@ The output of `caffe2::convertToCaffe2Proto(nom::repr::NNModule*, caffe2::NetDef
 An `NNModule` is composed of both `dataFlow` and `controlFlow` graphs.
 
 Creating a new operator is straightforward.
+
 ```cpp
 auto reluNode = nn.dataFlow.createNode(make_unique<nom::repr::Relu>());
 ```
+
 The line above does a few things worth talking about.
 
-1) It creates a new node using the graph API (both dataFlow and controlFlow are `Graph`s).
-2) It instantiates the node with data, specifically a `unique_ptr` to a neural network operator.
-3) This `unique_ptr` contains a type that inherits from `NeuralNetOperator` and forms the fundamental representation described in the IR section below.
+1. It creates a new node using the graph API (both dataFlow and controlFlow are `Graph`s).
+2. It instantiates the node with data, specifically a `unique_ptr` to a neural network operator.
+3. This `unique_ptr` contains a type that inherits from `NeuralNetOperator` and forms the fundamental representation described in the IR section below.
 
 Inserting this operator into the graph would look something like this:
 
@@ -28,12 +29,13 @@ auto edge = nn.dataFlow.createEdge(convOutputTensorNode, reluNode);
 ```
 
 Some notes here:
-1) Again the graph API is used to insert the node into the graph with an edge.
-2) Operators are strictly connected to Tensors, not other operators.
+
+1. Again the graph API is used to insert the node into the graph with an edge.
+2. Operators are strictly connected to Tensors, not other operators.
 
 ## IR
 
-nomnigraph has a *parallel* representation that can contain annotations with caffe2's OperatorDef.
+nomnigraph has a _parallel_ representation that can contain annotations with caffe2's OperatorDef.
 
 If you call `caffe2::convertToNNModule(caffe2::NetDef)`, every operator in the `NNModule` will be annotated with a reference to the original operator in the net.
 
@@ -49,9 +51,11 @@ if (conv->getAnnotation()) {
 ```
 
 If you create a new op, as shown in the example above and copied here:
+
 ```cpp
 auto reluNode = nn.dataFlow.createNode(make_unique<nom::repr::Relu>());
 ```
+
 it will not have a caffe2 annotation.
 
 How does `caffe2::convertToCaffe2Proto(nom::repr::NNModule*, caffe2::NetDef)` deal with this?
@@ -65,12 +69,14 @@ Do not create `OperatorDef`s in the transformation itself! This is an anti-patte
 
 ## API
 
-Below is a subset of selected API calls that are quite useful.  Lower level manipulation calls are omitted.
+Below is a subset of selected API calls that are quite useful. Lower level manipulation calls are omitted.
 
 ### Graph transformation API
+
 Nomnigraph provides a ReplaceSubgraph API to perform graph transformation operations without having to write custom subgraph matching logic. The main header file is [SubgraphMatcher.h](include/nomnigraph/Transformations/SubgraphMatcher.h).
 
 ReplaceSubgraph API takes in
+
 - A subgraph pattern to be matched
 - A graph to be scanned for matching patterns
 - A ReplaceGraph lambda function that takes in a matched subgraph; callers should implement specific graph transformation operation in the lambda.
@@ -82,6 +88,7 @@ Example usage of the API can be found in [subgraph_matcher_test.cc](tests/subgra
 Example usage of the API for NNGraph can be found in [neural_net_test.cc](tests/neural_net_test.cc)
 
 ### Graph API
+
 Nomnigraph's core graph APIs provide a generic graph data structure and basic graph manipulation abilities. The main header file is [Graph.h](include/nomnigraph/Graph/Graph.h).
 
 ```cpp
@@ -106,6 +113,7 @@ T d = n->data(); // Get the data stored at the node
 ```
 
 ### NN API
+
 NN (NeuralNet) extends core Graph with functionalities specific to neural network computation graph. The main header file is [NeuralNet.h](include/nomnigraph/Representations/NeuralNet.h).
 
 Type checking & data accessing
@@ -122,14 +130,15 @@ repr::Conv* c = repr::nn::get<repr::Conv>(n); // Returns a pointer to the Neural
 ```
 
 Iterate through nodes in a NNGraph.
+
 ```cpp
 auto pairs = dataIterator(nn); // A useful paradigm for iterating through nodes and corresponding data in no particular order.
 auto nodeRefs = nodeIterator(nn); // Iterate through nodes in no particular order.
 // See https://github.com/pytorch/pytorch/blob/master/caffe2/opt/mobile.cc#L106-L109
 ```
 
-
 These functions make it easy to check attributes on nodes.
+
 ```cpp
 // -- Tensor node functions --
 bool b = hasProducer(tensorNode);  // Checks for producers.
@@ -144,6 +153,7 @@ std::vector<NNGraph::NodeRef> getOutputs(n); // Returns a vector of all the outp
 ```
 
 These functions are less commonly useful
+
 ```cpp
 coalesceInsertedDataDependencies(&nn); // Fixes up all the inserted dependencies in the dataflow graph.
 

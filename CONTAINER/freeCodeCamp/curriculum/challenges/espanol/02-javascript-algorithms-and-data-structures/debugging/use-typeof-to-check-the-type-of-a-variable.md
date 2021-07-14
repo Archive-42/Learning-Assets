@@ -13,7 +13,7 @@ Puedes utilizar `typeof` para comprobar la estructura de datos, o tipo, de una v
 Aquí hay algunos ejemplos que utilizan `typeof`:
 
 ```js
-console.log(typeof "");
+console.log(typeof '');
 console.log(typeof 0);
 console.log(typeof []);
 console.log(typeof {});
@@ -53,7 +53,7 @@ assert(code.match(/typeof[\( ]three\)?/g));
 
 ```js
 let seven = 7;
-let three = "3";
+let three = '3';
 console.log(seven + three);
 // Only change code below this line
 ```
@@ -61,6 +61,8 @@ console.log(seven + three);
 # --solutions--
 
 ```js
-let seven = 7;let three = "3";console.log(typeof seven);
+let seven = 7;
+let three = '3';
+console.log(typeof seven);
 console.log(typeof three);
 ```

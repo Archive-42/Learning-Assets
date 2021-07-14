@@ -33,7 +33,7 @@ io.use(
 );
 ```
 
-记得要把 `key` 和 `store` 加到 app 的 `session` 中间件。 这样，*SocketIO* 才知道该对哪个 session 执行此配置。
+记得要把 `key` 和 `store` 加到 app 的 `session` 中间件。 这样，_SocketIO_ 才知道该对哪个 session 执行此配置。
 
 <hr />
 
@@ -68,9 +68,9 @@ console.log('user ' + socket.request.user.name + ' connected');
 应添加 `passport.socketio` 作为依赖。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -78,7 +78,7 @@ console.log('user ' + socket.request.user.name + ' connected');
         'Your project should list "passport.socketio" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -87,9 +87,9 @@ console.log('user ' + socket.request.user.name + ' connected');
 应添加 `cookie-parser` 作为依赖。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -97,7 +97,7 @@ console.log('user ' + socket.request.user.name + ' connected');
         'Your project should list "cookie-parser" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -106,16 +106,16 @@ console.log('user ' + socket.request.user.name + ' connected');
 应正确引入 passportSocketIo。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /require\((['"])passport\.socketio\1\)/gi,
         'You should correctly require and instantiate "passport.socketio"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -124,16 +124,16 @@ console.log('user ' + socket.request.user.name + ' connected');
 应正确配置 passportSocketIo。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /io\.use\(\s*\w+\.authorize\(/,
         'You should register "passport.socketio" as socket.io middleware and provide it correct options'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

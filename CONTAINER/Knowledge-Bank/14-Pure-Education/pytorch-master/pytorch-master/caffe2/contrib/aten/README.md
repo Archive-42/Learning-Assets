@@ -5,7 +5,6 @@ and PyTorch directly in C++14. This library provides a generated wrapper around 
 that makes these functions available in Caffe2 as an operator. It also makes it accessible using the
 ToffeeIR.
 
-
 ### Example Usage in Caffe2
 
 First identify a function in ATen you want to call in Functions.h,
@@ -19,7 +18,6 @@ static inline Tensor pow(const Tensor & self, Scalar exponent);
 
 Now create a Caffe2 operator to call this op. The name of the operator is always `"ATen"`,
 and there is always a string attribute `operator` that defines which ATen function to call:
-
 
 ```
 import numpy as np

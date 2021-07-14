@@ -157,10 +157,7 @@ assert(
 ## --after-user-code--
 
 ```js
-DoublyLinkedList.prototype = Object.assign(
-  DoublyLinkedList.prototype,
-  {
-
+DoublyLinkedList.prototype = Object.assign(DoublyLinkedList.prototype, {
   print() {
     if (this.head == null) {
       return null;
@@ -170,10 +167,10 @@ DoublyLinkedList.prototype = Object.assign(
       while (node.next != null) {
         result.push(node.data);
         node = node.next;
-      };
+      }
       result.push(node.data);
       return result;
-    };
+    }
   },
   printReverse() {
     if (this.tail == null) {
@@ -184,10 +181,10 @@ DoublyLinkedList.prototype = Object.assign(
       while (node.prev != null) {
         result.push(node.data);
         node = node.prev;
-      };
+      }
       result.push(node.data);
       return result;
-    };
+    }
   }
 });
 ```
@@ -195,12 +192,12 @@ DoublyLinkedList.prototype = Object.assign(
 ## --seed-contents--
 
 ```js
-var Node = function(data, prev) {
+var Node = function (data, prev) {
   this.data = data;
   this.prev = prev;
   this.next = null;
 };
-var DoublyLinkedList = function() {
+var DoublyLinkedList = function () {
   this.head = null;
   this.tail = null;
   // Only change code below this line

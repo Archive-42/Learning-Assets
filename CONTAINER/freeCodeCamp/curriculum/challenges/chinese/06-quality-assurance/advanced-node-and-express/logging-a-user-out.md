@@ -13,10 +13,9 @@ dashedName: logging-a-user-out
 在 passport 里，只需要在重定向前调用 `req.logout();` 即可完成用户的退出登录。
 
 ```js
-app.route('/logout')
-  .get((req, res) => {
-    req.logout();
-    res.redirect('/');
+app.route('/logout').get((req, res) => {
+  req.logout();
+  res.redirect('/');
 });
 ```
 
@@ -24,9 +23,7 @@ app.route('/logout')
 
 ```js
 app.use((req, res, next) => {
-  res.status(404)
-    .type('text')
-    .send('Not Found');
+  res.status(404).type('text').send('Not Found');
 });
 ```
 
@@ -37,16 +34,16 @@ app.use((req, res, next) => {
 `req.Logout` 应在 `/logout` 路由中调用。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /req.logout/gi,
         'You should be calling req.logout() in your /logout route'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -55,16 +52,16 @@ app.use((req, res, next) => {
 退出登录后应重定向到主页 /。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/logout').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /Home page/gi,
         'When a user logs out they should be redirected to the homepage'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

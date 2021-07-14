@@ -41,12 +41,9 @@ assert(
 
 ```html
 <style>
-body {
-  background-color: #ccc;
-}
-
-
-
+  body {
+    background-color: #ccc;
+  }
 </style>
 ```
 
@@ -54,13 +51,13 @@ body {
 
 ```html
 <style>
-body {
-  background-color: #ccc;
-}
+  body {
+    background-color: #ccc;
+  }
 
-.dashboard {
-  width: 980px;
-  height: 500px;  
-}
+  .dashboard {
+    width: 980px;
+    height: 500px;
+  }
 </style>
 ```

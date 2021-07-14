@@ -9,14 +9,14 @@ dashedName: comparison-with-the-strict-inequality-operator
 
 # --description--
 
-严格不相等运算符（`!==`）与全等运算符是相反的。 这意味着严格不相等并返回 `false` 的地方，用严格相等运算符会返回 `true`，*反之亦然*。 严格不相等运算符不会转换值的数据类型。
+严格不相等运算符（`!==`）与全等运算符是相反的。 这意味着严格不相等并返回 `false` 的地方，用严格相等运算符会返回 `true`，_反之亦然_。 严格不相等运算符不会转换值的数据类型。
 
 **示例**
 
 ```js
-3 !==  3
-3 !== '3'
-4 !==  3
+3 !== 3;
+3 !== '3';
+4 !== 3;
 ```
 
 按顺序，这些表达式会返回 `false`、`true`、`true`。
@@ -64,10 +64,11 @@ assert(code.match(/(val\s*!==\s*\d+)|(\d+\s*!==\s*val)/g).length > 0);
 ```js
 // Setup
 function testStrictNotEqual(val) {
-  if (val) { // Change this line
-    return "Not Equal";
+  if (val) {
+    // Change this line
+    return 'Not Equal';
   }
-  return "Equal";
+  return 'Equal';
 }
 
 testStrictNotEqual(10);
@@ -78,8 +79,8 @@ testStrictNotEqual(10);
 ```js
 function testStrictNotEqual(val) {
   if (val !== 17) {
-    return "Not Equal";
+    return 'Not Equal';
   }
-  return "Equal";
+  return 'Equal';
 }
 ```

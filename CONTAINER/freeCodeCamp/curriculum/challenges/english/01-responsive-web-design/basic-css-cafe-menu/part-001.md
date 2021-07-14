@@ -24,8 +24,5 @@ Test 1
 ## --seed-contents--
 
 ```html
---fcc-editable-region--
-
---fcc-editable-region--
+--fcc-editable-region-- --fcc-editable-region--
 ```
-

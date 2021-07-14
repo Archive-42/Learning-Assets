@@ -21,7 +21,7 @@ Then use jQuery's `.addClass()` function to add the classes `animated` and `fade
 Here's how you'd make the `button` element with the id `target6` fade out:
 
 ```js
-$("#target6").addClass("animated fadeOut");
+$('#target6').addClass('animated fadeOut');
 ```
 
 # --hints--
@@ -53,10 +53,9 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
   });
 </script>
 
@@ -89,10 +88,10 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
+  $(document).ready(function () {
+    $('button').addClass('animated bounce');
+    $('.well').addClass('animated shake');
+    $('#target3').addClass('animated fadeOut');
   });
 </script>
 

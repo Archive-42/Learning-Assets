@@ -58,4 +58,3 @@ output[1:-1, 1:-1] = z
 ## --video-solution--
 
 2
-

@@ -33,12 +33,12 @@ let complexArray = [
   ],
   [
     {
-      a: "a",
-      b: "b"
+      a: 'a',
+      b: 'b'
     },
     {
-      c: "c",
-      d: "d"
+      c: 'c',
+      d: 'd'
     }
   ]
 ];
@@ -65,19 +65,19 @@ assert.isAtLeast(yourArray.length, 5);
 `yourArray` debe contener al menos un `boolean`.
 
 ```js
-assert(yourArray.filter((el) => typeof el === 'boolean').length >= 1);
+assert(yourArray.filter(el => typeof el === 'boolean').length >= 1);
 ```
 
 `yourArray` debe contener al menos un `number`.
 
 ```js
-assert(yourArray.filter((el) => typeof el === 'number').length >= 1);
+assert(yourArray.filter(el => typeof el === 'number').length >= 1);
 ```
 
 `yourArray` debe contener al menos un `string`.
 
 ```js
-assert(yourArray.filter((el) => typeof el === 'string').length >= 1);
+assert(yourArray.filter(el => typeof el === 'string').length >= 1);
 ```
 
 # --seed--

@@ -57,7 +57,9 @@ if (typeof a != 'undefined') {
 ## --after-user-code--
 
 ```js
-(function(a){return "a = " + a;})(a);
+(function (a) {
+  return 'a = ' + a;
+})(a);
 ```
 
 ## --seed-contents--

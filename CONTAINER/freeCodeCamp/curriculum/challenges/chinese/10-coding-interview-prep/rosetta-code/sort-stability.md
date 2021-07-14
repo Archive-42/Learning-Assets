@@ -10,7 +10,7 @@ dashedName: sort-stability
 
 When sorting records in a table by a particular column or field, a [stable sort](https://en.wikipedia.org/wiki/Stable_sort#Stability) will always retain the relative order of records that have the same key.
 
-For example, in this table of countries and cities, a stable sort on the **second** column, the cities, would keep the US Birmingham above the UK Birmingham. (Although an unstable sort *might*, in this case, place the US Birmingham above the UK Birmingham, a stable sort routine would *guarantee* it).
+For example, in this table of countries and cities, a stable sort on the **second** column, the cities, would keep the US Birmingham above the UK Birmingham. (Although an unstable sort _might_, in this case, place the US Birmingham above the UK Birmingham, a stable sort routine would _guarantee_ it).
 
 <pre>UK  London
 US  New York
@@ -151,16 +151,14 @@ assert.deepEqual(
 ## --seed-contents--
 
 ```js
-function stableSort(arr) {
-
-}
+function stableSort(arr) {}
 ```
 
 # --solutions--
 
 ```js
 function stableSort(arr) {
-  arr.sort(function(a, b) {
+  arr.sort(function (a, b) {
     return a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : 0;
   });
   return arr;

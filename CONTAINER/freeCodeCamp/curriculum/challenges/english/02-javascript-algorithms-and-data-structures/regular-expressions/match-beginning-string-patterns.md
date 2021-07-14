@@ -13,7 +13,7 @@ Prior challenges showed that regular expressions can be used to look for a numbe
 In an earlier challenge, you used the caret character (`^`) inside a character set to create a negated character set in the form `[^thingsThatWillNotBeMatched]`. Outside of a character set, the caret is used to search for patterns at the beginning of strings.
 
 ```js
-let firstString = "Ricky is first and can be found.";
+let firstString = 'Ricky is first and can be found.';
 let firstRegex = /^Ricky/;
 firstRegex.test(firstString);
 let notFirst = "You can't find Ricky now.";
@@ -57,7 +57,7 @@ assert(!calRegex.test('Ricky and Cal both like racing.'));
 ## --seed-contents--
 
 ```js
-let rickyAndCal = "Cal and Ricky both like racing.";
+let rickyAndCal = 'Cal and Ricky both like racing.';
 let calRegex = /change/; // Change this line
 let result = calRegex.test(rickyAndCal);
 ```
@@ -65,7 +65,7 @@ let result = calRegex.test(rickyAndCal);
 # --solutions--
 
 ```js
-let rickyAndCal = "Cal and Ricky both like racing.";
+let rickyAndCal = 'Cal and Ricky both like racing.';
 let calRegex = /^Cal/; // Change this line
 let result = calRegex.test(rickyAndCal);
 ```

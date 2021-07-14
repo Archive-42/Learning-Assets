@@ -27,7 +27,7 @@ Puedes hacer un comentario multilínea comenzando con `/*` y terminando con `*/`
 multi-line comment */
 ```
 
-**Nota: ** A medida que programas, deberías añadir comentarios regularmente para aclarar el funcionamiento de las partes de tu código. Un buen comentario puede ayudar a comunicar la intención de tu código, tanto para otros *como* para tu yo futuro.
+**Nota: ** A medida que programas, deberías añadir comentarios regularmente para aclarar el funcionamiento de las partes de tu código. Un buen comentario puede ayudar a comunicar la intención de tu código, tanto para otros _como_ para tu yo futuro.
 
 # --instructions--
 

@@ -1,7 +1,7 @@
 module.exports = function (totalRooms) {
   var findDivisors = function (number) {
     var divisors = [],
-        iterator = number;
+      iterator = number;
 
     while (iterator--) {
       if (number % iterator === 0) {
@@ -17,10 +17,12 @@ module.exports = function (totalRooms) {
   var isSubsetSum = function (number, array) {
     var hasSubset = false;
 
-    (function findSubset (total, numbers) {
+    (function findSubset(total, numbers) {
       !hasSubset && (hasSubset = total === number);
 
-      if (hasSubset || total > number) { return; }
+      if (hasSubset || total > number) {
+        return;
+      }
 
       numbers.forEach(function (num, index) {
         return findSubset(

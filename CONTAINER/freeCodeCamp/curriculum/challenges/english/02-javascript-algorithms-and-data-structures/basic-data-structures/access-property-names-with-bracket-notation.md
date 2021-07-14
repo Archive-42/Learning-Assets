@@ -76,11 +76,10 @@ let foods = {
 
 function checkInventory(scannedItem) {
   // Only change code below this line
-
   // Only change code above this line
 }
 
-console.log(checkInventory("apples"));
+console.log(checkInventory('apples'));
 ```
 
 # --solutions--

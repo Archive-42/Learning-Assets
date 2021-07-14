@@ -1,0 +1,44 @@
+<script type="text/javascript">
+  function deleteOrder(orderId) {
+    fetch(`/orders/${orderId}`, {
+      method: 'DELETE'
+    }).then(() => {
+      window.location.reload();
+    });
+  }
+</script>
+<div class="mui-container">
+  {{#link-to href="/orders/new" classNames="mui-btn mui-btn--primary mui--pull-right"}}
+    New
+  {{/link-to}}
+  <h1>Orders</h1>
+  {{> 'pagination'}}
+  <div class="mui-panel">
+    <table class="mui-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Id {{> 'table-col-sort' by='id'}} </th>
+          <th>Customer {{> 'table-col-sort' by='customerid'}} </th>
+          <th>Employee {{> 'table-col-sort' by='employeeid'}} </th>
+          <th>Ship To {{> 'table-col-sort' by='shipcountry'}} </th>
+          <th>Total </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each orders as |o|}}
+        <tr>
+          <td class="actions">
+            <button onClick="deleteOrder({{o.id}});">❌</button>
+          </td>
+          <td>{{#link-to href=(concat '/orders/' o.id)}} {{o.id}} {{/link-to}}</td>
+          <td>{{#link-to href=(concat '/customers/' o.customerid)}} {{or o.customername o.customerid}} {{/link-to}}</td>
+          <td>{{#link-to href=(concat '/employees/' o.employeeid)}} {{or o.employeename o.employeeid}} {{/link-to}}</td>
+          <td>{{o.shipcity}}, {{o.shipcountry}}</td>
+          <td>{{format-money o.total}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -21,16 +21,16 @@ Use the `helmet.noCache()` method on your server.
 helmet.noCache() middleware should be mounted correctly
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       assert.include(data.appStack, 'nocache');
       assert.equal(
         data.headers['cache-control'],
         'no-store, no-cache, must-revalidate, proxy-revalidate'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

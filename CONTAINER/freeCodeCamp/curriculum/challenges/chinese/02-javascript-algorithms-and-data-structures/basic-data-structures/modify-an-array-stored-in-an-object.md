@@ -60,11 +60,7 @@ let user = {
     username: 'kennethCodesAllDay',
     joinDate: 'March 26, 2016',
     organization: 'freeCodeCamp',
-    friends: [
-      'Sam',
-      'Kira',
-      'Tomo'
-    ],
+    friends: ['Sam', 'Kira', 'Tomo'],
     location: {
       city: 'San Francisco',
       state: 'CA',
@@ -75,7 +71,6 @@ let user = {
 
 function addFriend(userObj, friend) {
   // Only change code below this line
-
   // Only change code above this line
 }
 
@@ -92,11 +87,7 @@ let user = {
     username: 'kennethCodesAllDay',
     joinDate: 'March 26, 2016',
     organization: 'freeCodeCamp',
-    friends: [
-      'Sam',
-      'Kira',
-      'Tomo'
-    ],
+    friends: ['Sam', 'Kira', 'Tomo'],
     location: {
       city: 'San Francisco',
       state: 'CA',

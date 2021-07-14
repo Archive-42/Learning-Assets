@@ -73,7 +73,7 @@ function truncateString(str, num) {
   return str;
 }
 
-truncateString("A-tisket a-tasket A green and yellow basket", 8);
+truncateString('A-tisket a-tasket A green and yellow basket', 8);
 ```
 
 # --solutions--
@@ -87,5 +87,5 @@ function truncateString(str, num) {
   return str.slice(0, num) + '...';
 }
 
-truncateString("A-tisket a-tasket A green and yellow basket", 8);
+truncateString('A-tisket a-tasket A green and yellow basket', 8);
 ```

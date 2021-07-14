@@ -19,6 +19,7 @@ Note that you might need to uninstall existing Eigen and pybind11 packages due t
 #### Ubuntu
 
 ###### Ubuntu 14.04 LTS
+
     sudo apt-get install libprotobuf-dev protobuf-compiler libatlas-base-dev libgoogle-glog-dev libgtest-dev liblmdb-dev libleveldb-dev libsnappy-dev python-dev python-pip libiomp-dev libopencv-dev libpthread-stubs0-dev cmake
     sudo pip install numpy
     wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_8.0.44-1_amd64.deb
@@ -38,6 +39,7 @@ Note that you might need to uninstall existing Eigen and pybind11 packages due t
     make
 
 ###### Ubuntu 16.04 LTS
+
     sudo apt-get install libprotobuf-dev protobuf-compiler libatlas-base-dev libgoogle-glog-dev libgtest-dev liblmdb-dev libleveldb-dev libsnappy-dev python-dev python-pip libiomp-dev libopencv-dev libpthread-stubs0-dev cmake
     sudo pip install numpy
     wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb

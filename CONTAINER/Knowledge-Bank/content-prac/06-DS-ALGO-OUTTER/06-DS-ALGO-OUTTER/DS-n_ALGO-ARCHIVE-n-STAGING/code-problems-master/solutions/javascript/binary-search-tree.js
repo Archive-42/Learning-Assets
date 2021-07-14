@@ -14,11 +14,11 @@ createNode = function createNode(num) {
     delete: binaryTreeDelete,
     left: undefined,
     right: undefined,
-    value: num
+    value: num,
   };
 };
 
-addSubNode = function(node, direct, num) {
+addSubNode = function (node, direct, num) {
   if (node[direct] === undefined) {
     node[direct] = createNode(num);
   } else {
@@ -26,22 +26,22 @@ addSubNode = function(node, direct, num) {
   }
 };
 
-add = function(num) {
-  // Add the value to the correct side of the binary search tree. 
+add = function (num) {
+  // Add the value to the correct side of the binary search tree.
   // If the value is the same as the current node, we'll just ignore it.
   if (this.value === undefined) {
     this.value = num;
   } else {
     if (num < this.value) {
-      addSubNode(this, 'left', num);
+      addSubNode(this, "left", num);
     } else if (num > this.value) {
-      addSubNode(this, 'right', num);
+      addSubNode(this, "right", num);
     }
   }
   return root;
 };
 
-search = function(num) {
+search = function (num) {
   if (num === this.value) {
     return this;
   } else if (num < this.value && this.left) {
@@ -53,22 +53,22 @@ search = function(num) {
   }
 };
 
-findRightMost = function(node) {
+findRightMost = function (node) {
   if (node.right === undefined) {
     return node;
   }
   return findRightMost(node.right);
 };
 
-replaceNodeInParent = function(node, parent, newNode) {
+replaceNodeInParent = function (node, parent, newNode) {
   // root's parent is undefined.
   if (parent === undefined) {
     if (newNode) {
-      root.value = newNode.value,
-      root.left = newNode.left,
-      root.right = newNode.right;
-    }else{
-      root.value=undefined;
+      (root.value = newNode.value),
+        (root.left = newNode.left),
+        (root.right = newNode.right);
+    } else {
+      root.value = undefined;
     }
     return;
   }
@@ -80,8 +80,7 @@ replaceNodeInParent = function(node, parent, newNode) {
   }
 };
 
-
-binaryTreeDelete = function(num, parent) {
+binaryTreeDelete = function (num, parent) {
   var successor;
   if (num < this.value) {
     return this.left ? this.left.delete(num, this) : root;
@@ -104,4 +103,4 @@ binaryTreeDelete = function(num, parent) {
   return root;
 };
 
-module.exports = (root = createNode(undefined));
+module.exports = root = createNode(undefined);

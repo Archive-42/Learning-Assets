@@ -49,4 +49,3 @@ print(height/3)
 ## --video-solution--
 
 3
-

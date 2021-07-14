@@ -85,7 +85,7 @@ const usersObj1 = {
   Sarah: {
     online: false
   }
-}
+};
 
 const usersObj2 = {
   Alan: {
@@ -97,8 +97,7 @@ const usersObj2 = {
   Sarah: {
     online: true
   }
-}
-
+};
 
 const usersObj3 = {
   Alan: {
@@ -110,7 +109,7 @@ const usersObj3 = {
   Sarah: {
     online: false
   }
-}
+};
 ```
 
 ## --seed-contents--
@@ -118,7 +117,6 @@ const usersObj3 = {
 ```js
 function countOnline(usersObj) {
   // Only change code below this line
-
   // Only change code above this line
 }
 ```
@@ -128,8 +126,8 @@ function countOnline(usersObj) {
 ```js
 function countOnline(usersObj) {
   let online = 0;
-  for(let user in usersObj){
-    if(usersObj[user].online) {
+  for (let user in usersObj) {
+    if (usersObj[user].online) {
       online++;
     }
   }

@@ -130,9 +130,7 @@ assert.deepEqual(
 ## --seed-contents--
 
 ```js
-function solveSudoku(puzzle) {
-
-}
+function solveSudoku(puzzle) {}
 ```
 
 # --solutions--
@@ -168,7 +166,7 @@ function solveSudoku(puzzle) {
     return (e.D = n);
   };
 
-  const search = function(h, s) {
+  const search = function (h, s) {
     if (h.R == h) {
       printSol(s);
     } else {
@@ -302,7 +300,7 @@ function solveSudoku(puzzle) {
   var stringPuzzle = '';
 
   for (var i = 0; i < puzzle.length; i++) {
-    puzzle[i].forEach(function(e) {
+    puzzle[i].forEach(function (e) {
       if (e == -1) stringPuzzle += '.';
       else stringPuzzle += e;
     });

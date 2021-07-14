@@ -16,9 +16,9 @@ dashedName: manipulate-arrays-with-unshift
 示例：
 
 ```js
-var ourArray = ["Stimpson", "J", "cat"];
+var ourArray = ['Stimpson', 'J', 'cat'];
 ourArray.shift();
-ourArray.unshift("Happy");
+ourArray.unshift('Happy');
 ```
 
 在 `shift`、`ourArray` 后值为 `["J", "cat"]`。 在 `unshift`、`ourArray` 后值为 `["Happy", "J", "cat"]`。
@@ -56,14 +56,19 @@ assert(
 ## --after-user-code--
 
 ```js
-(function(y, z){return 'myArray = ' + JSON.stringify(y);})(myArray);
+(function (y, z) {
+  return 'myArray = ' + JSON.stringify(y);
+})(myArray);
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var myArray = [["John", 23], ["dog", 3]];
+var myArray = [
+  ['John', 23],
+  ['dog', 3]
+];
 myArray.shift();
 
 // Only change code below this line
@@ -72,7 +77,10 @@ myArray.shift();
 # --solutions--
 
 ```js
-var myArray = [["John", 23], ["dog", 3]];
+var myArray = [
+  ['John', 23],
+  ['dog', 3]
+];
 myArray.shift();
-myArray.unshift(["Paul", 35]);
+myArray.unshift(['Paul', 35]);
 ```

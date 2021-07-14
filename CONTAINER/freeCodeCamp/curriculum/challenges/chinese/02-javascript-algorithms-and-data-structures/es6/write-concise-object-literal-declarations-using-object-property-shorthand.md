@@ -43,7 +43,7 @@ assert.deepEqual(
 不要使用 `key:value`。
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/:/g));
+getUserInput => assert(!getUserInput('index').match(/:/g));
 ```
 
 # --seed--

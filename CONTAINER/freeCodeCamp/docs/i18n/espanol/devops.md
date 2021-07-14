@@ -79,7 +79,7 @@ Actualmente, solo los miembros del equipo de desarrolladores pueden enviar cambi
 
 3. Comprueba que el GitHub CI este aprobado en la rama `main` para el flujo upstream.
 
-   Las pruebas de [integración continua](https://github.com/freeCodeCamp/freeCodeCamp/actions) deben estar en verde y en estado PASSING para la rama  `main`. Haz clic en la marca de verificación verde junto al hash del commit si estás viendo el código de la rama `main`.
+   Las pruebas de [integración continua](https://github.com/freeCodeCamp/freeCodeCamp/actions) deben estar en verde y en estado PASSING para la rama `main`. Haz clic en la marca de verificación verde junto al hash del commit si estás viendo el código de la rama `main`.
 
     <details> <summary> Comprobando el estado en GitHub actions (captura de pantalla) </summary>
       <br>
@@ -103,7 +103,7 @@ Actualmente, solo los miembros del equipo de desarrolladores pueden enviar cambi
    ```
 
    > [!NOTE] No podrás forzar un push y si has reescrito el historial de alguna manera, estos comandos arrojarán errores.
-   > 
+   >
    > Si esto ocurre, es posible que hayas hecho algo incorrectamente y deberías comenzar de nuevo.
 
 The above steps will automatically trigger a run on the build pipeline for the `prod-staging` branch. Una vez que se completa la compilación, los artefactos se guardan como archivos `.zip` en un almacenamiento en frío para ser recuperados y usados más adelante.
@@ -115,7 +115,7 @@ El flujo de publicación se activa automáticamente cuando hay un nuevo artefact
 El proceso es prácticamente el mismo que el de las plataformas de staging, con algunas comprobaciones adicionales. Esto es solo para asegurarnos de que no rompemos nada en freeCodeCamp.org, el cual puede tener a cientos de usuarios usándolo en cualquier momento.
 
 | NO ejecutes estos comandos a menos que hayas verificado que todo funciona en la plataforma de staging. No debes omitir ni evitar ninguna prueba en staging antes de continuar. |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                                                                                                                                                                                |
 
 1. Make sure your `prod-staging` branch is pristine and in sync with the upstream.
@@ -135,7 +135,7 @@ El proceso es prácticamente el mismo que el de las plataformas de staging, con 
    ```
 
    > [!NOTE] No podrás forzar un push y si has reescrito el historial de alguna manera, estos comandos arrojarán errores.
-   > 
+   >
    > Si esto ocurre, es posible que hayas hecho algo incorrectamente y deberías comenzar de nuevo.
 
 The above steps will automatically trigger a run on the build pipeline for the `prod-current` branch. Una vez que un artefacto de compilación está listo, este activará la ejecución en el flujo de publicación.
@@ -149,7 +149,7 @@ Si los cambios funcionan y se han probado en la plataforma de staging, entonces 
 Para uso del personal:
 
 | Revisa tu correo electrónico para ver si hay un enlace directo o [ve al panel de publicaciones](https://dev.azure.com/freeCodeCamp-org/freeCodeCamp/_release) después de que la ejecución de la compilación haya terminado. |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                                                                                                                                                                                                                             |
 
 Once one of the staff members approves a release, the pipeline will push the changes live to freeCodeCamp.org's production CDN and API servers.
@@ -159,7 +159,7 @@ Once one of the staff members approves a release, the pipeline will push the cha
 Aquí está el estado actual de las pruebas, compilación y despliegue del código base.
 
 | Branch                                                                           | Unit Tests                                                                                                                                                                                                                       | Integration Tests                                                                                                                                                                                                        | Builds & Deployments                                                                                                              |
-|:-------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |:--------------------------------------------------------------------------------------------------------------------------------- |
+| :------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
 | [`main`](https://github.com/freeCodeCamp/freeCodeCamp/tree/main)                 | [![Node.js CI](https://github.com/freeCodeCamp/freeCodeCamp/workflows/Node.js%20CI/badge.svg?branch=main)](https://github.com/freeCodeCamp/freeCodeCamp/actions?query=workflow%3A%22Node.js+CI%22)                               | [![Cypress E2E Tests](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ke77ns/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/ke77ns/analytics/runs-over-time)         | -                                                                                                                                 |
 | [`prod-staging`](https://github.com/freeCodeCamp/freeCodeCamp/tree/prod-staging) | [![Node.js CI](https://github.com/freeCodeCamp/freeCodeCamp/workflows/Node.js%20CI/badge.svg?branch=prod-staging)](https://github.com/freeCodeCamp/freeCodeCamp/actions?query=workflow%3A%22Node.js+CI%22+branch%3Aprod-staging) | [![Cypress E2E Tests](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ke77ns/prod-staging&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/ke77ns/analytics/runs-over-time) | [Azure Pipelines](https://dev.azure.com/freeCodeCamp-org/freeCodeCamp/_dashboards/dashboard/d59f36b9-434a-482d-8dbd-d006b71713d4) |
 | [`prod-current`](https://github.com/freeCodeCamp/freeCodeCamp/tree/prod-staging) | [![Node.js CI](https://github.com/freeCodeCamp/freeCodeCamp/workflows/Node.js%20CI/badge.svg?branch=prod-current)](https://github.com/freeCodeCamp/freeCodeCamp/actions?query=workflow%3A%22Node.js+CI%22+branch%3Aprod-current) | [![Cypress E2E Tests](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ke77ns/prod-current&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/ke77ns/analytics/runs-over-time) | [Azure Pipelines](https://dev.azure.com/freeCodeCamp-org/freeCodeCamp/_dashboards/dashboard/d59f36b9-434a-482d-8dbd-d006b71713d4) |
@@ -178,7 +178,7 @@ Te agradecemos por reportar los errores que encuentres y ayudar a mejorar freeCo
 Actualmente una versión de prueba beta pública está disponible en:
 
 | Application | Language | URL                                      |
-|:----------- |:-------- |:---------------------------------------- |
+| :---------- | :------- | :--------------------------------------- |
 | Learn       | English  | <https://www.freecodecamp.dev>           |
 |             | Espanol  | <https://www.freecodecamp.dev/espanol>   |
 |             | Chinese  | <https://chinese.freecodecamp.dev>       |
@@ -188,7 +188,7 @@ Actualmente una versión de prueba beta pública está disponible en:
 | API         | -        | `https://api.freecodecamp.dev`           |
 
 > [!NOTE] The domain name is different than **`freeCodeCamp.org`**. This is intentional to prevent search engine indexing and avoid confusion for regular users of the platform.
-> 
+>
 > The above list not exhaustive of all the applications that we provision. Also not all language variants are deployed in staging to conserve resources.
 
 ### Identificando la versión actual de las plataformas
@@ -228,7 +228,7 @@ Puedes enviar un correo electrónico a `dev[at]freecodecamp.org` si tienes algun
 # Flight Manual - Server Maintenance
 
 > [!WARNING]
-> 
+>
 > 1. The guide applies to the **freeCodeCamp Staff members only**.
 > 2. These instructions should not be considered exhaustive, please use caution.
 
@@ -297,7 +297,7 @@ We are working on creating our IaC setup, and while that is in works you can use
 Debes mantener las máquinas virtuales actualizadas mediante la realización de actualizaciones. Esto asegurará que la máquina virtual se ha parcheado con las correcciones de seguridad más recientes.
 
 > [!WARNING] Before you run these commands:
-> 
+>
 > - Make sure that the VM has been provisioned completely and there is no post-install steps running.
 > - If you are updating packages on a VM that is already serving an application, make sure the app has been stopped / saved. Package updates will cause network bandwidth, memory and/or CPU usage spikes leading to outages on running applications.
 
@@ -557,24 +557,26 @@ Provisioning VMs with the Code
 
    Start placeholder instances for the web client, these will be updated with artifacts from the Azure pipeline.
 
-   > Todo: This setup needs to move to S3 or Azure Blob storage 
-   > 
+   > Todo: This setup needs to move to S3 or Azure Blob storage
+   >
    > ```console
-   echo "serve -c ../../serve.json www -p 50505" >> client-start-primary.sh
-   chmod +x client-start-primary.sh
-   pm2 delete client-primary
-   pm2 start  ./client-start-primary.sh --name client-primary
-   echo "serve -c ../../serve.json www -p 52525" >> client-start-secondary.sh
-   chmod +x client-start-secondary.sh
-   pm2 delete client-secondary
-   pm2 start  ./client-start-secondary.sh --name client-secondary
-```
+   > echo "serve -c ../../serve.json www -p 50505" >> client-start-primary.sh
+   > chmod +x client-start-primary.sh
+   > pm2 delete client-primary
+   > pm2 start  ./client-start-primary.sh --name client-primary
+   > echo "serve -c ../../serve.json www -p 52525" >> client-start-secondary.sh
+   > chmod +x client-start-secondary.sh
+   > pm2 delete client-secondary
+   > pm2 start  ./client-start-secondary.sh --name client-secondary
+   > ```
+
+````
 
 ### Registro de Eventos y Monitoreo
 
 ```console
 pm2 logs
-```
+````
 
 ```console
 pm2 monit

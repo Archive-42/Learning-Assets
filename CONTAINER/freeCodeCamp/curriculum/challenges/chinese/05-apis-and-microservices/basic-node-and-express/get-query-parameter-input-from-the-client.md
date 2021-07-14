@@ -23,16 +23,16 @@ dashedName: get-query-parameter-input-from-the-client
 测试 1：你的 API 应该用正确的名字来响应
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/name?first=Mick&last=Jagger').then(
-    (data) => {
+    data => {
       assert.equal(
         data.name,
         'Mick Jagger',
         'Test 1: "GET /name" route does not behave as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -41,16 +41,16 @@ dashedName: get-query-parameter-input-from-the-client
 测试 2：你的 API 应该用正确的名字来响应
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/name?last=Richards&first=Keith').then(
-    (data) => {
+    data => {
       assert.equal(
         data.name,
         'Keith Richards',
         'Test 2: "GET /name" route does not behave as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

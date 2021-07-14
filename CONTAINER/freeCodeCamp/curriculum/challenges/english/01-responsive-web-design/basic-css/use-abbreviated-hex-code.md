@@ -105,16 +105,16 @@ assert(code.match(/\.fuchsia-text\s*?{\s*?color:\s*?#F0F\s*?;\s*?}/gi));
 ```html
 <style>
   .red-text {
-    color: #F00;
+    color: #f00;
   }
   .fuchsia-text {
-    color: #F0F;
+    color: #f0f;
   }
   .cyan-text {
-    color: #0FF;
+    color: #0ff;
   }
   .green-text {
-    color: #0F0;
+    color: #0f0;
   }
 </style>
 

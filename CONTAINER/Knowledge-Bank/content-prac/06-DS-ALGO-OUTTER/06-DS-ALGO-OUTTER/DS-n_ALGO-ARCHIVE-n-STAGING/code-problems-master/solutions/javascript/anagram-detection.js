@@ -7,17 +7,65 @@ var primeMap = (function () {
   var map = {};
 
   var primes = [
-    2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67,
-    71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149,
-    151, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233,
-    239, 241
+    2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+    73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151,
+    163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239,
+    241,
   ];
 
   var alphabet = [
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-    'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D',
-    'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
-    'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
   ];
 
   // Merge the primes and alphabet together, using the letters as keys.
@@ -35,7 +83,7 @@ var primeMap = (function () {
  * @return {Number}
  */
 var hash = function (str) {
-  return str.split('').reduce(function (memo, char) {
+  return str.split("").reduce(function (memo, char) {
     return memo * primeMap[char];
   }, 1);
 };
@@ -49,14 +97,14 @@ var hash = function (str) {
  * @return {Number}
  */
 module.exports = function (parent, child) {
-  var found   = 0;
+  var found = 0;
 
   // Safety first, confirm that the child is actually smaller than the parent.
   if (parent.length < child.length) {
     return found;
   }
 
-  var value   = hash(parent.substr(0, child.length));
+  var value = hash(parent.substr(0, child.length));
   var anagram = hash(child);
 
   // Iterate over all substring possibilities and check the hash values.

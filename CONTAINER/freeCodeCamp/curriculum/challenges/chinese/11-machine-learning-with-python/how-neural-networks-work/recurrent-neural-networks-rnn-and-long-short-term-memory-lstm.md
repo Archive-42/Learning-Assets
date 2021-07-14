@@ -27,4 +27,3 @@ Prediction, ignoring, forgetting, and selection.
 ## --video-solution--
 
 3
-

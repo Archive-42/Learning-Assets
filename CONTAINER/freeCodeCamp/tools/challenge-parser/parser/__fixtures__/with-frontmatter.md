@@ -35,8 +35,7 @@ Second hint with <code>code</code>
 
 ```html
 <html>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

@@ -51,7 +51,9 @@ assert(/\s+?remainder\s*?=\s*?.*%.*;?/.test(code));
 ## --after-user-code--
 
 ```js
-(function(y){return 'remainder = '+y;})(remainder);
+(function (y) {
+  return 'remainder = ' + y;
+})(remainder);
 ```
 
 ## --seed-contents--
@@ -65,5 +67,5 @@ var remainder;
 # --solutions--
 
 ```js
-var remainder =  11 % 3;
+var remainder = 11 % 3;
 ```

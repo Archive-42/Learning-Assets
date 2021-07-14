@@ -10,7 +10,7 @@ dashedName: part-65
 Create a variable named `clearOutput` and set it equal to a blank arrow function:
 
 ```js
-const clearOutput = () => {}
+const clearOutput = () => {};
 ```
 
 This is similar to `function clearOutput () {}`.
@@ -45,15 +45,11 @@ assert(typeof clearOutput === 'function');
           <legend>Sex</legend>
           <div>
             <input type="radio" name="sex" id="female" value="F" checked />
-            <label for="female">
-              Female (2,000 calories)
-            </label>
+            <label for="female"> Female (2,000 calories) </label>
 
             <div>
               <input type="radio" name="sex" id="male" value="M" />
-              <label for="male">
-                Male (2,500 calories)
-              </label>
+              <label for="male"> Male (2,500 calories) </label>
             </div>
           </div>
         </div>
@@ -69,15 +65,11 @@ assert(typeof clearOutput === 'function');
           <input type="number" min="0" class="cal-control" id="lunch" /><br />
           Dinner <input type="number" min="0" class="cal-control" id="dinner" />
         </div>
-        <button type="button" class="btn-add" id="add">
-          Add Entry
-        </button>
+        <button type="button" class="btn-add" id="add">Add Entry</button>
         <button type="submit" class="btn-solid" id="calculate">
           Calculate
         </button>
-        <button type="button" class="btn-outline" id="clear">
-          Clear
-        </button>
+        <button type="button" class="btn-outline" id="clear">Clear</button>
       </form>
       <div id="output"></div>
     </div>
@@ -141,7 +133,7 @@ assert(typeof clearOutput === 'function');
     output.style.backgroundColor = '#FFF9C4';
   }
 
-  document.getElementById('add').onclick = function() {
+  document.getElementById('add').onclick = function () {
     const foodInput = document.createElement('input');
     foodInput.placeholder = 'food name';
     foodInput.classList.add('food-control');
@@ -155,7 +147,7 @@ assert(typeof clearOutput === 'function');
     document.getElementById('entries').appendChild(calorieInput);
   };
 
-  document.getElementById('clear').onclick = function() {
+  document.getElementById('clear').onclick = function () {
     clearOutput();
     clearForm();
   };
@@ -211,7 +203,7 @@ assert(typeof clearOutput === 'function');
     output.style.backgroundColor = '#FFF9C4';
   }
 
-  document.getElementById('add').onclick = function() {
+  document.getElementById('add').onclick = function () {
     const foodInput = document.createElement('input');
     foodInput.placeholder = 'food name';
     foodInput.classList.add('food-control');
@@ -225,7 +217,7 @@ assert(typeof clearOutput === 'function');
     document.getElementById('entries').appendChild(calorieInput);
   };
 
-  document.getElementById('clear').onclick = function() {
+  document.getElementById('clear').onclick = function () {
     clearOutput();
     clearForm();
   };

@@ -62,7 +62,6 @@ assert(
     border-radius: 0px;
     box-shadow: 25px 10px 10px 10px green;
   }
-
 </style>
 <div class="center"></div>
 ```

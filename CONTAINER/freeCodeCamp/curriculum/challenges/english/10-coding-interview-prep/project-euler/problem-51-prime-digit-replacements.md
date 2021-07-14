@@ -34,7 +34,6 @@ assert.strictEqual(primeDigitReplacements(), 121313);
 
 ```js
 function primeDigitReplacements() {
-
   return true;
 }
 

@@ -10,9 +10,9 @@ dashedName: refactor-global-variables-out-of-functions
 
 目前为止，我们已经看到了函数式编程的两个原则：
 
-1) 不要更改变量或对象 - 创建新变量和对象，并在需要时从函数返回它们。 提示：使用类似 `var newArr = arrVar` 时 `arrVar` 是一个数组，代码只是创建一个对现有变量的引用，而不是副本。 所以更改 `newArr` 中的值会同时更改 `arrVar` 中的值。
+1. 不要更改变量或对象 - 创建新变量和对象，并在需要时从函数返回它们。 提示：使用类似 `var newArr = arrVar` 时 `arrVar` 是一个数组，代码只是创建一个对现有变量的引用，而不是副本。 所以更改 `newArr` 中的值会同时更改 `arrVar` 中的值。
 
-2) 声明函数参数 - 函数内的任何计算仅取决于参数，而不取决于任何全局对象或变量。
+2. 声明函数参数 - 函数内的任何计算仅取决于参数，而不取决于任何全局对象或变量。
 
 给数字增加 1 不够刺激，我们可以在处理数组或更复杂的对象时应用这些原则。
 
@@ -86,11 +86,15 @@ assert(
 
 ```js
 // The global variable
-var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+var bookList = [
+  'The Hound of the Baskervilles',
+  'On The Electrodynamics of Moving Bodies',
+  'Philosophiæ Naturalis Principia Mathematica',
+  'Disquisitiones Arithmeticae'
+];
 
 // Change code below this line
-function add (bookName) {
-
+function add(bookName) {
   bookList.push(bookName);
   return bookList;
 
@@ -98,20 +102,22 @@ function add (bookName) {
 }
 
 // Change code below this line
-function remove (bookName) {
+function remove(bookName) {
   var book_index = bookList.indexOf(bookName);
   if (book_index >= 0) {
-
     bookList.splice(book_index, 1);
     return bookList;
 
     // Change code above this line
-    }
+  }
 }
 
 var newBookList = add(bookList, 'A Brief History of Time');
 var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
-var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+var newestBookList = remove(
+  add(bookList, 'A Brief History of Time'),
+  'On The Electrodynamics of Moving Bodies'
+);
 
 console.log(bookList);
 ```
@@ -120,13 +126,18 @@ console.log(bookList);
 
 ```js
 // The global variable
-var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+var bookList = [
+  'The Hound of the Baskervilles',
+  'On The Electrodynamics of Moving Bodies',
+  'Philosophiæ Naturalis Principia Mathematica',
+  'Disquisitiones Arithmeticae'
+];
 
-function add (bookList, bookName) {
+function add(bookList, bookName) {
   return [...bookList, bookName];
 }
 
-function remove (bookList, bookName) {
+function remove(bookList, bookName) {
   const bookListCopy = [...bookList];
   const bookNameIndex = bookList.indexOf(bookName);
   if (bookNameIndex >= 0) {
@@ -137,5 +148,8 @@ function remove (bookList, bookName) {
 
 var newBookList = add(bookList, 'A Brief History of Time');
 var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
-var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+var newestBookList = remove(
+  add(bookList, 'A Brief History of Time'),
+  'On The Electrodynamics of Moving Bodies'
+);
 ```

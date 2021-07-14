@@ -25,9 +25,9 @@ dashedName: remove-a-package-from-your-dependencies
 “dependencies”字段不包含“moment”。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.notProperty(
         packJson.dependencies,
@@ -35,7 +35,7 @@ dashedName: remove-a-package-from-your-dependencies
         '"dependencies" still includes "moment"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

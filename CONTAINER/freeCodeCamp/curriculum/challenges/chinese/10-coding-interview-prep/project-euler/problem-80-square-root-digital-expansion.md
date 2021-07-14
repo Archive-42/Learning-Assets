@@ -34,7 +34,6 @@ assert.strictEqual(sqrtDigitalExpansion(), 40886);
 
 ```js
 function sqrtDigitalExpansion() {
-
   return true;
 }
 

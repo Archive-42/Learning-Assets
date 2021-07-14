@@ -44,34 +44,46 @@ assert(code.match(/height:\s*?auto;/g));
 
 ```html
 <style>
-.responsive-img {
+  .responsive-img {
+  }
 
-
-}
-
-img {
-  width: 600px;
-}
+  img {
+    width: 600px;
+  }
 </style>
 
-<img class="responsive-img" src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
-<img src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
+<img
+  class="responsive-img"
+  src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+  alt="freeCodeCamp stickers set"
+/>
+<img
+  src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+  alt="freeCodeCamp stickers set"
+/>
 ```
 
 # --solutions--
 
 ```html
 <style>
-.responsive-img {
-  max-width: 100%;
-  height: auto;
-}
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+  }
 
-img {
-  width: 600px;
-}
+  img {
+    width: 600px;
+  }
 </style>
 
-<img class="responsive-img" src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
-<img src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
+<img
+  class="responsive-img"
+  src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+  alt="freeCodeCamp stickers set"
+/>
+<img
+  src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+  alt="freeCodeCamp stickers set"
+/>
 ```

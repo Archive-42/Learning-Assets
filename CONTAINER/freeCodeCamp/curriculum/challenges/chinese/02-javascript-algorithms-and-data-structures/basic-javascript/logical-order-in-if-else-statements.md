@@ -20,11 +20,11 @@ dashedName: logical-order-in-if-else-statements
 ```js
 function foo(x) {
   if (x < 1) {
-    return "Less than one";
+    return 'Less than one';
   } else if (x < 2) {
-    return "Less than two";
+    return 'Less than two';
   } else {
-    return "Greater than or equal to two";
+    return 'Greater than or equal to two';
   }
 }
 ```
@@ -34,11 +34,11 @@ function foo(x) {
 ```js
 function bar(x) {
   if (x < 2) {
-    return "Less than two";
+    return 'Less than two';
   } else if (x < 1) {
-    return "Less than one";
+    return 'Less than one';
   } else {
-    return "Greater than or equal to two";
+    return 'Greater than or equal to two';
   }
 }
 ```
@@ -46,8 +46,8 @@ function bar(x) {
 这两个函数看起来几乎一模一样，我们传一个值进去看看它们有什么区别。
 
 ```js
-foo(0)
-bar(0)
+foo(0);
+bar(0);
 ```
 
 `foo(0)` 将返回字符串 `Less than one`，`bar(0)` 将返回字符串 `Less than two`。
@@ -83,11 +83,11 @@ assert(orderMyLogic(11) === 'Greater than or equal to 10');
 ```js
 function orderMyLogic(val) {
   if (val < 10) {
-    return "Less than 10";
+    return 'Less than 10';
   } else if (val < 5) {
-    return "Less than 5";
+    return 'Less than 5';
   } else {
-    return "Greater than or equal to 10";
+    return 'Greater than or equal to 10';
   }
 }
 
@@ -98,12 +98,12 @@ orderMyLogic(7);
 
 ```js
 function orderMyLogic(val) {
-  if(val < 5) {
-    return "Less than 5";
+  if (val < 5) {
+    return 'Less than 5';
   } else if (val < 10) {
-    return "Less than 10";
+    return 'Less than 10';
   } else {
-    return "Greater than or equal to 10";
+    return 'Greater than or equal to 10';
   }
 }
 ```

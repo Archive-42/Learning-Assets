@@ -21,7 +21,7 @@ dashedName: delete-many-documents-with-model-remove
 应一次性成功删除多条数据
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/_api/remove-many-people',
     type: 'POST',
@@ -31,7 +31,7 @@ dashedName: delete-many-documents-with-model-remove
       { name: 'Mary', age: 21, favoriteFoods: ['steak'] }
     ])
   }).then(
-    (data) => {
+    data => {
       assert.isTrue(!!data.ok, 'The mongo stats are not what expected');
       assert.equal(
         data.n,
@@ -40,7 +40,7 @@ dashedName: delete-many-documents-with-model-remove
       );
       assert.equal(data.count, 0, 'the db items count is not what expected');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -104,16 +104,15 @@ const words = ['bark', 'BooK', 'TReAT', 'COMMON', 'squAD', 'conFUSE'];
 ## --seed-contents--
 
 ```js
-function canMakeWord(word) {
-
-}
+function canMakeWord(word) {}
 ```
 
 # --solutions--
 
 ```js
 function canMakeWord(word) {
-  const characters = 'BO XK DQ CP NA GT RE TG QD FS JW HU VI AN OB ER FS LY PC ZM';
+  const characters =
+    'BO XK DQ CP NA GT RE TG QD FS JW HU VI AN OB ER FS LY PC ZM';
   const blocks = characters.split(' ').map(pair => pair.split(''));
 
   const letters = [...word.toUpperCase()];

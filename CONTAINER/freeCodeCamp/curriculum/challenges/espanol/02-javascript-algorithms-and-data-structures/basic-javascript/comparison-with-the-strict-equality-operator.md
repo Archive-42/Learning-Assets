@@ -16,8 +16,8 @@ Si los valores que se comparan tienen diferentes tipos, se consideran desiguales
 **Ejemplos**
 
 ```js
-3 ===  3
-3 === '3'
+3 === 3;
+3 === '3';
 ```
 
 Estas condiciones devuelven `true` y `false` respectivamente.
@@ -61,10 +61,11 @@ assert(code.match(/(val\s*===\s*\d+)|(\d+\s*===\s*val)/g).length > 0);
 ```js
 // Setup
 function testStrict(val) {
-  if (val) { // Change this line
-    return "Equal";
+  if (val) {
+    // Change this line
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 
 testStrict(10);
@@ -75,8 +76,8 @@ testStrict(10);
 ```js
 function testStrict(val) {
   if (val === 7) {
-    return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 ```

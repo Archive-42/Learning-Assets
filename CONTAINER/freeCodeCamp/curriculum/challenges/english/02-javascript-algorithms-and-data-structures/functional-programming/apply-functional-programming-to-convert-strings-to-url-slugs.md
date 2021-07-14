@@ -40,7 +40,7 @@ assert(!code.match(/\.?[\s\S]*?replace/g));
 assert(urlSlug('Winter Is Coming') === 'winter-is-coming');
 ```
 
-`urlSlug(" Winter Is  Coming")` should return the string `winter-is-coming`.
+`urlSlug(" Winter Is Coming")` should return the string `winter-is-coming`.
 
 ```js
 assert(urlSlug(' Winter Is  Coming') === 'winter-is-coming');
@@ -67,10 +67,7 @@ assert(urlSlug('Hold The Door') === 'hold-the-door');
 
 ```js
 // Only change code below this line
-function urlSlug(title) {
-
-
-}
+function urlSlug(title) {}
 // Only change code above this line
 ```
 
@@ -79,6 +76,6 @@ function urlSlug(title) {
 ```js
 // Only change code below this line
 function urlSlug(title) {
-  return title.trim().split(/\s+/).join("-").toLowerCase();
+  return title.trim().split(/\s+/).join('-').toLowerCase();
 }
 ```

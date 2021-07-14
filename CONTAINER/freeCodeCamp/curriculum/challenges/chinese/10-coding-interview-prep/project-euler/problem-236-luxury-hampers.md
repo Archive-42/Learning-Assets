@@ -34,7 +34,6 @@ assert.strictEqual(euler236(), 123 / 59);
 
 ```js
 function euler236() {
-
   return true;
 }
 

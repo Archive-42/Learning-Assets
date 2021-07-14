@@ -1,5 +1,7 @@
 module.exports = function (array) {
-  if (!array || !array.length) { return; }
+  if (!array || !array.length) {
+    return;
+  }
 
   var currentSum, maximumSum;
 

@@ -10,7 +10,8 @@ dashedName: part-38
 The `p` elements are nested in an `article` elements with the class attribute of `item`. You can style all the `p` elements nested anywhere in elements with a class named `item` like this:
 
 ```css
-.item p { }
+.item p {
+}
 ```
 
 Using the above selector, add a `display` property with value `inline-block` so the `p` elements behave more like `inline` elements.
@@ -69,7 +70,8 @@ Test 1
       </main>
     </div>
   </body>
-<html>
+  <html></html>
+</html>
 ```
 
 ```css
@@ -77,7 +79,9 @@ body {
   background-image: url(https://tinyurl.com/coffee-beans-fcc);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
 }
 
@@ -88,11 +92,7 @@ h1, h2, p {
   margin-right: auto;
 }
 
---fcc-editable-region--
-
---fcc-editable-region--
-
-.flavor {
+--fcc-editable-region-- --fcc-editable-region-- .flavor {
   text-align: left;
 }
 
@@ -100,4 +100,3 @@ h1, h2, p {
   text-align: right;
 }
 ```
-

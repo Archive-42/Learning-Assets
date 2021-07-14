@@ -3,20 +3,20 @@
 This document explains the TorchScript serialization format, and the anatomy
 of a call to `torch::jit::save()` or `torch::jit::load()`.
 
-  - [Overview](#overview)
-    - [Design Notes](#design-notes)
-  - [`code/`: How code is serialized](#code-how-code-is-serialized)
-    - [Printing code objects as Python source](#printing-code-objects-as-python-source)
-    - [Placing the source code in the archive](#placing-the-source-code-in-the-archive)
-  - [How data is serialized](#how-data-is-serialized)
-    - [`data.pkl`: How module object state is serialized](#datapkl-how-module-object-state-is-serialized)
-    - [`data/`: How tensors are serialized](#tensors-how-tensors-are-serialized)
-  - [`constants.pkl`: Constants in code](#constantspkl-constants-in-code)
-  - [`torch:jit::load()`](#torchjitload)
-  - [`__getstate__` and `__setstate__`](#getstate-and-setstate)
-  - [Appendix: `CompilationUnit` and code object ownership](#appendix-compilationunit-and-code-object-ownership)
-    - [`CompilationUnit` ownership semantics](#compilationunit-ownership-semantics)
-    - [Code object naming](#code-object-naming)
+- [Overview](#overview)
+  - [Design Notes](#design-notes)
+- [`code/`: How code is serialized](#code-how-code-is-serialized)
+  - [Printing code objects as Python source](#printing-code-objects-as-python-source)
+  - [Placing the source code in the archive](#placing-the-source-code-in-the-archive)
+- [How data is serialized](#how-data-is-serialized)
+  - [`data.pkl`: How module object state is serialized](#datapkl-how-module-object-state-is-serialized)
+  - [`data/`: How tensors are serialized](#tensors-how-tensors-are-serialized)
+- [`constants.pkl`: Constants in code](#constantspkl-constants-in-code)
+- [`torch:jit::load()`](#torchjitload)
+- [`__getstate__` and `__setstate__`](#getstate-and-setstate)
+- [Appendix: `CompilationUnit` and code object ownership](#appendix-compilationunit-and-code-object-ownership)
+  - [`CompilationUnit` ownership semantics](#compilationunit-ownership-semantics)
+  - [Code object naming](#code-object-naming)
 
 ## Overview
 
@@ -104,6 +104,7 @@ At a high level, code serialization means:
 2. Placing the source code in the model ZIP archive.
 
 ### Printing code objects as Python source
+
 `PythonPrint` is the function that takes as input a `ClassType` or `Function`
 ("code object") and outputs Python source code. `ScriptModule`s are
 implemented as class types, so their methods and attributes will get
@@ -197,7 +198,7 @@ a single `CompilationUnit`.
 
 **`QualifiedName`**: this is the fully qualified name for a code object. It is
 similar to qualified names in Python, and looks like `"foo.bar.baz"`. Each
-code object has a *unique* `QualifiedName` within a `CompilationUnit`.
+code object has a _unique_ `QualifiedName` within a `CompilationUnit`.
 
 The exporter uses the `QualifiedName` of a code object to determine its
 location in the `code/` folder. The way it does so is similar to how Python
@@ -220,20 +221,20 @@ necessary for pickling a module object.
 
 `pickle`'s format was chosen due to:
 
-* **user friendliness** - the attributes file can be loaded in Python with `pickle`
-* **size limits** - formats such as Protobuf empose size limits on total
- message size, whereas pickle limits are on individual values (e.g. strings
- cannot be longer than 4 GB)
-* **standard format** - `pickle` is a standard Python module with a reasonably
- simple format. The format is a program to be consumed by a stack machine that
- is detailed in Python's
-* [`pickletools.py`](https://svn.python.org/projects/python/trunk/Lib/pickletools.py)
-* **built-in memoization** - for shared reference types (e.g. Tensor, string,
- lists, dicts)
-* **self describing** - a separate definition file is not needed to understand
- the pickled data
-* **eager mode save** - `torch.save()` already produces a `pickle` archive, so
- doing the same with attributes avoids introducing yet another format
+- **user friendliness** - the attributes file can be loaded in Python with `pickle`
+- **size limits** - formats such as Protobuf empose size limits on total
+  message size, whereas pickle limits are on individual values (e.g. strings
+  cannot be longer than 4 GB)
+- **standard format** - `pickle` is a standard Python module with a reasonably
+  simple format. The format is a program to be consumed by a stack machine that
+  is detailed in Python's
+- [`pickletools.py`](https://svn.python.org/projects/python/trunk/Lib/pickletools.py)
+- **built-in memoization** - for shared reference types (e.g. Tensor, string,
+  lists, dicts)
+- **self describing** - a separate definition file is not needed to understand
+  the pickled data
+- **eager mode save** - `torch.save()` already produces a `pickle` archive, so
+  doing the same with attributes avoids introducing yet another format
 
 ### `data.pkl`: How module object state is serialized
 
@@ -242,7 +243,7 @@ All data is written into the `data.pkl` file with the exception of tensors
 "Data" means all parts of the module object state, like attributes,
 submodules, etc.
 
-PyTorch functions defined in [torch/jit/_pickle.py](../../../jit/_pickle.py)
+PyTorch functions defined in [torch/jit/\_pickle.py](../../../jit/_pickle.py)
 are used to mark special data types, such as this tensor table index or
 specialized lists.
 
@@ -270,7 +271,7 @@ into `code/`. This poses a problem for tensor constants, which are not easily
 representable in string form.
 
 We can't put tensor constants in `data.pkl`, because the source code must be
-loaded *before* `data.pkl`, and so putting the tensor constants there would
+loaded _before_ `data.pkl`, and so putting the tensor constants there would
 create a cyclic loading dependency.
 
 We solve this problem by creating a separate `pickle` file called
@@ -339,6 +340,7 @@ class M(torch.nn.Module):
 ```
 
 ## Appendix: `CompilationUnit` and code object ownership
+
 `CompilationUnit` performs two functions:
 
 1. It is the owner (in a C++ sense) for all code objects.
@@ -349,6 +351,7 @@ place the newly deserialized code objects in. In Python, there is a single
 global `CompilationUnit` that holds all code objects defined in Python.
 
 ### `CompilationUnit` ownership semantics
+
 There are a few different entities that participate in the ownership model:
 **`CompilationUnit`**: A container that owns code objects and gives them name.
 Every code object has a unique qualified name within the CompilationUnit.
@@ -384,11 +387,11 @@ qualified ones for lookup in the owning `CompilationUnit` (e.g.
 particular meaning, except that they uniquely identify a code object during
 serialization and deserialization. The basic naming scheme is:
 
-* Everything starts in the `__torch__` namespace.
-* Classes are named parallel to Python’s module namespacing: so class `Bar` in
- `foo.py` would become `__torch__.foo.Bar`.
-* Methods are attached to the module’s namespace. So `Bar.forward()` would be
- `__torch__.foo.Bar.forward`.
+- Everything starts in the `__torch__` namespace.
+- Classes are named parallel to Python’s module namespacing: so class `Bar` in
+  `foo.py` would become `__torch__.foo.Bar`.
+- Methods are attached to the module’s namespace. So `Bar.forward()` would be
+  `__torch__.foo.Bar.forward`.
 
 There are some caveats:
 
@@ -401,11 +404,11 @@ cannot construct `CompilationUnits that look like this.
 qualified name. There are two cases where this happens:
 
 1. For `ScriptModule`s, since every `ScriptModule` is a singleton class in
-the JIT, a user that is constructing multiple `ScriptModule`s will create
-multiple corresponding `ClassType`s with identical names.
+   the JIT, a user that is constructing multiple `ScriptModule`s will create
+   multiple corresponding `ClassType`s with identical names.
 2. Nesting functions will also cause qualified name clashes, due to
-limitations in Python. In these cases, we mangle the names of the code
-objects before they are placed in the global Python `CompilationUnit`.
+   limitations in Python. In these cases, we mangle the names of the code
+   objects before they are placed in the global Python `CompilationUnit`.
 
 The rules for mangling are simple. Say we have a qualified name `__torch__.foo.Bar`:
 

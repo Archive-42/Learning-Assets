@@ -14,7 +14,7 @@ You can add images to your website by using the `img` element, and point to a sp
 An example of this would be:
 
 ```html
-<img src="https://www.freecatphotoapp.com/your-image.jpg">
+<img src="https://www.freecatphotoapp.com/your-image.jpg" />
 ```
 
 Note that `img` elements are self-closing.
@@ -28,7 +28,10 @@ Ideally the `alt` attribute should not contain special characters unless needed.
 Let's add an `alt` attribute to our `img` example above:
 
 ```html
-<img src="https://www.freecatphotoapp.com/your-image.jpg" alt="A business cat wearing a necktie.">
+<img
+  src="https://www.freecatphotoapp.com/your-image.jpg"
+  alt="A business cat wearing a necktie."
+/>
 ```
 
 # --instructions--
@@ -52,7 +55,9 @@ assert($('img').length);
 Your image should have a `src` attribute that points to the kitten image.
 
 ```js
-assert(/^https:\/\/www\.bit\.ly\/fcc-relaxing-cat$/i.test($('img').attr('src')));
+assert(
+  /^https:\/\/www\.bit\.ly\/fcc-relaxing-cat$/i.test($('img').attr('src'))
+);
 ```
 
 Your image element's `alt` attribute should not be empty.
@@ -74,10 +79,15 @@ assert(
 ```html
 <h2>CatPhotoApp</h2>
 <main>
-
-
-  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+  <p>
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff.
+  </p>
+  <p>
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+    rip the couch sleep in the sink fluffy fur catnip scratched.
+  </p>
 </main>
 ```
 
@@ -86,8 +96,19 @@ assert(
 ```html
 <h2>CatPhotoApp</h2>
 <main>
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
+  <p>
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff.
+  </p>
+  <p>
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+    rip the couch sleep in the sink fluffy fur catnip scratched.
+  </p>
 </main>
 ```

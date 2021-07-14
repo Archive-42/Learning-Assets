@@ -16,19 +16,19 @@ The same effect could be achieved by nesting an if statement inside another if:
 ```js
 if (num > 5) {
   if (num < 10) {
-    return "Yes";
+    return 'Yes';
   }
 }
-return "No";
+return 'No';
 ```
 
 will only return `Yes` if `num` is greater than `5` and less than `10`. The same logic can be written as:
 
 ```js
 if (num > 5 && num < 10) {
-  return "Yes";
+  return 'Yes';
 }
-return "No";
+return 'No';
 ```
 
 # --instructions--
@@ -107,12 +107,12 @@ function testLogicalAnd(val) {
 
   if (val) {
     if (val) {
-      return "Yes";
+      return 'Yes';
     }
   }
 
   // Only change code above this line
-  return "No";
+  return 'No';
 }
 
 testLogicalAnd(10);
@@ -123,8 +123,8 @@ testLogicalAnd(10);
 ```js
 function testLogicalAnd(val) {
   if (val >= 25 && val <= 50) {
-    return "Yes";
+    return 'Yes';
   }
-  return "No";
+  return 'No';
 }
 ```

@@ -170,9 +170,9 @@ assert(
 ## --seed-contents--
 
 ```js
-function PriorityQueue () {
+function PriorityQueue() {
   this.collection = [];
-  this.printCollection = function() {
+  this.printCollection = function () {
     console.log(this.collection);
   };
   // Only change code below this line
@@ -210,7 +210,7 @@ function PriorityQueue() {
     if (!this.isEmpty()) {
       return this.collection.shift()[0];
     } else {
-      return "The queue is empty.";
+      return 'The queue is empty.';
     }
   };
   this.size = function () {

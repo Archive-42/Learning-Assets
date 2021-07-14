@@ -27,13 +27,13 @@ Test 1
   <head>
     <meta charset="utf-8" />
     <title>Camper Cafe Menu</title>
---fcc-editable-region--
+    --fcc-editable-region--
     <style>
       h1 {
         text-align: center;
       }
     </style>
---fcc-editable-region--
+    --fcc-editable-region--
   </head>
   <body>
     <header>
@@ -46,6 +46,6 @@ Test 1
       </section>
     </main>
   </body>
-<html>
+  <html></html>
+</html>
 ```
-

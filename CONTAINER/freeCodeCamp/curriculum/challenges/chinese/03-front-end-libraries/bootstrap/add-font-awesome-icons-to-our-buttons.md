@@ -4,8 +4,7 @@ title: 在按钮中添加字体图标
 challengeType: 0
 forumTopicId: 16638
 required:
-  - 
-    link: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
+  - link: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
     raw: true
 dashedName: add-font-awesome-icons-to-our-buttons
 ---
@@ -17,7 +16,12 @@ Font Awesome 是一个非常便利的图标库。 我们可以通过 webfont 或
 可以将 Font Awesome 图标库添加至任何一个 web app 中，方法很简单，只需要在 HTML head 标签中添加以下代码即可：
 
 ```html
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
 ```
 
 在这个挑战中，我们已经为你在页面上添加好了 Font Awesome 图标库。
@@ -73,7 +77,11 @@ assert(code.match(/<\/i>|<\/span>/g));
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   h2 {
     font-family: Lobster, Monospace;
@@ -93,10 +101,19 @@ assert(code.match(/<\/i>|<\/span>/g));
       <h2 class="text-primary text-center">CatPhotoApp</h2>
     </div>
     <div class="col-xs-4">
-      <a href="#"><img class="img-responsive thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+      <a href="#"
+        ><img
+          class="img-responsive thick-green-border"
+          src="https://bit.ly/fcc-relaxing-cat"
+          alt="A cute orange cat lying on its back."
+      /></a>
     </div>
   </div>
-  <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
+  <img
+    src="https://bit.ly/fcc-running-cats"
+    class="img-responsive"
+    alt="Three kittens running towards the camera."
+  />
   <div class="row">
     <div class="col-xs-4">
       <button class="btn btn-block btn-primary">Like</button>
@@ -121,12 +138,12 @@ assert(code.match(/<\/i>|<\/span>/g));
     <li>other cats</li>
   </ol>
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor"> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
-    <label><input type="checkbox" name="personality"> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Crazy</label>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label>
+    <label><input type="checkbox" name="personality" /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Crazy</label>
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </div>
@@ -135,7 +152,11 @@ assert(code.match(/<\/i>|<\/span>/g));
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   h2 {
     font-family: Lobster, Monospace;
@@ -155,13 +176,24 @@ assert(code.match(/<\/i>|<\/span>/g));
       <h2 class="text-primary text-center">CatPhotoApp</h2>
     </div>
     <div class="col-xs-4">
-      <a href="#"><img class="img-responsive thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+      <a href="#"
+        ><img
+          class="img-responsive thick-green-border"
+          src="https://bit.ly/fcc-relaxing-cat"
+          alt="A cute orange cat lying on its back."
+      /></a>
     </div>
   </div>
-  <img src="https://bit.ly/fcc-running-cats" class="img-responsive" alt="Three kittens running towards the camera.">
+  <img
+    src="https://bit.ly/fcc-running-cats"
+    class="img-responsive"
+    alt="Three kittens running towards the camera."
+  />
   <div class="row">
     <div class="col-xs-4">
-      <button class="btn btn-block btn-primary"><i class="fas fa-thumbs-up"></i> Like</button>
+      <button class="btn btn-block btn-primary">
+        <i class="fas fa-thumbs-up"></i> Like
+      </button>
     </div>
     <div class="col-xs-4">
       <button class="btn btn-block btn-info">Info</button>
@@ -183,12 +215,12 @@ assert(code.match(/<\/i>|<\/span>/g));
     <li>other cats</li>
   </ol>
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor"> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
-    <label><input type="checkbox" name="personality"> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Crazy</label>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label>
+    <label><input type="checkbox" name="personality" /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Crazy</label>
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </div>

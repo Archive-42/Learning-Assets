@@ -60,7 +60,7 @@ if (typeof b != 'undefined') {
 ## --after-user-code--
 
 ```js
-(function(a, b) {
+(function (a, b) {
   return 'a = ' + a + ', b = ' + b;
 })(a, b);
 ```

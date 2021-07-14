@@ -37,10 +37,10 @@ To make a directed graph, use `-1` for an edge leaving a particular node and `1`
 
 ```js
 var incMatDirected = [
-  [ 0, -1,  1, -1],
-  [-1,  1,  0,  0],
-  [ 1,  0,  0,  1],
-  [ 0,  0, -1,  0]
+  [0, -1, 1, -1],
+  [-1, 1, 0, 0],
+  [1, 0, 0, 1],
+  [0, 0, -1, 0]
 ];
 ```
 
@@ -98,13 +98,17 @@ assert(incMatUndirected[1][3] === 1 && incMatUndirected[3][3] === 1);
 ## --seed-contents--
 
 ```js
-var incMatUndirected = [
-
-];
+var incMatUndirected = [];
 ```
 
 # --solutions--
 
 ```js
-var incMatUndirected = [[1, 0, 0, 0],[1, 1, 0, 1],[0, 1, 1, 0],[0, 0, 0, 1],[0, 0, 1, 0]];
+var incMatUndirected = [
+  [1, 0, 0, 0],
+  [1, 1, 0, 1],
+  [0, 1, 1, 0],
+  [0, 0, 0, 1],
+  [0, 0, 1, 0]
+];
 ```

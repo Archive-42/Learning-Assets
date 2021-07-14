@@ -15,7 +15,7 @@ jQuery 有一个 `clone()` 方法，可以复制标签。
 例如，如果想把 `target2` 从 `left-well` 复制到 `right-well`，可以设置如下：
 
 ```js
-$("#target2").clone().appendTo("#right-well");
+$('#target2').clone().appendTo('#right-well');
 ```
 
 是否注意到这两个 jQuery 函数连在一起了？ 这被称为<dfn>链式调用（function chaining）</dfn>，是一种用 jQuery 实现效果的简便方法。
@@ -48,12 +48,11 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
   });
 </script>
 
@@ -86,12 +85,12 @@ assert(!code.match(/class.*animated/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
   });
 </script>
 

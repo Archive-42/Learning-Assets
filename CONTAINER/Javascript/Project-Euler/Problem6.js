@@ -9,7 +9,7 @@ const squareDifference = (num) => {
     sumOfSquares += i ** 2 // add squares to the sum of squares
     sums += i // add number to sum to square later
   }
-  return (sums ** 2) - sumOfSquares // difference of square of the total sum and sum of squares
+  return sums ** 2 - sumOfSquares // difference of square of the total sum and sum of squares
 }
 
 console.log(squareDifference(num))

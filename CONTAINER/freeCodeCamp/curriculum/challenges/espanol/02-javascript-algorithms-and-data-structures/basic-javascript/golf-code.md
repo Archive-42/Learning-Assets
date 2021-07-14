@@ -90,12 +90,19 @@ assert(golfScore(5, 9) === 'Go Home!');
 ## --seed-contents--
 
 ```js
-var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+var names = [
+  'Hole-in-one!',
+  'Eagle',
+  'Birdie',
+  'Par',
+  'Bogey',
+  'Double Bogey',
+  'Go Home!'
+];
 function golfScore(par, strokes) {
   // Only change code below this line
 
-
-  return "Change Me";
+  return 'Change Me';
   // Only change code above this line
 }
 
@@ -107,29 +114,29 @@ golfScore(5, 4);
 ```js
 function golfScore(par, strokes) {
   if (strokes === 1) {
-    return "Hole-in-one!";
+    return 'Hole-in-one!';
   }
 
   if (strokes <= par - 2) {
-    return "Eagle";
+    return 'Eagle';
   }
 
   if (strokes === par - 1) {
-    return "Birdie";
+    return 'Birdie';
   }
 
   if (strokes === par) {
-    return "Par";
+    return 'Par';
   }
 
   if (strokes === par + 1) {
-    return "Bogey";
+    return 'Bogey';
   }
 
-  if(strokes === par + 2) {
-    return "Double Bogey";
+  if (strokes === par + 2) {
+    return 'Double Bogey';
   }
 
-  return "Go Home!";
+  return 'Go Home!';
 }
 ```

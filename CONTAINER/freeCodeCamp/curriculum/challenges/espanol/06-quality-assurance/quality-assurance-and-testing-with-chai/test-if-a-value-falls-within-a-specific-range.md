@@ -27,12 +27,12 @@ Choose the minimum range (3rd parameter) to make the test always pass. It should
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -41,9 +41,9 @@ All tests should pass.
 You should choose the correct range for the first assertion - `approximately(actual, expected, range)`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'approximately');
       assert.equal(
         data.assertions[0].args[2],
@@ -51,7 +51,7 @@ You should choose the correct range for the first assertion - `approximately(act
         "weirdNumbers(0.5) is in the range (0.5, 1.5]. It's within 1 +/- 0.5"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -60,9 +60,9 @@ You should choose the correct range for the first assertion - `approximately(act
 You should choose the correct range for the second assertion - `approximately(actual, expected, range)`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'approximately');
       assert.equal(
         data.assertions[1].args[2],
@@ -70,7 +70,7 @@ You should choose the correct range for the second assertion - `approximately(ac
         "weirdNumbers(0.2) is in the range (0.2, 1.2]. It's within 1 +/- 0.8"
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

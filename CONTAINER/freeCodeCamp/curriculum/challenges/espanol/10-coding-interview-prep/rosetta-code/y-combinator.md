@@ -12,7 +12,7 @@ In strict [functional programming](https://en.wikipedia.org/wiki/Functional prog
 
 # --instructions--
 
-Define the stateless Y combinator function and use it to compute [factorial](https://en.wikipedia.org/wiki/Factorial "wp: factorial"). The `factorial(N)` function is already given to you. **See also:**
+Define the stateless Y combinator function and use it to compute [factorial](https://en.wikipedia.org/wiki/Factorial 'wp: factorial'). The `factorial(N)` function is already given to you. **See also:**
 
 <ul>
   <li><a href="https://vimeo.com/45140590" target="_blank">Jim Weirich: Adventures in Functional Programming</a>.</li>
@@ -23,7 +23,7 @@ Define the stateless Y combinator function and use it to compute [factorial](htt
 Y should return a function.
 
 ```js
-assert.equal(typeof Y((f) => (n) => n), 'function');
+assert.equal(typeof Y(f => n => n), 'function');
 ```
 
 factorial(1) should return 1.
@@ -61,19 +61,17 @@ assert.equal(factorial(10), 3628800);
 ## --after-user-code--
 
 ```js
-var factorial = Y(f => n => (n > 1 ? n * f(n - 1) : 1));
+var factorial = Y(f => n => n > 1 ? n * f(n - 1) : 1);
 ```
 
 ## --seed-contents--
 
 ```js
 function Y(f) {
-  return function() {
-
-  };
+  return function () {};
 }
 
-var factorial = Y(function(f) {
+var factorial = Y(function (f) {
   return function (n) {
     return n > 1 ? n * f(n - 1) : 1;
   };

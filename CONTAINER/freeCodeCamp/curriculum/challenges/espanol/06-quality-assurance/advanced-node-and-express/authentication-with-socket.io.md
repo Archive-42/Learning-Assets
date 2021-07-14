@@ -33,7 +33,7 @@ io.use(
 );
 ```
 
-Be sure to add the `key` and `store` to the `session` middleware mounted on the app. This is necessary to tell *SocketIO* which session to relate to.
+Be sure to add the `key` and `store` to the `session` middleware mounted on the app. This is necessary to tell _SocketIO_ which session to relate to.
 
 <hr />
 
@@ -68,9 +68,9 @@ Submit your page when you think you've got it right. If you're running into erro
 `passport.socketio` should be a dependency.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -78,7 +78,7 @@ Submit your page when you think you've got it right. If you're running into erro
         'Your project should list "passport.socketio" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -87,9 +87,9 @@ Submit your page when you think you've got it right. If you're running into erro
 `cookie-parser` should be a dependency.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -97,7 +97,7 @@ Submit your page when you think you've got it right. If you're running into erro
         'Your project should list "cookie-parser" as a dependency'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -106,16 +106,16 @@ Submit your page when you think you've got it right. If you're running into erro
 passportSocketIo should be properly required.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /require\((['"])passport\.socketio\1\)/gi,
         'You should correctly require and instantiate "passport.socketio"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -124,16 +124,16 @@ passportSocketIo should be properly required.
 passportSocketIo should be properly setup.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /io\.use\(\s*\w+\.authorize\(/,
         'You should register "passport.socketio" as socket.io middleware and provide it correct options'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

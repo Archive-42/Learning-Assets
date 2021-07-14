@@ -16,7 +16,7 @@ For example, you can get the value of the third-to-last letter of the `var first
 Example:
 
 ```js
-var firstName = "Charles";
+var firstName = 'Charles';
 var thirdToLastLetter = firstName[firstName.length - 3];
 ```
 
@@ -47,14 +47,16 @@ assert(code.match(/\.length/g).length > 0);
 ## --after-user-code--
 
 ```js
-(function(v){return v;})(secondToLastLetterOfLastName);
+(function (v) {
+  return v;
+})(secondToLastLetterOfLastName);
 ```
 
 ## --seed-contents--
 
 ```js
 // Setup
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 
 // Only change code below this line
 var secondToLastLetterOfLastName = lastName; // Change this line
@@ -63,6 +65,6 @@ var secondToLastLetterOfLastName = lastName; // Change this line
 # --solutions--
 
 ```js
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 var secondToLastLetterOfLastName = lastName[lastName.length - 2];
 ```

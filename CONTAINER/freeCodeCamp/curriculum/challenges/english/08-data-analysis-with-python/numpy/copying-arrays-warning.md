@@ -41,4 +41,3 @@ b[2] = 20
 ## --video-solution--
 
 2
-

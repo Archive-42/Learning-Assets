@@ -60,7 +60,9 @@ assert(/var myVar = 87;/.test(code));
 ## --after-user-code--
 
 ```js
-(function(z){return 'myVar = ' + z;})(myVar);
+(function (z) {
+  return 'myVar = ' + z;
+})(myVar);
 ```
 
 ## --seed-contents--

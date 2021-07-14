@@ -72,18 +72,10 @@ assert.deepEqual(
 `mergeLists([[3, 14, 15], [2, 17, 18], [], [2, 3, 5, 7]])` should return `[2, 2, 3, 3, 5, 7, 14, 15, 17, 18]`.
 
 ```js
-assert.deepEqual(mergeLists([[3, 14, 15], [2, 17, 18], [], [2, 3, 5, 7]]), [
-  2,
-  2,
-  3,
-  3,
-  5,
-  7,
-  14,
-  15,
-  17,
-  18
-]);
+assert.deepEqual(
+  mergeLists([[3, 14, 15], [2, 17, 18], [], [2, 3, 5, 7]]),
+  [2, 2, 3, 3, 5, 7, 14, 15, 17, 18]
+);
 ```
 
 `mergeLists([[1, 19, 1999], [17, 33, 2999, 3000], [8, 500, 3999]])` should return `[1, 8, 17, 19, 33, 500, 1999, 2999, 3000, 3999]`.
@@ -104,9 +96,7 @@ assert.deepEqual(
 ## --seed-contents--
 
 ```js
-function mergeLists(lists) {
-
-}
+function mergeLists(lists) {}
 ```
 
 # --solutions--

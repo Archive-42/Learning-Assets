@@ -36,12 +36,12 @@ assert($('button').css('color') == 'rgb(0, 51, 102)');
 ```html
 <head>
   <style>
-  button {
-    color: #33FF33;
-    background-color: #FFFF33;
-    font-size: 14px;
-    padding: 10px;
-  }
+    button {
+      color: #33ff33;
+      background-color: #ffff33;
+      font-size: 14px;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
@@ -59,7 +59,7 @@ assert($('button').css('color') == 'rgb(0, 51, 102)');
   <style>
     button {
       color: #003366;
-      background-color: #FFFF33;
+      background-color: #ffff33;
       font-size: 14px;
       padding: 10px;
     }

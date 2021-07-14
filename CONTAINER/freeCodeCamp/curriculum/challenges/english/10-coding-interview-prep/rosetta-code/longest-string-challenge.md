@@ -77,25 +77,22 @@ assert.deepEqual(longestString(['a', 'bbdsf', 'ccc', 'edfe', 'gzzzgg']), [
 ## --seed-contents--
 
 ```js
-function longestString(strings) {
-
-}
+function longestString(strings) {}
 ```
 
 # --solutions--
 
 ```js
 function longestString(strings) {
-    var mx = 0;
-    var result = []
-    strings.forEach(function (e) {
-        if (e.length > mx) {
-            mx = e.length
-            result = [e]
-        } else if (e.length == mx)
-            result.push(e)
-    })
+  var mx = 0;
+  var result = [];
+  strings.forEach(function (e) {
+    if (e.length > mx) {
+      mx = e.length;
+      result = [e];
+    } else if (e.length == mx) result.push(e);
+  });
 
-    return result
+  return result;
 }
 ```

@@ -4,8 +4,7 @@
 
 ```html
 <html>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

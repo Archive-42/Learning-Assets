@@ -118,8 +118,18 @@ assert.equal(ffs(ffsParamRes[3][0]), ffsParamRes[3][1]);
 ## --after-user-code--
 
 ```js
-const ffrParamRes = [[10, 69], [50, 1509], [100, 5764], [1000, 526334]];
-const ffsParamRes = [[10, 14], [50, 59], [100, 112], [1000, 1041]];
+const ffrParamRes = [
+  [10, 69],
+  [50, 1509],
+  [100, 5764],
+  [1000, 526334]
+];
+const ffsParamRes = [
+  [10, 14],
+  [50, 59],
+  [100, 112],
+  [1000, 1041]
+];
 ```
 
 ## --seed-contents--
@@ -140,7 +150,7 @@ function ffs(n) {
 const R = [null, 1];
 const S = [null, 2];
 
-function extendSequences (n) {
+function extendSequences(n) {
   let current = Math.max(R[R.length - 1], S[S.length - 1]);
   let i;
   while (R.length <= n || S.length <= n) {
@@ -154,12 +164,12 @@ function extendSequences (n) {
   }
 }
 
-function ffr (n) {
+function ffr(n) {
   extendSequences(n);
   return R[n];
 }
 
-function ffs (n) {
+function ffs(n) {
   extendSequences(n);
   return S[n];
 }

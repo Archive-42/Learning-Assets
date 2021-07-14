@@ -213,40 +213,37 @@ assert(
 ## --after-user-code--
 
 ```js
-BinarySearchTree.prototype = Object.assign(
-  BinarySearchTree.prototype,
-  {
-    add: function(value) {
-      function searchTree(node) {
-        if (value < node.value) {
-          if (node.left == null) {
-            node.left = new Node(value);
-            return;
-          } else if (node.left != null) {
-            return searchTree(node.left);
-          }
-        } else if (value > node.value) {
-          if (node.right == null) {
-            node.right = new Node(value);
-            return;
-          } else if (node.right != null) {
-            return searchTree(node.right);
-          }
-        } else {
-          return null;
+BinarySearchTree.prototype = Object.assign(BinarySearchTree.prototype, {
+  add: function (value) {
+    function searchTree(node) {
+      if (value < node.value) {
+        if (node.left == null) {
+          node.left = new Node(value);
+          return;
+        } else if (node.left != null) {
+          return searchTree(node.left);
         }
-      }
-
-      var node = this.root;
-      if (node == null) {
-        this.root = new Node(value);
-        return;
+      } else if (value > node.value) {
+        if (node.right == null) {
+          node.right = new Node(value);
+          return;
+        } else if (node.right != null) {
+          return searchTree(node.right);
+        }
       } else {
-        return searchTree(node);
+        return null;
       }
     }
+
+    var node = this.root;
+    if (node == null) {
+      this.root = new Node(value);
+      return;
+    } else {
+      return searchTree(node);
+    }
   }
-);
+});
 ```
 
 ## --seed-contents--
@@ -280,7 +277,7 @@ function BinarySearchTree() {
   // Only change code below this line
 
   // Only change code above this line
-  this.findMinHeight = function(root = this.root) {
+  this.findMinHeight = function (root = this.root) {
     // empty tree.
     if (root === null) {
       return -1;
@@ -299,7 +296,7 @@ function BinarySearchTree() {
     const rHeight = this.findMinHeight(root.right);
     return Math.min(lHeight, rHeight) + 1;
   };
-  this.findMaxHeight = function(root = this.root) {
+  this.findMaxHeight = function (root = this.root) {
     // empty tree.
     if (root === null) {
       return -1;
@@ -318,7 +315,7 @@ function BinarySearchTree() {
     const rHeight = this.findMaxHeight(root.right);
     return Math.max(lHeight, rHeight) + 1;
   };
-  this.isBalanced = function(root = this.root) {
+  this.isBalanced = function (root = this.root) {
     if (root === null) {
       return true;
     }

@@ -45,4 +45,3 @@ SELECT * FROM Users WHERE email="quincy@freecodecamp.org"
 ## --video-solution--
 
 5
-

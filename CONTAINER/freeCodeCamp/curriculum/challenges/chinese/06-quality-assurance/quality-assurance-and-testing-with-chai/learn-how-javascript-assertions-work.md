@@ -25,12 +25,12 @@ dashedName: learn-how-javascript-assertions-work
 所有测试都应该通过。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -39,12 +39,12 @@ dashedName: learn-how-javascript-assertions-work
 请为第一个断言选择正确的方法— `isNull` 或 `isNotNull`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[0].method, 'isNull', 'Null is null');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,12 +53,12 @@ dashedName: learn-how-javascript-assertions-work
 请为第二个断言选择正确的方法— `isNull` 或 `isNotNull`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(
-    (data) => {
+    data => {
       assert.equal(data.assertions[1].method, 'isNotNull', '1 is not null');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

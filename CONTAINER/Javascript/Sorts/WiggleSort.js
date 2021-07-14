@@ -10,7 +10,7 @@ Array.prototype.wiggleSort = function () {
     const shouldNotBeLessThan = i % 2
     const isLessThan = this[i] < this[i + 1]
     if (shouldNotBeLessThan && isLessThan) {
-      [this[i], this[i + 1]] = [this[i + 1], this[i]]
+      ;[this[i], this[i + 1]] = [this[i + 1], this[i]]
     }
   }
   return this

@@ -1,2 +1,1 @@
-var makeBinarySearchTree = function(){
-};
+var makeBinarySearchTree = function () {};

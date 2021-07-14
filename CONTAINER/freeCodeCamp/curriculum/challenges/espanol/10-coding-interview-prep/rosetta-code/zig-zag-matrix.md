@@ -68,7 +68,10 @@ assert.deepEqual(ZigZagMatrix(5), zm5);
 
 ```js
 const zm1 = [[0]];
-const zm2 = [[0, 1], [2, 3]];
+const zm2 = [
+  [0, 1],
+  [2, 3]
+];
 const zm5 = [
   [0, 1, 5, 6, 14],
   [2, 4, 7, 13, 15],
@@ -82,7 +85,6 @@ const zm5 = [
 
 ```js
 function ZigZagMatrix(n) {
-
   return [[], []];
 }
 ```

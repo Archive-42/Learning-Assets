@@ -52,7 +52,7 @@ Input 元素中的键入值应该更新 input 的 state 和值，并且 `p` 元�
 
 ```js
 async () => {
-  const waitForIt = (fn) =>
+  const waitForIt = fn =>
     new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
   const mockedComponent = Enzyme.mount(React.createElement(ControlledInput));
   const _1 = () => {
@@ -85,7 +85,7 @@ async () => {
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<ControlledInput />, document.getElementById('root'))
+ReactDOM.render(<ControlledInput />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -107,15 +107,15 @@ class ControlledInput extends React.Component {
   render() {
     return (
       <div>
-        { /* Change code below this line */}
+        {/* Change code below this line */}
 
-        { /* Change code above this line */}
+        {/* Change code above this line */}
         <h4>Controlled Input:</h4>
         <p>{this.state.input}</p>
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
@@ -137,14 +137,12 @@ class ControlledInput extends React.Component {
   render() {
     return (
       <div>
-        <input
-          value={this.state.input}
-          onChange={this.handleChange} />
+        <input value={this.state.input} onChange={this.handleChange} />
         <h4>Controlled Input:</h4>
 
         <p>{this.state.input}</p>
       </div>
     );
   }
-};
+}
 ```

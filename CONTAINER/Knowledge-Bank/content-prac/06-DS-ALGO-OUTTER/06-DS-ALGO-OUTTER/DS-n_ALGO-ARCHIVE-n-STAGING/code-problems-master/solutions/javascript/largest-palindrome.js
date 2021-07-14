@@ -3,7 +3,7 @@ module.exports = function (str) {
 
   var walkPalindrome = function (result, str, leftIndex, rightIndex) {
     while (str[leftIndex - 1] === str[rightIndex + 1]) {
-      result = str[leftIndex -= 1] + result + str[rightIndex += 1];
+      result = str[(leftIndex -= 1)] + result + str[(rightIndex += 1)];
     }
     palindromes.push(result);
   };
@@ -20,5 +20,5 @@ module.exports = function (str) {
 
   return palindromes.reduce(function (memo, str) {
     return str.length > memo.length ? str : memo;
-  }, '');
+  }, "");
 };

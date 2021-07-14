@@ -51,4 +51,3 @@ C: `checkpoint_callback`
 ## --video-solution--
 
 2
-

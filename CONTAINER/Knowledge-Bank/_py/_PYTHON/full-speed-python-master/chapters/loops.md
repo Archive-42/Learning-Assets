@@ -99,16 +99,16 @@ For this section you may want to consult the Python docs at <https://docs.python
 
 4.  Implement a function that returns the reverse of a list received as parameter. You may create an empty list and keep adding the values in reversed order as they come from the original list. Check what you can do with lists at <https://docs.python.org/3/tutorial/datastructures.html#more-on-lists>.
 
-5.  Make the function "is\_sorted" that receives a list as parameter and returns True if the list is sorted in ascending order. For instance \[1, 2, 2, 3\] is ordered while \[1, 2, 3, 2\] is not. Suggestion: you have to compare a number in the list with the next one, so you can use indexes or you need to keep the previous number in a variable as you iterate over the list.
+5.  Make the function "is_sorted" that receives a list as parameter and returns True if the list is sorted in ascending order. For instance \[1, 2, 2, 3\] is ordered while \[1, 2, 3, 2\] is not. Suggestion: you have to compare a number in the list with the next one, so you can use indexes or you need to keep the previous number in a variable as you iterate over the list.
 
-6.  Implement the function "is\_sorted\_dec" which is similar to the previous one but all items must be sorted by decreasing order.
+6.  Implement the function "is_sorted_dec" which is similar to the previous one but all items must be sorted by decreasing order.
 
-7.  Implement the "has\_duplicates" function which verifies if a list has duplicate values. You may have to use two "for" loops, where for each value you have to check for duplicates on the rest of the list.
+7.  Implement the "has_duplicates" function which verifies if a list has duplicate values. You may have to use two "for" loops, where for each value you have to check for duplicates on the rest of the list.
 
 ## Exercises with the while statement
 
 1.  Implement a function that receives a number as parameter and prints, in decreasing order, which numbers are even and which are odd, until it reaches 0.
-    
+
         >>> even_odd(10)
         Even number: 10
         Odd number: 9

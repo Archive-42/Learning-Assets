@@ -13,9 +13,9 @@ The last challenge used the plus `+` sign to look for characters that occur one 
 The character to do this is the asterisk or star: `*`.
 
 ```js
-let soccerWord = "gooooooooal!";
-let gPhrase = "gut feeling";
-let oPhrase = "over the moon";
+let soccerWord = 'gooooooooal!';
+let gPhrase = 'gut feeling';
+let oPhrase = 'over the moon';
 let goRegex = /go*/;
 soccerWord.match(goRegex);
 gPhrase.match(goRegex);
@@ -75,7 +75,7 @@ assert(
 ## --before-user-code--
 
 ```js
-const chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+const chewieQuote = 'Aaaaaaaaaaaaaaaarrrgh!';
 ```
 
 ## --seed-contents--
@@ -91,6 +91,6 @@ let result = chewieQuote.match(chewieRegex);
 # --solutions--
 
 ```js
-  let chewieRegex = /Aa*/;
-  let result = chewieQuote.match(chewieRegex);
+let chewieRegex = /Aa*/;
+let result = chewieQuote.match(chewieRegex);
 ```

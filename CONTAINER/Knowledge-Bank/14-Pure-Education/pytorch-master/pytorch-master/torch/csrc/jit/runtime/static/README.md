@@ -22,21 +22,26 @@ After `torch.jit.freeze` and inlining/constant propagation is run on the model:
 - Inlined weights (i.e. no calls to `GetAttr`)
 
 ## Threading model
+
 Static runtime supports two execution modes.
 
 Mode 1: single-threaded with no parallelism except for intra-op parallelism.
 For this mode, you can do either:
+
 ```
   // m is the TorchScript module
   auto runtime = StaticRuntime(m, opts);
   auto output = runtime.run(args, kwargs);
 ```
+
 or
+
 ```
   auto mod = PrepareForStaticRuntime(m);
   auto runtime = StaticRuntime(mod, opts);
   auto output = runtime.run(args, kwargs);
 ```
+
 Mode 2: similar to data parallelism, run the same model for different inputs
 on different threads at the same time. In this case, run
 `PrepareForStaticRuntime` to prepare the graph for Static Runtime. You
@@ -44,6 +49,7 @@ should have one InferenceModule instance per model, and one Static Runtime insta
 per running thread. To avoiding creating StaticRuntime on the fly, use a
 synchronized stack (i.e. `boost::lockfree::stack`) to cache all the Static
 Runtime instances in your code.
+
 ```
   // initialization
   auto mod = PrepareForStaticRuntime(m);

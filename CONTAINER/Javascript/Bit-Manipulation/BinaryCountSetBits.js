@@ -7,7 +7,7 @@
 
 */
 
-function BinaryCountSetBits (a) {
+function BinaryCountSetBits(a) {
   'use strict'
   // convert number into binary representation and return number of set bits in binary representaion
   return a.toString(2).split('1').length - 1

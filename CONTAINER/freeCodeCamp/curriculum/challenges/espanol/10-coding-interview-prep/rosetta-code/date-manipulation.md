@@ -68,7 +68,6 @@ assert(
 
 ```js
 function add12Hours(dateString) {
-
   return true;
 }
 ```
@@ -77,8 +76,20 @@ function add12Hours(dateString) {
 
 ```js
 function add12Hours(dateString) {
-  const months = ['January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'];
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
   // Get the parts of the string
   const parts = dateString.split(' ');
   const month = months.indexOf(parts[0]);
@@ -94,7 +105,7 @@ function add12Hours(dateString) {
   // Create a date with given parts, and updated hours
   const date = new Date();
   date.setFullYear(year, month, day);
-  date.setHours(hours + 12);  // Add 12 hours
+  date.setHours(hours + 12); // Add 12 hours
   date.setMinutes(minutes);
 
   let hoursOutput = date.getHours();
@@ -104,6 +115,8 @@ function add12Hours(dateString) {
     abbreviation = 'pm';
   }
 
-  return `${months[date.getMonth()]} ${date.getDate()} ${date.getFullYear()} ${hoursOutput}:${date.getMinutes()}${abbreviation} EST`;
+  return `${
+    months[date.getMonth()]
+  } ${date.getDate()} ${date.getFullYear()} ${hoursOutput}:${date.getMinutes()}${abbreviation} EST`;
 }
 ```

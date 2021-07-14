@@ -12,7 +12,7 @@ dashedName: learn-about-self-closing-jsx-tags
 
 JSX 不同于 HTML 的另一个重要方面是自闭合标签。
 
-在HTML中，几乎所有的标签都有一个开始和结束标签：`<div></div>`，结束标签在你要关闭的标签名之前始终具有正斜杠。 但是，HTML 中有一些称为 “自闭合标签” 的特殊实例，它们在另一个标签开始之前，不需要开始和结束标签都存在。
+在 HTML 中，几乎所有的标签都有一个开始和结束标签：`<div></div>`，结束标签在你要关闭的标签名之前始终具有正斜杠。 但是，HTML 中有一些称为 “自闭合标签” 的特殊实例，它们在另一个标签开始之前，不需要开始和结束标签都存在。
 
 例如，换行标签可以写成 `<br>` 或者 `<br />`，但是不应该写成 `<br></br>`，因为它不包含任何内容。
 
@@ -47,7 +47,7 @@ assert(Enzyme.shallow(JSX).find('hr').length === 1);
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(JSX, document.getElementById('root'))
+ReactDOM.render(JSX, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -66,10 +66,10 @@ const JSX = (
 
 ```jsx
 const JSX = (
-<div>
-  <h2>Welcome to React!</h2> <br />
-  <p>Be sure to close all tags!</p>
-  <hr />
-</div>
+  <div>
+    <h2>Welcome to React!</h2> <br />
+    <p>Be sure to close all tags!</p>
+    <hr />
+  </div>
 );
 ```

@@ -21,7 +21,7 @@ Render this component to the DOM using `ReactDOM.render()`. There is a `div` wit
 There should be a React component called `MyComponent`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     __helpers
       .removeWhiteSpace(getUserInput('index'))
@@ -78,7 +78,7 @@ class MyComponent extends React.Component {
       </div>
     );
   }
-};
+}
 
 ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));
 ```

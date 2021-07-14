@@ -10,7 +10,7 @@ dashedName: get-json-with-the-javascript-xmlhttprequest-method
 
 你还可以从外部来源请求数据。 这就是 API 发挥作用的地方。
 
-请记住，API（或叫应用程序编程接口）是计算机用来互相通信的工具。 你将学习如何通过 AJAX技术 从 API 获得的数据来更新 HTML。
+请记住，API（或叫应用程序编程接口）是计算机用来互相通信的工具。 你将学习如何通过 AJAX 技术 从 API 获得的数据来更新 HTML。
 
 大部分 web APIs 以 JSON 格式传输数据。 JSON 是 JavaScript Object Notation 的简写。
 
@@ -24,15 +24,16 @@ JSON 语法与 JavaScript 对象字面符号非常相似。 JSON 具有对象属
 
 ```js
 const req = new XMLHttpRequest();
-req.open("GET",'/json/cats.json',true);
+req.open('GET', '/json/cats.json', true);
 req.send();
-req.onload = function(){
+req.onload = function () {
   const json = JSON.parse(req.responseText);
-  document.getElementsByClassName('message')[0].innerHTML = JSON.stringify(json);
+  document.getElementsByClassName('message')[0].innerHTML =
+    JSON.stringify(json);
 };
 ```
 
-这里介绍每行代码的作用。 JavaScript `XMLHttpRequest` 对象具有许多用于传输数据的属性和方法。 首先，创建一个`XMLHttpRequest`对象实例，并保存在`req`变量里 。 然后，`open` 方法初始化一个请求——这个例子是从 API 请求数据，因此它是一个 `GET` 请求。 第二个参数 `open` 是你要从中请求数据的 API 的 URL。 第三个参数是一个布尔值， `true` 使其成为异步请求。 `send` 方法发送请求。 最后，`onload` 事件处理程序解析返回的数据并应用该 `JSON.stringify` 方法将JavaScript对象转换为字符串， 然后将此字符串作为消息文本插入。
+这里介绍每行代码的作用。 JavaScript `XMLHttpRequest` 对象具有许多用于传输数据的属性和方法。 首先，创建一个`XMLHttpRequest`对象实例，并保存在`req`变量里 。 然后，`open` 方法初始化一个请求——这个例子是从 API 请求数据，因此它是一个 `GET` 请求。 第二个参数 `open` 是你要从中请求数据的 API 的 URL。 第三个参数是一个布尔值， `true` 使其成为异步请求。 `send` 方法发送请求。 最后，`onload` 事件处理程序解析返回的数据并应用该 `JSON.stringify` 方法将 JavaScript 对象转换为字符串， 然后将此字符串作为消息文本插入。
 
 # --instructions--
 
@@ -92,11 +93,9 @@ assert(
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    document.getElementById('getMessage').onclick = function(){
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('getMessage').onclick = function () {
       // Add your code below this line
-
-
       // Add your code above this line
     };
   });
@@ -105,7 +104,7 @@ assert(
 <style>
   body {
     text-align: center;
-    font-family: "Helvetica", sans-serif;
+    font-family: 'Helvetica', sans-serif;
   }
   h1 {
     font-size: 2em;
@@ -124,19 +123,15 @@ assert(
     padding: 5px 10px 8px 10px;
   }
   button:hover {
-    background-color: #0F5897;
-    border: 1px solid #0F5897;
+    background-color: #0f5897;
+    border: 1px solid #0f5897;
   }
 </style>
 
 <h1>Cat Photo Finder</h1>
-<p class="message box">
-  The message will go here
-</p>
+<p class="message box">The message will go here</p>
 <p>
-  <button id="getMessage">
-    Get Message
-  </button>
+  <button id="getMessage">Get Message</button>
 </p>
 ```
 
@@ -144,14 +139,15 @@ assert(
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded',function(){
-    document.getElementById('getMessage').onclick = function(){
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('getMessage').onclick = function () {
       const req = new XMLHttpRequest();
       req.open('GET', '/json/cats.json', true);
       req.send();
       req.onload = () => {
         const json = JSON.parse(req.responseText);
-        document.getElementsByClassName('message')[0].innerHTML = JSON.stringify(json);
+        document.getElementsByClassName('message')[0].innerHTML =
+          JSON.stringify(json);
       };
     };
   });
@@ -160,7 +156,7 @@ assert(
 <style>
   body {
     text-align: center;
-    font-family: "Helvetica", sans-serif;
+    font-family: 'Helvetica', sans-serif;
   }
   h1 {
     font-size: 2em;
@@ -179,18 +175,14 @@ assert(
     padding: 5px 10px 8px 10px;
   }
   button:hover {
-    background-color: #0F5897;
-    border: 1px solid #0F5897;
+    background-color: #0f5897;
+    border: 1px solid #0f5897;
   }
 </style>
 
 <h1>Cat Photo Finder</h1>
-<p class="message box">
-  The message will go here
-</p>
+<p class="message box">The message will go here</p>
 <p>
-  <button id="getMessage">
-    Get Message
-  </button>
+  <button id="getMessage">Get Message</button>
 </p>
 ```

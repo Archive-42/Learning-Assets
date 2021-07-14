@@ -53,4 +53,3 @@ print(output)
 ## --video-solution--
 
 3
-

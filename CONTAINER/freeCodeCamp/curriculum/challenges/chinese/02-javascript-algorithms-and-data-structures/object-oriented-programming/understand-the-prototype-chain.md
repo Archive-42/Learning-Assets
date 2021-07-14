@@ -27,8 +27,8 @@ Object.prototype.isPrototypeOf(Bird.prototype);
 这有什么作用呢？ 你可能还记得我们在上一个挑战中学到的 `hasOwnProperty` 方法：
 
 ```js
-let duck = new Bird("Donald");
-duck.hasOwnProperty("name");
+let duck = new Bird('Donald');
+duck.hasOwnProperty('name');
 ```
 
 `hasOwnProperty` 是定义在 `Object.prototype` 上的一个方法，尽管在 `Bird.prototype` 和 `duck`上并没有定义该方法，但是我们依然可以在这两个对象上访问到。 这就是 `prototype` 链的一个例子。 在这个`prototype` 链中，`Bird` 是 `duck` 的 `supertype`，而 `duck` 是 `subtype`。 `Object` 则是 `Bird` 和 `duck` 实例共同的 `supertype`。 `Object` 是 JavaScript 中所有对象的 `supertype`，也就是原型链的最顶层。 因此，所有对象都可以访问 `hasOwnProperty` 方法。
@@ -68,7 +68,7 @@ Dog.prototype.isPrototypeOf(beagle);  // yields true
 function Dog(name) {
   this.name = name;
 }
-let beagle = new Dog("Snoopy");
+let beagle = new Dog('Snoopy');
 Dog.prototype.isPrototypeOf(beagle);
 Object.prototype.isPrototypeOf(Dog.prototype);
 ```

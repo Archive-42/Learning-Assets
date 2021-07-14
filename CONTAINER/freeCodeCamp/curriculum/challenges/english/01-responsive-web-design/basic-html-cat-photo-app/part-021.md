@@ -67,22 +67,28 @@ assert(!/\<img\s+.+\s+src\s*=\s*https:\/\/bit\.ly\/fcc-lasagna/.test(code));
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
       <section>
         <h2>Cat Lists</h2>
         <h3>Things cats love:</h3>
---fcc-editable-region--
+        --fcc-editable-region--
         <ul>
           <li>cat nip</li>
           <li>laser pointers</li>
           <li>lasagna</li>
         </ul>
---fcc-editable-region--
+        --fcc-editable-region--
       </section>
     </main>
   </body>
 </html>
 ```
-

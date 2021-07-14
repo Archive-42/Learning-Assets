@@ -20,11 +20,11 @@ dashedName: use-conditional-logic-with-if-statements
 **示例**
 
 ```js
-function test (myCondition) {
+function test(myCondition) {
   if (myCondition) {
-     return "It was true";
+    return 'It was true';
   }
-  return "It was false";
+  return 'It was false';
 }
 test(true);
 test(false);
@@ -32,7 +32,7 @@ test(false);
 
 `test(true)` 返回字符串 `It was true`，`test(false)` 返回字符串 `It was false`。
 
-当 `test` 被调用，并且传递进来的参数值为 `true` 时，`if` 语句会计算 `myCondition` 的结果，看它是否为 `true`。 如果条件为 `true`，函数会返回 `It was true`。 当 `test` 被调用，并且传递进来的参数值为 `false` 时，`myCondition` *不* 为 `true`，并且不执行大括号后面的语句，函数返回 `It was false`。
+当 `test` 被调用，并且传递进来的参数值为 `true` 时，`if` 语句会计算 `myCondition` 的结果，看它是否为 `true`。 如果条件为 `true`，函数会返回 `It was true`。 当 `test` 被调用，并且传递进来的参数值为 `false` 时，`myCondition` _不_ 为 `true`，并且不执行大括号后面的语句，函数返回 `It was false`。
 
 # --instructions--
 
@@ -77,11 +77,7 @@ assert(trueOrFalse(false) === 'No, that was false');
 ```js
 function trueOrFalse(wasThatTrue) {
   // Only change code below this line
-
-
-
   // Only change code above this line
-
 }
 ```
 
@@ -90,8 +86,8 @@ function trueOrFalse(wasThatTrue) {
 ```js
 function trueOrFalse(wasThatTrue) {
   if (wasThatTrue) {
-    return "Yes, that was true";
+    return 'Yes, that was true';
   }
-  return "No, that was false";
+  return 'No, that was false';
 }
 ```

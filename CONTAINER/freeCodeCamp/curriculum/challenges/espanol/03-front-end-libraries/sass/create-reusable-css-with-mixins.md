@@ -24,7 +24,7 @@ div {
 It's a lot of typing to re-write this rule for all the elements that have a `box-shadow`, or to change each value to test different effects. Mixins are like functions for CSS. Here is how to write one:
 
 ```scss
-@mixin box-shadow($x, $y, $blur, $c){ 
+@mixin box-shadow($x, $y, $blur, $c) {
   -webkit-box-shadow: $x $y $blur $c;
   -moz-box-shadow: $x $y $blur $c;
   -ms-box-shadow: $x $y $blur $c;
@@ -94,15 +94,11 @@ assert(code.match(/@include\s+?border-radius\(\s*?15px\s*?\)\s*;/gi));
 ## --seed-contents--
 
 ```html
-<style type='text/scss'>
-
-
-
+<style type="text/scss">
   #awesome {
     width: 150px;
     height: 150px;
     background-color: green;
-
   }
 </style>
 
@@ -112,7 +108,7 @@ assert(code.match(/@include\s+?border-radius\(\s*?15px\s*?\)\s*;/gi));
 # --solutions--
 
 ```html
-<style type='text/scss'>
+<style type="text/scss">
   @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;

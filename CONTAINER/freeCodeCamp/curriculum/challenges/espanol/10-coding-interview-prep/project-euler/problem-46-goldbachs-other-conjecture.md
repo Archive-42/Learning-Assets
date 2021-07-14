@@ -1,6 +1,6 @@
 ---
 id: 5900f39a1000cf542c50fead
-title: 'Problem 46: Goldbach''s other conjecture'
+title: "Problem 46: Goldbach's other conjecture"
 challengeType: 5
 forumTopicId: 302134
 dashedName: problem-46-goldbachs-other-conjecture
@@ -43,7 +43,6 @@ assert.strictEqual(goldbachsOtherConjecture(), 5777);
 
 ```js
 function goldbachsOtherConjecture() {
-
   return true;
 }
 
@@ -53,7 +52,8 @@ goldbachsOtherConjecture();
 # --solutions--
 
 ```js
-function goldbachsOtherConjecture() {  function isPrime(num) {
+function goldbachsOtherConjecture() {
+  function isPrime(num) {
     if (num < 2) {
       return false;
     } else if (num === 2) {

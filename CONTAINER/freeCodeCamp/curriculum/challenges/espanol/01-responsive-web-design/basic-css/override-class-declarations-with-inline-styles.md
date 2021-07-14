@@ -18,7 +18,7 @@ Pero existen otras formas de sobreescribir código CSS. ¿Recuerdas los "inline 
 Usa un inline style para hacer que nuestro elemento `h1` sea de color blanco. Recuerda, los estilos en línea se ven así:
 
 ```html
-<h1 style="color: green;">
+<h1 style="color: green;"></h1>
 ```
 
 Deja las clases `blue-text` y `pink-text` en tu elemento `h1`.
@@ -98,5 +98,7 @@ assert($('h1').css('color') === 'rgb(255, 255, 255)');
     color: blue;
   }
 </style>
-<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">
+  Hello World!
+</h1>
 ```

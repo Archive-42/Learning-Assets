@@ -8,7 +8,7 @@ dashedName: left-factorials
 
 # --description--
 
-**Left factorials**, $ !n $, may refer to either *subfactorials* or to *factorial sums*. The same notation can be confusingly seen used for the two different definitions. Sometimes, *subfactorials* (also known as *derangements*) may use any of the notations:
+**Left factorials**, $ !n $, may refer to either _subfactorials_ or to _factorial sums_. The same notation can be confusingly seen used for the two different definitions. Sometimes, _subfactorials_ (also known as _derangements_) may use any of the notations:
 
 <ul>
   <li>$!n`$</li>
@@ -87,9 +87,7 @@ assert.equal(leftFactorial(19), 6780385526348314);
 ## --seed-contents--
 
 ```js
-function leftFactorial(n) {
-
-}
+function leftFactorial(n) {}
 ```
 
 # --solutions--

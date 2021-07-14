@@ -57,7 +57,7 @@ assert(
 
 ```html
 <style>
-  .balls{
+  .balls {
     border-radius: 50%;
     position: fixed;
     width: 50px;
@@ -86,15 +86,15 @@ assert(
     }
   }
 </style>
-<div class="balls" id= "red"></div>
-<div class="balls" id= "blue"></div>
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
 ```
 
 # --solutions--
 
 ```html
 <style>
-  .balls{
+  .balls {
     border-radius: 50%;
     position: fixed;
     width: 50px;
@@ -123,6 +123,6 @@ assert(
     }
   }
 </style>
-<div class="balls" id= "red"></div>
-<div class="balls" id= "blue"></div>
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
 ```

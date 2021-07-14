@@ -20,9 +20,9 @@ The Levenshtein distance between "**kitten**" and "**sitting**" is 3, since the 
   <li>sittin   sittin<strong>g</strong>    (insert 'g' at the end).</li>
 </ul>
 
-*The Levenshtein distance between "**rosettacode**", "**raisethysword**" is **8**.*
+_The Levenshtein distance between "**rosettacode**", "**raisethysword**" is **8**._
 
-*The distance between two strings is same as that when both strings are reversed.*
+_The distance between two strings is same as that when both strings are reversed._
 
 # --instructions--
 
@@ -83,23 +83,37 @@ assert.equal(levenshtein('mississippi', 'swiss miss'), 8);
 ## --seed-contents--
 
 ```js
-function levenshtein(a, b) {
-
-}
+function levenshtein(a, b) {}
 ```
 
 # --solutions--
 
 ```js
 function levenshtein(a, b) {
-  var t = [], u, i, j, m = a.length, n = b.length;
-  if (!m) { return n; }
-  if (!n) { return m; }
-  for (j = 0; j <= n; j++) { t[j] = j; }
+  var t = [],
+    u,
+    i,
+    j,
+    m = a.length,
+    n = b.length;
+  if (!m) {
+    return n;
+  }
+  if (!n) {
+    return m;
+  }
+  for (j = 0; j <= n; j++) {
+    t[j] = j;
+  }
   for (i = 1; i <= m; i++) {
     for (u = [i], j = 1; j <= n; j++) {
-      u[j] = a[i - 1] === b[j - 1] ? t[j - 1] : Math.min(t[j - 1], t[j], u[j - 1]) + 1;
-    } t = u;
-  } return u[n];
+      u[j] =
+        a[i - 1] === b[j - 1]
+          ? t[j - 1]
+          : Math.min(t[j - 1], t[j], u[j - 1]) + 1;
+    }
+    t = u;
+  }
+  return u[n];
 }
 ```

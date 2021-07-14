@@ -46,7 +46,6 @@ assert.strictEqual(coinPartitions(), 55374);
 
 ```js
 function coinPartitions() {
-
   return true;
 }
 

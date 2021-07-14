@@ -87,7 +87,7 @@ Take the following Python dictionary:
 
 3.  Implement a function that receives the "ages" dictionary as parameter and returns the name of the oldest student.
 
-4.  Implement a function that receives the "ages" dictionary and a number "n" and returns a new dict where each student is \(n\) years older. For instance, *new_ages(ages, 10)* returns a copy of "ages" where each student is 10 years older.
+4.  Implement a function that receives the "ages" dictionary and a number "n" and returns a new dict where each student is \(n\) years older. For instance, _new_ages(ages, 10)_ returns a copy of "ages" where each student is 10 years older.
 
 ## Exercises with sub-dictionaries
 

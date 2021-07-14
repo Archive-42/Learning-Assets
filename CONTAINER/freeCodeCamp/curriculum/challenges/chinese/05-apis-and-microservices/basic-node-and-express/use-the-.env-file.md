@@ -23,15 +23,15 @@ dashedName: use-the--env-file
 端口 `/json` 响应的值，应该随着环境变量 `MESSAGE_STYLE` 的变化而改变
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/use-env-vars').then(
-    (data) => {
+    data => {
       assert.isTrue(
         data.passed,
         'The response of "/json" does not change according to MESSAGE_STYLE'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

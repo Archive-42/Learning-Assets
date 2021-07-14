@@ -15,9 +15,11 @@ Aquí hay un ejemplo del uso de una variable para acceder a una propiedad:
 
 ```js
 var dogs = {
-  Fido: "Mutt",  Hunter: "Doberman",  Snoopie: "Beagle"
+  Fido: 'Mutt',
+  Hunter: 'Doberman',
+  Snoopie: 'Beagle'
 };
-var myDog = "Hunter";
+var myDog = 'Hunter';
 var myBreed = dogs[myDog];
 console.log(myBreed);
 ```
@@ -28,19 +30,19 @@ Otra forma de usar este concepto es cuando el nombre de la propiedad se recoge d
 
 ```js
 var someObj = {
-  propName: "John"
+  propName: 'John'
 };
 function propPrefix(str) {
-  var s = "prop";
+  var s = 'prop';
   return s + str;
 }
-var someProp = propPrefix("Name");
+var someProp = propPrefix('Name');
 console.log(someObj[someProp]);
 ```
 
 `someProp` tendrá una cadena con un valor `propName` y la cadena `John` se mostrará en la consola.
 
-Ten en cuenta que *no* usamos comillas alrededor del nombre de la variable cuando la usamos para acceder a la propiedad porque utilizamos el *valor* de la variable, no el *nombre*.
+Ten en cuenta que _no_ usamos comillas alrededor del nombre de la variable cuando la usamos para acceder a la propiedad porque utilizamos el _valor_ de la variable, no el _nombre_.
 
 # --instructions--
 
@@ -89,7 +91,11 @@ assert(/testObj\s*?\[\s*playerNumber\s*\]/.test(code));
 ## --after-user-code--
 
 ```js
-if(typeof player !== "undefined"){(function(v){return v;})(player);}
+if (typeof player !== 'undefined') {
+  (function (v) {
+    return v;
+  })(player);
+}
 ```
 
 ## --seed-contents--
@@ -97,24 +103,24 @@ if(typeof player !== "undefined"){(function(v){return v;})(player);}
 ```js
 // Setup
 var testObj = {
-  12: "Namath",
-  16: "Montana",
-  19: "Unitas"
+  12: 'Namath',
+  16: 'Montana',
+  19: 'Unitas'
 };
 
 // Only change code below this line
 
-var playerNumber;       // Change this line
-var player = testObj;   // Change this line
+var playerNumber; // Change this line
+var player = testObj; // Change this line
 ```
 
 # --solutions--
 
 ```js
 var testObj = {
-  12: "Namath",
-  16: "Montana",
-  19: "Unitas"
+  12: 'Namath',
+  16: 'Montana',
+  19: 'Unitas'
 };
 var playerNumber = 16;
 var player = testObj[playerNumber];

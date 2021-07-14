@@ -12,7 +12,7 @@ Ahora que has superado algunos desafíos usando funciones de orden superior como
 
 # --instructions--
 
-Hemos definido una función llamada `squareList`. Necesitas completar el código para la función `squareList` usando cualquier combinación de `map()`, `filter()`, y `reduce()` para que devuelva un nuevo arreglo que contenga *sólo* el cuadrado de los enteros positivos (los números decimales no son enteros) cuando se le pase un arreglo de números reales. Un ejemplo de un arreglo que contiene sólo números reales es `[-3, 4.8, 5, 3, -3.2]`.
+Hemos definido una función llamada `squareList`. Necesitas completar el código para la función `squareList` usando cualquier combinación de `map()`, `filter()`, y `reduce()` para que devuelva un nuevo arreglo que contenga _sólo_ el cuadrado de los enteros positivos (los números decimales no son enteros) cuando se le pase un arreglo de números reales. Un ejemplo de un arreglo que contiene sólo números reales es `[-3, 4.8, 5, 3, -3.2]`.
 
 **Nota:** Tu función no debe usar ningún tipo de bucle `for` o `while` o la función `forEach()`.
 
@@ -34,11 +34,7 @@ assert(!code.match(/for|while|forEach/g));
 `map`, `filter`, o `reduce` deben ser usados.
 
 ```js
-assert(
-  __helpers
-    .removeWhiteSpace(code)
-    .match(/\.(map|filter|reduce)\(/g)
-);
+assert(__helpers.removeWhiteSpace(code).match(/\.(map|filter|reduce)\(/g));
 ```
 
 La función debe devolver un arreglo (`array`).
@@ -50,21 +46,19 @@ assert(Array.isArray(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])));
 `squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])` debe devolver `[16, 1764, 36]`.
 
 ```js
-assert.deepStrictEqual(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]), [
-  16,
-  1764,
-  36
-]);
+assert.deepStrictEqual(
+  squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]),
+  [16, 1764, 36]
+);
 ```
 
 `squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3])` debe devolver `[9, 100, 49]`.
 
 ```js
-assert.deepStrictEqual(squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]), [
-  9,
-  100,
-  49
-]);
+assert.deepStrictEqual(
+  squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]),
+  [9, 100, 49]
+);
 ```
 
 # --seed--

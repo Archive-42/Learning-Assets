@@ -52,15 +52,19 @@ assert(nonMutatingSort(globalArray) !== globalArray);
 `nonMutatingSort([1, 30, 4, 21, 100000])` 应该返回 `[1, 4, 21, 30, 100000]`
 
 ```js
-assert(JSON.stringify(nonMutatingSort([1, 30, 4, 21, 100000])) ===
-    JSON.stringify([1, 4, 21, 30, 100000]))
+assert(
+  JSON.stringify(nonMutatingSort([1, 30, 4, 21, 100000])) ===
+    JSON.stringify([1, 4, 21, 30, 100000])
+);
 ```
 
 `nonMutatingSort([140000, 104, 99])` 应该返回 `[99, 104, 140000]`。
 
 ```js
-assert(JSON.stringify(nonMutatingSort([140000, 104, 99])) ===
-    JSON.stringify([99, 104, 140000]))
+assert(
+  JSON.stringify(nonMutatingSort([140000, 104, 99])) ===
+    JSON.stringify([99, 104, 140000])
+);
 ```
 
 # --seed--
@@ -71,8 +75,6 @@ assert(JSON.stringify(nonMutatingSort([140000, 104, 99])) ===
 var globalArray = [5, 6, 3, 2, 9];
 function nonMutatingSort(arr) {
   // Only change code below this line
-
-
   // Only change code above this line
 }
 nonMutatingSort(globalArray);
@@ -84,7 +86,7 @@ nonMutatingSort(globalArray);
 var globalArray = [5, 6, 3, 2, 9];
 function nonMutatingSort(arr) {
   // Only change code below this line
-  return [].concat(arr).sort((a,b) => a-b);
+  return [].concat(arr).sort((a, b) => a - b);
   // Only change code above this line
 }
 nonMutatingSort(globalArray);

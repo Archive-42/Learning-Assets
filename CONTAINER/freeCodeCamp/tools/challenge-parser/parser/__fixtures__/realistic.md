@@ -53,8 +53,8 @@ assert(
 There should be an `h2` element with the text `Cat Lists` above the last `h3` element that is nested in the last `section` element'. You may have accidentally deleted the `h2` element.
 
 ```js
-const secondSectionLastElemNode = document.querySelectorAll('main > section')[1]
-  .lastElementChild;
+const secondSectionLastElemNode =
+  document.querySelectorAll('main > section')[1].lastElementChild;
 assert(
   secondSectionLastElemNode.nodeName === 'H3' &&
     secondSectionLastElemNode.previousElementSibling.innerText
@@ -68,7 +68,7 @@ assert(
 ## --before-user-code--
 
 ```js
-  // this runs before the user's code is evaluated.
+// this runs before the user's code is evaluated.
 ```
 
 ## --seed-contents--
@@ -113,11 +113,7 @@ body {
 h1 {
   font-size: 20px;
 }
---fcc-editable-region--
-
---fcc-editable-region--
-
-a {
+--fcc-editable-region-- --fcc-editable-region-- a {
   color: green;
 }
 ```
@@ -168,7 +164,6 @@ body {
 h1 {
   font-size: 20px;
 }
-
 
 a {
   color: green;

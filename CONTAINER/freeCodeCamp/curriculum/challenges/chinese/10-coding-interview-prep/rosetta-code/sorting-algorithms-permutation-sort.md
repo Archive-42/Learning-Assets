@@ -52,29 +52,19 @@ assert.deepEqual(permutationSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 `permutationSort([12, 33, 26, 18, 1, 16, 38])` should return `[1, 12, 16, 18, 26, 33, 38]`.
 
 ```js
-assert.deepEqual(permutationSort([12, 33, 26, 18, 1, 16, 38]), [
-  1,
-  12,
-  16,
-  18,
-  26,
-  33,
-  38
-]);
+assert.deepEqual(
+  permutationSort([12, 33, 26, 18, 1, 16, 38]),
+  [1, 12, 16, 18, 26, 33, 38]
+);
 ```
 
 `permutationSort([3, 39, 48, 16, 1, 4, 29])` should return `[1, 3, 4, 16, 29, 39, 48]`.
 
 ```js
-assert.deepEqual(permutationSort([3, 39, 48, 16, 1, 4, 29]), [
-  1,
-  3,
-  4,
-  16,
-  29,
-  39,
-  48
-]);
+assert.deepEqual(
+  permutationSort([3, 39, 48, 16, 1, 4, 29]),
+  [1, 3, 4, 16, 29, 39, 48]
+);
 ```
 
 # --seed--
@@ -82,9 +72,7 @@ assert.deepEqual(permutationSort([3, 39, 48, 16, 1, 4, 29]), [
 ## --seed-contents--
 
 ```js
-function permutationSort(arr) {
-
-}
+function permutationSort(arr) {}
 ```
 
 # --solutions--
@@ -114,10 +102,8 @@ function permutationSort(arr) {
     }
   }
 
-  function isSorted(a){
-    for(let i = 0; i < a.length - 1; i++)
-      if(a[i] > a[i + 1])
-        return false;
+  function isSorted(a) {
+    for (let i = 0; i < a.length - 1; i++) if (a[i] > a[i + 1]) return false;
     return true;
   }
 

@@ -29,7 +29,7 @@ Test iterate-method
 
 /** Class to handle the vector calculations. */
 class Vector2 {
-  constructor (x, y) {
+  constructor(x, y) {
     this.x = x
     this.y = y
   }
@@ -40,7 +40,7 @@ class Vector2 {
    * @param vector The vector to be added.
    * @returns The sum-vector.
    */
-  add (vector) {
+  add(vector) {
     const x = this.x + vector.x
     const y = this.y + vector.y
     return new Vector2(x, y)
@@ -52,7 +52,7 @@ class Vector2 {
    * @param vector The vector to be subtracted.
    * @returns The difference-vector.
    */
-  subtract (vector) {
+  subtract(vector) {
     const x = this.x - vector.x
     const y = this.y - vector.y
     return new Vector2(x, y)
@@ -64,7 +64,7 @@ class Vector2 {
    * @param scalar The factor by which to multiply the vector.
    * @returns The scaled vector.
    */
-  multiply (scalar) {
+  multiply(scalar) {
     const x = this.x * scalar
     const y = this.y * scalar
     return new Vector2(x, y)
@@ -76,8 +76,8 @@ class Vector2 {
    * @param angleInDegrees The angle by which to rotate the vector.
    * @returns The rotated vector.
    */
-  rotate (angleInDegrees) {
-    const radians = angleInDegrees * Math.PI / 180
+  rotate(angleInDegrees) {
+    const radians = (angleInDegrees * Math.PI) / 180
     const ca = Math.cos(radians)
     const sa = Math.sin(radians)
     const x = ca * this.x - sa * this.y
@@ -93,7 +93,7 @@ class Vector2 {
  * @param steps The number of iterations.
  * @returns The canvas of the rendered Koch snowflake.
  */
-function getKochSnowflake (canvasWidth = 600, steps = 5) {
+function getKochSnowflake(canvasWidth = 600, steps = 5) {
   if (canvasWidth <= 0) {
     throw new Error('canvasWidth should be greater than zero')
   }
@@ -101,8 +101,10 @@ function getKochSnowflake (canvasWidth = 600, steps = 5) {
   const offsetX = canvasWidth / 10.0
   const offsetY = canvasWidth / 3.7
   const vector1 = new Vector2(offsetX, offsetY)
-  const vector2 =
-      new Vector2(canvasWidth / 2, Math.sin(Math.PI / 3) * canvasWidth * 0.8 + offsetY)
+  const vector2 = new Vector2(
+    canvasWidth / 2,
+    Math.sin(Math.PI / 3) * canvasWidth * 0.8 + offsetY
+  )
   const vector3 = new Vector2(canvasWidth - offsetX, offsetY)
   const initialVectors = []
   initialVectors.push(vector1)
@@ -121,7 +123,7 @@ function getKochSnowflake (canvasWidth = 600, steps = 5) {
  * @param canvasHeight The height of the canvas.
  * @returns The canvas of the rendered edges.
  */
-function drawToCanvas (vectors, canvasWidth, canvasHeight) {
+function drawToCanvas(vectors, canvasWidth, canvasHeight) {
   const canvas = document.createElement('canvas')
   canvas.width = canvasWidth
   canvas.height = canvasHeight
@@ -146,7 +148,7 @@ function drawToCanvas (vectors, canvasWidth, canvasHeight) {
  * @param steps The number of iterations.
  * @returns The transformed vectors after the iteration-steps.
  */
-function iterate (initialVectors, steps) {
+function iterate(initialVectors, steps) {
   let vectors = initialVectors
   for (let i = 0; i < steps; i++) {
     vectors = iterationStep(vectors)
@@ -163,7 +165,7 @@ function iterate (initialVectors, steps) {
  * @param vectors The vectors composing the shape to which the algorithm is applied.
  * @returns The transformed vectors after the iteration-step.
  */
-function iterationStep (vectors) {
+function iterationStep(vectors) {
   const newVectors = []
   for (let i = 0; i < vectors.length - 1; i++) {
     const startVector = vectors[i]
@@ -171,7 +173,9 @@ function iterationStep (vectors) {
     newVectors.push(startVector)
     const differenceVector = endVector.subtract(startVector).multiply(1 / 3)
     newVectors.push(startVector.add(differenceVector))
-    newVectors.push(startVector.add(differenceVector).add(differenceVector.rotate(60)))
+    newVectors.push(
+      startVector.add(differenceVector).add(differenceVector.rotate(60))
+    )
     newVectors.push(startVector.add(differenceVector.multiply(2)))
   }
 

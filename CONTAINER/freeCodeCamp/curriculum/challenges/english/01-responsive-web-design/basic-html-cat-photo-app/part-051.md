@@ -41,7 +41,7 @@ The second `fieldset` element should not be nested in the first `fieldset` eleme
 const childrenOf1stFieldset = [
   ...document.querySelector('form > fieldset').children
 ];
-const foundElems = childrenOf1stFieldset.filter((child) => {
+const foundElems = childrenOf1stFieldset.filter(child => {
   return child.nodeName === 'FIELDSET';
 });
 assert(foundElems.length === 0);
@@ -64,7 +64,7 @@ Your new `fieldset` element should be below the existing `fieldset` element. You
 
 ```js
 const fieldsetChildren = [...document.querySelectorAll('fieldset')].map(
-  (elem) => elem.children
+  elem => elem.children
 );
 assert(fieldsetChildren[0].length > fieldsetChildren[1].length);
 ```
@@ -81,8 +81,15 @@ assert(fieldsetChildren[0].length > fieldsetChildren[1].length);
       <section>
         <h2>Cat Photos</h2>
         <!-- TODO: Add link to cat photos -->
-        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-        <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p>
+          Click here to view more
+          <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+        </p>
+        <a href="https://freecatphotoapp.com"
+          ><img
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="A cute orange cat lying on its back."
+        /></a>
       </section>
       <section>
         <h2>Cat Lists</h2>
@@ -93,8 +100,11 @@ assert(fieldsetChildren[0].length > fieldsetChildren[1].length);
           <li>lasagna</li>
         </ul>
         <figure>
-          <img src="https://bit.ly/fcc-lasagna" alt="A slice of lasagna on a plate.">
-          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-lasagna"
+            alt="A slice of lasagna on a plate."
+          />
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
         </figure>
         <h3>Top 3 things cats hate:</h3>
         <ol>
@@ -103,26 +113,49 @@ assert(fieldsetChildren[0].length > fieldsetChildren[1].length);
           <li>other cats</li>
         </ol>
         <figure>
-          <img src="https://bit.ly/fcc-cats" alt="Five cats looking around a field.">
-          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+          <img
+            src="https://bit.ly/fcc-cats"
+            alt="Five cats looking around a field."
+          />
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
         </figure>
       </section>
       <section>
         <h2>Cat Form</h2>
         <form action="https://freecatphotoapp.com/submit-cat-photo">
---fcc-editable-region--
+          --fcc-editable-region--
           <fieldset>
             <legend>Is your cat an indoor or outdoor cat?</legend>
-            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
-            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+            <label
+              ><input
+                id="indoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="indoor"
+              />
+              Indoor</label
+            >
+            <label
+              ><input
+                id="outdoor"
+                type="radio"
+                name="indoor-outdoor"
+                value="outdoor"
+              />
+              Outdoor</label
+            >
           </fieldset>
-          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <input
+            type="text"
+            name="catphotourl"
+            placeholder="cat photo URL"
+            required
+          />
           <button type="submit">Submit</button>
---fcc-editable-region--
+          --fcc-editable-region--
         </form>
       </section>
     </main>
   </body>
 </html>
 ```
-

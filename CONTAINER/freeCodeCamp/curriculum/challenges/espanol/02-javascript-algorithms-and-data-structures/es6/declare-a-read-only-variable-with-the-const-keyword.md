@@ -13,8 +13,8 @@ La palabra clave `let` no es la única manera nueva de declarar variables. En ES
 `const` tiene todas las características increíbles que tiene `let`, con el bono añadido de que las variables declaradas usando `const` son de solo lectura. Son un valor constante, lo que significa que una vez que una variable es asignada con `const`, no se puede reasignar.
 
 ```js
-const FAV_PET = "Cats";
-FAV_PET = "Dogs";
+const FAV_PET = 'Cats';
+FAV_PET = 'Dogs';
 ```
 
 La consola mostrará un error debido a la reasignación del valor de `FAV_PET`.
@@ -32,25 +32,25 @@ Cambia el código para que todas las variables sean declaradas usando `let` o `c
 `var` no debe existir en tu código.
 
 ```js
-(getUserInput) => assert(!getUserInput('index').match(/var/g));
+getUserInput => assert(!getUserInput('index').match(/var/g));
 ```
 
 `SENTENCE` debe ser una variable constante declarada con `const`.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/(const SENTENCE)/g));
+getUserInput => assert(getUserInput('index').match(/(const SENTENCE)/g));
 ```
 
 `i` debe ser declarada con `let`.
 
 ```js
-(getUserInput) => assert(getUserInput('index').match(/(let i)/g));
+getUserInput => assert(getUserInput('index').match(/(let i)/g));
 ```
 
 `console.log` debe cambiarse para imprimir la variable `SENTENCE`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(getUserInput('index').match(/console\.log\(\s*SENTENCE\s*\)\s*;?/g));
 ```
 
@@ -60,30 +60,26 @@ Cambia el código para que todas las variables sean declaradas usando `let` o `c
 
 ```js
 function printManyTimes(str) {
-
   // Only change code below this line
 
-  var sentence = str + " is cool!";
-  for (var i = 0; i < str.length; i+=2) {
+  var sentence = str + ' is cool!';
+  for (var i = 0; i < str.length; i += 2) {
     console.log(sentence);
   }
 
   // Only change code above this line
-
 }
-printManyTimes("freeCodeCamp");
+printManyTimes('freeCodeCamp');
 ```
 
 # --solutions--
 
 ```js
 function printManyTimes(str) {
-
-  const SENTENCE = str + " is cool!";
-  for (let i = 0; i < str.length; i+=2) {
+  const SENTENCE = str + ' is cool!';
+  for (let i = 0; i < str.length; i += 2) {
     console.log(SENTENCE);
   }
-
 }
-printManyTimes("freeCodeCamp");
+printManyTimes('freeCodeCamp');
 ```

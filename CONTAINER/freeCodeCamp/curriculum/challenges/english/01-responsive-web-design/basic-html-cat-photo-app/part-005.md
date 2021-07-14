@@ -29,7 +29,7 @@ Your `main` element's opening tag should be below the `h1` element. You have the
 
 ```js
 const collection = [...document.querySelectorAll('main,h1')].map(
-  (node) => node.nodeName
+  node => node.nodeName
 );
 assert(collection.indexOf('H1') < collection.indexOf('MAIN'));
 ```
@@ -38,7 +38,7 @@ Your `main` element's opening tag should be above the `h2` element. You have the
 
 ```js
 const collection = [...document.querySelectorAll('main,h2')].map(
-  (node) => node.nodeName
+  node => node.nodeName
 );
 assert(collection.indexOf('MAIN') < collection.indexOf('H2'));
 ```
@@ -61,13 +61,12 @@ assert(
 ```html
 <html>
   <body>
---fcc-editable-region--
+    --fcc-editable-region--
     <h1>CatPhotoApp</h1>
     <h2>Cat Photos</h2>
     <!-- TODO: Add link to cat photos -->
     <p>Click here to view more cat photos.</p>
---fcc-editable-region--
+    --fcc-editable-region--
   </body>
 </html>
 ```
-

@@ -19,12 +19,12 @@ Within `tests/1_unit-tests.js` under the test labelled `#11` in the `Arrays` sui
 All tests should pass.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -33,16 +33,16 @@ All tests should pass.
 You should choose the correct method for the first assertion - `isArray` vs. `isNotArray`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'isArray',
         'String.prototype.split() returns an Array'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -51,16 +51,16 @@ You should choose the correct method for the first assertion - `isArray` vs. `is
 You should choose the correct method for the second assertion - `isArray` vs. `isNotArray`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'isNotArray',
         'Array.prototype.indexOf() returns a number'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

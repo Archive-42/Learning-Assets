@@ -35,7 +35,7 @@ The existing `h2`, comment, `p` element, and anchor (`a`) element should be betw
 
 ```js
 const childrenOfSection = [...document.querySelector('section').childNodes];
-const foundElems = childrenOfSection.filter((child) => {
+const foundElems = childrenOfSection.filter(child => {
   return ['H2', 'A', 'P'].includes(child.nodeName);
 });
 assert(foundElems.length === 3);
@@ -49,15 +49,21 @@ assert(foundElems.length === 3);
 <html>
   <body>
     <h1>CatPhotoApp</h1>
---fcc-editable-region--
+    --fcc-editable-region--
     <main>
       <h2>Cat Photos</h2>
       <!-- TODO: Add link to cat photos -->
-      <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-      <a href="https://freecatphotoapp.com"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+      <p>
+        Click here to view more
+        <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.
+      </p>
+      <a href="https://freecatphotoapp.com"
+        ><img
+          src="https://bit.ly/fcc-relaxing-cat"
+          alt="A cute orange cat lying on its back."
+      /></a>
     </main>
---fcc-editable-region--
+    --fcc-editable-region--
   </body>
 </html>
 ```
-

@@ -38,7 +38,6 @@ assert(pandigitalPrime(7) == 7652413);
 
 ```js
 function pandigitalPrime(n) {
-
   return n;
 }
 
@@ -98,7 +97,7 @@ function pandigitalPrime(n) {
       getPermutations(digitsArr.length);
 
       // sort permutations in descending order
-      permutations.sort(function(a, b) {
+      permutations.sort(function (a, b) {
         return b - a;
       });
 

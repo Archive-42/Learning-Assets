@@ -1,0 +1,52 @@
+{
+  "search.exclude": {
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/bower_components": true
+  },
+  "search.useIgnoreFiles": true,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "pg*.sql": "pgsql",
+    "*.sql": "sql"
+  },
+  "vsicons.projectDetection.autoReload": true,
+  "vsicons.associations.files": [
+    {
+      "icon": "sql",
+      "extensions": ["sql"],
+      "format": "svg"
+    }
+  ],
+  "[handlebars]": {
+    "editor.formatOnSave": false
+  },
+  "[sql]": {
+    "editor.formatOnSave": false
+  },
+  "sqltools.connections": [
+    {
+      "name": "PG:Northwind",
+      "server": "127.0.0.1",
+      "dialect": "PostgreSQL",
+      "port": 5432,
+      "database": "northwind",
+      "username": "northwind_user",
+      "askForPassword": false,
+      "password": "theWindi$bl0wing",
+      "connectionTimeout": 15
+    },
+    {
+      "name": "MySQL:Northwind",
+      "server": "127.0.0.1",
+      "dialect": "MySQL",
+      "port": 3306,
+      "database": "northwind",
+      "username": "northwind_user",
+      "askForPassword": false,
+      "password": "theWindi$bl0wing",
+      "connectionTimeout": 15
+    }
+  ]
+}

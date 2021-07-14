@@ -17,7 +17,7 @@ jQuery 有一个 `parent()` 方法，可以访问被选取标签的父标签。
 下面的代码展示了使用 `parent()` 方法把 `left-well` 标签的父标签背景色设置成蓝色（blue）：
 
 ```js
-$("#left-well").parent().css("background-color", "blue")
+$('#left-well').parent().css('background-color', 'blue');
 ```
 
 把 `#target1` 元素的父元素背景色设置成红色（red）。
@@ -61,13 +61,12 @@ assert(code.match(/<div class="well" id="left-well">/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
   });
 </script>
 
@@ -102,13 +101,13 @@ assert(code.match(/<div class="well" id="left-well">/g));
 
 ```html
 <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
+  $(document).ready(function () {
+    $('#target1').css('color', 'red');
+    $('#target1').prop('disabled', true);
+    $('#target4').remove();
+    $('#target2').appendTo('#right-well');
+    $('#target5').clone().appendTo('#left-well');
+    $('#target1').parent().css('background-color', 'red');
   });
 </script>
 

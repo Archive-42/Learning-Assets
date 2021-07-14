@@ -40,7 +40,7 @@ assert(!code.match(/\.?[\s\S]*?map/g));
 // The global variable
 var s = [23, 65, 98, 5];
 
-Array.prototype.myMap = function(callback) {
+Array.prototype.myMap = function (callback) {
   var newArray = [];
   // Only change code below this line
 
@@ -48,7 +48,7 @@ Array.prototype.myMap = function(callback) {
   return newArray;
 };
 
-var new_s = s.myMap(function(item) {
+var new_s = s.myMap(function (item) {
   return item * 2;
 });
 ```
@@ -59,7 +59,7 @@ var new_s = s.myMap(function(item) {
 // the global Array
 var s = [23, 65, 98, 5];
 
-Array.prototype.myMap = function(callback) {
+Array.prototype.myMap = function (callback) {
   var newArray = [];
   // Only change code below this line
   for (var elem of this) {
@@ -69,7 +69,7 @@ Array.prototype.myMap = function(callback) {
   return newArray;
 };
 
-var new_s = s.myMap(function(item) {
+var new_s = s.myMap(function (item) {
   return item * 2;
 });
 ```

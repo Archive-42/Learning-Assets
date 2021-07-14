@@ -8,9 +8,9 @@ dashedName: use-the-delete-keyword-to-remove-object-properties
 
 # --description--
 
-Ahora ya sabes qué son los objetos y sus características y ventajas básicas. En resumen, son almacenes clave-valor que proporcionan una forma flexible e intuitiva de estructurar los datos, ***y***, proporcionan un tiempo de búsqueda muy rápido. A lo largo del resto de estos desafíos, describiremos varias operaciones comúnes que puedes realizar sobre los objetos para que te sientas cómodo aplicando estas útiles estructuras de datos en tus programas.
+Ahora ya sabes qué son los objetos y sus características y ventajas básicas. En resumen, son almacenes clave-valor que proporcionan una forma flexible e intuitiva de estructurar los datos, **_y_**, proporcionan un tiempo de búsqueda muy rápido. A lo largo del resto de estos desafíos, describiremos varias operaciones comúnes que puedes realizar sobre los objetos para que te sientas cómodo aplicando estas útiles estructuras de datos en tus programas.
 
-En desafíos anteriores, hemos agregado y modificado los pares clave-valor de un objeto. Aquí veremos cómo podemos *eliminar* un par clave-valor de un objeto.
+En desafíos anteriores, hemos agregado y modificado los pares clave-valor de un objeto. Aquí veremos cómo podemos _eliminar_ un par clave-valor de un objeto.
 
 Volvamos a nuestro ejemplo del objeto `foods` una última vez. Si quisiéramos eliminar la clave `apples`, podemos eliminarla utilizando la palabra clave `delete` de esta manera:
 

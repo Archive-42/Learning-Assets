@@ -8,13 +8,13 @@ dashedName: use-the-some-method-to-check-that-any-elements-in-an-array-meet-a-cr
 
 # --description--
 
-El método `some` funciona con arreglos para comprobar si *algún* elemento pasa una prueba en particular. Devuelve un valor booleano `true` si alguno de los valores cumple el criterio, `false` si no.
+El método `some` funciona con arreglos para comprobar si _algún_ elemento pasa una prueba en particular. Devuelve un valor booleano `true` si alguno de los valores cumple el criterio, `false` si no.
 
 Por ejemplo, el siguiente código comprobará si algún elemento en el arreglo `numbers` es menor que 10:
 
 ```js
 var numbers = [10, 50, 8, 220, 110, 11];
-numbers.some(function(currentValue) {
+numbers.some(function (currentValue) {
   return currentValue < 10;
 });
 ```
@@ -58,8 +58,6 @@ assert(!checkPositive([-1, -2, -3, -4, -5]));
 ```js
 function checkPositive(arr) {
   // Only change code below this line
-
-
   // Only change code above this line
 }
 checkPositive([1, 2, 3, -4, 5]);

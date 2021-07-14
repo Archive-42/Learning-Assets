@@ -15,7 +15,7 @@ dashedName: using-the-test-method
 JavaScript 中有多种使用正则表达式的方法。 测试正则表达式的一种方法是使用 `.test()` 方法。 `.test()` 方法会把编写的正则表达式和字符串（即括号内的内容）匹配，如果成功匹配到字符，则返回 `true`，反之，返回 `false`。
 
 ```js
-let testStr = "freeCodeCamp";
+let testStr = 'freeCodeCamp';
 let testRegex = /Code/;
 testRegex.test(testStr);
 ```
@@ -45,7 +45,7 @@ assert(result === true);
 ## --seed-contents--
 
 ```js
-let myString = "Hello, World!";
+let myString = 'Hello, World!';
 let myRegex = /Hello/;
 let result = myRegex; // Change this line
 ```
@@ -53,7 +53,7 @@ let result = myRegex; // Change this line
 # --solutions--
 
 ```js
-let myString = "Hello, World!";
+let myString = 'Hello, World!';
 let myRegex = /Hello/;
 let result = myRegex.test(myString); // Change this line
 ```

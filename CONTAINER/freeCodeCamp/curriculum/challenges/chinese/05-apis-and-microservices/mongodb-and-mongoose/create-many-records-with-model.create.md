@@ -21,7 +21,7 @@ dashedName: create-many-records-with-model-create
 应当成功地一次性创建多条数据
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/_api/create-many-people',
     type: 'POST',
@@ -31,7 +31,7 @@ dashedName: create-many-records-with-model-create
       { name: 'Mary', age: 21, favoriteFoods: ['onions', 'chicken'] }
     ])
   }).then(
-    (data) => {
+    data => {
       assert.isArray(data, 'the response should be an array');
       assert.equal(
         data.length,
@@ -51,7 +51,7 @@ dashedName: create-many-records-with-model-create
         'The second item should be not previously edited'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

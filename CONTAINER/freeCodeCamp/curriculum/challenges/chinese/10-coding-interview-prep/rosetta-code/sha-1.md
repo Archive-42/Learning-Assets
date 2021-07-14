@@ -71,9 +71,7 @@ assert.equal(SHA1('is Awesome'), '6537205da59c72b57ed3881843c2d24103d683a3');
 ## --seed-contents--
 
 ```js
-function SHA1(input) {
-
-}
+function SHA1(input) {}
 ```
 
 # --solutions--

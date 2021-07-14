@@ -23,13 +23,13 @@ dashedName: add-a-version-to-your-package-json
 package.json 应该包含一个有效的 “version” 键
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert(packJson.version, '"version" is missing');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

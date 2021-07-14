@@ -12,7 +12,7 @@ dashedName: pass-an-array-as-props
 
 ```jsx
 <ParentComponent>
-  <ChildComponent colors={["green", "blue", "red"]} />
+  <ChildComponent colors={['green', 'blue', 'red']} />
 </ParentComponent>
 ```
 
@@ -128,16 +128,20 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<ToDo />, document.getElementById('root'))
+ReactDOM.render(<ToDo />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
 
 ```jsx
-const List = (props) => {
-  { /* Change code below this line */ }
-  return <p>{}</p>
-  { /* Change code above this line */ }
+const List = props => {
+  {
+    /* Change code below this line */
+  }
+  return <p>{}</p>;
+  {
+    /* Change code above this line */
+  }
 };
 
 class ToDo extends React.Component {
@@ -149,22 +153,22 @@ class ToDo extends React.Component {
       <div>
         <h1>To Do Lists</h1>
         <h2>Today</h2>
-        { /* Change code below this line */ }
-        <List/>
+        {/* Change code below this line */}
+        <List />
         <h2>Tomorrow</h2>
-        <List/>
-        { /* Change code above this line */ }
+        <List />
+        {/* Change code above this line */}
       </div>
     );
   }
-};
+}
 ```
 
 # --solutions--
 
 ```jsx
-const List= (props) => {
-  return <p>{props.tasks.join(', ')}</p>
+const List = props => {
+  return <p>{props.tasks.join(', ')}</p>;
 };
 
 class ToDo extends React.Component {
@@ -182,5 +186,5 @@ class ToDo extends React.Component {
       </div>
     );
   }
-};
+}
 ```

@@ -8,7 +8,7 @@ dashedName: averagesmode
 
 # --description--
 
-Write a program to find the [mode](<https://en.wikipedia.org/wiki/Mode (statistics)> "wp: Mode (statistics)") value of a collection.
+Write a program to find the [mode](<https://en.wikipedia.org/wiki/Mode (statistics)> 'wp: Mode (statistics)') value of a collection.
 
 The case where the collection is empty may be ignored. Care must be taken to handle the case where the mode is non-unique.
 
@@ -47,7 +47,6 @@ const arr2 = [1, 2, 4, 4, 1];
 
 ```js
 function mode(arr) {
-
   return true;
 }
 ```
@@ -68,8 +67,7 @@ function mode(arr) {
 
     if (counter[el] === max) {
       result.push(el);
-    }
-    else if (counter[el] > max) {
+    } else if (counter[el] > max) {
       max = counter[el];
       result = [el];
     }

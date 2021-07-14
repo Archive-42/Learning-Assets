@@ -9,10 +9,7 @@
   "superBlock": "certificates",
   "superOrder": 12,
   "challengeOrder": [
-    [
-      "5e44431b903586ffb414c951",
-      "Scientific Computing with Python Certificate"
-    ]
+    ["5e44431b903586ffb414c951", "Scientific Computing with Python Certificate"]
   ],
   "isPrivate": true,
   "fileName": "12-certificates/scientific-computing-with-python-v7-certificate.json"

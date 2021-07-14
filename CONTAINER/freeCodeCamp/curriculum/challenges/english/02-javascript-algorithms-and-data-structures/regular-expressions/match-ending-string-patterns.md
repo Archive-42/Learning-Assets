@@ -13,10 +13,10 @@ In the last challenge, you learned to use the caret character to search for patt
 You can search the end of strings using the dollar sign character `$` at the end of the regex.
 
 ```js
-let theEnding = "This is a never ending story";
+let theEnding = 'This is a never ending story';
 let storyRegex = /story$/;
 storyRegex.test(theEnding);
-let noEnding = "Sometimes a story will have to end";
+let noEnding = 'Sometimes a story will have to end';
 storyRegex.test(noEnding);
 ```
 
@@ -51,7 +51,7 @@ assert(lastRegex.test('The last car on a train is the caboose'));
 ## --seed-contents--
 
 ```js
-let caboose = "The last car on a train is the caboose";
+let caboose = 'The last car on a train is the caboose';
 let lastRegex = /change/; // Change this line
 let result = lastRegex.test(caboose);
 ```
@@ -59,7 +59,7 @@ let result = lastRegex.test(caboose);
 # --solutions--
 
 ```js
-let caboose = "The last car on a train is the caboose";
+let caboose = 'The last car on a train is the caboose';
 let lastRegex = /caboose$/; // Change this line
 let result = lastRegex.test(caboose);
 ```

@@ -18,17 +18,15 @@ function ensureAuthenticated(req, res, next) {
     return next();
   }
   res.redirect('/');
-};
+}
 ```
 
-Now add *ensureAuthenticated* as a middleware to the request for the profile page before the argument to the get request containing the function that renders the page.
+Now add _ensureAuthenticated_ as a middleware to the request for the profile page before the argument to the get request containing the function that renders the page.
 
 ```js
-app
- .route('/profile')
- .get(ensureAuthenticated, (req,res) => {
-    res.render(process.cwd() + '/views/pug/profile');
- });
+app.route('/profile').get(ensureAuthenticated, (req, res) => {
+  res.render(process.cwd() + '/views/pug/profile');
+});
 ```
 
 Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/ae49b8778cab87e93284a91343da0959).
@@ -38,9 +36,9 @@ Submit your page when you think you've got it right. If you're running into erro
 Middleware ensureAuthenticated should be implemented and on our /profile route.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /ensureAuthenticated[^]*req.isAuthenticated/gi,
@@ -52,7 +50,7 @@ Middleware ensureAuthenticated should be implemented and on our /profile route.
         'Your ensureAuthenticated middleware should be attached to the /profile route'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -61,16 +59,16 @@ Middleware ensureAuthenticated should be implemented and on our /profile route.
 A Get request to /profile should correctly redirect to / since we are not authenticated.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/profile').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /Home page/gi,
         'An attempt to go to the profile at this point should redirect to the homepage since we are not logged in'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

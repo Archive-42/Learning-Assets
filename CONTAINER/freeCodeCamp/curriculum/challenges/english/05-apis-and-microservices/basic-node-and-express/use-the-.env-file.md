@@ -27,15 +27,15 @@ Then, in the `/json` GET route handler you created in the last challenge, transf
 The response of the endpoint `/json` should change according to the environment variable `MESSAGE_STYLE`
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/use-env-vars').then(
-    (data) => {
+    data => {
       assert.isTrue(
         data.passed,
         'The response of "/json" does not change according to MESSAGE_STYLE'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

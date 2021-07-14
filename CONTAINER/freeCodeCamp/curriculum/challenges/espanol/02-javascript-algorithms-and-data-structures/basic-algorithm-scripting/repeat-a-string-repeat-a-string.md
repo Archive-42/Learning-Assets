@@ -8,7 +8,7 @@ dashedName: repeat-a-string-repeat-a-string
 
 # --description--
 
-Repite una cadena dada `str` (primer argumento) por un número (`num`) de veces (segundo argumento). Devuelve una cadena vacía si `num` no es un número positivo. Para este desafío, *no* utilices el método incorporado `.repeat()`.
+Repite una cadena dada `str` (primer argumento) por un número (`num`) de veces (segundo argumento). Devuelve una cadena vacía si `num` no es un número positivo. Para este desafío, _no_ utilices el método incorporado `.repeat()`.
 
 # --hints--
 
@@ -69,7 +69,7 @@ function repeatStringNumTimes(str, num) {
   return str;
 }
 
-repeatStringNumTimes("abc", 3);
+repeatStringNumTimes('abc', 3);
 ```
 
 # --solutions--
@@ -77,8 +77,8 @@ repeatStringNumTimes("abc", 3);
 ```js
 function repeatStringNumTimes(str, num) {
   if (num < 1) return '';
-  return num === 1 ? str : str + repeatStringNumTimes(str, num-1);
+  return num === 1 ? str : str + repeatStringNumTimes(str, num - 1);
 }
 
-repeatStringNumTimes("abc", 3);
+repeatStringNumTimes('abc', 3);
 ```

@@ -59,9 +59,7 @@ assert.equal(dotProduct([17, 27, 34, 43, 15], [62, 73, 48, 95, 110]), 10392);
 ## --seed-contents--
 
 ```js
-function dotProduct(ary1, ary2) {
-
-}
+function dotProduct(ary1, ary2) {}
 ```
 
 # --solutions--

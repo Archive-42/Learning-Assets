@@ -16,7 +16,7 @@ dashedName: create-a-text-field
 你可以像这样创建一个文本输入框：
 
 ```html
-<input type="text">
+<input type="text" />
 ```
 
 注意 `input` 输入框是没有结束标签的。
@@ -42,7 +42,11 @@ assert($('input[type=text]').length > 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -56,8 +60,6 @@ assert($('input[type=text]').length > 0);
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-
-
 </main>
 ```
 
@@ -68,7 +70,11 @@ assert($('input[type=text]').length > 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -83,7 +89,7 @@ assert($('input[type=text]').length > 0);
     <li>other cats</li>
   </ol>
   <form>
-    <input type="text">
+    <input type="text" />
   </form>
 </main>
 ```

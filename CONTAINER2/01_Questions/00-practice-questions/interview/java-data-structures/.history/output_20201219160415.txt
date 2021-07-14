@@ -1,0 +1,21 @@
+.//Arrays+Problems.doc
+.//DP+Problems.doc
+.//Fifo-Lifo+Problems.doc
+.//Functional+Problems.doc
+.//Graph+Problems.doc
+.//Java-Problems
+.//List+Problems.doc
+.//Map+Problems.doc
+.//Numbers+Problems.doc
+.//Recursion+Problems.doc
+.//Sort+Problems.doc
+.//Strings+Problems.doc
+.//output.txt
+./Java-Problems/arrays.java
+./Java-Problems/arrays.md
+
+
+
+ <div class="tools">
+    <ul>
+

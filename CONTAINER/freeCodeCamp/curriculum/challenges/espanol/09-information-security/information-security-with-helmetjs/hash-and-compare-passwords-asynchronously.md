@@ -40,7 +40,6 @@ bcrypt.hash('passw0rd!', 13, (err, hash) => {
     console.log(res); //true
   });
 });
-
 ```
 
 Submit your page when you think you've got it right.
@@ -50,9 +49,9 @@ Submit your page when you think you've got it right.
 Async hash should be generated and correctly compared.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /START_ASYNC[^]*bcrypt.hash.*myPlaintextPassword( |),( |)saltRounds( |),( |).*err( |),( |)hash[^]*END_ASYNC/gi,
@@ -64,7 +63,7 @@ Async hash should be generated and correctly compared.
         'Nested within the hash function should be the compare function comparing myPlaintextPassword to hash'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

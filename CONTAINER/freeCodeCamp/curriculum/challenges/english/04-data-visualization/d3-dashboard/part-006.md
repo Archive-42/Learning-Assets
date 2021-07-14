@@ -38,18 +38,15 @@ assert(/background-color\s*:\s*#ccc\s*(;|})/gi.test(body));
 ## --seed-contents--
 
 ```html
-<style>
-
-
-</style>
+<style></style>
 ```
 
 # --solutions--
 
 ```html
 <style>
-body {
-  background-color: #ccc;
-}
+  body {
+    background-color: #ccc;
+  }
 </style>
 ```

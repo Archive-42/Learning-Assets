@@ -13,18 +13,15 @@ En algunos casos, se puede desestructurar el objeto en un propio argumento de fu
 Considera el siguiente código:
 
 ```js
-const profileUpdate = (profileData) => {
+const profileUpdate = profileData => {
   const { name, age, nationality, location } = profileData;
-
-}
+};
 ```
 
 Esto desestructura efectivamente el objeto enviado a la función. Esto también se puede hacer en el lugar:
 
 ```js
-const profileUpdate = ({ name, age, nationality, location }) => {
-
-}
+const profileUpdate = ({ name, age, nationality, location }) => {};
 ```
 
 Cuando `profileData` es pasado a la función anterior, los valores son desestructurados desde el parámetro de función para su uso dentro de la función.
@@ -74,7 +71,7 @@ const stats = {
 };
 
 // Only change code below this line
-const half = (stats) => (stats.max + stats.min) / 2.0; 
+const half = stats => (stats.max + stats.min) / 2.0;
 // Only change code above this line
 ```
 
@@ -90,5 +87,5 @@ const stats = {
   average: 35.85
 };
 
-const half = ( {max, min} ) => (max + min) / 2.0;
+const half = ({ max, min }) => (max + min) / 2.0;
 ```

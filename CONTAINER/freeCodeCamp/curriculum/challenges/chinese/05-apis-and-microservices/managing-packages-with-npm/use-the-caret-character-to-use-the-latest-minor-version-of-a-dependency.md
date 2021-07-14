@@ -29,9 +29,9 @@ dashedName: use-the-caret-character-to-use-the-latest-minor-version-of-a-depende
 “dependencies”字段中应包含“moment”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -39,7 +39,7 @@ dashedName: use-the-caret-character-to-use-the-latest-minor-version-of-a-depende
         '"dependencies" does not include "moment"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -48,9 +48,9 @@ dashedName: use-the-caret-character-to-use-the-latest-minor-version-of-a-depende
 “moment”的版本应是“^2.x.x”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.match(
         packJson.dependencies.moment,
@@ -58,7 +58,7 @@ dashedName: use-the-caret-character-to-use-the-latest-minor-version-of-a-depende
         'Wrong version of "moment". It should be ^2.10.2'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

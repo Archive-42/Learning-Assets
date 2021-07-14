@@ -13,9 +13,9 @@ dashedName: divide-the-grid-into-an-area-template
 
 ```css
 grid-template-areas:
-  "header header header"
-  "advert content content"
-  "footer footer footer";
+  'header header header'
+  'advert content content'
+  'footer footer footer';
 ```
 
 上面的代码将顶部三个单元格合并成一个名为 `header` 的区域，将底部三个单元格合并为一个名为 `footer` 的区域，并在中间行创建了两个区域：`advert` 和 `content`。 **注意：**在代码中，每个单词代表一个网格单元格，每对引号代表一行。 除了自定义标签，你还能使用句点（`.`）来表示一个空单元格。
@@ -44,11 +44,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -61,9 +71,9 @@ assert(
     grid-gap: 10px;
     grid-template-areas:
     /* Only change code below this line */
-      "header header header"
-      "advert content content"
-      "footer footer footer";
+      'header header header'
+      'advert content content'
+      'footer footer footer';
     /* Only change code above this line */
   }
 </style>
@@ -81,11 +91,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -98,9 +118,9 @@ assert(
     grid-gap: 10px;
 
     grid-template-areas:
-      "header header header"
-      ". content content"
-      "footer footer footer";
+      'header header header'
+      '. content content'
+      'footer footer footer';
   }
 </style>
 

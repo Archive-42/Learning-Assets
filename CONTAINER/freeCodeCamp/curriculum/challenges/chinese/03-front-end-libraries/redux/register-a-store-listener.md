@@ -32,7 +32,7 @@ assert(
 应该有一个监听函数 `store.subscribe` 订阅 store。
 
 ```js
-(getUserInput) => assert(getUserInput('index').includes('store.subscribe('));
+getUserInput => assert(getUserInput('index').includes('store.subscribe('));
 ```
 
 在更新 store 时，`store.subscribe` 应该在回调中使全局变量 `count` 增加。
@@ -55,7 +55,7 @@ count = 0;
 const ADD = 'ADD';
 
 const reducer = (state = 0, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD:
       return state + 1;
     default:
@@ -72,11 +72,11 @@ let count = 0;
 
 // Change code above this line
 
-store.dispatch({type: ADD});
+store.dispatch({ type: ADD });
 console.log(count);
-store.dispatch({type: ADD});
+store.dispatch({ type: ADD });
 console.log(count);
-store.dispatch({type: ADD});
+store.dispatch({ type: ADD });
 console.log(count);
 ```
 
@@ -86,7 +86,7 @@ console.log(count);
 const ADD = 'ADD';
 
 const reducer = (state = 0, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD:
       return state + 1;
     default:
@@ -95,18 +95,16 @@ const reducer = (state = 0, action) => {
 };
 
 const store = Redux.createStore(reducer);
- let count = 0;
+let count = 0;
 // Change code below this line
 
-store.subscribe( () =>
- {
- count++;
- }
-);
+store.subscribe(() => {
+  count++;
+});
 
 // Change code above this line
 
-store.dispatch({type: ADD});
-store.dispatch({type: ADD});
-store.dispatch({type: ADD});
+store.dispatch({ type: ADD });
+store.dispatch({ type: ADD });
+store.dispatch({ type: ADD });
 ```

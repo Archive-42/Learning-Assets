@@ -52,7 +52,6 @@ assert(truncatablePrimes(11) == 748317);
 
 ```js
 function truncatablePrimes(n) {
-
   return n;
 }
 

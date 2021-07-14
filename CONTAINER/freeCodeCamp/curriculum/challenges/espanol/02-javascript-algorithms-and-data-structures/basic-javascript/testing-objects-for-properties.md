@@ -15,11 +15,11 @@ A veces es útil comprobar si existe o no la propiedad de un objeto dado. Podemo
 
 ```js
 var myObj = {
-  top: "hat",
-  bottom: "pants"
+  top: 'hat',
+  bottom: 'pants'
 };
-myObj.hasOwnProperty("top");
-myObj.hasOwnProperty("middle");
+myObj.hasOwnProperty('top');
+myObj.hasOwnProperty('middle');
 ```
 
 El primer `hasOwnProperty` devuelve `true`, mientras que el segundo devuelve `false`.
@@ -80,7 +80,7 @@ assert(checkObj({ pet: 'kitten', bed: 'sleigh' }, 'gift') === 'Not Found');
 ```js
 function checkObj(obj, checkProp) {
   // Only change code below this line
-  return "Change Me!";
+  return 'Change Me!';
   // Only change code above this line
 }
 ```
@@ -89,10 +89,10 @@ function checkObj(obj, checkProp) {
 
 ```js
 function checkObj(obj, checkProp) {
-  if(obj.hasOwnProperty(checkProp)) {
+  if (obj.hasOwnProperty(checkProp)) {
     return obj[checkProp];
   } else {
-    return "Not Found";
+    return 'Not Found';
   }
 }
 ```

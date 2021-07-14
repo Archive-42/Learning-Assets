@@ -27,9 +27,9 @@ dashedName: manage-npm-dependencies-by-understanding-semantic-versioning
 “dependencies”字段应该包含“moment”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.property(
         packJson.dependencies,
@@ -37,7 +37,7 @@ dashedName: manage-npm-dependencies-by-understanding-semantic-versioning
         '"dependencies" does not include "moment"'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -46,9 +46,9 @@ dashedName: manage-npm-dependencies-by-understanding-semantic-versioning
 “moment”的版本号应该是“2.10.2”
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       var packJson = JSON.parse(data);
       assert.equal(
         packJson.dependencies.moment,
@@ -56,7 +56,7 @@ dashedName: manage-npm-dependencies-by-understanding-semantic-versioning
         'Wrong version of "moment". It should be 2.10.2'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -1,4 +1,7 @@
-html, body, ul, ol {
+html,
+body,
+ul,
+ol {
   margin: 0px;
   padding: 0px;
 }
@@ -11,7 +14,8 @@ html, body, ul, ol {
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   background: #efefef;
 }
@@ -27,7 +31,7 @@ body {
 }
 .card {
   border: 1px solid lightgray;
-  border-radius: 3px; 
+  border-radius: 3px;
   text-align: center;
   background: white;
 }

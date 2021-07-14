@@ -24,9 +24,6 @@ Test 1
 ```html
 <!DOCTYPE html>
 <html>
---fcc-editable-region--
-
---fcc-editable-region--
+  --fcc-editable-region-- --fcc-editable-region--
 </html>
 ```
-

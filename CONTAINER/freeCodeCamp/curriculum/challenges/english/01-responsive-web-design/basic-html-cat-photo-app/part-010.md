@@ -29,7 +29,7 @@ Your anchor (`a`) element should be below the `p` element. You have them in the 
 
 ```js
 const collection = [...document.querySelectorAll('a, p')].map(
-  (node) => node.nodeName
+  node => node.nodeName
 );
 assert(collection.indexOf('P') < collection.indexOf('A'));
 ```
@@ -68,12 +68,14 @@ assert(
     <main>
       <h2>Cat Photos</h2>
       <!-- TODO: Add link to cat photos -->
---fcc-editable-region--
+      --fcc-editable-region--
       <p>Click here to view more cat photos.</p>
---fcc-editable-region--
-      <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back.">
+      --fcc-editable-region--
+      <img
+        src="https://bit.ly/fcc-relaxing-cat"
+        alt="A cute orange cat lying on its back."
+      />
     </main>
   </body>
 </html>
 ```
-

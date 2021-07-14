@@ -13,10 +13,10 @@ dashedName: use-a-mixin-to-add-common-behavior-between-unrelated-objects
 对于不相关的对象，更好的方法是使用 <dfn>mixins</dfn>。 mixin 允许其他对象使用函数集合。
 
 ```js
-let flyMixin = function(obj) {
-  obj.fly = function() {
-    console.log("Flying, wooosh!");
-  }
+let flyMixin = function (obj) {
+  obj.fly = function () {
+    console.log('Flying, wooosh!');
+  };
 };
 ```
 
@@ -24,12 +24,12 @@ let flyMixin = function(obj) {
 
 ```js
 let bird = {
-  name: "Donald",
+  name: 'Donald',
   numLegs: 2
 };
 
 let plane = {
-  model: "777",
+  model: '777',
   numPassengers: 524
 };
 
@@ -78,13 +78,13 @@ assert(typeof boat.glide === 'function');
 
 ```js
 let bird = {
-  name: "Donald",
+  name: 'Donald',
   numLegs: 2
 };
 
 let boat = {
-  name: "Warrior",
-  type: "race-boat"
+  name: 'Warrior',
+  type: 'race-boat'
 };
 
 // Only change code below this line
@@ -94,15 +94,15 @@ let boat = {
 
 ```js
 let bird = {
-  name: "Donald",
+  name: 'Donald',
   numLegs: 2
 };
 
 let boat = {
-  name: "Warrior",
-  type: "race-boat"
+  name: 'Warrior',
+  type: 'race-boat'
 };
-function glideMixin (obj) {
+function glideMixin(obj) {
   obj.glide = () => 'Gliding!';
 }
 

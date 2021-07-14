@@ -1,19 +1,18 @@
-
 /* Minimum Priority Queue
-* It is a part of heap data structure
-* A heap is a specific tree based data structure
-* in which all the nodes of tree are in a specific order.
-* that is the children are arranged in some
-* respect of their parents, can either be greater
-* or less than the parent. This makes it a min priority queue
-* or max priority queue.
-*/
+ * It is a part of heap data structure
+ * A heap is a specific tree based data structure
+ * in which all the nodes of tree are in a specific order.
+ * that is the children are arranged in some
+ * respect of their parents, can either be greater
+ * or less than the parent. This makes it a min priority queue
+ * or max priority queue.
+ */
 
 // Functions: insert, delete, peek, isEmpty, print, heapSort, sink
 
 class MinPriorityQueue {
   // calls the constructor and initializes the capacity
-  constructor (c) {
+  constructor(c) {
     this.heap = []
     this.capacity = c
     this.size = 0
@@ -21,7 +20,7 @@ class MinPriorityQueue {
 
   // inserts the key at the end and rearranges it
   // so that the binary heap is in appropriate order
-  insert (key) {
+  insert(key) {
     if (this.isFull()) return
     this.heap[this.size + 1] = key
     let k = this.size + 1
@@ -37,37 +36,37 @@ class MinPriorityQueue {
   }
 
   // returns the highest priority value
-  peek () {
+  peek() {
     return this.heap[1]
   }
 
   // returns boolean value whether the heap is empty or not
-  isEmpty () {
+  isEmpty() {
     return this.size === 0
   }
 
   // returns boolean value whether the heap is full or not
-  isFull () {
+  isFull() {
     if (this.size === this.capacity) return true
     return false
   }
 
   // prints the heap
-  print () {
+  print() {
     console.log(this.heap.slice(1))
   }
 
   // heap sorting can be done by performing
   // delete function to the number of times of the size of the heap
   // it returns reverse sort because it is a min priority queue
-  heapSort () {
+  heapSort() {
     for (let i = 1; i < this.capacity; i++) {
       this.delete()
     }
   }
 
   // this function reorders the heap after every delete function
-  sink () {
+  sink() {
     let k = 1
     while (2 * k <= this.size || 2 * k + 1 <= this.size) {
       let minIndex
@@ -85,8 +84,7 @@ class MinPriorityQueue {
           this.heap[k] > this.heap[2 * k] ||
           this.heap[k] > this.heap[2 * k + 1]
         ) {
-          minIndex =
-            this.heap[2 * k] < this.heap[2 * k + 1] ? 2 * k : 2 * k + 1
+          minIndex = this.heap[2 * k] < this.heap[2 * k + 1] ? 2 * k : 2 * k + 1
         } else {
           minIndex = k
         }
@@ -99,7 +97,7 @@ class MinPriorityQueue {
   }
 
   // deletes the highest priority value from the heap
-  delete () {
+  delete() {
     const min = this.heap[1]
     this.heap[1] = this.heap[this.size]
     this.heap[this.size] = min

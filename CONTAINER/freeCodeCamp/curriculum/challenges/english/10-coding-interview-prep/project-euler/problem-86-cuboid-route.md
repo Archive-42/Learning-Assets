@@ -38,7 +38,6 @@ assert.strictEqual(cuboidRoute(), 1818);
 
 ```js
 function cuboidRoute() {
-
   return true;
 }
 

@@ -153,15 +153,15 @@ class Set {
   size() {
     return this.length;
   }
-  // This is our union method 
+  // This is our union method
   union(set) {
     const newSet = new Set();
     this.values().forEach(value => {
       newSet.add(value);
-    })
+    });
     set.values().forEach(value => {
       newSet.add(value);
-    })
+    });
 
     return newSet;
   }
@@ -183,7 +183,7 @@ class Set {
       if (largeSet.dictionary[value]) {
         newSet.add(value);
       }
-    })
+    });
 
     return newSet;
   }
@@ -195,7 +195,7 @@ class Set {
       if (!set.dictionary[value]) {
         newSet.add(value);
       }
-    })
+    });
 
     return newSet;
   }
@@ -250,10 +250,10 @@ class Set {
     const newSet = new Set();
     this.values().forEach(value => {
       newSet.add(value);
-    })
+    });
     set.values().forEach(value => {
       newSet.add(value);
-    })
+    });
 
     return newSet;
   }
@@ -275,10 +275,10 @@ class Set {
       if (largeSet.dictionary[value]) {
         newSet.add(value);
       }
-    })
+    });
 
     return newSet;
-  }  
+  }
 
   difference(set) {
     const newSet = new Set();
@@ -287,16 +287,16 @@ class Set {
       if (!set.dictionary[value]) {
         newSet.add(value);
       }
-    })
+    });
 
     return newSet;
   }
 
   isSubsetOf(set) {
-    for(const value of this.values()){
-      if(!set.dictionary[value]) return false;
+    for (const value of this.values()) {
+      if (!set.dictionary[value]) return false;
     }
-    return true
+    return true;
   }
 }
 ```

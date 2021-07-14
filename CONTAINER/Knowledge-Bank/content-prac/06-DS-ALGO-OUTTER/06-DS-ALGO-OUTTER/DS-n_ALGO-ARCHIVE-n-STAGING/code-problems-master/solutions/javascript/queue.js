@@ -1,13 +1,13 @@
-var Queue = module.exports = function () {
-  this.head   = null;
-  this.tail   = null;
+var Queue = (module.exports = function () {
+  this.head = null;
+  this.tail = null;
   this.length = 0;
-};
+});
 
 Queue.prototype.enqueue = function (value) {
   var node = {
     value: value,
-    next: null
+    next: null,
   };
 
   // If there is currently no head node, set it to the current node.
@@ -24,11 +24,13 @@ Queue.prototype.enqueue = function (value) {
   // Update the tail to be the next node.
   this.tail = node;
 
-  return this.length += 1;
+  return (this.length += 1);
 };
 
 Queue.prototype.dequeue = function () {
-  if (!this.head) { return; }
+  if (!this.head) {
+    return;
+  }
 
   var node = this.head;
 
@@ -38,7 +40,9 @@ Queue.prototype.dequeue = function () {
   node.next = null;
 
   // Remove the tail node if we have no more head node.
-  if (!this.head) { this.tail = null; }
+  if (!this.head) {
+    this.tail = null;
+  }
 
   this.length -= 1;
 

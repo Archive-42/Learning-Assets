@@ -15,9 +15,9 @@ dashedName: check-for-all-or-none
 例如，美式英语和英式英语略有不同，可以使用问号来匹配两种拼写。
 
 ```js
-let american = "color";
-let british = "colour";
-let rainbowRegex= /colou?r/;
+let american = 'color';
+let british = 'colour';
+let rainbowRegex = /colou?r/;
 rainbowRegex.test(american);
 rainbowRegex.test(british);
 ```
@@ -63,7 +63,7 @@ assert(!favRegex.test('fav'));
 ## --seed-contents--
 
 ```js
-let favWord = "favorite";
+let favWord = 'favorite';
 let favRegex = /change/; // Change this line
 let result = favRegex.test(favWord);
 ```
@@ -71,7 +71,7 @@ let result = favRegex.test(favWord);
 # --solutions--
 
 ```js
-let favWord = "favorite";
+let favWord = 'favorite';
 let favRegex = /favou?r/;
 let result = favRegex.test(favWord);
 ```

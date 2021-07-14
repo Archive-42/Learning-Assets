@@ -19,13 +19,13 @@ Modify the `removeById` function to delete one person by the person's `_id`. You
 Deleting an item should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.post(getUserInput('url') + '/_api/remove-one-person', {
     name: 'Jason Bourne',
     age: 36,
     favoriteFoods: ['apples']
   }).then(
-    (data) => {
+    data => {
       assert.equal(data.name, 'Jason Bourne', 'item.name is not what expected');
       assert.equal(data.age, 36, 'item.age is not what expected');
       assert.deepEqual(
@@ -36,7 +36,7 @@ Deleting an item should succeed
       assert.equal(data.__v, 0);
       assert.equal(data.count, 0, 'the db items count is not what expected');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

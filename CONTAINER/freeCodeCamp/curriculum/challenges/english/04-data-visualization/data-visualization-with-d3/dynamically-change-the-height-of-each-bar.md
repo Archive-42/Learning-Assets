@@ -11,9 +11,7 @@ dashedName: dynamically-change-the-height-of-each-bar
 The height of each bar can be set to the value of the data point in the array, similar to how the `x` value was set dynamically.
 
 ```js
-selection.attr("property", (d, i) => {
-
-})
+selection.attr('property', (d, i) => {});
 ```
 
 Here `d` would be the data point value, and `i` would be the index of the data point in the array.
@@ -92,25 +90,24 @@ assert($('rect').eq(8).attr('height') == '27');
     const w = 500;
     const h = 100;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("rect")
-       .data(dataset)
-       .enter()
-       .append("rect")
-       .attr("x", (d, i) => i * 30)
-       .attr("y", 0)
-       .attr("width", 25)
-       .attr("height", (d, i) => {
-         // Add your code below this line
-
-
-
-         // Add your code above this line
-       });
+    svg
+      .selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('x', (d, i) => i * 30)
+      .attr('y', 0)
+      .attr('width', 25)
+      .attr('height', (d, i) => {
+        // Add your code below this line
+        // Add your code above this line
+      });
   </script>
 </body>
 ```
@@ -125,21 +122,23 @@ assert($('rect').eq(8).attr('height') == '27');
     const w = 500;
     const h = 100;
 
-    const svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height", h);
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', w)
+      .attr('height', h);
 
-    svg.selectAll("rect")
-       .data(dataset)
-       .enter()
-       .append("rect")
-       .attr("x", (d, i) => i * 30)
-       .attr("y", 0)
-       .attr("width", 25)
-       .attr("height", (d, i) => {
-         return d * 3
-       });
+    svg
+      .selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('x', (d, i) => i * 30)
+      .attr('y', 0)
+      .attr('width', 25)
+      .attr('height', (d, i) => {
+        return d * 3;
+      });
   </script>
 </body>
 ```

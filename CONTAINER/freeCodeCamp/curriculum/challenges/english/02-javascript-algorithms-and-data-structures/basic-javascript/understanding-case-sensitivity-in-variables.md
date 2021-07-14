@@ -11,7 +11,7 @@ dashedName: understanding-case-sensitivity-in-variables
 
 In JavaScript all variables and function names are case sensitive. This means that capitalization matters.
 
-`MYVAR` is not the same as `MyVar` nor `myvar`. It is possible to have multiple distinct variables with the same name but different casing. It is strongly recommended that for the sake of clarity, you *do not* use this language feature.
+`MYVAR` is not the same as `MyVar` nor `myvar`. It is possible to have multiple distinct variables with the same name but different casing. It is strongly recommended that for the sake of clarity, you _do not_ use this language feature.
 
 **Best Practice**
 
@@ -83,7 +83,7 @@ var TitleCaseOver;
 
 // Variable assignments
 STUDLYCAPVAR = 10;
-PRoperCAmelCAse = "A String";
+PRoperCAmelCAse = 'A String';
 tITLEcASEoVER = 9000;
 ```
 
@@ -95,6 +95,6 @@ var properCamelCase;
 var titleCaseOver;
 
 studlyCapVar = 10;
-properCamelCase = "A String";
+properCamelCase = 'A String';
 titleCaseOver = 9000;
 ```

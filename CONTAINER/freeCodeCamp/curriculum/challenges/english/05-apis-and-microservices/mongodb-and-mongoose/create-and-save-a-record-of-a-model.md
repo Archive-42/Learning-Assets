@@ -18,7 +18,7 @@ Within the `createAndSavePerson` function, create a document instance using the 
 /* Example */
 
 // ...
-person.save(function(err, data) {
+person.save(function (err, data) {
   //   ...do your stuff here...
 });
 ```
@@ -28,9 +28,9 @@ person.save(function(err, data) {
 Creating and saving a db item should succeed
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/create-and-save-person').then(
-    (data) => {
+    data => {
       assert.isString(data.name, '"item.name" should be a String');
       assert.isNumber(data.age, '28', '"item.age" should be a Number');
       assert.isArray(
@@ -39,7 +39,7 @@ Creating and saving a db item should succeed
       );
       assert.equal(data.__v, 0, 'The db item should be not previously edited');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

@@ -23,13 +23,13 @@ Note: Configuring HTTPS on a custom website requires the acquisition of a domain
 helmet.hsts() middleware should be mounted correctly
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       assert.include(data.appStack, 'hsts');
       assert.property(data.headers, 'strict-transport-security');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -38,15 +38,15 @@ helmet.hsts() middleware should be mounted correctly
 maxAge should be equal to 7776000 s (90 days)
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/app-info').then(
-    (data) => {
+    data => {
       assert.match(
         data.headers['strict-transport-security'],
         /^max-age=7776000;?/
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

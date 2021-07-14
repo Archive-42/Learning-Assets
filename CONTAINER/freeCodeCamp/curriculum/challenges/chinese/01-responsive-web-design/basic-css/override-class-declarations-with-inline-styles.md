@@ -18,7 +18,7 @@ dashedName: override-class-declarations-with-inline-styles
 使用行内样式尝试让 `h1` 的字体颜色变白。 记住，内联样式看起来是像这样：
 
 ```html
-<h1 style="color: green;">
+<h1 style="color: green;"></h1>
 ```
 
 `h1` 元素应继续保留 `blue-text` 和 `pink-text` 这两个 class。
@@ -98,5 +98,7 @@ assert($('h1').css('color') === 'rgb(255, 255, 255)');
     color: blue;
   }
 </style>
-<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">
+  Hello World!
+</h1>
 ```

@@ -41,16 +41,16 @@ socket.on('user', data => {
 事件 `'user'` 应该包含，name、 currentUsers 和 connected。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /io.emit.*('|")user\1.*name.*currentUsers.*connected/gis,
         'You should have an event emitted named user sending name, currentUsers, and connected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -59,9 +59,9 @@ socket.on('user', data => {
 客户端应处理和显示 `'user'` 中的新数据。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/client.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.on.*('|")user\1[^]*num-users/gi,
@@ -73,7 +73,7 @@ socket.on('user', data => {
         'You should append a list item to "#messages" on your client within the "user" event listener to announce a user came or went'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

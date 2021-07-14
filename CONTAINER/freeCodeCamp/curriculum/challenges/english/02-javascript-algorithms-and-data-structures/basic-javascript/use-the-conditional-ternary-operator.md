@@ -16,11 +16,10 @@ The following function uses an `if/else` statement to check a condition:
 
 ```js
 function findGreater(a, b) {
-  if(a > b) {
-    return "a is greater";
-  }
-  else {
-    return "b is greater";
+  if (a > b) {
+    return 'a is greater';
+  } else {
+    return 'b is greater';
   }
 }
 ```
@@ -29,7 +28,7 @@ This can be re-written using the conditional operator:
 
 ```js
 function findGreater(a, b) {
-  return a > b ? "a is greater" : "b is greater";
+  return a > b ? 'a is greater' : 'b is greater';
 }
 ```
 
@@ -68,9 +67,7 @@ assert(checkEqual(1, -1) === 'Not Equal');
 ## --seed-contents--
 
 ```js
-function checkEqual(a, b) {
-
-}
+function checkEqual(a, b) {}
 
 checkEqual(1, 2);
 ```
@@ -79,6 +76,6 @@ checkEqual(1, 2);
 
 ```js
 function checkEqual(a, b) {
-  return a === b ? "Equal" : "Not Equal";
+  return a === b ? 'Equal' : 'Not Equal';
 }
 ```

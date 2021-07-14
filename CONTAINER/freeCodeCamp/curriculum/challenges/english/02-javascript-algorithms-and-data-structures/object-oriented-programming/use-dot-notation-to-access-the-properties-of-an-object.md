@@ -12,7 +12,7 @@ The last challenge created an object with various properties. Now you'll see how
 
 ```js
 let duck = {
-  name: "Aflac",
+  name: 'Aflac',
   numLegs: 2
 };
 console.log(duck.name);
@@ -44,7 +44,7 @@ assert(/console.log\(.*dog\.numLegs.*\)/g.test(code));
 
 ```js
 let dog = {
-  name: "Spot",
+  name: 'Spot',
   numLegs: 4
 };
 // Only change code below this line
@@ -54,7 +54,7 @@ let dog = {
 
 ```js
 let dog = {
-  name: "Spot",
+  name: 'Spot',
   numLegs: 4
 };
 console.log(dog.name);

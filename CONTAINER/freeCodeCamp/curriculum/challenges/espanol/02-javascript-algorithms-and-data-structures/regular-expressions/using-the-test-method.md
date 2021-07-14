@@ -15,7 +15,7 @@ Si quieres encontrar la palabra `the` en la cadena `The dog chased the cat`, pue
 JavaScript tiene múltiples formas de usar expresiones regulares. Una forma de probar una expresión regular es usando el método `.test()`. El método `.test()` toma la expresión regular, la aplica a una cadena (que se coloca dentro de los paréntesis), y devuelve `true` o `false` si tu patrón encuentra algo o no.
 
 ```js
-let testStr = "freeCodeCamp";
+let testStr = 'freeCodeCamp';
 let testRegex = /Code/;
 testRegex.test(testStr);
 ```
@@ -45,7 +45,7 @@ assert(result === true);
 ## --seed-contents--
 
 ```js
-let myString = "Hello, World!";
+let myString = 'Hello, World!';
 let myRegex = /Hello/;
 let result = myRegex; // Change this line
 ```
@@ -53,7 +53,7 @@ let result = myRegex; // Change this line
 # --solutions--
 
 ```js
-let myString = "Hello, World!";
+let myString = 'Hello, World!';
 let myRegex = /Hello/;
 let result = myRegex.test(myString); // Change this line
 ```

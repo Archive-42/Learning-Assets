@@ -3,9 +3,9 @@ Sigue estas instrucciones para configurar freeCodeCamp localmente en tu sistema.
 Algunos de estos flujos de trabajo de contribución – como corregir errores en el código base o currículum – necesitan que ejecutes freeCodeCamp localmente en tu ordenador.
 
 > [!TIP] Si no estás interesado en configurar freeCodeCamp localmente, considera usar Gitpod, un entorno dev en línea gratuito.
-> 
+>
 > [![Abrir en Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/freeCodeCamp/freeCodeCamp)
-> 
+>
 > (Comienza un entorno de desarrollo listo para codificar a freeCodeCamp en tu navegador.)
 
 ### Cómo preparar su máquina local
@@ -62,7 +62,7 @@ Una vez que tenga los requisitos previos instalados, necesitará preparar su ent
 Esto es esencial, ya que te permite trabajar en tu propia copia de freeCodeCamp en GitHub, o para descargar (clonar) su repositorio para trabajar localmente. Después, podrá solicitar cambios para que se muestren en el repositorio principal de su bifurcación (fork) a través de una pull request (PR).
 
 > [!TIP] El repositorio principal en `https://github.com/freeCodeCamp/freeCodeCamp` es frecuentemente conocido como el repositorio `upstream`.
-> 
+>
 > Tu fork en `https://github.com/YOUR_USER_NAME/freeCodeCamp` suele referirse como el repositorio `origin`. `YOUR_USER_NAME` será remplazado con tu nombre de usuario de GitHub.
 
 **Sigue estos pasos para fork el repositorio `https://github.com/freeCodeCamp/freeCodeCamp`:**
@@ -87,7 +87,7 @@ Esto es esencial, ya que te permite trabajar en tu propia copia de freeCodeCamp 
 [Clonando](https://help.github.com/articles/cloning-a-repository/) es donde **descarga** una copia de un repositorio desde una ubicación `remota` que es propiedad de usted o de otra persona. En su caso, esta ubicación remota es su `fork` del repositorio de freeCodeCamp que debería estar disponible en `https://github.com/YOUR_USER_NAME/freeCodeCamp`. (`YOUR_USER_NAME` would be replaced with your GitHub user name.)
 
 > [!WARNING] If you are working on a WSL2 Linux Distro, you might get performance and stability issues by running this project in a folder which is shared between Windows and WSL2 (e.g. `/mnt/c/Users/`). Therefore we recommend to clone this repo into a folder which is mainly used by your WSL2 Linux Distro and not directly shared with Windows (e.g. `~/PROJECTS/`).
-> 
+>
 > See [this GitHub Issue](https://github.com/freeCodeCamp/freeCodeCamp/issues/40632) for further Information about this problem.
 
 Ejecutar estos comandos en su máquina local:
@@ -154,9 +154,9 @@ Si tiene problemas, primero realice una búsqueda web para su problema y comprue
 And as always, feel free to ask questions on the ['Contributors' category on our forum](https://forum.freecodecamp.org/c/contributors) or [our chat server](https://chat.freecodecamp.org/home).
 
 > [!TIP] You may skip running freeCodeCamp locally if you are simply editing files. For instance, performing a `rebase`, or resolving `merge` conflicts.
-> 
+>
 > You can always return to this part of the instructions later. You should **only** skip this step if you do not need to run the apps on your machine.
-> 
+>
 > [Skip to making changes](#making-changes-locally).
 
 ### Configurando dependencias
@@ -176,7 +176,7 @@ cp sample.env .env
 copy sample.env .env
 ```
 
-Las llaves dentro del archivo `.env`  _no_ requieren ser cambiadas para correr la aplicación de forma local. Puedes dejar los valores por defecto copiados desde `sample.env` tal cual.
+Las llaves dentro del archivo `.env` _no_ requieren ser cambiadas para correr la aplicación de forma local. Puedes dejar los valores por defecto copiados desde `sample.env` tal cual.
 
 > [!TIP] Keep in mind if you want to use services like Auth0 or Algolia, you'll have to acquire your own API keys for those services and edit the entries accordingly in the `.env` file.
 
@@ -281,7 +281,7 @@ Siga estos pasos:
 2. Sync the latest changes from the freeCodeCamp upstream `main` branch to your local main branch:
 
    > [!WARNING] If you have any outstanding pull request that you made from the `main` branch of your fork, you will lose them at the end of this step.
-   > 
+   >
    > Debería asegurarse de que su pull request está fusionado por un moderador antes de realizar este paso. To avoid this scenario, you should **always** work on a branch other than the `main`.
 
    Este paso **sincronizará los últimos cambios** desde el repositorio principal de freeCodeCamp. It is important that you rebase your branch on top of the latest `upstream/main` as often as possible to avoid conflicts later.
@@ -478,7 +478,7 @@ It is recommended to research your specific issue on resources such as Google, S
 Si estás en un sistema operativo diferente y/o todavía tienes problemas, consulta [obtener ayuda](#getting-help).
 
 > [!WARNING]
-> 
+>
 > Please avoid creating GitHub issues for prerequisite issues. They are out of the scope of this project.
 
 ### Issues with the UI, Fonts, build errors, etc.

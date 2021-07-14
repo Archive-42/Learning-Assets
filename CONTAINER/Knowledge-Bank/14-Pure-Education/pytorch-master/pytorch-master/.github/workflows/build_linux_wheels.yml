@@ -29,8 +29,7 @@ jobs:
     needs: generate-build-matrix
     runs-on: linux.2xlarge
     strategy:
-      matrix:
-        ${{ fromJson(needs.generate-build-matrix.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.generate-build-matrix.outputs.matrix) }}
     container:
       image: ${{ matrix.wheel_container_image }}
     env:

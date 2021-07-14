@@ -17,25 +17,25 @@ Bird.prototype.numLegs = 2;
 需要添加多个属性的，这未免会显得拖沓。
 
 ```js
-Bird.prototype.eat = function() {
-  console.log("nom nom nom");
-}
+Bird.prototype.eat = function () {
+  console.log('nom nom nom');
+};
 
-Bird.prototype.describe = function() {
-  console.log("My name is " + this.name);
-}
+Bird.prototype.describe = function () {
+  console.log('My name is ' + this.name);
+};
 ```
 
 一种更有效的方法就是给对象的 `prototype` 设置为一个已经包含了属性的新对象。 这样一来，所有属性都可以一次性添加进来：
 
 ```js
 Bird.prototype = {
-  numLegs: 2, 
-  eat: function() {
-    console.log("nom nom nom");
+  numLegs: 2,
+  eat: function () {
+    console.log('nom nom nom');
   },
-  describe: function() {
-    console.log("My name is " + this.name);
+  describe: function () {
+    console.log('My name is ' + this.name);
   }
 };
 ```
@@ -81,7 +81,6 @@ function Dog(name) {
 
 Dog.prototype = {
   // Only change code below this line
-
 };
 ```
 
@@ -92,11 +91,11 @@ function Dog(name) {
   this.name = name;
 }
 Dog.prototype = {
-numLegs: 4,
-  eat () {
+  numLegs: 4,
+  eat() {
     console.log('nom nom nom');
   },
-  describe () {
+  describe() {
     console.log('My name is ' + this.name);
   }
 };

@@ -38,7 +38,6 @@ assert.strictEqual(orderedFractions(), 428570);
 
 ```js
 function orderedFractions() {
-
   return true;
 }
 

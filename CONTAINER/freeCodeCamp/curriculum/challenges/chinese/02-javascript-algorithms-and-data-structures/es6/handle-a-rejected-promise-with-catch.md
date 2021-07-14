@@ -11,9 +11,7 @@ dashedName: handle-a-rejected-promise-with-catch
 当 promise 失败时会调用 `catch` 方法。 当 promise 的 `reject` 方法执行时会直接调用。 用法如下：
 
 ```js
-myPromise.catch(error => {
-
-});
+myPromise.catch(error => {});
 ```
 
 `error` 是传入 `reject` 方法的参数。
@@ -54,7 +52,9 @@ assert(
 ## --after-user-code--
 
 ```js
-const errorIsParameter = /\.catch\((function\(error\){|error|\(error\)=>)/.test(__helpers.removeWhiteSpace(code));
+const errorIsParameter = /\.catch\((function\(error\){|error|\(error\)=>)/.test(
+  __helpers.removeWhiteSpace(code)
+);
 ```
 
 ## --seed-contents--
@@ -64,10 +64,10 @@ const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer is set to false to represent an unsuccessful response from a server
   let responseFromServer = false;
 
-  if(responseFromServer) {
-    resolve("We got the data");
-  } else {  
-    reject("Data not received");
+  if (responseFromServer) {
+    resolve('We got the data');
+  } else {
+    reject('Data not received');
   }
 });
 
@@ -83,10 +83,10 @@ const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer is set to false to represent an unsuccessful response from a server
   let responseFromServer = false;
 
-  if(responseFromServer) {
-    resolve("We got the data");
-  } else {  
-    reject("Data not received");
+  if (responseFromServer) {
+    resolve('We got the data');
+  } else {
+    reject('Data not received');
   }
 });
 

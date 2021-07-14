@@ -1,33 +1,31 @@
-const api = require('./api')
+const api = require("./api");
 
 const showPostsForCurrentUser = (userId, cb) => {
-  api.getPostsForUser(userId, posts => {
-    const postTemplates = posts.map(post => {
+  api.getPostsForUser(userId, (posts) => {
+    const postTemplates = posts.map((post) => {
       return `
       <div class="post">
         ${post.title}
         ${post.body}
         ${post.createdBy}
-      </div>`
-    })
-    cb(postTemplates)
-  })
-}
+      </div>`;
+    });
+    cb(postTemplates);
+  });
+};
 
 const showUserProfile = (userId, cb) => {
-  api.getUserById(userId, user => {
+  api.getUserById(userId, (user) => {
     const profile = `
       <div>
         ${user.name}
       </div>
-    `
-    cb(profile)
-  })
-}
+    `;
+    cb(profile);
+  });
+};
 
 module.exports = {
   showPostsForCurrentUser,
-  showUserProfile
-}
-
-
+  showUserProfile,
+};

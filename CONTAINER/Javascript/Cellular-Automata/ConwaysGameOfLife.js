@@ -9,16 +9,16 @@ The Game of Life is a cellular automaton devised by the British mathematician Jo
 */
 
 /*
-*  Doctests
-*
-*  > newGeneration([[0, 1, 0], [0, 1, 0], [0, 1, 0]])
-*  [ [ 0, 0, 0 ], [ 1, 1, 1 ], [ 0, 0, 0 ] ]
-*/
+ *  Doctests
+ *
+ *  > newGeneration([[0, 1, 0], [0, 1, 0], [0, 1, 0]])
+ *  [ [ 0, 0, 0 ], [ 1, 1, 1 ], [ 0, 0, 0 ] ]
+ */
 
 /*
-*  Generates the next generation for a given state of Conway's Game of Life.
-*/
-function newGeneration (cells) {
+ *  Generates the next generation for a given state of Conway's Game of Life.
+ */
+function newGeneration(cells) {
   const nextGeneration = []
   for (let i = 0; i < cells.length; i++) {
     const nextGenerationRow = []
@@ -27,16 +27,21 @@ function newGeneration (cells) {
       let neighbourCount = 0
       if (i > 0 && j > 0) neighbourCount += cells[i - 1][j - 1]
       if (i > 0) neighbourCount += cells[i - 1][j]
-      if (i > 0 && j < cells[i].length - 1) neighbourCount += cells[i - 1][j + 1]
+      if (i > 0 && j < cells[i].length - 1)
+        neighbourCount += cells[i - 1][j + 1]
       if (j > 0) neighbourCount += cells[i][j - 1]
       if (j < cells[i].length - 1) neighbourCount += cells[i][j + 1]
       if (i < cells.length - 1 && j > 0) neighbourCount += cells[i + 1][j - 1]
       if (i < cells.length - 1) neighbourCount += cells[i + 1][j]
-      if (i < cells.length - 1 && j < cells[i].length - 1) neighbourCount += cells[i + 1][j + 1]
+      if (i < cells.length - 1 && j < cells[i].length - 1)
+        neighbourCount += cells[i + 1][j + 1]
 
       // Decide whether the cell is alive or dead
       const alive = cells[i][j] === 1
-      if ((alive && neighbourCount >= 2 && neighbourCount <= 3) || (!alive && neighbourCount === 3)) {
+      if (
+        (alive && neighbourCount >= 2 && neighbourCount <= 3) ||
+        (!alive && neighbourCount === 3)
+      ) {
         nextGenerationRow.push(1)
       } else {
         nextGenerationRow.push(0)
@@ -48,13 +53,13 @@ function newGeneration (cells) {
 }
 
 /*
-*  utility function to display a series of generations in the console
-*/
-async function animate (cells, steps) {
+ *  utility function to display a series of generations in the console
+ */
+async function animate(cells, steps) {
   /*
-  * utility function to print one frame
-  */
-  function printCells (cells) {
+   * utility function to print one frame
+   */
+  function printCells(cells) {
     console.clear()
     for (let i = 0; i < cells.length; i++) {
       let line = ''
@@ -69,7 +74,7 @@ async function animate (cells, steps) {
   printCells(cells)
 
   for (let i = 0; i < steps; i++) {
-    await new Promise(resolve => setTimeout(resolve, 250)) // sleep
+    await new Promise((resolve) => setTimeout(resolve, 250)) // sleep
     cells = newGeneration(cells)
     printCells(cells)
   }

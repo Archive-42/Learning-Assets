@@ -1,15 +1,15 @@
 /* Queue
-* A Queue is a data structure that allows you to add an element to the end of
-* a list and remove the item at the front. A queue follows a "First In First Out"
-* system, where the first item to enter the queue is the first to be removed. This
-* implementation uses an array to store the queue.
-*/
+ * A Queue is a data structure that allows you to add an element to the end of
+ * a list and remove the item at the front. A queue follows a "First In First Out"
+ * system, where the first item to enter the queue is the first to be removed. This
+ * implementation uses an array to store the queue.
+ */
 
 // Functions: enqueue, dequeue, peek, view, length
 
 const Queue = (function () {
   // constructor
-  function Queue () {
+  function Queue() {
     // This is the array representation of the queue
     this.queue = []
   }
@@ -48,7 +48,7 @@ const Queue = (function () {
   }
 
   return Queue
-}())
+})()
 
 // Implementation
 const myQueue = new Queue()

@@ -35,11 +35,10 @@ assert.deepEqual(maximumSubsequence([1, 2, -1, 3, 10, -10]), [1, 2, -1, 3, 10]);
 `maximumSubsequence([ 0, 8, 10, -2, -4, -1, -5, -3 ])` should return `[ 0, 8, 10 ]`.
 
 ```js
-assert.deepEqual(maximumSubsequence([0, 8, 10, -2, -4, -1, -5, -3]), [
-  0,
-  8,
-  10
-]);
+assert.deepEqual(
+  maximumSubsequence([0, 8, 10, -2, -4, -1, -5, -3]),
+  [0, 8, 10]
+);
 ```
 
 `maximumSubsequence([ 9, 9, -10, 1 ])` should return `[ 9, 9 ]`.
@@ -63,14 +62,10 @@ assert.deepEqual(maximumSubsequence([-3, 6, -1, 4, -4, -6]), [6, -1, 4]);
 `maximumSubsequence([ -1, -2, 3, 5, 6, -2, -1, 4, -4, 2, -1 ])` should return `[ 3, 5, 6, -2, -1, 4 ]`.
 
 ```js
-assert.deepEqual(maximumSubsequence([-1, -2, 3, 5, 6, -2, -1, 4, -4, 2, -1]), [
-  3,
-  5,
-  6,
-  -2,
-  -1,
-  4
-]);
+assert.deepEqual(
+  maximumSubsequence([-1, -2, 3, 5, 6, -2, -1, 4, -4, 2, -1]),
+  [3, 5, 6, -2, -1, 4]
+);
 ```
 
 # --seed--
@@ -78,9 +73,7 @@ assert.deepEqual(maximumSubsequence([-1, -2, 3, 5, 6, -2, -1, 4, -4, 2, -1]), [
 ## --seed-contents--
 
 ```js
-function maximumSubsequence(population) {
-
-}
+function maximumSubsequence(population) {}
 ```
 
 # --solutions--
@@ -88,24 +81,24 @@ function maximumSubsequence(population) {
 ```js
 function maximumSubsequence(population) {
   function sumValues(arr) {
-      var result = 0;
-      for (var i = 0, len = arr.length; i < len; i++) {
-          result += arr[i];
-      }
-      return result;
+    var result = 0;
+    for (var i = 0, len = arr.length; i < len; i++) {
+      result += arr[i];
+    }
+    return result;
   }
   var greatest;
   var maxValue = 0;
 
   for (var i = 0, len = population.length; i < len; i++) {
-      for (var j = i; j <= len; j++) {
-          var subsequence = population.slice(i, j);
-          var value = sumValues(subsequence);
-          if (value > maxValue) {
-              maxValue = value;
-              greatest = subsequence;
-          };
+    for (var j = i; j <= len; j++) {
+      var subsequence = population.slice(i, j);
+      var value = sumValues(subsequence);
+      if (value > maxValue) {
+        maxValue = value;
+        greatest = subsequence;
       }
+    }
   }
 
   return greatest;

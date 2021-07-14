@@ -14,8 +14,8 @@ You can search for the opposite of the `\w` with `\W`. Note, the opposite patter
 
 ```js
 let shortHand = /\W/;
-let numbers = "42%";
-let sentence = "Coding!";
+let numbers = '42%';
+let sentence = 'Coding!';
 numbers.match(shortHand);
 sentence.match(shortHand);
 ```
@@ -78,7 +78,7 @@ assert(
 ## --seed-contents--
 
 ```js
-let quoteSample = "The five boxing wizards jump quickly.";
+let quoteSample = 'The five boxing wizards jump quickly.';
 let nonAlphabetRegex = /change/; // Change this line
 let result = quoteSample.match(nonAlphabetRegex).length;
 ```
@@ -86,7 +86,7 @@ let result = quoteSample.match(nonAlphabetRegex).length;
 # --solutions--
 
 ```js
-let quoteSample = "The five boxing wizards_jump quickly.";
+let quoteSample = 'The five boxing wizards_jump quickly.';
 let nonAlphabetRegex = /\W/g; // Change this line
 let result = quoteSample.match(nonAlphabetRegex).length;
 ```

@@ -29,14 +29,14 @@ Install Helmet version `3.21.3`, then require it. You can install a specific ver
 `helmet` version `3.21.3` should be in `package.json`
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/package.json').then(
-    (data) => {
+    data => {
       const packJson = JSON.parse(data);
       const helmet = packJson.dependencies.helmet;
       assert(helmet === '3.21.3' || helmet === '^3.21.3');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

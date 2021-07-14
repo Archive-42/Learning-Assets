@@ -69,7 +69,7 @@ function addTogether() {
   return false;
 }
 
-addTogether(2,3);
+addTogether(2, 3);
 ```
 
 # --solutions--
@@ -79,7 +79,7 @@ function addTogether() {
   var a = arguments[0];
   if (toString.call(a) !== '[object Number]') return;
   if (arguments.length === 1) {
-    return function(b) {
+    return function (b) {
       if (toString.call(b) !== '[object Number]') return;
       return a + b;
     };

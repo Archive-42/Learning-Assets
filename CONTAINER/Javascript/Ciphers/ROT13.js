@@ -4,14 +4,16 @@
  * @return {String} - decrypted string
  */
 const transcipher = (text) => {
-  const originalCharacterList = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-  const toBeMappedCharaterList = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
-  const index = x => originalCharacterList.indexOf(x)
-  const replace = x => index(x) > -1 ? toBeMappedCharaterList[index(x)] : x
+  const originalCharacterList =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+  const toBeMappedCharaterList =
+    'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+  const index = (x) => originalCharacterList.indexOf(x)
+  const replace = (x) => (index(x) > -1 ? toBeMappedCharaterList[index(x)] : x)
   return text.split('').map(replace).join('')
 }
 
-(() => {
+;(() => {
   const messageToBeEncrypted = 'The quick brown fox jumps over the lazy dog'
   console.log(`Original Text = "${messageToBeEncrypted}"`)
   const rot13CipheredText = transcipher(messageToBeEncrypted)

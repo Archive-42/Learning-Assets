@@ -11,7 +11,7 @@ dashedName: use-headings-to-show-hierarchical-relationships-of-content
 
 Headings (`h1` through `h6` elements) are workhorse tags that help provide structure and labeling to your content. Screen readers can be set to read only the headings on a page so the user gets a summary. This means it is important for the heading tags in your markup to have semantic meaning and relate to each other, not be picked merely for their size values.
 
-*Semantic meaning* means that the tag you use around content indicates the type of information it contains.
+_Semantic meaning_ means that the tag you use around content indicates the type of information it contains.
 
 If you were writing a paper with an introduction, a body, and a conclusion, it wouldn't make much sense to put the conclusion as a subsection of the body in your outline. It should be its own section. Similarly, the heading tags in a webpage need to go in order and indicate the hierarchical relationships of your content.
 

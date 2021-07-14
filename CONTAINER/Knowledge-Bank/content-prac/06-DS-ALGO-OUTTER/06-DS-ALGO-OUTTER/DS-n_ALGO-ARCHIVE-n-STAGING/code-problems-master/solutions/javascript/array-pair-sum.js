@@ -1,6 +1,6 @@
 module.exports = function (k, array) {
-  var hash  = {},
-      pairs = [];
+  var hash = {},
+    pairs = [];
 
   // Loop through the array once, storing the results in an object for a
   // time complexity of O(n) - the naive solution consists of two for loops

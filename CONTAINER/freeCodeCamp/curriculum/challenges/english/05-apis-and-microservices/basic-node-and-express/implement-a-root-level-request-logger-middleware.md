@@ -32,15 +32,15 @@ Build a simple logger. For every request, it should log to the console a string 
 Root level logger middleware should be active
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/root-middleware-logger').then(
-    (data) => {
+    data => {
       assert.isTrue(
         data.passed,
         'root-level logger is not working as expected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

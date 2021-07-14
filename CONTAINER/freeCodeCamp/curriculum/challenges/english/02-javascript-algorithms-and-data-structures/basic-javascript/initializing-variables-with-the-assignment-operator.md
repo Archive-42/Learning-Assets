@@ -34,7 +34,15 @@ assert(/var\s+a\s*=\s*9(\s*;?\s*)$/.test(code));
 ## --after-user-code--
 
 ```js
-if(typeof a !== 'undefined') {(function(a){return "a = " + a;})(a);} else { (function() {return 'a is undefined';})(); }
+if (typeof a !== 'undefined') {
+  (function (a) {
+    return 'a = ' + a;
+  })(a);
+} else {
+  (function () {
+    return 'a is undefined';
+  })();
+}
 ```
 
 ## --seed-contents--

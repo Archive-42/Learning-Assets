@@ -42,16 +42,9 @@ assert(code.match(/div:hover\s*?{\s*?transform:\s*?scale\(1\.1\);/gi));
   div {
     width: 70%;
     height: 100px;
-    margin:  50px auto;
-    background: linear-gradient(
-      53deg,
-      #ccfffc,
-      #ffcccf
-    );
+    margin: 50px auto;
+    background: linear-gradient(53deg, #ccfffc, #ffcccf);
   }
-
-
-
 </style>
 
 <div></div>
@@ -64,12 +57,8 @@ assert(code.match(/div:hover\s*?{\s*?transform:\s*?scale\(1\.1\);/gi));
   div {
     width: 70%;
     height: 100px;
-    margin:  50px auto;
-    background: linear-gradient(
-      53deg,
-      #ccfffc,
-      #ffcccf
-    );
+    margin: 50px auto;
+    background: linear-gradient(53deg, #ccfffc, #ffcccf);
   }
   div:hover {
     transform: scale(1.1);

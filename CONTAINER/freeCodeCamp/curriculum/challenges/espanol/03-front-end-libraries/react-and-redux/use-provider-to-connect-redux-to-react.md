@@ -14,7 +14,7 @@ React Redux provides a small API with two key features: `Provider` and `connect`
 
 ```jsx
 <Provider store={store}>
-  <App/>
+  <App />
 </Provider>
 ```
 
@@ -40,7 +40,7 @@ assert(
 The `Provider` wrapper component should have a prop of `store` passed to it, equal to the Redux store.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   assert(
     (function () {
       const mockedComponent = Enzyme.mount(React.createElement(AppWrapper));
@@ -85,7 +85,7 @@ assert(
 ## --after-user-code--
 
 ```jsx
-ReactDOM.render(<AppWrapper />, document.getElementById('root'))
+ReactDOM.render(<AppWrapper />, document.getElementById('root'));
 ```
 
 ## --seed-contents--
@@ -94,26 +94,21 @@ ReactDOM.render(<AppWrapper />, document.getElementById('root'))
 // Redux:
 const ADD = 'ADD';
 
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: ADD,
     message
-  }
+  };
 };
 
 const messageReducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
-      return [
-        ...state,
-        action.message
-      ];
+      return [...state, action.message];
     default:
       return state;
   }
 };
-
-
 
 const store = Redux.createStore(messageReducer);
 
@@ -125,7 +120,7 @@ class DisplayMessages extends React.Component {
     this.state = {
       input: '',
       messages: []
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
     this.submitMessage = this.submitMessage.bind(this);
   }
@@ -134,8 +129,8 @@ class DisplayMessages extends React.Component {
       input: event.target.value
     });
   }
-  submitMessage() {  
-    this.setState((state) => {
+  submitMessage() {
+    this.setState(state => {
       const currentMessage = state.input;
       return {
         input: '',
@@ -147,30 +142,25 @@ class DisplayMessages extends React.Component {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        <input
-          value={this.state.input}
-          onChange={this.handleChange}/><br/>
+        <input value={this.state.input} onChange={this.handleChange} />
+        <br />
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.state.messages.map( (message, idx) => {
-              return (
-                 <li key={idx}>{message}</li>
-              )
-            })
-          }
+          {this.state.messages.map((message, idx) => {
+            return <li key={idx}>{message}</li>;
+          })}
         </ul>
       </div>
     );
   }
-};
+}
 
 const Provider = ReactRedux.Provider;
 
 class AppWrapper extends React.Component {
   // Render the Provider below this line
-
   // Change code above this line
-};
+}
 ```
 
 # --solutions--
@@ -179,20 +169,17 @@ class AppWrapper extends React.Component {
 // Redux:
 const ADD = 'ADD';
 
-const addMessage = (message) => {
+const addMessage = message => {
   return {
     type: ADD,
     message
-  }
+  };
 };
 
 const messageReducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
-      return [
-        ...state,
-        action.message
-      ];
+      return [...state, action.message];
     default:
       return state;
   }
@@ -208,44 +195,40 @@ class DisplayMessages extends React.Component {
     this.state = {
       input: '',
       messages: []
-    }
- this.handleChange = this.handleChange.bind(this);
- this.submitMessage = this.submitMessage.bind(this);
- }
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.submitMessage = this.submitMessage.bind(this);
+  }
   handleChange(event) {
     this.setState({
       input: event.target.value
     });
   }
   submitMessage() {
-    this.setState((state) => {
+    this.setState(state => {
       const currentMessage = state.input;
       return {
         input: '',
         messages: state.messages.concat(currentMessage)
-      };  
+      };
     });
   }
   render() {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        <input
-          value={this.state.input}
-          onChange={this.handleChange}/><br/>
+        <input value={this.state.input} onChange={this.handleChange} />
+        <br />
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.state.messages.map( (message, idx) => {
-              return (
-                 <li key={idx}>{message}</li>
-              )
-            })
-          }
+          {this.state.messages.map((message, idx) => {
+            return <li key={idx}>{message}</li>;
+          })}
         </ul>
       </div>
     );
   }
-};
+}
 
 const Provider = ReactRedux.Provider;
 
@@ -253,11 +236,11 @@ class AppWrapper extends React.Component {
   // Change code below this line
   render() {
     return (
-      <Provider store = {store}>
-        <DisplayMessages/>
+      <Provider store={store}>
+        <DisplayMessages />
       </Provider>
     );
   }
   // Change code above this line
-};
+}
 ```

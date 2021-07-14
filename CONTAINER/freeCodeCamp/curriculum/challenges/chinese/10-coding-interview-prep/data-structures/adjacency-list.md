@@ -16,9 +16,9 @@ Above is an undirected graph because `Node1` is connected to `Node2` and `Node3`
 
 ```js
 var undirectedG = {
-  Node1: ["Node2", "Node3"],
-  Node2: ["Node1"],
-  Node3: ["Node1"]
+  Node1: ['Node2', 'Node3'],
+  Node2: ['Node1'],
+  Node3: ['Node1']
 };
 ```
 
@@ -27,8 +27,8 @@ This can also be more simply represented as an array where the nodes just have n
 ```js
 var undirectedGArr = [
   [1, 2], // Node1
-  [0],    // Node2
-  [0]     // Node3
+  [0], // Node2
+  [0] // Node3
 ];
 ```
 

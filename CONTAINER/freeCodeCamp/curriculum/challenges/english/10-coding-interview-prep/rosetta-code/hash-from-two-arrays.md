@@ -66,12 +66,30 @@ assert.deepEqual(arrToObj(...testCases[5]), res[5]);
 
 ```js
 const testCases = [
-  [[1, 2, 3, 4, 5], ['a', 'b', 'c', 'd', 'e']],
-  [[1, 2, 3, 4, 5], ['a', 'b', 'c', 'd']],
-  [[1, 2, 3], ['a', 'b', 'c', 'd', 'e']],
-  [['a', 'b', 'c', 'd', 'e'], [1, 2, 3, 4, 5]],
-  [['a', 'b', 'c', 'd', 'e'], [1, 2, 3, 4]],
-  [['a', 'b', 'c'], [1, 2, 3, 4, 5]]
+  [
+    [1, 2, 3, 4, 5],
+    ['a', 'b', 'c', 'd', 'e']
+  ],
+  [
+    [1, 2, 3, 4, 5],
+    ['a', 'b', 'c', 'd']
+  ],
+  [
+    [1, 2, 3],
+    ['a', 'b', 'c', 'd', 'e']
+  ],
+  [
+    ['a', 'b', 'c', 'd', 'e'],
+    [1, 2, 3, 4, 5]
+  ],
+  [
+    ['a', 'b', 'c', 'd', 'e'],
+    [1, 2, 3, 4]
+  ],
+  [
+    ['a', 'b', 'c'],
+    [1, 2, 3, 4, 5]
+  ]
 ];
 
 const res = [
@@ -87,8 +105,7 @@ const res = [
 ## --seed-contents--
 
 ```js
-function arrToObj (keys, vals) {
-
+function arrToObj(keys, vals) {
   return true;
 }
 ```
@@ -96,7 +113,7 @@ function arrToObj (keys, vals) {
 # --solutions--
 
 ```js
-function arrToObj (keys, vals) {
+function arrToObj(keys, vals) {
   return keys.reduce((map, key, index) => {
     map[key] = vals[index];
     return map;

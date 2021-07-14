@@ -23,11 +23,11 @@ scale.domain([50, 480]);
 // Set a range
 // The range covers the set of output values
 scale.range([10, 500]);
-scale(50) // Returns 10
-scale(480) // Returns 500
-scale(325) // Returns 323.37
-scale(750) // Returns 807.67
-d3.scaleLinear()
+scale(50); // Returns 10
+scale(480); // Returns 500
+scale(325); // Returns 323.37
+scale(750); // Returns 807.67
+d3.scaleLinear();
 ```
 
 Notice that the scale uses the linear relationship between the domain and range values to figure out what the output should be for a given number. The minimum value in the domain (50) maps to the minimum value (10) in the range.
@@ -81,13 +81,9 @@ assert($('h2').text() == '-102');
     // Add your code below this line
     const scale = d3.scaleLinear();
 
-
-
     // Add your code above this line
     const output = scale(50);
-    d3.select("body")
-      .append("h2")
-      .text(output);
+    d3.select('body').append('h2').text(output);
   </script>
 </body>
 ```
@@ -98,12 +94,10 @@ assert($('h2').text() == '-102');
 <body>
   <script>
     const scale = d3.scaleLinear();
-    scale.domain([250, 500])
-    scale.range([10, 150])
+    scale.domain([250, 500]);
+    scale.range([10, 150]);
     const output = scale(50);
-    d3.select("body")
-      .append("h2")
-      .text(output);
+    d3.select('body').append('h2').text(output);
   </script>
 </body>
 ```

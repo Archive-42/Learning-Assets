@@ -27,4 +27,3 @@ Any data that is represented numerically.
 ## --video-solution--
 
 2
-

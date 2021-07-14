@@ -10,7 +10,7 @@ dashedName: implement-the-serialization-of-a-passport-user
 
 截至目前，我们还没有配置完数据库，因此还无法加载用户数据。 实现这个的方式很多，但对于我们的项目，一旦服务器启动，那么只要有 app 实例在运行，数据库就应一直处于连接状态。 为此，你需要在环境变量 `MONGO_URI` 中添加你的数据库地址（比如：`mongodb+srv://:@cluster0-jvwxi.mongodb.net/?retryWrites=true&w=majority`）。 我们会在 `connection.js` 文件中调用它。
 
-*你可以在 [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) 创建一个免费的数据库。*
+_你可以在 [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) 创建一个免费的数据库。_
 
 现在我们想要连接到数据库，然后开始监听请求。 这样做的目的是在连接数据库之前或者出现数据库错误时，不接收任何请求。 要实现这一点，你需要在以下代码中包含序列化和应用的路由：
 
@@ -47,16 +47,16 @@ myDB(async client => {
 应存在数据库连接。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /Connected to Database/gi,
         'You successfully connected to the database!'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -65,16 +65,16 @@ myDB(async client => {
 序列化应正确使用数据库，应用 `doc` 调用 `done(null, null)`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /null,\s*doc/gi,
         'The callback in deserializeUser of (null, null) should be altered to (null, doc)'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

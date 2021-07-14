@@ -21,12 +21,12 @@ dashedName: test-if-a-value-is-of-a-specific-data-structure-type
 应通过所有测试。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(
-    (data) => {
+    data => {
       assert.equal(data.state, 'passed');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -35,16 +35,16 @@ dashedName: test-if-a-value-is-of-a-specific-data-structure-type
 应该为第一个断言选择正确的方法：`typeOf` 或 `notTypeOf`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[0].method,
         'typeOf',
         'myCar is typeOf Object'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -53,16 +53,16 @@ dashedName: test-if-a-value-is-of-a-specific-data-structure-type
 应该为第二个断言选择正确的方法：`typeOf` 或 `notTypeOf`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[1].method,
         'typeOf',
         'Car.model is a String'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -71,16 +71,16 @@ dashedName: test-if-a-value-is-of-a-specific-data-structure-type
 应该为第三个断言选择正确的方法：`typeOf` 或 `notTypeOf`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[2].method,
         'notTypeOf',
         'Plane.wings is a Number (not a String)'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -89,16 +89,16 @@ dashedName: test-if-a-value-is-of-a-specific-data-structure-type
 应该为第四个断言选择正确的方法：`typeOf` 或 `notTypeOf`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[3].method,
         'typeOf',
         'Plane.engines is an Array'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );
@@ -107,16 +107,16 @@ dashedName: test-if-a-value-is-of-a-specific-data-structure-type
 应该为第五个断言选择正确的方法：`typeOf` 或 `notTypeOf`。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(
-    (data) => {
+    data => {
       assert.equal(
         data.assertions[4].method,
         'typeOf',
         'Car.wheels is a Number'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.responseText);
     }
   );

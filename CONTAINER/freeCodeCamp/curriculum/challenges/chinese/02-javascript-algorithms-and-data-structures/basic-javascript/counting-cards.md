@@ -164,12 +164,15 @@ var count = 0;
 function cc(card) {
   // Only change code below this line
 
-
-  return "Change Me";
+  return 'Change Me';
   // Only change code above this line
 }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+cc(2);
+cc(3);
+cc(7);
+cc('K');
+cc('A');
 ```
 
 # --solutions--
@@ -177,7 +180,7 @@ cc(2); cc(3); cc(7); cc('K'); cc('A');
 ```js
 var count = 0;
 function cc(card) {
-  switch(card) {
+  switch (card) {
     case 2:
     case 3:
     case 4:
@@ -192,10 +195,10 @@ function cc(card) {
     case 'A':
       count--;
   }
-  if(count > 0) {
-    return count + " Bet";
+  if (count > 0) {
+    return count + ' Bet';
   } else {
-    return count + " Hold";
+    return count + ' Hold';
   }
 }
 ```

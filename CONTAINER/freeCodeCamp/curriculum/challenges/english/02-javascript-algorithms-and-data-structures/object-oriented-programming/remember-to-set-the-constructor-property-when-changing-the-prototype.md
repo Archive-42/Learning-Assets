@@ -24,11 +24,11 @@ To fix this, whenever a prototype is manually set to a new object, remember to d
 Bird.prototype = {
   constructor: Bird,
   numLegs: 2,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   },
-  describe: function() {
-    console.log("My name is " + this.name); 
+  describe: function () {
+    console.log('My name is ' + this.name);
   }
 };
 ```
@@ -56,13 +56,12 @@ function Dog(name) {
 
 // Only change code below this line
 Dog.prototype = {
-
   numLegs: 4,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   },
-  describe: function() {
-    console.log("My name is " + this.name);
+  describe: function () {
+    console.log('My name is ' + this.name);
   }
 };
 ```
@@ -76,11 +75,11 @@ function Dog(name) {
 Dog.prototype = {
   constructor: Dog,
   numLegs: 4,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   },
-  describe: function() {
-    console.log("My name is " + this.name);
+  describe: function () {
+    console.log('My name is ' + this.name);
   }
 };
 ```

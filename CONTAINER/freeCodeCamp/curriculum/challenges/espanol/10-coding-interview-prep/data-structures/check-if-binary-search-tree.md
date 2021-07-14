@@ -44,7 +44,7 @@ assert(
 ## --after-user-code--
 
 ```js
-BinarySearchTree.prototype.push = function(val) {
+BinarySearchTree.prototype.push = function (val) {
   var root = this.root;
 
   if (!root) {
@@ -78,7 +78,7 @@ BinarySearchTree.prototype.push = function(val) {
 ## --seed-contents--
 
 ```js
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
 function Node(value) {
   this.value = value;
   this.left = null;
@@ -89,7 +89,6 @@ function BinarySearchTree() {
 }
 function isBinarySearchTree(tree) {
   // Only change code below this line
-
   // Only change code above this line
 }
 ```
@@ -97,7 +96,7 @@ function isBinarySearchTree(tree) {
 # --solutions--
 
 ```js
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
 function Node(value) {
   this.value = value;
   this.left = null;
@@ -132,5 +131,5 @@ function isBinarySearchTree(tree) {
     checkTree(tree.root);
     return isBST;
   }
-};
+}
 ```

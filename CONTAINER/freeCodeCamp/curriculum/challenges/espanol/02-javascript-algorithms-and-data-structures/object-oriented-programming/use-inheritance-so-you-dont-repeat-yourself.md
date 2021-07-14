@@ -15,15 +15,15 @@ Observa en el siguiente ejemplo como el método `describe` es compartido por `Bi
 ```js
 Bird.prototype = {
   constructor: Bird,
-  describe: function() {
-    console.log("My name is " + this.name);
+  describe: function () {
+    console.log('My name is ' + this.name);
   }
 };
 
 Dog.prototype = {
   constructor: Dog,
-  describe: function() {
-    console.log("My name is " + this.name);
+  describe: function () {
+    console.log('My name is ' + this.name);
   }
 };
 ```
@@ -31,12 +31,12 @@ Dog.prototype = {
 El método `describe` se repite en dos lugares. El código se puede editar para seguir el principio DRY creando un `supertype` (o padre) llamado `Animal`:
 
 ```js
-function Animal() { };
+function Animal() {}
 
 Animal.prototype = {
-  constructor: Animal, 
-  describe: function() {
-    console.log("My name is " + this.name);
+  constructor: Animal,
+  describe: function () {
+    console.log('My name is ' + this.name);
   }
 };
 ```
@@ -88,8 +88,8 @@ function Cat(name) {
 
 Cat.prototype = {
   constructor: Cat,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 
@@ -99,16 +99,15 @@ function Bear(name) {
 
 Bear.prototype = {
   constructor: Bear,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
-  constructor: Animal,
-
+  constructor: Animal
 };
 ```
 
@@ -131,12 +130,12 @@ Bear.prototype = {
   constructor: Bear
 };
 
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
   constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
+  eat: function () {
+    console.log('nom nom nom');
   }
 };
 ```

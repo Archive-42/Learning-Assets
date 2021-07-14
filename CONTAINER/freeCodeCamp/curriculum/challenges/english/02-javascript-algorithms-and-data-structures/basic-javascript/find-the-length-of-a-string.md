@@ -12,7 +12,7 @@ dashedName: find-the-length-of-a-string
 You can find the length of a `String` value by writing `.length` after the string variable or string literal.
 
 ```js
-console.log("Alan Peter".length);
+console.log('Alan Peter'.length);
 ```
 
 The value `10` would be displayed in the console.
@@ -53,7 +53,7 @@ assert(code.match(/=\s*lastName\.length/g) && !code.match(/lastName\s*=\s*8/));
 ```js
 // Setup
 var lastNameLength = 0;
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 
 // Only change code below this line
 
@@ -64,6 +64,6 @@ lastNameLength = lastName;
 
 ```js
 var lastNameLength = 0;
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 lastNameLength = lastName.length;
 ```

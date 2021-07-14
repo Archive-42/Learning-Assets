@@ -29,7 +29,5 @@ assert(code.match(/<!DOCTYPE\s+html\s*>\s*<html\s*>\s*<\/html\s*>/gi));
 
 ```html
 <!DOCTYPE html>
-<html>
-  
-</html>
+<html></html>
 ```

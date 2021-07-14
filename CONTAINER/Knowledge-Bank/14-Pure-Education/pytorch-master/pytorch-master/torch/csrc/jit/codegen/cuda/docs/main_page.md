@@ -1,4 +1,3 @@
-
 This is the implementation reference for the CUDA PyTorch JIT Fuser
 
 - [PyTorch GitHub Page](https://github.com/pytorch/pytorch)

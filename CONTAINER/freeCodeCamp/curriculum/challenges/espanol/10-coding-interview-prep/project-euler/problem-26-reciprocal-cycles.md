@@ -54,7 +54,6 @@ assert(reciprocalCycles(1000) == 983);
 
 ```js
 function reciprocalCycles(n) {
-
   return n;
 }
 

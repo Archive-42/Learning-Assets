@@ -41,16 +41,16 @@ Submit your page when you think you've got it right. If you're running into erro
 Event `'user'` should be emitted with name, currentUsers, and connected.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /io.emit.*('|")user\1.*name.*currentUsers.*connected/gis,
         'You should have an event emitted named user sending name, currentUsers, and connected'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -59,9 +59,9 @@ Event `'user'` should be emitted with name, currentUsers, and connected.
 Client should properly handle and display the new data from event `'user'`.
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/public/client.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /socket.on.*('|")user\1[^]*num-users/gi,
@@ -73,7 +73,7 @@ Client should properly handle and display the new data from event `'user'`.
         'You should append a list item to "#messages" on your client within the "user" event listener to announce a user came or went'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

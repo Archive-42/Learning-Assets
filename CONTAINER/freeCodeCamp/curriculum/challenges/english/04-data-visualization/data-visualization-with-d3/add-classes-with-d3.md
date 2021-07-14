@@ -13,7 +13,7 @@ Using a lot of inline styles on HTML elements gets hard to manage, even for smal
 The `attr()` method works the same way that `style()` does. It takes comma-separated values, and can use a callback function. Here's an example to add a class of `container` to a selection:
 
 ```js
-selection.attr("class", "container");
+selection.attr('class', 'container');
 ```
 
 Note that the `class` parameter will remain the same whenever you need to add a class and only the `container` parameter will change.
@@ -53,15 +53,10 @@ assert(code.match(/\.attr/g));
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("div")
-      .data(dataset)
-      .enter()
-      .append("div")
-      // Add your code below this line
+    d3.select('body').selectAll('div').data(dataset).enter().append('div');
+    // Add your code below this line
 
-
-
-      // Add your code above this line
+    // Add your code above this line
   </script>
 </body>
 ```
@@ -81,13 +76,14 @@ assert(code.match(/\.attr/g));
   <script>
     const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-    d3.select("body").selectAll("div")
+    d3.select('body')
+      .selectAll('div')
       .data(dataset)
       .enter()
-      .append("div")
+      .append('div')
       // Add your code below this line
-      .attr("class","bar");
-      // Add your code above this line
+      .attr('class', 'bar');
+    // Add your code above this line
   </script>
 </body>
 ```

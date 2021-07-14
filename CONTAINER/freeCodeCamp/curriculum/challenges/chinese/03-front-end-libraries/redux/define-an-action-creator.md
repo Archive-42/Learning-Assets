@@ -41,7 +41,7 @@ assert(action.type === 'LOGIN');
 ```js
 const action = {
   type: 'LOGIN'
-}
+};
 // Define an action creator here:
 ```
 
@@ -50,7 +50,7 @@ const action = {
 ```js
 const action = {
   type: 'LOGIN'
-}
+};
 const actionCreator = () => {
   return action;
 };

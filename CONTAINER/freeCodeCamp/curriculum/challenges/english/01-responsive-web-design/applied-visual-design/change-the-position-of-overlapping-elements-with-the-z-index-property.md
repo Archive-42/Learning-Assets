@@ -38,7 +38,6 @@ assert($('.first').css('z-index') == '2');
   .first {
     background-color: red;
     position: absolute;
-
   }
   .second {
     background-color: blue;

@@ -15,7 +15,7 @@ Here is a function `myTest` with a local variable called `loc`.
 
 ```js
 function myTest() {
-  var loc = "foo";
+  var loc = 'foo';
   console.log(loc);
 }
 myTest();
@@ -57,7 +57,6 @@ assert(
 
 ```js
 function myLocalScope() {
-
   // Only change code below this line
 
   console.log('inside myLocalScope', myVar);
@@ -73,7 +72,6 @@ console.log('outside myLocalScope', myVar);
 
 ```js
 function myLocalScope() {
-
   // Only change code below this line
   var myVar;
   console.log('inside myLocalScope', myVar);

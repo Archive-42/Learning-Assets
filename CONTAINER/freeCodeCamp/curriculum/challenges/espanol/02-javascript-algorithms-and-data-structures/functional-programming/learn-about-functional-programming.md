@@ -12,11 +12,11 @@ La programación funcional es un estilo de programación donde las soluciones so
 
 La programación funcional se refiere a:
 
-1) Funciones aisladas: sin dependencia alguna del estado del programa, el cual incluye variables globales sujetas a cambios
+1. Funciones aisladas: sin dependencia alguna del estado del programa, el cual incluye variables globales sujetas a cambios
 
-2) Funciones puras: una misma entrada siempre da la misma salida
+2. Funciones puras: una misma entrada siempre da la misma salida
 
-3) Funciones con efectos secundarios limitados: cualquier cambio o mutación en el estado del programa fuera de la función son cuidadosamente controlados
+3. Funciones con efectos secundarios limitados: cualquier cambio o mutación en el estado del programa fuera de la función son cuidadosamente controlados
 
 # --instructions--
 
@@ -51,10 +51,10 @@ Given a function (representing the tea type) and number of cups needed, the
 following function returns an array of strings (each representing a cup of
 a specific type of tea).
 */
-const getTea = (numOfCups) => {
+const getTea = numOfCups => {
   const teaCups = [];
 
-  for(let cups = 1; cups <= numOfCups; cups += 1) {
+  for (let cups = 1; cups <= numOfCups; cups += 1) {
     const teaCup = prepareTea();
     teaCups.push(teaCup);
   }
@@ -71,10 +71,10 @@ const tea4TeamFCC = null;
 ```js
 const prepareTea = () => 'greenTea';
 
-const getTea = (numOfCups) => {
+const getTea = numOfCups => {
   const teaCups = [];
 
-  for(let cups = 1; cups <= numOfCups; cups += 1) {
+  for (let cups = 1; cups <= numOfCups; cups += 1) {
     const teaCup = prepareTea();
     teaCups.push(teaCup);
   }
@@ -82,5 +82,5 @@ const getTea = (numOfCups) => {
   return teaCups;
 };
 
-const tea4TeamFCC = getTea(40); 
+const tea4TeamFCC = getTea(40);
 ```

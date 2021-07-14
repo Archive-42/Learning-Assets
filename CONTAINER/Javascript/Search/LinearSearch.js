@@ -4,7 +4,7 @@
  * for the target value until a match is found or until all the elements
  * have been searched.
  */
-function SearchArray (searchNum, ar) {
+function SearchArray(searchNum, ar) {
   const position = Search(ar, searchNum)
   if (position !== -1) {
     console.log('The element was found at ' + (position + 1))
@@ -14,9 +14,11 @@ function SearchArray (searchNum, ar) {
 }
 
 // Search “theArray” for the specified “key” value
-function Search (theArray, key) {
+function Search(theArray, key) {
   for (let n = 0; n < theArray.length; n++) {
-    if (theArray[n] === key) { return n }
+    if (theArray[n] === key) {
+      return n
+    }
   }
   return -1
 }

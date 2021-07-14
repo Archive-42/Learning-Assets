@@ -12,21 +12,22 @@ dashedName: registration-of-new-users
 
 用户注册的逻辑：注册新用户 > 认证新用户 > 重定向到 /profile。
 
-对于步骤一的注册新用户，详细逻辑是这样的：用 findOne 命令查询数据库 > 如果返回了用户对象，则表示用户存在，然后返回主页；*或者*如果用户未定义且没有报错，则会将包含用户名和密码的用户对象通过 “insertOne” 添加到数据库，只要没有报错则会继续*下一步*：认证新用户——我们已经在 */login* 路由的 POST 请求中写好了这部分逻辑。
+对于步骤一的注册新用户，详细逻辑是这样的：用 findOne 命令查询数据库 > 如果返回了用户对象，则表示用户存在，然后返回主页；*或者*如果用户未定义且没有报错，则会将包含用户名和密码的用户对象通过 “insertOne” 添加到数据库，只要没有报错则会继续*下一步*：认证新用户——我们已经在 _/login_ 路由的 POST 请求中写好了这部分逻辑。
 
 ```js
-app.route('/register')
-  .post((req, res, next) => {
-    myDataBase.findOne({ username: req.body.username }, function(err, user) {
+app.route('/register').post(
+  (req, res, next) => {
+    myDataBase.findOne({ username: req.body.username }, function (err, user) {
       if (err) {
         next(err);
       } else if (user) {
         res.redirect('/');
       } else {
-        myDataBase.insertOne({
-          username: req.body.username,
-          password: req.body.password
-        },
+        myDataBase.insertOne(
+          {
+            username: req.body.username,
+            password: req.body.password
+          },
           (err, doc) => {
             if (err) {
               res.redirect('/');
@@ -36,29 +37,29 @@ app.route('/register')
               next(null, doc.ops[0]);
             }
           }
-        )
+        );
       }
-    })
+    });
   },
-    passport.authenticate('local', { failureRedirect: '/' }),
-    (req, res, next) => {
-      res.redirect('/profile');
-    }
-  );
+  passport.authenticate('local', { failureRedirect: '/' }),
+  (req, res, next) => {
+    res.redirect('/profile');
+  }
+);
 ```
 
 完成上述要求后，请提交你的页面链接。 如果你遇到了问题，可以参考[这里](https://gist.github.com/camperbot/b230a5b3bbc89b1fa0ce32a2aa7b083e)的答案。
 
-**注意：**接下来的挑战可能会在运行 *picture-in-picture*（画中画）模式的浏览器中出现问题。 如果你使用的线上 IDE 提供在 IDE 内预览 app 的功能，请考虑打开新的标签页预览。
+**注意：**接下来的挑战可能会在运行 _picture-in-picture_（画中画）模式的浏览器中出现问题。 如果你使用的线上 IDE 提供在 IDE 内预览 app 的功能，请考虑打开新的标签页预览。
 
 # --hints--
 
 注册路由和显示主页。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.get(getUserInput('url') + '/_api/server.js').then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /showRegistration:( |)true/gi,
@@ -70,7 +71,7 @@ app.route('/register')
         'You should have a route accepted a post request on register that querys the db with findone and the query being username: req.body.username'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -79,7 +80,7 @@ app.route('/register')
 注册功能应可以正常运行。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const url = getUserInput('url');
   const user = `freeCodeCampTester${Date.now()}`;
   const xhttp = new XMLHttpRequest();
@@ -107,7 +108,7 @@ async (getUserInput) => {
 登录功能应可以正常运行。
 
 ```js
-async (getUserInput) => {
+async getUserInput => {
   const url = getUserInput('url');
   const user = `freeCodeCampTester${Date.now()}`;
   const xhttpReg = new XMLHttpRequest();
@@ -156,16 +157,16 @@ async (getUserInput) => {
 退出登录功能应可以正常运行。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/logout',
     type: 'GET',
     xhrFields: { withCredentials: true }
   }).then(
-    (data) => {
+    data => {
       assert.match(data, /Home/gi, 'Logout should redirect to home');
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );
@@ -174,21 +175,21 @@ async (getUserInput) => {
 退出登录后，profile 页面应无法访问。
 
 ```js
-(getUserInput) =>
+getUserInput =>
   $.ajax({
     url: getUserInput('url') + '/profile',
     type: 'GET',
     crossDomain: true,
     xhrFields: { withCredentials: true }
   }).then(
-    (data) => {
+    data => {
       assert.match(
         data,
         /Home/gi,
         'Profile should redirect to home when we are logged out now again'
       );
     },
-    (xhr) => {
+    xhr => {
       throw new Error(xhr.statusText);
     }
   );

@@ -35,4 +35,3 @@ Everyone.
 ## --video-solution--
 
 3
-

@@ -16,7 +16,7 @@ Now let's create a web form.
 You can create a text input like this:
 
 ```html
-<input type="text">
+<input type="text" />
 ```
 
 Note that `input` elements are self-closing.
@@ -42,7 +42,11 @@ assert($('input[type=text]').length > 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -56,8 +60,6 @@ assert($('input[type=text]').length > 0);
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-
-
 </main>
 ```
 
@@ -68,7 +70,11 @@ assert($('input[type=text]').length > 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://www.bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -83,7 +89,7 @@ assert($('input[type=text]').length > 0);
     <li>other cats</li>
   </ol>
   <form>
-    <input type="text">
+    <input type="text" />
   </form>
 </main>
 ```

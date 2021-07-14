@@ -12,7 +12,7 @@ dashedName: find-the-length-of-a-string
 你可以通过在字符串变量或字符串后面写上 `.length` 来获得 `String` 的长度。
 
 ```js
-console.log("Alan Peter".length);
+console.log('Alan Peter'.length);
 ```
 
 字符串 `10` 将会出现在控制台中。
@@ -53,7 +53,7 @@ assert(code.match(/=\s*lastName\.length/g) && !code.match(/lastName\s*=\s*8/));
 ```js
 // Setup
 var lastNameLength = 0;
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 
 // Only change code below this line
 
@@ -64,6 +64,6 @@ lastNameLength = lastName;
 
 ```js
 var lastNameLength = 0;
-var lastName = "Lovelace";
+var lastName = 'Lovelace';
 lastNameLength = lastName.length;
 ```

@@ -15,10 +15,10 @@ dashedName: match-single-character-with-multiple-possibilities
 例如，如果想要匹配 `bag`、`big` 和 `bug`，但是不想匹配 `bog`。 可以创建正则表达式 `/b[aiu]g/` 来执行此操作。 `[aiu]` 是只匹配字符 `a`、`i` 或者 `u` 的字符集。
 
 ```js
-let bigStr = "big";
-let bagStr = "bag";
-let bugStr = "bug";
-let bogStr = "bog";
+let bigStr = 'big';
+let bagStr = 'bag';
+let bugStr = 'bug';
+let bogStr = 'bog';
 let bgRegex = /b[aiu]g/;
 bigStr.match(bgRegex);
 bagStr.match(bgRegex);
@@ -36,7 +36,7 @@ bogStr.match(bgRegex);
 
 # --hints--
 
-你应该匹配到所有25个元音。
+你应该匹配到所有 25 个元音。
 
 ```js
 assert(result.length == 25);
@@ -71,7 +71,8 @@ assert(!/[b-df-hj-np-tv-z]/gi.test(result.join()));
 ## --seed-contents--
 
 ```js
-let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let quoteSample =
+  'Beware of bugs in the above code; I have only proved it correct, not tried it.';
 let vowelRegex = /change/; // Change this line
 let result = vowelRegex; // Change this line
 ```
@@ -79,7 +80,8 @@ let result = vowelRegex; // Change this line
 # --solutions--
 
 ```js
-let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let quoteSample =
+  'Beware of bugs in the above code; I have only proved it correct, not tried it.';
 let vowelRegex = /[aeiou]/gi; // Change this line
 let result = quoteSample.match(vowelRegex); // Change this line
 ```

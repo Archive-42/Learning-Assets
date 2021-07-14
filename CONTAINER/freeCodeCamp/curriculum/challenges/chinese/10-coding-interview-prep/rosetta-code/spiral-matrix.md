@@ -8,7 +8,7 @@ dashedName: spiral-matrix
 
 # --description--
 
-Produce a spiral array. A *spiral array* is a square arrangement of the first N<sup>2</sup> natural numbers, where the numbers increase sequentially as you go around the edges of the array spiraling inwards. For example, given **5**, produce this array:
+Produce a spiral array. A _spiral array_ is a square arrangement of the first N<sup>2</sup> natural numbers, where the numbers increase sequentially as you go around the edges of the array spiraling inwards. For example, given **5**, produce this array:
 
 <pre>
 0  1  2  3  4
@@ -70,9 +70,7 @@ assert.deepEqual(spiralArray(5), [
 ## --seed-contents--
 
 ```js
-function spiralArray(n) {
-
-}
+function spiralArray(n) {}
 ```
 
 # --solutions--

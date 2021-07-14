@@ -13,7 +13,7 @@ dashedName: >-
 En el desafío anterior, `bird` tenía una propiedad pública `name`. Se considera pública porque se puede acceder y cambiar fuera de la definición de `bird`.
 
 ```js
-bird.name = "Duffy";
+bird.name = 'Duffy';
 ```
 
 Por lo tanto, cualquier parte de tu código puede cambiar fácilmente el nombre "name" de `bird` a cualquier valor. Piensa en cosas como contraseñas y cuentas bancarias que se pueden cambiar fácilmente por cualquier parte de tu base de código. Eso podría crear muchos problemas.
@@ -24,7 +24,7 @@ La forma más sencilla de hacer privada esta propiedad pública es creando una v
 function Bird() {
   let hatchedEgg = 10;
 
-  this.getHatchedEggCount = function() { 
+  this.getHatchedEggCount = function () {
     return hatchedEgg;
   };
 }
@@ -65,8 +65,6 @@ assert(code.match(/((return\s+)|(\(\s*\)\s*\=\>\s*))weight\;?/g));
 ```js
 function Bird() {
   this.weight = 15;
-
-
 }
 ```
 
